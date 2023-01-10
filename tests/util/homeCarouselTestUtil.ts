@@ -7,9 +7,6 @@ export async function checkCarouselSlide(page: Page, slideIndex: number) {
   const slideImage = page.locator('.carousel-item.active > div > img');
   const slideImageContainer = page.locator('.carousel-item.active');
 
-  // ensure visible
-  expect(slideImage).toBeVisible();
-
   // check image source
   expect(await slideImage.getAttribute('src')).toBe(homeCarouselImageData[slideIndex].src);
 
@@ -20,4 +17,7 @@ export async function checkCarouselSlide(page: Page, slideIndex: number) {
   expect(await slideImageContainer.innerText()).toBe(
     `${homeCarouselImageData[slideIndex].title}\n\n${homeCarouselImageData[slideIndex].desc}`
   );
+
+  // ensure visible
+  await expect(slideImage).toBeVisible();
 }
