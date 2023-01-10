@@ -7,3 +7,16 @@
 .hyperlink {
   @apply text-blueLink hover:underline hover:underline-offset-2;
 }
+
+/* add back small outline when buttons are focused (e.g. tabbed on) */
+button.btn-accent:focus-visible {
+  outline: 2px solid hsl(var(--a));
+}
+
+/* keep alert styles consistent */
+.alert-success {
+  @apply bg-green-100 text-green-600;
+}
+.alert-error {
+  @apply bg-red-100 text-red-500;
+}
