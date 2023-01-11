@@ -14,7 +14,13 @@ const config = {
   ],
 
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    csp: {
+      mode: 'auto',
+      directives: {
+        'script-src': ['self', 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js']
+      }
+    }
   }
 };
 
