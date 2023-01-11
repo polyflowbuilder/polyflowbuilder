@@ -6,6 +6,7 @@
   // only used for button graying out
   let email = '';
   let password = '';
+  $: valid = email && password;
 
   let loading = false;
   let loginText = 'Sign In';
@@ -58,12 +59,7 @@
             />
           </label>
 
-          <button
-            class="btn btn-accent btn-block"
-            class:loading
-            disabled={email === '' || password === ''}
-            type="submit"
-          >
+          <button class="btn btn-accent btn-block" class:loading disabled={!valid} type="submit">
             {loginText}
           </button>
         </div>
