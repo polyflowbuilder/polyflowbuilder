@@ -6,9 +6,7 @@ export const actions: Actions = {
     const data = Object.fromEntries(await request.formData());
 
     try {
-      // TODO: implement submit feedback business logic
-      // TODO: add Winston here for logs
-      console.log('feedback data', data);
+      console.log('login data', data);
       return {
         success: true
       };
