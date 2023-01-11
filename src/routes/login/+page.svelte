@@ -59,7 +59,12 @@
             />
           </label>
 
-          <button class="btn btn-accent btn-block" class:loading disabled={!valid} type="submit">
+          <button
+            class="btn btn-accent btn-block"
+            class:loading
+            disabled={!valid || loading}
+            type="submit"
+          >
             {loginText}
           </button>
         </div>
