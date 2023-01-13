@@ -2,6 +2,7 @@
 
 import type { User } from './userDataTypes';
 
+// TODO: use something else for create user
 export enum DBResponses {
   SUCCESS,
   USER_EXISTS

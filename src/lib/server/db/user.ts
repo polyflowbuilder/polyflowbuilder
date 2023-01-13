@@ -1,8 +1,58 @@
 // CRUD operations regarding user data
+import { v4 as uuid } from 'uuid';
 import { env } from '$env/dynamic/private';
 import { conPool } from '$lib/config/dbConfig.server';
-import type { DBUserModel } from '$lib/types';
+import { DBResponses } from '$lib/types';
+import type { DBUserModel, UserData } from '$lib/types';
 import type { FieldPacket, PoolConnection, RowDataPacket } from 'mysql2/promise';
+
+export async function createUser(registerData: {
+  username: string;
+  email: string;
+  hashedPassword: string;
+}): Promise<DBResponses> {
+  const sqlQuery = `INSERT INTO ${env.DB_TABLE_USERS} (id, username, password, email, data) VALUES (?, ?, ?, ?, ?)`;
+  const newDataTemplate: UserData = {
+    flows: [],
+    notifs: []
+  };
+
+  // use a single connection here, as calling conPool.query twice may run the calls in parallel, which is what we don't want here
+  // see https://github.com/mysqljs/mysql#pooling-connections
+  const conn = await conPool.getConnection();
+
+  // make sure the user doesn't exist before adding; prevents duplicate users
+  const user = await getUserByEmail(registerData.email, conn);
+
+  if (user) {
+    // log(
+    //   'info',
+    //   LoggerSenderType.DB_CONTROLLER_USER,
+    //   'New user attempted to register with existing email'
+    // );
+    console.log('New user attempted to register with existing email');
+    conn.release();
+    return DBResponses.USER_EXISTS;
+  } else {
+    // use prepared statements to prevent SQL injection
+    await conn.execute(sqlQuery, [
+      uuid(),
+      registerData.username,
+      registerData.hashedPassword,
+      registerData.email,
+      JSON.stringify(newDataTemplate)
+    ]);
+
+    conn.release();
+    // log(
+    //   'info',
+    //   LoggerSenderType.DB_CONTROLLER_USER,
+    //   `User with email [${registerData.email}] successfully added to master database`
+    // );
+    console.log(`User with email [${registerData.email}] successfully added to master database`);
+    return DBResponses.SUCCESS;
+  }
+}
 
 export async function getUserByEmail(
   email: string,
