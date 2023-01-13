@@ -1,11 +1,11 @@
 import { fail } from '@sveltejs/kit';
 import { registerValidationSchema } from '$lib/config/registerConfig';
 import type { Actions } from '@sveltejs/kit';
-import type { UserRegistrationData } from '$lib/types/registerTypes';
+import type { UserRegistrationDataFull } from '$lib/types';
 
 export const actions: Actions = {
   default: async ({ request }) => {
-    const data = Object.fromEntries(await request.formData()) as UserRegistrationData;
+    const data = Object.fromEntries(await request.formData()) as UserRegistrationDataFull;
 
     try {
       // validation

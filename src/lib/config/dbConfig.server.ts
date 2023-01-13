@@ -2,7 +2,7 @@ import mysql from 'mysql2/promise';
 import { env } from '$env/dynamic/private';
 import type { Pool } from 'mysql2/promise';
 
-let conPool: Pool | null = null;
+let conPool: Pool;
 
 async function initDBPool(): Promise<void> {
   conPool = mysql.createPool({
