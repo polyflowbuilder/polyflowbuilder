@@ -6,23 +6,59 @@
 
   export let form: ActionData;
 
-  $: username = form?.data?.username ?? '';
-  let email = form?.data?.email ?? '';
-  let password = '';
-  let passwordConfirm = '';
   let loading = false;
   let registerText = 'Create Account!';
-  $: valid = username && email && password && passwordConfirm;
 </script>
 
-<!-- TODO: investigate whether doing no-JS registration flow is worth it for users -->
-<!-- might be able to use hooks to get data across pages in the server w/o cookies -->
-<!-- e.g. go to queryparam, set local, rewrite url w/o queryparam in hooks -->
 <main class="container mx-auto grid sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4">
   <div class="card shadow mt-8 sm:col-start-1 lg:col-start-2 xl:col-start-3 col-span-3">
     <div class="card-body">
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">Create Account</h2>
       <div class="divider" />
+
+      {#if !form?.success && form?.userExists}
+        <div class="alert alert-error shadow-lg mb-4">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="stroke-current flex-shrink-0 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              /></svg
+            >
+            <span
+              >An account with this email address already exists. Please use another email address.</span
+            >
+          </div>
+        </div>
+      {/if}
+
+      {#if form?.error}
+        <div class="alert alert-error shadow-lg mb-4">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="stroke-current flex-shrink-0 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              /></svg
+            >
+            <span
+              >An error occurred when registering your account. Please try again a bit later.</span
+            >
+          </div>
+        </div>
+      {/if}
 
       <p class="mb-4">
         Please fill out the following information to create a PolyFlowBuilder account.
@@ -45,12 +81,12 @@
             <span><Fa icon={faUser} /></span>
             <label class="sr-only" for="username">Username</label>
             <input
-              bind:value={username}
               class="input input-bordered mx-auto w-full"
               type="text"
               id="username"
               name="username"
               placeholder="Username"
+              value={form?.data?.username ?? ''}
               required
             />
           </label>
@@ -64,12 +100,12 @@
             <span><Fa icon={faEnvelope} /></span>
             <label class="sr-only" for="email">Email</label>
             <input
-              bind:value={email}
               class="input input-bordered mx-auto w-full"
               type="email"
               id="email"
               name="email"
               placeholder="Email address"
+              value={form?.data?.email ?? ''}
               required
             />
           </label>
@@ -83,7 +119,6 @@
             <span><Fa icon={faLock} /></span>
             <label class="sr-only" for="password">Password</label>
             <input
-              bind:value={password}
               class="input input-bordered mx-auto w-full"
               type="password"
               id="password"
@@ -102,7 +137,6 @@
             <span><Fa icon={faLock} /></span>
             <label class="sr-only" for="passwordConfirm">Repeat Password</label>
             <input
-              bind:value={passwordConfirm}
               class="input input-bordered mx-auto w-full"
               type="password"
               id="passwordConfirm"
@@ -120,7 +154,7 @@
           <button
             class="btn btn-accent btn-block mt-6"
             class:loading
-            disabled={!valid || loading}
+            disabled={loading}
             type="submit"
           >
             {registerText}

@@ -80,5 +80,6 @@ export async function loadEnv(): Promise<void> {
   //   await dbConfig.init();
   //   await apiDataConfig.init();
 
-  //   log('info', LoggerSenderType.ENV_CONFIG, 'PolyFlowBuilder environment initialization complete');
+  // log('info', LoggerSenderType.ENV_CONFIG, 'PolyFlowBuilder environment initialization complete');
+  console.log('PolyFlowBuilder environment initialization complete');
 }

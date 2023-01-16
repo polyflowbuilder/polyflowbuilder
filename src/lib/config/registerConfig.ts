@@ -15,12 +15,12 @@ export const registerValidationSchema = z
     if (passwordConfirm !== password) {
       ctx.addIssue({
         code: 'custom',
-        message: 'Password and Confirm Password fields must match.',
+        message: 'Password and Repeat Password fields must match.',
         path: ['password']
       });
       ctx.addIssue({
         code: 'custom',
-        message: 'Password and Confirm Password fields must match.',
+        message: 'Password and Repeat Password fields must match.',
         path: ['passwordConfirm']
       });
     }

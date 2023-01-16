@@ -2,12 +2,6 @@
 
 import type { User } from './userDataTypes';
 
-// TODO: use something else for create user
-export enum DBResponses {
-  SUCCESS,
-  USER_EXISTS
-}
-
 export type DBUserModel = User & {
   id: string; // UUID
   emailValid: 0 | 1;

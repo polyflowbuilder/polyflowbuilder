@@ -2,7 +2,6 @@
 import { v4 as uuid } from 'uuid';
 import { env } from '$env/dynamic/private';
 import { conPool } from '$lib/config/dbConfig.server';
-import { DBResponses } from '$lib/types';
 import type { DBUserModel, UserData } from '$lib/types';
 import type { FieldPacket, PoolConnection, RowDataPacket } from 'mysql2/promise';
 
@@ -10,7 +9,7 @@ export async function createUser(registerData: {
   username: string;
   email: string;
   hashedPassword: string;
-}): Promise<DBResponses> {
+}): Promise<string | null> {
   const sqlQuery = `INSERT INTO ${env.DB_TABLE_USERS} (id, username, password, email, data) VALUES (?, ?, ?, ?, ?)`;
   const newDataTemplate: UserData = {
     flows: [],
@@ -32,7 +31,7 @@ export async function createUser(registerData: {
     // );
     console.log('New user attempted to register with existing email');
     conn.release();
-    return DBResponses.USER_EXISTS;
+    return null;
   } else {
     // use prepared statements to prevent SQL injection
     await conn.execute(sqlQuery, [
@@ -50,7 +49,7 @@ export async function createUser(registerData: {
     //   `User with email [${registerData.email}] successfully added to master database`
     // );
     console.log(`User with email [${registerData.email}] successfully added to master database`);
-    return DBResponses.SUCCESS;
+    return registerData.email;
   }
 }
 
