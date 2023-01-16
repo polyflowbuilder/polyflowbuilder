@@ -2,10 +2,13 @@
   import Fa from 'svelte-fa';
   import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
+  import { page } from '$app/stores';
   import type { ActionData } from './$types';
 
   export let form: ActionData;
 
+  let password = '';
+  let passwordConfirm = '';
   let loading = false;
   let registerText = 'Create Account!';
 </script>
@@ -73,6 +76,11 @@
             loading = false;
             registerText = 'Create Account!';
             await update();
+            // reset pw fields on failed POST bc form is only reset on success response
+            if ($page.status === 400) {
+              password = '';
+              passwordConfirm = '';
+            }
           };
         }}
       >
@@ -91,7 +99,7 @@
             />
           </label>
           {#if form?.registerValidationErrors?.username}
-            <small class="text-red-600 label label-text-alt"
+            <small id="usernameError" class="text-red-600 label label-text-alt"
               >{form?.registerValidationErrors?.username[0]}</small
             >
           {/if}
@@ -110,7 +118,7 @@
             />
           </label>
           {#if form?.registerValidationErrors?.email}
-            <small class="text-red-600 label label-text-alt"
+            <small id="emailError" class="text-red-600 label label-text-alt"
               >{form?.registerValidationErrors?.email[0]}</small
             >
           {/if}
@@ -124,11 +132,12 @@
               id="password"
               name="password"
               placeholder="Password"
+              bind:value={password}
               required
             />
           </label>
           {#if form?.registerValidationErrors?.password}
-            <small class="text-red-600 label label-text-alt"
+            <small id="passwordError" class="text-red-600 label label-text-alt"
               >{form?.registerValidationErrors?.password[0]}</small
             >
           {/if}
@@ -142,11 +151,12 @@
               id="passwordConfirm"
               name="passwordConfirm"
               placeholder="Repeat Password"
+              bind:value={passwordConfirm}
               required
             />
           </label>
           {#if form?.registerValidationErrors?.passwordConfirm}
-            <small class="text-red-600 label label-text-alt"
+            <small id="passwordConfirmError" class="text-red-600 label label-text-alt"
               >{form?.registerValidationErrors?.passwordConfirm[0]}</small
             >
           {/if}
