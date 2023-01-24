@@ -1,9 +1,9 @@
 import argon2 from 'argon2';
 import { fail, redirect } from '@sveltejs/kit';
-import { registerValidationSchema } from '$lib/config/registerConfig';
+import { registerValidationSchema } from '$lib/schema/registerSchema';
 import { createUser } from '$lib/server/db/user';
 import type { Actions } from '@sveltejs/kit';
-import type { UserRegistrationData } from '$lib/types';
+import type { UserRegistrationData } from '$lib/schema/registerSchema';
 
 export const actions: Actions = {
   default: async ({ request }) => {

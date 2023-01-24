@@ -25,3 +25,5 @@ export const registerValidationSchema = z
       });
     }
   });
+
+export type UserRegistrationData = z.infer<typeof registerValidationSchema>;
