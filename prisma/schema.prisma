@@ -8,11 +8,21 @@ datasource db {
 }
 
 model User {
-  id              String    @id @default(uuid())
-  username        String
-  password        String
-  email           String    @unique
-  data            Json
-  createDate      DateTime  @default(now())
-  lastLoginTime   DateTime?
+  id                  String    @id @default(uuid())
+  username            String
+  password            String
+  email               String    @unique
+  data                Json
+  createDateUTC       DateTime  @default(now()) @db.DateTime(0)
+  lastLoginTimeUTC    DateTime? @db.DateTime(0)
+
+  session             Session?
+}
+
+model Session {
+  sessionId           String    @id @default(uuid())
+  userId              String    @unique
+  expiresUTC          DateTime  @db.DateTime(0)
+
+  user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
