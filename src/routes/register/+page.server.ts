@@ -1,4 +1,3 @@
-import argon2 from 'argon2';
 import { fail, redirect } from '@sveltejs/kit';
 import { registerValidationSchema } from '$lib/schema/registerSchema';
 import { createUser } from '$lib/server/db/user';
@@ -17,7 +16,7 @@ export const actions: Actions = {
         const createUserResult = await createUser({
           username: data.username,
           email: data.email,
-          hashedPassword: await argon2.hash(data.password, { type: argon2.argon2id })
+          password: data.password
         });
 
         if (createUserResult === null) {

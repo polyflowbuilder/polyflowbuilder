@@ -1,6 +1,5 @@
 import { env } from '$env/dynamic/private';
 import { execSync } from 'child_process';
-import { initDBPool } from '$lib/config/dbConfig.server';
 
 export let FULL_VERSION_STRING = 'unknown';
 
@@ -74,10 +73,7 @@ export async function loadEnv(): Promise<void> {
   console.log('Environment variables loaded, initializing dependency configurations ...');
 
   // setup things that depend on env vars here
-  await initDBPool();
-
   //   nodeMailerConfig.init();
-  //   await dbConfig.init();
   //   await apiDataConfig.init();
 
   // log('info', LoggerSenderType.ENV_CONFIG, 'PolyFlowBuilder environment initialization complete');
