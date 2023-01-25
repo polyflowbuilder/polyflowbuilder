@@ -1,13 +1,15 @@
 import argon2 from 'argon2';
-import { fail } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { getUserByEmail } from '$lib/server/db/user';
+import { upsertSession } from '$lib/server/db/session';
+import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { UserLoginData } from '$lib/schema/loginSchema';
 
 export const actions: Actions = {
-  default: async ({ request }) => {
+  default: async ({ request, cookies }) => {
     const data = Object.fromEntries(await request.formData()) as UserLoginData;
 
     try {
@@ -25,8 +27,11 @@ export const actions: Actions = {
           });
         }
 
-        // TODO: auth successful, create a new session
-        console.log('login successful!');
+        // auth successful, create a new session
+        const sessionId = await upsertSession(user.id);
+        cookies.set('sId', sessionId, {
+          maxAge: SESSION_MAX_AGE
+        });
       } else {
         const { fieldErrors: loginValidationErrors } = parseResults.error.flatten();
 
@@ -44,6 +49,11 @@ export const actions: Actions = {
         error: true
       });
     }
+
+    // will only make it here if login was successful
+    console.log('login successful, redirecting');
+    // TODO: redirect to flows page
+    throw redirect(303, '/');
   }
 };
 
