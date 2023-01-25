@@ -54,7 +54,7 @@ export async function getUserByEmail(email: string, updateLoginDate = false): Pr
         email
       },
       data: {
-        lastLoginTime: new Date()
+        lastLoginTimeUTC: new Date()
       }
     });
   }
