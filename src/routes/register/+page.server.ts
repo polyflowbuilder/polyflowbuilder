@@ -14,9 +14,9 @@ export const actions: Actions = {
       if (parseResults.success) {
         // attempt to add user to DB
         const createUserResult = await createUser({
-          username: data.username,
-          email: data.email,
-          password: data.password
+          username: parseResults.data.username,
+          email: parseResults.data.email,
+          password: parseResults.data.password
         });
 
         if (createUserResult === null) {
@@ -24,8 +24,8 @@ export const actions: Actions = {
             success: false,
             userExists: true,
             data: {
-              username: data.username,
-              email: data.email
+              username: parseResults.data.username,
+              email: parseResults.data.email
             }
           });
         }
@@ -35,8 +35,8 @@ export const actions: Actions = {
         return fail(400, {
           success: false,
           data: {
-            username: data.username,
-            email: data.email
+            username: data?.username,
+            email: data?.email
           },
           registerValidationErrors
         });

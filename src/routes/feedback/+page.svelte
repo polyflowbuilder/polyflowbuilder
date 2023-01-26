@@ -1,5 +1,6 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
+  import { FEEDBACK_MESSAGE_MAX_LENGTH } from '$lib/config/common/feedbackConfig';
   import type { ActionData } from './$types';
 
   export let form: ActionData;
@@ -95,6 +96,11 @@
           <small class="text-gray-500 label label-text-alt">
             Let us know how to get in touch with you for a follow-up if necessary!
           </small>
+          {#if form?.feedbackValidationErrors?.email}
+            <small id="emailError" class="text-red-600 label label-text-alt"
+              >{form?.feedbackValidationErrors?.email[0]}</small
+            >
+          {/if}
 
           <label for="feedback" class="font-semibold label label-text text-lg">Feedback</label>
           <textarea
@@ -102,8 +108,14 @@
             id="feedback"
             name="feedback"
             placeholder="Enter your feedback here!"
+            maxlength={FEEDBACK_MESSAGE_MAX_LENGTH}
             required
           />
+          {#if form?.feedbackValidationErrors?.feedback}
+            <small id="feedbackError" class="text-red-600 label label-text-alt"
+              >{form?.feedbackValidationErrors?.feedback[0]}</small
+            >
+          {/if}
 
           <button class="btn btn-accent btn-block mt-6" class:loading type="submit"
             >Submit Feedback</button

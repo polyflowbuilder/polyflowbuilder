@@ -26,3 +26,11 @@ model Session {
 
   user                User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
+
+model FeedbackReport {
+  id                  String    @id @default(uuid())
+  subject             String
+  email               String
+  feedback            String    @db.Text()
+  submittedUTC        DateTime  @default(now())
+}

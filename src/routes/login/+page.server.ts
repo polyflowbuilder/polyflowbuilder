@@ -17,12 +17,12 @@ export const actions: Actions = {
       const parseResults = loginValidationSchema.safeParse(data);
       if (parseResults.success) {
         // user existence + password auth
-        const user = await getUserByEmail(data.email);
-        if (!user || !(await argon2.verify(user.password, data.password))) {
+        const user = await getUserByEmail(parseResults.data.email);
+        if (!user || !(await argon2.verify(user.password, parseResults.data.password))) {
           return fail(401, {
             success: false,
             data: {
-              email: data.email
+              email: parseResults.data.email
             }
           });
         }
@@ -38,7 +38,7 @@ export const actions: Actions = {
         return fail(400, {
           success: false,
           data: {
-            email: data.email
+            email: data?.email
           },
           loginValidationErrors
         });
