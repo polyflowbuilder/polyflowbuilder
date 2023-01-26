@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // This must be specified if "paths" is.
+    "paths": {
+      "$lib/*": ["../src/lib/*"], // This mapping is relative to "baseUrl".
+      "$lib": ["../src/lib"]
+    },
+    "esModuleInterop": true
+  }
+}

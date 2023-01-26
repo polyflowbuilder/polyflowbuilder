@@ -52,8 +52,7 @@ export const actions: Actions = {
 
     // will only make it here if login was successful
     console.log('login successful, redirecting');
-    // TODO: redirect to flows page
-    throw redirect(303, '/');
+    throw redirect(303, '/flows');
   }
 };
 

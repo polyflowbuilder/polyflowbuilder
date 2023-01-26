@@ -1,8 +1,24 @@
 import { expect, test } from '@playwright/test';
+import { PrismaClient } from '@prisma/client';
+
+const REGISTER_TESTS_EMAIL = 'pfb_test_registerPage_playwright@test.com';
 
 test.describe('registration page tests', () => {
+  const primsa = new PrismaClient();
+
   test.beforeEach(async ({ page }) => {
     await page.goto('/register');
+  });
+
+  test.afterAll(async () => {
+    console.log('deleting account used for registration tests');
+    // TODO: figure out how we can import from db/user without
+    // playwright complaining about
+    await primsa.user.delete({
+      where: {
+        email: REGISTER_TESTS_EMAIL
+      }
+    });
   });
 
   test('register page has expected h1', async ({ page }) => {
@@ -106,7 +122,7 @@ test.describe('registration page tests', () => {
 
   test('registration succeeds and redirects to login page', async ({ page }) => {
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill('pfb_test_playwright@test.com');
+    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();
@@ -121,7 +137,7 @@ test.describe('registration page tests', () => {
 
   test('registration with an existing email fails', async ({ page }) => {
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill('pfb_test_playwright@test.com');
+    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();
@@ -134,5 +150,27 @@ test.describe('registration page tests', () => {
     );
   });
 
-  // TODO: add test for 500 case
+  test('500 case with valid registration data', async ({ page }) => {
+    // mock 500 invalid response
+    await page.route('/register', async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: String.raw`{"type":"failure","status":500,"data":"[{\"error\":1},true]"}`
+      });
+    });
+
+    await page.getByLabel('username').fill('test');
+    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
+    await page.getByPlaceholder('Password', { exact: true }).fill('test');
+    await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
+    await page.getByRole('button', { name: 'Create Account!' }).click();
+
+    await expect(page).toHaveURL(/.*register/);
+    expect(await page.textContent('h2')).toBe('Create Account');
+    await expect(page.locator('.alert-error')).toBeVisible();
+    await expect(page.locator('.alert-error')).toHaveText(
+      'An error occurred when registering your account. Please try again a bit later.'
+    );
+  });
 });
