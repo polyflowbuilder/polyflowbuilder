@@ -10,6 +10,6 @@ test.describe('about page tests', () => {
   });
 
   test('about page image is visible', async ({ page }) => {
-    await expect(page.locator('img')).toBeVisible();
+    await expect(page.getByRole('main').locator('img')).toBeVisible();
   });
 });

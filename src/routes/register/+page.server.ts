@@ -5,7 +5,7 @@ import type { Actions } from '@sveltejs/kit';
 import type { UserRegistrationData } from '$lib/schema/registerSchema';
 
 export const actions: Actions = {
-  default: async ({ request }) => {
+  default: async ({ request, cookies }) => {
     const data = Object.fromEntries(await request.formData()) as UserRegistrationData;
 
     try {
@@ -49,6 +49,7 @@ export const actions: Actions = {
     }
 
     // will only make it here if registration was successful
+    cookies.set('redirectFromRegister', '1');
     throw redirect(303, '/login');
   }
 };

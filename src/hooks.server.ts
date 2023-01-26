@@ -9,12 +9,8 @@ await loadEnv().catch((err) => {
 
 export const handle: Handle = async ({ event, resolve }) => {
   // for ephemeral notif in login page after register
-  // TODO: security concerns for referer header?
-  if (
-    event.url.pathname === '/login' &&
-    event.request.headers.get('referer') &&
-    new URL(event.request.headers.get('referer') as string).pathname === '/register'
-  ) {
+  if (event.url.pathname === '/login' && event.cookies.get('redirectFromRegister')) {
+    event.cookies.delete('redirectFromRegister');
     event.locals.misc = {
       cameFromRegister: true
     };

@@ -3,7 +3,7 @@
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
-import { checkCarouselSlide } from './util/homeCarouselTestUtil.ts';
+import { checkCarouselSlide } from '../util/homeCarouselTestUtil.ts';
 
 import { expect, test } from '@playwright/test';
 
