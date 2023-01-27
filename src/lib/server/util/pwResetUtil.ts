@@ -1,17 +1,17 @@
-import crypto from 'crypto';
 import argon2 from 'argon2';
 import { sendEmail } from './emailUtil';
 import { updateUser } from '$lib/server/db/user';
 import { createPasswordResetEmailPayload } from '$lib/config/emailConfig.server';
-import { clearTokensByEmail, expireAndInsertToken } from '$lib/server/db/token';
+import { clearTokensByEmail, createToken, upsertToken } from '$lib/server/db/token';
 
 export async function startPWResetRoutine(email: string): Promise<void> {
-  const token = crypto.randomBytes(64).toString('base64');
+  const token = createToken();
 
   const expiryDate = new Date();
   expiryDate.setMinutes(expiryDate.getMinutes() + 30);
 
-  const res = await expireAndInsertToken(email, 'PASSWORD_RESET', token, expiryDate);
+  await clearTokensByEmail(email, 'PASSWORD_RESET');
+  const res = await upsertToken(email, 'PASSWORD_RESET', token, expiryDate);
 
   if (res) {
     const passwordResetEmailPayload = createPasswordResetEmailPayload(email, token);

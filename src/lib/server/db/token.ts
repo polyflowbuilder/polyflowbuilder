@@ -1,30 +1,37 @@
-import { Prisma, type TokenType } from '@prisma/client';
+import crypto from 'crypto';
+import { Prisma } from '@prisma/client';
 import { prisma } from '$lib/server/db/prisma';
+import type { TokenType } from '@prisma/client';
 
-export async function expireAndInsertToken(
+export function createToken() {
+  return crypto.randomBytes(64).toString('base64');
+}
+
+export async function upsertToken(
   email: string,
   type: TokenType,
   token: string,
   expiry: Date
-): Promise<boolean> {
-  await prisma.token.deleteMany({
-    where: {
-      email,
-      type
-    }
-  });
-  console.log(type, 'tokens expired for', email);
-
+): Promise<string | null> {
   try {
-    await prisma.token.create({
-      data: {
+    await prisma.token.upsert({
+      create: {
         email,
         token,
         type,
         expiresUTC: expiry
+      },
+      update: {
+        expiresUTC: expiry
+      },
+      where: {
+        email_token: {
+          email,
+          token
+        }
       }
     });
-    console.log('new', type, 'token created for', email);
+    console.log(type, 'token upserted for', email);
   } catch (error) {
     if (
       error instanceof Prisma.PrismaClientKnownRequestError &&
@@ -33,14 +40,13 @@ export async function expireAndInsertToken(
     ) {
       console.log('attempted to create a token for a nonexistent user, abort');
 
-      return false;
+      return null;
     } else {
       // make sure loggers catch this error if it's one we're not expecting
       throw error;
     }
   }
-
-  return true;
+  return token;
 }
 
 export async function validateToken(
@@ -80,4 +86,5 @@ export async function clearTokensByEmail(email: string, type: TokenType): Promis
       type
     }
   });
+  console.log(type, 'tokens expired for', email);
 }

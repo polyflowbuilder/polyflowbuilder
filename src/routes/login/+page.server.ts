@@ -1,9 +1,9 @@
 import argon2 from 'argon2';
 import { fail, redirect } from '@sveltejs/kit';
-import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { getUserByEmail } from '$lib/server/db/user';
-import { upsertSession } from '$lib/server/db/session';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
+import { loginValidationSchema } from '$lib/schema/loginSchema';
+import { createToken, upsertToken } from '$lib/server/db/token';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { UserLoginData } from '$lib/schema/loginSchema';
@@ -28,10 +28,20 @@ export const actions: Actions = {
         }
 
         // auth successful, create a new session
-        const sessionId = await upsertSession(user.id);
-        cookies.set('sId', sessionId, {
-          maxAge: SESSION_MAX_AGE
-        });
+        const sessionToken = createToken();
+        const sessionExpiry = new Date(Date.now() + 1000 * SESSION_MAX_AGE);
+        const sessionId = await upsertToken(user.email, 'SESSION', sessionToken, sessionExpiry);
+
+        if (sessionId) {
+          cookies.set('sId', sessionId, {
+            maxAge: SESSION_MAX_AGE
+          });
+        } else {
+          console.log('an error occurred while creating session');
+          return fail(500, {
+            error: true
+          });
+        }
       } else {
         const { fieldErrors: loginValidationErrors } = parseResults.error.flatten();
 

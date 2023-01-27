@@ -19,7 +19,6 @@
     "@sveltejs/adapter-node": "^1.1.0",
     "@sveltejs/kit": "^1.0.0",
     "@types/nodemailer": "^6.4.7",
-    "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "autoprefixer": "^10.4.7",
@@ -48,7 +47,6 @@
     "@prisma/client": "^4.9.0",
     "argon2": "^0.30.3",
     "nodemailer": "^6.9.0",
-    "uuid": "^9.0.0",
     "zod": "^3.20.2"
   }
 }
