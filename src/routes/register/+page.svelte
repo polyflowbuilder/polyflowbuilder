@@ -1,8 +1,9 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
-  import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
   import { page } from '$app/stores';
+  import { AlertError } from '$lib/components/common';
+  import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import type { ActionData } from './$types';
 
   export let form: ActionData;
@@ -20,47 +21,17 @@
       <div class="divider" />
 
       {#if !form?.success && form?.userExists}
-        <div class="alert alert-error shadow-lg mb-4">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="stroke-current flex-shrink-0 h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-              /></svg
-            >
-            <span
-              >An account with this email address already exists. Please use another email address.</span
-            >
-          </div>
-        </div>
+        <AlertError
+          text="An account with this email address already exists. Please use another email address."
+          addlClass="mb-4"
+        />
       {/if}
 
       {#if form?.error}
-        <div class="alert alert-error shadow-lg mb-4">
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="stroke-current flex-shrink-0 h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-              /></svg
-            >
-            <span
-              >An error occurred when registering your account. Please try again a bit later.</span
-            >
-          </div>
-        </div>
+        <AlertError
+          text="An error occurred when registering your account. Please try again a bit later."
+          addlClass="mb-4"
+        />
       {/if}
 
       <p class="mb-4">
