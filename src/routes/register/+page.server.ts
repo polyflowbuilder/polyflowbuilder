@@ -6,9 +6,9 @@ import type { UserRegistrationData } from '$lib/schema/registerSchema';
 
 export const actions: Actions = {
   default: async ({ request, cookies }) => {
-    const data = Object.fromEntries(await request.formData()) as UserRegistrationData;
-
     try {
+      const data = Object.fromEntries(await request.formData()) as UserRegistrationData;
+
       // validation
       const parseResults = registerValidationSchema.safeParse(data);
       if (parseResults.success) {

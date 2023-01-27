@@ -17,6 +17,7 @@ model User {
   lastLoginTimeUTC    DateTime? @db.DateTime(0)
 
   session             Session?
+  tokens              Token[]
 }
 
 model Session {
@@ -33,4 +34,19 @@ model FeedbackReport {
   email               String
   feedback            String    @db.Text()
   submittedUTC        DateTime  @default(now())
+}
+
+model Token {
+  email               String
+  token               String
+  type                TokenType
+  expiresUTC          DateTime  @db.DateTime(0)
+
+  user                User      @relation(fields: [email], references: [email], onDelete: Cascade)
+
+  @@id([email, token])
+}
+
+enum TokenType {
+  PASSWORD_RESET
 }

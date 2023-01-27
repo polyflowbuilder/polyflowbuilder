@@ -10,9 +10,9 @@ import type { UserLoginData } from '$lib/schema/loginSchema';
 
 export const actions: Actions = {
   default: async ({ request, cookies }) => {
-    const data = Object.fromEntries(await request.formData()) as UserLoginData;
-
     try {
+      const data = Object.fromEntries(await request.formData()) as UserLoginData;
+
       // validation
       const parseResults = loginValidationSchema.safeParse(data);
       if (parseResults.success) {
@@ -56,11 +56,17 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = ({ locals }) => {
+export const load: PageServerLoad = ({ cookies }) => {
   // for ephemeral login page notifs
-  if (locals.misc?.cameFromRegister) {
+  if (cookies.get('redirectFromRegister')) {
+    cookies.delete('redirectFromRegister');
     return {
       cameFromRegister: true
+    };
+  } else if (cookies.get('redirectFromResetPassword')) {
+    cookies.delete('redirectFromResetPassword');
+    return {
+      cameFromResetPassword: true
     };
   }
 };

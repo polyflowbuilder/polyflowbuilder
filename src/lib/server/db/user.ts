@@ -2,7 +2,7 @@
 import argon2 from 'argon2';
 import { prisma } from '$lib/server/db/prisma';
 import type { UserData } from '$lib/types';
-import type { User } from '@prisma/client';
+import type { Prisma, User } from '@prisma/client';
 
 export async function createUser(registerData: {
   username: string;
@@ -60,4 +60,13 @@ export async function getUserByEmail(email: string, updateLoginDate = false): Pr
   }
 
   return user;
+}
+
+export async function updateUser(email: string, data: Prisma.UserUpdateInput): Promise<void> {
+  await prisma.user.update({
+    where: {
+      email
+    },
+    data
+  });
 }

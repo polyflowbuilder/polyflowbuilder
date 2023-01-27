@@ -8,9 +8,9 @@ import type { FeedbackData } from '$lib/schema/feedbackSchema';
 
 export const actions: Actions = {
   default: async ({ request }) => {
-    const data = Object.fromEntries(await request.formData()) as FeedbackData;
-
     try {
+      const data = Object.fromEntries(await request.formData()) as FeedbackData;
+
       // validation
       const parseResults = feedbackValidationSchema.safeParse(data);
       if (parseResults.success) {
