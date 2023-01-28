@@ -3,8 +3,11 @@ import { feedbackValidationSchema } from '$lib/schema/feedbackSchema';
 import { createFeedbackEmailPayload } from '$lib/config/emailConfig.server';
 import { createFeedbackReport } from '$lib/server/db/feedback';
 import { sendEmail } from '$lib/server/util/emailUtil';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { FeedbackData } from '$lib/schema/feedbackSchema';
+
+const logger = initLogger('ServerRouteHandler (/feedback)');
 
 export const actions: Actions = {
   default: async ({ request }) => {
@@ -21,7 +24,7 @@ export const actions: Actions = {
         // insert into feedback report table
         await createFeedbackReport(parseResults.data);
 
-        console.log('received feedback has been recorded and email has been sent!');
+        logger.info('received feedback has been recorded and email has been sent!');
       } else {
         // never expect this to happen but here just in case
         const { fieldErrors: feedbackValidationErrors } = parseResults.error.flatten();
@@ -31,12 +34,11 @@ export const actions: Actions = {
         });
       }
 
-      // TODO: add Winston here for logs
       return {
         success: true
       };
     } catch (error) {
-      console.log('an internal error occurred', error);
+      logger.error('an internal error occurred', error);
       return fail(500, {
         error: true
       });

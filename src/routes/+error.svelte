@@ -2,8 +2,6 @@
   import Fa from 'svelte-fa';
   import { faExclamationTriangle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
   import { page } from '$app/stores';
-
-  $: console.log($page.error?.message);
 </script>
 
 <main class="container mx-auto text-center p-40 h-full">

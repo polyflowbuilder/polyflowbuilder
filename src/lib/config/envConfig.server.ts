@@ -1,6 +1,9 @@
 import * as nodeMailerConfig from '$lib/config/nodeMailerConfig.server';
 import { env } from '$env/dynamic/private';
 import { execSync } from 'child_process';
+import { initLogger } from '$lib/config/loggerConfig';
+
+const logger = initLogger('Config/EnvConfig');
 
 export let FULL_VERSION_STRING = 'unknown';
 
@@ -45,38 +48,24 @@ export async function loadEnv(): Promise<void> {
     const commit = execSync('git rev-parse --short HEAD').toString().slice(0, -1);
     FULL_VERSION_STRING = `${env.npm_package_version} ${commit}`;
   } catch (e) {
-    // log('info', LoggerSenderType.ENV_CONFIG, 'Failed to get git version for full version string');
-    console.error('Failed to get git version for full version string');
+    logger.error('Failed to get git version for full version string');
   } finally {
-    console.log(`Hello world! Initializing PolyFlowBuilder ${FULL_VERSION_STRING} ...`);
-    // log(
-    //   'info',
-    //   LoggerSenderType.ENV_CONFIG,
-    //   `Hello world! Initializing PolyFlowBuilder ${FULL_VERSION_STRING} ...`
-    // );
+    logger.info(`Hello world! Initializing PolyFlowBuilder ${FULL_VERSION_STRING} ...`);
   }
 
-  console.log('Environment working directory is', process.cwd());
-  //   log('info', LoggerSenderType.ENV_CONFIG, 'Environment working directory is', process.cwd());
+  logger.info('Environment working directory is', process.cwd());
 
   // now check to make sure they're actually loaded and exit otherwise
   if (!env.DOMAIN) {
-    // log('info', LoggerSenderType.ENV_CONFIG, 'ENVIRONMENT VARIABLES FAILED TO LOAD!!');
-    console.error('ENVIRONMENT VARIABLES FAILED TO LOAD! Exiting ...');
+    logger.error('ENVIRONMENT VARIABLES FAILED TO LOAD! Exiting ...');
     process.exit(-1);
   }
 
-  //   log(
-  //     'info',
-  //     LoggerSenderType.ENV_CONFIG,
-  //     'Environment variables loaded, initializing dependency configurations ...'
-  //   );
-  console.log('Environment variables loaded, initializing dependency configurations ...');
+  logger.info('Environment variables loaded, initializing dependency configurations ...');
 
   // setup things that depend on env vars here
   nodeMailerConfig.init();
   //   await apiDataConfig.init();
 
-  // log('info', LoggerSenderType.ENV_CONFIG, 'PolyFlowBuilder environment initialization complete');
-  console.log('PolyFlowBuilder environment initialization complete');
+  logger.info('PolyFlowBuilder environment initialization complete');
 }

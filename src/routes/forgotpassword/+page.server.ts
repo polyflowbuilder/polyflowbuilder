@@ -1,8 +1,11 @@
 import { fail } from '@sveltejs/kit';
 import { startPWResetRoutine } from '$lib/server/util/pwResetUtil';
 import { forgotPasswordSchema } from '$lib/schema/forgotPasswordSchema';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
+
+const logger = initLogger('ServerRouteHandler (/forgotpassword');
 
 // TODO: load function to redirect if we're authenticated
 export const actions: Actions = {
@@ -31,7 +34,7 @@ export const actions: Actions = {
         });
       }
     } catch (error) {
-      console.log('an internal error occurred', error);
+      logger.error('an internal error occurred', error);
       return fail(500, {
         error: true
       });

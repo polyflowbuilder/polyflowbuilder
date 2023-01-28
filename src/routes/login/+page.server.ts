@@ -4,9 +4,12 @@ import { getUserByEmail } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { createToken, upsertToken } from '$lib/server/db/token';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { UserLoginData } from '$lib/schema/loginSchema';
+
+const logger = initLogger('ServerRouteHandler (/login)');
 
 export const actions: Actions = {
   default: async ({ request, cookies }) => {
@@ -36,8 +39,10 @@ export const actions: Actions = {
           cookies.set('sId', sessionId, {
             maxAge: SESSION_MAX_AGE
           });
+
+          logger.info('login attempt for user', parseResults.data.email, 'successful');
         } else {
-          console.log('an error occurred while creating session');
+          logger.error('an error occurred while creating session');
           return fail(500, {
             error: true
           });
@@ -54,14 +59,13 @@ export const actions: Actions = {
         });
       }
     } catch (error) {
-      console.log('an internal error occurred', error);
+      logger.error('an internal error occurred', error);
       return fail(500, {
         error: true
       });
     }
 
     // will only make it here if login was successful
-    console.log('login successful, redirecting');
     throw redirect(303, '/flows');
   }
 };

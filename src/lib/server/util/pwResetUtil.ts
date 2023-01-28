@@ -1,10 +1,15 @@
 import argon2 from 'argon2';
 import { sendEmail } from './emailUtil';
 import { updateUser } from '$lib/server/db/user';
+import { initLogger } from '$lib/config/loggerConfig';
 import { createPasswordResetEmailPayload } from '$lib/config/emailConfig.server';
 import { clearTokensByEmail, createToken, upsertToken } from '$lib/server/db/token';
 
+const logger = initLogger('Util/PWResetUtil');
+
 export async function startPWResetRoutine(email: string): Promise<void> {
+  logger.info('start password reset routine for', email);
+
   const token = createToken();
 
   const expiryDate = new Date();
@@ -17,7 +22,7 @@ export async function startPWResetRoutine(email: string): Promise<void> {
     const passwordResetEmailPayload = createPasswordResetEmailPayload(email, token);
     sendEmail(passwordResetEmailPayload);
 
-    console.log('reset password email sent successfully for', email);
+    logger.info('reset password email sent successfully for', email);
   }
 }
 
@@ -30,4 +35,6 @@ export async function resetPassword(email: string, password: string): Promise<vo
   await updateUser(email, {
     password: newHashedPassword
   });
+
+  logger.info('Password successfully reset for', email);
 }

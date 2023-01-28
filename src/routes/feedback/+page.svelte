@@ -87,8 +87,11 @@
             >
           {/if}
 
-          <button class="btn btn-accent btn-block mt-6" class:loading type="submit"
-            >Submit Feedback</button
+          <button
+            class="btn btn-accent btn-block mt-6"
+            class:loading
+            disabled={loading}
+            type="submit">Submit Feedback</button
           >
         </div>
       </form>

@@ -1,6 +1,9 @@
 import { env } from '$env/dynamic/private';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { AuthenticationType } from 'nodemailer/lib/smtp-connection';
 import type { Options } from 'nodemailer/lib/smtp-transport';
+
+const logger = initLogger('Config/NodemailerConfig');
 
 let transportAuth: AuthenticationType;
 let transportOptions: Options;
@@ -18,8 +21,7 @@ function init(): void {
     auth: transportAuth
   };
 
-  //   log('info', LoggerSenderType.NODEMAILER_CONFIG, 'Nodemailer configuration updated');
-  console.log('Nodemailer configuration updated');
+  logger.info('Nodemailer configuration updated');
 }
 
 export { init, transportAuth, transportOptions };

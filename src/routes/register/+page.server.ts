@@ -1,8 +1,11 @@
 import { fail, redirect } from '@sveltejs/kit';
 import { registerValidationSchema } from '$lib/schema/registerSchema';
 import { createUser } from '$lib/server/db/user';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { UserRegistrationData } from '$lib/schema/registerSchema';
+
+const logger = initLogger('ServerRouteHandler (/register');
 
 export const actions: Actions = {
   default: async ({ request, cookies }) => {
@@ -42,7 +45,7 @@ export const actions: Actions = {
         });
       }
     } catch (error) {
-      console.log('an internal error occurred', error);
+      logger.error('an internal error occurred', error);
       return fail(500, {
         error: true
       });

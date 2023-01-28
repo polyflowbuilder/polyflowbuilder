@@ -1,8 +1,11 @@
 // CRUD operations regarding user data
 import argon2 from 'argon2';
 import { prisma } from '$lib/server/db/prisma';
+import { initLogger } from '$lib/config/loggerConfig';
 import type { UserData } from '$lib/types';
 import type { Prisma, User } from '@prisma/client';
+
+const logger = initLogger('DB/User');
 
 export async function createUser(registerData: {
   username: string;
@@ -21,7 +24,7 @@ export async function createUser(registerData: {
   });
 
   if (user) {
-    console.log('New user attempted to register with existing email');
+    logger.info('New user attempted to register with existing email');
     return null;
   } else {
     await prisma.user.create({
@@ -34,7 +37,7 @@ export async function createUser(registerData: {
     });
   }
 
-  console.log(`User with email [${registerData.email}] successfully added to master database`);
+  logger.info(`User with email [${registerData.email}] successfully added to master database`);
   return registerData.email;
 }
 
