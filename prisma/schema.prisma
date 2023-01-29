@@ -35,7 +35,7 @@ model Token {
 
   user                User      @relation(fields: [email], references: [email], onDelete: Cascade)
 
-  @@id([email, token])
+  @@id([email, type])
 }
 
 enum TokenType {

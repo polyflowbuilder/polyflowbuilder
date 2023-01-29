@@ -14,11 +14,11 @@ export function createToken() {
 export async function upsertToken(
   email: string,
   type: TokenType,
-  token: string,
   expiry: Date
 ): Promise<string | null> {
   try {
-    await prisma.token.upsert({
+    const token = createToken();
+    const { token: upsertToken } = await prisma.token.upsert({
       create: {
         email,
         token,
@@ -29,13 +29,17 @@ export async function upsertToken(
         expiresUTC: expiry
       },
       where: {
-        email_token: {
+        email_type: {
           email,
-          token
+          type
         }
+      },
+      select: {
+        token: true
       }
     });
     logger.info(type, 'token upserted for', email);
+    return upsertToken;
   } catch (error) {
     if (
       error instanceof Prisma.PrismaClientKnownRequestError &&
@@ -50,7 +54,6 @@ export async function upsertToken(
       throw error;
     }
   }
-  return token;
 }
 
 export async function validateToken(

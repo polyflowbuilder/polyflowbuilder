@@ -29,9 +29,9 @@ async function createToken(prisma: PrismaClient, expireNow = false) {
 async function deleteToken(prisma: PrismaClient) {
   await prisma.token.delete({
     where: {
-      email_token: {
+      email_type: {
         email: RESET_PASSWORD_PAGE_TESTS_EMAIL,
-        token: 'testtoken'
+        type: 'PASSWORD_RESET'
       }
     }
   });

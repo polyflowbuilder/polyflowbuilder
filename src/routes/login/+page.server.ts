@@ -32,9 +32,8 @@ export const actions: Actions = {
         }
 
         // auth successful, create a new session
-        const sessionToken = createToken();
         const sessionExpiry = new Date(Date.now() + 1000 * SESSION_MAX_AGE);
-        const sessionId = await upsertToken(user.email, 'SESSION', sessionToken, sessionExpiry);
+        const sessionId = await upsertToken(user.email, 'SESSION', sessionExpiry);
 
         if (sessionId) {
           cookies.set('sId', sessionId, {

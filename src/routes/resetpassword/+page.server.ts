@@ -25,11 +25,7 @@ export const actions: Actions = {
         if (validToken) {
           await resetPassword(parseResults.data.resetEmail, parseResults.data.password);
 
-          logger.info(
-            'password reset successful for user',
-            parseResults.data.resetEmail,
-            'redirecting'
-          );
+          logger.info('password reset successful for user', parseResults.data.resetEmail);
         } else {
           return fail(401, {
             success: false,

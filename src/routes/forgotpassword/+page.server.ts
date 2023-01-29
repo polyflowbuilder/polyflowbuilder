@@ -8,7 +8,6 @@ import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/forgotpassword');
 
-// TODO: load function to redirect if we're authenticated
 export const actions: Actions = {
   default: async ({ request }) => {
     try {
