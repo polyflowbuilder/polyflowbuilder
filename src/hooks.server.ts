@@ -1,6 +1,7 @@
 import { loadEnv } from '$lib/config/envConfig.server';
 import { initLogger } from '$lib/config/loggerConfig';
-import type { Handle } from '@sveltejs/kit';
+import { getValidTokenUser } from '$lib/server/db/token';
+import type { Handle, RequestEvent } from '@sveltejs/kit';
 
 const logger = initLogger('Hooks');
 
@@ -11,5 +12,17 @@ await loadEnv().catch((err) => {
 });
 
 export const handle: Handle = async ({ event, resolve }) => {
+  await setSession(event);
   return await resolve(event);
 };
+
+async function setSession(event: RequestEvent) {
+  const sessionId = event.cookies.get('sId') || '';
+  const sessionUser = await getValidTokenUser(sessionId, 'SESSION');
+  if (sessionUser) {
+    event.locals.session = {
+      email: sessionUser.email,
+      username: sessionUser.username
+    };
+  }
+}

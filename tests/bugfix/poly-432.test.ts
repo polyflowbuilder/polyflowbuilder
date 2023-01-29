@@ -1,5 +1,11 @@
+// NOTE: need ignores bc we need the .ts extension for Playwright
+// see https://playwright.dev/docs/test-typescript#typescript-with-esm
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import { deleteUserAccount } from '../util/userTestUtil.ts';
+
 import { expect, test } from '@playwright/test';
-import { PrismaClient } from '@prisma/client';
 
 // bug description: going from /register to /login pages by
 // clicking links (e.g. the "Sign In" link on the /register page)
@@ -8,17 +14,9 @@ import { PrismaClient } from '@prisma/client';
 const POLY_432_TESTS_EMAIL = 'pfb_test_poly-432_playwright@test.com';
 
 test.describe('poly-432 bugfix tests', () => {
-  const prisma = new PrismaClient();
-
   test.afterAll(async () => {
-    console.log('deleting account used for poly-432 tests');
-    // TODO: figure out how we can import from db/user without
-    // playwright complaining about it
-    await prisma.user.delete({
-      where: {
-        email: POLY_432_TESTS_EMAIL
-      }
-    });
+    // delete account
+    await deleteUserAccount(POLY_432_TESTS_EMAIL);
   });
 
   test('do not see account created message on regular navigation', async ({ page }) => {

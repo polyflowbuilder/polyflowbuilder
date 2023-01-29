@@ -1,4 +1,10 @@
-import argon2 from 'argon2';
+// NOTE: need ignores bc we need the .ts extension for Playwright
+// see https://playwright.dev/docs/test-typescript#typescript-with-esm
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.ts';
+
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 
@@ -6,38 +12,18 @@ const RESET_PASSWORD_ROUTINE_TESTS_EMAIL = 'pfb_test_resetPasswordRoutine_playwr
 
 test.describe('reset password routine tests', () => {
   const prisma = new PrismaClient();
-
   test.beforeAll(async () => {
     // create account
-    const hashedPassword = await argon2.hash('test', { type: argon2.argon2id });
-    await prisma.user.create({
-      data: {
-        email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL,
-        username: 'test',
-        password: hashedPassword,
-        data: {}
-      }
-    });
+    await createUserAccount(RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test', 'test');
   });
 
   test.afterAll(async () => {
     // delete account
-    console.log('deleting account used for reset password routine tests');
-    await prisma.user.delete({
-      where: {
-        email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL
-      }
-    });
+    await deleteUserAccount(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
   });
 
   test('user can log in normally with original password', async ({ page }) => {
-    await page.goto('/login');
-    expect(await page.textContent('h2')).toBe('Sign In');
-    await expect(page.locator('button')).toBeVisible();
-
-    await page.getByLabel('email').fill(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
-    await page.getByLabel('password').fill('test');
-    await page.getByRole('button', { name: 'Sign In' }).click();
+    await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect(await page.textContent('h1')).toBe('flows');
@@ -121,16 +107,7 @@ test.describe('reset password routine tests', () => {
   });
 
   test('user able to log in with new password', async ({ page }) => {
-    // check that we're on the login page
-    await page.goto('/login');
-
-    await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
-    await expect(page.locator('button')).toBeVisible();
-
-    await page.getByLabel('email').fill(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
-    await page.getByLabel('password').fill('newpassword');
-    await page.getByRole('button', { name: 'Sign In' }).click();
+    await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
     expect(await page.textContent('h1')).toBe('flows');

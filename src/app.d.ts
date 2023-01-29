@@ -7,7 +7,12 @@ import type { PrismaClient } from '@prisma/client';
 declare global {
   namespace App {
     // interface Error {}
-    // interface Locals {}
+    interface Locals {
+      session?: {
+        email: string;
+        username: string;
+      };
+    }
     // interface PageData {}
     // interface Platform {}
   }

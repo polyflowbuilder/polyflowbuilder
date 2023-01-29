@@ -1,6 +1,5 @@
 import { expect, test } from '@playwright/test';
 
-// TODO: add redirect check if user is authenticated
 test.describe('forgot password page tests', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/forgotpassword');

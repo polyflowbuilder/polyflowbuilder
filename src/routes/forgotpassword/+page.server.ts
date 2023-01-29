@@ -1,7 +1,8 @@
 import { fail } from '@sveltejs/kit';
+import { initLogger } from '$lib/config/loggerConfig';
 import { startPWResetRoutine } from '$lib/server/util/pwResetUtil';
 import { forgotPasswordSchema } from '$lib/schema/forgotPasswordSchema';
-import { initLogger } from '$lib/config/loggerConfig';
+import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
@@ -42,10 +43,12 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = ({ cookies }) => {
+export const load: PageServerLoad = (event) => {
+  redirectIfAuthenticated(event);
+
   // for ephemeral forgot password notifs
-  if (cookies.get('redirectFromResetPassword')) {
-    cookies.delete('redirectFromResetPassword');
+  if (event.cookies.get('redirectFromResetPassword')) {
+    event.cookies.delete('redirectFromResetPassword');
     return {
       cameFromResetPassword: true
     };

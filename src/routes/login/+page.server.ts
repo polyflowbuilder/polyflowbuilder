@@ -1,10 +1,11 @@
 import argon2 from 'argon2';
+import { initLogger } from '$lib/config/loggerConfig';
 import { fail, redirect } from '@sveltejs/kit';
 import { getUserByEmail } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { createToken, upsertToken } from '$lib/server/db/token';
-import { initLogger } from '$lib/config/loggerConfig';
+import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { UserLoginData } from '$lib/schema/loginSchema';
@@ -70,17 +71,24 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = ({ cookies }) => {
+export const load: PageServerLoad = (event) => {
+  redirectIfAuthenticated(event);
+
   // for ephemeral login page notifs
-  if (cookies.get('redirectFromRegister')) {
-    cookies.delete('redirectFromRegister');
+  if (event.cookies.get('redirectFromRegister')) {
+    event.cookies.delete('redirectFromRegister');
     return {
       cameFromRegister: true
     };
-  } else if (cookies.get('redirectFromResetPassword')) {
-    cookies.delete('redirectFromResetPassword');
+  } else if (event.cookies.get('redirectFromResetPassword')) {
+    event.cookies.delete('redirectFromResetPassword');
     return {
       cameFromResetPassword: true
+    };
+  } else if (event.cookies.get('redirectFromUnauthorized')) {
+    event.cookies.delete('redirectFromUnauthorized');
+    return {
+      cameFromUnauthorized: true
     };
   }
 };

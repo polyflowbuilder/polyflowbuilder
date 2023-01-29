@@ -1,24 +1,22 @@
+// NOTE: need ignores bc we need the .ts extension for Playwright
+// see https://playwright.dev/docs/test-typescript#typescript-with-esm
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import { deleteUserAccount } from '../util/userTestUtil.ts';
+
 import { expect, test } from '@playwright/test';
-import { PrismaClient } from '@prisma/client';
 
 const REGISTER_TESTS_EMAIL = 'pfb_test_registerPage_playwright@test.com';
 
 test.describe('registration page tests', () => {
-  const primsa = new PrismaClient();
-
   test.beforeEach(async ({ page }) => {
     await page.goto('/register');
   });
 
   test.afterAll(async () => {
-    console.log('deleting account used for registration tests');
-    // TODO: figure out how we can import from db/user without
-    // playwright complaining about
-    await primsa.user.delete({
-      where: {
-        email: REGISTER_TESTS_EMAIL
-      }
-    });
+    // delete account
+    await deleteUserAccount(REGISTER_TESTS_EMAIL);
   });
 
   test('register page has expected h1', async ({ page }) => {

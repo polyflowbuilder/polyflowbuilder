@@ -1,30 +1,18 @@
-import argon2 from 'argon2';
+// NOTE: need ignores bc we need the .ts extension for Playwright
+// see https://playwright.dev/docs/test-typescript#typescript-with-esm
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.ts';
+
 import { expect, test } from '@playwright/test';
-import { PrismaClient } from '@prisma/client';
 
 const LOGIN_TESTS_EMAIL = 'pfb_test_loginPage_playwright@test.com';
 
 test.describe('login page tests', () => {
-  const prisma = new PrismaClient();
-
   test.beforeAll(async () => {
-    // TODO: figure out how we can import from db/user without
-    // playwright complaining about
-
-    const hashedPassword = await argon2.hash('test', { type: argon2.argon2id });
-    await prisma.user.create({
-      data: {
-        email: LOGIN_TESTS_EMAIL,
-        username: 'test',
-        // mirrors hashing in db/user
-        password: hashedPassword,
-        // mirrors newDataTemplate in db/user
-        data: {
-          flows: [],
-          notifs: []
-        }
-      }
-    });
+    // create account
+    await createUserAccount(LOGIN_TESTS_EMAIL, 'test', 'test');
   });
 
   test.beforeEach(async ({ page }) => {
@@ -32,12 +20,8 @@ test.describe('login page tests', () => {
   });
 
   test.afterAll(async () => {
-    console.log('deleting account used for login tests');
-    await prisma.user.delete({
-      where: {
-        email: LOGIN_TESTS_EMAIL
-      }
-    });
+    // delete account
+    await deleteUserAccount(LOGIN_TESTS_EMAIL);
   });
 
   test('login page has expected h2', async ({ page }) => {
@@ -88,9 +72,7 @@ test.describe('login page tests', () => {
   });
 
   test('correct credentials, check redirect and cookie', async ({ page }) => {
-    await page.getByLabel('email').fill(LOGIN_TESTS_EMAIL);
-    await page.getByLabel('password').fill('test');
-    await page.getByRole('button', { name: 'Sign In' }).click();
+    await performLogin(page, LOGIN_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect(await page.textContent('h1')).toBe('flows');

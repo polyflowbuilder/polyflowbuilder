@@ -3,6 +3,7 @@ import { Prisma } from '@prisma/client';
 import { prisma } from '$lib/server/db/prisma';
 import { initLogger } from '$lib/config/loggerConfig';
 import type { TokenType } from '@prisma/client';
+import type { User } from '@prisma/client';
 
 const logger = initLogger('DB/Token');
 
@@ -73,7 +74,7 @@ export async function validateToken(
     return false;
   }
 
-  if (new Date(res.expiresUTC).getTime() < Date.now()) {
+  if (res.expiresUTC.getTime() < Date.now()) {
     logger.info(type, 'token for', email, 'has expired');
     return false;
   }
@@ -90,4 +91,23 @@ export async function clearTokensByEmail(email: string, type: TokenType): Promis
     }
   });
   logger.info(type, 'tokens expired for', email);
+}
+
+export async function getValidTokenUser(token: string, type: TokenType): Promise<User | null> {
+  const res = await prisma.token.findFirst({
+    where: {
+      token,
+      type
+    },
+    select: {
+      expiresUTC: true,
+      user: true
+    }
+  });
+
+  if (!res || res.expiresUTC.getTime() < Date.now()) {
+    return null;
+  }
+
+  return res.user;
 }

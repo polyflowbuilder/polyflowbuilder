@@ -1,3 +1,10 @@
+// NOTE: need ignores bc we need the .ts extension for Playwright
+// see https://playwright.dev/docs/test-typescript#typescript-with-esm
+
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.ts';
+
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 
@@ -5,9 +12,8 @@ const RESET_PASSWORD_PAGE_TESTS_EMAIL = 'pfb_test_resetPasswordPage_playwright@t
 const RESET_PASSWORD_VALID_URL = `/resetpassword?token=${encodeURIComponent(
   'testtoken'
 )}&email=${RESET_PASSWORD_PAGE_TESTS_EMAIL}`;
-const prisma = new PrismaClient();
 
-async function createToken(expireNow = false) {
+async function createToken(prisma: PrismaClient, expireNow = false) {
   const expiryDate = new Date();
   expiryDate.setMinutes(expiryDate.getMinutes() + 30);
   await prisma.token.create({
@@ -20,7 +26,7 @@ async function createToken(expireNow = false) {
   });
 }
 
-async function deleteToken() {
+async function deleteToken(prisma: PrismaClient) {
   await prisma.token.delete({
     where: {
       email_token: {
@@ -31,7 +37,6 @@ async function deleteToken() {
   });
 }
 
-// TODO: add redirect check if user is authenticated
 test.describe('reset password page tests (no token)', () => {
   test('navigation with no searchparams redirects', async ({ page }) => {
     await page.goto('/resetpassword');
@@ -68,18 +73,14 @@ test.describe('reset password page tests (no token)', () => {
 });
 
 test.describe('reset password page tests (token)', () => {
-  test.beforeAll(async () => {
-    // set up token in DB
-    await prisma.user.create({
-      data: {
-        email: RESET_PASSWORD_PAGE_TESTS_EMAIL,
-        username: 'test',
-        password: 'test',
-        data: {}
-      }
-    });
+  const prisma = new PrismaClient();
 
-    await createToken();
+  test.beforeAll(async () => {
+    // create account
+    await createUserAccount(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'test', 'test');
+
+    // set up token in DB
+    await createToken(prisma);
   });
 
   test.beforeEach(async ({ page }) => {
@@ -87,12 +88,8 @@ test.describe('reset password page tests (token)', () => {
   });
 
   test.afterAll(async () => {
-    console.log('deleting account used for reset password page tests');
-    await prisma.user.delete({
-      where: {
-        email: RESET_PASSWORD_PAGE_TESTS_EMAIL
-      }
-    });
+    // delete account
+    await deleteUserAccount(RESET_PASSWORD_PAGE_TESTS_EMAIL);
   });
 
   test('authorized reset password page has expected content', async ({ page }) => {
@@ -134,7 +131,7 @@ test.describe('reset password page tests (token)', () => {
 
   test('token gets deleted before reset can happen', async ({ page }) => {
     // delete token from DB side
-    await deleteToken();
+    await deleteToken(prisma);
 
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
@@ -147,13 +144,13 @@ test.describe('reset password page tests (token)', () => {
     );
 
     // recreate the token
-    await createToken();
+    await createToken(prisma);
   });
 
   test('token expires before reset can happen', async ({ page }) => {
     // create token that instantly expired
-    await deleteToken();
-    await createToken(true);
+    await deleteToken(prisma);
+    await createToken(prisma, true);
 
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
@@ -166,8 +163,8 @@ test.describe('reset password page tests (token)', () => {
     );
 
     // reset token
-    await deleteToken();
-    await createToken();
+    await deleteToken(prisma);
+    await createToken(prisma);
   });
 
   test('500 failure case', async ({ page }) => {

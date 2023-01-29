@@ -1,9 +1,11 @@
-import { fail, redirect } from '@sveltejs/kit';
-import { registerValidationSchema } from '$lib/schema/registerSchema';
 import { createUser } from '$lib/server/db/user';
 import { initLogger } from '$lib/config/loggerConfig';
+import { fail, redirect } from '@sveltejs/kit';
+import { registerValidationSchema } from '$lib/schema/registerSchema';
+import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { UserRegistrationData } from '$lib/schema/registerSchema';
+import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/register');
 
@@ -55,4 +57,8 @@ export const actions: Actions = {
     cookies.set('redirectFromRegister', '1');
     throw redirect(303, '/login');
   }
+};
+
+export const load: PageServerLoad = (event) => {
+  redirectIfAuthenticated(event);
 };

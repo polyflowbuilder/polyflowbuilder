@@ -1,8 +1,9 @@
+import { initLogger } from '$lib/config/loggerConfig';
 import { validateToken } from '$lib/server/db/token';
 import { resetPassword } from '$lib/server/util/pwResetUtil';
 import { fail, redirect } from '@sveltejs/kit';
 import { resetPasswordSchema } from '$lib/schema/resetPasswordSchema';
-import { initLogger } from '$lib/config/loggerConfig';
+import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
@@ -56,12 +57,12 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = async ({ url, cookies }) => {
-  // TODO: redirect to homepage if authenticated
+export const load: PageServerLoad = async (event) => {
+  redirectIfAuthenticated(event);
 
   // validate correct URL
-  const resetEmail = url.searchParams.get('email');
-  const resetToken = url.searchParams.get('token');
+  const resetEmail = event.url.searchParams.get('email');
+  const resetToken = event.url.searchParams.get('token');
   if (resetEmail && resetToken && (await validateToken(resetEmail, resetToken, 'PASSWORD_RESET'))) {
     return {
       resetEmail,
@@ -69,7 +70,7 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
     };
   } else {
     // invalid reset password request, redirect
-    cookies.set('redirectFromResetPassword', '1');
+    event.cookies.set('redirectFromResetPassword', '1');
     throw redirect(303, '/forgotpassword');
   }
 };

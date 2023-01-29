@@ -28,6 +28,13 @@
         <AlertSuccess text="Password successfully reset! Please login." addlClass="mb-6" />
       {/if}
 
+      {#if data.cameFromUnauthorized}
+        <AlertError
+          text="You are unauthorized to access the requested resource. Please sign in."
+          addlClass="mb-6"
+        />
+      {/if}
+
       {#if !form?.success && $page.status === 401}
         <AlertError text="Incorrect email address and/or password." addlClass="mb-6" />
       {/if}
@@ -35,7 +42,7 @@
       {#if form?.error}
         <AlertError
           text="An error occurred when attempting login. Please try again a bit later."
-          addlClass="mb-4"
+          addlClass="mb-6"
         />
       {/if}
 
@@ -48,8 +55,7 @@
             loading = false;
             loginText = 'Sign In';
             // always reset so that we don't see multiple alerts at the same time
-            data.cameFromRegister = false;
-            data.cameFromResetPassword = false;
+            data = {};
             await update();
             // reset pw field on failed POST bc form is only reset on success response
             if ($page.status === 400 || $page.status === 401) {
