@@ -1,7 +1,7 @@
 import { loadEnv } from '$lib/config/envConfig.server';
 import { initLogger } from '$lib/config/loggerConfig';
 import { getValidTokenUser } from '$lib/server/db/token';
-import type { Handle, RequestEvent } from '@sveltejs/kit';
+import type { Handle, RequestEvent, HandleServerError } from '@sveltejs/kit';
 
 const logger = initLogger('Hooks');
 
@@ -26,3 +26,11 @@ async function setSession(event: RequestEvent) {
     };
   }
 }
+
+export const handleError: HandleServerError = ({ error, event }) => {
+  if (!event.route.id) {
+    logger.warn('User attempted to navigate to nonexistent page', event.url.pathname);
+  } else {
+    logger.error('An internal error has occurred', error, event);
+  }
+};
