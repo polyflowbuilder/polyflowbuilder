@@ -26,7 +26,7 @@ test.describe('reset password routine tests', () => {
     await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h1')).toBe('flows');
+    expect(await page.textContent('h2')).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
     await page.context().clearCookies();
@@ -110,7 +110,7 @@ test.describe('reset password routine tests', () => {
     await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h1')).toBe('flows');
+    expect(await page.textContent('h2')).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

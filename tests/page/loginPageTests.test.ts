@@ -75,7 +75,7 @@ test.describe('login page tests', () => {
     await performLogin(page, LOGIN_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h1')).toBe('flows');
+    expect(await page.textContent('h2')).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

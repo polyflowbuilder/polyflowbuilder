@@ -1,4 +1,4 @@
-<header class="navbar mb-2 shadow-lg bg-gray-100 text-neutral-content">
+<header class="navbar shadow-md bg-gray-100 text-neutral-content z-10">
   <div class="flex-none px-2 mx-2">
     <a href="/"><img src="/assets/logo.png" alt="PolyFlowBuilder logo" width="235" height="65" /></a
     >

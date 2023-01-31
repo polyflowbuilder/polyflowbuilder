@@ -23,7 +23,7 @@ async function canAccessFeedbackPage(page: Page) {
 
 async function verifyFlowsPage(page: Page) {
   await expect(page).toHaveURL(/.*flows/);
-  expect(await page.textContent('h1')).toBe('flows');
+  expect(await page.textContent('h2')).toBe('Flows');
 }
 
 test.describe('auth guard tests', () => {
