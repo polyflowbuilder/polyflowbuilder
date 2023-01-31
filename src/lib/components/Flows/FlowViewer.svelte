@@ -3,7 +3,8 @@
 <div class="flowViewer card flex-1">
   <div class="card-body p-2 h-full">
     <div class="m-auto">
-      <h2 class="font-medium text-polyGreen text-4xl">
+      <!-- center text when viewer gets small -->
+      <h2 class="font-medium text-center text-polyGreen text-4xl">
         No flow selected. Please select or create a flow.
       </h2>
     </div>

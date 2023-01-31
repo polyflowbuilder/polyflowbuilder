@@ -1,4 +1,5 @@
 const { '[data-theme=light]': lightTheme } = require('daisyui/src/colors/themes');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config = {
   content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/tw-elements/dist/js/**/*.js'],
@@ -14,6 +15,11 @@ const config = {
           DEFAULT: '#007bff'
         }
       }
+    },
+    screens: {
+      xxs: '375px',
+      xs: '475px',
+      ...defaultTheme.screens
     }
   },
 
@@ -23,8 +29,10 @@ const config = {
     themes: [
       {
         // overriding some properties of the light theme we are using
+        // need to restart dev server for changes to take effect
         light: {
           ...lightTheme,
+          primary: '#d1d5db', // base-300
           accent: '#2aa79b',
           'accent-focus': '#009485',
           'accent-content': '#ffffff'
