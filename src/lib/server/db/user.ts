@@ -2,7 +2,6 @@
 import argon2 from 'argon2';
 import { prisma } from '$lib/server/db/prisma';
 import { initLogger } from '$lib/config/loggerConfig';
-import type { UserData } from '$lib/types';
 import type { Prisma, User } from '@prisma/client';
 
 const logger = initLogger('DB/User');
@@ -12,11 +11,6 @@ export async function createUser(registerData: {
   email: string;
   password: string;
 }): Promise<string | null> {
-  const newDataTemplate: UserData = {
-    flows: [],
-    notifs: []
-  };
-
   const user = await prisma.user.findUnique({
     where: {
       email: registerData.email
@@ -31,8 +25,7 @@ export async function createUser(registerData: {
       data: {
         username: registerData.username,
         password: await argon2.hash(registerData.password, { type: argon2.argon2id }),
-        email: registerData.email,
-        data: newDataTemplate
+        email: registerData.email
       }
     });
   }

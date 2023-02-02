@@ -53,7 +53,7 @@ test.describe('reset password routine tests', () => {
 
   test('user navigates to reset password link and resets password', async ({ page }) => {
     // get the token from the DB
-    const { token } = await prisma.token.findFirst({
+    const res = await prisma.token.findFirst({
       where: {
         email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL,
         type: 'PASSWORD_RESET'
@@ -62,6 +62,8 @@ test.describe('reset password routine tests', () => {
         token: true
       }
     });
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const { token } = res!;
 
     await page.goto(
       `/resetpassword?token=${encodeURIComponent(

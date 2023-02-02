@@ -12,11 +12,11 @@ model User {
   username            String
   password            String
   email               String    @unique
-  data                Json
   createDateUTC       DateTime  @default(now()) @db.DateTime(0)
   lastLoginTimeUTC    DateTime? @db.DateTime(0)
 
   tokens              Token[]
+  flowcharts          Flowchart[]
 }
 
 model FeedbackReport {
@@ -36,6 +36,25 @@ model Token {
   user                User      @relation(fields: [email], references: [email], onDelete: Cascade)
 
   @@id([email, type])
+}
+
+model Flowchart {
+  id                  String    @id @default(uuid())
+  ownerId             String
+  name                String
+  programId           String
+  startYear           String
+  unitTotal           String
+  notes               String
+  termData            Json
+  version             Int
+  hash                String
+  validationData      Json?
+  publishedId         String?
+  importtedId         String?
+  lastUpdatedUTC      DateTime  @db.DateTime(0)
+
+  user                User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
 }
 
 enum TokenType {

@@ -1,8 +1,9 @@
 // testing utilities related to user manipulation
 
 import argon2 from 'argon2';
-import { expect, Page } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import type { Page } from '@playwright/test';
 
 const prisma = new PrismaClient();
 
@@ -15,12 +16,7 @@ export async function createUserAccount(email: string, username: string, passwor
       email,
       username,
       // mirrors hashing in db/user
-      password: hashedPassword,
-      // mirrors newDataTemplate in db/user
-      data: {
-        flows: [],
-        notifs: []
-      }
+      password: hashedPassword
     }
   });
 }

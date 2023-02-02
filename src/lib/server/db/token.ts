@@ -7,7 +7,7 @@ import type { User } from '@prisma/client';
 
 const logger = initLogger('DB/Token');
 
-export function createToken() {
+function createToken() {
   return crypto.randomBytes(64).toString('base64');
 }
 

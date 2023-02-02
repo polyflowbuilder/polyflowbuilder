@@ -5,7 +5,8 @@
 // @ts-ignore
 import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.ts';
 
-import { expect, Page, test } from '@playwright/test';
+import { expect, test } from '@playwright/test';
+import type { Page } from '@playwright/test';
 
 const AUTH_GUARD_TESTS_EMAIL = 'pfb_test_authGuards_playwright@test.com';
 

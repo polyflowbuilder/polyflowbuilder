@@ -4,7 +4,7 @@ import { fail, redirect } from '@sveltejs/kit';
 import { getUserByEmail } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
-import { createToken, upsertToken } from '$lib/server/db/token';
+import { upsertToken } from '$lib/server/db/token';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';

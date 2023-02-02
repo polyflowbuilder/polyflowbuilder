@@ -55,7 +55,9 @@
             loading = false;
             loginText = 'Sign In';
             // always reset so that we don't see multiple alerts at the same time
-            data = {};
+            data.cameFromRegister = false;
+            data.cameFromResetPassword = false;
+            data.cameFromUnauthorized = false;
             await update();
             // reset pw field on failed POST bc form is only reset on success response
             if ($page.status === 400 || $page.status === 401) {
