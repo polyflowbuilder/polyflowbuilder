@@ -52,6 +52,12 @@ export const actions: Actions = {
             error: true
           });
         }
+        default: {
+          logger.error('Unexpected response code received:', res.status);
+          return fail(500, {
+            error: true
+          });
+        }
       }
     } catch (error) {
       logger.error('an internal error occurred', error);

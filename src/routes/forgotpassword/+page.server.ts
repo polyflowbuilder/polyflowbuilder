@@ -1,7 +1,5 @@
 import { fail } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
-import { startPWResetRoutine } from '$lib/server/util/pwResetUtil';
-import { forgotPasswordSchema } from '$lib/schema/forgotPasswordSchema';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
@@ -9,29 +7,45 @@ import type { PageServerLoad } from './$types';
 const logger = initLogger('ServerRouteHandler (/forgotpassword');
 
 export const actions: Actions = {
-  default: async ({ request }) => {
+  default: async ({ request, fetch }) => {
     try {
       const data = Object.fromEntries(await request.formData());
 
-      // validation
-      const parseResults = forgotPasswordSchema.safeParse(data);
-      if (parseResults.success) {
-        // start password reset flow
-        await startPWResetRoutine(parseResults.data.email);
+      const res = await fetch('/api/auth/forgotpassword', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
 
-        return {
-          success: true
-        };
-      } else {
-        const { fieldErrors: forgotPasswordValidationErrors } = parseResults.error.flatten();
-
-        return fail(400, {
-          success: false,
-          data: {
-            email: data?.email
-          },
-          forgotPasswordValidationErrors
-        });
+      switch (res.status) {
+        case 201: {
+          return {
+            success: true
+          };
+        }
+        case 400: {
+          const resData = await res.json();
+          return fail(400, {
+            success: false,
+            data: {
+              email: data?.email
+            },
+            forgotPasswordValidationErrors: resData.validationErrors
+          });
+        }
+        case 500: {
+          return fail(500, {
+            error: true
+          });
+        }
+        default: {
+          logger.error('Unexpected response code received:', res.status);
+          return fail(500, {
+            error: true
+          });
+        }
       }
     } catch (error) {
       logger.error('an internal error occurred', error);
