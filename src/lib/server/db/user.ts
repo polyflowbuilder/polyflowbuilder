@@ -34,8 +34,7 @@ export async function createUser(registerData: {
   return registerData.email;
 }
 
-// TODO: move the updateLoginDate to somewhere else more appropriate?
-export async function getUserByEmail(email: string, updateLoginDate = false): Promise<User | null> {
+export async function getUserByEmail(email: string): Promise<User | null> {
   // TODO: reconsider cache
 
   const user = await prisma.user.findUnique({
@@ -43,17 +42,6 @@ export async function getUserByEmail(email: string, updateLoginDate = false): Pr
       email
     }
   });
-
-  if (user && updateLoginDate) {
-    await prisma.user.update({
-      where: {
-        email
-      },
-      data: {
-        lastLoginTimeUTC: new Date()
-      }
-    });
-  }
 
   return user;
 }
