@@ -1,10 +1,10 @@
 import argon2 from 'argon2';
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
-import { upsertToken } from '$lib/server/db/token';
 import { getUserByEmail } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
+import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
 import type { UserLoginData } from '$lib/schema/loginSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -81,6 +81,51 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
     return json(
       {
         message: 'An error occurred while authenticating user, please try again later.'
+      },
+      {
+        status: 500
+      }
+    );
+  }
+};
+
+export const DELETE: RequestHandler = async ({ locals, cookies }) => {
+  try {
+    if (locals.session) {
+      // perform session delete
+      await clearTokensByEmail(locals.session.email, 'SESSION');
+      cookies.delete('sId', {
+        path: '/'
+      });
+
+      logger.info(`User ${locals.session.username} has successfully logged out.`);
+
+      return json(
+        {
+          message: 'User successfully logged out.'
+        },
+        {
+          status: 200
+        }
+      );
+    } else {
+      logger.warn('Attempted logout on nonexistent session');
+
+      return json(
+        {
+          message: 'The session either does not exist or is not valid.'
+        },
+        {
+          status: 400
+        }
+      );
+    }
+  } catch (error) {
+    logger.error('an internal error occurred', error);
+
+    return json(
+      {
+        message: 'An error occurred while deleting user account, please try again later.'
       },
       {
         status: 500

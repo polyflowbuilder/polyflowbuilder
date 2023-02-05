@@ -1,7 +1,30 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
+  import { goto, invalidateAll } from '$app/navigation';
   import { faBell, faBars, faSignOutAlt, faUserTimes } from '@fortawesome/free-solid-svg-icons';
+
+  async function logout() {
+    const res = await fetch('/api/auth/login', {
+      method: 'DELETE'
+    });
+
+    switch (res.status) {
+      // both of these will do a redirect
+      case 200:
+      case 400: {
+        await goto('/');
+        await invalidateAll();
+        break;
+      }
+      case 500: {
+        alert(
+          'An error occurred while trying to log out. Please save your data and refresh the page, or file a bug report if this persists.'
+        );
+        break;
+      }
+    }
+  }
 </script>
 
 <header class="navbar px-0 shadow-md bg-gray-100 text-neutral-content z-10">
@@ -76,7 +99,7 @@
           </li>
           <div class="divider m-0 p-0" />
           <li class="text-gray-800">
-            <a href={'#'} class="relative">
+            <a href={'#'} class="relative" on:click|preventDefault={logout}>
               Log Out
               <Fa icon={faSignOutAlt} class="right-4 absolute text-green-500" />
             </a>

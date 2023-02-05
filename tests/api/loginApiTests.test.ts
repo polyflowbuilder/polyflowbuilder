@@ -5,11 +5,13 @@
 // @ts-ignore
 import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.ts';
 
-import { expect, test } from '@playwright/test';
+import { APIRequestContext, expect, request, test } from '@playwright/test';
 
 const LOGIN_API_TESTS_EMAIL = 'pfb_test_loginAPI_playwright@test.com';
 
-test.describe('login api tests', () => {
+test.describe('login api tests (POST, DELETE)', () => {
+  let sessionRequestContext: APIRequestContext;
+
   test.beforeAll(async () => {
     // create account
     await createUserAccount(LOGIN_API_TESTS_EMAIL, 'test', 'test');
@@ -101,8 +103,11 @@ test.describe('login api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('authentication successful with 200 response', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/login', {
+  test('authentication successful with 200 response', async () => {
+    // init session context here so we can use cookies to logout
+    sessionRequestContext = await request.newContext();
+
+    const res = await sessionRequestContext.post('http://localhost:4173/api/auth/login', {
       data: {
         email: LOGIN_API_TESTS_EMAIL,
         password: 'test'
@@ -120,8 +125,35 @@ test.describe('login api tests', () => {
     expect(res.headers()['set-cookie']).toBeTruthy();
   });
 
+  test('logout successful with 200 response', async () => {
+    const res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login');
+
+    const expectedResponseBody = {
+      message: 'User successfully logged out.'
+    };
+
+    expect(res.status()).toBe(200);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+
+    // make sure cookie was deleted
+    expect(res.headers()['set-cookie']).toEqual('sId=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax');
+  });
+
+  test('logout with nonexistent session results in 400 response', async () => {
+    const res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login');
+
+    const expectedResponseBody = {
+      message: 'The session either does not exist or is not valid.'
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
   test('send garbage request results in 500', async ({ request }) => {
     // honestly not sure why this triggers 500 but will roll with it
+
+    // POST
     const res = await request.post('http://localhost:4173/api/auth/login', {});
 
     const expectedResponseBody = {
@@ -130,5 +162,7 @@ test.describe('login api tests', () => {
 
     expect(res.status()).toBe(500);
     expect(await res.json()).toStrictEqual(expectedResponseBody);
+
+    // TODO: add DELETE 500 test
   });
 });
