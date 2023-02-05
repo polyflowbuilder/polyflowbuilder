@@ -36,10 +36,32 @@ export async function performLogin(page: Page, email: string, password: string) 
   expect(await page.textContent('h2')).toBe('Sign In');
   await expect(page.locator('button')).toBeVisible();
 
+  // get previous lastlogindate
+  const { lastLoginTimeUTC: prevLastLoginTimeUTC } = await prisma.user.findFirst({
+    where: {
+      email
+    },
+    select: {
+      lastLoginTimeUTC: true
+    }
+  });
+
   await page.getByLabel('email').fill(email);
   await page.getByLabel('password').fill(password);
   await page.getByRole('button', { name: 'Sign In' }).click();
 
   // await for login process to finish redirecting
   await expect(page).not.toHaveURL(/.*login/);
+
+  // make sure that lastlogindate was updated
+  const { lastLoginTimeUTC } = await prisma.user.findFirst({
+    where: {
+      email
+    },
+    select: {
+      lastLoginTimeUTC: true
+    }
+  });
+  // not checking timestamps bc dont know what it should be
+  expect(lastLoginTimeUTC).not.toEqual(prevLastLoginTimeUTC);
 }

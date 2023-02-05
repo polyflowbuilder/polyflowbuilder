@@ -1,7 +1,7 @@
 import argon2 from 'argon2';
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
-import { getUserByEmail } from '$lib/server/db/user';
+import { getUserByEmail, updateUser } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
@@ -35,9 +35,15 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
       const sessionId = await upsertToken(user.email, 'SESSION', sessionExpiry);
 
       if (sessionId) {
+        // set session cookie
         cookies.set('sId', sessionId, {
           maxAge: SESSION_MAX_AGE,
           path: '/'
+        });
+
+        // update login date
+        await updateUser(parseResults.data.email, {
+          lastLoginTimeUTC: new Date(Date.now())
         });
 
         logger.info('login attempt for user', parseResults.data.email, 'successful');
