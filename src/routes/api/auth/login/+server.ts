@@ -5,8 +5,8 @@ import { upsertToken } from '$lib/server/db/token';
 import { getUserByEmail } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
-import type { RequestHandler } from '@sveltejs/kit';
 import type { UserLoginData } from '$lib/schema/loginSchema';
+import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/auth/login)');
 
@@ -47,10 +47,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
             message: 'User authentication successful.'
           },
           {
-            status: 303,
-            headers: {
-              Location: '/flows'
-            }
+            status: 200
           }
         );
       } else {

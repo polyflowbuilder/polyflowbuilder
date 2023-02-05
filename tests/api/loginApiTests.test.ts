@@ -101,24 +101,22 @@ test.describe('login api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('authentication successful with 303 response', async ({ request }) => {
+  test('authentication successful with 200 response', async ({ request }) => {
     const res = await request.post('http://localhost:4173/api/auth/login', {
       data: {
         email: LOGIN_API_TESTS_EMAIL,
         password: 'test'
-      },
-      maxRedirects: 0 // so we get the JSON 303 instead of the HTML 200
+      }
     });
 
     const expectedResponseBody = {
       message: 'User authentication successful.'
     };
 
-    expect(res.status()).toBe(303);
+    expect(res.status()).toBe(200);
     expect(await res.json()).toStrictEqual(expectedResponseBody);
 
     // make sure correct headers are present
-    expect(res.headers()['location']).toBe('/flows');
     expect(res.headers()['set-cookie']).toBeTruthy();
   });
 

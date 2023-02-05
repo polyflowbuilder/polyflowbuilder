@@ -1,9 +1,9 @@
-import { fail } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
+import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
 import type { UserLoginData } from '$lib/schema/loginSchema';
+import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/login)');
 
@@ -21,8 +21,8 @@ export const actions: Actions = {
       });
 
       switch (res.status) {
-        case 303: {
-          // no action, redirect handled from API
+        case 200: {
+          // fall out of switch statement to throw redirect
           break;
         }
         case 400: {
@@ -61,6 +61,9 @@ export const actions: Actions = {
         error: true
       });
     }
+
+    // will only make it here if login was successful
+    throw redirect(303, '/flows');
   }
 };
 
