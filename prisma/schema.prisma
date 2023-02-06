@@ -57,6 +57,13 @@ model Flowchart {
   user                User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
 }
 
+model Notification {
+  id                  String    @id @default(uuid())
+  title               String
+  content             Json
+  createdUTC          DateTime  @default(now()) @db.DateTime(0)
+}
+
 enum TokenType {
   SESSION
   PASSWORD_RESET
