@@ -4,25 +4,36 @@
   import { goto, invalidateAll } from '$app/navigation';
   import { faBell, faBars, faSignOutAlt, faUserTimes } from '@fortawesome/free-solid-svg-icons';
 
-  async function logout() {
-    const res = await fetch('/api/auth/login', {
-      method: 'DELETE'
-    });
+  async function logout(deleteAcc = false) {
+    try {
+      if (
+        deleteAcc &&
+        !confirm('Are you sure you want to delete your account? This cannot be undone!')
+      ) {
+        return;
+      }
 
-    switch (res.status) {
-      // both of these will do a redirect
-      case 200:
-      case 400: {
-        await goto('/');
-        await invalidateAll();
-        break;
+      const res = await fetch(`/api/auth/login${deleteAcc ? '?deleteAcc=1' : ''}`, {
+        method: 'DELETE'
+      });
+
+      switch (res.status) {
+        // both of these will do a redirect
+        case 200:
+        case 400: {
+          await goto('/');
+          await invalidateAll();
+          break;
+        }
+        case 500: {
+          throw new Error('Internal Server Error.');
+        }
       }
-      case 500: {
-        alert(
-          'An error occurred while trying to log out. Please save your data and refresh the page, or file a bug report if this persists.'
-        );
-        break;
-      }
+    } catch (error) {
+      alert(
+        'An error occurred while trying to log out. Please save your data and refresh the page, or file a bug report if this persists. Error: ' +
+          (error as Error).message
+      );
     }
   }
 </script>
@@ -99,13 +110,13 @@
           </li>
           <div class="divider m-0 p-0" />
           <li class="text-gray-800">
-            <a href={'#'} class="relative" on:click|preventDefault={logout}>
+            <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
               Log Out
               <Fa icon={faSignOutAlt} class="right-4 absolute text-green-500" />
             </a>
           </li>
           <li class="text-gray-800">
-            <a href={'#'} class="relative">
+            <a href={'#'} class="relative" on:click|preventDefault={() => logout(true)}>
               Delete Account
               <Fa icon={faUserTimes} class="right-3 absolute text-red-500" />
             </a>

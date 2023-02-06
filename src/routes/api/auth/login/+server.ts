@@ -1,10 +1,10 @@
 import argon2 from 'argon2';
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
-import { getUserByEmail, updateUser } from '$lib/server/db/user';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
 import { loginValidationSchema } from '$lib/schema/loginSchema';
 import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
+import { getUserByEmail, updateUser, deleteUser } from '$lib/server/db/user';
 import type { UserLoginData } from '$lib/schema/loginSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -95,7 +95,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
   }
 };
 
-export const DELETE: RequestHandler = async ({ locals, cookies }) => {
+export const DELETE: RequestHandler = async ({ url, locals, cookies }) => {
   try {
     if (locals.session) {
       // perform session delete
@@ -104,11 +104,23 @@ export const DELETE: RequestHandler = async ({ locals, cookies }) => {
         path: '/'
       });
 
-      logger.info(`User ${locals.session.username} has successfully logged out.`);
+      // delete account if indicated
+      const deleteAcc = url.searchParams.has('deleteAcc');
+      if (deleteAcc) {
+        await deleteUser(locals.session.email);
+      }
+
+      logger.info(
+        `User ${locals.session.username} has successfully logged out${
+          deleteAcc ? ' and account has been deleted' : ''
+        }.`
+      );
 
       return json(
         {
-          message: 'User successfully logged out.'
+          message: `User successfully logged out${
+            deleteAcc ? ' and account has been deleted' : ''
+          }.`
         },
         {
           status: 200

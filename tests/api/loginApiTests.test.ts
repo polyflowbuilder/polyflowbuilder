@@ -3,23 +3,20 @@
 
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-ignore
-import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.ts';
+import { createUserAccount } from '../util/userTestUtil.ts';
 
 import { APIRequestContext, expect, request, test } from '@playwright/test';
+import { PrismaClient } from '@prisma/client';
 
 const LOGIN_API_TESTS_EMAIL = 'pfb_test_loginAPI_playwright@test.com';
 
 test.describe('login api tests (POST, DELETE)', () => {
   let sessionRequestContext: APIRequestContext;
+  const prisma = new PrismaClient();
 
   test.beforeAll(async () => {
     // create account
     await createUserAccount(LOGIN_API_TESTS_EMAIL, 'test', 'test');
-  });
-
-  test.afterAll(async () => {
-    // delete account
-    await deleteUserAccount(LOGIN_API_TESTS_EMAIL);
   });
 
   test('empty payload results in 400', async ({ request }) => {
@@ -148,6 +145,43 @@ test.describe('login api tests (POST, DELETE)', () => {
 
     expect(res.status()).toBe(400);
     expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
+  test('logout with delete account flag results in 200 response', async () => {
+    // first login
+    let res = await sessionRequestContext.post('http://localhost:4173/api/auth/login', {
+      data: {
+        email: LOGIN_API_TESTS_EMAIL,
+        password: 'test'
+      }
+    });
+    let expectedResponseBody = {
+      message: 'User authentication successful.'
+    };
+    expect(res.status()).toBe(200);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+
+    // make sure correct headers are present
+    expect(res.headers()['set-cookie']).toBeTruthy();
+
+    // then perform the delete
+    res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login?deleteAcc=1');
+    expectedResponseBody = {
+      message: 'User successfully logged out and account has been deleted.'
+    };
+    expect(res.status()).toBe(200);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+
+    // make sure cookie was deleted
+    expect(res.headers()['set-cookie']).toEqual('sId=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax');
+
+    // check that user was indeed deleted
+    const userCheck = await prisma.user.findFirst({
+      where: {
+        email: LOGIN_API_TESTS_EMAIL
+      }
+    });
+    expect(userCheck).toBeFalsy();
   });
 
   test('send garbage request results in 500', async ({ request }) => {

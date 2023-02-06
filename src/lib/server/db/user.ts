@@ -54,3 +54,11 @@ export async function updateUser(email: string, data: Prisma.UserUpdateInput): P
     data
   });
 }
+
+export async function deleteUser(email: string): Promise<void> {
+  await prisma.user.delete({
+    where: {
+      email
+    }
+  });
+}
