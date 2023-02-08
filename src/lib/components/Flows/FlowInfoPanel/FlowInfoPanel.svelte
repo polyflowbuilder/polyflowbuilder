@@ -2,9 +2,10 @@
 <script lang="ts">
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
+  import { AddCoursesTab, ManageFlowsTab } from '$lib/components/Flows/FlowInfoPanel';
 
   // collapsible side panel logic
-  const PANEL_SIZE_OPEN = 275;
+  const PANEL_SIZE_OPEN = 300;
   const PANEL_SIZE_CLOSED = 0;
   let visible = true;
   let size = tweened(PANEL_SIZE_OPEN, {
@@ -43,9 +44,9 @@
 
     <div class="card-body p-4 h-[95%]">
       {#if activeTab === 'manageFlows'}
-        <h2 class="text-4xl font-medium text-polyGreen text-center mt-2">Flows</h2>
+        <ManageFlowsTab />
       {:else if activeTab === 'addCourses'}
-        <h2 class="text-4xl font-medium text-polyGreen text-center mt-2">Add Courses</h2>
+        <AddCoursesTab />
       {/if}
     </div>
   {/if}

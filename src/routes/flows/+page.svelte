@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FlowInfoPanel } from '$lib/components/Flows';
+  import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { FlowViewer } from '$lib/components/Flows';
 </script>
 
