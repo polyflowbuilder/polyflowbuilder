@@ -1,0 +1,376 @@
+{
+  "flowName": "21-22.76MSCIBSU",
+  "flowId": "21-22.76MSCIBSU",
+  "flowStartYear": "2021",
+  "flowUnitTotal": "177-182",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO160"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MSCI100"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM127"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO161"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: MATH141, or MATH161. Students emphasizing Chemistry, Physics, or Engineering should take MATH141 and MATH142.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Calculus I",
+          "cCustomDisplayName": "MATH141 or MATH161"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM128"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO162"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: MATH142, or MATH162. Students emphasizing Chemistry, Physics, or Engineering should take MATH141 and MATH142.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Calculus II",
+          "cCustomDisplayName": "MATH142 or MATH162"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM129"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO263"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CHEM216, or CHEM312.",
+          "cCustomUnits": "5",
+          "cID": null,
+          "cCustomID": "Organic Chemistry I",
+          "cCustomDisplayName": "CHEM216 or CHEM312"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: PHYS121, or PHYS141. Students emphasizing Physics should take PHYS141, PHYS142, and PHYS133.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Physics I",
+          "cCustomDisplayName": "PHYS121 or PHYS141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "PSC201"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT218"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: PHYS122, or PHYS132. Students emphasizing Physics should take PHYS141, PHYS132, and PHYS133.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Physics II",
+          "cCustomDisplayName": "PHYS122 or PHYS132"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MSCI300"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT313"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: PHYS123, or PHYS133. Students emphasizing Physics should take PHYS142, PHYS132, and PHYS133.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Physics III",
+          "cCustomDisplayName": "PHYS123 or PHYS133"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MSCI301"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "GEOL102"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "15-16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: BIO322, BIO336; MCRO436; MSCI324, MSCI437.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Marine Biodiversity Elective",
+          "cCustomDisplayName": "Choose One"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "12-15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM302"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Choose one of the following: COMS390, COMS395; ENGR322; SCM302; MSCI401, MSCI440.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p>",
+          "cCustomUnits": "1-4",
+          "cID": null,
+          "cCustomID": "Communicating Science Elective",
+          "cCustomDisplayName": "Choose One"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. SCM150 workshops for Math/Science recommended. Additional free electives may be required if Upper-Division B is satisfied with an Approved Elective.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MSCI403"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C, Upper-Division C, D1, D2, D2, Upper-Division D, Lower-Division E, Lower-Division F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. SCM150 workshops for Math/Science recommended. Additional free electives may be required if Upper-Division B is satisfied with an Approved Elective.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13-14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: BIO363; MSCI428, MSCI438, MSCI439.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Marine Resources Conservation & Policy Elective",
+          "cCustomDisplayName": "Choose One"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Choose one of the following: BIO461, or BIO462.</p><p>Planning for BIO462 senior project should start early during the junior year.</p>",
+          "cCustomUnits": "2",
+          "cID": null,
+          "cCustomID": "Senior Project",
+          "cCustomDisplayName": "BIO461 or BIO462"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>Students need 26 combined units between the Communicating Science Elective and Approved Elective requirements.</p><p>23-26 Advisor Approved Electives required. Senior Project course cannot count. See the catalog for course options.</p>",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "56ef1ad1eae0398e5b3b60e895e9e77f"
+}

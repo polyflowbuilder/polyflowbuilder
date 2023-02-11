@@ -1,0 +1,346 @@
+{
+  "flowName": "15-17.10AGBBSU",
+  "flowId": "15-17.10AGBBSU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB101"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB202"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH221"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB212"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM110"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB214"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Agricultural Science and Technology Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB260"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB323"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ECON222"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "AGB General Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB313"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT251"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "2",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB308"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "AGB General Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Agricultural Science and Technology Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB312"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "AGB General Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB327"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS207"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB369"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any AGB Upper Division General Elective can go here. Select 4 units at the 400 level.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "AGB Upper Division General Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AGB460 and AGB 461; or AGB462, AGB463, or AGB464.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Agricultural Science and Technology Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "5",
+          "cID": null,
+          "cCustomID": "Free Electives"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB328"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "5",
+          "cID": null,
+          "cCustomID": "Free Electives"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "2b9fd3c95c20b03dd801b80ebb33c88a"
+}

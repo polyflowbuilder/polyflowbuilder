@@ -1,0 +1,361 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "ITP100",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP125",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Calculus",
+            "cCustomCardDisplayName": "MATH141 or MATH221",
+            "cCustomNote": "Choose one of the following: MATH141, or MATH221.\r\n\r\nRequired in Major/Support; also satisfies GE.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and GRaduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP233",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "CHEM124 or CHEM127",
+            "cCustomNote": "Choose one of the following: CHEM124, or CHEM127.\r\n\r\nRequired in Major/Support; also satisfies GE.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "PHYS121",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP150",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Statistics",
+            "cCustomCardDisplayName": "STAT217, STAT218, STAT251",
+            "cCustomNote": "Choose one of the following: STAT217, STAT218, or STAT251.\r\n\r\nRequired in Major/Support; also satisfies GE.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "PHYS123",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP330",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP303",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ECON201",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP211",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP341",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP371",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP406",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(191, 191, 191)",
+            "cCustomCardTitle": "Concentration Declaration Due",
+            "cCustomNote": "Concentration Declaration is due around this time."
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP326",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP411",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BUS346",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ITP409",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ITP415",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect 16 units from the following:\r\n\r\n<b>Industrial Technology Concentration:</b> BUS215, BUS304, BUS310, BUS313 or BUS418, BUS384, BUS389 or BUS489; BUS/ITP468; ITP203, ITP234, ITP275, ITP302, ITP400, ITP404, ITP408, ITP412, ITP413, ITP414, ITP419, ITP430, ITP475, ITP485.\r\n\r\n<b>Packaging Technology Concentration:</b> FSN319, FSN354; ITP400, ITP403, ITP410, ITP413, ITP414, ITP419, or ITP428.\r\n\r\nIf a course is taken to meet the concentration requirement, it cannot be double-counted as an approved elective. Consultation with advisor recommended.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BUS391",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect 16 units from the following:\r\n\r\n<b>Industrial Technology Concentration:</b> BUS215, BUS304, BUS310, BUS313 or BUS418, BUS384, BUS389 or BUS489; BUS/ITP468; ITP203, ITP234, ITP275, ITP302, ITP400, ITP404, ITP408, ITP412, ITP413, ITP414, ITP419, ITP430, ITP475, ITP485.\r\n\r\n<b>Packaging Technology Concentration:</b> FSN319, FSN354; ITP400, ITP403, ITP410, ITP413, ITP414, ITP419, or ITP428.\r\n\r\nIf a course is taken to meet the concentration requirement, it cannot be double-counted as an approved elective. Consultation with advisor recommended.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "ITP461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect 16 units from the following:\r\n\r\n<b>Industrial Technology Concentration:</b> BUS215, BUS304, BUS310, BUS313 or BUS418, BUS384, BUS389 or BUS489; BUS/ITP468; ITP203, ITP234, ITP275, ITP302, ITP400, ITP404, ITP408, ITP412, ITP413, ITP414, ITP419, ITP430, ITP475, ITP485.\r\n\r\n<b>Packaging Technology Concentration:</b> FSN319, FSN354; ITP400, ITP403, ITP410, ITP413, ITP414, ITP419, or ITP428.\r\n\r\nIf a course is taken to meet the concentration requirement, it cannot be double-counted as an approved elective. Consultation with advisor recommended.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, and E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 10,
+        "classes": [
+          {
+            "classId": "ITP462",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect 16 units from the following:\r\n\r\n<b>Industrial Technology Concentration:</b> BUS215, BUS304, BUS310, BUS313 or BUS418, BUS384, BUS389 or BUS489; BUS/ITP468; ITP203, ITP234, ITP275, ITP302, ITP400, ITP404, ITP408, ITP412, ITP413, ITP414, ITP419, ITP430, ITP475, ITP485.\r\n\r\n<b>Packaging Technology Concentration:</b> FSN319, FSN354; ITP400, ITP403, ITP410, ITP413, ITP414, ITP419, or ITP428.\r\n\r\nIf a course is taken to meet the concentration requirement, it cannot be double-counted as an approved elective. Consultation with advisor recommended.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.40ITPBSU",
+    "flowMajor": "40ITPBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": 180,
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "bf86712eb5e2a4a8949d0f5a461ae14e"
+  }

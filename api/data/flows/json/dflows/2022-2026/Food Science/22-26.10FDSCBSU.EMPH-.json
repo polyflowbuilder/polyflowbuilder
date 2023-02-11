@@ -1,0 +1,335 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": "FSN102",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN125",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO111",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN202",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "MATH141 or MATH161",
+            "cCustomNote": "Choose one of the following: MATH141, or MATH161.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "CHEM127",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN250",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "PHYS121",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM128",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "FSN374",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "STAT218",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM312",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": "FSN204",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "CHEM314",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "FSN334",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "MCRO221",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN335",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN364",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "STAT314",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN370",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN311",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN368",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "FSN375",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN407",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "3"
+          },
+          {
+            "classId": "MCRO421",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "FSN330",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN408",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN469",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Concentration",
+            "cCustomNote": "Any Concentration course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). Students interested in Blended program should pass GWR no later than Spring of Junior year and adjust their schedule to plan to complete FSN 330 in Fall of their Junior year. FSN330 is one of the prerequisite courses to be considered for the Blended program.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.10FDSCBSU.EMPH-",
+    "flowMajor": "10FDSCBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": 180,
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "EMPH-",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "e29339a82b6b03cc750d25ca83acc5dd"
+}

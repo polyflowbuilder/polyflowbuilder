@@ -1,0 +1,337 @@
+{
+    "flowName": "22-26.52SEBSU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "52SEBSU",
+    "flowConcentration": "",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC123",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH142",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC202",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH143",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "General Psychology",
+            "cCustomCardDisplayName": "PSY201 or PSY202",
+            "cCustomNote": "Choose one of the following: PSY201 or PSY202.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC203",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC225",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH241",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM124",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC357",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC248",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH244",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM125",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "IME314 or IME315",
+            "cCustomNote": "Choose one of the following: IME314 or IME315.",
+            "cCustomUnits": "3"
+          },
+          {
+            "classId": "STAT312",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM126",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "PHIL230 or PHIL231",
+            "cCustomNote": "Choose one of the following: PHIL230 or PHIL231.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC308",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC349",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC365",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "PSY350 or COMS217",
+            "cCustomNote": "Choose one of the following: PSY350 or COMS217.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC309",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC484",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC305",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "CSC300 or PHIL323",
+            "cCustomNote": "Choose one of the following: CSC300 or PHIL323.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "CSC430",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Technical Elective",
+            "cCustomNote": "Any Approved Technical Elective course can go here.\r\n\r\nA total of 16 Technical Elective units selected from upper-division and graduate CSC and CPE courses open to those in the major and not otherwise required by the major. See catalog for Technical Electives Guidelines. Consultation with advisor is recommended prior to selecting Technical Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. An additional 4 units of CPE/CSC Technical Electives is needed if CSC/CPE123 is not taken.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC402",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Technical Elective",
+            "cCustomNote": "Any Approved Technical Elective course can go here.\r\n\r\nA total of 16 Technical Elective units selected from upper-division and graduate CSC and CPE courses open to those in the major and not otherwise required by the major. See catalog for Technical Electives Guidelines. Consultation with advisor is recommended prior to selecting Technical Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. An additional 4 units of CPE/CSC Technical Electives is needed if CSC/CPE123 is not taken.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Technical Elective",
+            "cCustomNote": "Any Approved Technical Elective course can go here.\r\n\r\nA total of 16 Technical Elective units selected from upper-division and graduate CSC and CPE courses open to those in the major and not otherwise required by the major. See catalog for Technical Electives Guidelines. Consultation with advisor is recommended prior to selecting Technical Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. An additional 4 units of CPE/CSC Technical Electives is needed if CSC/CPE123 is not taken.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Math Elective",
+            "cCustomCardDisplayName": "MAH248, MATH334, MATH335, or MATH451",
+            "cCustomNote": "Choose one of the following: MAH248, MATH334, MATH335, or MATH451.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "CSC405",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Technical Elective",
+            "cCustomNote": "Any Approved Technical Elective course can go here.\r\n\r\nA total of 16 Technical Elective units selected from upper-division and graduate CSC and CPE courses open to those in the major and not otherwise required by the major. See catalog for Technical Electives Guidelines. Consultation with advisor is recommended prior to selecting Technical Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. An additional 4 units of CPE/CSC Technical Electives is needed if CSC/CPE123 is not taken.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 12,
+        "qUnitsMax": 13,
+        "classes": [
+          {
+            "classId": "CSC406",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Life Science Support Elective",
+            "cCustomNote": "Any Life Science Support Elective course can go here.\r\n\r\nSelect one Life Science Support Elective from the following: BIO111, BIO161, BIO213 & BMED213, BOT121, MCRO221, or MCRO224.",
+            "cCustomUnits": "4-5"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, or Upper-Division D.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": "183-184",
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "ba415a7ca5c61b0eab2eedfc07252100"
+  }

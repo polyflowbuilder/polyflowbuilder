@@ -1,0 +1,376 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "SOC110",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "ANT201, GEOG150, or Lower-Division Social Sciences Course",
+            "cCustomNote": "Choose one of the following: ANT201, GEOG150, or Lower-Division Social Sciences Course.\r\n\r\nCourses from the following disciplines will be acceptable towards the lower-division Social Sciences course: Anthropology, Ethnic Studies, Geography, Sociology, Political Science, Psychology, or Women's, Gender, and Queer Studies.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "SOC111",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "SOC218",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "STAT217",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "SOC216",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "SOC222",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "SOC308 or SOC435",
+            "cCustomNote": "Choose one of the following: SOC308 or SOC435.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "SOC305 or SOC327",
+            "cCustomNote": "Choose one of the following: SOC305 or SOC327.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "SOC311",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "SOC323",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "SOC355",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "SOC354",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "ANT/GEOG Elective",
+            "cCustomCardDisplayName": "300-400 level",
+            "cCustomNote": "Any ANT/GEOG Elective (300-400 level) course can go here.\r\n\r\nRefer to catalog for course selections.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Sociology Elective",
+            "cCustomNote": "Any Sociology Elective course can go here. 4 units must be at the 300-400 level.\r\n\r\nRefer to catalog for course selections.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "SOC461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Sociology Elective",
+            "cCustomNote": "Any Sociology Elective course can go here. 4 units must be at the 300-400 level.\r\n\r\nRefer to catalog for course selections.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "SOC462",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Sociology Elective",
+            "cCustomNote": "Any Sociology Elective course can go here. 4 units must be at the 300-400 level.\r\n\r\nRefer to catalog for course selections.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS Course",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\n300-400 level courses selected in consultation with advising faculty. A written justification for the courses selected and the way they constitute a cohesive, integrated study is required. One-half of the units must be courses from the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.48SOCBAU.ICSSOCU",
+    "flowMajor": "48SOCBAU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": 180,
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "ICSSOCU",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "c96d06824998bc0462a1808eae2882f4"
+  }

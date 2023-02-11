@@ -1,0 +1,343 @@
+{
+  "flowName": "15-17.76LSBSU.SCILSU",
+  "flowId": "15-17.76LSBSU.SCILSU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "179-181",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS101"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "PSC101"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "HIST208"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS214"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "PSC102"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS230"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS211"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "PSC103"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: STAT130, STAT217. Required in Major; also satisfies GE.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics",
+          "cCustomDisplayName": "STAT130 or STAT217"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH227"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO111"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "HIST210"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS260"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH328"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BIO211"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: PSY201, PSY202. Required in Major; also satisfies GE.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "General Psychology",
+          "cCustomDisplayName": "PSY201 or PSY202"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS250"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH329"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASTR101"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CD207"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH330"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "GEOG308"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL391"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS310"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16-17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "LS370"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Choose one of the following: CHEM 111, 124, or 127.",
+          "cCustomUnits": "4-5",
+          "cID": null,
+          "cCustomID": "Chemistry Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE310"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Select one of the following: PHYS 107, 111, 121, 141, or PSC.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Physics Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE443"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Approved Concentration Elective can go here. Please consult catalog for course options. A maximum of 4 units from CHEM 466 and SCM 302 may be used in the concentration. PSC 320, ASTR 324, BIO 308, CHEM 349, MSCI 307, MSCI 330, MSCI 440, and SCM 360 satisfy the GE 'F' requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Concentration Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: LS410, LS412.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "LS410 or LS412"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Approved Concentration Elective can go here. Please consult catalog for course options. A maximum of 4 units from CHEM 466 and SCM 302 may be used in the concentration. PSC 320, ASTR 324, BIO 308, CHEM 349, MSCI 307, MSCI 330, MSCI 440, and SCM 360 satisfy the GE 'F' requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Concentration Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#BFBFBF",
+          "cCustomNote": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program.",
+          "cID": null,
+          "cCustomID": "Visit the School of Education"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "15-16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: LS461, LS462.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Senior Project",
+          "cCustomDisplayName": "LS461 or LS462"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Approved Concentration Elective can go here. Please consult catalog for course options. A maximum of 4 units from CHEM 466 and SCM 302 may be used in the concentration. PSC 320, ASTR 324, BIO 308, CHEM 349, MSCI 307, MSCI 330, MSCI 440, and SCM 360 satisfy the GE 'F' requirement.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Approved Concentration Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EDUC427"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EDUC428"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "43c3e1a913d67d0278a89ae178c7315f"
+}

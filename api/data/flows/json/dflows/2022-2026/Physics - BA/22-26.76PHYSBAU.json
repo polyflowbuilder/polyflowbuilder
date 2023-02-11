@@ -1,0 +1,390 @@
+{
+  "data": [
+    {
+      "qIndex": 1,
+      "qUnits": 14,
+      "classes": [
+        {
+          "classId": "MATH141",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "COMS101",
+          "cardColor": "rgb(220, 253, 210)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nCHEM124 and CHEM125 are recommended.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nSupplemental Workshops (SCM150 & MATH151, MATH152, MATH153) are recommended in your first year. They may require concurrent enrollment in the associated courses, and they count toward free elective credit.",
+          "cCustomUnits": "2"
+        }
+      ]
+    },
+    {
+      "qIndex": 2,
+      "qUnits": 15,
+      "classes": [
+        {
+          "classId": "MATH142",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS141",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nCHEM124 and CHEM125 are recommended.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nSupplemental Workshops (SCM150 & MATH151, MATH152, MATH153) are recommended in your first year. They may require concurrent enrollment in the associated courses, and they count toward free elective credit.",
+          "cCustomUnits": "3"
+        }
+      ]
+    },
+    {
+      "qIndex": 3,
+      "qUnits": 14,
+      "classes": [
+        {
+          "classId": "MATH143",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS142",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "ENGL134",
+          "cardColor": "rgb(220, 253, 210)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nSupplemental Workshops (SCM150 & MATH151, MATH152, MATH153) are recommended in your first year. They may require concurrent enrollment in the associated courses, and they count toward free elective credit.",
+          "cCustomUnits": "2"
+        }
+      ]
+    },
+    {
+      "qIndex": 5,
+      "qUnits": 15,
+      "classes": [
+        {
+          "classId": "MATH241",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS143",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Breadth Elective",
+          "cCustomNote": "Any Breadth Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.\r\n\r\nPHYS220 recommended in the Fall of sophomore year.",
+          "cCustomUnits": "1"
+        },
+        {
+          "classId": "COMS126",
+          "cardColor": "rgb(220, 253, 210)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nSupplemental Workshops (SCM150 & MATH151, MATH152, MATH153) are recommended in your first year. They may require concurrent enrollment in the associated courses, and they count toward free elective credit.",
+          "cCustomUnits": "2"
+        }
+      ]
+    },
+    {
+      "qIndex": 6,
+      "qUnits": 16,
+      "classes": [
+        {
+          "classId": "MATH206",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS211",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Choose One",
+          "cCustomCardDisplayName": "PHYS206 or PHYS202",
+          "cCustomNote": "Choose one of the following: PHYS206, or PHYS202.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 7,
+      "qUnits": 16,
+      "classes": [
+        {
+          "classId": "MATH242",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS212",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 9,
+      "qUnits": 16,
+      "classes": [
+        {
+          "classId": "PHYS305",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": "PHYS320",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 8 units must be upper-division (300-400 level).",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 10,
+      "qUnits": 16,
+      "classes": [
+        {
+          "classId": "PHYS301",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Technical Elective",
+          "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.\r\n\r\nPHIL321 or PHIL323 will meet the Upper-Division C requirement; HIST350 will meet the Upper-Division D requirement. If one of these is selected, increase your total free electives by 4 units.\r\n\r\nPHYS321 recommended in the Winter of junior year.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 11,
+      "qUnits": 13,
+      "qUnitsMax": 16,
+      "classes": [
+        {
+          "classId": "PHYS405",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Laboratory Elective",
+          "cCustomNote": "Any Laboratory Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.",
+          "cCustomUnits": "1-4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 8 units must be upper-division (300-400 level).",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(218, 149, 147)",
+          "cCustomCardTitle": "Graduation Writing Requirement",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+        }
+      ]
+    },
+    {
+      "qIndex": 13,
+      "qUnits": 13,
+      "qUnitsMax": 16,
+      "classes": [
+        {
+          "classId": "PHYS408",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Technical Elective",
+          "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.\r\n\r\nPHIL321 or PHIL323 will meet the Upper-Division C requirement; HIST350 will meet the Upper-Division D requirement. If one of these is selected, increase your total free electives by 4 units.",
+          "cCustomUnits": "1-4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 14,
+      "qUnits": 15,
+      "qUnitsMax": 17,
+      "classes": [
+        {
+          "classId": "PHYS461",
+          "cardColor": "rgb(254, 253, 154)"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Technical Elective",
+          "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.\r\n\r\nPHIL321 or PHIL323 will meet the Upper-Division C requirement; HIST350 will meet the Upper-Division D requirement. If one of these is selected, increase your total free electives by 4 units.",
+          "cCustomUnits": "3"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Breadth Elective",
+          "cCustomNote": "Any Breadth Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.",
+          "cCustomUnits": "2-4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 8 units must be upper-division (300-400 level).",
+          "cCustomUnits": "4"
+        }
+      ]
+    },
+    {
+      "qIndex": 15,
+      "qUnits": 13,
+      "qUnitsMax": 15,
+      "classes": [
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Technical Elective",
+          "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.\r\n\r\nPHIL321 or PHIL323 will meet the Upper-Division C requirement; HIST350 will meet the Upper-Division D requirement. If one of these is selected, increase your total free electives by 4 units.",
+          "cCustomUnits": "3"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(254, 253, 154)",
+          "cCustomCardTitle": "Breadth Elective",
+          "cCustomNote": "Any Breadth Elective course can go here.\r\n\r\nComplete a total of 22 units of Approved Electives. Select one course from Laboratory (1-4 units), 14 units from Technical, and 7 units from Breadth. See Catalog for more course options.\r\n<b>Laboratory Elective:</b> ASTR444; PHYS323, PHYS340, PHYS341, PHYS357, PHYS422, PHYS423, PHYS426, PHYS428. (Units in excess of 1 unit will count towards Technical Elective units.)\r\n<b>Technical Elective:</b> HIST350; PHIL341, PHIL323, PHIL421; Any 300-400 level courses with PHYS, ASTR, or GEOL prefix. (Excess units will count towards Breadth Elective units.)\r\n<b>Breadth Elective:</b> Select 7 units from any 300-400 level course or PHYS220.\r\nTotal combined elective credit in PHYS400, PHYS404, ASTR400, ASTR404, GEOL400, and GEOL404 limited to 8 units, with a maximum of 2 units per quarter.",
+          "cCustomUnits": "2-4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(220, 253, 210)",
+          "cCustomCardTitle": "GE",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to current catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4"
+        },
+        {
+          "classId": null,
+          "cardColor": "rgb(212, 255, 254)",
+          "cCustomCardTitle": "Free Elective",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 8 units must be upper-division (300-400 level).",
+          "cCustomUnits": "4"
+        }
+      ]
+    }
+  ],
+  "cbData": {
+    "qUnits": 0,
+    "classes": []
+  },
+  "flowHash": "f6fa1e698f345f9a00fcadbb5d6b83f7",
+  "flowName": "22-26.76PHYSBAU",
+  "flowMajor": "76PHYSBAU",
+  "flowNotes": "",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "176-186",
+  "flowCatalogYear": "2022-2026",
+  "dataModelVersion": 5,
+  "flowConcentration": ""
+}

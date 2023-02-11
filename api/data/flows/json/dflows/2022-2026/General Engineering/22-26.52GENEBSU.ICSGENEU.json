@@ -1,0 +1,375 @@
+{
+    "flowName": "22-26.52GENEBSU.ICSGENEU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "52GENEBSU",
+    "flowConcentration": "ICSGENEU",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "ENGR110",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM124",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "IME144",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH142",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "CHEM125",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CSC101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH143",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS142",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "ME211",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH241",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS143",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 18,
+        "classes": [
+          {
+            "classId": "ME212",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CE204",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH244",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "IME314 or IME315",
+            "cCustomNote": "Choose one of the following: IME314, or IME315.",
+            "cCustomUnits": "3"
+          },
+          {
+            "classId": "EE201",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "EE251",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Math or Stat Elective",
+            "cCustomCardDisplayName": "MATH344, STAT312, or STAT350",
+            "cCustomNote": "Choose one of the following: MATH344, STAT312, or STAT350.\r\n\r\nRequired in Support; also satisfies GE.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "ME302",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATE210",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATE215",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Physical Science Elective",
+            "cCustomNote": "Any Physical Science Elective course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "ME341",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ME343",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Ethnic Studies Course",
+            "cCustomCardDisplayName": "ES350 or ES351",
+            "cCustomNote": "Choose one of the following: ES350, or ES351.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 18,
+        "classes": [
+          {
+            "classId": "ENGR459",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "ENGR460",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "ENGR461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Individual Course of Study",
+            "cCustomNote": "Any Individual Course of Study course can go here.\r\n\r\nConcentration form required and should be submitted prior to junior year. Concentration courses should total 40 units (a minimum of 29 units need to be 300-400 level).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": 186,
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "e976b7aca2c1a19041573c48b225a435"
+  }

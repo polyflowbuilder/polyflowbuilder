@@ -1,0 +1,361 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "NR140",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "NR142",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "STAT217 or STAT218",
+            "cCustomNote": "Choose one of the following: STAT217, or STAT218.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CHEM127",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "SS120",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "MATH161 or MATH221",
+            "cCustomNote": "Choose one of the following: MATH161, or MATH221.\r\n\r\nStudents in the Watershed Management and Hydrology concentration need to take MATH161, GEOL201, and NR320 to meet prerequisites for courses in the concentration. \r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BIO161",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BIO114 or BOT121",
+            "cCustomNote": "Choose one of the following: BIO114, or BOT121.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "PHYS121",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 14,
+        "qUnitsMax": 15,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BRAE237 or BRAE345",
+            "cCustomNote": "Choose one of the following: BRAE237, or BRAE345.",
+            "cCustomUnits": "2-3"
+          },
+          {
+            "classId": "NR215",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "NR218",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BIO162",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "NR304, NR305, or NR306",
+            "cCustomNote": "Choose one of the following: NR304, NR305, or NR306.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "ASCI239",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "NR335",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "NR323, NR324, or NR328",
+            "cCustomNote": "Choose one of the following: NR323, NR324, or NR328.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "BIO321",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.\r\n\r\nNR360: Ethnicity and the Land or ENGL316: Writing Sustainability (satisfies GWR) recommended.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "NR363",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "NR326",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Electives",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect from the following: AEPS313; BIO150, BIO263, BIO322, BIO324, BIO329, BIO330, BIO335, BIO336, BIO363, BIO400, BIO415, BIO427, BIO429, BIO434, BIO442, BIO444; BOT326; NR400.\r\n\r\nIf a course is taken to meet a major requirement, it cannot be double-counted as an approved elective for the concentration. Consultation with advisor is recommended prior to selecting approved electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Electives",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nSelect from the following: AEPS313; BIO150, BIO263, BIO322, BIO324, BIO329, BIO330, BIO335, BIO336, BIO363, BIO400, BIO415, BIO427, BIO429, BIO434, BIO442, BIO444; BOT326; NR400.\r\n\r\nIf a course is taken to meet a major requirement, it cannot be double-counted as an approved elective for the concentration. Consultation with advisor is recommended prior to selecting approved electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "NR314 or NR445",
+            "cCustomNote": "Choose one of the following: NR314, or NR445.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "BIO427",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "NR320, ERSC303, or NR402",
+            "cCustomNote": "Choose one of the following: NR320, ERSC303, or NR402.\r\n\r\nStudents in the Watershed Management and Hydrology concentration need to take MATH161, GEOL201, and NR320 to meet prerequisites for courses in the concentration.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "NR416",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BRAE348, ENVE324, or NR310",
+            "cCustomNote": "Choose one of the following: BRAE348, ENVE324, or NR310.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "BIO327",
+            "cardColor": "rgb(249, 163, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "NR404",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "NR425",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BOT313",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BIO444, or BIO363",
+            "cCustomNote": "Choose one of the following: BIO444, or BIO363.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "NR465",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "NR435",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO323",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": "BOT433",
+            "cardColor": "rgb(249, 163, 210)"
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.10ENVMBSU.WBENVMU",
+    "flowMajor": "10ENVMBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": "181-182",
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "WBENVMU",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "e8731b83aaf52c44821fed59589be790"
+}

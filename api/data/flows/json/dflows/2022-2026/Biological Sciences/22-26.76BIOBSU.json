@@ -1,0 +1,377 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "BIO150",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM127",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\n5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
+            "cCustomUnits": "2",
+            "cCustomCardTitle": "Free Elective"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 18,
+        "classes": [
+          {
+            "classId": "BIO161",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM128",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "MATH161",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\n5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
+            "cCustomUnits": "2",
+            "cCustomCardTitle": "Free Elective"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "BIO162",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM129",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "MATH162",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\n5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
+            "cCustomUnits": "1",
+            "cCustomCardTitle": "Free Elective"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "BIO263",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "STAT218",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Choose one of the following: BIO327, BIO363, BIO442; BOT326; MCRO436; MSCI300.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Ecology"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomNote": "Choose one of the following: CHEM216, or CHEM312.",
+            "cCustomUnits": "5",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "CHEM216 or CHEM312"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Choose one of the following: BIO361, BIO434, or BIO435.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Physiology",
+            "cCustomCardDisplayName": "BIO361, BIO434, or BIO435"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Biodiversity course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Biodiversity Course:</b> (4 units) See Catalog for course options and guidelines. Excess units will be applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Biodiversity Course"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "BIO351",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Upper-Division Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Upper-Division Electives:</b> (20 units) See Catalog for course options and guidelines. Minimum of 12 units of 400-level courses and 8 units of 300-400 level courses with exceptions. Excess units applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Upper-Division Elective"
+          },
+          {
+            "classId": "PHYS121",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Upper-Division Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Upper-Division Electives:</b> (20 units) See Catalog for course options and guidelines. Minimum of 12 units of 400-level courses and 8 units of 300-400 level courses with exceptions. Excess units applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Upper-Division Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Upper-Division Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Upper-Division Electives:</b> (20 units) See Catalog for course options and guidelines. Minimum of 12 units of 400-level courses and 8 units of 300-400 level courses with exceptions. Excess units applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Upper-Division Elective"
+          },
+          {
+            "classId": "PHYS122",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Upper-Division Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Upper-Division Electives:</b> (20 units) See Catalog for course options and guidelines. Minimum of 12 units of 400-level courses and 8 units of 300-400 level courses with exceptions. Excess units applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Upper-Division Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Upper-Division Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Upper-Division Electives:</b> (20 units) See Catalog for course options and guidelines. Minimum of 12 units of 400-level courses and 8 units of 300-400 level courses with exceptions. Excess units applied to Approved Electives.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Upper-Division Elective"
+          },
+          {
+            "classId": "PHYS123",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before seinor year. Refer to current catalog for prerequisites.",
+            "cCustomCardTitle": "Graduation Writing Requirement"
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Choose one of the following: BIO461, or BIO462.",
+            "cCustomUnits": "2",
+            "cCustomCardTitle": "Senior Project",
+            "cCustomCardDisplayName": "BIO461 or BIO462"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Approved Electives:</b> (19 units) See Catalog for course options and guidelines. No double-counting with Major or Support requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Approved Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Approved Electives:</b> (19 units) See Catalog for course options and guidelines. No double-counting with Major or Support requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Approved Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Choose one of the following: BIO413, or BIO414.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BIO413 or BIO414"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Approved Electives:</b> (19 units) See Catalog for course options and guidelines. No double-counting with Major or Support requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.",
+            "cCustomUnits": "3",
+            "cCustomCardTitle": "Approved Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Approved Electives:</b> (19 units) See Catalog for course options and guidelines. No double-counting with Major or Support requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Approved Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nThis is the default curriculum required for students who do not declare a concentration. Courses taken to meet a Major or Support requirement cannot be double-counted in a concentration or in the General Curriculum. Consultation with advisor is recommended prior to selecting electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.\r\n\r\n<b>Approved Electives:</b> (19 units) See Catalog for course options and guidelines. No double-counting with Major or Support requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "Approved Elective"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4",
+            "cCustomCardTitle": "GE"
+          }
+        ]
+      }
+    ],
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "b7433dbc854e20da3fe194c538db9212",
+    "flowName": "22-26.76BIOBSU",
+    "flowMajor": "76BIOBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": 180,
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": ""
+  }

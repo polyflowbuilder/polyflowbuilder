@@ -1,0 +1,366 @@
+{
+  "flowName": "19-20.48COMSBAU",
+  "flowId": "19-20.48COMSBAU",
+  "flowStartYear": "2019",
+  "flowUnitTotal": "180-188",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "HIST223"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Recommended: Foreign Language 101",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: Foreign Language 101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS212"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS217"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PSY201"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Recommended: Foreign Language 102",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: Foreign Language 102"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS213"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS250"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT217"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Refer to Catalog for course options. Can be taken anytime during Freshman Year.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Foreign Language",
+          "cCustomDisplayName": "(103 level)"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS350"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "HIST110"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS226"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS330"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS311"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS312"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper-Division COMS Elective course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division COMS Elective",
+          "cCustomDisplayName": "COMS 300-400 Level"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS332"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper-Division COMS Elective can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division COMS Elective",
+          "cCustomDisplayName": "COMS 300-400 Level"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS322"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper-Division COMS Elective can go here. Only 4 units of supervised instruction, including COMS400, COMS458, and COMS485, may be counted here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division COMS Elective",
+          "cCustomDisplayName": "COMS 300-400 Level"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS460"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS316"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper-Division COMS Elective can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division COMS Elective",
+          "cCustomDisplayName": "COMS 300-400 Level"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ENGL311"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS461"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS331"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "12-20",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS384"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper-Division COMS Elective can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division COMS Elective",
+          "cCustomDisplayName": "COMS 300-400 Level"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "<p>One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, B7 (formerly GE F), C1, C2, C3, C4, D1 or D3 (depending on whether HIST 202 or 223 is selected in support), and D2. C4, B7 should be taken only after Junior standing is reached (90 units).</p><p><strong>One (1) course must be completed from B1, in addition to STAT 217. C4 cannot be fulfilled with COMS courses.</strong></p><p>Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).</p>",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective(s) can go here.",
+          "cCustomUnits": "0-8",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "4cb27a7df00824851e45b769f6b22ee3"
+}

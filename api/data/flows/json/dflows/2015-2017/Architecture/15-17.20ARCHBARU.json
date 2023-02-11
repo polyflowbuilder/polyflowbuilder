@@ -1,0 +1,397 @@
+{
+  "flowName": "15-17.20ARCHBARU",
+  "flowId": "15-17.20ARCHBARU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "225",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH131"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH101"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EDES123"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH132"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH101"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "college physics"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH182"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH133"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH101"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "college physics 2"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH251"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH241"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH217"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE211"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH252"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH242"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH218"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE212"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH253"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH207"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH219"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE226"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH351"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH341"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\r\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH352"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH307"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE315"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH353"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH342"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE316"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH451"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: ARCH420, ARCH320.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Seminar or Topics in Architectural History",
+          "cCustomDisplayName": "ARCH420 or ARCH320"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH452"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH453"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 17,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH481"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH492"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 18,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH481"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH443"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 19,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCH481"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Professional Electives: Can be taken at any time. May include: Any EDES, ARCH, ARCE, CM, CRP, LA or ART course. Any course included in any College of Architecture and Environmental Design minor, or the ART minor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Professional Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A23, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO ARCH COURSE FOR C4, except ARCH 326.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, D1, D3, D4, D5 or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "17a8e07c7e2f114fe743d68b255e0370"
+}

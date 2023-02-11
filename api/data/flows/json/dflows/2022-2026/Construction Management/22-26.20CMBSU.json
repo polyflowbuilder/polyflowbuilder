@@ -1,0 +1,352 @@
+{
+    "flowName": "22-26.20CMBSU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "20CMBSU",
+    "flowConcentration": "",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "CM102",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "EDES123",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CM113",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM114",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH182",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 18,
+        "classes": [
+          {
+            "classId": "CM115",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "PHYS/CHEM",
+            "cCustomCardDisplayName": "PHYS142, CHEM124, or CHEM127",
+            "cCustomNote": "Choose one of the following: PHYS142, CHEM124, or CHEM127.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Surveying",
+            "cCustomCardDisplayName": "BRAE239 or CM239",
+            "cCustomNote": "Choose one of the following: BRAE239, or CM239.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "CM214",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM232",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM280",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ARCE211",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "BUS207",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "CM334",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ECON201",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BUS212 or BUS214",
+            "cCustomNote": "Choose one of the following: BUS212, or BUS214.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ARCE212",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "CM313",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ARCE226",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Statistics",
+            "cCustomCardDisplayName": "STAT251 or STAT312",
+            "cCustomNote": "Choose one of the following: STAT251, or STAT312.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "BUS215",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "CM413",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM335",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM318",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ARCE315",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "CM317",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Technical Electives",
+            "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nTechnical Electives. Select 8 units from CM Technical Electives: CE413, CE429, CM474; CM420, CM421, CM422, CM423, CM424, CM425, CM426, CM475, CM485.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "GEOL201",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "CM314",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM460",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ENGL310",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "CM411",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Technical Electives",
+            "cCustomNote": "Any Technical Elective course can go here.\r\n\r\nTechnical Electives. Select 8 units from CM Technical Electives: CE413, CE429, CM474; CM420, CM421, CM422, CM423, CM424, CM425, CM426, CM475, CM485.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "CM443",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Upper-Division BUS, ECON, or ITP Course",
+            "cCustomNote": "Any Upper-Division BUS, ECON, or ITP course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ARCE421",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "CM450",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CM462",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, F, and GE Elective. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": 189,
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "0eee83542a7d22621e0d087374945485"
+  }

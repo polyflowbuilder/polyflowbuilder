@@ -1,0 +1,389 @@
+{
+  "flowName": "15-17.48ENGLBAU",
+  "flowId": "15-17.48ENGLBAU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Majors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MLL101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "Choose one of the following: ENG133, ENGL134.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Expository Writing",
+          "cCustomDisplayName": "ENGL133 or ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Majors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MLL102"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Majors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MLL103"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL202"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL251"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Majors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Foreign Language",
+          "cCustomDisplayName": "201 or 202"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL203"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL290"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL204"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any ENGL Elective (300-Level) can go here. See catalog for Upper Division courses. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "ENGL Elective",
+          "cCustomDisplayName": "300-Level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL205"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any ENGL Elective (300-Level) can go here. See catalog for Upper Division courses. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "ENGL Elective",
+          "cCustomDisplayName": "300-Level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL303"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: ENGL 345, 346, 347, 349, 381 or 382.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL304"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose from ENGL 430, 431, 432, 439, 449, 459. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division Literature Electives",
+          "cCustomDisplayName": "ENGL 400-Level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL305"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose from ENGL 430, 431, 432, 439, 449, 459. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division Literature Electives",
+          "cCustomDisplayName": "ENGL 400-Level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper Division Electives (ENGL 400-Level) can go here. See catalog for Upper Division courses. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper Division Electives",
+          "cCustomDisplayName": "ENGL 400-Level"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose from ENGL 430, 431, 432, 439, 449, 459. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division Literature Electives",
+          "cCustomDisplayName": "ENGL 400-Level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Upper Division Electives (ENGL 400-Level) can go here. See catalog for Upper Division courses. English majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. Minimum 12 units in literature.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper Division Electives",
+          "cCustomDisplayName": "ENGL 400-Level"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: ENGL460, ENGL461.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Senior Project",
+          "cCustomDisplayName": "ENGL460 or ENGL461"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "246dcf447e48dd7cd8b540aaca0364a2"
+}

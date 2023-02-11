@@ -1,0 +1,367 @@
+{
+  "flowName": "15-17.76KINEBSU.ESKINEU",
+  "flowId": "15-17.76KINEBSU.ESKINEU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "177-183",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: KINE 250, KINE 25, or KINE 260.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health Course"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE180"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH119"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "13-15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE181"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: STAT217, STAT218.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Course",
+          "cCustomDisplayName": "STAT217 or STAT218"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CHEM111, CHEM127.",
+          "cCustomUnits": "4-5",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "CHEM111 or CHEM127"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Consider taking Supplemental Workshops (SCM 150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu",
+          "cCustomUnits": "0-1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16-17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE265"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "FSN210"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: BIO111, BIO161.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "BIO111 or BIO161"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Consider taking Supplemental Workshops (SCM 150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu",
+          "cCustomUnits": "0-1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "14-17",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS121"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO231"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Students may have to complete additional coursework to satisfy admission requirements to graduate or professional degree programs in the allied health professions. Students interested in these programs should consult with the College of Science and Mathematics Advising Office (Building 53, Room 211) for information.",
+          "cCustomUnits": "1-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE266"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE301"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO232"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE298"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE319"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE303"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE308"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE402"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE330"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE407"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE304"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE434"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE445"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE408"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE401"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE449"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cID": "KINE451"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE403"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE452"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: KINE 460, 461, 462, 463.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Choose One"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>52 units GE required.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). Note: If KINE 255 or 260 is selected, USCP is fulfilled. If KINE 250 is selected, USCP can be fulfilled by some, but not all, courses in the following GE areas: C3, C4, D1, D3, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "412b40a2b8f034bf6bc1a5f431a24a28"
+}

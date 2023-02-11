@@ -1,0 +1,353 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "LS201",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS230",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "PSC101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "HIST201",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "LS211",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "HIST208",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "PSC102",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Statistics",
+            "cCustomCardDisplayName": "STAT130 or STAT217",
+            "cCustomNote": "Choose one of the following: STAT137, or STAT217.\r\n\r\nStudents considering a Child Development or Psychology minor should consider taking STAT217.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "LS214",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "PSC103",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "HIST210",
+            "cardColor": "rgb(254, 253, 154)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "MATH227",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS250",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO111",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH328",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS255",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO211",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "General Psychology",
+            "cCustomCardDisplayName": "PSY201 or PSY202",
+            "cCustomNote": "Choose one of the following: PSY201, or PSY202.\r\n\r\nRequired in Major; also satisfies GE.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH329",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ASTR101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CD207",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GE may be fulfilled in concentration courses or minors. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(191, 191, 191)",
+            "cCustomCardTitle": "Declare your Concentration",
+            "cCustomNote": "Declare your Concentration around this time."
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": "MATH330",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS301",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "GEOG308",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Philosophical Classics",
+            "cCustomCardDisplayName": "PHIL230 or PHIL231",
+            "cCustomNote": "Choose one of the following: PHIL230, or PHIL231.\r\n\r\nRequired in Major; also satisfies GE.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "KINE310",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS310",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\nWith department chair approval, students may pursue a course of study which meets their individual needs and interests. Must be initiated early and all courses must be pre-approved. ICS consists of 18-20 units with at least one course at the 300-400 level. Courses selected by student in consultation with an advising faculty member. The list of courses is a contract between the student and the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GE may be fulfilled in concentration courses or minors. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "ENGL391",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "LS370",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\nWith department chair approval, students may pursue a course of study which meets their individual needs and interests. Must be initiated early and all courses must be pre-approved. ICS consists of 18-20 units with at least one course at the 300-400 level. Courses selected by student in consultation with an advising faculty member. The list of courses is a contract between the student and the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GE may be fulfilled in concentration courses or minors. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "Seminar/Integration Course",
+            "cCustomNote": "Choose one of the following: LS411, LS412, or LS413.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\nWith department chair approval, students may pursue a course of study which meets their individual needs and interests. Must be initiated early and all courses must be pre-approved. ICS consists of 18-20 units with at least one course at the 300-400 level. Courses selected by student in consultation with an advising faculty member. The list of courses is a contract between the student and the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "EDUC427",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GE may be fulfilled in concentration courses or minors. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 13,
+        "qUnitsMax": 17,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Senior Project",
+            "cCustomCardDisplayName": "LS461 or LS462",
+            "cCustomNote": "Choose one of the following: LS461, or LS462.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\nWith department chair approval, students may pursue a course of study which meets their individual needs and interests. Must be initiated early and all courses must be pre-approved. ICS consists of 18-20 units with at least one course at the 300-400 level. Courses selected by student in consultation with an advising faculty member. The list of courses is a contract between the student and the department.",
+            "cCustomUnits": "2-4"
+          },
+          {
+            "classId": "EDUC428",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "3-5"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "HLTH443",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "ICS",
+            "cCustomNote": "Any ICS course can go here.\r\n\r\nWith department chair approval, students may pursue a course of study which meets their individual needs and interests. Must be initiated early and all courses must be pre-approved. ICS consists of 18-20 units with at least one course at the 300-400 level. Courses selected by student in consultation with an advising faculty member. The list of courses is a contract between the student and the department.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GE may be fulfilled in concentration courses or minors. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(191, 191, 191)",
+            "cCustomCardTitle": "Visit the School of Education",
+            "cCustomNote": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program."
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.76LSBSU.ICSLSU",
+    "flowMajor": "76LSBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": "178-182",
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "ICSLSU",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "bc7ab92dc8c0f6527e4c156761dfdf93"
+  }

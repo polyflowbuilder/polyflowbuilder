@@ -1,0 +1,334 @@
+{
+  "flowName": "20-21.20CMBSU",
+  "flowId": "20-21.20CMBSU",
+  "flowStartYear": "2020",
+  "flowUnitTotal": "189",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM102"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EDES123"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM113"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM114"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH182"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM115"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CM239"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS132"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM214"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM232"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM280"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS207"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE211"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM334"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ECON201"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS214"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE212"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM313"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE226"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT312"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS215"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM413"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM335"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM318"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE315"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM317"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Technical Electives"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "GEOL201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM314"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM460"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ENGL310"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM411"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Technical Electives"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM443"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE421"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any upper-division BUS, ECON, or ITP course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division BUS, ECON, or ITP Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM450"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM461"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM462"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "7743430040a19302f76e075aa7f586e2"
+}

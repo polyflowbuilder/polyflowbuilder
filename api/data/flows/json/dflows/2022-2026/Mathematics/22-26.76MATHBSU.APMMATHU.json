@@ -1,0 +1,356 @@
+{
+    "flowName": "22-26.76MATHBSU.APMMATHU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "76MATHBSU",
+    "flowConcentration": "APMMATHU",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH141",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "MATH142",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "PHYS141",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH143",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "General Physics II or III",
+            "cCustomCardDisplayName": "PHYS142 or PHYS143",
+            "cCustomNote": "Choose one of the following: PHYS142, or PHYS143.\r\n\r\nThe PHYS/CSC course sequences may be taken in either order.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH241",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CSC101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Advisor Approved Elective",
+            "cCustomNote": "Any Advisor Approved Elective course can go here.\r\n\r\n12 units Approved Electives. At least one course at 300-level or above. See catalog for course options. Consultation with advisor is recommended prior to selecting Approved Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Other choices are also possible, and should be pre-approved in consultation with an academic advisor. Approved Electives are to be taken outside of the Mathematics department and should have significant applications to mathematics.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH206",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH248",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Computer Science",
+            "cCustomCardDisplayName": "MATH350 or CSC/CPE202",
+            "cCustomNote": "Choose one of the following: MATH350, or CSC/CPE202.\r\n\r\nMATH350 only offered spring quarter.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH242",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH306",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH202",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "3"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH344",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Upper-Division Statistics",
+            "cCustomCardDisplayName": "STAT301 or STAT305",
+            "cCustomNote": "Choose one of the the following: STAT301, or STAT305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Advisor Approved Elective",
+            "cCustomNote": "Any Advisor Approved Elective course can go here.\r\n\r\n12 units Approved Electives. At least one course at 300-level or above. See catalog for course options. Consultation with advisor is recommended prior to selecting Approved Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Other choices are also possible, and should be pre-approved in consultation with an academic advisor. Approved Electives are to be taken outside of the Mathematics department and should have significant applications to mathematics.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH481",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH334",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH451",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH304",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "MATH Track Course",
+            "cCustomNote": "Any MATH Track Course can go here.\r\n\r\nSelect 12 units from Track A or Track B. Only students who are pursuing a Data Science minor should select Track B.\r\n<em>Track A:</em> MATH335, MATH341, MATH406, MATH411, MATH414, MATH416, MATH418, MATH435, MATH437, MATH452, MATH453, MATH460, MATH461 & MATH462, MATH476, MATH482, MATH483.\r\n<em>Track B:</em> DATA301, DATA401 & DATA403; MATH335 or MATH435 or MATH453. Track B students should select their Approved Electives from the Statistics Category. <em>(Note that DATA401 and DATA403 must be taken concurrently with DATA402).</em>",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Advisor Approved Elective",
+            "cCustomNote": "Any Advisor Approved Elective course can go here.\r\n\r\n12 units Approved Electives. At least one course at 300-level or above. See catalog for course options. Consultation with advisor is recommended prior to selecting Approved Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Other choices are also possible, and should be pre-approved in consultation with an academic advisor. Approved Electives are to be taken outside of the Mathematics department and should have significant applications to mathematics.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "MATH412",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Senior Project",
+            "cCustomCardDisplayName": "MATH459, MATH460, or MATH461 & MATH462",
+            "cCustomNote": "Choose one of the following: MATH459, MATH460, MATH461 & MATH462.\r\n\r\nMATH460 recommended for students in Applied Concentration.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Upper-Division Differential Equations",
+            "cCustomCardDisplayName": "MATH416 or MATH418",
+            "cCustomNote": "Choose one of the following: MATH416, or MATH418.\r\n\r\nMATH416 offered Fall of even academic years and Winter of odd academic years.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "MATH410",
+            "cardColor": "rgb(249, 163, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "MATH413",
+            "cardColor": "rgb(249, 163, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "MATH Track Course",
+            "cCustomNote": "Any MATH Track Course can go here.\r\n\r\nSelect 12 units from Track A or Track B. Only students who are pursuing a Data Science minor should select Track B.\r\n<em>Track A:</em> MATH335, MATH341, MATH406, MATH411, MATH414, MATH416, MATH418, MATH435, MATH437, MATH452, MATH453, MATH460, MATH461 & MATH462, MATH476, MATH482, MATH483.\r\n<em>Track B:</em> DATA301, DATA401 & DATA403; MATH335 or MATH435 or MATH453. Track B students should select their Approved Electives from the Statistics Category. <em>(Note that DATA401 and DATA403 must be taken concurrently with DATA402).</em>",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "MATH Track Course",
+            "cCustomNote": "Any MATH Track Course can go here.\r\n\r\nSelect 12 units from Track A or Track B. Only students who are pursuing a Data Science minor should select Track B.\r\n<em>Track A:</em> MATH335, MATH341, MATH406, MATH411, MATH414, MATH416, MATH418, MATH435, MATH437, MATH452, MATH453, MATH460, MATH461 & MATH462, MATH476, MATH482, MATH483.\r\n<em>Track B:</em> DATA301, DATA401 & DATA403; MATH335 or MATH435 or MATH453. Track B students should select their Approved Electives from the Statistics Category. <em>(Note that DATA401 and DATA403 must be taken concurrently with DATA402).</em>",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": 180,
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "300476dd9fbe63feb023a9a5c5e34f6e"
+  }

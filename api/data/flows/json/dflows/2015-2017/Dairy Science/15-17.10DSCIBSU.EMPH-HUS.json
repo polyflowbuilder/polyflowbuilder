@@ -1,0 +1,365 @@
+{
+  "flowName": "15-17.10DSCIBSU.EMPH-HUS",
+  "flowId": "15-17.10DSCIBSU.EMPH-HUS",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "178-182",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI101"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI230"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI231"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16-17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI233"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH118"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: BIO 111, BIO 161, or CHEM 312. BIO 111 or higher is a prerequisite for DSCI 321 and 422.",
+          "cCustomUnits": "4-5",
+          "cID": null,
+          "cCustomID": "General Biology"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "14-17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI220"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CHEM111, CHEM127.",
+          "cCustomUnits": "4-5",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "CHEM111 or CHEM127"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "2-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MCRO221"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI234"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI241"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI321"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI330"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI333"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI363"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: DSCI100, DSCI339.",
+          "cCustomUnits": "2",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "DSCI100 or DSCI339"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to MATH 118, preferably STAT 130, 217, or 218.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI432"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI461"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "DSCI422"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Elective can go here. At least 18 units must be 300-400 level. Consult with academic advisor regarding career tracks. See online catalog for course options.",
+          "cCustomUnits": "5",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "1eb69af4095b9191de26dbefc389e0a6"
+}

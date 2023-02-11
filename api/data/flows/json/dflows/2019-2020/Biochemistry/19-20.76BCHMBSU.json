@@ -1,0 +1,383 @@
+{
+  "flowName": "19-20.76BCHMBSU",
+  "flowId": "19-20.76BCHMBSU",
+  "flowStartYear": "2019",
+  "flowUnitTotal": "179-180",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM124"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here. Recommended: CHEM101",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: CHEM101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM125"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH142"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO161"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM126"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH143"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM216"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM331"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS132"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM203"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM217"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM221"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS133"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM218"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM324"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM371"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM303"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM372"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM474"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM373"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM351"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM475"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM352"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM354"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "13-14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Advanced Biochemistry Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM353"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO452"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM403"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Advanced Biochemistry Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Advanced Biochemistry Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Advanced Biochemistry Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "db05c2b004fd48369b6efaa9f7c1482d"
+}

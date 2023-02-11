@@ -1,0 +1,359 @@
+{
+  "flowName": "15-17.20CMBSU",
+  "flowId": "15-17.20CMBSU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "189",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM102"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EDES123"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM113"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM114"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH182"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM115"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: BRAE239, CM239.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Surveying",
+          "cCustomDisplayName": "BRAE239 or CM239"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: ;PHYS132, CHEM124, CHEM127.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "PHYS or CHEM Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM214"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM232"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM280"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "Choose one of the following: ARCE211, ME211.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Structures I",
+          "cCustomDisplayName": "ARCE211 or ME211"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "BUS207"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM334"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ECON221"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS212"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: ARCE212, CE204.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Structures II",
+          "cCustomDisplayName": "ARCE212 or CE204"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM313"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ECON222"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE226"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BUS215"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM413"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM335"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE315"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: STAT251, STAT312.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics",
+          "cCustomDisplayName": "STAT251 or STAT312"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM317"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Technical Electives. Select 7 units from CM Topic Courses: CM 420, 421, 422, 423, 424, 425, and 426.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Technical Electives"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "GEOL201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM314"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM460"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ENGL310"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM411"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM480"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Technical Electives. Select 7 units from CM Topic Courses: CM 420, 421, 422, 423, 424, 425, and 426.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Technical Electives"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM443"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: ECON303, ECON304.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Economics",
+          "cCustomDisplayName": "ECON303 or ECON304"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCE421"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM415"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM461"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CM462"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, and D3. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "092600ecbd478cc93f833caa5c9b5d14"
+}

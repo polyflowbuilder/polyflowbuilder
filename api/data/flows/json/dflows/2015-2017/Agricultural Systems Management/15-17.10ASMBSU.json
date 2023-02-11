@@ -1,0 +1,363 @@
+{
+  "flowName": "15-17.10ASMBSU",
+  "flowId": "15-17.10ASMBSU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "180-183",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE128"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE133"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE141"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: MATH119, STAT217, STAT218.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "17-18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE151"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "AGB212"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CHEM110, CHEM111.",
+          "cCustomUnits": "4-5",
+          "cID": null,
+          "cCustomID": "Chemistry",
+          "cCustomDisplayName": "CHEM110 or CHEM111"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH221"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE152"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE129"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS121"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Select any AEPS, ASCI, or DSCI course except for internship or enterprise courses.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Animal or Plant Production Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE142"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "SS121"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ENGL148"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE203"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: BUS212, AGB214.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Financial Accounting",
+          "cCustomDisplayName": "BUS212 or AGB214"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "14-16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomUnits": "2-4",
+          "cID": null,
+          "cCustomID": "engineering surveying"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE340"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "AGB301"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE324"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "AGB310"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE321"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper Division GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\r\n",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE348"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "AGB369"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE342"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE418"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE460"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4 and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, or D4.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper Division GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE343"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE419"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE461"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE425"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE432"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE462"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "0fe1656cc4db1bde1b838713b06e1c97"
+}

@@ -1,0 +1,353 @@
+{
+    "flowName": "22-26.10BRAEBSU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "10BRAEBSU",
+    "flowConcentration": "",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BRAE128",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE150",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE239",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": "BRAE129",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH142",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS141",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 13,
+        "classes": [
+          {
+            "classId": "BRAE152",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH143",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS142",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ENGL147",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BRAE236",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE216",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH241",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "PHYS143",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 17,
+        "qUnitsMax": 18,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BRAE220 or MCRO221",
+            "cCustomNote": "Choose one of the following: BRAE220, or MCRO221.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Computer Programming",
+            "cCustomCardDisplayName": "CSC231, CSC232, or CSC234",
+            "cCustomNote": "Choose one of the following: CSC231, CSC232, or CSC234.",
+            "cCustomUnits": "2-3"
+          },
+          {
+            "classId": "CHEM124",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "MATH244",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ME211",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "BRAE232",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE234",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM125",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "ME212",
+            "cardColor": "rgb(252, 208, 158)"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "BRAE312",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "EE321",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "EE361",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": "STAT312",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 18,
+        "classes": [
+          {
+            "classId": "BRAE331",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE328",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Economics",
+            "cCustomCardDisplayName": "ECON201 or ECON222",
+            "cCustomNote": "Choose one of the following: ECON201, or ECON222.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "CE204",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "BRAE414",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE320",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE332",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CE207",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "BRAE421",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE433",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE460",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 15,
+        "qUnitsMax": 16,
+        "classes": [
+          {
+            "classId": "BRAE422",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nConsultation with advisor is recommended prior to selecting Approved Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. See catalog for course options and details.",
+            "cCustomUnits": "3-4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 17,
+        "qUnitsMax": 18,
+        "classes": [
+          {
+            "classId": "BRAE403",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE428",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE465",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\nConsultation with advisor is recommended prior to selecting Approved Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. See catalog for course options and details.",
+            "cCustomUnits": "3-4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Upper-Division D, or E.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": "187-190",
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "c76a1c151d92b4b27e6970f7273be822"
+  }

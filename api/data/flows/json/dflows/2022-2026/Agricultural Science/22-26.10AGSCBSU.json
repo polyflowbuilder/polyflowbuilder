@@ -1,0 +1,385 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "AGC102",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE121",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Math",
+            "cCustomCardDisplayName": "MATH118, MATH119, MATH141, MATH161, or MATH221",
+            "cCustomNote": "Choose one of the following: MATH118, MATH119, MATH141, MATH161, or MATH221.\r\n\r\nRequired in Major or Support; also satisfies GE.\r\n\r\nMATH116 and MATH117 may be substituted for MATH118.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "PLSC120",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ASCI112",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Chemistry",
+            "cCustomCardDisplayName": "CHEM110 or CHEM127",
+            "cCustomNote": "Choose one of the following: CHEM110, or CHEM127.\r\n\r\nRequired in Major or Support; also satisfies GE.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "AGB202",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BRAE141",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Animal Science Course",
+            "cCustomNote": "Any Animal Science course can go here.\r\n\r\nSelect a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(252, 208, 158)",
+            "cCustomCardTitle": "Science",
+            "cCustomCardDisplayName": "BOT121, MCRO221, or PHYS221",
+            "cCustomNote": "Choose one of the following: BOT121, MCRO221, or PHYS221.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "AGB212",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Plant Science Course",
+            "cCustomCardDisplayName": "PLSC190, PLSC230, PLSC240, or PLSC245",
+            "cCustomNote": "Choose one of the following: PLSC190, PLSC230, PLSC240, or PLSC245.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Animal Science Course",
+            "cCustomNote": "Any Animal Science course can go here.\r\n\r\nSelect a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Soil Science Course",
+            "cCustomCardDisplayName": "SS120 or SS130",
+            "cCustomNote": "Choose one of the following: SS120, or SS130.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Food Handling Course",
+            "cCustomCardDisplayName": "DSCI229 or FSN230",
+            "cCustomNote": "Choose one of the following: DSCI229, or FSN230.\r\n\r\nPlease note that these courses are not available every term, and Term Typically Offered information is subject to change. Please check the catalog to see when courses are available.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "AGC404",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "AG360, AG452, or AGC452",
+            "cCustomNote": "Choose one of the following: AG360, AG452, or AGC452.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "FSN275",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "BRAE321",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Natural Resources Course",
+            "cCustomCardDisplayName": "NR/ES308 or NR323",
+            "cCustomNote": "Choose one of the following: NR/ES308, or NR323.\r\n\r\nPlease note that these courses are not available every term, and Term Typically Offered information is subject to change. Please check the catalog to see when courses are available.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Marketing Course",
+            "cCustomCardDisplayName": "AGB301 or WVIT343",
+            "cCustomNote": "Choose one of the following: AGB301, or WVIT343.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "BRAE340",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "AGC314",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "2"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "6"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "AGC463",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Approved Emphasis Electives",
+            "cCustomNote": "Any Approved Emphasis Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Lower-Division E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E). <b>One (1) course must be completed from B1, in addition to MATH118.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Electives",
+            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nAt least 29 units of Approved Electives and Free Electives must be at the 300-400 level. Students are encouraged to consult with the academic advisor in developing a plan for fulfilling degree requirements. See catalog for Emphasis Area.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "37b8bb1096283a5ab99099e64bac7bf6",
+    "flowName": "22-26.10AGSCBSU",
+    "flowMajor": "10AGSCBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": 180,
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": ""
+}

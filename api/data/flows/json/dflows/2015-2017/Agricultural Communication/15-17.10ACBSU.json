@@ -1,0 +1,356 @@
+{
+  "flowName": "15-17.10ACBSU",
+  "flowId": "15-17.10ACBSU",
+  "flowStartYear": "2015",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
+      "classes": []
+    },
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC102"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI112"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH118"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB212"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM110"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE121"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "JOUR205"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AEPS120"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: BIO111 or BIO161.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Biology Course",
+          "cCustomDisplayName": "BIO111 or BIO161"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ECON222"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "FSN230"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: SS121, SS131.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Soil Science Course",
+          "cCustomDisplayName": "SS121 or SS131"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: STAT217, STAT218.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "STAT217 or STAT218"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select one course from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Animal Science Course"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "JOUR203"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL310"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: GRC377, JOUR390.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "GRC377 or JOUR390"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC301"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB312"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE340"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGED460"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: NR308, NR323.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "NR308 or NR323"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "FSN275"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC407"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC426"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "JOUR312"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AG452, AEPS/BOT329.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "AG452 or AEPS/BOT329"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AGC461, AGED461.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Senior Project I",
+          "cCustomDisplayName": "AGC461 or AGED461"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS316"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI360"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomUnits": "4",
+          "cID": "AGC339"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AGC462, AGED462.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Senior Project II",
+          "cCustomDisplayName": "AGC462 or AGED462"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGED404"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4. C4 should be taken only after Junior standing is reached (90 units).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any free elective can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "dataModelVersion": 6,
+  "flowHash": "8f44bafa2deae62ce9e971fb8d4f4865"
+}

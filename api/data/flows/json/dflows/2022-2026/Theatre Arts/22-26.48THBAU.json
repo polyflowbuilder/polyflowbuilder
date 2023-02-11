@@ -1,0 +1,396 @@
+{
+    "flowName": "22-26.48THBAU",
+    "flowStartYear": "2022",
+    "flowCatalogYear": "2022-2026",
+    "flowMajor": "48THBAU",
+    "flowConcentration": "",
+    "dataModelVersion": 5,
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "TH201",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH225 or TH230",
+            "cCustomNote": "Choose one of the following: TH225 or TH230.\r\n\r\nBoth TH225 and TH230 are required for the degree.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "TH220",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH227 or TH228",
+            "cCustomNote": "Choose one of the following: TH227 or TH228.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Lower-Division Theatre",
+            "cCustomNote": "Choose four Lower-Division Theatre courses: TH215, TH235, TH240, TH245, TH255, TH256, TH260, TH265, TH270, TH275, TH280, TH285.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480.Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH290 or TH295",
+            "cCustomNote": "Choose one of the following: TH290 or TH295.\r\n\r\nBoth TH290 and TH295 are required for the degree.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Lower-Division Theatre",
+            "cCustomNote": "Choose four Lower-Division Theatre courses: TH215, TH235, TH240, TH245, TH255, TH256, TH260, TH265, TH270, TH275, TH280, TH285.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480.Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH225 or TH230",
+            "cCustomNote": "Choose course not previously taken: TH225 or TH230.\r\n\r\nBoth TH225 and TH230 are required for the degree.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Lower-Division Theatre",
+            "cCustomNote": "Choose four Lower-Division Theatre courses: TH215, TH235, TH240, TH245, TH255, TH256, TH260, TH265, TH270, TH275, TH280, TH285.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480.Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH290 or TH295",
+            "cCustomNote": "Choose course not previously taken: TH290 or TH295.\r\n\r\nBoth TH290 and TH295 are required for the degree.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Lower-Division Theatre",
+            "cCustomNote": "Choose four Lower-Division Theatre courses: TH215, TH235, TH240, TH245, TH255, TH256, TH260, TH265, TH270, TH275, TH280, TH285.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480.Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "TH345 or TH355",
+            "cCustomNote": "Choose one of the following: TH234 or TH355.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Upper-Division Theatre",
+            "cCustomNote": "Choose four Upper-Division Theatre courses: TH305, TH315, TH325, TH330, TH345, TH355, TH370, TH380, TH390, TH400, TH425, TH430, TH432, TH434, TH470, TH471, TH480.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480. Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Upper-Division Theatre",
+            "cCustomNote": "Choose four Upper-Division Theatre courses: TH305, TH315, TH325, TH330, TH345, TH355, TH370, TH380, TH390, TH400, TH425, TH430, TH432, TH434, TH470, TH471, TH480.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480. Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One Upper-Division Theatre",
+            "cCustomCardDisplayName": "TH430 or TH432",
+            "cCustomNote": "Choose one of the following: TH430 or TH432.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Upper-Division Theatre",
+            "cCustomNote": "Choose four Upper-Division Theatre courses: TH305, TH315, TH325, TH330, TH345, TH355, TH370, TH380, TH390, TH400, TH425, TH430, TH432, TH434, TH470, TH471, TH480.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480. Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "TH350",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "TH305",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "ENGL339",
+            "cardColor": "rgb(252, 208, 158)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "TH461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose Four",
+            "cCustomCardDisplayName": "Upper-Division Theatre",
+            "cCustomNote": "Choose four Upper-Division Theatre courses: TH305, TH315, TH325, TH330, TH345, TH355, TH370, TH380, TH390, TH400, TH425, TH430, TH432, TH434, TH470, TH471, TH480.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480. Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Upper Division Free Elective",
+            "cCustomNote": "Any Upper Division Free Elective course can go here.\r\n\r\nAt least 4 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One Upper-Division Theatre",
+            "cCustomCardDisplayName": "TH325 or TH330",
+            "cCustomNote": "Choose one of the following: TH325 or TH330.\r\n\r\nIf not used to meet major core requirements, may be used to meet other major electives. See catalog.\r\n\r\nRepeatable courses may be taken twice: TH275, TH305, TH325, TH330, TH400, TH470, TH471, TH480.Topic course can be taken with different topics to meet major electives as well as major core requirements: TH305.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "TH450",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed; A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D shuold be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowUnitTotal": 180,
+    "flowNotes": "",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "99a3deff9857e86d9fccf71c94892156"
+  }

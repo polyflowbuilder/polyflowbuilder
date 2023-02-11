@@ -1,0 +1,358 @@
+{
+    "data": [
+      {
+        "qIndex": 1,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "FSN101",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN202",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO161",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "MATH118",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS101",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 2,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN250",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM127",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "ENGL134",
+            "cardColor": "rgb(220, 253, 210)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 3,
+        "qUnits": 12,
+        "classes": [
+          {
+            "classId": "FSN121",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "CHEM128",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "COMS126",
+            "cardColor": "rgb(220, 253, 210)"
+          }
+        ]
+      },
+      {
+        "qIndex": 5,
+        "qUnits": 13,
+        "qUnitsMax": 14,
+        "classes": [
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "MCRO221 or MCRO224",
+            "cCustomNote": "Choose one of the following: MCRO221, or MCRO224.",
+            "cCustomUnits": "4-5"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "CHEM312 or CHEM216",
+            "cCustomNote": "Choose one of the following: CHEM312, or CHEM216.\r\n\r\nMost Nutrition majors should take CHEM312 and CHEM314. Students choosing the Nutrition Science concentration may need to take CHEM216 and CHEM369, depending on their career goals and approved electives. Students selecting CHEM216 must also take CHEM217 and CHEM218. See advisor.",
+            "cCustomUnits": "5"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 6,
+        "qUnits": 15,
+        "classes": [
+          {
+            "classId": "FSN281",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(254, 253, 154)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "CHEM314 or CHEM369",
+            "cCustomNote": "Choose one of the following: CHEM314, or CHEM369.\r\n\r\nMost Nutrition majors should take CHEM312 and CHEM314. Students choosing the Nutrition Science concentration may need to take CHEM216 and CHEM369, depending on their career goals and approved electives. Students selecting CHEM216 must also take CHEM217 and CHEM218. See advisor.",
+            "cCustomUnits": "5"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 7,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN315",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "STAT218",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 9,
+        "qUnits": 17,
+        "classes": [
+          {
+            "classId": "FSN310",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN331",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO231",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 10,
+        "qUnits": 14,
+        "classes": [
+          {
+            "classId": "FSN332",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN333",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "BIO232",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 11,
+        "qUnits": 16,
+        "qUnitsMax": 17,
+        "classes": [
+          {
+            "classId": "FSN381",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN319",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Choose One",
+            "cCustomCardDisplayName": "BIO302, BIO303, or BIO351",
+            "cCustomNote": "Choose one of the following: BIO302, BIO303, or BIO351.",
+            "cCustomUnits": "4-5"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(218, 149, 147)",
+            "cCustomCardTitle": "Graduation Writing Requirement",
+            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
+          }
+        ]
+      },
+      {
+        "qIndex": 13,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN415",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN431",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": "FSN463",
+            "cardColor": "rgb(226, 107, 10)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      },
+      {
+        "qIndex": 14,
+        "qUnits": 13,
+        "qUnitsMax": 14,
+        "classes": [
+          {
+            "classId": "FSN461",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN432",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(249, 163, 210)",
+            "cCustomCardTitle": "Approved Elective",
+            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n22 total units of approved electives required. Please select from course options posted in catalog, and consult the Food, Science & Nutrition advising materials and catalog for prerequisites.",
+            "cCustomUnits": "2"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(212, 255, 254)",
+            "cCustomCardTitle": "Free Elective",
+            "cCustomNote": "Any Free Elective course can go here.",
+            "cCustomUnits": "0-1"
+          }
+        ]
+      },
+      {
+        "qIndex": 15,
+        "qUnits": 16,
+        "classes": [
+          {
+            "classId": "FSN416",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": "FSN433",
+            "cardColor": "rgb(254, 253, 154)"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          },
+          {
+            "classId": null,
+            "cardColor": "rgb(220, 253, 210)",
+            "cCustomCardTitle": "GE",
+            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+            "cCustomUnits": "4"
+          }
+        ]
+      }
+    ],
+    "flowName": "22-26.10NUTRBSU.NSNUTRU",
+    "flowMajor": "10NUTRBSU",
+    "flowNotes": "",
+    "flowStartYear": "2022",
+    "flowUnitTotal": "181-184",
+    "flowCatalogYear": "2022-2026",
+    "dataModelVersion": 5,
+    "flowConcentration": "NSNUTRU",
+    "cbData": {
+      "qUnits": 0,
+      "classes": []
+    },
+    "flowHash": "6eda6bcad36a818129862e40a08ac26f"
+  }
