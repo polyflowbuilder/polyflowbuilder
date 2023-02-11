@@ -8,60 +8,193 @@ datasource db {
 }
 
 model User {
-  id                  String    @id @default(uuid())
-  username            String
-  password            String
-  email               String    @unique
-  createDateUTC       DateTime  @default(now()) @db.DateTime(0)
-  lastLoginTimeUTC    DateTime? @db.DateTime(0)
+  id                    String              @id @default(uuid())
+  username              String
+  password              String
+  email                 String              @unique
+  createDateUTC         DateTime            @default(now()) @db.DateTime(0)
+  lastLoginTimeUTC      DateTime?           @db.DateTime(0)
 
-  tokens              Token[]
-  flowcharts          Flowchart[]
+  tokens                Token[]
+  flowcharts            Flowchart[]
 }
 
 model FeedbackReport {
-  id                  String    @id @default(uuid())
-  subject             String
-  email               String
-  feedback            String    @db.Text()
-  submittedUTC        DateTime  @default(now())
+  id                    String              @id @default(uuid())
+  subject               String
+  email                 String
+  feedback              String              @db.Text()
+  submittedUTC          DateTime            @default(now())
 }
 
 model Token {
-  email               String
-  token               String
-  type                TokenType
-  expiresUTC          DateTime  @db.DateTime(0)
+  email                 String
+  token                 String
+  type                  TokenType
+  expiresUTC            DateTime            @db.DateTime(0)
 
-  user                User      @relation(fields: [email], references: [email], onDelete: Cascade)
+  user                  User                @relation(fields: [email], references: [email], onDelete: Cascade)
 
   @@id([email, type])
 }
 
 model Flowchart {
-  id                  String    @id @default(uuid())
-  ownerId             String
-  name                String
-  programId           String
-  startYear           String
-  unitTotal           String
-  notes               String
-  termData            Json
-  version             Int
-  hash                String
-  validationData      Json?
-  publishedId         String?
-  importtedId         String?
-  lastUpdatedUTC      DateTime  @db.DateTime(0)
+  id                    String              @id @default(uuid())
+  ownerId               String
+  name                  String
+  programId1            String
+  programId2            String?
+  programId3            String?
+  programId4            String?
+  programId5            String?
+  startYear             String
+  unitTotal             String
+  notes                 String
+  termData              Json
+  version               Int
+  hash                  String
+  validationData        Json?
+  publishedId           String?
+  importtedId           String?
+  lastUpdatedUTC        DateTime            @db.DateTime(0)
 
-  user                User      @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  user                  User                @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  startYearRelation     StartYear           @relation(fields: [startYear], references: [year], onDelete: Restrict)
+  programId1Relation    Program             @relation(name: "programID1Relation", fields: [programId1], references: [id], onDelete: Restrict)
+  programId2Relation    Program?            @relation(name: "programID2Relation", fields: [programId2], references: [id], onDelete: Restrict)
+  programId3Relation    Program?            @relation(name: "programID3Relation", fields: [programId3], references: [id], onDelete: Restrict)
+  programId4Relation    Program?            @relation(name: "programID4Relation", fields: [programId4], references: [id], onDelete: Restrict)
+  programId5Relation    Program?            @relation(name: "programID5Relation", fields: [programId5], references: [id], onDelete: Restrict)
 }
 
 model Notification {
-  id                  String    @id @default(uuid())
-  title               String
-  content             Json
-  createdUTC          DateTime  @default(now()) @db.DateTime(0)
+  id                    String              @id @default(uuid())
+  title                 String
+  content               Json
+  createdUTC            DateTime            @default(now()) @db.DateTime(0)
+}
+
+model TemplateFlowchart {
+  programId             String              @id
+  flowUnitTotal         String
+  termData              Json
+  notes                 String
+
+  programIdRelation     Program             @relation(fields: [programId], references: [id], onDelete: Restrict)
+}
+
+
+// API data
+
+model StartYear {
+  year                  String              @id
+
+  flowcharts            Flowchart[]
+}
+
+model Catalog {
+  catalog               String              @id
+
+  programs              Program[]
+  courses               Course[]
+}
+
+model Program {
+  id                    String              @id @default(uuid())
+  catalog               String
+  majorName             String
+  concName              String?
+  code                  String
+  dataLink              String
+
+  catalogRelation       Catalog             @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
+  templateFlowchart     TemplateFlowchart?
+  programID1Flowcharts  Flowchart[]         @relation(name: "programID1Relation")
+  programID2Flowcharts  Flowchart[]         @relation(name: "programID2Relation")
+  programID3Flowcharts  Flowchart[]         @relation(name: "programID3Relation")
+  programID4Flowcharts  Flowchart[]         @relation(name: "programID4Relation")
+  programID5Flowcharts  Flowchart[]         @relation(name: "programID5Relation")
+}
+
+model Course {
+  id                    String
+  catalog               String
+  displayName           String
+  units                 String
+  desc                  String
+  addl                  String
+
+  catalogRelation       Catalog             @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
+  geRelation            GECourse?
+  gwrRelation           GWRCourse?
+  uscpRelation          USCPCourse?
+  requisiteRelation     CourseRequisite?
+  termTypOffRelation    TermTypicallyOffered?
+
+  @@id([id, catalog])
+}
+
+model GECategory {
+  category              String              @id
+
+  courses               GECourse[]
+}
+
+model GECourse {
+  id                    String
+  catalog               String
+  category              String
+
+  courseRelation        Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  categoryRelation      GECategory          @relation(fields: [category], references: [category], onDelete: Restrict)
+
+  @@id([category, id, catalog])
+  @@unique([id, catalog])
+}
+
+model GWRCourse {
+  id                    String
+  catalog               String
+
+  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+
+  @@id([id, catalog])
+}
+
+model USCPCourse {
+  id                    String
+  catalog               String
+
+  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+
+  @@id([id, catalog])
+}
+
+model CourseRequisite {
+  id                    String
+  catalog               String
+  prerequisite          Json
+  corequisite           Json
+  recommended           Json
+  concurrent            Json
+
+  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+
+  @@id([id, catalog])
+}
+
+// to get around needing id+catalog when term typically offered doesnt use catalog, will just use an arbitrary catalog
+model TermTypicallyOffered {
+  id                    String
+  catalog               String
+  termSummer            Boolean
+  termFall              Boolean
+  termWinter            Boolean
+  termSpring            Boolean
+
+  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+
+  @@id([id, catalog])
 }
 
 enum TokenType {
