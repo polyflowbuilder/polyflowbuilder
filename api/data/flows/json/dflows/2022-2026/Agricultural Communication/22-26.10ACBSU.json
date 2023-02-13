@@ -1,347 +1,346 @@
 {
-    "flowName": "22-26.10ACBSU",
-    "flowStartYear": "2022",
-    "flowCatalogYear": "2022-2026",
-    "flowMajor": "10ACBSU",
-    "flowConcentration": "",
-    "dataModelVersion": 5,
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "AGC102",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGC205",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH118",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "AGC207",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "PLSC120",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM110",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "AGB212",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ASCI112",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Animal Science Course",
-            "cCustomNote": "Any Animal Science Course can go here.\r\n\r\nSelect one course from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "JOUR203",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "BIO111 or BIO161",
-            "cCustomNote": "Choose one of the following: BIO111, or BIO161.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "FSN275",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ECON222",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "FSN230",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGC225",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "STAT217 or STAT218",
-            "cCustomNote": "Choose one of the following: STAT217, or STAT218.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "SS120 or SS130",
-            "cCustomNote": "Choose one of the following: SS120, or SS130.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "AGB260",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 14,
-        "qUnitsMax": 15,
-        "classes": [
-          {
-            "classId": "ENGL310",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "AGC425 or JOUR390",
-            "cCustomNote": "Choose one of the following: AGC425, or JOUR390.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "BRAE121 or BRAE141",
-            "cCustomNote": "Choose one of the following: BRAE121, or BRAE141.",
-            "cCustomUnits": "2-3"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "AGC301",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGB301",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "JOUR312",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "BRAE340",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGB312",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "NR/ES308 or NR323",
-            "cCustomNote": "Choose one of the following: NR/ES308, or NR323.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomCardTitle": "Graduation Writing Requirement",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "AGC463",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Agricultural Issues",
-            "cCustomCardDisplayName": "PLSC329, AG452, or AGC452",
-            "cCustomNote": "Choose one of the following: PLSC329, AG452, or AGC452.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Internship in Agriculture",
-            "cCustomCardDisplayName": "AGC339, AG339, or AGED339",
-            "cCustomNote": "Choose one of the following: AGC339, AG339, or AGED339.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "AGC426",
-            "cardColor": "rgb(254, 253, 154)"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "COMS316",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGC404",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "AGC407",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 11,
-        "qUnitsMax": 12,
-        "classes": [
-          {
-            "classId": "AGC475",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Electives",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "3-4"
-          }
-        ]
-      }
-    ],
-    "flowUnitTotal": "179-181",
-    "flowNotes": "",
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.10ACBSU",
+  "flowId": "22-26.10ACBSU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "179-181",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "2cf8fbadbfd01bee820001dafb5e7dcb"
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC102"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC205"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH118"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC207"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "PLSC120"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM110"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB212"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ASCI112"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Animal Science Course can go here.\r\n\r\nSelect one course from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Animal Science Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "JOUR203"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: BIO111, or BIO161.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "BIO111 or BIO161"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "FSN275"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ECON222"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "FSN230"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC225"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: STAT217, or STAT218.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "STAT217 or STAT218"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: SS120, or SS130.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "SS120 or SS130"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB260"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "14-15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ENGL310"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AGC425, or JOUR390.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "AGC425 or JOUR390"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: BRAE121, or BRAE141.",
+          "cCustomUnits": "2-3",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "BRAE121 or BRAE141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "JOUR312"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "BRAE340"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGB312"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: NR/ES308, or NR323.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "NR/ES308 or NR323"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC463"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: PLSC329, AG452, or AGC452.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Agricultural Issues",
+          "cCustomDisplayName": "PLSC329, AG452, or AGC452"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: AGC339, AG339, or AGED339.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Internship in Agriculture",
+          "cCustomDisplayName": "AGC339, AG339, or AGED339"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC426"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "COMS316"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC404"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC407"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "11-12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "AGC475"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR) requirements.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Free Electives"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "e7806459b5a2e09f196a0e8eb61490c9.09d8d02516ca6a51a078918db2762c91"
 }

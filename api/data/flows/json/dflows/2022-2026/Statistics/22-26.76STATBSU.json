@@ -1,394 +1,395 @@
 {
-    "flowName": "22-26.76STATBSU",
-    "flowStartYear": "2022",
-    "flowCatalogYear": "2022-2026",
-    "flowMajor": "76STATBSU",
-    "flowConcentration": "",
-    "dataModelVersion": 5,
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "STAT150",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH141",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Recommended: MATH151",
-            "cCustomNote": "Any Free Elective course can go here. Recommended: MATH151.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "STAT301",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH142",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Recommended: MATH152",
-            "cCustomNote": "Any Free Elective course can go here. Recommended: MATH152.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "STAT302",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH143",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CSC101",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Recommended: MATH153",
-            "cCustomNote": "Any Free Elective course can go here. Recommended: MATH153.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "STAT305",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH241",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "STAT330",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "STAT323",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH206",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "STAT331",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "STAT334",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "STAT365",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH248",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Recommended: MATH258",
-            "cCustomNote": "Any Free Elective course can go here. Recommended: MATH258.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": "STAT425",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomCardTitle": "Graduation Writing Requirement",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "STAT426",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "STAT427",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 13,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Approved Support Elective",
-            "cCustomNote": "Any Approved Support Elective course can go here.\r\n\r\nConsultation with faculty advisor is required to select and obtain approval for these courses. Students are requested to consult their advisors before the start of their junior year.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Approved Support Elective",
-            "cCustomNote": "Any Approved Support Elective course can go here.\r\n\r\nConsultation with faculty advisor is required to select and obtain approval for these courses. Students are requested to consult their advisors before the start of their junior year.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 13,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Statistics Elective",
-            "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "STAT466",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
-            "cCustomUnits": "1"
-          }
-        ]
-      }
-    ],
-    "flowUnitTotal": 180,
-    "flowNotes": "",
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.76STATBSU",
+  "flowId": "22-26.76STATBSU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "81b627db357e600eb45fa75e2291a9d9"
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT150"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. Recommended: MATH151.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MATH151"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH142"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. Recommended: MATH152.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MATH152"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT302"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH143"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CSC101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. Recommended: MATH153.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MATH153"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT305"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH241"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT330"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT323"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "MATH206"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT331"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT334"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT365"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH248"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. Recommended: MATH258.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: MATH258"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT425"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT426"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT427"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Support Elective course can go here.\r\n\r\nConsultation with faculty advisor is required to select and obtain approval for these courses. Students are requested to consult their advisors before the start of their junior year.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Support Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Approved Support Elective course can go here.\r\n\r\nConsultation with faculty advisor is required to select and obtain approval for these courses. Students are requested to consult their advisors before the start of their junior year.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Support Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Statistics Elective course can go here.\r\n\r\nStatistics Electives (24 units).\r\n<b>List A (12 units):</b> STAT405, STAT414, STAT415, STAT416, STAT417, STAT418, STAT419, STAT421, STAT423, STAT434.\r\n<b>List B (12 units):</b> any 400-level STAT course (including from List A); CSC/CPE202, CSC/CPE203; CSC248, CSC349, CSC365, CSC369; DATA301; IME430; ITP303; MATH242, MATH306, MATH334, MATH335, MATH406, MATH412, MATH413, MATH414, MATH437, MATH451.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "STAT466"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nEight units of Free Elective credit needed to reach 180 units. Math workshops are strongly recommended and require concurrent enrollment in the associated Math course. Each workshop will coutn as one unit of elective credit. CR/NR grading.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "413d51845f084a5189a23046edc853b0.17443ddcc13dde0e9c2952c3d9c8f878"
+}

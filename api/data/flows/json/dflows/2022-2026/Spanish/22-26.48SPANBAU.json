@@ -1,390 +1,391 @@
 {
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "SPAN201",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "SPAN202",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Choose one of the following: SPAN203 or SPAN206.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "SPAN203 or SPAN206"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "SPAN207",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "SPAN233",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "SPAN301",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "SPAN 300-level course",
-            "cCustomCardDisplayName": "Select Three Courses"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": "SPAN302",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "WLC360",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "SPAN 300-level course",
-            "cCustomCardDisplayName": "Select Three Courses"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Approved Language/Culture Electives",
-            "cCustomCardDisplayName": "300-400 level"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Upper-Divsion Elective Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
-            "cCustomCardTitle": "Graduation Writing Requirement"
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Select one of the following: SPAN402, SPAN410, SPAN416, or SPAN470.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "SPAN 400-level course",
-            "cCustomCardDisplayName": "Select One"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "SPAN 300-level course",
-            "cCustomCardDisplayName": "Select Three Courses"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor Course OR SPAN 300-400 level course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).\r\n\r\nWith department approval, any declared academic minor, plus 2-8 units of SPAN 300-400 level courses to reach 32 units. Minor and SPAN coursework used here may not double count with SPAN major core requirements or approved electives.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course OR SPAN 300-400 Level Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Upper-Division Elective Course"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Select one of the following not taken: SPAN402, SPAN410, SPAN416, or SPAN470.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "SPAN 400-level course",
-            "cCustomCardDisplayName": "Select One Not Taken"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Approved Language/Culture Electives",
-            "cCustomCardDisplayName": "300-400 level"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Minor Course OR SPAN 300-400 level course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).\r\n\r\nWith department approval, any declared academic minor, plus 2-8 units of SPAN 300-400 level courses to reach 32 units. Minor and SPAN coursework used here may not double count with SPAN major core requirements or approved electives.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Minor Course OR SPAN 300-400 Level Course"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "WLC460",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Approved Language/Culture Electives",
-            "cCustomCardDisplayName": "300-400 level"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Upper-Division Elective Course"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Upper-Division Elective Course"
-          }
-        ]
-      }
-    ],
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.48SPANBAU",
+  "flowId": "22-26.48SPANBAU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "6a2e7e58e8476132bf35f0be15d658a9",
-    "flowName": "22-26.48SPANBAU",
-    "flowMajor": "48SPANBAU",
-    "flowNotes": "",
-    "flowStartYear": "2022",
-    "flowUnitTotal": 180,
-    "flowCatalogYear": "2022-2026",
-    "dataModelVersion": 5,
-    "flowConcentration": ""
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN202"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: SPAN203 or SPAN206.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "SPAN203 or SPAN206"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN207"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN233"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "SPAN 300-level course",
+          "cCustomDisplayName": "Select Three Courses"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "SPAN302"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "WLC360"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "SPAN 300-level course",
+          "cCustomDisplayName": "Select Three Courses"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Language/Culture Electives",
+          "cCustomDisplayName": "300-400 level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Upper-Divsion Elective Course"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select one of the following: SPAN402, SPAN410, SPAN416, or SPAN470.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "SPAN 400-level course",
+          "cCustomDisplayName": "Select One"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select three courses from the following: SPAN303, SPAN305, SPAN307, SPAN340, or SPAN390.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "SPAN 300-level course",
+          "cCustomDisplayName": "Select Three Courses"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor Course OR SPAN 300-400 level course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).\r\n\r\nWith department approval, any declared academic minor, plus 2-8 units of SPAN 300-400 level courses to reach 32 units. Minor and SPAN coursework used here may not double count with SPAN major core requirements or approved electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course OR SPAN 300-400 Level Course"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Upper-Division Elective Course"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Select one of the following not taken: SPAN402, SPAN410, SPAN416, or SPAN470.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "SPAN 400-level course",
+          "cCustomDisplayName": "Select One Not Taken"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Language/Culture Electives",
+          "cCustomDisplayName": "300-400 level"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Minor Course OR SPAN 300-400 level course can go here.\r\n\r\nStudents may not declare a Spanish minor. Courses in a minor may not be used to satisfy Major requirements or Approved Electives in BA Spanish (no double counting of coursework).\r\n\r\nWith department approval, any declared academic minor, plus 2-8 units of SPAN 300-400 level courses to reach 32 units. Minor and SPAN coursework used here may not double count with SPAN major core requirements or approved electives.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Minor Course OR SPAN 300-400 Level Course"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "WLC460"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Language/Culture Elective (300-400 level) course can go here. Refer to the Catalog.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Language/Culture Electives",
+          "cCustomDisplayName": "300-400 level"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Upper-Division Elective Course"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective (Upper-Division Elective) course can go here.\r\n\r\nMinimum 20 units of free electives. If upper-division GE courses are used to satisfy Major requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Upper-Division Elective Course"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "be6e4ffd416026f07be3ebbe3c74923f.d8fd0dd90cb6cc304f21d19b701aa33a"
+}

@@ -1,535 +1,3382 @@
-{
-  "geA1": ["COMS101", "COMS102", "HNRS101", "HNRS102"],
-  "geA2": ["ENGL130", "ENGL132", "ENGL133", "ENGL134"],
-  "geA3": [
-    "COMS126",
-    "COMS145",
-    "ENGL145",
-    "ENGL148",
-    "ENGL149",
-    "HNRS145",
-    "HNRS148",
-    "HNRS149",
-    "PHIL126"
-  ],
-  "geB1": [
-    "ASTR101",
-    "ASTR102",
-    "CHEM110",
-    "CHEM124",
-    "CHEM125",
-    "CHEM127",
-    "GEOL102",
-    "GEOL205",
-    "HNRS132",
-    "HNRS134",
-    "PSC101",
-    "PHYS104",
-    "PHYS107",
-    "PHYS111",
-    "PHYS121",
-    "PHYS122",
-    "PHYS132",
-    "PHYS133",
-    "PHYS141",
-    "SS120",
-    "SS130"
-  ],
-  "geB2": [
-    "AEPS110",
-    "ASCI112",
-    "ANT250",
-    "BIO111",
-    "BIO114",
-    "BIO123",
-    "BIO161",
-    "BIO213",
-    "BIO227",
-    "BMED213",
-    "BRAE213",
-    "BOT121",
-    "MSCI111",
-    "MCRO221",
-    "MCRO224"
-  ],
-  "geB3": [
-    "AEPS110",
-    "BIO111",
-    "BIO114",
-    "BIO161",
-    "BOT121",
-    "CHEM110",
-    "CHEM124",
-    "CHEM125",
-    "CHEM127",
-    "HNRS132",
-    "MCRO221",
-    "MCRO224",
-    "PSC101",
-    "PHYS122",
-    "PHYS132",
-    "PHYS133",
-    "SS120",
-    "SS130"
-  ],
-  "geB4": [
-    "CSC121",
-    "CSC122",
-    "HNRS141",
-    "HNRS142",
-    "HNRS143",
-    "MATH112",
-    "MATH115",
-    "MATH116",
-    "MATH117",
-    "MATH118",
-    "MATH119",
-    "MATH141",
-    "MATH142",
-    "MATH143",
-    "MATH161",
-    "MATH162",
-    "MATH182",
-    "MATH221",
-    "MATH227",
-    "STAT130",
-    "STAT217",
-    "STAT218",
-    "STAT251",
-    "STAT252",
-    "STAT313"
-  ],
-  "geUDB": [
-    "AERO310",
-    "AEPS315",
-    "AEPS329",
-    "AG315",
-    "AG330",
-    "AG350",
-    "AG360",
-    "ASCI360",
-    "ASTR324",
-    "BIO302",
-    "BIO305",
-    "BIO308",
-    "BRAE340",
-    "BRAE348",
-    "BOT311",
-    "BOT329",
-    "CHEM308",
-    "CHEM349",
-    "CRP338",
-    "CSC302",
-    "CSC310",
-    "CSC311",
-    "CSC320",
-    "CM317",
-    "ERSC335",
-    "EE322",
-    "ENGR302",
-    "ENGR350",
-    "EDES350",
-    "ENVE323",
-    "ENVE324",
-    "ES350",
-    "FSN319",
-    "GEOG350",
-    "GEOL305",
-    "GRC377",
-    "HIST354",
-    "HIST359",
-    "HNRS310",
-    "HNRS311",
-    "HNRS353",
-    "HNRS392",
-    "IME320",
-    "ITP330",
-    "ITP341",
-    "ISLA305",
-    "ISLA330",
-    "ISLA350",
-    "LA317",
-    "MSCI307",
-    "MSCI330",
-    "MATE359",
-    "MATH304",
-    "MATH344",
-    "MATH408",
-    "ME313",
-    "ME320",
-    "ME323",
-    "NR312",
-    "NR317",
-    "NR321",
-    "PSC307",
-    "PSC320",
-    "PSC392",
-    "PHYS412",
-    "PHYS417",
-    "PHYS452",
-    "POLS333",
-    "PSY340",
-    "PSY344",
-    "RELS376",
-    "SCM320",
-    "SCM335",
-    "SCM350",
-    "SCM360",
-    "STAT312",
-    "STAT321",
-    "STAT350",
-    "UNIV330",
-    "UNIV333",
-    "UNIV350",
-    "UNIV392",
-    "WGS350"
-  ],
-  "geC1": [
-    "ARCE260",
-    "ARCH217",
-    "ARCH218",
-    "ARCH219",
-    "ART101",
-    "ART111",
-    "ART112",
-    "ART122",
-    "ART145",
-    "ART148",
-    "COMS208",
-    "DANC221",
-    "LA211",
-    "LA212",
-    "MU101",
-    "MU120",
-    "MU221",
-    "MU227",
-    "MU229",
-    "TH210",
-    "TH227",
-    "TH228"
-  ],
-  "geC2": [
-    "CHIN141",
-    "CHIN142",
-    "CHIN143",
-    "CHIN241",
-    "CHIN242",
-    "CHIN243",
-    "ENGL230",
-    "ENGL231",
-    "ENGL241",
-    "ENGL242",
-    "ENGL251",
-    "ENGL252",
-    "ENGL253",
-    "ENGL255",
-    "FR233",
-    "GER233",
-    "HNRS230",
-    "HNRS231",
-    "HNRS232",
-    "HNRS242",
-    "HNRS251",
-    "ITAL141",
-    "ITAL142",
-    "ITAL143",
-    "ITAL241",
-    "LS255",
-    "PHIL230",
-    "PHIL231",
-    "SPAN141",
-    "SPAN142",
-    "SPAN143",
-    "SPAN233",
-    "SPAN241",
-    "SPAN242",
-    "SPAN243"
-  ],
-  "geUDC": [
-    "ARCH320",
-    "ARCH326",
-    "ART311",
-    "ART314",
-    "ART318",
-    "ART370",
-    "ART371",
-    "COMS308",
-    "DANC321",
-    "ENGL311",
-    "ENGL312",
-    "ENGL330",
-    "ENGL331",
-    "ENGL332",
-    "ENGL333",
-    "ENGL334",
-    "ENGL335",
-    "ENGL339",
-    "ENGL340",
-    "ENGL341",
-    "ENGL342",
-    "ENGL343",
-    "ENGL345",
-    "ENGL346",
-    "ENGL347",
-    "ENGL348",
-    "ENGL349",
-    "ENGL350",
-    "ENGL351",
-    "ENGL352",
-    "ENGL354",
-    "ENGL370",
-    "ENGL371",
-    "ENGL372",
-    "ENGL373",
-    "ENGL380",
-    "ENGL381",
-    "ENGL382",
-    "ENGL386",
-    "ENGL387",
-    "ENGL388",
-    "ES300",
-    "ES301",
-    "ES302",
-    "ES303",
-    "ES324",
-    "ES326",
-    "ES340",
-    "ES360",
-    "FR305",
-    "FR350",
-    "GER305",
-    "GER350",
-    "HNRS304",
-    "HNRS320",
-    "HNRS332",
-    "HNRS333",
-    "HNRS336",
-    "HNRS341",
-    "HNRS342",
-    "HNRS343",
-    "HNRS345",
-    "HNRS347",
-    "HNRS352",
-    "HNRS380",
-    "ISLA303",
-    "ISLA320",
-    "MU324",
-    "MU328",
-    "NR360",
-    "PHIL301",
-    "PHIL309",
-    "PHIL310",
-    "PHIL312",
-    "PHIL313",
-    "PHIL314",
-    "PHIL315",
-    "PHIL317",
-    "PHIL318",
-    "PHIL319",
-    "PHIL321",
-    "PHIL322",
-    "PHIL323",
-    "PHIL327",
-    "PHIL328",
-    "PHIL331",
-    "PHIL332",
-    "PHIL333",
-    "PHIL334",
-    "PHIL335",
-    "PHIL336",
-    "PHIL337",
-    "PHIL339",
-    "PHIL340",
-    "PHIL341",
-    "PHIL342",
-    "PHIL343",
-    "PHIL350",
-    "PHIL351",
-    "PHIL361",
-    "PHIL362",
-    "PHIL369",
-    "RELS301",
-    "RELS302",
-    "RELS304",
-    "RELS306",
-    "RELS307",
-    "RELS310",
-    "RELS311",
-    "RELS370",
-    "RELS372",
-    "RELS374",
-    "RELS378",
-    "SPAN305",
-    "SPAN307",
-    "SPAN340",
-    "SPAN350",
-    "SPAN351",
-    "TH305",
-    "TH360",
-    "TH390",
-    "WGS336",
-    "WGS370",
-    "WLC310",
-    "WLC312"
-  ],
-  "geD1": [
-    "ES112",
-    "HIST201",
-    "HIST202",
-    "HIST206",
-    "HIST207",
-    "HNRS112",
-    "HNRS202",
-    "HNRS203",
-    "HNRS204",
-    "HNRS207",
-    "POLS112",
-    "WGS201"
-  ],
-  "geD2": [
-    "ANT201",
-    "ANT202",
-    "ECON201",
-    "ECON222",
-    "ES212",
-    "ES241",
-    "ES242",
-    "ES243",
-    "ES244",
-    "GEOG150",
-    "HIST210",
-    "HIST213",
-    "HIST216",
-    "HIST221",
-    "HIST222",
-    "HIST223",
-    "HIST225",
-    "HNRS161",
-    "HNRS162",
-    "HNRS201",
-    "HNRS212",
-    "HNRS213",
-    "HNRS216",
-    "HNRS223",
-    "RPTA201",
-    "RELS201",
-    "SOC110",
-    "SOC218"
-  ],
-  "geUDD": [
-    "ANT325",
-    "ANT330",
-    "ANT344",
-    "ANT345",
-    "ANT360",
-    "BRAE349",
-    "BUS311",
-    "CRP325",
-    "CRP334",
-    "COMS316",
-    "COMS384",
-    "COMS386",
-    "CM318",
-    "ECON303",
-    "ECON304",
-    "ES308",
-    "ES310",
-    "ES320",
-    "ES321",
-    "ES322",
-    "ES323",
-    "ES330",
-    "ES335",
-    "ES345",
-    "ES351",
-    "ES380",
-    "ES381",
-    "GEOG300",
-    "GEOG308",
-    "GEOG370",
-    "GEOG380",
-    "HIST306",
-    "HIST307",
-    "HIST308",
-    "HIST309",
-    "HIST310",
-    "HIST311",
-    "HIST313",
-    "HIST316",
-    "HIST317",
-    "HIST318",
-    "HIST319",
-    "HIST320",
-    "HIST321",
-    "HIST322",
-    "HIST326",
-    "HIST334",
-    "HIST335",
-    "HIST336",
-    "HIST337",
-    "HIST338",
-    "HIST350",
-    "HNRS303",
-    "HNRS312",
-    "HNRS317",
-    "HNRS323",
-    "HNRS334",
-    "HNRS335",
-    "HNRS338",
-    "HNRS340",
-    "HNRS350",
-    "HNRS391",
-    "ISLA315",
-    "ISLA316",
-    "KINE323",
-    "KINE324",
-    "NR308",
-    "NR323",
-    "NR324",
-    "NR328",
-    "NR349",
-    "PSC391",
-    "POLS325",
-    "POLS337",
-    "POLS338",
-    "POLS339",
-    "POLS348",
-    "POLS349",
-    "PSY304",
-    "PSY311",
-    "PSY318",
-    "PSY352",
-    "RPTA328",
-    "RELS344",
-    "SOC315",
-    "SOC321",
-    "SOC326",
-    "SOC327",
-    "SOC343",
-    "SOC377",
-    "UNIV391",
-    "WGS301",
-    "WGS302",
-    "WGS320",
-    "WGS340",
-    "WGS345",
-    "WGS351",
-    "WLC370"
-  ],
-  "geE": [
-    "COMS218",
-    "DANC210",
-    "EDES123",
-    "FSN250",
-    "HLTH250",
-    "HLTH255",
-    "HLTH260",
-    "JOUR218",
-    "KINE250",
-    "KINE255",
-    "KINE260",
-    "PSY201",
-    "PSY202",
-    "RPTA255"
-  ]
-}
+[
+  {
+    "catalog": "2020-2021",
+    "id": "AERO310",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AERO310",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS110",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS110",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS110",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS315",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS315",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS329",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AEPS329",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG315",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG315",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG330",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG330",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG360",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "AG360",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASCI112",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASCI360",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASCI360",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT201",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT202",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT250",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT325",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT330",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT344",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT344",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT345",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT345",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT360",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ANT455",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCE260",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCH217",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCH218",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCH219",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCH320",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ARCH326",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART101",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART111",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART112",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART122",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART145",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART148",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART311",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART314",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART318",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART370",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ART371",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR101",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR101",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR102",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR102",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR324",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ASTR324",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO111",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO111",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO111",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO114",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO114",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO114",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO123",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO161",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO161",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO161",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO213",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO227",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO302",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO305",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO308",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BIO308",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BMED213",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE213",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE340",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE340",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE348",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE348",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BRAE349",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT121",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT121",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT121",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT311",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT329",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BOT329",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS302",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS302",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS311",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS311",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS382",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS382",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS384",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "BUS384",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM110",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM110",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM110",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM124",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM124",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM124",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM125",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM125",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM125",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM127",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM127",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM127",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM308",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM308",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM349",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM349",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHEM349",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN141",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN142",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN143",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN241",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN242",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CHIN243",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CRP325",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CRP334",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CRP338",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CRP338",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS101",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS101",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS102",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS102",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS126",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS145",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS208",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS218",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS308",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS316",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS384",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "COMS386",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC121",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC121",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC122",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC122",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC302",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC302",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC310",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC310",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC311",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC311",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC320",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CSC320",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CM317",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CM317",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "CM318",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "DANC210",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "DANC221",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "DANC321",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ERSC335",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ERSC335",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ECON201",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ECON222",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ECON303",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ECON304",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "EE322",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "EE322",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGR302",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGR302",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGR350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGR350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL130",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL130",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL132",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL132",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL133",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL133",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL134",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL134",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL145",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL148",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL149",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL230",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL231",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL241",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL242",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL251",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL252",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL253",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL255",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL311",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL312",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL330",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL331",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL332",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL333",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL334",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL335",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL339",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL340",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL341",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL342",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL343",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL345",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL346",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL347",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL348",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL349",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL350",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL351",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL352",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL354",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL370",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL371",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL372",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL373",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL380",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL381",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL382",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL386",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL387",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENGL388",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "EDES123",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "EDES350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "EDES350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENVE323",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENVE323",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENVE324",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ENVE324",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES112",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES212",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES241",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES242",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES243",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES244",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES300",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES301",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES302",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES303",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES308",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES310",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES311",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES320",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES321",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES322",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES323",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES324",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES326",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES330",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES335",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES340",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES345",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES351",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES360",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES380",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ES381",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FSN250",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FSN319",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FSN319",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FR233",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FR305",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "FR350",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG150",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG300",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG308",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG370",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG380",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOG455",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOL102",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOL102",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOL205",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOL205",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GEOL305",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GER233",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GER305",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GER350",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GRC377",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "GRC377",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HLTH250",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HLTH255",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HLTH260",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HLTH410",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HLTH443",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST201",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST202",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST206",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST207",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST210",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST213",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST216",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST221",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST222",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST223",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST225",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST306",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST307",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST308",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST309",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST310",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST311",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST313",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST316",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST317",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST318",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST319",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST320",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST321",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST322",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST326",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST334",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST335",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST336",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST336",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST337",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST338",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST350",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST354",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST354",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST359",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HIST359",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS101",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS101",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS102",
+    "category": "A1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS102",
+    "category": "A2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS112",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS132",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS132",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS132",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS134",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS134",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS141",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS141",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS142",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS142",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS143",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS143",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS145",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS148",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS149",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS161",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS162",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS201",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS202",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS203",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS204",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS207",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS212",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS213",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS216",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS223",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS230",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS231",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS232",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS242",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS251",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS303",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS304",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS310",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS310",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS311",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS311",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS312",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS317",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS320",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS323",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS325",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS332",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS333",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS334",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS335",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS336",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS338",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS340",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS341",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS342",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS343",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS345",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS347",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS350",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS352",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS353",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS353",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS380",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS391",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS392",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "HNRS392",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "IME320",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "IME320",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITP330",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITP330",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITP341",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITP341",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA303",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA305",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA305",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA315",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA316",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA320",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA330",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA330",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ISLA456",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITAL141",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITAL142",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITAL143",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ITAL241",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "JOUR218",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE240",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE250",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE255",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE260",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE307",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE323",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE323",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE324",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "KINE443",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LA211",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LA212",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LA317",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LA317",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LA317",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "LS255",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI111",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI307",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI307",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI307",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI330",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MSCI330",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATE359",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATE359",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH112",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH112",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH115",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH115",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH116",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH116",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH117",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH117",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH118",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH118",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH119",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH119",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH141",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH141",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH142",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH142",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH143",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH143",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH161",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH161",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH162",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH162",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH182",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH182",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH221",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH221",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH227",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH227",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH304",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH344",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MATH408",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME313",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME313",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME320",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME320",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME323",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "ME323",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO221",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO221",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO221",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO224",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO224",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MCRO224",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU101",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU120",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU221",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU227",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU229",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU324",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "MU328",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR304",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR304",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR305",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR306",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR307",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR308",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR312",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR312",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR312",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR317",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR317",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR317",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR321",
+    "category": "B2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR321",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR321",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR323",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR324",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR328",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR349",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "NR360",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL126",
+    "category": "A3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL230",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL231",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL301",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL309",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL310",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL312",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL313",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL314",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL315",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL317",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL318",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL319",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL321",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL322",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL323",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL327",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL328",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL331",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL332",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL333",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL334",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL335",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL336",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL337",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL339",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL340",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL341",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL342",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL343",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL350",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL351",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL361",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL362",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHIL369",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC101",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC101",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC101",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC307",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC307",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC320",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC320",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC391",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC392",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSC392",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS104",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS104",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS107",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS107",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS111",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS111",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS121",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS121",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS122",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS122",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS122",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS132",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS132",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS132",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS133",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS133",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS133",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS141",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS141",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS412",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS417",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PHYS452",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS112",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS325",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS333",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS333",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS337",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS338",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS339",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS348",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS348",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "POLS349",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY201",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY202",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY304",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY311",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY318",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY340",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY344",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "PSY352",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RPTA201",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RPTA255",
+    "category": "E"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RPTA328",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS201",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS301",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS302",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS304",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS306",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS307",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS310",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS311",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS344",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS370",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS372",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS374",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS376",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS376",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "RELS378",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM320",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM320",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM335",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM335",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM360",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SCM360",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC110",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC218",
+    "category": "D2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC315",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC321",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC326",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC327",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC343",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SOC377",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS120",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS120",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS120",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS130",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS130",
+    "category": "B3"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SS130",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN141",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN142",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN143",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN233",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN241",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN242",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN243",
+    "category": "C2"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN305",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN307",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN340",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN350",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPAN351",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "SPED420",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT130",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT130",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT217",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT217",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT218",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT218",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT251",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT251",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT252",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT252",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT312",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT313",
+    "category": "B1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT313",
+    "category": "B4"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT321",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "STAT350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH210",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH227",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH228",
+    "category": "C1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH305",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH360",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "TH390",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV330",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV330",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV333",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV333",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV391",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV392",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "UNIV392",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS201",
+    "category": "D1"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS301",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS302",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS320",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS336",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS340",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS345",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS350",
+    "category": "UPPER_DIVISION_B"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS350",
+    "category": "F"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS351",
+    "category": "UPPER_DIVISION_D"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WGS370",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WLC310",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WLC312",
+    "category": "UPPER_DIVISION_C"
+  },
+  {
+    "catalog": "2020-2021",
+    "id": "WLC370",
+    "category": "UPPER_DIVISION_D"
+  }
+]

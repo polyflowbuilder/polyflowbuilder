@@ -1,388 +1,388 @@
 {
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "CHEM124",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH141",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here. Recommended: CHEM101.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "1",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomCardDisplayName": "Recommended: CHEM101"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "CHEM125",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH142",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "1",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "CHEM126",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH143",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "BIO161",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "1",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 13,
-        "classes": [
-          {
-            "classId": "CHEM216",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "MATH241",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "PHYS141",
-            "cardColor": "rgb(252, 208, 158)"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "CHEM217",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM221",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "PHYS142",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomNote": "Choose one of the following: CSC232, CSC234, MATH206, MATH244, STAT218, or STAT312.",
-            "cCustomUnits": "3-4",
-            "cCustomCardTitle": "CSC/MATH/STAT Elective",
-            "cCustomCardDisplayName": "Choose One"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "3-4",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ],
-        "qUnitsMax": 17
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "CHEM203",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM218",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM324",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM331",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "PHYS143",
-            "cardColor": "rgb(252, 208, 158)"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 13,
-        "classes": [
-          {
-            "classId": "CHEM303",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM351",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM369",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
-            "cCustomCardTitle": "Graduation Writing Requirement"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "CHEM352",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM356",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomNote": "Any Physics Elective (200-level and above) course can go here.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Physics Elective",
-            "cCustomCardDisplayName": "200-level and above"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "CHEM353",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM357",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Advanced Chemistry Elective"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": "CHEM481",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM484",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "CHEM439",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Advanced Chemistry Elective"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Advanced Chemistry Elective"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "CHEM403",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Advanced Chemistry Elective"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Advanced Chemistry Elective"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
-            "cCustomUnits": "4",
-            "cCustomCardTitle": "GE"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
-            "cCustomUnits": "3",
-            "cCustomCardTitle": "Free Elective"
-          }
-        ]
-      }
-    ],
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.76CHEMBSU",
+  "flowId": "22-26.76CHEMBSU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "179-181",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "ac214c18b36139479525963862f9d6b3",
-    "flowName": "22-26.76CHEMBSU",
-    "flowMajor": "76CHEMBSU",
-    "flowNotes": "",
-    "flowStartYear": "2022",
-    "flowUnitTotal": "179-181",
-    "flowCatalogYear": "2022-2026",
-    "dataModelVersion": 5,
-    "flowConcentration": ""
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM124"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here. Recommended: CHEM101.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective",
+          "cCustomDisplayName": "Recommended: CHEM101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM125"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH142"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM126"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH143"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO161"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM216"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH241"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS141"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "15-17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM217"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM221"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS142"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CSC232, CSC234, MATH206, MATH244, STAT218, or STAT312.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "CSC/MATH/STAT Elective",
+          "cCustomDisplayName": "Choose One"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM203"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM218"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM324"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM331"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS143"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM303"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM351"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM369"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM352"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM356"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Any Physics Elective (200-level and above) course can go here.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Physics Elective",
+          "cCustomDisplayName": "200-level and above"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM353"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM357"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Advanced Chemistry Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM481"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM484"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM439"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Advanced Chemistry Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Advanced Chemistry Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "CHEM403"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Advanced Chemistry Elective"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Advanced Chemistry Elective course can go here.\r\n\r\nSelect at least 15 units of Advanced Chemistry Electives. This is the default curriculum required for students who do not declare the Polymers and Coatings Concentration. See CHEM curriculum sheet or Department for a current list of Approved Chemistry Electives. Consultation with advisor is recommended prior to selectin Approved Advanced Chemistry Electives; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Advanced Chemistry Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nA total of 12-13 units of Free Elective credit are required for the default curriculum. The Chemistry Department strongly recommends that you take CHEM101, offered only in Fall quarter, and SCM150 for Math and Science elective credit in your first year.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "94c949fe691448e03280e5baa801cd25.a550ea0c5436aa0370d86751bf2772f4"
+}

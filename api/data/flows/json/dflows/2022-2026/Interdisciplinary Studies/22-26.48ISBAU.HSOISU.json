@@ -1,387 +1,388 @@
 {
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Intro-Level IS Course",
-            "cCustomNote": "Choose one of the following: ES112, HIST206, HIST216, ISLA123, JOUR219, JOUR228, RELS201, WGQS201, WGQS210.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ISLA201",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Basic Statistics Course",
-            "cCustomCardDisplayName": "STAT130, STAT217, or STAT218",
-            "cCustomNote": "Choose one of the following: STAT130, STAT217, or STAT218.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nAny GE Upper-Division STAT course may be substituted to fulfill this major requirement. Non-GE courses teaching statistical or quantitative analysis methods may be substituted to satisfy this requirement but only with the consent of the ISLA Department Chair. In those cases, students will then have to take an additional course to satisfy the GE requirement.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ISLA255",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Communication Course",
-            "cCustomNote": "Choose one of the following: COMS213, COMS322, COMS385; ENGL311, ENGL312, ENGL317, ENGL467; PSY304.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Environmental Health Track Course",
-            "cCustomNote": "Any Environmental Health Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Environmental Health track: ES360; ISLA330, ISLA350; PHIL340; PSY311; SOC308; WGQS301.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Health & Society Elective",
-            "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Upper-Division ISLA Electives",
-            "cCustomNote": "Choose one of the following: COMS/ISLA395; ISLA/WGQS335; ISLA303, ISLA305, ISLA320, ISLA340, ISLA341, ISLA350, or ISLA465.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Gender, Race, Culture, and Health Track Course",
-            "cCustomNote": "Any Gender, Race, Culture, and Health Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Gender, Race, Culture, and Health track: ANT460; ISLA320; PSY324, PSY372, PSY475; WGQS302, WGQS311, WGQS340, WGQS350, WGQS450.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Upper-Division ISLA Electives",
-            "cCustomNote": "Choose one of the following: COMS/ISLA395; ISLA/WGQS335; ISLA303, ISLA305, ISLA320, ISLA340, ISLA341, ISLA350, or ISLA465.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Health Systems Track Course",
-            "cCustomNote": "Any Health Systems Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Health Systems track: BIO308; HLTH305; POLS332; WGQS457.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomCardTitle": "Graduation Writing Requirement",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ISLA355",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Medical Anthropology Track Course",
-            "cCustomNote": "Any Medical Anthropology Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Medical Anthropology track: ANT344, ANT401, ANT402; SOC326, SOC470.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Health & Society Elective",
-            "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": "ISLA440",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Health & Society Elective",
-            "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 12,
-        "classes": [
-          {
-            "classId": "ISLA461",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Health & Society Elective",
-            "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "4"
-          }
-        ]
-      }
-    ],
-    "flowName": "22-26.48ISBAU.HSOISU",
-    "flowMajor": "48ISBAU",
-    "flowNotes": "",
-    "flowStartYear": "2022",
-    "flowUnitTotal": 180,
-    "flowCatalogYear": "2022-2026",
-    "dataModelVersion": 5,
-    "flowConcentration": "HSOISU",
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.48ISBAU.HSOISU",
+  "flowId": "22-26.48ISBAU.HSOISU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "180",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "dcf453c004c0e4bddf620a0011d20589"
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: ES112, HIST206, HIST216, ISLA123, JOUR219, JOUR228, RELS201, WGQS201, WGQS210.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Intro-Level IS Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ISLA201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: STAT130, STAT217, or STAT218.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nAny GE Upper-Division STAT course may be substituted to fulfill this major requirement. Non-GE courses teaching statistical or quantitative analysis methods may be substituted to satisfy this requirement but only with the consent of the ISLA Department Chair. In those cases, students will then have to take an additional course to satisfy the GE requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Basic Statistics Course",
+          "cCustomDisplayName": "STAT130, STAT217, or STAT218"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ISLA255"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: COMS213, COMS322, COMS385; ENGL311, ENGL312, ENGL317, ENGL467; PSY304.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Communication Course"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Environmental Health Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Environmental Health track: ES360; ISLA330, ISLA350; PHIL340; PSY311; SOC308; WGQS301.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Environmental Health Track Course"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health & Society Elective"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: COMS/ISLA395; ISLA/WGQS335; ISLA303, ISLA305, ISLA320, ISLA340, ISLA341, ISLA350, or ISLA465.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division ISLA Electives"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Gender, Race, Culture, and Health Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Gender, Race, Culture, and Health track: ANT460; ISLA320; PSY324, PSY372, PSY475; WGQS302, WGQS311, WGQS340, WGQS350, WGQS450.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Gender, Race, Culture, and Health Track Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: COMS/ISLA395; ISLA/WGQS335; ISLA303, ISLA305, ISLA320, ISLA340, ISLA341, ISLA350, or ISLA465.\r\n\r\nRequired in Major or Support; some courses also satisfy a General Education (GE) requirement or the USCP.\r\n\r\nIf a course is taken to meet the Communication Course or Upper-Division Electives requirement, it cannot be double-counted in the Concentration. Please consult with academic advisor.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Upper-Division ISLA Electives"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Health Systems Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Health Systems track: BIO308; HLTH305; POLS332; WGQS457.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health Systems Track Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective (8). Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ISLA355"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Medical Anthropology Track course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 4 units from the Medical Anthropology track: ANT344, ANT401, ANT402; SOC326, SOC470.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Medical Anthropology Track Course"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health & Society Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ISLA440"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health & Society Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "12",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ISLA461"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Health & Society Elective course can go here.\r\n\r\nTo ensure an interdisciplinary course of study, courses chosen should be from at least two different disciplines (as indicated by distinct course prefixes) and no more than half of them can have the same course prefix. The student is responsible for checking prerequisites for all courses. See catalog for more concentration details.\r\n\r\nSelect 16 units from the Health & Society Electives: Any courses that were not taken to satisfy the core requirement above can count as electives; ANT345; BIO302, BIO305; COMS418, COMS422; ISLA305, ISLA440; PHIL339; PSY306, PSY310, PSY318, PSY320, PSY344, PSY465, PSY480; RELS372; SOC326.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health & Society Elective"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "e0a174006f34b91967946ce71efe5674.aed09ff91f2c2b6c8511deb6762ac98c"
+}

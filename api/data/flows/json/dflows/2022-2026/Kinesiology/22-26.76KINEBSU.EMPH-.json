@@ -1,372 +1,371 @@
 {
-    "flowName": "22-26.76KINEBSU.EMPH-",
-    "flowStartYear": "2022",
-    "flowCatalogYear": "2022-2026",
-    "flowMajor": "76KINEBSU",
-    "flowConcentration": "EMPH-",
-    "dataModelVersion": 5,
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Health Course",
-            "cCustomCardDisplayName": "HLTH250, HLTH255, or HLTH260",
-            "cCustomNote": "Choose one of the following: HLTH250, HLTH255, or HLTH260.\r\n\r\nHLTH255 or HLTH260 will satisfy the United States Cultural Pluralism requirement (USCP). If HLTH250 is taken, USCP can be fulfilled by some, but not all, courses in the following GE areas: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "KINE180",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "MATH119 or MATH141",
-            "cCustomNote": "Choose one of the following: MATH119, or MATH141.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 13,
-        "classes": [
-          {
-            "classId": "CHEM127",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "STAT218",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nConsider taking Supplemental Workshops (SCM150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "CHEM128",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "BIO161",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.\r\n\r\nConsider taking Supplemental Workshops (SCM150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu.",
-            "cCustomUnits": "1"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "KINE266",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "BIO231",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "PHYS121",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "KINE312",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "BIO232",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "CHEM312 or CHEM216",
-            "cCustomNote": "Choose one of the following: CHEM312, or CHEM216.",
-            "cCustomUnits": "5"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "KINE301",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "KINE307",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "KINE303",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Approved Elective",
-            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n8 units required in Approved Electives. See catalog for options. If a course is taken to meet a Concentration requirement, it cannot be double-counted as an Approved Elective.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Concentration Course",
-            "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 14,
-        "qUnitsMax": 15,
-        "classes": [
-          {
-            "classId": "KINE304",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "KINE319",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Concentration Course",
-            "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "3-4"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "KINE412",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "KINE451",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "KINE349",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomCardTitle": "Graduation Writing Requirement",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "KINE403",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "KINE459",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Concentration Course",
-            "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
-            "cCustomUnits": "3"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 14,
-        "qUnitsMax": 15,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Approved Elective",
-            "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n8 units required in Approved Electives. See catalog for options. If a course is taken to meet a Concentration requirement, it cannot be double-counted as an Approved Elective.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Concentration Course",
-            "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
-            "cCustomUnits": "3"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(212, 255, 254)",
-            "cCustomCardTitle": "Free Elective",
-            "cCustomNote": "Any Free Elective course can go here.",
-            "cCustomUnits": "3-4"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": null,
-            "cardColor": "rgb(254, 253, 154)",
-            "cCustomCardTitle": "Senior Project",
-            "cCustomCardDisplayName": "KINE460, KINE461, KINE462, or KINE463",
-            "cCustomNote": "Choose one of the following: KINE460, KINE461, KINE462, or KINE463.",
-            "cCustomUnits": "1"
-          },
-          {
-            "classId": "KINE401",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(249, 163, 210)",
-            "cCustomCardTitle": "Concentration Course",
-            "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-            "cCustomUnits": "4"
-          }
-        ]
-      }
-    ],
-    "flowUnitTotal": "179-181",
-    "flowNotes": "",
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.76KINEBSU.EMPH-",
+  "flowId": "22-26.76KINEBSU.EMPH-",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "179-181",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "e2730be8f385616b292fae038ffac76f"
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: HLTH250, HLTH255, or HLTH260.\r\n\r\nHLTH255 or HLTH260 will satisfy the United States Cultural Pluralism requirement (USCP). If HLTH250 is taken, USCP can be fulfilled by some, but not all, courses in the following GE areas: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Health Course",
+          "cCustomDisplayName": "HLTH250, HLTH255, or HLTH260"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE180"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: MATH119, or MATH141.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "MATH119 or MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "13",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM127"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "STAT218"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nConsider taking Supplemental Workshops (SCM150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM128"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO161"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.\r\n\r\nConsider taking Supplemental Workshops (SCM150) to assist you with Math/Science courses. More information available at: sas.calpoly.edu.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE266"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO231"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS121"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE312"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BIO232"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CHEM312, or CHEM216.",
+          "cCustomUnits": "5",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "CHEM312 or CHEM216"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE301"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE307"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE303"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n8 units required in Approved Electives. See catalog for options. If a course is taken to meet a Concentration requirement, it cannot be double-counted as an Approved Elective.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Concentration Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "14-15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE304"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE319"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Concentration Course"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE412"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE451"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE349"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE403"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE459"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Concentration Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "14-15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n8 units required in Approved Electives. See catalog for options. If a course is taken to meet a Concentration requirement, it cannot be double-counted as an Approved Elective.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Approved Elective"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Concentration Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#D4FFFE",
+          "cCustomNote": "Any Free Elective course can go here.",
+          "cCustomUnits": "3-4",
+          "cID": null,
+          "cCustomID": "Free Elective"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cCustomNote": "Choose one of the following: KINE460, KINE461, KINE462, or KINE463.",
+          "cCustomUnits": "1",
+          "cID": null,
+          "cCustomID": "Senior Project",
+          "cCustomDisplayName": "KINE460, KINE461, KINE462, or KINE463"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "KINE401"
+        },
+        {
+          "cardColor": "#F9A3D2",
+          "cCustomNote": "Any Concentration course can go here.\r\n\r\nStudents may have to complete additional coursework to satisfy admission requirements for graduate or professional degree programs in the allied health professions. Students interested in these programs should consult their academic advisor or visit the College of Science and Mathematics Advising Office (Building 53, Room 211) for more information.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Concentration Course"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, F, and GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "12aab5481ad19f84f486f3217fe14e18.9e2c86cb112306a9ad0581db0b801ccc"
+}

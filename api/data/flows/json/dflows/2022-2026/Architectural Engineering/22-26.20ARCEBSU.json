@@ -1,371 +1,372 @@
 {
-    "data": [
-      {
-        "qIndex": 1,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "ARCE106",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCH131",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "MATH141",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS101",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 2,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ARCH132",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "MATH142",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "PHYS141",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "ENGL134",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 3,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ARCH133",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "MATH143",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "PHYS142",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "COMS126",
-            "cardColor": "rgb(220, 253, 210)"
-          }
-        ]
-      },
-      {
-        "qIndex": 5,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "ARCE211",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CM115",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "MATH241",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "History of World Architecture or Structures",
-            "cCustomCardDisplayName": "Choose One",
-            "cCustomNote": "Choose one of the following: ARCH217, ARCH218, ARCH219, or ARCH260.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 6,
-        "qUnits": 18,
-        "classes": [
-          {
-            "classId": "ARCE212",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ME212",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE257",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CSC231",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "MATH244",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 7,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "ARCE227",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE223",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE224",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "CHEM124",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": "GEOL201",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 9,
-        "qUnits": 18,
-        "classes": [
-          {
-            "classId": "ARCE302",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE352",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE371",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE421",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "PHYS143",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 10,
-        "qUnits": 17,
-        "classes": [
-          {
-            "classId": "ARCE306",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE353",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE303",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE422",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "EE201",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 11,
-        "qUnits": 15,
-        "classes": [
-          {
-            "classId": "ARCE412",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE354",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE372",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE304",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE305",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ME302",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(218, 149, 147)",
-            "cCustomCardTitle": "Graduation Writing Requirement",
-            "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
-          }
-        ]
-      },
-      {
-        "qIndex": 13,
-        "qUnits": 16,
-        "classes": [
-          {
-            "classId": "ARCE483",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE444",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE476",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE451",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Choose One",
-            "cCustomCardDisplayName": "CM232 or IME314",
-            "cCustomNote": "Choose one of the following: CM323, or IME314.",
-            "cCustomUnits": "3"
-          }
-        ]
-      },
-      {
-        "qIndex": 14,
-        "qUnits": 18,
-        "classes": [
-          {
-            "classId": "ARCE452",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": "ARCE415",
-            "cardColor": "rgb(254, 253, 154)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(252, 208, 158)",
-            "cCustomCardTitle": "Statistics",
-            "cCustomCardDisplayName": "STAT312 or STAT321",
-            "cCustomNote": "Choose one of the following: STAT312, or STAT321. \r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": "ME341",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      },
-      {
-        "qIndex": 15,
-        "qUnits": 14,
-        "classes": [
-          {
-            "classId": "BRAE237",
-            "cardColor": "rgb(252, 208, 158)"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          },
-          {
-            "classId": null,
-            "cardColor": "rgb(220, 253, 210)",
-            "cCustomCardTitle": "GE",
-            "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
-            "cCustomUnits": "4"
-          }
-        ]
-      }
-    ],
-    "cbData": {
-      "qUnits": 0,
+  "flowName": "22-26.20ARCEBSU",
+  "flowId": "22-26.20ARCEBSU",
+  "flowStartYear": "2022",
+  "flowUnitTotal": "196",
+  "flowNotes": "",
+  "data": [
+    {
+      "tIndex": -1,
+      "tUnits": "0",
       "classes": []
     },
-    "flowHash": "ff5053a12c7747515ee70952af07b6bc",
-    "flowName": "22-26.20ARCEBSU",
-    "flowMajor": "20ARCEBSU",
-    "flowNotes": "",
-    "flowStartYear": "2022",
-    "flowUnitTotal": 196,
-    "flowCatalogYear": "2022-2026",
-    "dataModelVersion": 5,
-    "flowConcentration": ""
-  }
+    {
+      "tIndex": 1,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE106"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCH131"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS101"
+        }
+      ]
+    },
+    {
+      "tIndex": 2,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCH132"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH142"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS141"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "ENGL134"
+        }
+      ]
+    },
+    {
+      "tIndex": 3,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ARCH133"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH143"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS142"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cID": "COMS126"
+        }
+      ]
+    },
+    {
+      "tIndex": 5,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE211"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CM115"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH241"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: ARCH217, ARCH218, ARCH219, or ARCH260.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "History of World Architecture or Structures",
+          "cCustomDisplayName": "Choose One"
+        }
+      ]
+    },
+    {
+      "tIndex": 6,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE212"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ME212"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE257"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CSC231"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "MATH244"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 7,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE227"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE223"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE224"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "CHEM124"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "GEOL201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 9,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE302"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE352"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE371"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE421"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "PHYS143"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 10,
+      "tUnits": "17",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE306"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE353"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE303"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE422"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "EE201"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 11,
+      "tUnits": "15",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE412"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE354"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE372"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE304"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE305"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ME302"
+        },
+        {
+          "cardColor": "#DA9593",
+          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
+          "cID": null,
+          "cCustomID": "Graduation Writing Requirement"
+        }
+      ]
+    },
+    {
+      "tIndex": 13,
+      "tUnits": "16",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE483"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE444"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE476"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE451"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: CM323, or IME314.",
+          "cCustomUnits": "3",
+          "cID": null,
+          "cCustomID": "Choose One",
+          "cCustomDisplayName": "CM232 or IME314"
+        }
+      ]
+    },
+    {
+      "tIndex": 14,
+      "tUnits": "18",
+      "classes": [
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE452"
+        },
+        {
+          "cardColor": "#FEFD9A",
+          "cID": "ARCE415"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cCustomNote": "Choose one of the following: STAT312, or STAT321. \r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "Statistics",
+          "cCustomDisplayName": "STAT312 or STAT321"
+        },
+        {
+          "cardColor": "#FCD09E",
+          "cID": "ME341"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    },
+    {
+      "tIndex": 15,
+      "tUnits": "14",
+      "classes": [
+        {
+          "cardColor": "#FCD09E",
+          "cID": "BRAE237"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        },
+        {
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, Lower-Division E, and F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, USCP and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by satisfied by some (but not all) courses within GE categories: Upper-Division C, D1, D2, or E.",
+          "cCustomUnits": "4",
+          "cID": null,
+          "cCustomID": "GE"
+        }
+      ]
+    }
+  ],
+  "publishedID": null,
+  "importedID": null,
+  "dataModelVersion": 6,
+  "flowHash": "dda436672fcd03960a6cdab0deff6e55.ce8a1d854d9523a6900e742a95b233d5"
+}

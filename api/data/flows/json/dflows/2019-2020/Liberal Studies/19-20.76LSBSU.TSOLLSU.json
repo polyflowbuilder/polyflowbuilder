@@ -1,7 +1,7 @@
 {
-  "flowName": "20-21.76LSBSU.TESLLSU",
-  "flowId": "20-21.76LSBSU.TESLLSU",
-  "flowStartYear": "2020",
+  "flowName": "19-20.76LSBSU.TSOLLSU",
+  "flowId": "19-20.76LSBSU.TSOLLSU",
+  "flowStartYear": "2019",
   "flowUnitTotal": "180",
   "data": [
     {
@@ -111,7 +111,7 @@
         },
         {
           "cardColor": "#FEFD9A",
-          "cID": "LS255"
+          "cID": "LS260"
         },
         {
           "cardColor": "#FEFD9A",
@@ -234,7 +234,7 @@
     },
     {
       "tIndex": 13,
-      "tUnits": "12",
+      "tUnits": "16",
       "classes": [
         {
           "cardColor": "#FEFD9A",
@@ -252,16 +252,17 @@
           "cCustomID": "GE"
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program.",
+          "cardColor": "#DCFDD2",
+          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, D2, and a GE Elective. Upper-Division B and Upper-Division C should be taken only after junior standing is reached (90 units). NOTE: Upper-Division B may be fulfilled in concentration classes. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
+          "cCustomUnits": "4",
           "cID": null,
-          "cCustomID": "Visit School of Education Credential Office"
+          "cCustomID": "GE"
         }
       ]
     },
     {
       "tIndex": 14,
-      "tUnits": "17",
+      "tUnits": "13",
       "classes": [
         {
           "cardColor": "#FEFD9A",
@@ -272,18 +273,17 @@
           "cID": "ENGL498"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, Upper-Division C, D2, and a GE Elective. Upper-Division B and Upper-Division C should be taken only after junior standing is reached (90 units). NOTE: Upper-Division B may be fulfilled in concentration classes. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
-        },
-        {
           "cardColor": "#D4FFFE",
           "cCustomNote": "Any free elective can go here. If Upper-Division B courses are used to satisfy Concentration requirements, additional free elective units may be required to satisfy 180 units for degree.",
           "cCustomUnits": "5",
           "cID": null,
           "cCustomID": "Free Electives"
+        },
+        {
+          "cardColor": "#BFBFBF",
+          "cCustomNote": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program.",
+          "cID": null,
+          "cCustomID": "Visit School of Education Credential Office"
         }
       ]
     },
@@ -311,5 +311,5 @@
     }
   ],
   "dataModelVersion": 6,
-  "flowHash": "8a1e11841ad5f495fb16776c3382d51a"
+  "flowHash": "548a4eb087846c156b79117d3ffd6fd5"
 }

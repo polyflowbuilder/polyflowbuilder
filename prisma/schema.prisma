@@ -8,38 +8,38 @@ datasource db {
 }
 
 model User {
-  id                    String              @id @default(uuid())
+  id                    String                @id @default(uuid())
   username              String
   password              String
-  email                 String              @unique
-  createDateUTC         DateTime            @default(now()) @db.DateTime(0)
-  lastLoginTimeUTC      DateTime?           @db.DateTime(0)
+  email                 String                @unique
+  createDateUTC         DateTime              @default(now()) @db.DateTime(0)
+  lastLoginTimeUTC      DateTime?             @db.DateTime(0)
 
   tokens                Token[]
   flowcharts            Flowchart[]
 }
 
 model FeedbackReport {
-  id                    String              @id @default(uuid())
+  id                    String                @id @default(uuid())
   subject               String
   email                 String
-  feedback              String              @db.Text()
-  submittedUTC          DateTime            @default(now())
+  feedback              String                @db.Text()
+  submittedUTC          DateTime              @default(now())
 }
 
 model Token {
   email                 String
   token                 String
   type                  TokenType
-  expiresUTC            DateTime            @db.DateTime(0)
+  expiresUTC            DateTime              @db.DateTime(0)
 
-  user                  User                @relation(fields: [email], references: [email], onDelete: Cascade)
+  user                  User                  @relation(fields: [email], references: [email], onDelete: Cascade)
 
   @@id([email, type])
 }
 
 model Flowchart {
-  id                    String              @id @default(uuid())
+  id                    String                @id @default(uuid())
   ownerId               String
   name                  String
   programId1            String
@@ -56,64 +56,65 @@ model Flowchart {
   validationData        Json?
   publishedId           String?
   importtedId           String?
-  lastUpdatedUTC        DateTime            @db.DateTime(0)
+  lastUpdatedUTC        DateTime              @db.DateTime(0)
 
-  user                  User                @relation(fields: [ownerId], references: [id], onDelete: Cascade)
-  startYearRelation     StartYear           @relation(fields: [startYear], references: [year], onDelete: Restrict)
-  programId1Relation    Program             @relation(name: "programID1Relation", fields: [programId1], references: [id], onDelete: Restrict)
-  programId2Relation    Program?            @relation(name: "programID2Relation", fields: [programId2], references: [id], onDelete: Restrict)
-  programId3Relation    Program?            @relation(name: "programID3Relation", fields: [programId3], references: [id], onDelete: Restrict)
-  programId4Relation    Program?            @relation(name: "programID4Relation", fields: [programId4], references: [id], onDelete: Restrict)
-  programId5Relation    Program?            @relation(name: "programID5Relation", fields: [programId5], references: [id], onDelete: Restrict)
+  user                  User                  @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  startYearRelation     StartYear             @relation(fields: [startYear], references: [year], onDelete: Restrict)
+  programId1Relation    Program               @relation(name: "programID1Relation", fields: [programId1], references: [id], onDelete: Restrict)
+  programId2Relation    Program?              @relation(name: "programID2Relation", fields: [programId2], references: [id], onDelete: Restrict)
+  programId3Relation    Program?              @relation(name: "programID3Relation", fields: [programId3], references: [id], onDelete: Restrict)
+  programId4Relation    Program?              @relation(name: "programID4Relation", fields: [programId4], references: [id], onDelete: Restrict)
+  programId5Relation    Program?              @relation(name: "programID5Relation", fields: [programId5], references: [id], onDelete: Restrict)
 }
 
 model Notification {
-  id                    String              @id @default(uuid())
+  id                    String                @id @default(uuid())
   title                 String
   content               Json
-  createdUTC            DateTime            @default(now()) @db.DateTime(0)
+  createdUTC            DateTime              @default(now()) @db.DateTime(0)
 }
 
 model TemplateFlowchart {
-  programId             String              @id
+  programId             String                @id
   flowUnitTotal         String
   termData              Json
+  version               Int
   notes                 String
 
-  programIdRelation     Program             @relation(fields: [programId], references: [id], onDelete: Restrict)
+  programIdRelation     Program               @relation(fields: [programId], references: [id], onDelete: Restrict)
 }
 
 
 // API data
 
 model StartYear {
-  year                  String              @id
+  year                  String                @id
 
   flowcharts            Flowchart[]
 }
 
 model Catalog {
-  catalog               String              @id
+  catalog               String                @id
 
   programs              Program[]
   courses               Course[]
 }
 
 model Program {
-  id                    String              @id @default(uuid())
+  id                    String                @id
   catalog               String
   majorName             String
   concName              String?
   code                  String
   dataLink              String
 
-  catalogRelation       Catalog             @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
+  catalogRelation       Catalog               @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
   templateFlowchart     TemplateFlowchart?
-  programID1Flowcharts  Flowchart[]         @relation(name: "programID1Relation")
-  programID2Flowcharts  Flowchart[]         @relation(name: "programID2Relation")
-  programID3Flowcharts  Flowchart[]         @relation(name: "programID3Relation")
-  programID4Flowcharts  Flowchart[]         @relation(name: "programID4Relation")
-  programID5Flowcharts  Flowchart[]         @relation(name: "programID5Relation")
+  programID1Flowcharts  Flowchart[]           @relation(name: "programID1Relation")
+  programID2Flowcharts  Flowchart[]           @relation(name: "programID2Relation")
+  programID3Flowcharts  Flowchart[]           @relation(name: "programID3Relation")
+  programID4Flowcharts  Flowchart[]           @relation(name: "programID4Relation")
+  programID5Flowcharts  Flowchart[]           @relation(name: "programID5Relation")
 }
 
 model Course {
@@ -123,51 +124,25 @@ model Course {
   units                 String
   desc                  String
   addl                  String
+  gwrCourse             Boolean
+  uscpCourse            Boolean
 
-  catalogRelation       Catalog             @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
-  geRelation            GECourse?
-  gwrRelation           GWRCourse?
-  uscpRelation          USCPCourse?
+  catalogRelation       Catalog               @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
+  geRelation            GECourse[]
   requisiteRelation     CourseRequisite?
   termTypOffRelation    TermTypicallyOffered?
 
   @@id([id, catalog])
 }
 
-model GECategory {
-  category              String              @id
-
-  courses               GECourse[]
-}
-
 model GECourse {
   id                    String
   catalog               String
-  category              String
+  category              GECategoryEnum
 
   courseRelation        Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
-  categoryRelation      GECategory          @relation(fields: [category], references: [category], onDelete: Restrict)
 
   @@id([category, id, catalog])
-  @@unique([id, catalog])
-}
-
-model GWRCourse {
-  id                    String
-  catalog               String
-
-  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
-
-  @@id([id, catalog])
-}
-
-model USCPCourse {
-  id                    String
-  catalog               String
-
-  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
-
-  @@id([id, catalog])
 }
 
 model CourseRequisite {
@@ -178,7 +153,7 @@ model CourseRequisite {
   recommended           Json
   concurrent            Json
 
-  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  course                Course                @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
 
   @@id([id, catalog])
 }
@@ -192,7 +167,7 @@ model TermTypicallyOffered {
   termWinter            Boolean
   termSpring            Boolean
 
-  course                Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  course                Course                @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
 
   @@id([id, catalog])
 }
@@ -200,4 +175,23 @@ model TermTypicallyOffered {
 enum TokenType {
   SESSION
   PASSWORD_RESET
+}
+
+enum GECategoryEnum {
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  B4
+  UPPER_DIVISION_B
+  C1
+  C2
+  UPPER_DIVISION_C
+  D1
+  D2
+  UPPER_DIVISION_D
+  E
+  F
 }
