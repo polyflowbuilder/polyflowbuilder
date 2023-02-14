@@ -14,6 +14,8 @@ export const apiData: APIData = {
   reqCourseData: []
 };
 
+// TODO: once we move API to another service/cache/whatnot, do a left join
+// on coursedata and all metadata (ge course data, req, term typically offered, etc)
 export async function init(): Promise<void> {
   logger.info('Loading API data into main memory ...');
 
