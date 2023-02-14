@@ -1,4 +1,5 @@
 import * as nodeMailerConfig from '$lib/config/nodeMailerConfig.server';
+import * as apiDataConfig from '$lib/config/apiDataConfig.server';
 import { env } from '$env/dynamic/private';
 import { execSync } from 'child_process';
 import { initLogger } from '$lib/config/loggerConfig';
@@ -65,7 +66,7 @@ export async function loadEnv(): Promise<void> {
 
   // setup things that depend on env vars here
   nodeMailerConfig.init();
-  //   await apiDataConfig.init();
+  await apiDataConfig.init();
 
   logger.info('PolyFlowBuilder environment initialization complete');
 }
