@@ -1,9 +1,5 @@
-// NOTE: need ignores bc we need the .ts extension for Playwright
-// see https://playwright.dev/docs/test-typescript#typescript-with-esm
-
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.ts';
+// NOTE: need .js extension for PlayWright
+import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
@@ -62,12 +58,10 @@ test.describe('reset password routine tests', () => {
         token: true
       }
     });
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const { token } = res!;
 
     await page.goto(
       `/resetpassword?token=${encodeURIComponent(
-        token
+        res.token
       )}&email=${RESET_PASSWORD_ROUTINE_TESTS_EMAIL}`
     );
     expect(page).toHaveURL(/.*resetpassword/);

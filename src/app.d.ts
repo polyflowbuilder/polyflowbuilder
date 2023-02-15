@@ -9,6 +9,7 @@ declare global {
     // interface Error {}
     interface Locals {
       session?: {
+        id: string;
         email: string;
         username: string;
       };

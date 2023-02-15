@@ -4,7 +4,7 @@ import { startPWResetRoutine } from '$lib/server/util/pwResetUtil';
 import { forgotPasswordSchema } from '$lib/schema/forgotPasswordSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/forgotpassword');
+const logger = initLogger('APIRouteHandler (/api/auth/forgotpassword');
 
 export const POST: RequestHandler = async ({ request }) => {
   try {

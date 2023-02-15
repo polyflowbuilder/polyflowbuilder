@@ -3,7 +3,7 @@ import { apiData } from '$lib/config/apiDataConfig.server';
 import { initLogger } from '$lib/config/loggerConfig';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/getAvailableProgramData)');
+const logger = initLogger('APIRouteHandler (/api/data/getAvailableProgramData)');
 
 export const GET: RequestHandler = async () => {
   try {

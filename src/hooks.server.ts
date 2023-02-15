@@ -21,6 +21,7 @@ async function setSession(event: RequestEvent) {
   const sessionUser = await getValidTokenUser(sessionId, 'SESSION');
   if (sessionUser) {
     event.locals.session = {
+      id: sessionUser.id,
       email: sessionUser.email,
       username: sessionUser.username
     };

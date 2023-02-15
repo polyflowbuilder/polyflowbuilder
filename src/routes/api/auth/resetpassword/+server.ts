@@ -5,7 +5,7 @@ import { resetPassword } from '$lib/server/util/pwResetUtil';
 import { resetPasswordSchema } from '$lib/schema/resetPasswordSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/resetpassword)');
+const logger = initLogger('APIRouteHandler (/api/auth/resetpassword)');
 
 export const POST: RequestHandler = async ({ request }) => {
   try {

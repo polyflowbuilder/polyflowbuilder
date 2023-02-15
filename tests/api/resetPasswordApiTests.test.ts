@@ -1,11 +1,6 @@
-// NOTE: need ignores bc we need the .ts extension for Playwright
-// see https://playwright.dev/docs/test-typescript#typescript-with-esm
-
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.ts';
-// @ts-ignore
-import { createToken } from '../util/tokenTestUtil.ts';
+// NOTE: need .js extension for PlayWright
+import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.js';
+import { createToken } from '../util/tokenTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';

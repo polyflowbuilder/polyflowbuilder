@@ -1,9 +1,5 @@
-// NOTE: need ignores bc we need the .ts extension for Playwright
-// see https://playwright.dev/docs/test-typescript#typescript-with-esm
-
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import { checkCarouselSlide } from '../util/homeCarouselTestUtil.ts';
+// NOTE: need .js extension for PlayWright
+import { checkCarouselSlide } from '../util/homeCarouselTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 

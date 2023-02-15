@@ -1,6 +1,11 @@
 <script lang="ts">
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { FlowViewer } from '$lib/components/Flows';
+  import type { PageData } from './$types';
+
+  export let data: PageData;
+
+  $: console.log('load fn data', data);
 </script>
 
 <div class="flowContainer w-full flex">

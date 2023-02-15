@@ -56,7 +56,7 @@ model Flowchart {
   validationData        Json?
   publishedId           String?
   importtedId           String?
-  lastUpdatedUTC        DateTime              @db.DateTime(0)
+  lastUpdatedUTC        DateTime?             @updatedAt @db.DateTime(0)
 
   user                  User                  @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   startYearRelation     StartYear             @relation(fields: [startYear], references: [year], onDelete: Restrict)
