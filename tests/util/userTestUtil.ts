@@ -31,9 +31,11 @@ export async function deleteUserAccount(email: string) {
 }
 
 export async function performLogin(page: Page, email: string, password: string) {
-  await page.goto('/login');
+  await page.goto('/login', {
+    waitUntil: 'networkidle'
+  });
   await expect(page).toHaveURL(/.*login/);
-  expect(await page.textContent('h2')).toBe('Sign In');
+  expect((await page.textContent('h2')).trim()).toBe('Sign In');
   await expect(page.locator('button')).toBeVisible();
 
   // get previous lastlogindate

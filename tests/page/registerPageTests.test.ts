@@ -7,7 +7,9 @@ const REGISTER_TESTS_EMAIL = 'pfb_test_registerPage_playwright@test.com';
 
 test.describe('registration page tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/register');
+    await page.goto('/register', {
+      waitUntil: 'networkidle'
+    });
   });
 
   test.afterAll(async () => {
@@ -16,7 +18,7 @@ test.describe('registration page tests', () => {
   });
 
   test('register page has expected h1', async ({ page }) => {
-    expect(await page.textContent('h2')).toBe('Create Account');
+    expect((await page.textContent('h2')).trim()).toBe('Create Account');
     await expect(page.locator('button')).toBeVisible();
   });
 
@@ -122,7 +124,7 @@ test.describe('registration page tests', () => {
     await page.getByRole('button', { name: 'Create Account!' }).click();
 
     await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
       'Account successfully created! Please login.'
@@ -137,7 +139,7 @@ test.describe('registration page tests', () => {
     await page.getByRole('button', { name: 'Create Account!' }).click();
 
     await expect(page).toHaveURL(/.*register/);
-    expect(await page.textContent('h2')).toBe('Create Account');
+    expect((await page.textContent('h2')).trim()).toBe('Create Account');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'An account with this email address already exists. Please use another email address.'
@@ -161,7 +163,7 @@ test.describe('registration page tests', () => {
     await page.getByRole('button', { name: 'Create Account!' }).click();
 
     await expect(page).toHaveURL(/.*register/);
-    expect(await page.textContent('h2')).toBe('Create Account');
+    expect((await page.textContent('h2')).trim()).toBe('Create Account');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'An error occurred when registering your account. Please try again a bit later.'

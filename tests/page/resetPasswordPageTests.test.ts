@@ -15,7 +15,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto('/resetpassword');
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect(await page.textContent('h2')).toBe('Request Password Reset');
+    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -26,7 +26,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto(RESET_PASSWORD_VALID_URL);
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect(await page.textContent('h2')).toBe('Request Password Reset');
+    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -37,7 +37,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto(`/resetpassword?token=${encodeURIComponent('testtoken')}&email=invalidemail`);
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect(await page.textContent('h2')).toBe('Request Password Reset');
+    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -57,7 +57,9 @@ test.describe('reset password page tests (token)', () => {
   });
 
   test.beforeEach(async ({ page }) => {
-    await page.goto(RESET_PASSWORD_VALID_URL);
+    await page.goto(RESET_PASSWORD_VALID_URL, {
+      waitUntil: 'networkidle'
+    });
   });
 
   test.afterAll(async () => {
@@ -67,7 +69,7 @@ test.describe('reset password page tests (token)', () => {
 
   test('authorized reset password page has expected content', async ({ page }) => {
     expect(page).toHaveURL(/.*resetpassword/);
-    expect(await page.textContent('h2')).toBe('Reset Password');
+    expect((await page.textContent('h2')).trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
   });
 
@@ -168,7 +170,7 @@ test.describe('reset password page tests (token)', () => {
     await page.getByRole('button', { name: 'Reset Password' }).click();
 
     await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(

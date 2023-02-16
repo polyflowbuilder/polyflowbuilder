@@ -37,7 +37,10 @@ test.describe('poly-432 bugfix tests', () => {
   });
 
   test('see account created message on correct navigation', async ({ page }) => {
-    await page.goto('/register');
+    await page.goto('/register', {
+      // wait for client-side load functions to finish
+      waitUntil: 'networkidle'
+    });
 
     await page.getByLabel('username').fill('test');
     await page.getByLabel('email').fill(POLY_432_TESTS_EMAIL);
@@ -46,7 +49,7 @@ test.describe('poly-432 bugfix tests', () => {
     await page.getByRole('button', { name: 'Create Account!' }).click();
 
     await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
       'Account successfully created! Please login.'

@@ -2,11 +2,13 @@ import { expect, test } from '@playwright/test';
 
 test.describe('forgot password page tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/forgotpassword');
+    await page.goto('/forgotpassword', {
+      waitUntil: 'networkidle'
+    });
   });
 
   test('forgot password page has expected content', async ({ page }) => {
-    expect(await page.textContent('h2')).toBe('Request Password Reset');
+    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
     await expect(page.locator('button')).toBeVisible();
   });
 

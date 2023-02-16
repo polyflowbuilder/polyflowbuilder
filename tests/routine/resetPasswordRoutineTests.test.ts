@@ -22,7 +22,7 @@ test.describe('reset password routine tests', () => {
     await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h2')).toBe('Flows');
+    expect((await page.textContent('h2')).trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
     await page.context().clearCookies();
@@ -30,8 +30,10 @@ test.describe('reset password routine tests', () => {
 
   test('user initiates reset password request', async ({ page }) => {
     // navigate to login
-    await page.goto('/login');
-    expect(await page.textContent('h2')).toBe('Sign In');
+    await page.goto('/login', {
+      waitUntil: 'networkidle'
+    });
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
 
     // click on forgot password
@@ -62,10 +64,13 @@ test.describe('reset password routine tests', () => {
     await page.goto(
       `/resetpassword?token=${encodeURIComponent(
         res.token
-      )}&email=${RESET_PASSWORD_ROUTINE_TESTS_EMAIL}`
+      )}&email=${RESET_PASSWORD_ROUTINE_TESTS_EMAIL}`,
+      {
+        waitUntil: 'networkidle'
+      }
     );
     expect(page).toHaveURL(/.*resetpassword/);
-    expect(await page.textContent('h2')).toBe('Reset Password');
+    expect((await page.textContent('h2')).trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
 
     // enter a new password
@@ -75,7 +80,7 @@ test.describe('reset password routine tests', () => {
 
     // check that this was successful
     await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
@@ -85,10 +90,12 @@ test.describe('reset password routine tests', () => {
 
   test('user cannot log in with old password', async ({ page }) => {
     // check that we're on the login page
-    await page.goto('/login');
+    await page.goto('/login', {
+      waitUntil: 'networkidle'
+    });
 
     await expect(page).toHaveURL(/.*login/);
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
 
     // enter old credentials
@@ -106,7 +113,7 @@ test.describe('reset password routine tests', () => {
     await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h2')).toBe('Flows');
+    expect((await page.textContent('h2')).trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

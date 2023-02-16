@@ -12,7 +12,9 @@ test.describe('login page tests', () => {
   });
 
   test.beforeEach(async ({ page }) => {
-    await page.goto('/login');
+    await page.goto('/login', {
+      waitUntil: 'networkidle'
+    });
   });
 
   test.afterAll(async () => {
@@ -21,7 +23,7 @@ test.describe('login page tests', () => {
   });
 
   test('login page has expected h2', async ({ page }) => {
-    expect(await page.textContent('h2')).toBe('Sign In');
+    expect((await page.textContent('h2')).trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
   });
 
@@ -71,7 +73,7 @@ test.describe('login page tests', () => {
     await performLogin(page, LOGIN_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect(await page.textContent('h2')).toBe('Flows');
+    expect((await page.textContent('h2')).trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

@@ -27,7 +27,7 @@ test.describe('flows page tests', () => {
     await page.getByText('Log Out').click();
 
     await expect(page).toHaveURL('/');
-    expect(await page.textContent('h1')).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
 
     // check cookies
     expect((await page.context().cookies()).length).toBe(0);
@@ -55,7 +55,7 @@ test.describe('flows page tests', () => {
     await page.getByText('Delete Account').click();
 
     await expect(page).toHaveURL('/');
-    expect(await page.textContent('h1')).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
 
     // check cookies
     expect((await page.context().cookies()).length).toBe(0);

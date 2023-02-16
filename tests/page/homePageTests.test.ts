@@ -9,7 +9,7 @@ test.describe('homepage tests', () => {
   });
 
   test('homepage has expected h1', async ({ page }) => {
-    expect(await page.textContent('h1')).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
   });
 
   test('homepage has expected first image', async ({ page }) => {
