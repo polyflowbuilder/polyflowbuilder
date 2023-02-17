@@ -49,7 +49,7 @@ model Flowchart {
   programId5            String?
   startYear             String
   unitTotal             String
-  notes                 String
+  notes                 String                @db.VarChar(2000)
   termData              Json
   version               Int
   hash                  String
@@ -79,7 +79,7 @@ model TemplateFlowchart {
   flowUnitTotal         String
   termData              Json
   version               Int
-  notes                 String
+  notes                 String                @db.VarChar(2000)
 
   programIdRelation     Program               @relation(fields: [programId], references: [id], onDelete: Restrict)
 }
@@ -122,8 +122,8 @@ model Course {
   catalog               String
   displayName           String
   units                 String
-  desc                  String
-  addl                  String
+  desc                  String                @db.VarChar(1000)
+  addl                  String                @db.VarChar(1000)
   gwrCourse             Boolean
   uscpCourse            Boolean
 
