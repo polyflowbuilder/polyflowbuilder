@@ -18,7 +18,10 @@ const config = {
     csp: {
       mode: 'auto',
       directives: {
-        'script-src': ['self', 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js']
+        'script-src': [
+          'self',
+          'https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js'
+        ]
       }
     }
   }
