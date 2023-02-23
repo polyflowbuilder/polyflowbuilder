@@ -21,10 +21,41 @@ button.btn-accent:focus-visible {
   @apply bg-red-100 text-red-500;
 }
 
+/* keep badge styles consistent */
+.infoBadge {
+  @apply badge bg-blue-200 text-blue-600 border-none rounded-md pt-[2px];
+}
+.warningBadge {
+  @apply badge bg-amber-200 text-amber-600 border-none rounded-md pt-[2px];
+}
+
+/* keep button styles consistent */
+.redButton {
+  @apply bg-red-200 hover:bg-red-300 text-red-600 border-none btnOutline;
+}
+
+.greenButton {
+  @apply bg-green-200 hover:bg-green-300 text-green-500 border-none btnOutline;
+}
+
+/* see https://css-tricks.com/the-focus-visible-trick/ */
+.btnOutline:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
 .menu {
   @apply rounded-md;
 }
 
 .btn {
   @apply rounded-md;
+}
+
+/* new button size that matches application better */
+.btn-almostmd {
+  height: 2.5rem;
+  min-height: 2.5rem;
+  font-size: 0.75rem;
 }
