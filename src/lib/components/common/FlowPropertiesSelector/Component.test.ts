@@ -159,7 +159,9 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
     expect(screen.getByRole('button', { name: 'Add Program' })).toBeVisible();
     expect(screen.getByRole('button', { name: 'Add Program' })).toBeEnabled();
   });
+});
 
+describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('empty everything is invalid', () => {
     const { component } = render(Component, {
       props: {
@@ -358,7 +360,9 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
   });
+});
 
+describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   test('create valid payloads', async () => {
     userEvent.setup();
 
@@ -499,6 +503,107 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
     ).toBeVisible();
   });
 
+  test('remove program from valid payload is still valid', async () => {
+    userEvent.setup();
+
+    const { component } = render(Component, {
+      props: {
+        startYearsData: apiDataConfig.apiData.startYears,
+        catalogYearsData: apiDataConfig.apiData.catalogs,
+        programData: apiDataConfig.apiData.programData,
+        flowName: '',
+        flowStartYear: '',
+        programIdInputs: ['']
+      }
+    });
+
+    let programIds = [''];
+    let optionsValid = false;
+    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
+    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
+    component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
+
+    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
+    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
+    expect(programIds).toStrictEqual(['']);
+    expect(optionsValid).toBeFalsy();
+
+    await setFlowNameStartingYear();
+    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
+    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
+    expect(programIds).toStrictEqual(['']);
+    expect(optionsValid).toBeFalsy();
+
+    // populate three programs
+    const expectedProgramIds: string[] = [];
+
+    // populate first program
+    const program1 = await setProgram(0, expectedProgramIds);
+    expectedProgramIds.pop();
+    expectedProgramIds.push(program1.id);
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(1);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+
+    // create second program
+    await userEvent.click(
+      screen.getByRole('button', {
+        name: 'Add Program'
+      })
+    );
+    expectedProgramIds.push('');
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(2);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(2);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeFalsy();
+
+    // populate
+    const program2 = await setProgram(1, expectedProgramIds);
+    expectedProgramIds.pop();
+    expectedProgramIds.push(program2.id);
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(3);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+
+    // create third program
+    await userEvent.click(
+      screen.getByRole('button', {
+        name: 'Add Program'
+      })
+    );
+    expectedProgramIds.push('');
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(4);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(4);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeFalsy();
+
+    // populate
+    const program3 = await setProgram(2, expectedProgramIds);
+    expectedProgramIds.pop();
+    expectedProgramIds.push(program3.id);
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(5);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+
+    // remove a program
+    await userEvent.click(
+      screen.getAllByRole('button', {
+        name: 'REMOVE'
+      })[0] // 0th remove is on 1st addl program
+    );
+    expectedProgramIds.splice(1, 1);
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(6);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(5);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+  });
+});
+
+describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   test('update once-valid payload w/ 1 program to invalid, expect invalid', async () => {
     userEvent.setup();
 
@@ -616,112 +721,6 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
     expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(6);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
-  });
-
-  test('remove program from valid payload is still valid', async () => {
-    userEvent.setup();
-
-    const { component } = render(Component, {
-      props: {
-        startYearsData: apiDataConfig.apiData.startYears,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
-        flowName: '',
-        flowStartYear: '',
-        programIdInputs: ['']
-      }
-    });
-
-    let programIds = [''];
-    let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
-    component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
-
-    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
-    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
-    expect(programIds).toStrictEqual(['']);
-    expect(optionsValid).toBeFalsy();
-
-    await setFlowNameStartingYear();
-    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
-    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
-    expect(programIds).toStrictEqual(['']);
-    expect(optionsValid).toBeFalsy();
-
-    // populate three programs
-    const expectedProgramIds: string[] = [];
-
-    // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
-    expectedProgramIds.pop();
-    expectedProgramIds.push(program1.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(1);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeTruthy();
-
-    // create second program
-    await userEvent.click(
-      screen.getByRole('button', {
-        name: 'Add Program'
-      })
-    );
-    expectedProgramIds.push('');
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(2);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(2);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeFalsy();
-
-    // populate
-    const program2 = await setProgram(1, expectedProgramIds);
-    expectedProgramIds.pop();
-    expectedProgramIds.push(program2.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(3);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeTruthy();
-
-    // create third program
-    await userEvent.click(
-      screen.getByRole('button', {
-        name: 'Add Program'
-      })
-    );
-    expectedProgramIds.push('');
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(4);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(4);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeFalsy();
-
-    // populate
-    const program3 = await setProgram(2, expectedProgramIds);
-    expectedProgramIds.pop();
-    expectedProgramIds.push(program3.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(5);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeTruthy();
-
-    // remove a program
-    await userEvent.click(
-      screen.getAllByRole('button', {
-        name: 'REMOVE'
-      })[0] // 0th remove is on 1st addl program
-    );
-    expectedProgramIds.splice(1, 1);
-    // need the +2 bc when we remove a program that isn't the last one,
-    // all programs after it (higher idxs) tick and update, causing 2
-    // extra updates to programId output.
-    // if we remove the last program, behavior is as expected w/ # of calls
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(6 + 2);
-
-    // same thing for here as if all programs after it need to tick and update,
-    // valid status goes false and then true (so 2 extra updates)
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(5 + 2);
-    expect(programIds).toStrictEqual(expectedProgramIds);
-    expect(optionsValid).toBeTruthy();
   });
 
   test('cannot create a program with same major (same catalog)', async () => {

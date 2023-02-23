@@ -1,10 +1,6 @@
 <script lang="ts">
   import '../app.postcss';
-  import {
-    catalogYearsData,
-    flowchartProgramData,
-    startYearsData
-  } from '$lib/client/stores/apiDataStore';
+  import { catalogYearsData, programData, startYearsData } from '$lib/client/stores/apiDataStore';
   import { Footer, Header } from '$lib/components/common';
   import type { PageData } from './$types';
 
@@ -14,7 +10,7 @@
   $: if (data.programData) {
     startYearsData.init(data.programData.startYears);
     catalogYearsData.init(data.programData.catalogs);
-    flowchartProgramData.init(data.programData.programData);
+    programData.init(data.programData.programData);
   }
 </script>
 

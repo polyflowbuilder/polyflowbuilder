@@ -45,13 +45,23 @@
   async function deleteProgram(i: number) {
     programIdInputs = flowProgramIds.filter((_, idx) => idx !== i);
   }
+  // wrap this to prevent duplicate updates
+  async function updateProgram(i: number, updatedProgramId: string) {
+    if (flowProgramIds[i] !== updatedProgramId) {
+      flowProgramIds[i] = updatedProgramId;
+    }
+  }
 </script>
 
 <div>
   <div class="mb-2">
-    <div class="flex justify-between px-1 py-2 text-sm select-none">
+    <div class="label">
       <span class="text-base">Flow Name:</span>
-      <span class:text-red-600={!flowNameValid} class:text-green-700={flowNameValid}>
+      <span
+        class="text-sm"
+        class:text-red-600={!flowNameValid}
+        class:text-green-700={flowNameValid}
+      >
         ({flowName.length}/{FLOW_NAME_MAX_LENGTH})
       </span>
     </div>
@@ -70,7 +80,7 @@
   </div>
 
   <div class="mb-2">
-    <div class="flex justify-between px-1 py-2 select-none">
+    <div class="label">
       <span>Starting Year:</span>
     </div>
     <label>
@@ -92,17 +102,17 @@
   </div>
 
   <div class="mb-2">
-    <p class="px-1 pt-2 pb-0 select-none">Programs:</p>
+    <p class="label pb-0">Programs:</p>
     <div class="divider mt-0 mb-2" />
 
-    {#each programIdInputs as flowProgramIdInput, i}
+    {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
       <UIWrapper
         {catalogYearsData}
         {programData}
         programIdInput={flowProgramIdInput}
         alreadySelectedProgramIds={flowProgramIds.filter((id, j) => id && j !== i)}
         {i}
-        on:programIdUpdate={(e) => (flowProgramIds[i] = e.detail)}
+        on:programIdUpdate={(e) => updateProgram(i, e.detail)}
         on:deleteProgram={(e) => deleteProgram(e.detail)}
       />
     {/each}

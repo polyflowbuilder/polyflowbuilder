@@ -1,10 +1,14 @@
 import { writable } from 'svelte/store';
 
-export function writeOnceStore<T>() {
-  const { subscribe, update } = writable<T | null>(null);
+export function writeOnceStore<T>(initVal: T) {
+  const { subscribe, update } = writable<T>(initVal);
 
   return {
     subscribe,
-    init: (data: T) => update((oldData) => (oldData ? oldData : data))
+    init: (data: T) => {
+      if (data) {
+        update((oldData) => (oldData === initVal ? data : oldData));
+      }
+    }
   };
 }

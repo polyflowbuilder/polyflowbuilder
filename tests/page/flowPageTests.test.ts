@@ -1,8 +1,10 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, performLogin } from '../util/userTestUtil.js';
+import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
+import { testNewFlowModal } from './flows/modalTests.test.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+
 import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_TESTS_EMAIL = 'pfb_test_flowsPage_playwright@test.com';
@@ -22,6 +24,10 @@ test.describe('flows page tests', () => {
     await performLogin(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
   });
 
+  test.afterAll(async () => {
+    await deleteUserAccount(FLOWS_PAGE_TESTS_EMAIL);
+  });
+
   test('logout functionality performs redirect', async () => {
     await page.locator('.avatar').click();
     await page.getByText('Log Out').click();
@@ -34,13 +40,17 @@ test.describe('flows page tests', () => {
 
     // check header
     await expect(page.getByText('Sign In')).toBeVisible();
+
+    // do login again to reset state
+    await performLogin(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
+  });
+
+  test('NewFlowModal tests', async () => {
+    await testNewFlowModal(page);
   });
 
   // make sure this test is AT THE VERY END! since account will be deleted
   test('delete account functionality works as expected', async () => {
-    // first login
-    await performLogin(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
-
     // clicking the cancel button does not redirect or delete
     await page.locator('.avatar').click();
     await page.getByText('Delete Account').click();

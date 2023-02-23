@@ -23,7 +23,9 @@ export async function createUserAccount(email: string, username: string, passwor
 
 export async function deleteUserAccount(email: string) {
   console.log('deleting account', email);
-  await prisma.user.delete({
+  // deleteMany so that we dont get an error if we delete an account
+  // that doesn't exist - for idempotent operation
+  await prisma.user.deleteMany({
     where: {
       email
     }
