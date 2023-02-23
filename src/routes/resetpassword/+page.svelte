@@ -47,6 +47,11 @@
             loading = false;
             resetText = 'Reset Password';
             await update();
+            // on success, dont disable loader so continuity is not broken on enhanced page
+            if ($page.status !== 200) {
+              loading = false;
+              resetText = 'Reset Password';
+            }
             // reset pw field on failed POST bc form is only reset on success response
             if ($page.status === 400 || $page.status === 401) {
               password = '';

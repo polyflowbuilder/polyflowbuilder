@@ -47,6 +47,11 @@
             loading = false;
             registerText = 'Create Account!';
             await update();
+            // on success, dont disable loader so continuity is not broken on enhanced page
+            if ($page.status !== 201) {
+              loading = false;
+              registerText = 'Create Account!';
+            }
             // reset pw fields on failed POST bc form is only reset on success response
             if ($page.status === 400) {
               password = '';
