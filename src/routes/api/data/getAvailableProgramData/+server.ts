@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
-import { apiData } from '$lib/config/apiDataConfig.server';
-import { initLogger } from '$lib/config/loggerConfig';
+import { apiData } from '$lib/server/config/apiDataConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/getAvailableProgramData)');

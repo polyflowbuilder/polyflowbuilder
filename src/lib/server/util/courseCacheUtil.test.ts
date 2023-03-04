@@ -1,4 +1,4 @@
-import * as apiDataConfig from '$lib/config/apiDataConfig.server';
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import {
   generateCourseCacheFlowchart,
   generateUserCourseCache

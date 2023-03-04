@@ -1,7 +1,7 @@
 // CRUD operations regarding user data
 import argon2 from 'argon2';
 import { prisma } from '$lib/server/db/prisma';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import type { Prisma, User } from '@prisma/client';
 
 const logger = initLogger('DB/User');

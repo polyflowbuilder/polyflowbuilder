@@ -1,5 +1,5 @@
 import { prisma } from '$lib/server/db/prisma';
-import { initLogger } from './loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import type { APIData } from '$lib/types';
 
 const logger = initLogger('Config/APIDataConfig');

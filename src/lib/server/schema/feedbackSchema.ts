@@ -1,4 +1,4 @@
-import { FEEDBACK_MESSAGE_MAX_LENGTH } from '$lib/config/common/feedbackConfig';
+import { FEEDBACK_MESSAGE_MAX_LENGTH } from '$lib/common/config/feedbackConfig';
 import { z } from 'zod';
 
 // validation schema for feedback

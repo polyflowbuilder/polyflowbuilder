@@ -1,5 +1,5 @@
-import { COLORS } from '$lib/config/common/colorConfig';
-import { apiData } from '$lib/config/apiDataConfig.server';
+import { COLORS } from '$lib/common/config/colorConfig';
+import { apiData } from '$lib/server/config/apiDataConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
 import { computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
@@ -7,7 +7,7 @@ import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/fl
 import {
   CURRENT_FLOW_DATA_VERSION,
   FLOW_DEFAULT_TERM_DATA
-} from '$lib/config/common/flowDataConfig';
+} from '$lib/common/config/flowDataConfig';
 import type { DBFlowchart } from '@prisma/client';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';

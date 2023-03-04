@@ -1,5 +1,5 @@
 import { fail } from '@sveltejs/kit';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';

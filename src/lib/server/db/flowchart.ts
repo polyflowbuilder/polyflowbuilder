@@ -1,5 +1,5 @@
 import { prisma } from '$lib/server/db/prisma';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { convertDBFlowchartToFlowchart } from '$lib/server/util/flowDataUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 

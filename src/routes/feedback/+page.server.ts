@@ -1,9 +1,9 @@
 import { fail } from '@sveltejs/kit';
-import { feedbackValidationSchema } from '$lib/server/schema/feedbackSchema';
-import { createFeedbackEmailPayload } from '$lib/config/emailConfig.server';
-import { createFeedbackReport } from '$lib/server/db/feedback';
 import { sendEmail } from '$lib/server/util/emailUtil';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
+import { createFeedbackReport } from '$lib/server/db/feedback';
+import { feedbackValidationSchema } from '$lib/server/schema/feedbackSchema';
+import { createFeedbackEmailPayload } from '$lib/server/config/emailConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { FeedbackData } from '$lib/server/schema/feedbackSchema';
 

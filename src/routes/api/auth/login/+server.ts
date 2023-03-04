@@ -1,7 +1,7 @@
 import argon2 from 'argon2';
 import { json } from '@sveltejs/kit';
-import { initLogger } from '$lib/config/loggerConfig';
-import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
+import { initLogger } from '$lib/common/config/loggerConfig';
+import { SESSION_MAX_AGE } from '$lib/server/config/envConfig';
 import { loginValidationSchema } from '$lib/server/schema/loginSchema';
 import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
 import { getUserByEmail, updateUser, deleteUser } from '$lib/server/db/user';

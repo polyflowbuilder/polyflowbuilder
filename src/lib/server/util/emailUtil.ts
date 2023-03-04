@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import { env } from '$env/dynamic/private';
-import { transportOptions } from '$lib/config/nodeMailerConfig.server';
-import { initLogger } from '$lib/config/loggerConfig';
+import { transportOptions } from '$lib/server/config/nodeMailerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 import type { Options } from 'nodemailer/lib/smtp-transport';
 

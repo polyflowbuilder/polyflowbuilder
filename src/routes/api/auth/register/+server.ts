@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import { createUser } from '$lib/server/db/user';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { registerValidationSchema } from '$lib/server/schema/registerSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 import type { UserRegistrationData } from '$lib/server/schema/registerSchema';

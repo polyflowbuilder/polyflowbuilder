@@ -1,5 +1,5 @@
 import NewFlowModal from './NewFlowModal.svelte';
-import * as apiDataConfig from '$lib/config/apiDataConfig.server';
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/svelte';
 

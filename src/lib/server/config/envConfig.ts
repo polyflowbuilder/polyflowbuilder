@@ -1,8 +1,8 @@
-import * as nodeMailerConfig from '$lib/config/nodeMailerConfig.server';
-import * as apiDataConfig from '$lib/config/apiDataConfig.server';
+import * as nodeMailerConfig from '$lib/server/config/nodeMailerConfig';
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { env } from '$env/dynamic/private';
 import { execSync } from 'child_process';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 
 const logger = initLogger('Config/EnvConfig');
 

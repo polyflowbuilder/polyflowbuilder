@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { validateToken } from '$lib/server/db/token';
 import { resetPassword } from '$lib/server/util/pwResetUtil';
 import { resetPasswordSchema } from '$lib/server/schema/resetPasswordSchema';

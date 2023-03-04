@@ -6,7 +6,7 @@ import {
   CUSTOM_COURSE_CARD_TITLE_MAX_LENGTH,
   CUSTOM_COURSE_CARD_DISPLAY_NAME_MAX_LENGTH,
   CUSTOM_COURSE_CARD_DESC_MAX_LENGTH
-} from '$lib/config/common/flowDataConfig';
+} from '$lib/common/config/flowDataConfig';
 import { validate } from 'uuid';
 import { z } from 'zod';
 

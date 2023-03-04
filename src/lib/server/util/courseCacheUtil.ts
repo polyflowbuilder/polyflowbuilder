@@ -1,4 +1,4 @@
-import { apiData } from '$lib/config/apiDataConfig.server';
+import { apiData } from '$lib/server/config/apiDataConfig';
 import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { APICourse } from '@prisma/client';

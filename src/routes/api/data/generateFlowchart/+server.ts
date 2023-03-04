@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { generateFlowchart } from '$lib/server/util/flowDataUtil';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
 import { generateCourseCacheFlowchart } from '$lib/server/util/courseCacheUtil';

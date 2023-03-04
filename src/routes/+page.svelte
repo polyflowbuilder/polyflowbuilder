@@ -1,6 +1,6 @@
 <script>
   import { HomeCarousel } from '$lib/components/Home';
-  import { homeCarouselImageData } from '$lib/config/homeCarouselConfig';
+  import { homeCarouselImageData } from '$lib/common/config/homeCarouselConfig';
   import { PUBLIC_PFB_DISCORD_LINK } from '$env/static/public';
 </script>
 

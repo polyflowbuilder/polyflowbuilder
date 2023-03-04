@@ -1,5 +1,5 @@
-import { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
-import { DBFlowchart } from '@prisma/client';
+import type { DBFlowchart } from '@prisma/client';
+import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 // TODO: figure out how we can import from flowDataUtil in SK without
 // playwright complaining about (doesn't know how to resolve $lib)

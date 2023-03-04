@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { apiData } from '$lib/config/apiDataConfig.server';
-import { FLOW_NAME_MAX_LENGTH } from '$lib/config/common/flowDataConfig';
+import { apiData } from '$lib/server/config/apiDataConfig';
+import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 
 // validation schema for generate flowchart payload
 export const generateFlowchartSchema = z.object({

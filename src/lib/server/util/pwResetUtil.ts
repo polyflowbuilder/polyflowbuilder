@@ -1,8 +1,8 @@
 import argon2 from 'argon2';
 import { sendEmail } from './emailUtil';
 import { updateUser } from '$lib/server/db/user';
-import { initLogger } from '$lib/config/loggerConfig';
-import { createPasswordResetEmailPayload } from '$lib/config/emailConfig.server';
+import { initLogger } from '$lib/common/config/loggerConfig';
+import { createPasswordResetEmailPayload } from '$lib/server/config/emailConfig';
 import { clearTokensByEmail, upsertToken } from '$lib/server/db/token';
 
 const logger = initLogger('Util/PWResetUtil');

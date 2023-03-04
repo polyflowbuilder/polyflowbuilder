@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { homeCarouselImageData } from '$lib/config/homeCarouselConfig';
+import { homeCarouselImageData } from '$lib/common/config/homeCarouselConfig';
 import type { Page } from '@playwright/test';
 
 // run tests to verify a certain carousel slide is visible to the user

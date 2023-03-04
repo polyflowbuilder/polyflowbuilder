@@ -1,5 +1,5 @@
 import { env } from '$env/dynamic/private';
-import { initLogger } from '$lib/config/loggerConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import type { AuthenticationType } from 'nodemailer/lib/smtp-connection';
 import type { Options } from 'nodemailer/lib/smtp-transport';
 

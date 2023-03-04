@@ -1,5 +1,5 @@
-import { loadEnv } from '$lib/config/envConfig.server';
-import { initLogger } from '$lib/config/loggerConfig';
+import { loadEnv } from '$lib/server/config/envConfig';
+import { initLogger } from '$lib/common/config/loggerConfig';
 import { getValidTokenUser } from '$lib/server/db/token';
 import type { Handle, RequestEvent, HandleServerError } from '@sveltejs/kit';
 
