@@ -1,11 +1,11 @@
 import { fail } from '@sveltejs/kit';
-import { feedbackValidationSchema } from '$lib/schema/feedbackSchema';
+import { feedbackValidationSchema } from '$lib/server/schema/feedbackSchema';
 import { createFeedbackEmailPayload } from '$lib/config/emailConfig.server';
 import { createFeedbackReport } from '$lib/server/db/feedback';
 import { sendEmail } from '$lib/server/util/emailUtil';
 import { initLogger } from '$lib/config/loggerConfig';
 import type { Actions } from '@sveltejs/kit';
-import type { FeedbackData } from '$lib/schema/feedbackSchema';
+import type { FeedbackData } from '$lib/server/schema/feedbackSchema';
 
 const logger = initLogger('ServerRouteHandler (/feedback)');
 

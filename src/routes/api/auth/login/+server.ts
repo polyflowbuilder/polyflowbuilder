@@ -2,10 +2,10 @@ import argon2 from 'argon2';
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
 import { SESSION_MAX_AGE } from '$lib/config/envConfig.server';
-import { loginValidationSchema } from '$lib/schema/loginSchema';
+import { loginValidationSchema } from '$lib/server/schema/loginSchema';
 import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
 import { getUserByEmail, updateUser, deleteUser } from '$lib/server/db/user';
-import type { UserLoginData } from '$lib/schema/loginSchema';
+import type { UserLoginData } from '$lib/server/schema/loginSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/auth/login)');

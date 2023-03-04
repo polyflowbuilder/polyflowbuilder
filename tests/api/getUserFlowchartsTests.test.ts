@@ -1,5 +1,6 @@
 // NOTE: need .js extension for PlayWright
 import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.js';
+import { convertDBFlowchartToFlowchart } from '../util/flowDataTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
@@ -62,7 +63,7 @@ test.describe('getUserFlowcharts API tests', () => {
       }
     });
 
-    await prisma.flowchart.createMany({
+    await prisma.dBFlowchart.createMany({
       data: [
         {
           hash: '1',
@@ -71,7 +72,7 @@ test.describe('getUserFlowcharts API tests', () => {
           ownerId: id,
           programId1: '0017f92d-d73f-4819-9d59-8c658cd29be5',
           startYear: '2020',
-          termData: {},
+          termData: [],
           unitTotal: '0',
           version: 6
         },
@@ -82,7 +83,7 @@ test.describe('getUserFlowcharts API tests', () => {
           ownerId: id,
           programId1: '002e8710-245f-46a4-8689-2ab2f5a47170',
           startYear: '2022',
-          termData: {},
+          termData: [],
           unitTotal: '1',
           version: 6
         }
@@ -100,24 +101,20 @@ test.describe('getUserFlowcharts API tests', () => {
     // test with empty flowcharts
     const res = await request.get('http://localhost:4173/api/user/data/getUserFlowcharts');
 
-    const expectedFlowcharts = await prisma.flowchart
+    const expectedFlowcharts = await prisma.dBFlowchart
       .findMany({
         where: {
           ownerId: id
         }
       })
-      // need to serialize date object bc thats what we receive from API
-      .then((fArr) =>
-        fArr.map((f) => {
-          return {
-            ...f,
-            lastUpdatedUTC: f.lastUpdatedUTC.toISOString()
-          };
-        })
-      );
+      .then((fArr) => fArr.map((f) => convertDBFlowchartToFlowchart(f)));
     const expectedResponseBody = {
       message: 'User flowchart retrieval successful.',
-      flowcharts: expectedFlowcharts
+      // need to serialize date object bc thats what we receive from API
+      flowcharts: expectedFlowcharts.map((flow) => ({
+        ...flow,
+        lastUpdatedUTC: flow.lastUpdatedUTC.toISOString()
+      }))
     };
 
     expect(res.status()).toBe(200);

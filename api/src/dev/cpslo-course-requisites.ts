@@ -7,13 +7,13 @@ import fs from 'fs';
 
 import { apiRoot } from './common.js';
 
-import type { Course, CourseRequisite } from '@prisma/client';
+import type { APICourse, CourseRequisite } from '@prisma/client';
 
 // - concurrent classes
 function generateCourseRequisiteData(catalogYearString: string) {
   console.log(`generating course prereq/coreq/recommended data for ${catalogYearString}...`);
   // read data
-  const courseData: Course[] = JSON.parse(
+  const courseData: APICourse[] = JSON.parse(
     fs.readFileSync(
       `${apiRoot}/data/courses/${catalogYearString}/${catalogYearString}.json`,
       'utf8'
@@ -23,9 +23,9 @@ function generateCourseRequisiteData(catalogYearString: string) {
 
   // for static course data overrides
   const OVERWRITE_EXISTING_OVERRIDE_COURSE_LIST = false;
-  const overrideCoursesList: Course[] = [];
+  const overrideCoursesList: APICourse[] = [];
 
-  courseData.forEach((course: Course) => {
+  courseData.forEach((course: APICourse) => {
     // generate strings
     let prereqString = '';
     let coreqString = '';

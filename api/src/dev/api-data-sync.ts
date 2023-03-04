@@ -8,7 +8,7 @@ import type {
   TermTypicallyOffered,
   CourseRequisite,
   GECourse,
-  Course,
+  APICourse,
   Program
 } from '@prisma/client';
 
@@ -76,7 +76,7 @@ async function syncCourseData() {
 
   for (let i = 0; i < catalogYears.length; i += 1) {
     const curCatalogYear = catalogYears[i];
-    const courseData: Course[] = JSON.parse(
+    const courseData: APICourse[] = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}.json`, 'utf8')
     );
     const geCourseData: GECourse[] = JSON.parse(
@@ -90,7 +90,7 @@ async function syncCourseData() {
     );
 
     console.log('syncing course data for catalog', curCatalogYear);
-    await prisma.course.createMany({
+    await prisma.aPICourse.createMany({
       data: courseData,
       skipDuplicates: true
     });
@@ -100,7 +100,7 @@ async function syncCourseData() {
       fs.existsSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-override.json`)
     ) {
       console.log('applying course override data for catalog', curCatalogYear);
-      const courseOverrideData: Course[] = JSON.parse(
+      const courseOverrideData: APICourse[] = JSON.parse(
         fs.readFileSync(
           `${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-override.json`,
           'utf8'
@@ -109,7 +109,7 @@ async function syncCourseData() {
 
       for await (const course of courseOverrideData) {
         console.log('update course', course.id);
-        await prisma.course.update({
+        await prisma.aPICourse.update({
           data: {
             desc: course.desc,
             addl: course.addl

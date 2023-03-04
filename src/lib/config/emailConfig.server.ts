@@ -1,5 +1,5 @@
 import { env } from '$env/dynamic/private';
-import type { FeedbackData } from '$lib/schema/feedbackSchema';
+import type { FeedbackData } from '$lib/server/schema/feedbackSchema';
 import type { Options } from 'nodemailer/lib/smtp-transport';
 
 export function createFeedbackEmailPayload(feedbackData: FeedbackData): Options {

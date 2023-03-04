@@ -1,4 +1,9 @@
-import type { Course, CourseRequisite, GECourse, Program } from '@prisma/client';
+import type { APICourse, CourseRequisite, GECourse, Program } from '@prisma/client';
+
+export type CourseCache = {
+  catalog: string;
+  courses: APICourse[];
+};
 
 export type APIData = {
   // available flowchart data
@@ -7,7 +12,7 @@ export type APIData = {
   programData: Program[];
 
   // course-related data
-  courseData: Course[];
+  courseData: CourseCache[];
   geCourseData: GECourse[];
   reqCourseData: CourseRequisite[];
 };

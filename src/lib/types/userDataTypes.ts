@@ -1,6 +1,6 @@
 import type { ValidationDataFull } from './flowchartValidationTypes';
 
-export type UserCourse = {
+type UserCourse = {
   cID: string | null;
   cardColor: string;
 
@@ -11,17 +11,17 @@ export type UserCourse = {
   cProgramIDIndex?: number; // for multiple program support
 };
 
-export type UserTerm = {
+type UserTerm = {
   tIndex: number;
   tUnits: string; // b/c we can have ranged units
   classes: UserCourse[];
 };
 
-export type UserValidationData = ValidationDataFull & {
+type UserValidationData = ValidationDataFull & {
   timestamp: string;
 };
 
-export type Flowchart = {
+type Flowchart = {
   flowName: string;
   flowId: string[]; // array of program IDs
   flowStartYear: string;
@@ -35,13 +35,13 @@ export type Flowchart = {
   importedID: string | null;
 };
 
-export type UserData = {
+type UserData = {
   flows: Flowchart[];
   notifs: string[];
 };
 
 // user data object representation on frontend
-export type User = {
+type User = {
   username: string;
   email: string;
   data: UserData;

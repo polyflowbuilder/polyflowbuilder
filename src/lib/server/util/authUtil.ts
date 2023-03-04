@@ -1,6 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestEvent } from '@sveltejs/kit';
 
+// tested in e2e tests
+
 export function redirectIfAnonymous(event: RequestEvent) {
   if (!event.locals.session) {
     // create cookie so we can show unauthorized message

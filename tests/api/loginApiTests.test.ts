@@ -1,8 +1,9 @@
 // NOTE: need .js extension for PlayWright
 import { createUserAccount } from '../util/userTestUtil.js';
 
-import { APIRequestContext, expect, request, test } from '@playwright/test';
+import { expect, request, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import type { APIRequestContext } from '@playwright/test';
 
 const LOGIN_API_TESTS_EMAIL = 'pfb_test_loginAPI_playwright@test.com';
 

@@ -1,13 +1,10 @@
 <script lang="ts">
   import UIWrapper from './UIWrapper.svelte';
   import { createEventDispatcher } from 'svelte';
+  import { FLOW_NAME_MAX_LENGTH, FLOW_PROGRAMS_MAX_COUNT } from '$lib/config/common/flowDataConfig';
   import type { Program } from '@prisma/client';
 
   const dispatch = createEventDispatcher();
-
-  // TODO: add in config!
-  const FLOW_NAME_MAX_LENGTH = 80;
-  const FLOW_PROGRAMS_MAX_COUNT = 5;
 
   // component required data
   export let startYearsData: string[];

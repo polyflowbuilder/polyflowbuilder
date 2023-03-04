@@ -4,7 +4,7 @@ import { parse as csvParse } from 'csv-parse/sync';
 
 import { apiRoot } from './common.js';
 
-import type { Course, TermTypicallyOffered } from '@prisma/client';
+import type { APICourse, TermTypicallyOffered } from '@prisma/client';
 
 // helper functions
 async function download(url: string, dest: string) {
@@ -48,12 +48,12 @@ async function getTermTypicallyOfferedData() {
 
   // need to get all course data bc we need to match that to catalog since some courses
   // dont exist on some catalogs
-  const allCourseData: Course[] = [];
+  const allCourseData: APICourse[] = [];
   const eligibleCatalogYears: string[] = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
   );
   for (const c of eligibleCatalogYears) {
-    const courseDataSpecificCatalog: Course[] = JSON.parse(
+    const courseDataSpecificCatalog: APICourse[] = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${c}/${c}.json`, 'utf8')
     );
     allCourseData.push(...courseDataSpecificCatalog);

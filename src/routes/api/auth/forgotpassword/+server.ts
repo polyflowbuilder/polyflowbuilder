@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
 import { startPWResetRoutine } from '$lib/server/util/pwResetUtil';
-import { forgotPasswordSchema } from '$lib/schema/forgotPasswordSchema';
+import { forgotPasswordSchema } from '$lib/server/schema/forgotPasswordSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/auth/forgotpassword');

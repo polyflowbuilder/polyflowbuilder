@@ -16,7 +16,7 @@ model User {
   lastLoginTimeUTC      DateTime?             @db.DateTime(0)
 
   tokens                Token[]
-  flowcharts            Flowchart[]
+  flowcharts            DBFlowchart[]
 }
 
 model FeedbackReport {
@@ -38,7 +38,7 @@ model Token {
   @@id([email, type])
 }
 
-model Flowchart {
+model DBFlowchart {
   id                    String                @id @default(uuid())
   ownerId               String
   name                  String
@@ -55,7 +55,7 @@ model Flowchart {
   hash                  String
   validationData        Json?
   publishedId           String?
-  importtedId           String?
+  importedId           String?
   lastUpdatedUTC        DateTime?             @updatedAt @db.DateTime(0)
 
   user                  User                  @relation(fields: [ownerId], references: [id], onDelete: Cascade)
@@ -65,6 +65,8 @@ model Flowchart {
   programId3Relation    Program?              @relation(name: "programID3Relation", fields: [programId3], references: [id], onDelete: Restrict)
   programId4Relation    Program?              @relation(name: "programID4Relation", fields: [programId4], references: [id], onDelete: Restrict)
   programId5Relation    Program?              @relation(name: "programID5Relation", fields: [programId5], references: [id], onDelete: Restrict)
+
+  @@map("Flowchart")
 }
 
 model Notification {
@@ -90,14 +92,14 @@ model TemplateFlowchart {
 model StartYear {
   year                  String                @id
 
-  flowcharts            Flowchart[]
+  flowcharts            DBFlowchart[]
 }
 
 model Catalog {
   catalog               String                @id
 
   programs              Program[]
-  courses               Course[]
+  courses               APICourse[]
 }
 
 model Program {
@@ -110,14 +112,14 @@ model Program {
 
   catalogRelation       Catalog               @relation(fields: [catalog], references: [catalog], onDelete: Restrict)
   templateFlowchart     TemplateFlowchart?
-  programID1Flowcharts  Flowchart[]           @relation(name: "programID1Relation")
-  programID2Flowcharts  Flowchart[]           @relation(name: "programID2Relation")
-  programID3Flowcharts  Flowchart[]           @relation(name: "programID3Relation")
-  programID4Flowcharts  Flowchart[]           @relation(name: "programID4Relation")
-  programID5Flowcharts  Flowchart[]           @relation(name: "programID5Relation")
+  programID1Flowcharts  DBFlowchart[]         @relation(name: "programID1Relation")
+  programID2Flowcharts  DBFlowchart[]         @relation(name: "programID2Relation")
+  programID3Flowcharts  DBFlowchart[]         @relation(name: "programID3Relation")
+  programID4Flowcharts  DBFlowchart[]         @relation(name: "programID4Relation")
+  programID5Flowcharts  DBFlowchart[]         @relation(name: "programID5Relation")
 }
 
-model Course {
+model APICourse {
   id                    String
   catalog               String
   displayName           String
@@ -133,6 +135,7 @@ model Course {
   termTypOffRelation    TermTypicallyOffered?
 
   @@id([id, catalog])
+  @@map("Course")
 }
 
 model GECourse {
@@ -140,7 +143,7 @@ model GECourse {
   catalog               String
   category              GECategoryEnum
 
-  courseRelation        Course              @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  courseRelation        APICourse             @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
 
   @@id([category, id, catalog])
 }
@@ -153,7 +156,7 @@ model CourseRequisite {
   recommended           Json
   concurrent            Json
 
-  course                Course                @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  course                APICourse             @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
 
   @@id([id, catalog])
 }
@@ -167,7 +170,7 @@ model TermTypicallyOffered {
   termWinter            Boolean
   termSpring            Boolean
 
-  course                Course                @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
+  course                APICourse             @relation(fields: [id, catalog], references: [id, catalog], onDelete: Restrict)
 
   @@id([id, catalog])
 }

@@ -1,4 +1,4 @@
-import { PrismaClient, TokenType } from '@prisma/client';
+import type { PrismaClient, TokenType } from '@prisma/client';
 
 export async function createToken(
   prisma: PrismaClient,

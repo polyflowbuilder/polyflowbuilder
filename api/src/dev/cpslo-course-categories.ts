@@ -3,12 +3,12 @@ import fs from 'fs';
 import { apiRoot } from './common.js';
 
 // API data types
-import type { Course, GECourse } from '@prisma/client';
+import type { APICourse, GECourse } from '@prisma/client';
 
 function sniffGWRCourses(inFile: string, outFile: string) {
   console.log(`starting sniffGWRcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: Course[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
   const gwrCourses: string[] = [];
 
   for (let i = 0; i < courseData.length; i += 1) {
@@ -28,7 +28,7 @@ function sniffGWRCourses(inFile: string, outFile: string) {
 function sniffUSCPCourses(inFile: string, outFile: string) {
   console.log(`starting sniffUSCPcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: Course[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
   const uscpCourses: string[] = [];
 
   for (let i = 0; i < courseData.length; i += 1) {
@@ -48,7 +48,7 @@ function sniffUSCPCourses(inFile: string, outFile: string) {
 function sniffGECourses(inFile: string, outFile: string) {
   console.log(`starting sniffGEcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: Course[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
   const geCourses: GECourse[] = [];
 
   for (let i = 0; i < courseData.length; i += 1) {

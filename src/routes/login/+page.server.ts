@@ -2,7 +2,7 @@ import { initLogger } from '$lib/config/loggerConfig';
 import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
-import type { UserLoginData } from '$lib/schema/loginSchema';
+import type { UserLoginData } from '$lib/server/schema/loginSchema';
 import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/login)');

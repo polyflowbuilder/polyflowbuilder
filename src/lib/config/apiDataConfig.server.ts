@@ -22,14 +22,20 @@ export async function init(): Promise<void> {
   const dbCatalogs = await prisma.catalog.findMany();
   const dbStartYears = await prisma.startYear.findMany();
   const dbProgramData = await prisma.program.findMany();
-  const dbCourseData = await prisma.course.findMany();
+  const dbCourseData = await prisma.aPICourse.findMany();
   const dbGECourseData = await prisma.gECourse.findMany();
   const dbReqCourseData = await prisma.courseRequisite.findMany();
 
+  // initialize program metadata
   apiData.catalogs = dbCatalogs.map((v) => v.catalog);
   apiData.startYears = dbStartYears.map((v) => v.year);
   apiData.programData = dbProgramData;
-  apiData.courseData = dbCourseData;
+
+  // initialize course data
+  apiData.courseData = dbCatalogs.map(({ catalog }) => ({
+    catalog,
+    courses: dbCourseData.filter((crs) => crs.catalog === catalog)
+  }));
   apiData.geCourseData = dbGECourseData;
   apiData.reqCourseData = dbReqCourseData;
 

@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/config/loggerConfig';
 import { validateToken } from '$lib/server/db/token';
 import { resetPassword } from '$lib/server/util/pwResetUtil';
-import { resetPasswordSchema } from '$lib/schema/resetPasswordSchema';
+import { resetPasswordSchema } from '$lib/server/schema/resetPasswordSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/auth/resetpassword)');

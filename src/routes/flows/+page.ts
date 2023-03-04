@@ -1,5 +1,5 @@
-import type { Flowchart } from '@prisma/client';
 import type { PageLoad } from './$types';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 export const load: PageLoad = async ({ fetch }) => {
   // get flowcharts

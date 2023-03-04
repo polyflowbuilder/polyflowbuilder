@@ -7,6 +7,8 @@ import { clearTokensByEmail, upsertToken } from '$lib/server/db/token';
 
 const logger = initLogger('Util/PWResetUtil');
 
+// tested in e2e tests
+
 export async function startPWResetRoutine(email: string): Promise<void> {
   logger.info('start password reset routine for', email);
 

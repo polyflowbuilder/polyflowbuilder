@@ -9,7 +9,7 @@ import fs from 'fs';
 import { apiRoot, fetchRetry } from './common.js';
 
 // API data types
-import type { Course } from '@prisma/client';
+import type { APICourse } from '@prisma/client';
 
 // see https://previouscatalogs.calpoly.edu/
 const catalogRoots = [
@@ -60,7 +60,7 @@ async function getAllCoursesCatalog(
   console.log('starting getAllCourses ...');
   console.log('start scrape ...');
 
-  const allCourseData: Course[] = [];
+  const allCourseData: APICourse[] = [];
 
   for (const link of programLinks) {
     console.log(`scraping ${link} ...`);
@@ -84,7 +84,7 @@ async function getAllCoursesCatalog(
         return;
       }
 
-      const courseData: Course = {
+      const courseData: APICourse = {
         id: '',
         catalog,
         displayName: '',

@@ -1,9 +1,9 @@
 import { json } from '@sveltejs/kit';
 import { createUser } from '$lib/server/db/user';
 import { initLogger } from '$lib/config/loggerConfig';
-import { registerValidationSchema } from '$lib/schema/registerSchema';
+import { registerValidationSchema } from '$lib/server/schema/registerSchema';
 import type { RequestHandler } from '@sveltejs/kit';
-import type { UserRegistrationData } from '$lib/schema/registerSchema';
+import type { UserRegistrationData } from '$lib/server/schema/registerSchema';
 
 const logger = initLogger('APIRouteHandler (/api/auth/register');
 
