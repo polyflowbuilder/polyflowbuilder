@@ -69,11 +69,13 @@ model DBFlowchart {
   @@map("Flowchart")
 }
 
-model Notification {
+model DBNotification {
   id                    String                @id @default(uuid())
   title                 String
   content               Json
   createdUTC            DateTime              @default(now()) @db.DateTime(0)
+
+  @@map("Notification")
 }
 
 model TemplateFlowchart {

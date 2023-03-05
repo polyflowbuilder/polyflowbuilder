@@ -16,3 +16,7 @@ export type APIData = {
   geCourseData: GECourse[];
   reqCourseData: CourseRequisite[];
 };
+
+export type APINotificationContent = {
+  content: string;
+};

@@ -8,37 +8,8 @@ const logger = initLogger('Config/EnvConfig');
 
 export let FULL_VERSION_STRING = 'unknown';
 
-export const dataModelVersion = 6;
-// TODO: use zod to validate flowchart objects?
-/* v6 (associated w/ 2.0 update):
- *   1. UserQuarter:
- *        a. qUnits & qUnitsMax --> tUnits as string
- *        b. qIndex --> tIndex (still int, -1 for creditbin)
- *        c. tIndex of -1 is now REQUIRED! as this is creditBin data
- *   2. UserCourse:
- *        a. classId --> cID (to address discrepancy btwn. user and API course data)
- *        b. cCustomCardTitle --> cCustomID (more appropriate name for property)
- *        c. cCustomCardDisplayName --> cCustomDisplayName (more appropriate name for property)
- *        d. if cID is null, cCustomID MUST NOT BE NULL! Add in a placeholder if it is
- *        e. cardColor MUST be in HEX format (#XXXXXX) (all caps)
- *        f. add cProgramIDIndex property to assign each course to a particular program (indexes into flowId[] to get the program).
- *           if undefined/missing for a course this means its associated with the FIRST program in the flowchart
- *   3. Flowchart:
- *        a. flowCatalogYear, flowMajor, flowConcentration --> flowId (matches program metadata, can deconstruct in derived store)
- *        b. cbData --> append to quarter data, but with a tIndex of -1
- *        c. flowHash is now a required property, and is an MD5 hash based on the following flowchart props:
- *           1. flowName
- *           2. flowId
- *           3. flowStartYear
- *           4. flowUnitTotal
- *           5. flowNotes
- *           6. data
- *           7. dataModelVersion
- *        d. publishedID: string UUID if this flow is published, explicitly null if it's not
- *        e. importedID: takes the format of [string UUID].[contentFlowHash] if this flow is imported, explicitly null if it's not
- *   4. DBTemplateFlowchartModel:
- *        a. flowName --> flowId (matches program metadata) (keeping other fields in case we want to search them one day)
- */
+// see flowchartSchema for details
+export const dataModelVersion = 7;
 
 // session max age in seconds
 export const SESSION_MAX_AGE = 60 * 60 * 24;

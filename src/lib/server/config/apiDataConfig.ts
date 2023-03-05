@@ -1,6 +1,7 @@
 import { prisma } from '$lib/server/db/prisma';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import type { APIData } from '$lib/types';
+import type { DBNotification } from '@prisma/client';
 
 const logger = initLogger('Config/APIDataConfig');
 
@@ -13,6 +14,8 @@ export const apiData: APIData = {
   geCourseData: [],
   reqCourseData: []
 };
+
+export const notificationData: DBNotification[] = [];
 
 // TODO: once we move API to another service/cache/whatnot, do a left join
 // on coursedata and all metadata (ge course data, req, term typically offered, etc)
@@ -38,6 +41,12 @@ export async function init(): Promise<void> {
   }));
   apiData.geCourseData = dbGECourseData;
   apiData.reqCourseData = dbReqCourseData;
+
+  // init notification metadata
+  const dbNotificationData = await prisma.dBNotification.findMany();
+  for (const dbNotification of dbNotificationData) {
+    notificationData.push(dbNotification);
+  }
 
   logger.info('API data fetch complete');
 }

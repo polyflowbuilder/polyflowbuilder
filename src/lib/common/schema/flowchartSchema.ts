@@ -7,8 +7,8 @@ import {
   CUSTOM_COURSE_CARD_DISPLAY_NAME_MAX_LENGTH,
   CUSTOM_COURSE_CARD_DESC_MAX_LENGTH
 } from '$lib/common/config/flowDataConfig';
-import { validate } from 'uuid';
 import { z } from 'zod';
+import { validate } from 'uuid';
 
 // validation schema for user-level flowchart
 
@@ -84,6 +84,7 @@ export const courseSchema = z
         }
       )
       .optional(),
+    // if missing, then course is associated with first program in flowchart
     programIdIndex: z.number().int().nonnegative().optional()
   })
   .superRefine(({ id, customId, customDisplayName, customDesc }, ctx) => {
@@ -131,118 +132,145 @@ export const flowchartTermDataSchema = z.object({
 });
 
 // mirrors the DB schema as closely as possible
-export const flowchartValidationSchema = z.object({
-  id: z
-    .string({
-      required_error: 'Flowchart unique ID is required.'
-    })
-    .uuid('Invalid format for flowchart unique ID.'),
-  ownerId: z
-    .string({
-      required_error: 'Owner unique ID is required.'
-    })
-    .uuid('Invalid format for owner unique ID.'),
-  name: z
-    .string({
-      required_error: 'Flowchart name is required.'
-    })
-    .min(1, 'Flowchart name cannot be blank.')
-    .refine(
-      (name) => name.length <= FLOW_NAME_MAX_LENGTH,
-      (name) => {
-        return {
-          message: `Flowchart name too long, length ${name.length}/${FLOW_NAME_MAX_LENGTH} characters.`
-        };
-      }
-    ),
-  // TODO: runtime checks for valid program IDs?
-  // already have constraints in DB
-  programId: z
-    .array(
-      z
-        .string()
-        .uuid('Invalid format for flowchart program ID.')
-        .min(1, 'Program ID cannot be empty.')
-    )
-    // these two refinements are to have runtime length checks instead of static time
-    .refine(
-      (programId) => programId.length > 0,
-      'At least one program ID is required per flowchart.'
-    )
-    .refine(
-      (programId) => programId.length <= FLOW_PROGRAMS_MAX_COUNT,
-      (programId) => {
-        return {
-          message: `Too many program IDs in this flowchart, have ${programId.length}/${FLOW_PROGRAMS_MAX_COUNT} program IDs.`
-        };
-      }
-    ),
-  // TODO: runtime checks for startYear?
-  // already have constraints in DB
-  startYear: z
-    .string({
-      required_error: 'Flowchart start year is required.'
-    })
-    .length(4, 'Flowchart start year needs 4 characters.')
-    .refine((str) => parseInt(str), 'Flowchart start year must be a valid number.'),
-  unitTotal: unitSchema,
-  notes: z
-    .string({
-      required_error: 'Flowchart notes field is required.'
-    })
-    .refine(
-      (notes) => notes.length <= FLOW_NOTES_MAX_LENGTH,
-      (notes) => {
-        return {
-          message: `Flowchart notes too long, length ${notes.length}/${FLOW_NOTES_MAX_LENGTH} characters.`
-        };
-      }
-    ),
-  termData: z.array(flowchartTermDataSchema, {
-    required_error: 'Array for terms in flowchart is required.'
-  }),
-  version: z
-    .number({
-      required_error: 'Flowchart version is required.'
-    })
-    .int('Flowchart version must be an integer.'),
-  hash: z
-    .string({
-      required_error: 'Hash is required'
-    })
-    .refine(
-      (hash) => {
-        // [flowMetadataHash].[flowContentHash]
-        const parts = hash.split('.');
-        return validate(parts[0]) && validate(parts[1]);
-      },
-      (hash) => {
-        return {
-          message: `Hash is invalid, have ${hash}.`
-        };
-      }
-    ),
-  validationData: z
-    .object(
-      {},
+export const flowchartValidationSchema = z
+  .object({
+    id: z
+      .string({
+        required_error: 'Flowchart unique ID is required.'
+      })
+      .uuid('Invalid format for flowchart unique ID.'),
+    ownerId: z
+      .string({
+        required_error: 'Owner unique ID is required.'
+      })
+      .uuid('Invalid format for owner unique ID.'),
+    name: z
+      .string({
+        required_error: 'Flowchart name is required.'
+      })
+      .min(1, 'Flowchart name cannot be blank.')
+      .refine(
+        (name) => name.length <= FLOW_NAME_MAX_LENGTH,
+        (name) => {
+          return {
+            message: `Flowchart name too long, length ${name.length}/${FLOW_NAME_MAX_LENGTH} characters.`
+          };
+        }
+      ),
+    // TODO: runtime checks for valid program IDs?
+    // already have constraints in DB
+    programId: z
+      .array(
+        z
+          .string()
+          .uuid('Invalid format for flowchart program ID.')
+          .min(1, 'Program ID cannot be empty.')
+      )
+      // these two refinements are to have runtime length checks instead of static time
+      .refine(
+        (programId) => programId.length > 0,
+        'At least one program ID is required per flowchart.'
+      )
+      .refine(
+        (programId) => programId.length <= FLOW_PROGRAMS_MAX_COUNT,
+        (programId) => {
+          return {
+            message: `Too many program IDs in this flowchart, have ${programId.length}/${FLOW_PROGRAMS_MAX_COUNT} program IDs.`
+          };
+        }
+      ),
+    // TODO: runtime checks for startYear?
+    // already have constraints in DB
+    startYear: z
+      .string({
+        required_error: 'Flowchart start year is required.'
+      })
+      .length(4, 'Flowchart start year needs 4 characters.')
+      .refine((str) => parseInt(str), 'Flowchart start year must be a valid number.'),
+    unitTotal: unitSchema,
+    notes: z
+      .string({
+        required_error: 'Flowchart notes field is required.'
+      })
+      .refine(
+        (notes) => notes.length <= FLOW_NOTES_MAX_LENGTH,
+        (notes) => {
+          return {
+            message: `Flowchart notes too long, length ${notes.length}/${FLOW_NOTES_MAX_LENGTH} characters.`
+          };
+        }
+      ),
+    termData: z.array(flowchartTermDataSchema, {
+      required_error: 'Array for terms in flowchart is required.'
+    }),
+    version: z
+      .number({
+        required_error: 'Flowchart version is required.'
+      })
+      .int('Flowchart version must be an integer.')
+      .positive('Flowchart version must be a positive integer.'),
+    hash: z
+      .string({
+        required_error: 'Hash is required'
+      })
+      .refine(
+        (hash) => {
+          // [flowMetadataHash].[flowContentHash]
+          const parts = hash.split('.');
+          return validate(parts[0]) && validate(parts[1]);
+        },
+        (hash) => {
+          return {
+            message: `Hash is invalid, have ${hash}.`
+          };
+        }
+      ),
+    validationData: z
+      .object(
+        {},
+        {
+          required_error: 'TODO: ADD VALIDATION DATA SCHEMA'
+        }
+      )
+      .optional(),
+    publishedId: z.union(
+      [z.string().uuid('Invalid unique ID for flowchart published ID.'), z.null()],
       {
-        required_error: 'TODO: ADD VALIDATION DATA SCHEMA'
+        required_error: 'Flowchart published ID is required.'
       }
-    )
-    .optional(),
-  publishedId: z.union(
-    [z.string().uuid('Invalid unique ID for flowchart published ID.'), z.null()],
-    {
-      required_error: 'Flowchart published ID is required.'
-    }
-  ),
-  importedId: z.union([z.string().uuid('Invalid unique ID for flowchart imported ID.'), z.null()], {
-    required_error: 'Flowchart imported ID is required.'
-  }),
-  lastUpdatedUTC: z.date({
-    required_error: 'Flowchart last updated UTC time is required.'
+    ),
+    importedId: z.union(
+      [z.string().uuid('Invalid unique ID for flowchart imported ID.'), z.null()],
+      {
+        required_error: 'Flowchart imported ID is required.'
+      }
+    ),
+    lastUpdatedUTC: z.date({
+      required_error: 'Flowchart last updated UTC time is required.'
+    })
   })
-});
+  .superRefine(({ termData, programId }, ctx) => {
+    // make sure program Ids after the first one dont have 'null'
+    // interspersed with valid IDs (eg should be all valid then all null)
+    for (let i = 1; i < programId.length; i += 1) {
+      if (programId[i] !== null && programId[i - 1] === null) {
+        ctx.addIssue({
+          code: 'custom',
+          message: 'Found null programId before nonnull programId.',
+          path: ['programId']
+        });
+      }
+    }
+
+    // verify creditBin term present
+    if (!termData.find((term) => term.tIndex === -1)) {
+      ctx.addIssue({
+        code: 'custom',
+        message: 'Term data missing required credit bin tIndex.',
+        path: ['termData']
+      });
+    }
+  });
 
 // schema types
 export type Unit = z.infer<typeof unitSchema>;
