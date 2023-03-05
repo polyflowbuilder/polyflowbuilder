@@ -1,352 +1,359 @@
 {
-  "flowName": "15-17.10FNRBSU.WBFNRU",
-  "flowId": "15-17.10FNRBSU.WBFNRU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "185-188",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.10FNRBSU.WBFNRU",
+  "programId": [
+    "73f77530-bb9d-44f3-a819-739bd951ff7b"
+  ],
+  "startYear": "2015",
+  "unitTotal": "185-188",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR140"
+          "id": "NR140",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR141"
+          "id": "NR141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BOT121"
+          "id": "BOT121",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR215"
+          "id": "NR215",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM111"
+          "id": "CHEM111",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR208"
+          "id": "NR208",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: MATH161, MATH221.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Calculus Course",
-          "cCustomDisplayName": "MATH161 or MATH221"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Calculus Course",
+          "customDisplayName": "MATH161 or MATH221",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: MATH161, MATH221."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "SS121"
+          "id": "SS121",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BRAE/NR247, BRAE239.",
-          "cCustomUnits": "2-4",
-          "cID": null,
-          "cCustomID": "Surveying Course",
-          "cCustomDisplayName": "BRAE/NR247 or BRAE239"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Surveying Course",
+          "customDisplayName": "BRAE/NR247 or BRAE239",
+          "customUnits": "2-4",
+          "customDesc": "Choose one of the following: BRAE/NR247, BRAE239."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR218"
+          "id": "NR218",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: STAT217, STAT218.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Statistics Course",
-          "cCustomDisplayName": "STAT217 or STAT218"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Statistics Course",
+          "customDisplayName": "STAT217 or STAT218",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT217, STAT218."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR260"
+          "id": "NR260",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR306"
+          "id": "NR306",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR326"
+          "id": "NR326",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ZOO321"
+          "id": "ZOO321",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: ASCI329, BIO427.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Support Course",
-          "cCustomDisplayName": "ASCI329 or BIO427"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Support Course",
+          "customDisplayName": "ASCI329 or BIO427",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ASCI329, BIO427."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR315"
+          "id": "NR315",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR335"
+          "id": "NR335",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BOT313"
+          "id": "BOT313",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR320"
+          "id": "NR320",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR307"
+          "id": "NR307",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BIO327"
+          "id": "BIO327",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "19-20",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR365"
+          "id": "NR365",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR416"
+          "id": "NR416",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Electives can go here.",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Approved Electives"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Electives",
+          "customUnits": "3-4",
+          "customDesc": "Any Approved Electives can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C4 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR402"
+          "id": "NR402",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR414"
+          "id": "NR414",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ERSC/NR 476, 477, 478, 479.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Senior Project"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project",
+          "customUnits": "3",
+          "customDesc": "Choose one of the following: ERSC/NR 476, 477, 478, 479."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: BIO401, BIO444.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Support Course",
-          "cCustomDisplayName": "BIO401 or BIO444"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Support Course",
+          "customDisplayName": "BIO401 or BIO444",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BIO401, BIO444."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR435"
+          "id": "NR435",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "NR465"
+          "id": "NR465",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BOT433"
+          "id": "BOT433",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ZOO323"
+          "id": "ZOO323",
+          "color": "#F9A3D2"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "9c1cdf1e3eb1331719d0d04afecfcdf1"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.805Z"
 }

@@ -1,357 +1,364 @@
 {
-  "flowName": "17-19.48ANGBSU.ESSANGU",
-  "flowId": "17-19.48ANGBSU.ESSANGU",
-  "flowStartYear": "2017",
-  "flowUnitTotal": "180-185",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "17-19.48ANGBSU.ESSANGU",
+  "programId": [
+    "a79cf0d2-962a-4182-8eb5-7cbf5636e5d9"
+  ],
+  "startYear": "2017",
+  "unitTotal": "180-185",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT201"
+          "id": "ANT201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG150"
+          "id": "GEOG150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT250"
+          "id": "ANT250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG250"
+          "id": "GEOG250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT202"
+          "id": "ANT202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG318"
+          "id": "GEOG318",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG333"
+          "id": "GEOG333",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "The following courses can go here: GEOG300, GEOG340, GEOG370, GEOG380",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Regional Geography Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Regional Geography Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: GEOG300, GEOG340, GEOG370, GEOG380"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG308"
+          "id": "GEOG308",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "The following courses can go here: ANT310, ANT311, ANT393, GEOG328, GEOG440",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Methodological Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Methodological Elective",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: ANT310, ANT311, ANT393, GEOG328, GEOG440"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "GEOG328"
+          "id": "GEOG328",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select from Problems & Issues Courses"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Select from Problems & Issues Courses",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT360"
+          "id": "ANT360",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ANT Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ANT Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ANT Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any ANT Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ANT Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ANT Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ANT Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any ANT Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "GEOG325"
+          "id": "GEOG325",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT464"
+          "id": "ANT464",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT455"
+          "id": "ANT455",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "GEOG350"
+          "id": "GEOG350",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B3, (B4 [lab] must be completed with B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <strong>One (1) course must be completed from B1, in addition to STAT 217. No ANT/GEOG class may be taken to fulfill GE D5.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13-18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT461"
+          "id": "ANT461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT465"
+          "id": "ANT465",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select from Problems & Issues Courses"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Select from Problems & Issues Courses",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT462"
+          "id": "ANT462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any GEOG Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GEOG Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "GEOG Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any GEOG Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "GEOG414"
+          "id": "GEOG414",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select from Problems & Issues Courses"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Select from Problems & Issues Courses",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: AG315, AG360, ANT312, BIO112, BIO114, BIO227, BRAE345, BRAE348, CRP/NR404, EDES406, ENVE324, GEOG408, GEOL201, NR306, POLS/UNIV333, PSC320, SS120"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "aae895d30b7f14083132282e81358292"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.882Z"
 }

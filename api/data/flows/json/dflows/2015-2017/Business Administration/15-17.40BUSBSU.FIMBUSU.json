@@ -1,367 +1,374 @@
 {
-  "flowName": "15-17.40BUSBSU.FIMBUSU",
-  "flowId": "15-17.40BUSBSU.FIMBUSU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.40BUSBSU.FIMBUSU",
+  "programId": [
+    "2d2e54fe-4d37-4628-bd6b-a2e7ed9d25dc"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS207"
+          "id": "BUS207",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT251"
+          "id": "STAT251",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: BUS100.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: BUS100"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: BUS100",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: BUS100."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS214"
+          "id": "BUS214",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT252"
+          "id": "STAT252",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ECON222"
+          "id": "ECON222",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS215"
+          "id": "BUS215",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ECON221"
+          "id": "ECON221",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS391"
+          "id": "BUS391",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS342"
+          "id": "BUS342",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any International Business course can go here. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "International Business",
-          "cCustomDisplayName": "See catalog for courses"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "International Business",
+          "customDisplayName": "See catalog for courses",
+          "customUnits": "4",
+          "customDesc": "Any International Business course can go here. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BUS439"
+          "id": "BUS439",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH221"
+          "id": "MATH221",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS346"
+          "id": "BUS346",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BUS431"
+          "id": "BUS431",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Concentration Declaration Due",
-          "cID": null,
-          "cCustomID": "Concentration Declaration Due"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "Concentration Declaration Due",
+          "customDesc": "Concentration Declaration Due"
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS387"
+          "id": "BUS387",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BUS438"
+          "id": "BUS438",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any ECON 300-400 course can go here. ECON 303 and 304 double count for D5 and ECON elective. ECON 303 also counts for USCP credit. Double counting will cause an increase in the number of free elective units needed.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ECON 300-400",
-          "cCustomDisplayName": "Recommended: ECON303"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "ECON 300-400",
+          "customDisplayName": "Recommended: ECON303",
+          "customUnits": "4",
+          "customDesc": "Any ECON 300-400 course can go here. ECON 303 and 304 double count for D5 and ECON elective. ECON 303 also counts for USCP credit. Double counting will cause an increase in the number of free elective units needed."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Technology Management course can go here. There are two Technology Management Major Requirements that can double count for Area F (IT 330 and IT 341). Double counting will cause an increase in the number of free elective units needed.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Technology Management",
-          "cCustomDisplayName": "See catalog for courses"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Technology Management",
+          "customDisplayName": "See catalog for courses",
+          "customUnits": "4",
+          "customDesc": "Any Technology Management course can go here. There are two Technology Management Major Requirements that can double count for Area F (IT 330 and IT 341). Double counting will cause an increase in the number of free elective units needed."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Financial Management Elective can go here. ECON 339 cannot double count.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Financial Management Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Financial Management Elective",
+          "customUnits": "4",
+          "customDesc": "Any Financial Management Elective can go here. ECON 339 cannot double count."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Financial Management Elective can go here. ECON 339 cannot double count.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Financial Management Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Financial Management Elective",
+          "customUnits": "4",
+          "customDesc": "Any Financial Management Elective can go here. ECON 339 cannot double count."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS404"
+          "id": "BUS404",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Financial Management Elective can go here. ECON 339 cannot double count.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Financial Management Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Financial Management Elective",
+          "customUnits": "4",
+          "customDesc": "Any Financial Management Elective can go here. ECON 339 cannot double count."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Senior Project course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Senior Project",
-          "cCustomDisplayName": "See catalog for courses"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project",
+          "customDisplayName": "See catalog for courses",
+          "customUnits": "4",
+          "customDesc": "Any Senior Project course can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective can go here. ECON 339 cannot double count.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective can go here. ECON 339 cannot double count."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BUS401"
+          "id": "BUS401",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, B3, (B4 [lab] must be completed with either B2 or B3), C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>NO BUS FOR D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "5c254ea6a85104535f85900e31392796"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.777Z"
 }

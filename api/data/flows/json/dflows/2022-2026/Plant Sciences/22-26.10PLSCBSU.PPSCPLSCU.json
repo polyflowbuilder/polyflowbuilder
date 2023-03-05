@@ -1,340 +1,345 @@
 {
-  "flowName": "22-26.10PLSCBSU.PPSCPLSCU",
-  "flowId": "22-26.10PLSCBSU.PPSCPLSCU",
-  "flowStartYear": "2022",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "22-26.10PLSCBSU.PPSCPLSCU",
+  "programId": [
+    "431c25a1-64e2-4997-9adc-ea4408c2345c"
+  ],
+  "startYear": "2022",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BOT121"
+          "id": "BOT121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC101"
+          "id": "PLSC101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC120"
+          "id": "PLSC120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM127"
+          "id": "CHEM127",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH118"
+          "id": "MATH118",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC124"
+          "id": "PLSC124",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM128"
+          "id": "CHEM128",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SS120"
+          "id": "SS120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: PLSC203, PLSC205, PLSC212, PLSC312, or PLSC333.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Enterprise Projects",
-          "cCustomDisplayName": "Choose One"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Enterprise Projects",
+          "customDisplayName": "Choose One",
+          "customUnits": "2",
+          "customDesc": "Choose one of the following: PLSC203, PLSC205, PLSC212, PLSC312, or PLSC333."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: SPAN101, SPAN102, SPAN103, or SPAN111.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Elementary Spanish I, II, III, or Hispanic Language & Culture",
-          "cCustomDisplayName": "SPAN101, SPAN102, SPAN103, or SPAN111"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Elementary Spanish I, II, III, or Hispanic Language & Culture",
+          "customDisplayName": "SPAN101, SPAN102, SPAN103, or SPAN111",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: SPAN101, SPAN102, SPAN103, or SPAN111."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC350"
+          "id": "PLSC350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "SS221"
+          "id": "SS221",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT218"
+          "id": "STAT218",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC321"
+          "id": "PLSC321",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC323"
+          "id": "PLSC323",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective course can go here.\r\n\r\n20 units Approved Electives. See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BRAE340"
+          "id": "BRAE340",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC304"
+          "id": "PLSC304",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC351"
+          "id": "PLSC351",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC327"
+          "id": "PLSC327",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC461"
+          "id": "PLSC461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC313"
+          "id": "PLSC313",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Any Approved Elective course can go here.\r\n\r\n24 units Approved Electives (at least 12 must be upper-division). See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Approved Elective course can go here.\r\n\r\n24 units Approved Electives (at least 12 must be upper-division). See catalog. Consultation with advisor is recommended; bear in mind your selections may impact pursuit of post-baccalaureate studies and/or goals. Max 2 units of PLSC200 and/or max 2 units of PLSC400 may count towards Approved Electives. Max 4 units of PLSC339 may count towards Approved Electives."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "5",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "5",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC462"
+          "id": "PLSC462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC428"
+          "id": "PLSC428",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC441"
+          "id": "PLSC441",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC427"
+          "id": "PLSC427",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC406"
+          "id": "PLSC406",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PLSC410"
+          "id": "PLSC410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "PLSC431"
+          "id": "PLSC431",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     }
   ],
-  "publishedID": null,
-  "importedID": null,
-  "dataModelVersion": 6,
-  "flowHash": "f582642bf0468fe10cc43b8d40690bf1.708f8e81c1a2b1798c7b45ad70309b54"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.688Z"
 }

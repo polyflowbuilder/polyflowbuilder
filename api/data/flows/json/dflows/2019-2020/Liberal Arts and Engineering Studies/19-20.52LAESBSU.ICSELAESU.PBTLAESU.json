@@ -1,377 +1,384 @@
 {
-  "flowName": "19-20.52LAESBSU.ICSELAESU.PBTLAESU",
-  "flowId": "19-20.52LAESBSU.ICSELAESU.PBTLAESU",
-  "flowStartYear": "2019",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "19-20.52LAESBSU.ICSELAESU.PBTLAESU",
+  "programId": [
+    "71ecb762-00c6-4c20-9546-fb4d64b1eb81"
+  ],
+  "startYear": "2019",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH142"
+          "id": "MATH142",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH143"
+          "id": "MATH143",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL149"
+          "id": "ENGL149",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH241"
+          "id": "MATH241",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS132"
+          "id": "PHYS132",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cID": "GRC101"
+          "id": "GRC101",
+          "color": "#FFCCFF"
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "This is the first quarter of the ICMA agreement.",
-          "cID": null,
-          "cCustomID": "1st Quarter ICMA"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "1st Quarter ICMA",
+          "customDesc": "This is the first quarter of the ICMA agreement."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH244"
+          "id": "MATH244",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS133"
+          "id": "PHYS133",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "This is the second quarter of the ICMA agreement.",
-          "cID": null,
-          "cCustomID": "2nd Quarter ICMA"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "2nd Quarter ICMA",
+          "customDesc": "This is the second quarter of the ICMA agreement."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "STAT312"
+          "id": "STAT312",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cID": "GRC211"
+          "id": "GRC211",
+          "color": "#FFCCFF"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Study Abroad or Global Perspectives (300-400 level) course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Study Abroad or Global Perspectives",
-          "cCustomDisplayName": "(300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Study Abroad or Global Perspectives",
+          "customDisplayName": "(300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any Study Abroad or Global Perspectives (300-400 level) course can go here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Study Abroad or Global Perspectives (300-400 level) course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Study Abroad or Global Perspectives",
-          "cCustomDisplayName": "(300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Study Abroad or Global Perspectives",
+          "customDisplayName": "(300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any Study Abroad or Global Perspectives (300-400 level) course can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM124"
+          "id": "CHEM124",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cCustomNote": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Liberal Arts Approved Elective"
+          "id": null,
+          "color": "#FFCCFF",
+          "customId": "Liberal Arts Approved Elective",
+          "customUnits": "4",
+          "customDesc": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LAES301"
+          "id": "LAES301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "2",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cID": "GRC201"
+          "id": "GRC201",
+          "color": "#FFCCFF"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. GE and Free Elective requirements may be higher or lower depending on your concentration selection.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "Any free elective can go here. GE and Free Elective requirements may be higher or lower depending on your concentration selection."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LAES302"
+          "id": "LAES302",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cCustomNote": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Liberal Arts Approved Elective"
+          "id": null,
+          "color": "#FFCCFF",
+          "customId": "Liberal Arts Approved Elective",
+          "customUnits": "3",
+          "customDesc": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LAES461"
+          "id": "LAES461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cCustomNote": "Select from the following: ISLA303, PHIL341, PHIL337.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration Course"
+          "id": null,
+          "color": "#FFCCFF",
+          "customId": "Concentration Course",
+          "customUnits": "4",
+          "customDesc": "Select from the following: ISLA303, PHIL341, PHIL337."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B2, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and a GE Elective. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units). NOTE: Areas C1 and Upper-Division C may be fulfilled in concentration courses. Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, D2, Upper-Division D, or E. USCP may also be fulfilled in concentration."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LAES462"
+          "id": "LAES462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Engineering ICS"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Engineering ICS",
+          "customUnits": "4",
+          "customDesc": "Engineering Concentration requires 34-35 units, minimum 12 units at 300-400 level. Unit ranges may vary."
         },
         {
-          "cardColor": "#FFCCFF",
-          "cCustomNote": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Liberal Arts Approved Elective"
+          "id": null,
+          "color": "#FFCCFF",
+          "customId": "Liberal Arts Approved Elective",
+          "customUnits": "3",
+          "customDesc": "10 units required. Select from the following: COMS317; GRC316, GRC328, GRC329, GRC402."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "a2e46a779e194a57cfce46ca05352347"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.154Z"
 }

@@ -1,398 +1,405 @@
 {
-  "flowName": "21-22.48COMSBAU",
-  "flowId": "21-22.48COMSBAU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": "180-188",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.48COMSBAU",
+  "programId": [
+    "8872f84e-c89b-47ee-baca-ef9d471b53e5"
+  ],
+  "startYear": "2021",
+  "unitTotal": "180-188",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "<p>Choose one of the following: HIST202, or HIST223.</p><p>HIST202 simultaneously satisfies GE D1.</p><p>HIST223 simultaneously satisfies GE D2.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "History"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "History",
+          "customUnits": "4",
+          "customDesc": "<p>Choose one of the following: HIST202, or HIST223.</p><p>HIST202 simultaneously satisfies GE D1.</p><p>HIST223 simultaneously satisfies GE D2.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Choose one of the following: ENGL133, or ENGL134.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Expository Writing",
-          "cCustomDisplayName": "ENGL133 or ENGl134"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "Expository Writing",
+          "customDisplayName": "ENGL133 or ENGl134",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL133, or ENGL134."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Choose one of the following: COMS101, or COMS102.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Oral Communication",
-          "cCustomDisplayName": "COMS101 or COMS102"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "Oral Communication",
+          "customDisplayName": "COMS101 or COMS102",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: COMS101, or COMS102."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. Recommended: Foreign Language 101.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 101"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 101",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here. Recommended: Foreign Language 101."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: COMS201, COMS208, or COMS226.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "COMS201, COMS208, or COMS226"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "COMS201, COMS208, or COMS226",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: COMS201, COMS208, or COMS226."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS212"
+          "id": "COMS212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "<p>Choose one of the following: PSY201, or PSY202.</p><p>PSY201 and PSY202 simultaneously satisfy GE E.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Psychology",
-          "cCustomDisplayName": "PSY201 or PSY202"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "General Psychology",
+          "customDisplayName": "PSY201 or PSY202",
+          "customUnits": "4",
+          "customDesc": "<p>Choose one of the following: PSY201, or PSY202.</p><p>PSY201 and PSY202 simultaneously satisfy GE E.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. Recommended: Foreign Language 102.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 102"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 102",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here. Recommended: Foreign Language 102."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS213"
+          "id": "COMS213",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Modern Language (103-level) course can go here. Refer to the catalog.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Modern Langauge",
-          "cCustomDisplayName": "(103-level)"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Modern Langauge",
+          "customDisplayName": "(103-level)",
+          "customUnits": "4",
+          "customDesc": "Any Modern Language (103-level) course can go here. Refer to the catalog."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS217"
+          "id": "COMS217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS311"
+          "id": "COMS311",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "HIST110"
+          "id": "HIST110",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS250"
+          "id": "COMS250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS330"
+          "id": "COMS330",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS350"
+          "id": "COMS350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS322"
+          "id": "COMS322",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS332"
+          "id": "COMS332",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS312"
+          "id": "COMS312",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: COMS384, or COMS385.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Div COMS",
-          "cCustomDisplayName": "COMS384 or COMS385"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Div COMS",
+          "customDisplayName": "COMS384 or COMS385",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: COMS384, or COMS385."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS316"
+          "id": "COMS316",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division COMS Elective",
-          "cCustomDisplayName": "COMS 300-400 level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division COMS Elective",
+          "customDisplayName": "COMS 300-400 level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS460"
+          "id": "COMS460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division COMS Elective",
-          "cCustomDisplayName": "COMS 300-400 level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division COMS Elective",
+          "customDisplayName": "COMS 300-400 level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: ENGL310, ENGL311, or ENGL386.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Div ENGL",
-          "cCustomDisplayName": "ENGL310, ENGL311, or ENGL386"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper-Div ENGL",
+          "customDisplayName": "ENGL310, ENGL311, or ENGL386",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL310, ENGL311, or ENGL386."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: COMS331, or COMS435.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Div COMS",
-          "cCustomDisplayName": "COMS331 or COMS435"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Div COMS",
+          "customDisplayName": "COMS331 or COMS435",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: COMS331, or COMS435."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division COMS Elective",
-          "cCustomDisplayName": "COMS 300-400 level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division COMS Elective",
+          "customDisplayName": "COMS 300-400 level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division COMS Elective",
-          "cCustomDisplayName": "COMS 300-400 level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division COMS Elective",
+          "customDisplayName": "COMS 300-400 level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15-23",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "COMS461"
+          "id": "COMS461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division COMS Elective",
-          "cCustomDisplayName": "COMS 300-400 level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division COMS Elective",
+          "customDisplayName": "COMS 300-400 level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division COMS Elective (COMS 300-400 level) course can go here. Only 4 units of supervised instruction, including COMS400, COMS450, and COMS485, may be counted here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1 or D2 (depending on whether HIST203 or HIST223 is selected in support), F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). <b>Upper-Division C cannot be fulfilled with COMS courses.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. If GE course is used to satisfy a major or support requirement, additional units of Free Electives may be needed.",
-          "cCustomUnits": "0-8",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "0-8",
+          "customDesc": "Any Free Elective course can go here. If GE course is used to satisfy a major or support requirement, additional units of Free Electives may be needed."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "e2376db96a9487eafd67b96b3bcf007a"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.403Z"
 }

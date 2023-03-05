@@ -1,551 +1,558 @@
 {
-  "flowName": "15-17.48MUBAU",
-  "flowId": "15-17.48MUBAU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48MUBAU",
+  "programId": [
+    "c9b47a14-f882-40b0-bc5d-9e9ae8242919"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU104"
+          "id": "MU104",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU150"
+          "id": "MU150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE",
-          "cCustomDisplayName": "Recommended: MU101"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customDisplayName": "Recommended: MU101",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU161. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU161"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU161",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU161. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU103"
+          "id": "MU103",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU106"
+          "id": "MU106",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU150"
+          "id": "MU150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU162. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU162"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU162",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU162. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU105"
+          "id": "MU105",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU108"
+          "id": "MU108",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU121"
+          "id": "MU121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU150"
+          "id": "MU150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU163. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU163"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU163",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU163. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU303"
+          "id": "MU303",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU311"
+          "id": "MU311",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU250"
+          "id": "MU250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU210.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU210"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU210",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU210."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU261. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU261"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU261",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU261. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU305"
+          "id": "MU305",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU250"
+          "id": "MU250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU211. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU211"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU211",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU211. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU262.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU262"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU262",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU262."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Music Lecture Course",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Music Lecture Course",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU250"
+          "id": "MU250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "100-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "100-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (100-Level) course can go here. Each Music major enrolled in at least 6 units of music courses should include a performance ensemble each quarter in order to qualify for applied study of voice or instruments. See current catalog for Major Ensemble at 100-Level courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU212.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU212"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU212",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU212."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU263. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU263"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU263",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU263. Majors must demonstrate piano proficiency as part of the midpoint evaluation. Any piano classes needed before the piano proficiency examination will count as free electives. Completion of MU 263 with a C- or better represents fulfillment of the piano proficiency examination."
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Take the Midpoint Examination at this time.",
-          "cID": null,
-          "cCustomID": "Midpoint Exam"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "Midpoint Exam",
+          "customDesc": "Take the Midpoint Examination at this time."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU320"
+          "id": "MU320",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU350"
+          "id": "MU350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (300-Level) course can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "300-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "300-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (300-Level) course can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU331"
+          "id": "MU331",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU350"
+          "id": "MU350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (300-Level) course can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "300-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "300-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (300-Level) course can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU332"
+          "id": "MU332",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU350"
+          "id": "MU350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Major Ensemble (300-Level) course can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Major Ensemble",
-          "cCustomDisplayName": "300-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Major Ensemble",
+          "customDisplayName": "300-Level",
+          "customUnits": "1",
+          "customDesc": "Any Major Ensemble (300-Level) course can go here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one of the following: MU 325 [USCP], MU 326, MU 336, or MU 470.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: MU 325 [USCP], MU 326, MU 336, or MU 470."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU431"
+          "id": "MU431",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Music Lecture Course",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Music Lecture Course",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU 300-Level Ensemble.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU 300-Level Ensemble"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU 300-Level Ensemble",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU 300-Level Ensemble."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. MU450.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU450"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU450",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. MU450."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU432"
+          "id": "MU432",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MU461"
+          "id": "MU461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU 300-Level Ensemble.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU 300-Level Ensemble"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU 300-Level Ensemble",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU 300-Level Ensemble."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU450.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU450"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU450",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU450."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Music Lecture Course",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Music Lecture Course",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Any Approved Music Lecture Course (300-400 Level) can go here. MU 325, 326, 336, or 470 can satisfy this requirement if not previously used to satisfy another required music course."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>C4 cannot be fulfilled with MU courses.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU 300-Level Ensemble.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU 300-Level Ensemble"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU 300-Level Ensemble",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU 300-Level Ensemble."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Recommended: MU450.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: MU450"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: MU450",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. Recommended: MU450."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "427584dba57dfe4110202775884c96ad"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.850Z"
 }

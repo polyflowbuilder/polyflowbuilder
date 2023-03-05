@@ -1,364 +1,372 @@
 {
-  "flowName": "20-21.10AGSCBSU",
-  "flowId": "20-21.10AGSCBSU",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.10AGSCBSU",
+  "programId": [
+    "9d5ef498-83b1-4d7b-96c3-82464c9c0c9d"
+  ],
+  "startYear": "2020",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED102"
+          "id": "AGED102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE121"
+          "id": "BRAE121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose from MATH118, MATH119, MATH141, MATH161, MATH121",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Math"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Math",
+          "customUnits": "4",
+          "customDesc": "Choose from MATH118, MATH119, MATH141, MATH161, MATH121"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AEPS120"
+          "id": "AEPS120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASCI112"
+          "id": "ASCI112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM127"
+          "id": "CHEM127",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB202"
+          "id": "AGB202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE141"
+          "id": "BRAE141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Animal Science Course"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Animal Science Course",
+          "customUnits": "4",
+          "customDesc": "Select a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BOT121"
+          "id": "BOT121",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB212"
+          "id": "AGB212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose from one of the following: AEPS190, AEPS230, AEPS240, AEPS245.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Plant Science Course"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Plant Science Course",
+          "customUnits": "4",
+          "customDesc": "Choose from one of the following: AEPS190, AEPS230, AEPS240, AEPS245."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Animal Science Course"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Animal Science Course",
+          "customUnits": "4",
+          "customDesc": "Select a total of 8 units from: ASCI221, ASCI222, ASCI223, ASCI224, ASCI225; DSCI230."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SS120"
+          "id": "SS120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE321"
+          "id": "BRAE321",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "DSCI231"
+          "id": "DSCI231",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Electives"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Electives",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED404"
+          "id": "AGED404",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AG360, AG450, AG452, AGC452",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose one"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose one",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AG360, AG450, AG452, AGC452"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "FSN275"
+          "id": "FSN275",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED460"
+          "id": "AGED460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES308"
+          "id": "ES308",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirements after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirements after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB301"
+          "id": "AGB301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE340"
+          "id": "BRAE340",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Electives"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Electives",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "11",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED461"
+          "id": "AGED461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED410"
+          "id": "AGED410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Electives"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Electives",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED462"
+          "id": "AGED462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "24 units required in Major. 12-20 units must be at the 300-400 level. At least 29 units of approved and free electives at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, and GE Elective. Upper-Division C should be taken only after junior standing is reached (90 units). Teaching candidates are advised to take KINE250 (E)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free electives can go here.",
-          "cCustomUnits": "6",
-          "cID": null,
-          "cCustomID": "Free Electives"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Electives",
+          "customUnits": "6",
+          "customDesc": "Any free electives can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "ea3ad3476e8434989e2903e093ee4da5"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.207Z"
 }

@@ -1,376 +1,384 @@
 {
-  "flowName": "20-21.48PSYBSU.EMPH-",
-  "flowId": "20-21.48PSYBSU.EMPH-",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.48PSYBSU.EMPH-",
+  "programId": [
+    "43868684-6b41-4038-8cef-e8467f538af4"
+  ],
+  "startYear": "2020",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one of the following: PSY201, PSY202",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Psychology"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Psychology",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: PSY201, PSY202"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY102"
+          "id": "PSY102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY252"
+          "id": "PSY252",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY256"
+          "id": "PSY256",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select one of the following: BIO111, BIO123, BIO161.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Biology"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Biology",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: BIO111, BIO123, BIO161."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY329"
+          "id": "PSY329",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select one from the following: CD424, ES320, ES321, ES322, ES323, ES/WGS 350, ES380, ES381, PSY260, PSY304, PSY/WGS 324, WGS301, WGS320, WGS340, WGS/RELS 370. Some courses on this list may have prerequisites that may be taken as Free Electives. If GE courses are taken for a letter grade and used as Support Elective, additional Free Elective units may be required to complete the 180 total degree requirement. See college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Support Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Support Elective",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: CD424, ES320, ES321, ES322, ES323, ES/WGS 350, ES380, ES381, PSY260, PSY304, PSY/WGS 324, WGS301, WGS320, WGS340, WGS/RELS 370. Some courses on this list may have prerequisites that may be taken as Free Electives. If GE courses are taken for a letter grade and used as Support Elective, additional Free Elective units may be required to complete the 180 total degree requirement. See college advisor for additional information."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY333"
+          "id": "PSY333",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY372"
+          "id": "PSY372",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one from the following: PSY330, PSY357, PSY430, PSY440, PSY458, PSY480.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Biological & Cognitive Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Biological & Cognitive Electives",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: PSY330, PSY357, PSY430, PSY440, PSY458, PSY480."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select from one of the following: PSY318, PSY320, PSY325, PSY370, PSY375, PSY405, PSY/CD 460.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Mental and Physical Health Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Mental and Physical Health Electives",
+          "customUnits": "4",
+          "customDesc": "Select from one of the following: PSY318, PSY320, PSY325, PSY370, PSY375, PSY405, PSY/CD 460."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY340"
+          "id": "PSY340",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one from the following: PSY302, PSY305, PSY350, PSY352, PSY360, PSY465, PSY475.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Social & Personality Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Social & Personality Electives",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: PSY302, PSY305, PSY350, PSY352, PSY360, PSY465, PSY475."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select one of the following: BIO302, PSY344.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select One"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Select One",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: BIO302, PSY344."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY323"
+          "id": "PSY323",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select any PSY 300-400 course.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Electives",
-          "cCustomDisplayName": "PSY 300-400"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Electives",
+          "customDisplayName": "PSY 300-400",
+          "customUnits": "4",
+          "customDesc": "Select any PSY 300-400 course."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one from the following: PSY330, PSY357, PSY430, PSY440, PSY458, PSY480.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Biological & Cognitive Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Biological & Cognitive Electives",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: PSY330, PSY357, PSY430, PSY440, PSY458, PSY480."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one from the following: PSY302, PSY305, PSY350, PSY352, PSY360, PSY465, PSY475.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Social & Personality Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Social & Personality Electives",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: PSY302, PSY305, PSY350, PSY352, PSY360, PSY465, PSY475."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one from the following: PSY318, PSY320, PSY325, PSY370, PSY375, PSY405, PSY/CD 460.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Mental and Physical Health Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Mental and Physical Health Electives",
+          "customUnits": "4",
+          "customDesc": "Select one from the following: PSY318, PSY320, PSY325, PSY370, PSY375, PSY405, PSY/CD 460."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, and GE Elective. Upper-Division C and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY461"
+          "id": "PSY461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one course from the following: PSY448, PSY449, PSY453, PSY454.",
-          "cCustomUnits": "5",
-          "cID": null,
-          "cCustomID": "Supervised Fieldwork &/or Research Internship"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Supervised Fieldwork &/or Research Internship",
+          "customUnits": "5",
+          "customDesc": "Select one course from the following: PSY448, PSY449, PSY453, PSY454."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any PSY 300-400 level course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Electives",
-          "cCustomDisplayName": "PSY 300-400"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Electives",
+          "customDisplayName": "PSY 300-400",
+          "customUnits": "4",
+          "customDesc": "Any PSY 300-400 level course can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSY462"
+          "id": "PSY462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one course from the following: PSY448, PSY449, PSY453, PSY454.",
-          "cCustomUnits": "5",
-          "cID": null,
-          "cCustomID": "Supervised Fieldwork &/or Research Internship"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Supervised Fieldwork &/or Research Internship",
+          "customUnits": "5",
+          "customDesc": "Select one course from the following: PSY448, PSY449, PSY453, PSY454."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any PSY 300-400 level course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Electives",
-          "cCustomDisplayName": "PSY 300-400"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Electives",
+          "customDisplayName": "PSY 300-400",
+          "customUnits": "4",
+          "customDesc": "Any PSY 300-400 level course can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "fcd31cc743a102da40896b79eaaa9b87"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.352Z"
 }

@@ -1,362 +1,370 @@
 {
-  "flowName": "20-21.76BIOBSU",
-  "flowId": "20-21.76BIOBSU",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.76BIOBSU",
+  "programId": [
+    "9d21079a-166e-46d8-beca-ba1d64e0dd20"
+  ],
+  "startYear": "2020",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO160"
+          "id": "BIO160",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM127"
+          "id": "CHEM127",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH161"
+          "id": "MATH161",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM128"
+          "id": "CHEM128",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO162"
+          "id": "BIO162",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH162"
+          "id": "MATH162",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM129"
+          "id": "CHEM129",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 Units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "5 Units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO263"
+          "id": "BIO263",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>Select from the following: BIO321, BIO322, BIO323, BIO324, BIO329, BIO335, BIO336, BIO429; BOT313; MCRO224, MCRO402; MSCI324.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Biodiversity"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Biodiversity",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>Select from the following: BIO321, BIO322, BIO323, BIO324, BIO329, BIO335, BIO336, BIO429; BOT313; MCRO224, MCRO402; MSCI324.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: BIO327, BIO363, BIO442; BOT326; MCRO436; MSCI300.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Ecology"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Ecology",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BIO327, BIO363, BIO442; BOT326; MCRO436; MSCI300."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM216"
+          "id": "CHEM216",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: BIO361, BIO434, BIO435.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Physiology"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physiology",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BIO361, BIO434, BIO435."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT218"
+          "id": "STAT218",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO351"
+          "id": "BIO351",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS121"
+          "id": "PHYS121",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS122"
+          "id": "PHYS122",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>20 units of Upper Division electives required. See Catalog for course options. Minimum of 12 units of 400-level courses, and 8 units of 300-level courses. Consultation with advisor is recommended. Excess units applied to 'Approved Electives'.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS123"
+          "id": "PHYS123",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO462"
+          "id": "BIO462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Additional Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Additional Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Additional Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Additional Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Additional Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Additional Elective",
+          "customUnits": "3",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Additional Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Additional Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO413"
+          "id": "BIO413",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Additional Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Additional Elective",
+          "customUnits": "4",
+          "customDesc": "<p>This is the default curriculum required for students who do not declare a concentration. Courses taken to meet a major support requirement cannot be double-counted in the concentration or general curriculum.</p><p>19 units of Approved Electives required. See Catalog for course options. Consultation with advisor is recommended. No double-counting with Major requirements. Upper-Division courses may be needed to satisfy 60-unit degree requirement.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "b03fe143d741e0512e4eb37a91ddac7f"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.227Z"
 }

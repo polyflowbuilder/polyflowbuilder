@@ -1,362 +1,370 @@
 {
-  "flowName": "19-20.48ANGBSU.GSIDANGU",
-  "flowId": "19-20.48ANGBSU.GSIDANGU",
-  "flowStartYear": "2019",
-  "flowUnitTotal": "180-185",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "19-20.48ANGBSU.GSIDANGU",
+  "programId": [
+    "5196f0d2-0495-4df4-ab5a-a45b08f83e86"
+  ],
+  "startYear": "2019",
+  "unitTotal": "180-185",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT201"
+          "id": "ANT201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG150"
+          "id": "GEOG150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT250"
+          "id": "ANT250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG250"
+          "id": "GEOG250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT202"
+          "id": "ANT202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT384"
+          "id": "ANT384",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG318"
+          "id": "GEOG318",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG333"
+          "id": "GEOG333",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "The following courses can go here: ANT310, ANT311, ANT393, GEOG328, GEOG440",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Methodological Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Methodological Elective",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: ANT310, ANT311, ANT393, GEOG328, GEOG440"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B & Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B & Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG308"
+          "id": "GEOG308",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ANT/GEOG/SOC Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ANT/GEOG/SOC Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ANT/GEOG/SOC Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any ANT/GEOG/SOC Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "List 1 Problems & Issues"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "List 1 Problems & Issues",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "List 1 Problems & Issues"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "List 1 Problems & Issues",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT360"
+          "id": "ANT360",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "The following courses can go here: GEOG300, GEOG340, GEOG370, GEOG380",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Regional Geography Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Regional Geography Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: GEOG300, GEOG340, GEOG370, GEOG380"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ANT Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ANT Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ANT Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any ANT Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: CRP334; ECON222, ECON325; POLS328; POLS/UNIV 333; SOC309, SOC431; UNIV/AG/EDES/ENGR/GEOG/ISLA/SCM 350; UNIV391, UNIV392; WLC310; Foreign Language (201) or credit for a comparable level of proficiency (4 units max).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "List 2 Problems & Issues"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "List 2 Problems & Issues",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: CRP334; ECON222, ECON325; POLS328; POLS/UNIV 333; SOC309, SOC431; UNIV/AG/EDES/ENGR/GEOG/ISLA/SCM 350; UNIV391, UNIV392; WLC310; Foreign Language (201) or credit for a comparable level of proficiency (4 units max)."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ANT Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ANT Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ANT Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any ANT Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "List 1 Problems & Issues"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "List 1 Problems & Issues",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: ANT325, ANT330, ANT334, ANT345, ANT402; GEOG/ERSC325; GEOG328, GEOG370, GEOG380, GEOG440."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, E, and GE Elective. Upper-Division B and Upper-Division C should be take only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT461"
+          "id": "ANT461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT455"
+          "id": "ANT455",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "GEOG408"
+          "id": "GEOG408",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "17-22",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT462"
+          "id": "ANT462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT465"
+          "id": "ANT465",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any GEOG Elective (300-400 level) can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GEOG Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "GEOG Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any GEOG Elective (300-400 level) can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "The following courses can go here: CRP334; ECON222, ECON325; POLS328; POLS/UNIV 333; SOC309, SOC431; UNIV/AG/EDES/ENGR/GEOG/ISLA/SCM 350; UNIV391, UNIV392; WLC310; Foreign Language (201) or credit for a comparable level of proficiency (4 units max).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "List 2 Problems & Issues"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "List 2 Problems & Issues",
+          "customUnits": "4",
+          "customDesc": "The following courses can go here: CRP334; ECON222, ECON325; POLS328; POLS/UNIV 333; SOC309, SOC431; UNIV/AG/EDES/ENGR/GEOG/ISLA/SCM 350; UNIV391, UNIV392; WLC310; Foreign Language (201) or credit for a comparable level of proficiency (4 units max)."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ANT401"
+          "id": "ANT401",
+          "color": "#F9A3D2"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "9b05b64b7ced7cb8b956ffd3b80a4753"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.089Z"
 }

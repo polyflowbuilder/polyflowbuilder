@@ -1,384 +1,391 @@
 {
-  "flowName": "15-17.48POLSBAU.GPPPOLSU",
-  "flowId": "15-17.48POLSBAU.GPPPOLSU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48POLSBAU.GPPPOLSU",
+  "programId": [
+    "5d8121e7-a304-4888-85b7-564eabd935e1"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS112"
+          "id": "POLS112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS180"
+          "id": "POLS180",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS230"
+          "id": "POLS230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS229"
+          "id": "POLS229",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS225"
+          "id": "POLS225",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: ANT 201; GEOG 150; HIST 110, 111, 222, or 223.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ANT 201; GEOG 150; HIST 110, 111, 222, or 223."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "POLS Major Course",
-          "cCustomDisplayName": "300-400 Level Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "POLS Major Course",
+          "customDisplayName": "300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "POLS Major Course",
-          "cCustomDisplayName": "300-400 Level Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "POLS Major Course",
+          "customDisplayName": "300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "POLS Major Course",
-          "cCustomDisplayName": "300-400 Level Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "POLS Major Course",
+          "customDisplayName": "300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "POLS Major Course",
-          "cCustomDisplayName": "300-400 Level Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "POLS Major Course",
+          "customDisplayName": "300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "POLS Major Course",
-          "cCustomDisplayName": "300-400 Level Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "POLS Major Course",
+          "customDisplayName": "300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any POLS Major Course can go here. A total of 4 units of either POLS 386 or POLS 387 may count toward upper division Political Science electives. A total of 4 units of either POLS 386 or POLS 387 may count towards the concentration. A total of 4 units of either PLOS 386 or POLS 387 may count toward Free Electives. Any combination of POLS 386 and POLS 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS382, POLS420.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS382 or POLS420"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS382 or POLS420",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS382, POLS420."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS359"
+          "id": "POLS359",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS361"
+          "id": "POLS361",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS308, POLS381.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS308 or POLS381"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS308 or POLS381",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS308, POLS381."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "POLS324"
+          "id": "POLS324",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS461"
+          "id": "POLS461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Options Include: POLS 285, 321, POLS/RELS 380, POLS 386 or 387, 435, or any unused course in the concentration. Max 4 units allowed for POLS 386 or POLS387 in Major Course elective and max 4 units allowed for POLS 386 or 387 in Approved Concentration Elective. Any combination of POLS 386 and 387 may be taken for a maximum of 12 units total credit for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Options Include: POLS 285, 321, POLS/RELS 380, POLS 386 or 387, 435, or any unused course in the concentration. Max 4 units allowed for POLS 386 or POLS387 in Major Course elective and max 4 units allowed for POLS 386 or 387 in Approved Concentration Elective. Any combination of POLS 386 and 387 may be taken for a maximum of 12 units total credit for the degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "POLS462"
+          "id": "POLS462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS428, POLS429.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS428 or POLS429"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS428 or POLS429",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS428, POLS429."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS426, POLS427.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS426 or POLS427"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS426 or POLS427",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS426, POLS427."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS328, POLS383.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS328 or POLS383"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS328 or POLS383",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS328, POLS383."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be selected from B1, in addition to STAT 217. No POLS class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "6b305c084429e0531b7628852c706439"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.857Z"
 }

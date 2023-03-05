@@ -1,345 +1,352 @@
 {
-  "flowName": "21-22.48ARTBFAU.SAARTU",
-  "flowId": "21-22.48ARTBFAU.SAARTU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": 184,
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.48ARTBFAU.SAARTU",
+  "programId": [
+    "ae1060f8-9ad4-46cc-abcb-f150fc970e6b"
+  ],
+  "startYear": "2021",
+  "unitTotal": "184",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART101"
+          "id": "ART101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART102"
+          "id": "ART102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART182"
+          "id": "ART182",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART103"
+          "id": "ART103",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART209"
+          "id": "ART209",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART104"
+          "id": "ART104",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART212"
+          "id": "ART212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART201"
+          "id": "ART201",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART213"
+          "id": "ART213",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART148"
+          "id": "ART148",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART302"
+          "id": "ART302",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART224"
+          "id": "ART224",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART309"
+          "id": "ART309",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART260"
+          "id": "ART260",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART203"
+          "id": "ART203",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration Elective",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART366"
+          "id": "ART366",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Art History: Select three courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art History Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art History Elective",
+          "customUnits": "4",
+          "customDesc": "Art History: Select three courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART315"
+          "id": "ART315",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART348"
+          "id": "ART348",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration Elective",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Art History: Select two courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art History Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Art History Elective",
+          "customUnits": "4",
+          "customDesc": "Art History: Select two courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART409"
+          "id": "ART409",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: ART448 or ART353.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "ART448 or ART353"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "ART448 or ART353",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ART448 or ART353."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division Art Elective course can go here. Refer to the Catalog.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Art Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Art Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Art Elective course can go here. Refer to the Catalog."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Art History: Select two courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art History Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Art History Elective",
+          "customUnits": "4",
+          "customDesc": "Art History: Select two courses from the following upper-division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART466"
+          "id": "ART466",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Diversity Elective course can go here. Refer to the Catalog.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Diversity Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Diversity Elective",
+          "customUnits": "4",
+          "customDesc": "Any Diversity Elective course can go here. Refer to the Catalog."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration Elective",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 12 units (at least 8 must be upper-division). Any ART course not already used to meet major or concentration requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART463"
+          "id": "ART463",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, E, F, and GE Electives (8). Upper-Division B and Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E. Check the Tentative Course Offerings sheet every year. Some courses may be offered only once per year or offered in a different quarter. Follow sequencing carefully."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "93bfbcf585167fa14f42caaf74ce2626"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.385Z"
 }

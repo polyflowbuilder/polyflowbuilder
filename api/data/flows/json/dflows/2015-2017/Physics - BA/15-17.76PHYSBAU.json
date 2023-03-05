@@ -1,399 +1,406 @@
 {
-  "flowName": "15-17.76PHYSBAU",
-  "flowId": "15-17.76PHYSBAU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "178-190",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.76PHYSBAU",
+  "programId": [
+    "17b0a493-709f-4fcd-9e9e-d5cbb39d42d4"
+  ],
+  "startYear": "2015",
+  "unitTotal": "178-190",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "12-14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM124"
+          "id": "CHEM124",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "0-2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "0-2",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16-18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH142"
+          "id": "MATH142",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM125"
+          "id": "CHEM125",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "0-2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "0-2",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16-17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS132"
+          "id": "PHYS132",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH143"
+          "id": "MATH143",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "0-1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "0-1",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS133"
+          "id": "PHYS133",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH241"
+          "id": "MATH241",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS211"
+          "id": "PHYS211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH244"
+          "id": "MATH244",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS206"
+          "id": "PHYS206",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS256"
+          "id": "PHYS256",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "15-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS212"
+          "id": "PHYS212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any MATH/STAT Elective (300-400 level) can go here. MATH 344 recommended.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "MATH/STAT Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "MATH/STAT Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Any MATH/STAT Elective (300-400 level) can go here. MATH 344 recommended."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3-4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS302"
+          "id": "PHYS302",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS322"
+          "id": "PHYS322",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHYS301"
+          "id": "PHYS301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHYS405, PHYS412.",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "PHYS405 or PHYS412"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "PHYS405 or PHYS412",
+          "customUnits": "3-4",
+          "customDesc": "Choose one of the following: PHYS405, PHYS412."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: HIST 350, PHIL 321, PHIL 421, SCM 451. PHIL 321 will meet the GE C4 requirement; HIST 350 will meet the D5 requirement. If one of these is selected, increase your total free electives by 4 units.",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Philosophy or Ethics Course"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Philosophy or Ethics Course",
+          "customUnits": "3-4",
+          "customDesc": "Choose one of the following: HIST 350, PHIL 321, PHIL 421, SCM 451. PHIL 321 will meet the GE C4 requirement; HIST 350 will meet the D5 requirement. If one of these is selected, increase your total free electives by 4 units."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL).",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Physics Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physics Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "3-4",
+          "customDesc": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Physics Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physics Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13-14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL).",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Physics Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physics Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "3-4",
+          "customDesc": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHYS461, PHYS463.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Senior Project",
-          "cCustomDisplayName": "PHYS461 or PHYS463"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project",
+          "customDisplayName": "PHYS461 or PHYS463",
+          "customUnits": "2",
+          "customDesc": "Choose one of the following: PHYS461, PHYS463."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL).",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Physics Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physics Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "3-4",
+          "customDesc": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL).",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Physics Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physics Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "3-4",
+          "customDesc": "Any Physics Elective (300-400 level) can go here. Select at least one of the following: PHYS 323, 340, 341, 357, 417, 422, 423, 452, ASTR 444. In addition, choose courses with the prefixes PHYS, ASTR, or GEOL (but no more than 6 units from each of ASTR and GEOL)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Total 27-29 Elective units required for the major. Be sure to take sufficient upper division (300-400 level) electives to meet the '60 unit upper division' graduation requirement."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "894a950239415045b8414b786ebcceae"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.855Z"
 }

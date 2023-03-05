@@ -1,397 +1,404 @@
 {
-  "flowName": "15-17.10AGSCBSU.EMPH-TCHCAP",
-  "flowId": "15-17.10AGSCBSU.EMPH-TCHCAP",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "179-180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.10AGSCBSU.EMPH-TCHCAP",
+  "programId": [
+    "002e8710-245f-46a4-8689-2ab2f5a47170"
+  ],
+  "startYear": "2015",
+  "unitTotal": "179-180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED102"
+          "id": "AGED102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE121"
+          "id": "BRAE121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASCI112"
+          "id": "ASCI112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "DSCI230"
+          "id": "DSCI230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AEPS120, AEPS230.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "AEPS120 or AEPS230"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "AEPS120 or AEPS230",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AEPS120, AEPS230."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB202"
+          "id": "AGB202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: MATH118, MATH119.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "MATH118 or MATH119"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "MATH118 or MATH119",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: MATH118, MATH119."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE141"
+          "id": "BRAE141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB212"
+          "id": "AGB212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM110"
+          "id": "CHEM110",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASCI225"
+          "id": "ASCI225",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AEPS150, 190, 250, or 260.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AEPS150, 190, 250, or 260."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: AGB214, BUS212.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "AGB214 or BUS212"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "AGB214 or BUS212",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AGB214, BUS212."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: DSCI231, FSN230.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "DSCI231 or FSN230"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "DSCI231 or FSN230",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: DSCI231, FSN230."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "AGED303"
+          "id": "AGED303",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SS121"
+          "id": "SS121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED404"
+          "id": "AGED404",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AG360, AG450, AG452.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AG360, AG450, AG452."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "AGED350"
+          "id": "AGED350",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB301"
+          "id": "AGB301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: NR323, NR/ES 308.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "NR323 or NR/ES308"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "NR323 or NR/ES308",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: NR323, NR/ES 308."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED460"
+          "id": "AGED460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BRAE340"
+          "id": "BRAE340",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED410"
+          "id": "AGED410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC410"
+          "id": "EDUC410",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC412"
+          "id": "EDUC412",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13-14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AGED461, AGC461.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Senior Project I",
-          "cCustomDisplayName": "AGED461 or AGC461"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project I",
+          "customDisplayName": "AGED461 or AGC461",
+          "customUnits": "1",
+          "customDesc": "Choose one of the following: AGED461, AGC461."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select 6 units from the following: AGED 220, BUS 207, ECON 222, IME 142, KINE 305, or any course with a prefix in AEPS, AG, AGB, ASCI, BRAE, DSCI, ERSC, FSN, NR, RPTA, SS, or WVIT.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Career Area Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Approved Career Area Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Select 6 units from the following: AGED 220, BUS 207, ECON 222, IME 142, KINE 305, or any course with a prefix in AEPS, AG, AGB, ASCI, BRAE, DSCI, ERSC, FSN, NR, RPTA, SS, or WVIT."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "0-1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "0-1",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: AGED462, AGC462.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Senior Project II",
-          "cCustomDisplayName": "AGED462 or AGC462"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project II",
+          "customDisplayName": "AGED462 or AGC462",
+          "customUnits": "1",
+          "customDesc": "Choose one of the following: AGED462, AGC462."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Electives can go here. 12-20 units must be at the 300-400 level. See catalog for Approved Electives Guide."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC414"
+          "id": "EDUC414",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select 6 units from the following: AGED 220, BUS 207, ECON 222, IME 142, KINE 305, or any course with a prefix in AEPS, AG, AGB, ASCI, BRAE, DSCI, ERSC, FSN, NR, RPTA, SS, or WVIT.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Approved Career Area Electives",
-          "cCustomDisplayName": "Check for Prerequisites"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Approved Career Area Electives",
+          "customDisplayName": "Check for Prerequisites",
+          "customUnits": "2",
+          "customDesc": "Select 6 units from the following: AGED 220, BUS 207, ECON 222, IME 142, KINE 305, or any course with a prefix in AEPS, AG, AGB, ASCI, BRAE, DSCI, ERSC, FSN, NR, RPTA, SS, or WVIT."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D4. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <b>One (1) course must be completed from B1, in addition to MATH 118.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "d6adce902c69139626e74a8b8e086d38"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.753Z"
 }

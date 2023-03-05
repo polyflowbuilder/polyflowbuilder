@@ -1,343 +1,351 @@
 {
-  "flowName": "20-21.52BMEDBSU.BINSBMEDU",
-  "flowId": "20-21.52BMEDBSU.BINSBMEDU",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "192-196",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.52BMEDBSU.BINSBMEDU",
+  "programId": [
+    "c324b6cc-5ee2-4f67-9a2d-cd7580a6da26"
+  ],
+  "startYear": "2020",
+  "unitTotal": "192-196",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED101"
+          "id": "BMED101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM124"
+          "id": "CHEM124",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED102"
+          "id": "BMED102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM125"
+          "id": "CHEM125",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH142"
+          "id": "MATH142",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS132"
+          "id": "PHYS132",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH143"
+          "id": "MATH143",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS133"
+          "id": "PHYS133",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH241"
+          "id": "MATH241",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ENGL149"
+          "id": "ENGL149",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED212"
+          "id": "BMED212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CSC231"
+          "id": "CSC231",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME211"
+          "id": "ME211",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH244"
+          "id": "MATH244",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "CE204"
+          "id": "CE204",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EE201"
+          "id": "EE201",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME212"
+          "id": "ME212",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "MATH344"
+          "id": "MATH344",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "EE251"
+          "id": "EE251",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "IME156"
+          "id": "IME156",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED310"
+          "id": "BMED310",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT312"
+          "id": "STAT312",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATE210"
+          "id": "MATE210",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BIO231"
+          "id": "BIO231",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED410"
+          "id": "BMED410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED460"
+          "id": "BMED460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME302"
+          "id": "ME302",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BMED355"
+          "id": "BMED355",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED420"
+          "id": "BMED420",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME341"
+          "id": "ME341",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Select from the following: BMED434, BMED515, BMED555, EE302 & EE342, EE335 & EE375.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Approved Concentration Technical Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Concentration Technical Elective",
+          "customUnits": "3-5",
+          "customDesc": "Select from the following: BMED434, BMED515, BMED555, EE302 & EE342, EE335 & EE375."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "EE228"
+          "id": "EE228",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED425"
+          "id": "BMED425",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED440"
+          "id": "BMED440",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED450"
+          "id": "BMED450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "EE328"
+          "id": "EE328",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "EE368"
+          "id": "EE368",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "17-19",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED430"
+          "id": "BMED430",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED455"
+          "id": "BMED455",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Select from the following: BMED434, BMED515, BMED555, EE302 & EE342, or EE335 & EE375.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Approved Concentration Support Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Concentration Support Elective",
+          "customUnits": "3-5",
+          "customDesc": "Select from the following: BMED434, BMED515, BMED555, EE302 & EE342, or EE335 & EE375."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED456"
+          "id": "BMED456",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BMED445"
+          "id": "BMED445",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Area D Elective, E. Upper-Division C should be taken only after junior standing is reached (90 units)."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "4d0bbe0ba8871077c498860366632dc0"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.228Z"
 }

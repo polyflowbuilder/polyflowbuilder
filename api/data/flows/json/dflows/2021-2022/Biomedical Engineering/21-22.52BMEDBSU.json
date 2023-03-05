@@ -1,362 +1,369 @@
 {
-  "flowName": "21-22.52BMEDBSU",
-  "flowId": "21-22.52BMEDBSU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": "191-192",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.52BMEDBSU",
+  "programId": [
+    "bac3010a-6691-4bf0-9157-6ebbddee7c87"
+  ],
+  "startYear": "2021",
+  "unitTotal": "191-192",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED101"
+          "id": "BMED101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM124"
+          "id": "CHEM124",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED102"
+          "id": "BMED102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH142"
+          "id": "MATH142",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM125"
+          "id": "CHEM125",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS132"
+          "id": "PHYS132",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH143"
+          "id": "MATH143",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ENGL147"
+          "id": "ENGL147",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ME228"
+          "id": "ME228",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH241"
+          "id": "MATH241",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS133"
+          "id": "PHYS133",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED212"
+          "id": "BMED212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH244"
+          "id": "MATH244",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME211"
+          "id": "ME211",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CSC231"
+          "id": "CSC231",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Support Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Support Elective",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EE201"
+          "id": "EE201",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME212"
+          "id": "ME212",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CE204"
+          "id": "CE204",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "18-19",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED310"
+          "id": "BMED310",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: CE207 or EE321.",
-          "cCustomUnits": "2-3",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "CE207 or EE321"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "CE207 or EE321",
+          "customUnits": "2-3",
+          "customDesc": "Choose one of the following: CE207 or EE321."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATE210"
+          "id": "MATE210",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BIO231 or BIO232.",
-          "cCustomUnits": "5",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "BIO231 or BIO232"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "BIO231 or BIO232",
+          "customUnits": "5",
+          "customDesc": "Choose one of the following: BIO231 or BIO232."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED410"
+          "id": "BMED410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED460"
+          "id": "BMED460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT312"
+          "id": "STAT312",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME302"
+          "id": "ME302",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED420"
+          "id": "BMED420",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Support Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Support Elective",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Technical Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Technical Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ME341"
+          "id": "ME341",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED425"
+          "id": "BMED425",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED455"
+          "id": "BMED455",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED440"
+          "id": "BMED440",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Support Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Support Elective",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Support Elective course can go here. Refer to the current catalog for course selection. Support electives must total 12 units."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED430"
+          "id": "BMED430",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED456"
+          "id": "BMED456",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BMED450"
+          "id": "BMED450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Technical Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Technical Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Curriculum",
-          "cCustomDisplayName": "Approved Technical Elective (300-400 level)"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Curriculum",
+          "customDisplayName": "Approved Technical Elective (300-400 level)",
+          "customUnits": "4",
+          "customDesc": "Any General Curriculum Approved Technical Elective (300-400 level) course can go here. Refer to the current catalog for course selection. Technical electives must total 12 units."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Area D Elective, E, F. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). USCP requirements can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "903ec7413b2861af778d7833e40685c0"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.392Z"
 }

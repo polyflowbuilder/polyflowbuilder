@@ -1,372 +1,379 @@
 {
-  "flowName": "17-19.10AGSCBSU.EMPH-INDCAP",
-  "flowId": "17-19.10AGSCBSU.EMPH-INDCAP",
-  "flowStartYear": "2017",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "17-19.10AGSCBSU.EMPH-INDCAP",
+  "programId": [
+    "31aa2a16-89dc-42fc-82a1-9b21e79289c2"
+  ],
+  "startYear": "2017",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGC102"
+          "id": "AGC102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE121"
+          "id": "BRAE121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASCI225"
+          "id": "ASCI225",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH118"
+          "id": "MATH118",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AEPS120"
+          "id": "AEPS120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASCI112"
+          "id": "ASCI112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM110"
+          "id": "CHEM110",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE141"
+          "id": "BRAE141",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "DSCI230"
+          "id": "DSCI230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB202"
+          "id": "AGB202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "DSCI231"
+          "id": "DSCI231",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one of the following: AEPS150, AEPS190, AEPS250, AEPS260.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: AEPS150, AEPS190, AEPS250, AEPS260."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB212"
+          "id": "AGB212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SS121"
+          "id": "SS121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED404"
+          "id": "AGED404",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED460"
+          "id": "AGED460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select one of the following: AGC452, AG360, AG450, AG452.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: AGC452, AG360, AG450, AG452."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "NR323"
+          "id": "NR323",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB301"
+          "id": "AGB301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BRAE340"
+          "id": "BRAE340",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED461"
+          "id": "AGED461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED410"
+          "id": "AGED410",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGED462"
+          "id": "AGED462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Emphasis Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Emphasis Electives",
+          "customUnits": "4",
+          "customDesc": "Any Approved Emphasis Elective can go here. 24 units required in Major. 12-20 units must be at the 300-400 level. See catalog for Emphasis Area."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Individualized Career Area Approved Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Individualized Career Area Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Any Individualized Career Area Approved Elective can go here. 28 units required in Support. 12-20 units must be at the 300-400 level. See catalog for Approved Electives in Career Area."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, and D5. C4 should be taken only after Junior standing is reached (90 units). Teaching candidates are advised to take KINE 250 (D4). <strong>One (1) course must be completed from B1, in addition to MATH 118.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR) requirements."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Electives"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Electives",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "fbff242401d086a94208f13aeb280977"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.875Z"
 }

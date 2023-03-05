@@ -1,351 +1,358 @@
 {
-  "flowName": "21-22.20CMBSU",
-  "flowId": "21-22.20CMBSU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": 189,
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.20CMBSU",
+  "programId": [
+    "6fbc93ab-c4d3-4771-86b6-b928cc16b976"
+  ],
+  "startYear": "2021",
+  "unitTotal": "189",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM102"
+          "id": "CM102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDES123"
+          "id": "EDES123",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM113"
+          "id": "CM113",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM114"
+          "id": "CM114",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH182"
+          "id": "MATH182",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM115"
+          "id": "CM115",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: PHYS132, CHEM124, and CHEM127.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "PHYS/CHEM",
-          "cCustomDisplayName": "Choose One"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "PHYS/CHEM",
+          "customDisplayName": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHYS132, CHEM124, and CHEM127."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BRAE239, or CM239.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Surveying",
-          "cCustomDisplayName": "BRAE239 or CM239"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Surveying",
+          "customDisplayName": "BRAE239 or CM239",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BRAE239, or CM239."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM214"
+          "id": "CM214",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM232"
+          "id": "CM232",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM280"
+          "id": "CM280",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE211"
+          "id": "ARCE211",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BUS207"
+          "id": "BUS207",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM334"
+          "id": "CM334",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ECON201"
+          "id": "ECON201",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BUS212, or BUS214.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "BUS212 or BUS214"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "BUS212 or BUS214",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BUS212, or BUS214."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE212"
+          "id": "ARCE212",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM313"
+          "id": "CM313",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE226"
+          "id": "ARCE226",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: STAT251, or STAT312.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Statistics",
-          "cCustomDisplayName": "STAT251 or STAT312"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Statistics",
+          "customDisplayName": "STAT251 or STAT312",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT251, or STAT312."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BUS215"
+          "id": "BUS215",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM413"
+          "id": "CM413",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM335"
+          "id": "CM335",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM318"
+          "id": "CM318",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE315"
+          "id": "ARCE315",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM317"
+          "id": "CM317",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Technical Elective course can go here.</p><p>Technical Electives. Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Technical Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Technical Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Technical Elective course can go here.</p><p>Technical Electives. Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "GEOL201"
+          "id": "GEOL201",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM314"
+          "id": "CM314",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM460"
+          "id": "CM460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ENGL310"
+          "id": "ENGL310",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM411"
+          "id": "CM411",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Technical Elective course can go here.</p><p>Technical Electives. Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Technical Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Technical Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Technical Elective course can go here.</p><p>Technical Electives. Select 8 units from CM Technical Electives: CM420, CM421, CM422, CM423, CM424, CM425, CM426, and CM485.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM443"
+          "id": "CM443",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper-Division BUS, ECON, or ITP course can go here. Refer to the current catalog for prerequisites.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Div BUS, ECON, or ITP Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper-Div BUS, ECON, or ITP Course",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division BUS, ECON, or ITP course can go here. Refer to the current catalog for prerequisites."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE421"
+          "id": "ARCE421",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM450"
+          "id": "CM450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM461"
+          "id": "CM461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CM462"
+          "id": "CM462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, Lower-Division C, Upper-Division C, D1, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR). <b>Quarterly advisor meetings are required prior to registration.</b>"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "7d7e8dff230fe47a42ca8bcac9ce7185"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.410Z"
 }

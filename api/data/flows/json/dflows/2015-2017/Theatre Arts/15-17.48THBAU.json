@@ -1,384 +1,391 @@
 {
-  "flowName": "15-17.48THBAU",
-  "flowId": "15-17.48THBAU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48THBAU",
+  "programId": [
+    "817862d6-c08e-4beb-af40-4b1a57b01dcc"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH101"
+          "id": "TH101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH210"
+          "id": "TH210",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH220"
+          "id": "TH220",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH225, TH230. Both TH225 and 230 are required for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "TH225 or TH230"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "TH225 or TH230",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH225, TH230. Both TH225 and 230 are required for the degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH290, TH295. Both TH 290 and 295 are required for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "TH290 or TH295"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "TH290 or TH295",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH290, TH295. Both TH 290 and 295 are required for the degree."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH227"
+          "id": "TH227",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH260, 270, or DANC/TH 280.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "TH260, 270, or TH280"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "TH260, 270, or TH280",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH260, 270, or DANC/TH 280."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH228"
+          "id": "TH228",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following that you haven't taken yet: TH225, TH230. Both TH225 and 230 are required for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose Course Not Previously Taken",
-          "cCustomDisplayName": "TH225 or TH230"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose Course Not Previously Taken",
+          "customDisplayName": "TH225 or TH230",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following that you haven't taken yet: TH225, TH230. Both TH225 and 230 are required for the degree."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one (1) lower division Support: Any 100-200 level ARCH, DANC, MU or ISLA 240.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Lower Division Support"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Lower Division Support",
+          "customUnits": "4",
+          "customDesc": "Choose one (1) lower division Support: Any 100-200 level ARCH, DANC, MU or ISLA 240."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following that you haven't taken yet: TH290, TH295. Both TH290 and 295 are required for the degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose Course Not Previously Taken",
-          "cCustomDisplayName": "TH290 or TH295"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose Course Not Previously Taken",
+          "customDisplayName": "TH290 or TH295",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following that you haven't taken yet: TH290, TH295. Both TH290 and 295 are required for the degree."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH240, 260, 270, 275, 280. If not used to meet major core requirements, may be used to meet other major electives. See catalog. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Lower Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Lower Division Theatre",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH240, 260, 270, 275, 280. If not used to meet major core requirements, may be used to meet other major electives. See catalog. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH305"
+          "id": "TH305",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH430, TH432.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre",
-          "cCustomDisplayName": "TH430 or TH432"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customDisplayName": "TH430 or TH432",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH430, TH432."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH350"
+          "id": "TH350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ENGL339"
+          "id": "ENGL339",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division free elective can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH325, TH330. If not used to meet major core requirements, may be used to meet other major electives. See catalog. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre",
-          "cCustomDisplayName": "TH325 or TH330"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customDisplayName": "TH325 or TH330",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH325, TH330. If not used to meet major core requirements, may be used to meet other major electives. See catalog. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\r\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\r\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH461"
+          "id": "TH461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division Free Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Free Elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: TH 305, 325, 330, 341, 345, 360, 370, 380, 390, 400, 430, 432, 434, 470, 471, 480. Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH 275, 325, 330, 341, 400, 470, 471)."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: LS 310; any 300-400 level ARCH, DANC, ENGL, ISLA, MU.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Support"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division Support",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LS 310; any 300-400 level ARCH, DANC, ENGL, ISLA, MU."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division Free Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Free Elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH450"
+          "id": "TH450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, D1, D2, D3, D4, D5, and F. D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2)</b> courses must be completed from GE B1. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "57b9c369cafe7be6d94a2706c22984cd"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.869Z"
 }

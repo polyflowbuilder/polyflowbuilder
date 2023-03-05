@@ -1,390 +1,397 @@
 {
-  "flowName": "21-22.48PHILBAU",
-  "flowId": "21-22.48PHILBAU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": 180,
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.48PHILBAU",
+  "programId": [
+    "168af5a8-771c-4fc0-81d1-da975e06882d"
+  ],
+  "startYear": "2021",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL101"
+          "id": "PHIL101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL126"
+          "id": "PHIL126",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL230, or PHIL231.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "PHIL230 or PHIL231"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "PHIL230 or PHIL231",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL230, or PHIL231."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL230, or PHIL231.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "PHIL230 or PHIL231"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "PHIL230 or PHIL231",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL230, or PHIL231."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL241"
+          "id": "PHIL241",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Philosophy Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Philosophy Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL309, PHIL310, or PHIL312.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "History of Philosophy Elective",
-          "cCustomDisplayName": "PHIL309, PHIL310, or PHIL312"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "History of Philosophy Elective",
+          "customDisplayName": "PHIL309, PHIL310, or PHIL312",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL309, PHIL310, or PHIL312."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL313, PHIL314, or PHIL315.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "History of Philosophy Elective",
-          "cCustomDisplayName": "PHIL313, PHIL314, or PHIL315"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "History of Philosophy Elective",
+          "customDisplayName": "PHIL313, PHIL314, or PHIL315",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL313, PHIL314, or PHIL315."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL331"
+          "id": "PHIL331",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, C1, Upper-Division C, D1, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL317, PHIL318, or PHIL319.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "History of Philosophy",
-          "cCustomDisplayName": "PHIL317, PHIL318, or PHIL319"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "History of Philosophy",
+          "customDisplayName": "PHIL317, PHIL318, or PHIL319",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL317, PHIL318, or PHIL319."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Philosophy Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Philosophy Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any History of Philosophy Elective course can go here. Choose course from previous selections.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "History of Philosophy Elective",
-          "cCustomDisplayName": "Choose Course From Previous Selections"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "History of Philosophy Elective",
+          "customDisplayName": "Choose Course From Previous Selections",
+          "customUnits": "4",
+          "customDesc": "Any History of Philosophy Elective course can go here. Choose course from previous selections."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Philosophy Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Philosophy Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL231"
+          "id": "PHIL231",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Art and Humanities Breadth course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art and Humanities Breadth"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Art and Humanities Breadth",
+          "customUnits": "4",
+          "customDesc": "Any Art and Humanities Breadth course can go here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL459"
+          "id": "PHIL459",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL411"
+          "id": "PHIL411",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL460"
+          "id": "PHIL460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Philosophy Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Philosophy Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL412"
+          "id": "PHIL412",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL461"
+          "id": "PHIL461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Philosophy Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Philosophy Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Upper-Division Philosophy Elective course can go here.</p><p>At least 12 units of the 20 must be 400-level if the PHIL electives option is chosen rather than the concentration.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "9afba62143de9a1e8d6edb8a1bb88e53"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.532Z"
 }

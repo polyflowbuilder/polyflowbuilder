@@ -5,7 +5,8 @@ import http from 'http';
 import { JSDOM } from 'jsdom';
 import { v4 as uuid } from 'uuid';
 
-import { apiRoot, asyncWait, nthIndex, fetchRetry } from './common.js';
+import { apiRoot, asyncWait, nthIndex, fetchRetry, getFiles } from './common';
+import { updateFlowchartDataVersionToV7 } from './util/user-data-model-sync';
 import type { Program } from '@prisma/client';
 
 type TemplateFlowchartMetadata = {
@@ -267,6 +268,29 @@ function createJSONFiles() {
   }
 }
 
-scrapeTemplateFlowMetadata();
+async function updateTemplateFlowchartsToLatestDataVersion() {
+  const allProgramData: TemplateFlowchartMetadata = JSON.parse(
+    fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
+  );
+  for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
+    if (path.extname(f) === '.json') {
+      console.log(`attempt data version update for flowchart ${f}`);
+      try {
+        // read, update, and write back out
+        const templateFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
+        const updatedTemplateFlowData = updateFlowchartDataVersionToV7(
+          allProgramData.flows,
+          templateFlowData
+        );
+        fs.writeFileSync(f, JSON.stringify(updatedTemplateFlowData, null, 2));
+      } catch {
+        console.log('error with updating flowchart (most likely file is empty)');
+      }
+    }
+  }
+}
+
+// scrapeTemplateFlowMetadata();
 //downloadPDFsFromLinks();
 // createJSONFiles();
+updateTemplateFlowchartsToLatestDataVersion();

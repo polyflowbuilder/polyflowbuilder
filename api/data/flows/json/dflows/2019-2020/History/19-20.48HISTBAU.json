@@ -1,383 +1,391 @@
 {
-  "flowName": "19-20.48HISTBAU",
-  "flowId": "19-20.48HISTBAU",
-  "flowStartYear": "2019",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "19-20.48HISTBAU",
+  "programId": [
+    "1fa13838-a4c3-4456-a78c-b3b249c37479"
+  ],
+  "startYear": "2019",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST100"
+          "id": "HIST100",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Recommended: Foreign Language 101 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 101"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 101",
+          "customUnits": "4",
+          "customDesc": "Recommended: Foreign Language 101 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST110"
+          "id": "HIST110",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST111"
+          "id": "HIST111",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Recommended: Foreign Language 102 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 102"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 102",
+          "customUnits": "4",
+          "customDesc": "Recommended: Foreign Language 102 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST201"
+          "id": "HIST201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Recommended: Foreign Language 103 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 103"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 103",
+          "customUnits": "4",
+          "customDesc": "Recommended: Foreign Language 103 or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Languages & Literature Department for language placement information."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST202"
+          "id": "HIST202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Language & Literature Department for language placement information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Foreign Language",
-          "cCustomDisplayName": "Language 201"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Foreign Language",
+          "customDisplayName": "Language 201",
+          "customUnits": "4",
+          "customDesc": "Or other language approved by the History Department. Students with fewer than three years of high school instruction in the chosen language should start at an earlier level before attempting 201. See Modern Language & Literature Department for language placement information."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST221"
+          "id": "HIST221",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free elective may need to be 300-400 level to ensure completion of required 60 minimum units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free elective may need to be 300-400 level to ensure completion of required 60 minimum units of upper division. Consult college advisor for more information."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST213"
+          "id": "HIST213",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Elective. Courses in Upper-Division C should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST303"
+          "id": "HIST303",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "Non-US / Non-European HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "Non-US / Non-European HIST",
+          "customUnits": "4",
+          "customDesc": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select any Upper-Division D course not in HIST.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Society and the Individual Breadth"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Society and the Individual Breadth",
+          "customUnits": "4",
+          "customDesc": "Select any Upper-Division D course not in HIST."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST304"
+          "id": "HIST304",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "Non-US / Non-European HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "Non-US / Non-European HIST",
+          "customUnits": "4",
+          "customDesc": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "HIST",
+          "customUnits": "4",
+          "customDesc": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "5",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "5",
+          "customDesc": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirements after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirements after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "HIST",
+          "customUnits": "4",
+          "customDesc": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST460"
+          "id": "HIST460",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "HIST",
+          "customUnits": "4",
+          "customDesc": "<strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST461"
+          "id": "HIST461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "</strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Elective",
-          "cCustomDisplayName": "Non-US / Non-European HIST"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Elective",
+          "customDisplayName": "Non-US / Non-European HIST",
+          "customUnits": "4",
+          "customDesc": "</strong>Minimum of 12 units</strong> must be selected at the 400 level. HIST400, HIST467, HIST485, HIST495 cannot count towards the 24 units of History electives. <strong>Minimum of 12 units to be selected from Non-US, Non-European HIST courses (see catalog for list of options).</strong>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division 300-400 Level Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division 300-400 Level Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division 300-400 Level Elective can go here (including HIST). Upper Division GE courses taken for a letter grade satisfy Major or Support course requirements which may require additional units of Free Electives to complete the 180 unit total degree requirement. Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. Consult college advisor for more information."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "93382a9b7d50ac3e33db38d2a2b07ebc"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.137Z"
 }

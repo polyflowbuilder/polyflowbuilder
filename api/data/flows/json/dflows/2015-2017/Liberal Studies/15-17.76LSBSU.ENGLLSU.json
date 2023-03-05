@@ -1,335 +1,342 @@
 {
-  "flowName": "15-17.76LSBSU.ENGLLSU",
-  "flowId": "15-17.76LSBSU.ENGLLSU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.76LSBSU.ENGLLSU",
+  "programId": [
+    "944a7506-65a7-4553-98db-9e4e6ba2a9ad"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS101"
+          "id": "LS101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC101"
+          "id": "PSC101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST208"
+          "id": "HIST208",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS214"
+          "id": "LS214",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC102"
+          "id": "PSC102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS230"
+          "id": "LS230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS211"
+          "id": "LS211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC103"
+          "id": "PSC103",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: STAT130, STAT217. Required in Major; also satisfies GE.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Statistics",
-          "cCustomDisplayName": "STAT130 or STAT217"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Statistics",
+          "customDisplayName": "STAT130 or STAT217",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT130, STAT217. Required in Major; also satisfies GE."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH227"
+          "id": "MATH227",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO111"
+          "id": "BIO111",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST210"
+          "id": "HIST210",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS260"
+          "id": "LS260",
+          "color": "#FEFD9A"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH328"
+          "id": "MATH328",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO211"
+          "id": "BIO211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PSY201, PSY202. Required in Major; also satisfies GE.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Psychology",
-          "cCustomDisplayName": "PSY201 or PSY202"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Psychology",
+          "customDisplayName": "PSY201 or PSY202",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PSY201, PSY202. Required in Major; also satisfies GE."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS250"
+          "id": "LS250",
+          "color": "#FEFD9A"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH329"
+          "id": "MATH329",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASTR101"
+          "id": "ASTR101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CD207"
+          "id": "CD207",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH330"
+          "id": "MATH330",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG308"
+          "id": "GEOG308",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL391"
+          "id": "ENGL391",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS310"
+          "id": "LS310",
+          "color": "#FEFD9A"
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS370"
+          "id": "LS370",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: ENGL302, ENGL317.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "ENGL302 or ENGL317"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "ENGL302 or ENGL317",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL302, ENGL317."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "KINE310"
+          "id": "KINE310",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ENGL339"
+          "id": "ENGL339",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "KINE443"
+          "id": "KINE443",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ENGL390"
+          "id": "ENGL390",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LS410, LS412.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "LS410 or LS412"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "LS410 or LS412",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LS410, LS412."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ENGL365"
+          "id": "ENGL365",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, D1, D2, and F. C4, and F should be taken only after Junior standing is reached (90 units). Please note that some GEs can overlap with chosen concentration or minor. Please consult with an advisor for more information. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program.",
-          "cID": null,
-          "cCustomID": "Visit the School of Education"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "Visit the School of Education",
+          "customDesc": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LS461, LS462.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Senior Project",
-          "cCustomDisplayName": "LS461 or LS462"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project",
+          "customDisplayName": "LS461 or LS462",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LS461, LS462."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Select from the following courses (4 units): British Literature: ENGL 330, 331, 332, 333, 334, 335; American Literature: ENGL 340, 341, 342, 343, 345, 346, 347; Modern English: ENGL 350, 351, 352.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Concentration Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Concentration Elective",
+          "customUnits": "4",
+          "customDesc": "Select from the following courses (4 units): British Literature: ENGL 330, 331, 332, 333, 334, 335; American Literature: ENGL 340, 341, 342, 343, 345, 346, 347; Modern English: ENGL 350, 351, 352."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC427"
+          "id": "EDUC427",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC428"
+          "id": "EDUC428",
+          "color": "#FCD09E"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "7fa91888915884022f580d423b43ce0b"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.838Z"
 }

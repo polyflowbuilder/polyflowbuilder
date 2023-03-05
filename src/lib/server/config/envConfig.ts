@@ -8,9 +8,6 @@ const logger = initLogger('Config/EnvConfig');
 
 export let FULL_VERSION_STRING = 'unknown';
 
-// see flowchartSchema for details
-export const dataModelVersion = 7;
-
 // session max age in seconds
 export const SESSION_MAX_AGE = 60 * 60 * 24;
 

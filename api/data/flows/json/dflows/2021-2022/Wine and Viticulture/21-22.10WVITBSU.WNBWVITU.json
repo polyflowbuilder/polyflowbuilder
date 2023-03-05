@@ -1,338 +1,345 @@
 {
-  "flowName": "21-22.10WVITBSU.WNBWVITU",
-  "flowId": "21-22.10WVITBSU.WNBWVITU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": "178-182",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.10WVITBSU.WNBWVITU",
+  "programId": [
+    "864f8140-5e10-42ee-95ce-b000832d0c03"
+  ],
+  "startYear": "2021",
+  "unitTotal": "178-182",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT102"
+          "id": "WVIT102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SS120"
+          "id": "SS120",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: STAT218, or ECON222. STAT218 and ECON222 are each required and cannot be repeated for credit.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "STAT218 or ECON222"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "STAT218 or ECON222",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT218, or ECON222. STAT218 and ECON222 are each required and cannot be repeated for credit."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM127"
+          "id": "CHEM127",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BOT121"
+          "id": "BOT121",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "AGB214"
+          "id": "AGB214",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT202"
+          "id": "WVIT202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: MATH161, MATH141, or MATH221.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "Calculus"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "Calculus",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: MATH161, MATH141, or MATH221."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "AGB212"
+          "id": "AGB212",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16-17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT233"
+          "id": "WVIT233",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>8-10 units of Approved Electives. Consultation with an advisor is recommended prior to selecting approved electives; bear in mind your selections may impact the pursuit of post-baccalaureate studies and/or goals. A maximum of 8 units of foreign language may be counted toward approved electives.</p>",
-          "cCustomUnits": "4-5",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4-5",
+          "customDesc": "<p>Any Approved Elective course can go here.</p><p>8-10 units of Approved Electives. Consultation with an advisor is recommended prior to selecting approved electives; bear in mind your selections may impact the pursuit of post-baccalaureate studies and/or goals. A maximum of 8 units of foreign language may be counted toward approved electives.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT343"
+          "id": "WVIT343",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: STAT218, or ECON222. STAT218 and ECON222 are each required and cannot be repeated for credit.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "STAT218 or ECON222"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "STAT218 or ECON222",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT218, or ECON222. STAT218 and ECON222 are each required and cannot be repeated for credit."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "AGB310"
+          "id": "AGB310",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "AGB260"
+          "id": "AGB260",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT331"
+          "id": "WVIT331",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "AGB323"
+          "id": "AGB323",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BRAE340"
+          "id": "BRAE340",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT345"
+          "id": "WVIT345",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "RPTA320"
+          "id": "RPTA320",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT433"
+          "id": "WVIT433",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT423"
+          "id": "WVIT423",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT344"
+          "id": "WVIT344",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: WVIT302, or WVIT404.",
-          "cCustomUnits": "2-4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "WVIT302 or WVIT404"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "WVIT302 or WVIT404",
+          "customUnits": "2-4",
+          "customDesc": "Choose one of the following: WVIT302, or WVIT404."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomUnits": "4",
-          "cID": "WVIT339"
+          "id": "WVIT339",
+          "color": "#FEFD9A",
+          "customUnits": "4"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Approved Elective course can go here.</p><p>8-10 units of Approved Electives. Consultation with an advisor is recommended prior to selecting approved electives; bear in mind your selections may impact the pursuit of post-baccalaureate studies and/or goals. A maximum of 8 units of foreign language may be counted toward approved electives.</p>",
-          "cCustomUnits": "4-5",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4-5",
+          "customDesc": "<p>Any Approved Elective course can go here.</p><p>8-10 units of Approved Electives. Consultation with an advisor is recommended prior to selecting approved electives; bear in mind your selections may impact the pursuit of post-baccalaureate studies and/or goals. A maximum of 8 units of foreign language may be counted toward approved electives.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT442"
+          "id": "WVIT442",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: AGB369, or BUS384.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "AGB369 or BUS384"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "AGB369 or BUS384",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: AGB369, or BUS384."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT450"
+          "id": "WVIT450",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT447"
+          "id": "WVIT447",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "WVIT463"
+          "id": "WVIT463",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "WVIT460"
+          "id": "WVIT460",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C Elective, Upper-Division C, D1, Upper-Division D, E, F and GE Elective. Upper-Division C and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>NOTE: GE Area B2 is included in concentrations.</b> Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "3bde39cc598d728ceb64cfcb93a9b1b4"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.555Z"
 }

@@ -1,351 +1,359 @@
 {
-  "flowName": "20-21.76BIOBSU.MCBBIOU",
-  "flowId": "20-21.76BIOBSU.MCBBIOU",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "179-185",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.76BIOBSU.MCBBIOU",
+  "programId": [
+    "3f1ab9db-cb0d-424f-85c0-69966a5edfb2"
+  ],
+  "startYear": "2020",
+  "unitTotal": "179-185",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO160"
+          "id": "BIO160",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM127"
+          "id": "CHEM127",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH161"
+          "id": "MATH161",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM128"
+          "id": "CHEM128",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2",
+          "customDesc": "5 units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO162"
+          "id": "BIO162",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH162"
+          "id": "MATH162",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM129"
+          "id": "CHEM129",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "5 Units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "5 Units of Free Electives required. SCM150 workshops for Math/Science courses recommended for remaining units."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO263"
+          "id": "BIO263",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CHEM216"
+          "id": "CHEM216",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "MCRO224"
+          "id": "MCRO224",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO351"
+          "id": "BIO351",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT218"
+          "id": "STAT218",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "CHEM217"
+          "id": "CHEM217",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "CHEM220"
+          "id": "CHEM220",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: BIO327, BIO363, BIO442; BOT326; MCRO436; MSCI300.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Ecology"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Ecology",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BIO327, BIO363, BIO442; BOT326; MCRO436; MSCI300."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: BIO361, BIO434, BIO435.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Physiology"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Physiology",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BIO361, BIO434, BIO435."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS121"
+          "id": "PHYS121",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "CHEM475"
+          "id": "CHEM475",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Advanced Cell & Molecular Applications"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Advanced Cell & Molecular Applications",
+          "customUnits": "3-5",
+          "customDesc": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "15-17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS122"
+          "id": "PHYS122",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Advanced Cell & Molecular Applications"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Advanced Cell & Molecular Applications",
+          "customUnits": "3-5",
+          "customDesc": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "15-17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS123"
+          "id": "PHYS123",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Advanced Cell & Molecular Applications"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Advanced Cell & Molecular Applications",
+          "customUnits": "3-5",
+          "customDesc": "10 units of Advanced Cell & Molecular Applications required. Select from the following: ASCI403; BIO405, BIO426, BIO428; BIO/CHEM 411, BIO/CHEM 476; CHEM372, CHEM418, CHEM474; MCRO402, MCRO433. Consultation with advisor is recommended. Excess units will be applied to Additional Electives requirement."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO462"
+          "id": "BIO462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "CHEM371"
+          "id": "CHEM371",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "BIO452"
+          "id": "BIO452",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO413"
+          "id": "BIO413",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "12 units of Approved Electives required. See catalog for course options. Consultation with advisor is recommended prior to selecting approved electives. No double-counting with other major requirements."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, Upper-Division B, C1, C2, Lower-Division C Elective, Upper-Division C, D1, D2, D2, Upper-Division D, E, and GE Electives. Upper-Division B, Upper-Division C, and Upper-Division D should be taken only after junior standing is reached (90 units)."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "1d4895d1f849ec9f974a8eebf05c6e9a"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.227Z"
 }

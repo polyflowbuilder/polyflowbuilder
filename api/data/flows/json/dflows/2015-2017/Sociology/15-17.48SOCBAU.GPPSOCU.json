@@ -1,359 +1,366 @@
 {
-  "flowName": "15-17.48SOCBAU.GPPSOCU",
-  "flowId": "15-17.48SOCBAU.GPPSOCU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48SOCBAU.GPPSOCU",
+  "programId": [
+    "f29e95b9-b0a6-4099-a83e-44db3bbffc91"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC110"
+          "id": "SOC110",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ANT201"
+          "id": "ANT201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG150"
+          "id": "GEOG150",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC111"
+          "id": "SOC111",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC218"
+          "id": "SOC218",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC355"
+          "id": "SOC355",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC315"
+          "id": "SOC315",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC316"
+          "id": "SOC316",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC311"
+          "id": "SOC311",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "POLS420"
+          "id": "POLS420",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D3, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). <b>One (1) course must be completed from B1, in addition to STAT 217. No SOC class may be taken to fulfill GE D5.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Sociology Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Sociology Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration)."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS308, POLS381.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "POLS308 or POLS381"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Choose One",
+          "customDisplayName": "POLS308 or POLS381",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS308, POLS381."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "POLS324"
+          "id": "POLS324",
+          "color": "#F9A3D2"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC421"
+          "id": "SOC421",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC354"
+          "id": "SOC354",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS 285, 321, 380, 384, 386 or 387, 435, POLS/RELS 380, any unused course in the concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS 285, 321, 380, 384, 386 or 387, 435, POLS/RELS 380, any unused course in the concentration."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC461"
+          "id": "SOC461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Sociology Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Sociology Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC323"
+          "id": "SOC323",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS428, POLS429.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Issues & Topics",
-          "cCustomDisplayName": "POLS428 or POLS429"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Issues & Topics",
+          "customDisplayName": "POLS428 or POLS429",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS428, POLS429."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "SOC462"
+          "id": "SOC462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Sociology Elective",
-          "cCustomDisplayName": "300-400 Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Sociology Elective",
+          "customDisplayName": "300-400 Level",
+          "customUnits": "4",
+          "customDesc": "Select from the following Applications and Issues courses: POLS 245, 344; PSY 352, 375, 460; SOC 301, 395, 413, 440. (Note: SOC 440 can only be taken for 12 units max within concentration)."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "POLS383"
+          "id": "POLS383",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Choose one of the following: POLS426, POLS427.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "International Organization & Law",
-          "cCustomDisplayName": "POLS426 or POLS427"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "International Organization & Law",
+          "customDisplayName": "POLS426 or POLS427",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: POLS426, POLS427."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "d15d2416bff69b246b8c6290768af1de"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.864Z"
 }

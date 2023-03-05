@@ -1,371 +1,378 @@
 {
-  "flowName": "17-19.48JOURBSU.EMPH-NEWS",
-  "flowId": "17-19.48JOURBSU.EMPH-NEWS",
-  "flowStartYear": "2017",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "17-19.48JOURBSU.EMPH-NEWS",
+  "programId": [
+    "3664ba77-94bc-4079-ad2c-fb1860778002"
+  ],
+  "startYear": "2017",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR102"
+          "id": "JOUR102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR203"
+          "id": "JOUR203",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR285"
+          "id": "JOUR285",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT130"
+          "id": "STAT130",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR218"
+          "id": "JOUR218",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "News Track Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "News Track Elective",
+          "customUnits": "4",
+          "customDesc": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "News Track Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "News Track Elective",
+          "customUnits": "4",
+          "customDesc": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Journalism/Media/Mass Communication Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Journalism/Media/Mass Communication Elective",
+          "customUnits": "4",
+          "customDesc": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR302"
+          "id": "JOUR302",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: JOUR303, JOUR350, JOUR390, JOUR410.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Media Technologies"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Media Technologies",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: JOUR303, JOUR350, JOUR390, JOUR410."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "News Track Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "News Track Elective",
+          "customUnits": "4",
+          "customDesc": "Select three courses from the following (12 units): JOUR304, JOUR333, JOUR334, JOUR346, JOUR348, JOUR407."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Journalism/Media/Mass Communication Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Journalism/Media/Mass Communication Elective",
+          "customUnits": "4",
+          "customDesc": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: JOUR303, JOUR350, JOUR390, JOUR410.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Media Technologies"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Media Technologies",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: JOUR303, JOUR350, JOUR390, JOUR410."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR402"
+          "id": "JOUR402",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR219"
+          "id": "JOUR219",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR352"
+          "id": "JOUR352",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Journalism/Media/Mass Communication Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Journalism/Media/Mass Communication Elective",
+          "customUnits": "4",
+          "customDesc": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR353"
+          "id": "JOUR353",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR462"
+          "id": "JOUR462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Journalism/Media/Mass Communication Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Journalism/Media/Mass Communication Elective",
+          "customUnits": "4",
+          "customDesc": "Select any JOUR courses not already used in major, or select from JOUR/Media/Mass Communications Electives in catalog. 16 units maximum of Media/Mass Comm Electives. This is particularly relevant to students pursuing minors in Agricultural Communication; Art & Design; Communication Studies; English; Graphic Communication; Integrated Marketing Communications; and Media Arts, Society, and Technology."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Upper Division Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Upper Division Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "11",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "JOUR444"
+          "id": "JOUR444",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Students encouraged to pursue minors or develop other areas of interest outside of Journalism, Media, Mass Communication through 36 Approved Elective units. At least 24 units must be upper-division courses with a lecture or seminar component. See Catalog for other restrictions. This excludes activity-only, lab-only, or supervision courses such as internships. No courses in Journalism/Media/Mass Communication, or some related courses offered by other departments. See restricted list in catalog.</p><p>If courses meeting GE requirements are used to satisfy Major requirements, additional units of free electives may be needed to satisfy the requirement of 180 units for the degree. No courses in JOUR/Media/Mass Communications. See restricted list in catalog.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>One (1)</strong> course must be completed from B1, in addition to STAT130, STAT217, STAT218 or STAT251. Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "ff980122442dc12adffe46f2755473ec"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.971Z"
 }

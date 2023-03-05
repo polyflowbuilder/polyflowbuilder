@@ -1,358 +1,366 @@
 {
-  "flowName": "19-20.48THBAU",
-  "flowId": "19-20.48THBAU",
-  "flowStartYear": "2019",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "19-20.48THBAU",
+  "programId": [
+    "92bc1a0a-d74b-4b44-baca-4a55e25fd9a2"
+  ],
+  "startYear": "2019",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH101"
+          "id": "TH101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH210"
+          "id": "TH210",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH227"
+          "id": "TH227",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH220"
+          "id": "TH220",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH290"
+          "id": "TH290",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH225"
+          "id": "TH225",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH228"
+          "id": "TH228",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Select one of the following: TH240, TH245, TH260, TH270, TH280, TH285.</p><p>If not used to meet major core requirements, may be used to meet other major electives. See catalog.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Lower Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Lower Division Theatre",
+          "customUnits": "4",
+          "customDesc": "<p>Select one of the following: TH240, TH245, TH260, TH270, TH280, TH285.</p><p>If not used to meet major core requirements, may be used to meet other major electives. See catalog.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH270"
+          "id": "TH270",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH230"
+          "id": "TH230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH295"
+          "id": "TH295",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select one of the following: Any 100-200 level ARCH, ART, DANC, MU, or ISLA 240.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Lower Division Support"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Lower Division Support",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: Any 100-200 level ARCH, ART, DANC, MU, or ISLA 240."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH430"
+          "id": "TH430",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ENGL339"
+          "id": "ENGL339",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH350"
+          "id": "TH350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH305"
+          "id": "TH305",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "<p>Select one of the following: TH305, TH325, TH330, TH341, TH345, TH360, TH370, TH380, TH390, TH400, TH430, TH432, TH434, TH470, TH471, TH480.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Select one of the following: TH325, TH330.</p><p>If not used to meet major core requirements, may be used to meet other major electives. See catalog.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Theatre"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Theatre",
+          "customUnits": "4",
+          "customDesc": "<p>Select one of the following: TH325, TH330.</p><p>If not used to meet major core requirements, may be used to meet other major electives. See catalog.</p><p>Repeatable courses, if taken twice with different topics, can be used to meet major electives as well as major core requirements (TH275, TH305, TH325, TH330, TH341, TH400, TH470, TH471, TH480).</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH461"
+          "id": "TH461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select one of the following: LS310; any 300-400 level ARCH, ART, DANC, ENGL, ISLA, MU.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Support"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Upper Division Support",
+          "customUnits": "4",
+          "customDesc": "Select one of the following: LS310; any 300-400 level ARCH, ART, DANC, ENGL, ISLA, MU."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Upper Division Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Free Elective can go here. At least 9 units of Free Electives must be Upper Division (300-400 level) to meet graduation requirements."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "TH450"
+          "id": "TH450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C2, Lower-Division C Elective, D1, D2, D2, Upper-Division D, E, and GE Elective. Upper-Division B and Upper-Division D should be taken only after junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "60f4ebc454870c9d621b4edd51ba442f"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.200Z"
 }

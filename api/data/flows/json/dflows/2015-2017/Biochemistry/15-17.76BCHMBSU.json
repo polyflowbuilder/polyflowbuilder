@@ -1,389 +1,396 @@
 {
-  "flowName": "15-17.76BCHMBSU",
-  "flowId": "15-17.76BCHMBSU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "177-183",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.76BCHMBSU",
+  "programId": [
+    "6c3869fa-7989-4541-8b23-724f1dba7b7b"
+  ],
+  "startYear": "2015",
+  "unitTotal": "177-183",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM124"
+          "id": "CHEM124",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM125"
+          "id": "CHEM125",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH142"
+          "id": "MATH142",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "BIO161"
+          "id": "BIO161",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM126"
+          "id": "CHEM126",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH143"
+          "id": "MATH143",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS141"
+          "id": "PHYS141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM216"
+          "id": "CHEM216",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM331"
+          "id": "CHEM331",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS132"
+          "id": "PHYS132",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM217"
+          "id": "CHEM217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM221"
+          "id": "CHEM221",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS133"
+          "id": "PHYS133",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM218"
+          "id": "CHEM218",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM324"
+          "id": "CHEM324",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM371"
+          "id": "CHEM371",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "15-17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM372"
+          "id": "CHEM372",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: BIO 361, BIO 476, CHEM 439, CHEM 474. The Biochemistry/Chemistry Department recommends CHEM 474 be taken as the Advanced Lab option. Excess units count as approved Advanced Biochemistry electives.",
-          "cCustomUnits": "3-5",
-          "cID": null,
-          "cCustomID": "Advanced Lab"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Advanced Lab",
+          "customUnits": "3-5",
+          "customDesc": "Choose one of the following: BIO 361, BIO 476, CHEM 439, CHEM 474. The Biochemistry/Chemistry Department recommends CHEM 474 be taken as the Advanced Lab option. Excess units count as approved Advanced Biochemistry electives."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM373"
+          "id": "CHEM373",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM351"
+          "id": "CHEM351",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "14-16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM475"
+          "id": "CHEM475",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM352"
+          "id": "CHEM352",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM354"
+          "id": "CHEM354",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "2-4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "2-4",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12-13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: CHEM 459, SCM 491.",
-          "cCustomUnits": "2",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "2",
+          "customDesc": "Choose one of the following: CHEM 459, SCM 491."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM353"
+          "id": "CHEM353",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Approved Advanced Biochemistry Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Advanced Biochemistry Elective",
+          "customUnits": "3",
+          "customDesc": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BIO452, MCRO224.",
-          "cCustomUnits": "4-5",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "BIO452 or MCRO224"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "BIO452 or MCRO224",
+          "customUnits": "4-5",
+          "customDesc": "Choose one of the following: BIO452, MCRO224."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "14-15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Approved Advanced Biochemistry Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Advanced Biochemistry Elective",
+          "customUnits": "3",
+          "customDesc": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "3-4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3-4",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "CHEM461"
+          "id": "CHEM461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Approved Advanced Biochemistry Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Advanced Biochemistry Elective",
+          "customUnits": "3",
+          "customDesc": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Approved Advanced Biochemistry Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Advanced Biochemistry Elective",
+          "customUnits": "3",
+          "customDesc": "Select 12 units from Advanced Biochemistry Electives. This is the default curriculum for students who do not declare a concentration. At least two courses must be chosen from List A (see catalog), including one lecture. Consult with advisor."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, C3, C4, C1-C5 elective, D1, D2, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C3, C4, D1, D3, D4, D5, or F."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year.",
-          "cCustomUnits": "3",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "3",
+          "customDesc": "Any free elective can go here. A maximum of 16 units of elective credit may be required for the major to reach the 180 unit requirement to graduate. Excess units of AP Test credit may be applied to elective credit. The Chemistry Department strongly recommended taking CHEM 101 (1) in your first quarter. Also, it is suggested that you take supplemental workshops (SCM 150) along with available Math/Science courses in your first year."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "ed9e9260945e1dedb38c93aeb963defb"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.768Z"
 }

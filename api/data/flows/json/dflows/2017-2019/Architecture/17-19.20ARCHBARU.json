@@ -1,389 +1,396 @@
 {
-  "flowName": "17-19.20ARCHBARU",
-  "flowId": "17-19.20ARCHBARU",
-  "flowStartYear": "2017",
-  "flowUnitTotal": "225",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "17-19.20ARCHBARU",
+  "programId": [
+    "0275b642-51fc-4260-8f71-33f19789a079"
+  ],
+  "startYear": "2017",
+  "unitTotal": "225",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH131"
+          "id": "ARCH131",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH101"
+          "id": "ARCH101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDES123"
+          "id": "EDES123",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH141"
+          "id": "MATH141",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH132"
+          "id": "ARCH132",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH101"
+          "id": "ARCH101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS121"
+          "id": "PHYS121",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH182"
+          "id": "MATH182",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "17",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH133"
+          "id": "ARCH133",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH101"
+          "id": "ARCH101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PHYS122"
+          "id": "PHYS122",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH251"
+          "id": "ARCH251",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH241"
+          "id": "ARCH241",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH217"
+          "id": "ARCH217",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE211"
+          "id": "ARCE211",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH252"
+          "id": "ARCH252",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH242"
+          "id": "ARCH242",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH218"
+          "id": "ARCH218",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE212"
+          "id": "ARCE212",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH253"
+          "id": "ARCH253",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH207"
+          "id": "ARCH207",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH219"
+          "id": "ARCH219",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE226"
+          "id": "ARCE226",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH351"
+          "id": "ARCH351",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH341"
+          "id": "ARCH341",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH352"
+          "id": "ARCH352",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH307"
+          "id": "ARCH307",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "1",
+          "customDesc": "Any professional elective can go here."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE315"
+          "id": "ARCE315",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "18",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH353"
+          "id": "ARCH353",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH342"
+          "id": "ARCH342",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "1",
+          "customDesc": "Any professional elective can go here."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "ARCE316"
+          "id": "ARCE316",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH451"
+          "id": "ARCH451",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH420"
+          "id": "ARCH420",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH452"
+          "id": "ARCH452",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any professional elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH453"
+          "id": "ARCH453",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any professional elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 17,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH481"
+          "id": "ARCH481",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH492"
+          "id": "ARCH492",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any professional elective can go here."
         }
       ]
     },
     {
       "tIndex": 18,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH481"
+          "id": "ARCH481",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH443"
+          "id": "ARCH443",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     },
     {
       "tIndex": 19,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ARCH481"
+          "id": "ARCH481",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any professional elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any professional elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C4, D1, D2, D3, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>NO ARCH COURSE FOR C4, except ARCH 326.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "318c06a4cfab2657d796c265cc3a0d14"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.886Z"
 }

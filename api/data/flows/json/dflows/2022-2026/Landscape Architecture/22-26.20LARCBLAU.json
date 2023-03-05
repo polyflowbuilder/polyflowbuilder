@@ -1,403 +1,408 @@
 {
-  "flowName": "22-26.20LARCBLAU",
-  "flowId": "22-26.20LARCBLAU",
-  "flowStartYear": "2022",
-  "flowUnitTotal": "219",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "22-26.20LARCBLAU",
+  "programId": [
+    "7a77b54a-9cee-449b-b0e0-fa25cc854aae"
+  ],
+  "startYear": "2022",
+  "unitTotal": "219",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA101"
+          "id": "LA101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA170"
+          "id": "LA170",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH118"
+          "id": "MATH118",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA171"
+          "id": "LA171",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA211"
+          "id": "LA211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Choose one of the following: BOT121, or BIO114.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "BOT121 or BIO114"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Choose One",
+          "customDisplayName": "BOT121 or BIO114",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: BOT121, or BIO114.\r\n\r\nRequired in Major or Support; also satisfies General Education (GE) requirement."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "MATH119"
+          "id": "MATH119",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA202"
+          "id": "LA202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA212"
+          "id": "LA212",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDES123"
+          "id": "EDES123",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA203"
+          "id": "LA203",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA243"
+          "id": "LA243",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select two courses from the following: BIO227, BRAE337, SS120, STAT217, or STAT218.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select two courses from the following"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Select two courses from the following",
+          "customUnits": "4",
+          "customDesc": "Select two courses from the following: BIO227, BRAE337, SS120, STAT217, or STAT218."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA220"
+          "id": "LA220",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA241"
+          "id": "LA241",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Select two courses from the following: BIO227, BRAE337, SS120, STAT217, or STAT218.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Select two courses from the following"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Select two courses from the following",
+          "customUnits": "4",
+          "customDesc": "Select two courses from the following: BIO227, BRAE337, SS120, STAT217, or STAT218."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA204"
+          "id": "LA204",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA242"
+          "id": "LA242",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LA221, or PLSC381.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "LA221 or PLSC381"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "LA221 or PLSC381",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LA221, or PLSC381."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA402"
+          "id": "LA402",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Integrated Learning Course (ILC) Topics"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Integrated Learning Course (ILC) Topics",
+          "customUnits": "4",
+          "customDesc": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Integrated Learning Course (ILC) Topics"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Integrated Learning Course (ILC) Topics",
+          "customUnits": "4",
+          "customDesc": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA320"
+          "id": "LA320",
+          "color": "#FEFD9A"
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA405"
+          "id": "LA405",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Integrated Learning Course (ILC) Topics"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Integrated Learning Course (ILC) Topics",
+          "customUnits": "4",
+          "customDesc": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Integrated Learning Course (ILC) Topics"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Integrated Learning Course (ILC) Topics",
+          "customUnits": "4",
+          "customDesc": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA370"
+          "id": "LA370",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA403"
+          "id": "LA403",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Integrated Learning Course (ILC) Topics"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Integrated Learning Course (ILC) Topics",
+          "customUnits": "4",
+          "customDesc": "Select five courses from the following Integrated Learning Course (ILC) topics. At least three (3) different ILCs must be chosen. (ILCs are repeatable to 12 units.)\r\n\r\nLA431, LA432, LA433, LA434, LA435, LA436, LA437, LA438, LA439."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA330"
+          "id": "LA330",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PLSC233"
+          "id": "PLSC233",
+          "color": "#FCD09E"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA404"
+          "id": "LA404",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "PLSC234"
+          "id": "PLSC234",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LA402-405 or LA406.\r\n\r\nSelect only one Focus Studio course each quarter to be taken concurrently with an Integrated Learning Course (ILC).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Repeat Focus Studio or Interdisciplinary Design Studio",
-          "cCustomDisplayName": "LA402-405 or LA406"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Repeat Focus Studio or Interdisciplinary Design Studio",
+          "customDisplayName": "LA402-405 or LA406",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LA402-405 or LA406.\r\n\r\nSelect only one Focus Studio course each quarter to be taken concurrently with an Integrated Learning Course (ILC)."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CRP212"
+          "id": "CRP212",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA349"
+          "id": "LA349",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA401"
+          "id": "LA401",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA371"
+          "id": "LA371",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 17,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA461"
+          "id": "LA461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Divison LA Elective courses can go here.\r\n\r\nAt least three (3) different Integrated Learning Courses must be chosen. (ILCs are repeatable to 12 units).",
-          "cCustomUnits": "6",
-          "cID": null,
-          "cCustomID": "Upper Division LA Electives"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division LA Electives",
+          "customUnits": "6",
+          "customDesc": "Any Upper Divison LA Elective courses can go here.\r\n\r\nAt least three (3) different Integrated Learning Courses must be chosen. (ILCs are repeatable to 12 units)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 18,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LA461"
+          "id": "LA461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 19,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Professional Elective course can go here.\r\n\r\nMay include any course in: College of Architecture and Environmental Design; Art and Design Department; TH330; any minor in the College of Architecture and Environmental Design.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any Professional Elective course can go here.\r\n\r\nMay include any course in: College of Architecture and Environmental Design; Art and Design Department; TH330; any minor in the College of Architecture and Environmental Design."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Professional Elective course can go here.\r\n\r\nMay include any course in: College of Architecture and Environmental Design; Art and Design Department; TH330; any minor in the College of Architecture and Environmental Design.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Professional Elective"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Professional Elective",
+          "customUnits": "4",
+          "customDesc": "Any Professional Elective course can go here.\r\n\r\nMay include any course in: College of Architecture and Environmental Design; Art and Design Department; TH330; any minor in the College of Architecture and Environmental Design."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, Upper-Division B, C2, Lower-Division C Elective, Upper-Division C, D1, D2, Upper-Division D, and F. Upper-Division B, Lower-Division C Elective, Upper-Division C, and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: Upper-Division B, Upper-Division C, D1, D2, Upper-Division D, or E."
         }
       ]
     }
   ],
-  "publishedID": null,
-  "importedID": null,
-  "dataModelVersion": 6,
-  "flowHash": "be3bec5affefbb683447c5c473e7887b.5303d0bcec54f6b8b5d108400b2ffca0"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.649Z"
 }

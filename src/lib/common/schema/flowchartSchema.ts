@@ -8,9 +8,14 @@ import {
   CUSTOM_COURSE_CARD_DESC_MAX_LENGTH
 } from '$lib/common/config/flowDataConfig';
 import { z } from 'zod';
-import { validate } from 'uuid';
 
 // validation schema for user-level flowchart
+
+// data version that this schema conforms to
+export const dataModelVersion = 7;
+
+const md5HashRegExp = /^[a-f0-9]{32}$/i;
+const colorRegExp = /#[0-9A-F]{6}\b/;
 
 // allow non-integers due to quarter <-> semester unit conversion
 // 1 semester unit = 1.5 quarter units
@@ -23,9 +28,9 @@ export const unitSchema = z
     (unitTotal) => {
       if (unitTotal.includes('-')) {
         const parts = unitTotal.split('-').map((part) => Number(part));
-        return !!parts[0] && !!parts[1] && parts[1] > parts[0];
+        return !isNaN(parts[0]) && !isNaN(parts[1]) && parts[1] > parts[0];
       }
-      return !!Number(unitTotal);
+      return !isNaN(Number(unitTotal));
     },
     (unitTotal) => {
       return {
@@ -42,7 +47,7 @@ export const courseSchema = z
         required_error: 'Course card color is required.'
       })
       .refine(
-        (color) => /#[0-9A-F]{6}\b/.test(color),
+        (color) => colorRegExp.test(color),
         (color) => {
           return {
             message: `Course card color invalid, received ${color}.`
@@ -215,9 +220,9 @@ export const flowchartValidationSchema = z
       })
       .refine(
         (hash) => {
-          // [flowMetadataHash].[flowContentHash]
+          // MD5 [flowMetadataHash].[flowContentHash]
           const parts = hash.split('.');
-          return validate(parts[0]) && validate(parts[1]);
+          return md5HashRegExp.test(parts[0]) && md5HashRegExp.test(parts[1]);
         },
         (hash) => {
           return {

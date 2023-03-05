@@ -1,349 +1,356 @@
 {
-  "flowName": "15-17.48ARTBFAU.SAARTU",
-  "flowId": "15-17.48ARTBFAU.SAARTU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "184",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48ARTBFAU.SAARTU",
+  "programId": [
+    "963724e4-61b1-4d28-adc1-e50c9723e6c1"
+  ],
+  "startYear": "2015",
+  "unitTotal": "184",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART102"
+          "id": "ART102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART182"
+          "id": "ART182",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART101"
+          "id": "ART101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART103"
+          "id": "ART103",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART209"
+          "id": "ART209",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART148"
+          "id": "ART148",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART104"
+          "id": "ART104",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART122"
+          "id": "ART122",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART201"
+          "id": "ART201",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART211"
+          "id": "ART211",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART302"
+          "id": "ART302",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART212"
+          "id": "ART212",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART309"
+          "id": "ART309",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART260"
+          "id": "ART260",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART203"
+          "id": "ART203",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART312"
+          "id": "ART312",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART 310, 311, 312, 313, 314, 315, ART/WGS 316, ART 317, 318, 370, 371. Refer to current catalog for prerequisites.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art History Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Art History Elective",
+          "customUnits": "4",
+          "customDesc": "Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART 310, 311, 312, 313, 314, 315, ART/WGS 316, ART 317, 318, 370, 371. Refer to current catalog for prerequisites."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART366"
+          "id": "ART366",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART315"
+          "id": "ART315",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART348"
+          "id": "ART348",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art Electives"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art Electives",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART448"
+          "id": "ART448",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART409"
+          "id": "ART409",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art Electives"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art Electives",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cID": "ART466"
+          "id": "ART466",
+          "color": "#F9A3D2"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art Electives"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art Electives",
+          "customUnits": "4",
+          "customDesc": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division Art Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Art Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Art Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division Art Elective can go here."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration.",
-          "cCustomUnits": "1",
-          "cID": null,
-          "cCustomID": "Art Electives"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art Electives",
+          "customUnits": "1",
+          "customDesc": "Concentration Electives: 13 units (at least 8 units must be upper-division). Any ART course not already required for the major or concentration."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART462"
+          "id": "ART462",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ART468"
+          "id": "ART468",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART 310, 311, 312, 313, 314, 315, ART/WGS 316, ART 317, 318, 370, 371. Refer to current catalog for prerequisites.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art History Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Art History Elective",
+          "customUnits": "4",
+          "customDesc": "Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART 310, 311, 312, 313, 314, 315, ART/WGS 316, ART 317, 318, 370, 371. Refer to current catalog for prerequisites."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <b>Two (2) courses</b> must be completed in B1. <b>Upper Division C4 must be satisfied by taking a non-ART course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F. "
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "5613a734c757c9cdb1c1b9a1758f35bc"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.767Z"
 }

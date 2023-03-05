@@ -1,351 +1,358 @@
 {
-  "flowName": "21-22.76LSBSU.EMPH-",
-  "flowId": "21-22.76LSBSU.EMPH-",
-  "flowStartYear": "2021",
-  "flowUnitTotal": "176-184",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.76LSBSU.EMPH-",
+  "programId": [
+    "566a893c-6d13-4ef4-9626-6710c22b251d"
+  ],
+  "startYear": "2021",
+  "unitTotal": "176-184",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS201"
+          "id": "LS201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS230"
+          "id": "LS230",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC101"
+          "id": "PSC101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST201"
+          "id": "HIST201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS211"
+          "id": "LS211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC102"
+          "id": "PSC102",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST208"
+          "id": "HIST208",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: STAT130, or STAT217.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Statistics",
-          "cCustomDisplayName": "STAT130 or STAT217"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Statistics",
+          "customDisplayName": "STAT130 or STAT217",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: STAT130, or STAT217."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS214"
+          "id": "LS214",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PSC103"
+          "id": "PSC103",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HIST210"
+          "id": "HIST210",
+          "color": "#FEFD9A"
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "14",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH227"
+          "id": "MATH227",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS250"
+          "id": "LS250",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO111"
+          "id": "BIO111",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH328"
+          "id": "MATH328",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS255"
+          "id": "LS255",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "BIO211"
+          "id": "BIO211",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PSY201, or PSY202.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "General Psychology",
-          "cCustomDisplayName": "PSY201 or PSY202"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "General Psychology",
+          "customDisplayName": "PSY201 or PSY202",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PSY201, or PSY202."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH329"
+          "id": "MATH329",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ASTR101"
+          "id": "ASTR101",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "CD207"
+          "id": "CD207",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Declare your concentration at this time.",
-          "cID": null,
-          "cCustomID": "Declare Your Concentration"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "Declare Your Concentration",
+          "customDesc": "Declare your concentration at this time."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "13",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "MATH330"
+          "id": "MATH330",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS301"
+          "id": "LS301",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "GEOG308"
+          "id": "GEOG308",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: PHIL230, or PHIL231.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Philosophical Classics",
-          "cCustomDisplayName": "PHIL230 or PHIL231"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Philosophical Classics",
+          "customDisplayName": "PHIL230 or PHIL231",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: PHIL230, or PHIL231."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "15",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "KINE310"
+          "id": "KINE310",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS310"
+          "id": "LS310",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration",
+          "customUnits": "4",
+          "customDesc": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL391"
+          "id": "ENGL391",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "LS370"
+          "id": "LS370",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration",
+          "customUnits": "4",
+          "customDesc": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LS411, LS412, or LS413.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Seminar/Integration Course",
-          "cCustomDisplayName": "LS411, LS412, or LS413"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Seminar/Integration Course",
+          "customDisplayName": "LS411, LS412, or LS413",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LS411, LS412, or LS413."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration",
+          "customUnits": "4",
+          "customDesc": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC427"
+          "id": "EDUC427",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "11-19",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: LS461, or LS462.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Senior Project",
-          "cCustomDisplayName": "LS461 or LS462"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Senior Project",
+          "customDisplayName": "LS461 or LS462",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: LS461, or LS462."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>",
-          "cCustomUnits": "2-6",
-          "cID": null,
-          "cCustomID": "Concentration"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration",
+          "customUnits": "2-6",
+          "customDesc": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "EDUC428"
+          "id": "EDUC428",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>If GE courses are used to satisfy Concentration requirements, additional free elective units may be required to satisfy 180 units for the degree.</p>",
-          "cCustomUnits": "1-5",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "1-5",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>If GE courses are used to satisfy Concentration requirements, additional free elective units may be required to satisfy 180 units for the degree.</p>"
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "HLTH443"
+          "id": "HLTH443",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Concentration"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Concentration",
+          "customUnits": "4",
+          "customDesc": "<p>Any Concentration course can go here.</p><p>TESOL concentration has 18 units All other concentrations have 20-22 units. Refer to the catalog for specifics.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, C1, Lower-Division F, 4 units of GE Elective (lower or upper-division C or D), Upper-Division C, and Upper-Division B. Upper-Division B, Upper-Division C, and Upper-Division D (GEOG308) should be taken only after Junior standing is reached (90 units). NOTE: Some GEs may be fulfilled in concentration courses or minors. Refer to the online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#BFBFBF",
-          "cCustomNote": "Visit the School of Education credential office in Bldg 2, Room 120 for more information on applying to the Multiple Subject credential program.",
-          "cID": null,
-          "cCustomID": "School of Education Info"
+          "id": null,
+          "color": "#BFBFBF",
+          "customId": "School of Education Info",
+          "customDesc": "Visit the School of Education credential office in Bldg 2, Room 120 for more information on applying to the Multiple Subject credential program."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "bb34f78c2f5c6b989021d9b95fe16222"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.514Z"
 }

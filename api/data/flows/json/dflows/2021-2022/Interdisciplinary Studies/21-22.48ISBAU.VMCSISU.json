@@ -1,389 +1,396 @@
 {
-  "flowName": "21-22.48ISBAU.VMCSISU",
-  "flowId": "21-22.48ISBAU.VMCSISU",
-  "flowStartYear": "2021",
-  "flowUnitTotal": 180,
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "21-22.48ISBAU.VMCSISU",
+  "programId": [
+    "9cdc9d1f-22a9-4e9d-8f3b-12b25d47dff2"
+  ],
+  "startYear": "2021",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Choose one of the following: ES112, ISLA123, RELS201, or WGS201.</p><p>ES112 and WGS201 satisfy GE Area D1 and USCP. RELS201 satisfies GE Area D2. Taking one of these options will increase Free Electives unit requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "ES112, ISLA123, RELS201, or WGS201"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "ES112, ISLA123, RELS201, or WGS201",
+          "customUnits": "4",
+          "customDesc": "<p>Choose one of the following: ES112, ISLA123, RELS201, or WGS201.</p><p>ES112 and WGS201 satisfy GE Area D1 and USCP. RELS201 satisfies GE Area D2. Taking one of these options will increase Free Electives unit requirement.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ISLA201"
+          "id": "ISLA201",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: HIST213, or SOC218.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Political Social Economics",
-          "cCustomDisplayName": "HIST213 or SOC218"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Political Social Economics",
+          "customDisplayName": "HIST213 or SOC218",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: HIST213, or SOC218."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Choose one of the following: STAT130, STAT217, STAT218, or STAT312.</p><p>STAT130, STAT217, and STAT218 satisfy GE Area B4. STAT312 satisfies GE Area B Upper-Division.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "STAT130, STAT217, STAT218, or STAT312"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "STAT130, STAT217, STAT218, or STAT312",
+          "customUnits": "4",
+          "customDesc": "<p>Choose one of the following: STAT130, STAT217, STAT218, or STAT312.</p><p>STAT130, STAT217, and STAT218 satisfy GE Area B4. STAT312 satisfies GE Area B Upper-Division.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "PHIL335"
+          "id": "PHIL335",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Art, Dance, Music, and Theatre Track course can go here.</p><p>Choose courses in consultation with an advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Art, Dance, Music, and Theatre Track: ART314, ART315, ART318, ART375; DANC321; ENGL411, ENGL412. MU324, MU325, MU328; TH305, TH390.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Art, Dance, Music, and Theatre Track Course"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Art, Dance, Music, and Theatre Track Course",
+          "customUnits": "4",
+          "customDesc": "<p>Any Art, Dance, Music, and Theatre Track course can go here.</p><p>Choose courses in consultation with an advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Art, Dance, Music, and Theatre Track: ART314, ART315, ART318, ART375; DANC321; ENGL411, ENGL412. MU324, MU325, MU328; TH305, TH390.</p>"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Visual, Media, & Cultural Studies Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Visual, Media, & Cultural Studies Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Literature Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Literature Track: ENGL345, ENGL346, ENGL347, ENGL348, ENGL349, ENGL381, ENGL382; FR350; GER350; SPAN350, SPAN351, SPAN410.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Literature Track Course"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Literature Track Course",
+          "customUnits": "4",
+          "customDesc": "<p>Any Literature Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Literature Track: ENGL345, ENGL346, ENGL347, ENGL348, ENGL349, ENGL381, ENGL382; FR350; GER350; SPAN350, SPAN351, SPAN410.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: COMS301, ENGL310, or ENGL317.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "COMS301, ENGL310, or ENGL317"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "COMS301, ENGL310, or ENGL317",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: COMS301, ENGL310, or ENGL317."
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Popular Culture Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Popular Culture Track: COMS319, COMS384, COMS385; ENGL370, ENGL371, ENGL372, ENGL373; ES310, ES311, ES320, ES321, ES322, ES323, ES340; ISLA320; KINE324; SPAN307; WGS301, WGS302, WGS401.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Popular Culture Track Course"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Popular Culture Track Course",
+          "customUnits": "4",
+          "customDesc": "<p>Any Popular Culture Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Popular Culture Track: COMS319, COMS384, COMS385; ENGL370, ENGL371, ENGL372, ENGL373; ES310, ES311, ES320, ES321, ES322, ES323, ES340; ISLA320; KINE324; SPAN307; WGS301, WGS302, WGS401.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ISLA355"
+          "id": "ISLA355",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Technology & Human Expression Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Technology & Human Expression Track: COMS317; HIST355; ISLA303, ISLA341; MU311, MU312; WLC370.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Technology & Human Expression Track Course"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Technology & Human Expression Track Course",
+          "customUnits": "4",
+          "customDesc": "<p>Any Technology & Human Expression Track course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 4 units from the Technology & Human Expression Track: COMS317; HIST355; ISLA303, ISLA341; MU311, MU312; WLC370.</p>"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Visual, Media, & Cultural Studies Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Visual, Media, & Cultural Studies Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, C2, Lower-Division C Elective, D1, Upper-Division D, E, F, and GE Elective (two courses). Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). Refer to the online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR). The USCP requirement can be satisfied by some (but not all) courses within GE categories: C1, Upper-Division C, D1, Area D Elective, Upper-Division D, or E."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ISLA440"
+          "id": "ISLA440",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Visual, Media, & Cultural Studies Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Visual, Media, & Cultural Studies Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ISLA461"
+          "id": "ISLA461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#F9A3D2",
-          "cCustomNote": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Visual, Media, & Cultural Studies Elective"
+          "id": null,
+          "color": "#F9A3D2",
+          "customId": "Visual, Media, & Cultural Studies Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Visual, Media, & Cultural Studies Elective course can go here.</p><p>Choose courses in consultation with advisor. Courses must be from at least two different disciplines, and no more than half of courses taken in the concentration can have the same prefix. Courses cannot be used to meet other major requirements. See catalog for additional details.</p><p>Select 16 units from the Visual, Media, & Cultural Studies Electives: ISLA440 or any courses that were not taken to satisfy the core requirements above.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Any Free Elective course can go here.</p><p>Some GE requirements may be met by course selections within the emphasis; in that case, additional free electives may be required to reach a total of 180 units. If upper-division GE courses are used to satisfy emphasis area requirements, additional upper-division coursework may be required to satisfy the University's 60-units upper-division requirement.</p>"
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "da2f402839ae604d1969fbec247aab59"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.443Z"
 }

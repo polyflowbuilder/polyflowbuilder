@@ -1,382 +1,387 @@
 {
-  "flowName": "22-26.48ENGLBAU",
-  "flowId": "22-26.48ENGLBAU",
-  "flowStartYear": "2022",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "22-26.48ENGLBAU",
+  "programId": [
+    "3fdcc153-6735-4878-b426-0218aed22dcc"
+  ],
+  "startYear": "2022",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. Recommended: Foreign Language 101.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 101"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 101",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here. Recommended: Foreign Language 101.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL202"
+          "id": "ENGL202",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. Recommended: Foreign Language 102.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 102"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 102",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here. Recommended: Foreign Language 102.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL203"
+          "id": "ENGL203",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL251"
+          "id": "ENGL251",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here. Recommended: Foreign Language 103.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective",
-          "cCustomDisplayName": "Recommended: Foreign Language 103"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customDisplayName": "Recommended: Foreign Language 103",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here. Recommended: Foreign Language 103.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL204"
+          "id": "ENGL204",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ENGL220, or ENGL221.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One",
-          "cCustomDisplayName": "ENGL220 or ENGL221"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customDisplayName": "ENGL220 or ENGL221",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL220, or ENGL221."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Foreign Language (201 or 202) course can go here.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Foreign Language",
-          "cCustomDisplayName": "201 or 202"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Foreign Language",
+          "customDisplayName": "201 or 202",
+          "customUnits": "4",
+          "customDesc": "Any Foreign Language (201 or 202) course can go here.\r\n\r\nMajors must demonstrate intermediate-level proficiency in a foreign language. Any language classes needed before intermediate level will count as free electives. With approval, students can substitute for this requirement by demonstrating a comparable level of proficiency in a foreign language."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL205"
+          "id": "ENGL205",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL290"
+          "id": "ENGL290",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL303"
+          "id": "ENGL303",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Elective (ENGL 300-level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Elective",
-          "cCustomDisplayName": "ENGL 300-level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Elective",
+          "customDisplayName": "ENGL 300-level",
+          "customUnits": "4",
+          "customDesc": "Any Elective (ENGL 300-level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL304"
+          "id": "ENGL304",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ENGL345, ENGL346, ENGL347, ENGL348, ENGL349, ENGL381, or ENGL382.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Choose One"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Choose One",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL345, ENGL346, ENGL347, ENGL348, ENGL349, ENGL381, or ENGL382."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL305"
+          "id": "ENGL305",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Elective (ENGL 300-Level Non-Lit) course can go here.\r\n\r\nApproved ENGL 300-level Non-Literature Electives: ENGL310, ENGL311, ENGL312, ENGL317, ENGL319, ENGL361, ENGL368, ENGL370, ENGL371, ENGL372, ENGL373, ENGL387, ENGL388, ENGL390, ENGL391, ENGL395. Course used to fulfill non-literature elective cannot also fulfill 300 level general elective in the major.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Elective",
-          "cCustomDisplayName": "ENGL 300-Level Non-Lit"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Elective",
+          "customDisplayName": "ENGL 300-Level Non-Lit",
+          "customUnits": "4",
+          "customDesc": "Any Elective (ENGL 300-Level Non-Lit) course can go here.\r\n\r\nApproved ENGL 300-level Non-Literature Electives: ENGL310, ENGL311, ENGL312, ENGL317, ENGL319, ENGL361, ENGL368, ENGL370, ENGL371, ENGL372, ENGL373, ENGL387, ENGL388, ENGL390, ENGL391, ENGL395. Course used to fulfill non-literature elective cannot also fulfill 300 level general elective in the major."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL306"
+          "id": "ENGL306",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ENGL439, ENGL449, or ENGL459.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Literature Electives",
-          "cCustomDisplayName": "ENGL 400-level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Literature Electives",
+          "customDisplayName": "ENGL 400-level",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL439, ENGL449, or ENGL459."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any DIversity Elective (ENGL 400-Level) course can go here.\r\n\r\nSee catalog for list of approved courses.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Diversity Elective",
-          "cCustomDisplayName": "ENGL 400-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Diversity Elective",
+          "customDisplayName": "ENGL 400-Level",
+          "customUnits": "4",
+          "customDesc": "Any DIversity Elective (ENGL 400-Level) course can go here.\r\n\r\nSee catalog for list of approved courses."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ENGL439, ENGL449, and ENGL459.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Literature Electives",
-          "cCustomDisplayName": "ENGL 400-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Literature Electives",
+          "customDisplayName": "ENGL 400-Level",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL439, ENGL449, and ENGL459."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division Elective (ENGL 400-Level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Electives",
-          "cCustomDisplayName": "ENGL 400-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Electives",
+          "customDisplayName": "ENGL 400-Level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division Elective (ENGL 400-Level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B4, Upper-Division B, C1, Lower-Division C Elective, D1, D2, Upper-Division D, Lower-Division E, F, and GE Elective. Upper-Division B and Upper-Division D should be taken only after Junior standing is reached (90 units). <b>Upper Division C must be satisfied by taking a non-English course.</b> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Choose one of the following: ENGL439, ENGL449, or ENGL459.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Literature Electives",
-          "cCustomDisplayName": "ENGL 400-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Literature Electives",
+          "customDisplayName": "ENGL 400-Level",
+          "customUnits": "4",
+          "customDesc": "Choose one of the following: ENGL439, ENGL449, or ENGL459."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper-Division Elective (ENGL 400-Level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper-Division Electives",
-          "cCustomDisplayName": "ENGL 400-Level"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper-Division Electives",
+          "customDisplayName": "ENGL 400-Level",
+          "customUnits": "4",
+          "customDesc": "Any Upper-Division Elective (ENGL 400-Level) course can go here. See catalog for Upper Division courses.\r\n\r\nEnglish majors are encouraged to use their upper-division ENGL electives to pursue their interests, including literature, creative writing, linguistics, and/or rhetoric and writing. <b>Minimum 12 units in 400-level literature within the 24 total units of 400-level courses.</b>"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any Non-ENGL Upper-Division C Course can go here. Refer to the Catalog.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Non-ENGL Upper-Division C Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Non-ENGL Upper-Division C Course",
+          "customUnits": "4",
+          "customDesc": "Any Non-ENGL Upper-Division C Course can go here. Refer to the Catalog."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ENGL461"
+          "id": "ENGL461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any Free Elective course can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any Free Elective course can go here."
         }
       ]
     }
   ],
-  "publishedID": null,
-  "importedID": null,
-  "dataModelVersion": 6,
-  "flowHash": "cae82eefe2249290716412a4558a6c84.505c291bf01fff2b8d0777c495be3b90"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.620Z"
 }

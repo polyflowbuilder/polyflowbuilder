@@ -1,381 +1,388 @@
 {
-  "flowName": "15-17.48ESBAU",
-  "flowId": "15-17.48ESBAU",
-  "flowStartYear": "2015",
-  "flowUnitTotal": "180",
-  "flowNotes": "",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "15-17.48ESBAU",
+  "programId": [
+    "6c47b4da-b67e-4535-b1d2-ccbd01b257f3"
+  ],
+  "startYear": "2015",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES112"
+          "id": "ES112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Language Course: Must take 8 units of the same language; cannot be English.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Language Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Language Course",
+          "customUnits": "4",
+          "customDesc": "Language Course: Must take 8 units of the same language; cannot be English."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any ES Elective can go here."
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Language Course: Must take 8 units of the same language; cannot be English.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Language Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Language Course",
+          "customUnits": "4",
+          "customDesc": "Language Course: Must take 8 units of the same language; cannot be English."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "ES 200 Series: Select 3 courses from ES241, 242, 243, 244 (D3, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ES 200 Series"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ES 200 Series",
+          "customUnits": "4",
+          "customDesc": "ES 200 Series: Select 3 courses from ES241, 242, 243, 244 (D3, USCP)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "ES 200 Series: Select 3 courses from ES 241, 242, 243, 244 (D3, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ES 200 Series"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ES 200 Series",
+          "customUnits": "4",
+          "customDesc": "ES 200 Series: Select 3 courses from ES 241, 242, 243, 244 (D3, USCP)."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "ES 200 Series: Select 3 courses from ES 241, 242, 243, 244 (D3, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ES 200 Series"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ES 200 Series",
+          "customUnits": "4",
+          "customDesc": "ES 200 Series: Select 3 courses from ES 241, 242, 243, 244 (D3, USCP)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any ES Elective can go here."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES350"
+          "id": "ES350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         },
         {
-          "cardColor": "#DA9593",
-          "cID": null,
-          "cCustomID": "gwr"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "gwr"
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES390"
+          "id": "ES390",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES450"
+          "id": "ES450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). ",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C3, C4, D2, D4, and D5. C4 and D5 should be taken only after Junior standing is reached (90 units). <b>One (1) course</b> must be completed from B1, in addition to STAT 217. <b>C4 and D5 cannot be fulfilled with Ethnic Studies courses.</b> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR). "
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES461"
+          "id": "ES461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division Approved Elective",
+          "customUnits": "4",
+          "customDesc": "Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. Minimum 12 elective units must be 300-400 level. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses on the list may still be chosen, subject to department approval. Some approved electives may also fulfill GE requirements, in which case free electives will be needed to reach the 180 units required for this degree."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Free Electives: Some free electives may need to be 300-400 level to ensure completion of required minimum 60 units of upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of free elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "42f0ce13afc608b078624af94701e606"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:22.786Z"
 }

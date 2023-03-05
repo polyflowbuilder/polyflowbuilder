@@ -4,8 +4,12 @@ import path from 'path';
 import { Prisma, PrismaClient } from '@prisma/client';
 import { apiRoot, getFiles, nthIndex } from './common.js';
 
+import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+
 import type {
   TermTypicallyOffered,
+  TemplateFlowchart,
   CourseRequisite,
   GECourse,
   APICourse,
@@ -180,7 +184,7 @@ async function syncTemplateFlowcharts() {
   );
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const defaultFlows: any[] = [];
+  const defaultFlows: TemplateFlowchart[] = [];
 
   // recursively find all JSON files and insert into db
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
@@ -188,73 +192,75 @@ async function syncTemplateFlowcharts() {
       console.log(`adding ${f} to defaultflows DB`);
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let defaultFlowData: any = null;
+      let defaultFlowData: Flowchart | null = null;
 
       try {
-        defaultFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
+        const rawFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
+        if (rawFlowData.lastUpdatedUTC) {
+          rawFlowData.lastUpdatedUTC = new Date(rawFlowData.lastUpdatedUTC);
+        }
+
+        const parseResults = flowchartValidationSchema.safeParse(rawFlowData);
+
+        if (parseResults.success) {
+          defaultFlowData = parseResults.data;
+        } else {
+          console.log(
+            'flow',
+            f,
+            'failed validation with the following errors (will be skipped):',
+            parseResults.error.flatten()
+          );
+        }
       } catch {
         console.log('error with parsing (most likely file is empty)');
       }
-      if (defaultFlowData?.flowName != null) {
+      if (defaultFlowData != null) {
         // use cpslo-default-flow-data-links to generate flow-specific notes
         try {
-          const flowIdUUID = flowDataLinks.flows.find(
-            (flowDataLinkEntry) => flowDataLinkEntry.code === defaultFlowData.flowId
-          )?.id;
-          const flowLink = flowDataLinks.flows.find(
-            (flowDataLinkEntry) => flowDataLinkEntry.code === defaultFlowData.flowId
-          )?.dataLink;
-          const cSheetLink = flowDataLinks.cSheets.find(
+          const flowProgramData = flowDataLinks.flows.find(
+            (flowDataLinkEntry) => flowDataLinkEntry.id === defaultFlowData.programId[0]
+          );
+          const flowCSheetData = flowDataLinks.cSheets.find(
             (flowCSheetLinkEntry) =>
               flowCSheetLinkEntry.code ===
-              (defaultFlowData.flowId.substring(0, nthIndex(defaultFlowData.flowId, '.', 2)) ||
-                defaultFlowData.flowId)
-          )?.dataLink;
+              (flowProgramData?.code.substring(0, nthIndex(flowProgramData?.code ?? '', '.', 2)) ||
+                flowProgramData.code)
+          );
 
-          if (!flowLink) {
+          if (!flowProgramData) {
             console.log(
-              'FLOWLINK RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)',
-              defaultFlowData.flowName
+              'FLOWPROGRAMDATA RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)'
             );
           }
-          if (!cSheetLink) {
+          if (!flowCSheetData) {
             console.log(
-              'CSHEETLINK RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)',
-              defaultFlowData.flowName
+              'FLOWCSHEETDATA RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)'
             );
           }
 
-          const specificFlowNotes = `This is a default, template flowchart. Change it to fit your needs! Here are some official Cal Poly resources for this flowchart:\n\n* Flowchart: "${flowLink}"\n* Curriculum Sheet: "${cSheetLink}"`;
-
-          defaultFlowData.flowNotes = specificFlowNotes;
-          console.log('flow notes updated with custom ones successfully');
-
-          defaultFlowData.flowId = flowIdUUID;
+          // create appropriate TemplateFlowchart entry
+          defaultFlows.push({
+            programId: flowProgramData.id,
+            flowUnitTotal: defaultFlowData.unitTotal,
+            termData: defaultFlowData.termData,
+            version: defaultFlowData.version,
+            notes: `This is a default, template flowchart. Change it to fit your needs! Here are some official Cal Poly resources for this flowchart:\n\n* Flowchart: "${flowProgramData.dataLink}"\n* Curriculum Sheet: "${flowCSheetData.dataLink}"`
+          });
         } catch (error) {
           console.log('error occurred while getting flow-specific notes, skipping', error);
         }
-
-        defaultFlows.push(defaultFlowData);
       } else {
-        console.log('skipping data upload, data is null ...');
+        console.log('skipping data upload');
       }
     }
   }
 
-  // TODO: validate flows before uploading
   console.log('setup default flows, uploading ...');
   // fs.writeFileSync('allDFlowsOut.json', JSON.stringify(defaultFlows, null, 2));
 
   await prisma.templateFlowchart.createMany({
-    data: defaultFlows.map((flow) => {
-      return {
-        programId: flow.flowId,
-        flowUnitTotal: flow.flowUnitTotal.toString(),
-        termData: flow.data,
-        version: flow.dataModelVersion,
-        notes: flow.flowNotes
-      };
-    })
+    data: defaultFlows
   });
 
   console.log('finished updating default flows DB');

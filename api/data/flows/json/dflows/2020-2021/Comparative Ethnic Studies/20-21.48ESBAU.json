@@ -1,369 +1,377 @@
 {
-  "flowName": "20-21.48ESBAU",
-  "flowId": "20-21.48ESBAU",
-  "flowStartYear": "2020",
-  "flowUnitTotal": "180",
-  "data": [
+  "id": "11111111-1111-1111-1111-111111111111",
+  "ownerId": "11111111-1111-1111-1111-111111111111",
+  "name": "20-21.48ESBAU",
+  "programId": [
+    "42e80d4b-5d6c-447e-8d3a-3f24b1263d26"
+  ],
+  "startYear": "2020",
+  "unitTotal": "180",
+  "notes": "",
+  "termData": [
     {
       "tIndex": -1,
       "tUnits": "0",
-      "classes": []
+      "courses": []
     },
     {
       "tIndex": 1,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES112"
+          "id": "ES112",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "ENGL134"
+          "id": "ENGL134",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 2,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES114"
+          "id": "ES114",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any language course can go here. Must take 8 units of the same language; cannot be English.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Language Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Language Course",
+          "customUnits": "4",
+          "customDesc": "Any language course can go here. Must take 8 units of the same language; cannot be English."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS101"
+          "id": "COMS101",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free electives can go here. Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free electives can go here. Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 3,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FCD09E",
-          "cCustomNote": "Any language course can go here. Must take 8 units of the same language; cannot be English.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Language Course"
+          "id": null,
+          "color": "#FCD09E",
+          "customId": "Language Course",
+          "customUnits": "4",
+          "customDesc": "Any language course can go here. Must take 8 units of the same language; cannot be English."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cID": "COMS126"
+          "id": "COMS126",
+          "color": "#DCFDD2"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Any free elective can go here. Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Any free elective can go here. Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 5,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Survey Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Survey Elective",
+          "customUnits": "4",
+          "customDesc": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP)."
         },
         {
-          "cardColor": "#FCD09E",
-          "cID": "STAT217"
+          "id": "STAT217",
+          "color": "#FCD09E"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 6,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Survey Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Survey Elective",
+          "customUnits": "4",
+          "customDesc": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         }
       ]
     },
     {
       "tIndex": 7,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Survey Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Survey Elective",
+          "customUnits": "4",
+          "customDesc": "Select 3 courses from ES241, ES242, ES243, ES244 (D2, USCP)."
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Course Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>"
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 9,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES350"
+          "id": "ES350",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 2 courses from ES320, ES321, ES322, ES323, or ES340.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Cultural Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Cultural Elective",
+          "customUnits": "4",
+          "customDesc": "Select 2 courses from ES320, ES321, ES322, ES323, or ES340."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 10,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES380"
+          "id": "ES380",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Select 2 courses from ES320, ES321, ES322, ES323, or ES340.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Cultural Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Cultural Elective",
+          "customUnits": "4",
+          "customDesc": "Select 2 courses from ES320, ES321, ES322, ES323, or ES340."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         },
         {
-          "cardColor": "#DA9593",
-          "cCustomNote": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.",
-          "cID": null,
-          "cCustomID": "Graduation Writing Requirement"
+          "id": null,
+          "color": "#DA9593",
+          "customId": "Graduation Writing Requirement",
+          "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
     },
     {
       "tIndex": 11,
       "tUnits": "16",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES381"
+          "id": "ES381",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         },
         {
-          "cardColor": "#DCFDD2",
-          "cCustomNote": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "GE"
+          "id": null,
+          "color": "#DCFDD2",
+          "customId": "GE",
+          "customUnits": "4",
+          "customDesc": "One course from each of the following GE areas must be completed: A1, A2, A3, B1, B2, C1, C2, Lower-Division C Elective, Upper-Division C, D2, E, and GE Electives (8). Upper-Division C should be taken only after junior standing is reached (90 units). <strong>Upper-Division C cannot be fulfilled with Ethnic Studies courses.</strong> Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR)."
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     },
     {
       "tIndex": 13,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES390"
+          "id": "ES390",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         }
       ]
     },
     {
       "tIndex": 14,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES450"
+          "id": "ES450",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "Any Upper Division ES Elective can go here.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Upper Division ES Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Upper Division ES Elective",
+          "customUnits": "4",
+          "customDesc": "Any Upper Division ES Elective can go here."
         }
       ]
     },
     {
       "tIndex": 15,
       "tUnits": "12",
-      "classes": [
+      "courses": [
         {
-          "cardColor": "#FEFD9A",
-          "cID": "ES461"
+          "id": "ES461",
+          "color": "#FEFD9A"
         },
         {
-          "cardColor": "#FEFD9A",
-          "cCustomNote": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Approved Elective"
+          "id": null,
+          "color": "#FEFD9A",
+          "customId": "Approved Elective",
+          "customUnits": "4",
+          "customDesc": "<p>Some courses may require prerequisites to be used as Free Electives. Consultation with Advisor recommended. See catalog. Approved Electives: See Cal Poly Catalog and Ethnic Studies Department/Advisor for approved courses. These 24 elective units can be chosen from any unused ES prefix or those provided in the catalog. Courses not on the list may still be chosen, subject to department approval. Some Approved Electives may also fulfill GE requirements, in which case Free Electives will be needed to reach the 180 units required for this degree.</p><p>Some Free Electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Electives units is increased to reach the minimum 180 units total. Consult college advisor for additional information.</p>"
         },
         {
-          "cardColor": "#D4FFFE",
-          "cCustomNote": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information.",
-          "cCustomUnits": "4",
-          "cID": null,
-          "cCustomID": "Free Elective"
+          "id": null,
+          "color": "#D4FFFE",
+          "customId": "Free Elective",
+          "customUnits": "4",
+          "customDesc": "Some free electives may need to be 300-400 level to ensure completion of required minimum of 60 units upper division. If GE courses, taken for a letter grade, are also counted as Approved Electives in the major, the number of Free Elective units is increased to reach the minimum 180 units total. Consult college advisor for additional information."
         }
       ]
     }
   ],
-  "dataModelVersion": 6,
-  "flowHash": "dcb9d8b5815a9cc6945cadf8b5cfcfcb"
+  "version": 7,
+  "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "publishedId": null,
+  "importedId": null,
+  "lastUpdatedUTC": "2023-03-05T20:03:23.241Z"
 }
