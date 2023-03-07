@@ -1,6 +1,6 @@
+import dotenv from 'dotenv';
 import * as nodeMailerConfig from '$lib/server/config/nodeMailerConfig';
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
-import { env } from '$env/dynamic/private';
 import { execSync } from 'child_process';
 import { initLogger } from '$lib/common/config/loggerConfig';
 
@@ -15,7 +15,7 @@ export async function loadEnv(): Promise<void> {
   // env stuff specific to server
   try {
     const commit = execSync('git rev-parse --short HEAD').toString().slice(0, -1);
-    FULL_VERSION_STRING = `${env.npm_package_version} ${commit}`;
+    FULL_VERSION_STRING = `${process.env['npm_package_version']} ${commit}`;
   } catch (e) {
     logger.error('Failed to get git version for full version string');
   } finally {
@@ -24,8 +24,12 @@ export async function loadEnv(): Promise<void> {
 
   logger.info('Environment working directory is', process.cwd());
 
+  dotenv.config({
+    path: `${process.cwd()}/.env`
+  });
+
   // now check to make sure they're actually loaded and exit otherwise
-  if (!env.DOMAIN) {
+  if (!process.env['DOMAIN']) {
     logger.error('ENVIRONMENT VARIABLES FAILED TO LOAD! Exiting ...');
     process.exit(-1);
   }

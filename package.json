@@ -58,6 +58,7 @@
   "dependencies": {
     "@prisma/client": "^4.10.1",
     "argon2": "^0.30.3",
+    "dotenv": "^16.0.3",
     "nodemailer": "^6.9.0",
     "object-hash": "^3.0.0",
     "uuid": "^9.0.0",
