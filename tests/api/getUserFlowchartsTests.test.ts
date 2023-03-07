@@ -1,11 +1,11 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.js';
+import { createUserAccount, deleteUserAccount, performLoginBackend } from '../util/userTestUtil.js';
 import { convertDBFlowchartToFlowchart } from '../util/flowDataTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 
-const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartssAPI_playwright@test.com';
+const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
 
 test.describe('getUserFlowcharts API tests', () => {
   const prisma = new PrismaClient();
@@ -21,7 +21,7 @@ test.describe('getUserFlowcharts API tests', () => {
   });
 
   test('fetch results in 400 without authentication', async ({ request }) => {
-    const res = await request.get('http://localhost:4173/api/user/data/getUserFlowcharts');
+    const res = await request.get('/api/user/data/getUserFlowcharts');
 
     const expectedResponseBody = {
       message: 'Request was unauthenticated. Please authenticate and try again.'
@@ -33,15 +33,10 @@ test.describe('getUserFlowcharts API tests', () => {
 
   test('authenticated request succeeds with 200 empty flowcharts list', async ({ request }) => {
     // perform login
-    await request.post('http://localhost:4173/api/auth/login', {
-      data: {
-        email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL,
-        password: 'test'
-      }
-    });
+    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
 
     // test with empty flowcharts
-    const res = await request.get('http://localhost:4173/api/user/data/getUserFlowcharts');
+    const res = await request.get('/api/user/data/getUserFlowcharts');
 
     const expectedResponseBody = {
       message: 'User flowchart retrieval successful.',
@@ -91,15 +86,10 @@ test.describe('getUserFlowcharts API tests', () => {
     });
 
     // perform login
-    await request.post('http://localhost:4173/api/auth/login', {
-      data: {
-        email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL,
-        password: 'test'
-      }
-    });
+    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
 
     // test with empty flowcharts
-    const res = await request.get('http://localhost:4173/api/user/data/getUserFlowcharts');
+    const res = await request.get('/api/user/data/getUserFlowcharts');
 
     const expectedFlowcharts = await prisma.dBFlowchart
       .findMany({

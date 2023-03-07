@@ -12,7 +12,7 @@ test.describe('register api tests', () => {
   });
 
   test('empty payload results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {}
     });
 
@@ -31,7 +31,7 @@ test.describe('register api tests', () => {
   });
 
   test('missing username results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         email: 'test@test.com',
         password: 'test',
@@ -51,7 +51,7 @@ test.describe('register api tests', () => {
   });
 
   test('missing email results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
         password: 'test',
@@ -71,7 +71,7 @@ test.describe('register api tests', () => {
   });
 
   test('missing password results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
         email: 'test@test.com',
@@ -91,7 +91,7 @@ test.describe('register api tests', () => {
   });
 
   test('missing passwordConfirm results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
         email: 'test@test.com',
@@ -111,7 +111,7 @@ test.describe('register api tests', () => {
   });
 
   test('correct payload results in 201', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
         email: REGISTER_API_TESTS_EMAIL,
@@ -129,7 +129,7 @@ test.describe('register api tests', () => {
   });
 
   test('existing email results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/register', {
+    const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
         email: REGISTER_API_TESTS_EMAIL,
@@ -148,7 +148,7 @@ test.describe('register api tests', () => {
 
   test('send garbage request results in 500', async ({ request }) => {
     // honestly not sure why this triggers 500 but will roll with it
-    const res = await request.post('http://localhost:4173/api/auth/register', {});
+    const res = await request.post('/api/auth/register', {});
 
     const expectedResponseBody = {
       message: 'An error occurred while creating the new account, please try again later.'

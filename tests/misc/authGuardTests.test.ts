@@ -1,5 +1,9 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
+import {
+  createUserAccount,
+  deleteUserAccount,
+  performLoginFrontend
+} from '../util/userTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import type { Page } from '@playwright/test';
@@ -86,7 +90,7 @@ test.describe('auth guard tests', () => {
   });
 
   test('check guards under authenticated status', async ({ page }) => {
-    await performLogin(page, AUTH_GUARD_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, AUTH_GUARD_TESTS_EMAIL, 'test');
 
     // should be able to access these regardless of auth status
     await canAccessAboutPage(page);

@@ -1,4 +1,7 @@
 // NOTE: need .js extension for PlayWright
+
+import PlaywrightConfig from '../../playwright.config.js';
+
 import { createUserAccount } from '../util/userTestUtil.js';
 
 import { expect, request, test } from '@playwright/test';
@@ -17,7 +20,7 @@ test.describe('login api tests (POST, DELETE)', () => {
   });
 
   test('empty payload results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/login', {
+    const res = await request.post('/api/auth/login', {
       data: {}
     });
 
@@ -34,7 +37,7 @@ test.describe('login api tests (POST, DELETE)', () => {
   });
 
   test('missing email results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/login', {
+    const res = await request.post('/api/auth/login', {
       data: {
         password: 'test'
       }
@@ -52,7 +55,7 @@ test.describe('login api tests (POST, DELETE)', () => {
   });
 
   test('missing password results in 400', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/login', {
+    const res = await request.post('/api/auth/login', {
       data: {
         email: 'test@test.com'
       }
@@ -71,7 +74,7 @@ test.describe('login api tests (POST, DELETE)', () => {
 
   test('authentication fails in 401', async ({ request }) => {
     // bad email
-    let res = await request.post('http://localhost:4173/api/auth/login', {
+    let res = await request.post('/api/auth/login', {
       data: {
         email: 'incorrect@gmail.com',
         password: 'test'
@@ -86,7 +89,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
 
     // bad password
-    res = await request.post('http://localhost:4173/api/auth/login', {
+    res = await request.post('/api/auth/login', {
       data: {
         email: LOGIN_API_TESTS_EMAIL,
         password: 'incorrect'
@@ -99,9 +102,11 @@ test.describe('login api tests (POST, DELETE)', () => {
 
   test('authentication successful with 200 response', async () => {
     // init session context here so we can use cookies to logout
-    sessionRequestContext = await request.newContext();
+    sessionRequestContext = await request.newContext({
+      baseURL: 'http://localhost:4173'
+    });
 
-    const res = await sessionRequestContext.post('http://localhost:4173/api/auth/login', {
+    const res = await sessionRequestContext.post('/api/auth/login', {
       data: {
         email: LOGIN_API_TESTS_EMAIL,
         password: 'test'
@@ -120,7 +125,7 @@ test.describe('login api tests (POST, DELETE)', () => {
   });
 
   test('logout successful with 200 response', async () => {
-    const res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login');
+    const res = await sessionRequestContext.delete('/api/auth/login');
 
     const expectedResponseBody = {
       message: 'User successfully logged out.'
@@ -134,7 +139,7 @@ test.describe('login api tests (POST, DELETE)', () => {
   });
 
   test('logout with nonexistent session results in 400 response', async () => {
-    const res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login');
+    const res = await sessionRequestContext.delete('/api/auth/login');
 
     const expectedResponseBody = {
       message: 'The session either does not exist or is not valid.'
@@ -146,7 +151,7 @@ test.describe('login api tests (POST, DELETE)', () => {
 
   test('logout with delete account flag results in 200 response', async () => {
     // first login
-    let res = await sessionRequestContext.post('http://localhost:4173/api/auth/login', {
+    let res = await sessionRequestContext.post('/api/auth/login', {
       data: {
         email: LOGIN_API_TESTS_EMAIL,
         password: 'test'
@@ -162,7 +167,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     expect(res.headers()['set-cookie']).toBeTruthy();
 
     // then perform the delete
-    res = await sessionRequestContext.delete('http://localhost:4173/api/auth/login?deleteAcc=1');
+    res = await sessionRequestContext.delete('/api/auth/login?deleteAcc=1');
     expectedResponseBody = {
       message: 'User successfully logged out and account has been deleted.'
     };
@@ -185,7 +190,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     // honestly not sure why this triggers 500 but will roll with it
 
     // POST
-    const res = await request.post('http://localhost:4173/api/auth/login', {});
+    const res = await request.post('/api/auth/login', {});
 
     const expectedResponseBody = {
       message: 'An error occurred while authenticating user, please try again later.'

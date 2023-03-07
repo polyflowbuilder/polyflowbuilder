@@ -9,7 +9,7 @@ const RESET_PASSWORD_API_TESTS_EMAIL = 'pfb_test_resetPasswordAPI_playwright@tes
 
 test.describe('reset password api tests', () => {
   test('perform password reset returns 400 without email', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetToken: 'test',
         password: 'test',
@@ -29,7 +29,7 @@ test.describe('reset password api tests', () => {
   });
 
   test('perform password reset returns 400 without token', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetEmail: 'test@test.com',
         password: 'test',
@@ -49,7 +49,7 @@ test.describe('reset password api tests', () => {
   });
 
   test('perform password reset returns 400 without password', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetEmail: 'test@test.com',
         resetToken: 'test',
@@ -69,7 +69,7 @@ test.describe('reset password api tests', () => {
   });
 
   test('perform password reset returns 400 without passwordConfirm', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetEmail: 'test@test.com',
         resetToken: 'test',
@@ -89,7 +89,7 @@ test.describe('reset password api tests', () => {
   });
 
   test('perform password reset returns 401 with invalid token', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetEmail: 'test@test.com',
         resetToken: 'test',
@@ -114,7 +114,7 @@ test.describe('reset password api tests', () => {
     const prisma = new PrismaClient();
     await createToken(prisma, RESET_PASSWORD_API_TESTS_EMAIL, 'PASSWORD_RESET');
 
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {
+    const res = await request.post('/api/auth/resetpassword', {
       data: {
         resetEmail: RESET_PASSWORD_API_TESTS_EMAIL,
         resetToken: 'testtoken',
@@ -135,7 +135,7 @@ test.describe('reset password api tests', () => {
   });
 
   test('send garbage request results in 500', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/resetpassword', {});
+    const res = await request.post('/api/auth/resetpassword', {});
 
     const expectedResponseBody = {
       message: 'An error occurred while performing password reset, please try again a bit later.'

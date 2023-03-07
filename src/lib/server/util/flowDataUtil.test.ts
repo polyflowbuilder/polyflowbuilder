@@ -6,7 +6,7 @@ import {
 } from '$lib/server/util/flowDataUtil';
 import type { DBFlowchart } from '@prisma/client';
 
-// generateFlowchart will be tested in e2e tests
+// generateFlowchart will be tested in API and e2e tests
 
 // init API data
 await apiDataConfig.init();

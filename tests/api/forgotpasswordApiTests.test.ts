@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('forgot password api tests', () => {
   test('submit password reset returns 400 without email', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/forgotpassword', {
+    const res = await request.post('/api/auth/forgotpassword', {
       data: {}
     });
 
@@ -19,7 +19,7 @@ test.describe('forgot password api tests', () => {
 
   test('submit password reset returns 400 with invalid email', async ({ request }) => {
     // type 1 invalid
-    let res = await request.post('http://localhost:4173/api/auth/forgotpassword', {
+    let res = await request.post('/api/auth/forgotpassword', {
       data: {
         email: 'test'
       }
@@ -36,7 +36,7 @@ test.describe('forgot password api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
 
     // type 2 invalid
-    res = await request.post('http://localhost:4173/api/auth/forgotpassword', {
+    res = await request.post('/api/auth/forgotpassword', {
       data: {
         email: 'test@test'
       }
@@ -47,7 +47,7 @@ test.describe('forgot password api tests', () => {
   });
 
   test('submit password reset returns 201 with good payload', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/forgotpassword', {
+    const res = await request.post('/api/auth/forgotpassword', {
       data: {
         email: 'test@test.com'
       }
@@ -62,7 +62,7 @@ test.describe('forgot password api tests', () => {
   });
 
   test('send garbage request results in 500', async ({ request }) => {
-    const res = await request.post('http://localhost:4173/api/auth/forgotpassword', {});
+    const res = await request.post('/api/auth/forgotpassword', {});
 
     const expectedResponseBody = {
       message:

@@ -2,7 +2,7 @@ import { COLORS } from '$lib/common/config/colorConfig';
 import { apiData } from '$lib/server/config/apiDataConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
-import { computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
+import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import {
   CURRENT_FLOW_DATA_VERSION,
@@ -86,19 +86,29 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
   // process options
   if (data.removeGECourses) {
     for (let i = 0; i < generatedFlowchart.termData.length; i += 1) {
+      const origCourseCount = generatedFlowchart.termData[i].courses.length;
       generatedFlowchart.termData[i].courses = generatedFlowchart.termData[i].courses.filter(
         (c) => !COLORS.ge.includes(c.color)
       );
+      // recompute term units on change
+      if (generatedFlowchart.termData[i].courses.length !== origCourseCount) {
+        generatedFlowchart.termData[i].tUnits = computeTermUnits(
+          generatedFlowchart.termData[i].courses,
+          generatedFlowchart.programId,
+          apiData.courseData,
+          apiData.programData
+        );
+      }
     }
   }
 
-  // compute term units
+  // compute total units
   generatedFlowchart.unitTotal = computeTotalUnits(
     generatedFlowchart.termData,
     apiData.courseData,
     apiData.programData,
     true,
-    data.programIds
+    generatedFlowchart.programId
   );
 
   // compute hash

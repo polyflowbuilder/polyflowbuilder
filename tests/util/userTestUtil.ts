@@ -3,15 +3,21 @@
 import argon2 from 'argon2';
 import { expect } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import type { User } from '@prisma/client';
 import type { Page } from '@playwright/test';
+import type { APIRequestContext } from '@playwright/test';
 
 const prisma = new PrismaClient();
 
 // TODO: figure out how we can import from db/user without
 // playwright complaining about
-export async function createUserAccount(email: string, username: string, password: string) {
+export async function createUserAccount(
+  email: string,
+  username: string,
+  password: string
+): Promise<User> {
   const hashedPassword = await argon2.hash(password, { type: argon2.argon2id });
-  await prisma.user.create({
+  return await prisma.user.create({
     data: {
       email,
       username,
@@ -32,7 +38,7 @@ export async function deleteUserAccount(email: string) {
   });
 }
 
-export async function performLogin(page: Page, email: string, password: string) {
+export async function performLoginFrontend(page: Page, email: string, password: string) {
   await page.goto('/login', {
     waitUntil: 'networkidle'
   });
@@ -68,4 +74,18 @@ export async function performLogin(page: Page, email: string, password: string) 
   });
   // not checking timestamps bc dont know what it should be
   expect(lastLoginTimeUTC).not.toEqual(prevLastLoginTimeUTC);
+}
+
+export async function performLoginBackend(
+  request: APIRequestContext,
+  email: string,
+  password: string
+) {
+  // perform login
+  await request.post('/api/auth/login', {
+    data: {
+      email,
+      password
+    }
+  });
 }

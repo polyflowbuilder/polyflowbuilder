@@ -1,5 +1,9 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
+import {
+  createUserAccount,
+  deleteUserAccount,
+  performLoginFrontend
+} from '../util/userTestUtil.js';
 import { testNewFlowModal } from './flows/modalTests.test.js';
 
 import { expect, test } from '@playwright/test';
@@ -21,7 +25,7 @@ test.describe('flows page tests', () => {
     // login
     // see https://playwright.dev/docs/auth#reuse-the-signed-in-page-in-multiple-tests
     page = await browser.newPage();
-    await performLogin(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
   });
 
   test.afterAll(async () => {
@@ -42,7 +46,7 @@ test.describe('flows page tests', () => {
     await expect(page.getByText('Sign In')).toBeVisible();
 
     // do login again to reset state
-    await performLogin(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
   });
 
   test('NewFlowModal tests', async () => {

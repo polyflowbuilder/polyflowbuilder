@@ -1,5 +1,9 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
+import {
+  createUserAccount,
+  deleteUserAccount,
+  performLoginFrontend
+} from '../util/userTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
@@ -19,7 +23,7 @@ test.describe('reset password routine tests', () => {
   });
 
   test('user can log in normally with original password', async ({ page }) => {
-    await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2')).trim()).toBe('Flows');
@@ -110,7 +114,7 @@ test.describe('reset password routine tests', () => {
   });
 
   test('user able to log in with new password', async ({ page }) => {
-    await performLogin(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
+    await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2')).trim()).toBe('Flows');

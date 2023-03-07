@@ -1,5 +1,9 @@
 // NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount, performLogin } from '../util/userTestUtil.js';
+import {
+  createUserAccount,
+  deleteUserAccount,
+  performLoginFrontend
+} from '../util/userTestUtil.js';
 
 import { expect, test } from '@playwright/test';
 
@@ -70,7 +74,7 @@ test.describe('login page tests', () => {
   });
 
   test('correct credentials, check redirect and cookie', async ({ page }) => {
-    await performLogin(page, LOGIN_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, LOGIN_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2')).trim()).toBe('Flows');

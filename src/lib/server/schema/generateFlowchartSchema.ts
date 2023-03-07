@@ -30,9 +30,16 @@ export const generateFlowchartSchema = z.object({
             message: `Program ID ${progId} is invalid.`
           };
         }
-      )
+      ),
+      {
+        required_error: 'Program Id(s) required.'
+      }
     )
-    .nonempty(),
+    .nonempty('At least one program id must be present.')
+    .refine(
+      (arr) => new Set(arr).size === arr.length,
+      'Cannot have duplicate program ids in flowchart.'
+    ),
   removeGECourses: z.boolean().default(false),
   generateCourseCache: z.boolean().default(true)
 });

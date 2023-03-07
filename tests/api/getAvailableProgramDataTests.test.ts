@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('getAvailableProgramData tests', () => {
   test('hit route and get data', async ({ request }) => {
-    const res = await request.get('http://localhost:4173/api/data/getAvailableProgramData');
+    const res = await request.get('/api/data/getAvailableProgramData');
     const resData = await res.json();
 
     expect(res.status()).toBe(200);
