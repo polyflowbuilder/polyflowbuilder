@@ -2,8 +2,9 @@ import crypto from 'crypto';
 import { Prisma } from '@prisma/client';
 import { prisma } from '$lib/server/db/prisma';
 import { initLogger } from '$lib/common/config/loggerConfig';
-import type { TokenType } from '@prisma/client';
 import type { User } from '@prisma/client';
+import type { TokenType } from '@prisma/client';
+import type { PrismaClient } from '@prisma/client';
 
 const logger = initLogger('DB/Token');
 
@@ -86,8 +87,12 @@ export async function validateToken(
   return true;
 }
 
-export async function clearTokensByEmail(email: string, type: TokenType): Promise<void> {
-  await prisma.token.deleteMany({
+export async function clearTokensByEmail(
+  email: string,
+  type: TokenType,
+  prismaClient: PrismaClient = prisma
+): Promise<void> {
+  await prismaClient.token.deleteMany({
     where: {
       email,
       type

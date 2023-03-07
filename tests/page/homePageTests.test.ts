@@ -1,7 +1,5 @@
-// NOTE: need .js extension for PlayWright
-import { checkCarouselSlide } from '../util/homeCarouselTestUtil.js';
-
 import { expect, test } from '@playwright/test';
+import { checkCarouselSlide } from '../util/homeCarouselTestUtil.js';
 
 test.describe('homepage tests', () => {
   test.beforeEach(async ({ page }) => {
@@ -9,7 +7,7 @@ test.describe('homepage tests', () => {
   });
 
   test('homepage has expected h1', async ({ page }) => {
-    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1'))?.trim()).toBe('Welcome to PolyFlowBuilder!');
   });
 
   test('homepage has expected first image', async ({ page }) => {

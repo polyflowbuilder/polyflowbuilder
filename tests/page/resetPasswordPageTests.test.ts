@@ -1,9 +1,8 @@
-// NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.js';
-import { createToken, deleteToken } from '../util/tokenTestUtil.js';
-
-import { expect, test } from '@playwright/test';
+import { createToken } from '../util/tokenTestUtil.js';
 import { PrismaClient } from '@prisma/client';
+import { expect, test } from '@playwright/test';
+import { clearTokensByEmail } from '$lib/server/db/token.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 
 const RESET_PASSWORD_PAGE_TESTS_EMAIL = 'pfb_test_resetPasswordPage_playwright@test.com';
 const RESET_PASSWORD_VALID_URL = `/resetpassword?token=${encodeURIComponent(
@@ -15,7 +14,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto('/resetpassword');
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
+    expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -26,7 +25,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto(RESET_PASSWORD_VALID_URL);
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
+    expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -37,7 +36,7 @@ test.describe('reset password page tests (no token)', () => {
     await page.goto(`/resetpassword?token=${encodeURIComponent('testtoken')}&email=invalidemail`);
 
     expect(page).toHaveURL(/.*forgotpassword/);
-    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
+    expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
       'The provided password reset link has expired or is incorrect. Please try the reset process again.'
@@ -50,7 +49,11 @@ test.describe('reset password page tests (token)', () => {
 
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: RESET_PASSWORD_PAGE_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
 
     // set up token in DB
     await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
@@ -64,12 +67,12 @@ test.describe('reset password page tests (token)', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(RESET_PASSWORD_PAGE_TESTS_EMAIL);
+    await deleteUser(RESET_PASSWORD_PAGE_TESTS_EMAIL);
   });
 
   test('authorized reset password page has expected content', async ({ page }) => {
     expect(page).toHaveURL(/.*resetpassword/);
-    expect((await page.textContent('h2')).trim()).toBe('Reset Password');
+    expect((await page.textContent('h2'))?.trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
   });
 
@@ -106,7 +109,7 @@ test.describe('reset password page tests (token)', () => {
 
   test('token gets deleted before reset can happen', async ({ page }) => {
     // delete token from DB side
-    await deleteToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
 
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
@@ -124,7 +127,7 @@ test.describe('reset password page tests (token)', () => {
 
   test('token expires before reset can happen', async ({ page }) => {
     // create token that instantly expired
-    await deleteToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
     await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', true);
 
     // fill and submit
@@ -138,7 +141,7 @@ test.describe('reset password page tests (token)', () => {
     );
 
     // reset token
-    await deleteToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
     await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
   });
 
@@ -170,7 +173,7 @@ test.describe('reset password page tests (token)', () => {
     await page.getByRole('button', { name: 'Reset Password' }).click();
 
     await expect(page).toHaveURL(/.*login/);
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(

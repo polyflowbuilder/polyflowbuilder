@@ -1,9 +1,7 @@
-// NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount } from '../util/userTestUtil.js';
 import { createToken } from '../util/tokenTestUtil.js';
-
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 
 const RESET_PASSWORD_API_TESTS_EMAIL = 'pfb_test_resetPasswordAPI_playwright@test.com';
 
@@ -109,7 +107,11 @@ test.describe('reset password api tests', () => {
 
   test('perform password reset returns 200 with valid payload', async ({ request }) => {
     // create account
-    await createUserAccount(RESET_PASSWORD_API_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: RESET_PASSWORD_API_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
     // create token
     const prisma = new PrismaClient();
     await createToken(prisma, RESET_PASSWORD_API_TESTS_EMAIL, 'PASSWORD_RESET');
@@ -131,7 +133,7 @@ test.describe('reset password api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
 
     // delete account
-    await deleteUserAccount(RESET_PASSWORD_API_TESTS_EMAIL);
+    await deleteUser(RESET_PASSWORD_API_TESTS_EMAIL);
   });
 
   test('send garbage request results in 500', async ({ request }) => {

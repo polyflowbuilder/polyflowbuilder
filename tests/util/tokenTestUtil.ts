@@ -17,14 +17,3 @@ export async function createToken(
     }
   });
 }
-
-export async function deleteToken(prisma: PrismaClient, email: string, type: TokenType) {
-  await prisma.token.delete({
-    where: {
-      email_type: {
-        email,
-        type
-      }
-    }
-  });
-}

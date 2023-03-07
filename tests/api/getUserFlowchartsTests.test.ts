@@ -1,9 +1,8 @@
-// NOTE: need .js extension for PlayWright
-import { createUserAccount, deleteUserAccount, performLoginBackend } from '../util/userTestUtil.js';
-import { convertDBFlowchartToFlowchart } from '../util/flowDataTestUtil.js';
-
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { performLoginBackend } from '../util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { convertDBFlowchartToFlowchart } from '$lib/server/util/flowDataUtil.js';
 
 const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
 
@@ -12,12 +11,16 @@ test.describe('getUserFlowcharts API tests', () => {
 
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test', 'test');
+    await createUser({
+      email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
   });
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(GET_USER_FLOWCHARTS_TESTS_API_EMAIL);
+    await deleteUser(GET_USER_FLOWCHARTS_TESTS_API_EMAIL);
   });
 
   test('fetch results in 400 without authentication', async ({ request }) => {
@@ -49,7 +52,7 @@ test.describe('getUserFlowcharts API tests', () => {
 
   test('authenticated request succeeds with 200 nonempty flowcharts list', async ({ request }) => {
     // create flowcharts
-    const { id } = await prisma.user.findFirst({
+    const id = await prisma.user.findFirst({
       where: {
         email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL
       },
@@ -57,6 +60,9 @@ test.describe('getUserFlowcharts API tests', () => {
         id: true
       }
     });
+    if (!id) {
+      throw new Error('id is null');
+    }
 
     await prisma.dBFlowchart.createMany({
       data: [
@@ -64,7 +70,7 @@ test.describe('getUserFlowcharts API tests', () => {
           hash: '1',
           name: 'test1',
           notes: '',
-          ownerId: id,
+          ownerId: id.id,
           programId1: '0017f92d-d73f-4819-9d59-8c658cd29be5',
           startYear: '2020',
           termData: [],
@@ -75,7 +81,7 @@ test.describe('getUserFlowcharts API tests', () => {
           hash: '2',
           name: 'test2',
           notes: '',
-          ownerId: id,
+          ownerId: id.id,
           programId1: '002e8710-245f-46a4-8689-2ab2f5a47170',
           startYear: '2022',
           termData: [],
@@ -94,7 +100,7 @@ test.describe('getUserFlowcharts API tests', () => {
     const expectedFlowcharts = await prisma.dBFlowchart
       .findMany({
         where: {
-          ownerId: id
+          ownerId: id.id
         }
       })
       .then((fArr) => fArr.map((f) => convertDBFlowchartToFlowchart(f)));

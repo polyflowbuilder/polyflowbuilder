@@ -20,7 +20,7 @@ test.describe('feedback page tests', () => {
   });
 
   test('feedback page has expected content', async ({ page }) => {
-    expect((await page.textContent('h2')).trim()).toBe('Submit Feedback');
+    expect((await page.textContent('h2'))?.trim()).toBe('Submit Feedback');
     await expect(page.locator('button')).toBeVisible();
   });
 

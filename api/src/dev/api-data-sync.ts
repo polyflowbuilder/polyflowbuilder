@@ -174,7 +174,6 @@ async function syncTermTypicallyOfferedData() {
   console.log('term typically offered sync complete');
 }
 
-// TODO: update template flows to fit new UUID-id schema
 async function syncTemplateFlowcharts() {
   console.log('starting update of default flows to database ...');
 

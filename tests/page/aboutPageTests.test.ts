@@ -6,7 +6,7 @@ test.describe('about page tests', () => {
   });
 
   test('about page has expected h1', async ({ page }) => {
-    expect((await page.textContent('h1')).trim()).toBe('About PolyFlowBuilder');
+    expect((await page.textContent('h1'))?.trim()).toBe('About PolyFlowBuilder');
   });
 
   test('about page image is visible', async ({ page }) => {

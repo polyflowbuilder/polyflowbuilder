@@ -8,7 +8,7 @@ test.describe('forgot password page tests', () => {
   });
 
   test('forgot password page has expected content', async ({ page }) => {
-    expect((await page.textContent('h2')).trim()).toBe('Request Password Reset');
+    expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('button')).toBeVisible();
   });
 

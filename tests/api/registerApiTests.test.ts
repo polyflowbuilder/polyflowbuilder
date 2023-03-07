@@ -1,6 +1,4 @@
-// NOTE: need .js extension for PlayWright
-import { deleteUserAccount } from '../util/userTestUtil.js';
-
+import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
 
 const REGISTER_API_TESTS_EMAIL = 'pfb_test_registerAPI_playwright@test.com';
@@ -8,7 +6,7 @@ const REGISTER_API_TESTS_EMAIL = 'pfb_test_registerAPI_playwright@test.com';
 test.describe('register api tests', () => {
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(REGISTER_API_TESTS_EMAIL);
+    await deleteUser(REGISTER_API_TESTS_EMAIL);
   });
 
   test('empty payload results in 400', async ({ request }) => {

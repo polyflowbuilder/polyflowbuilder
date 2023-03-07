@@ -1,11 +1,6 @@
-// NOTE: need .js extension for PlayWright
-
-import PlaywrightConfig from '../../playwright.config.js';
-
-import { createUserAccount } from '../util/userTestUtil.js';
-
-import { expect, request, test } from '@playwright/test';
+import { createUser } from '$lib/server/db/user';
 import { PrismaClient } from '@prisma/client';
+import { expect, request, test } from '@playwright/test';
 import type { APIRequestContext } from '@playwright/test';
 
 const LOGIN_API_TESTS_EMAIL = 'pfb_test_loginAPI_playwright@test.com';
@@ -16,7 +11,11 @@ test.describe('login api tests (POST, DELETE)', () => {
 
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(LOGIN_API_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: LOGIN_API_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
   });
 
   test('empty payload results in 400', async ({ request }) => {

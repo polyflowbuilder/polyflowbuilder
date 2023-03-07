@@ -1,6 +1,4 @@
-// NOTE: need .js extension for PlayWright
-import { deleteUserAccount } from '../util/userTestUtil.js';
-
+import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
 
 // bug description: going from /register to /login pages by
@@ -12,7 +10,7 @@ const POLY_432_TESTS_EMAIL = 'pfb_test_poly-432_playwright@test.com';
 test.describe('poly-432 bugfix tests', () => {
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(POLY_432_TESTS_EMAIL);
+    await deleteUser(POLY_432_TESTS_EMAIL);
   });
 
   test('do not see account created message on regular navigation', async ({ page }) => {
@@ -49,7 +47,7 @@ test.describe('poly-432 bugfix tests', () => {
     await page.getByRole('button', { name: 'Create Account!' }).click();
 
     await expect(page).toHaveURL(/.*login/);
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
       'Account successfully created! Please login.'

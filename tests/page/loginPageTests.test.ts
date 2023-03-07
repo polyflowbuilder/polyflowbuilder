@@ -1,18 +1,17 @@
-// NOTE: need .js extension for PlayWright
-import {
-  createUserAccount,
-  deleteUserAccount,
-  performLoginFrontend
-} from '../util/userTestUtil.js';
-
 import { expect, test } from '@playwright/test';
+import { performLoginFrontend } from '../util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 
 const LOGIN_TESTS_EMAIL = 'pfb_test_loginPage_playwright@test.com';
 
 test.describe('login page tests', () => {
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(LOGIN_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: LOGIN_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
   });
 
   test.beforeEach(async ({ page }) => {
@@ -23,11 +22,11 @@ test.describe('login page tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(LOGIN_TESTS_EMAIL);
+    await deleteUser(LOGIN_TESTS_EMAIL);
   });
 
   test('login page has expected h2', async ({ page }) => {
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
   });
 
@@ -77,7 +76,7 @@ test.describe('login page tests', () => {
     await performLoginFrontend(page, LOGIN_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect((await page.textContent('h2')).trim()).toBe('Flows');
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

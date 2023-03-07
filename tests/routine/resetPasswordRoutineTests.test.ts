@@ -1,12 +1,7 @@
-// NOTE: need .js extension for PlayWright
-import {
-  createUserAccount,
-  deleteUserAccount,
-  performLoginFrontend
-} from '../util/userTestUtil.js';
-
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { performLoginFrontend } from '../util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 
 const RESET_PASSWORD_ROUTINE_TESTS_EMAIL = 'pfb_test_resetPasswordRoutine_playwright@test.com';
 
@@ -14,19 +9,23 @@ test.describe('reset password routine tests', () => {
   const prisma = new PrismaClient();
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
   });
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
+    await deleteUser(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
   });
 
   test('user can log in normally with original password', async ({ page }) => {
     await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect((await page.textContent('h2')).trim()).toBe('Flows');
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
     await page.context().clearCookies();
@@ -37,7 +36,7 @@ test.describe('reset password routine tests', () => {
     await page.goto('/login', {
       waitUntil: 'networkidle'
     });
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
 
     // click on forgot password
@@ -65,6 +64,10 @@ test.describe('reset password routine tests', () => {
       }
     });
 
+    if (!res) {
+      throw new Error('res did not return a valid token');
+    }
+
     await page.goto(
       `/resetpassword?token=${encodeURIComponent(
         res.token
@@ -74,7 +77,7 @@ test.describe('reset password routine tests', () => {
       }
     );
     expect(page).toHaveURL(/.*resetpassword/);
-    expect((await page.textContent('h2')).trim()).toBe('Reset Password');
+    expect((await page.textContent('h2'))?.trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
 
     // enter a new password
@@ -84,7 +87,7 @@ test.describe('reset password routine tests', () => {
 
     // check that this was successful
     await expect(page).toHaveURL(/.*login/);
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
@@ -99,7 +102,7 @@ test.describe('reset password routine tests', () => {
     });
 
     await expect(page).toHaveURL(/.*login/);
-    expect((await page.textContent('h2')).trim()).toBe('Sign In');
+    expect((await page.textContent('h2'))?.trim()).toBe('Sign In');
     await expect(page.locator('button')).toBeVisible();
 
     // enter old credentials
@@ -117,7 +120,7 @@ test.describe('reset password routine tests', () => {
     await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
-    expect((await page.textContent('h2')).trim()).toBe('Flows');
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
 
     expect((await page.context().cookies())[0].name).toBe('sId');
   });

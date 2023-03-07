@@ -1,14 +1,8 @@
-// NOTE: need .js extension for PlayWright
-import {
-  createUserAccount,
-  deleteUserAccount,
-  performLoginFrontend
-} from '../util/userTestUtil.js';
-import { testNewFlowModal } from './flows/modalTests.test.js';
-
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-
+import { testNewFlowModal } from './flows/modalTests.test.js';
+import { performLoginFrontend } from '../util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_TESTS_EMAIL = 'pfb_test_flowsPage_playwright@test.com';
@@ -20,7 +14,11 @@ test.describe('flows page tests', () => {
 
   test.beforeAll(async ({ browser }) => {
     // create account
-    await createUserAccount(FLOWS_PAGE_TESTS_EMAIL, 'test', 'test');
+    await createUser({
+      email: FLOWS_PAGE_TESTS_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
 
     // login
     // see https://playwright.dev/docs/auth#reuse-the-signed-in-page-in-multiple-tests
@@ -29,7 +27,7 @@ test.describe('flows page tests', () => {
   });
 
   test.afterAll(async () => {
-    await deleteUserAccount(FLOWS_PAGE_TESTS_EMAIL);
+    await deleteUser(FLOWS_PAGE_TESTS_EMAIL);
   });
 
   test('logout functionality performs redirect', async () => {
@@ -37,7 +35,7 @@ test.describe('flows page tests', () => {
     await page.getByText('Log Out').click();
 
     await expect(page).toHaveURL('/');
-    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1'))?.trim()).toBe('Welcome to PolyFlowBuilder!');
 
     // check cookies
     expect((await page.context().cookies()).length).toBe(0);
@@ -69,7 +67,7 @@ test.describe('flows page tests', () => {
     await page.getByText('Delete Account').click();
 
     await expect(page).toHaveURL('/');
-    expect((await page.textContent('h1')).trim()).toBe('Welcome to PolyFlowBuilder!');
+    expect((await page.textContent('h1'))?.trim()).toBe('Welcome to PolyFlowBuilder!');
 
     // check cookies
     expect((await page.context().cookies()).length).toBe(0);

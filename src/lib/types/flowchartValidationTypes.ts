@@ -1,6 +1,6 @@
 // types for everything validation related (excluding curriculum sheet validation)
 
-import type { Flowchart } from './userDataTypes';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 export enum CourseValidationStatus {
   UNABLE_TO_AUTO_VALIDATE,

@@ -21,17 +21,17 @@ export async function createUser(registerData: {
     logger.info('New user attempted to register with existing email');
     return null;
   } else {
-    await prisma.user.create({
+    const newUser = await prisma.user.create({
       data: {
         username: registerData.username,
         password: await argon2.hash(registerData.password, { type: argon2.argon2id }),
         email: registerData.email
       }
     });
-  }
 
-  logger.info(`User with email [${registerData.email}] successfully added to master database`);
-  return registerData.email;
+    logger.info(`User with email [${registerData.email}] successfully added to master database`);
+    return newUser.id;
+  }
 }
 
 export async function getUserByEmail(email: string): Promise<User | null> {
@@ -56,9 +56,12 @@ export async function updateUser(email: string, data: Prisma.UserUpdateInput): P
 }
 
 export async function deleteUser(email: string): Promise<void> {
-  await prisma.user.delete({
+  // deleteMany bc idempotent
+  await prisma.user.deleteMany({
     where: {
       email
     }
   });
+
+  logger.info(`User with email [${email}] successfully deleted from master database`);
 }

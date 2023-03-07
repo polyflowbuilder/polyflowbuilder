@@ -1,7 +1,8 @@
 import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
-import { createUserAccount, deleteUserAccount, performLoginBackend } from '../util/userTestUtil.js';
+import { performLoginBackend } from '../util/userTestUtil.js';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig.js';
+import { createUser, deleteUser } from '$lib/server/db/user.js';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema.js';
 
 const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
@@ -2612,12 +2613,16 @@ const responsePayload2 = {
 test.describe('generate flowchart api input tests', () => {
   test.beforeAll(async () => {
     // create account
-    await createUserAccount(GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test', 'test');
+    await createUser({
+      email: GENERATE_FLOWCHART_TESTS_API_1_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
   });
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(GENERATE_FLOWCHART_TESTS_API_1_EMAIL);
+    await deleteUser(GENERATE_FLOWCHART_TESTS_API_1_EMAIL);
   });
 
   test('generate flowchart api returns 401 without authorization', async ({ request }) => {
@@ -2901,13 +2906,20 @@ test.describe('generate flowchart api output tests', () => {
 
   test.beforeAll(async () => {
     // create account
-    const user = await createUserAccount(GENERATE_FLOWCHART_TESTS_API_2_EMAIL, 'test', 'test');
-    ownerId = user.id;
+    const newUserId = await createUser({
+      email: GENERATE_FLOWCHART_TESTS_API_2_EMAIL,
+      username: 'test',
+      password: 'test'
+    });
+
+    if (newUserId) {
+      ownerId = newUserId;
+    }
   });
 
   test.afterAll(async () => {
     // delete account
-    await deleteUserAccount(GENERATE_FLOWCHART_TESTS_API_2_EMAIL);
+    await deleteUser(GENERATE_FLOWCHART_TESTS_API_2_EMAIL);
   });
 
   test('generate valid flowchart with 1 program', async ({ request }) => {
