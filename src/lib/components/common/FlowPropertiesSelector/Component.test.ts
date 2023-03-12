@@ -36,7 +36,11 @@ async function setFlowNameStartingYear() {
 
 // assumes that things are filled out in idx order
 // eg program 1 first, program 2 next
-async function setProgram(idx: number, alreadySelectedProgramIds: string[]) {
+async function setProgram(
+  idx: number,
+  alreadySelectedProgramIds: string[],
+  selectProgramWithMultipleConcs = false
+) {
   // choose program
 
   const alreadySelectedMajorNames = alreadySelectedProgramIds
@@ -45,9 +49,14 @@ async function setProgram(idx: number, alreadySelectedProgramIds: string[]) {
       (progId) => apiDataConfig.apiData.programData.find((prog) => prog.id === progId)?.majorName
     );
   const programList = apiDataConfig.apiData.programData.filter(
-    (prog) => !alreadySelectedMajorNames.includes(prog.majorName)
+    (prog) =>
+      !alreadySelectedMajorNames.includes(prog.majorName) &&
+      (!selectProgramWithMultipleConcs ||
+        (selectProgramWithMultipleConcs &&
+          apiDataConfig.apiData.programData.filter(
+            (prog2) => prog2.catalog === prog.catalog && prog2.majorName === prog.majorName
+          ).length > 1))
   );
-
   const program = programList[Math.floor(Math.random() * programList.length)];
 
   await userEvent.selectOptions(
@@ -601,6 +610,92 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeTruthy();
   });
+
+  test('change conc in valid payload is still valid', async () => {
+    userEvent.setup();
+
+    const { component } = render(Component, {
+      props: {
+        startYearsData: apiDataConfig.apiData.startYears,
+        catalogYearsData: apiDataConfig.apiData.catalogs,
+        programData: apiDataConfig.apiData.programData,
+        flowName: '',
+        flowStartYear: '',
+        programIdInputs: ['']
+      }
+    });
+
+    let programIds = [''];
+    let optionsValid = false;
+    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
+    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
+    component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
+
+    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
+    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
+    expect(programIds).toStrictEqual(['']);
+    expect(optionsValid).toBeFalsy();
+
+    const expectedProgramIds: string[] = [];
+
+    await setFlowNameStartingYear();
+    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
+    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
+    expect(programIds).toStrictEqual(['']);
+    expect(optionsValid).toBeFalsy();
+
+    // populate first program
+    const program1 = await setProgram(0, expectedProgramIds, true);
+    expectedProgramIds.pop();
+    expectedProgramIds.push(program1.id);
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(1);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+
+    // then change just conc and expect still valid
+    const newProgramSelectOptions = apiDataConfig.apiData.programData
+      .filter((prog) => prog.catalog === program1.catalog && prog.majorName === program1.majorName)
+      .filter(
+        (prog) =>
+          prog.id !==
+          (
+            screen.getByRole('combobox', {
+              name: 'Concentration'
+            }) as HTMLOptionElement
+          ).value
+      );
+    const newProgram =
+      newProgramSelectOptions[Math.floor(Math.random() * newProgramSelectOptions.length)];
+
+    await userEvent.selectOptions(
+      screen.getByRole('combobox', { name: 'Concentration' }),
+      newProgram.id
+    );
+
+    // check that UI is still correct and updates happened appropriately
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Catalog'
+      })
+    ).toHaveValue(program1.catalog);
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Major'
+      })
+    ).toHaveValue(program1.majorName);
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Concentration'
+      })
+    ).toHaveValue(newProgram.id);
+    expectedProgramIds[0] = newProgram.id;
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(2);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(1);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+  });
 });
 
 describe('FlowPropertiesSelector/Component invalid updates tests', () => {
@@ -700,12 +795,19 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
           })[1] as HTMLOptionElement
         ).value
     );
+    const newCatalogValue =
+      removeSelectedCatalog[Math.floor(Math.random() * removeSelectedCatalog.length)];
     await userEvent.selectOptions(
       screen.getAllByRole('combobox', { name: 'Catalog' })[1],
-      removeSelectedCatalog[Math.floor(Math.random() * removeSelectedCatalog.length)]
+      newCatalogValue
     );
 
-    // check that things are no longer valid
+    // check that UI updated correctly and that options are no longer valid
+    expect(
+      screen.getAllByRole('combobox', {
+        name: 'Catalog'
+      })[1]
+    ).toHaveValue(newCatalogValue);
     expect(
       screen.getAllByRole('combobox', {
         name: 'Major'
@@ -719,6 +821,55 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expectedProgramIds[1] = '';
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(6);
     expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(6);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeFalsy();
+
+    // set new program and expect valid
+    const newProgram1 = await setProgram(1, expectedProgramIds);
+    expectedProgramIds[1] = newProgram1.id;
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(7);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(7);
+    expect(programIds).toStrictEqual(expectedProgramIds);
+    expect(optionsValid).toBeTruthy();
+
+    // then change major and expect conc to reset while everything else stays the same
+    const removeSelectedMajor = apiDataConfig.apiData.programData
+      .filter((prog) => prog.catalog === newProgram1.catalog)
+      .filter(
+        (prog) =>
+          prog.majorName !==
+          (
+            screen.getAllByRole('combobox', {
+              name: 'Major'
+            })[1] as HTMLOptionElement
+          ).value
+      )
+      .map((prog) => prog.majorName);
+    const newMajorValue =
+      removeSelectedMajor[Math.floor(Math.random() * removeSelectedMajor.length)];
+    await userEvent.selectOptions(
+      screen.getAllByRole('combobox', { name: 'Major' })[1],
+      newMajorValue
+    );
+
+    expect(
+      screen.getAllByRole('combobox', {
+        name: 'Catalog'
+      })[1]
+    ).toHaveValue(newProgram1.catalog);
+    expect(
+      screen.getAllByRole('combobox', {
+        name: 'Major'
+      })[1]
+    ).toHaveValue(newMajorValue);
+    expect(
+      screen.getAllByRole('combobox', {
+        name: 'Concentration'
+      })[1]
+    ).toHaveValue('');
+    expectedProgramIds[1] = '';
+    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(8);
+    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(8);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
   });

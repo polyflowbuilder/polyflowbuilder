@@ -22,6 +22,7 @@
   let programCatalogYear = '';
   let programName = '';
   let programId = '';
+  let updating = false;
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
     const majorName = programData.find((prog) => prog.id === id)?.majorName;
     if (!majorName) {
@@ -32,9 +33,14 @@
 
   // react to change in program input
   $: updateInputs(programIdInput);
-  $: dispatch('programIdUpdate', programId);
+
+  // prevent dispatch during middle of updateInputs (ticking)
+  $: if (!updating) {
+    dispatch('programIdUpdate', programId);
+  }
 
   async function updateInputs(input: string) {
+    updating = true;
     if (input !== '') {
       // find the program if it's valid
       const program = programData.find((prog) => prog.id === input);
@@ -52,6 +58,7 @@
     }
 
     programId = input;
+    updating = false;
   }
 
   // generate major and concentration options for UI

@@ -37,10 +37,10 @@
 
   // do all updates through inputs to ensure UI is updated correctly
   async function addProgram() {
-    programIdInputs = [...flowProgramIds, ''];
+    programIdInputs = [...programIdInputs, ''];
   }
   async function deleteProgram(i: number) {
-    programIdInputs = flowProgramIds.filter((_, idx) => idx !== i);
+    programIdInputs = programIdInputs.filter((_, idx) => idx !== i);
   }
   // wrap this to prevent duplicate updates
   async function updateProgram(i: number, updatedProgramId: string) {
@@ -107,7 +107,7 @@
         {catalogYearsData}
         {programData}
         programIdInput={flowProgramIdInput}
-        alreadySelectedProgramIds={flowProgramIds.filter((id, j) => id && j !== i)}
+        alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
         {i}
         on:programIdUpdate={(e) => updateProgram(i, e.detail)}
         on:deleteProgram={(e) => deleteProgram(e.detail)}

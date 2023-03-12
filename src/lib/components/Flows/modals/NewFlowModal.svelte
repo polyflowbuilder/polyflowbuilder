@@ -1,5 +1,6 @@
 <script lang="ts">
   import FlowPropertiesSelector from '$lib/components/common/FlowPropertiesSelector';
+  import { tick } from 'svelte';
   import { Toggle } from '$lib/components/common';
   import { newFlowModalOpen } from '$lib/client/stores/modalStateStore';
   import type { Program } from '@prisma/client';
@@ -32,8 +33,13 @@
     await new Promise((r) => setTimeout(r, 100));
     flowName = '';
     flowStartYear = '';
-    programIdInputs = [''];
     removeGECourses = false;
+
+    // need to empty arr and tick so that all elements in programselector are destroyed
+    // before setting it to the default value
+    programIdInputs = [];
+    await tick();
+    programIdInputs = [''];
   }
 </script>
 
