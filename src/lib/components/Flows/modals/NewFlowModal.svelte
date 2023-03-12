@@ -26,6 +26,52 @@
 
   // UI state
   let loading = false;
+
+  async function createFlowchart() {
+    let reqSuccess = true;
+
+    if (loading) {
+      return;
+    }
+
+    loading = true;
+
+    const payload = {
+      name: flowName,
+      startYear: flowStartYear,
+      programIds: programIds.join(','),
+      removeGECourses: String(removeGECourses)
+    };
+    const searchParams = new URLSearchParams(payload);
+    const res = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`).then(
+      (resp) => {
+        switch (resp.status) {
+          case 200:
+            return resp.json();
+          case 401:
+            alert(
+              'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
+            );
+            reqSuccess = false;
+            break;
+          default:
+            alert(
+              'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
+            );
+            reqSuccess = false;
+            break;
+        }
+        return;
+      }
+    );
+    if (reqSuccess) {
+      // close modal on success
+      closeModal();
+    }
+
+    loading = false;
+  }
+
   async function closeModal() {
     $newFlowModalOpen = false;
 
@@ -73,7 +119,8 @@
       <button
         class="btn btn-almostmd btn-accent flex-1"
         class:loading
-        disabled={!createFlowOptionsValid}>Create</button
+        disabled={!createFlowOptionsValid}
+        on:click={createFlowchart}>Create</button
       >
       <div class="divider divider-horizontal" />
       <button class="btn btn-almostmd flex-1" disabled={loading} on:click={closeModal}>
