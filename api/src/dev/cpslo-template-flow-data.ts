@@ -5,8 +5,9 @@ import http from 'http';
 import { JSDOM } from 'jsdom';
 import { v4 as uuid } from 'uuid';
 
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { apiRoot, asyncWait, nthIndex, fetchRetry, getFiles } from './common';
-import { updateFlowchartDataVersionToV7 } from './util/user-data-model-sync';
+import { updateFlowchartDataModel } from '$lib/server/util/userDataModelSync';
 import type { Program } from '@prisma/client';
 
 type TemplateFlowchartMetadata = {
@@ -269,17 +270,20 @@ function createJSONFiles() {
 }
 
 async function updateTemplateFlowchartsToLatestDataVersion() {
-  const allProgramData: TemplateFlowchartMetadata = JSON.parse(
-    fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
-  );
+  await apiDataConfig.init();
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
     if (path.extname(f) === '.json') {
       console.log(`attempt data version update for flowchart ${f}`);
       try {
         // read, update, and write back out
         const templateFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
-        const updatedTemplateFlowData = updateFlowchartDataVersionToV7(
-          allProgramData.flows,
+
+        if (!templateFlowData?.dataModelVersion && !templateFlowData?.version) {
+          throw new Error('not a valid flowchart file');
+        }
+
+        const updatedTemplateFlowData = updateFlowchartDataModel(
+          '11111111-1111-1111-1111-111111111111',
           templateFlowData
         );
         fs.writeFileSync(f, JSON.stringify(updatedTemplateFlowData, null, 2));

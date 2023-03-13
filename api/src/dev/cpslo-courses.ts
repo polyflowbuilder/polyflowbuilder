@@ -5,8 +5,7 @@
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
-// see https://github.com/TypeStrong/ts-node/issues/1777 for the *.js extension
-import { apiRoot, fetchRetry } from './common.js';
+import { apiRoot, fetchRetry } from './common';
 
 // API data types
 import type { APICourse } from '@prisma/client';

@@ -28,15 +28,7 @@ export function checkUserFlowchartsDataVersion(
       flowchart.dataModelVersion < dataModelVersion ||
       flowchart.version < dataModelVersion
     ) {
-      flowcharts.push(
-        updateFlowchartDataModel(
-          {
-            ownerId,
-            catalogs: apiData.catalogs
-          },
-          flowchart
-        )
-      );
+      flowcharts.push(updateFlowchartDataModel(ownerId, flowchart));
       userDataUpdated = true;
       numFlowsUpgraded += 1;
     } else {
@@ -61,26 +53,24 @@ export function checkUserFlowchartsDataVersion(
   };
 }
 
-export function updateFlowchartDataModel(
-  inputData: {
-    ownerId: string;
-    catalogs: string[];
-  },
-  flow: any
-): Flowchart {
+export function updateFlowchartDataModel(ownerId: string, flow: any): Flowchart {
   let newFlowchart: any = flow;
 
-  // v5 to v6
-  // TODO: REMOVE THIS LOOP!! WILL CAUSE ISSUES WITH NEW .version IN V7!!
-  while (newFlowchart.dataModelVersion !== dataModelVersion) {
+  // <v6 to v6
+  while (!newFlowchart.version && newFlowchart.dataModelVersion !== 6) {
     if (newFlowchart.dataModelVersion < 6) {
-      newFlowchart = updateFlowchartDataVersionToV6(inputData.catalogs, newFlowchart);
+      logger.info(
+        'updated flowchart to datamodelversion 6 from version',
+        newFlowchart.dataModelVersion
+      );
+      newFlowchart = updateFlowchartDataVersionToV6(newFlowchart);
     }
   }
 
   // v6 to v7, do it this way bc we go from dataModelVersion -> version
   if (!newFlowchart.version) {
-    newFlowchart = updateFlowchartDataVersionToV7(inputData.ownerId, newFlowchart);
+    newFlowchart = updateFlowchartDataVersionToV7(ownerId, newFlowchart);
+    logger.info('updated flowchart to version 7');
   }
 
   newFlowchart.flowHash = generateFlowHash(newFlowchart);
@@ -90,11 +80,19 @@ export function updateFlowchartDataModel(
 
 // from v6 to v7
 function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
+  const programId = (
+    typeof flow.flowId === 'string' ? [flow.flowId] : (flow.flowId as string[])
+  ).map((code) => apiData.programData.find((prog) => prog.code === code)?.id);
+
+  if (programId.includes(undefined)) {
+    throw new Error(`failed to map all flowId codes to programIds: ${flow.flowId}`);
+  }
+
   const updatedFlowchart: Flowchart = {
     id: uuid(),
     ownerId,
     name: flow.flowName,
-    programId: typeof flow.flowName === 'string' ? [flow.flowName] : flow.flowName,
+    programId: programId as string[],
     startYear: flow.flowStartYear,
     unitTotal: flow.flowUnitTotal,
     notes: flow.flowNotes,
@@ -126,11 +124,13 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
   return updatedFlowchart;
 }
 
-// from v5 to v6
-function updateFlowchartDataVersionToV6(catalogs: string[], flow: any): any {
-  const flowIDCatalogYear = catalogs
+// from <v6 to v6
+function updateFlowchartDataVersionToV6(flow: any): any {
+  const flowIDCatalogYear = apiData.catalogs
     .find((catalog) => catalog === flow.flowCatalogYear)
-    ?.replaceAll('20', '');
+    ?.split('-')
+    .map((year) => year.slice(2))
+    .join('-');
 
   if (!flowIDCatalogYear) {
     throw new Error(

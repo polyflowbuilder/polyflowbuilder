@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import { Prisma, PrismaClient } from '@prisma/client';
-import { apiRoot, getFiles, nthIndex } from './common.js';
+import { apiRoot, getFiles, nthIndex } from './common';
 
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
@@ -188,7 +188,7 @@ async function syncTemplateFlowcharts() {
   // recursively find all JSON files and insert into db
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
     if (path.extname(f) === '.json') {
-      console.log(`adding ${f} to defaultflows DB`);
+      console.log(`validating schema for ${f}`);
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let defaultFlowData: Flowchart | null = null;

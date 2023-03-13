@@ -1,9 +1,9 @@
 import { z } from 'zod';
-import type { Course } from '@prisma/client';
+import type { APICourse } from '@prisma/client';
 
 // schema tightly couples w/ allCourseData bc don't know how to pass this data
 // into the schema validator otherwise
-import { allCourseData } from '../validation/validate-course-requisites.js';
+import { allCourseData } from '../validation/validate-course-requisites';
 
 // helper functions from old pfb2.0
 function setCharAt(str: string, index: number, chr: string) {
@@ -28,7 +28,7 @@ function generateReqOrBlocks(reqString: string) {
   return workingReqString.split(' ').map((blk) => blk.replace(/%/g, ' '));
 }
 
-function validateRequisiteString(input: string, catalog: string, courseData: Course[]) {
+function validateRequisiteString(input: string, catalog: string, courseData: APICourse[]) {
   if (input.slice(0, 6) === '$SKIP$' || input === '') {
     return true;
   }
@@ -90,12 +90,12 @@ export const requisiteValidationSchema = z
     if (!allCourseData.find((val) => val.catalog === obj.catalog && val.id === obj.id)) {
       ctx.addIssue({
         code: 'custom',
-        message: 'Course catalog and ID pair are invalid.',
+        message: 'APICourse catalog and ID pair are invalid.',
         path: ['catalog']
       });
       ctx.addIssue({
         code: 'custom',
-        message: 'Course catalog and ID pair are invalid'
+        message: 'APICourse catalog and ID pair are invalid'
       });
     }
     // verify prereq

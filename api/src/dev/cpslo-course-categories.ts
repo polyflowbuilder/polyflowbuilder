@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { apiRoot } from './common.js';
+import { apiRoot } from './common';
 
 // API data types
 import type { APICourse, GECourse } from '@prisma/client';

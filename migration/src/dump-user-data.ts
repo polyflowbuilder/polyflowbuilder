@@ -3,8 +3,8 @@
 import fs from 'fs';
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
-import { FieldPacket, RowDataPacket } from 'mysql2/promise';
 import type { Pool } from 'mysql2/promise';
+import type { FieldPacket, RowDataPacket } from 'mysql2/promise';
 
 let conPool: Pool | null = null;
 
@@ -79,7 +79,6 @@ async function dumpUserData() {
     // save user data
     for (const user of userData) {
       console.log('  writing data for user', user.username);
-      delete user.password;
       fs.writeFileSync(`../data/dump/${user.username}.json`, JSON.stringify(user, null, 2));
     }
 

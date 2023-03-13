@@ -2,7 +2,7 @@ import fs from 'fs';
 import https from 'https';
 import { parse as csvParse } from 'csv-parse/sync';
 
-import { apiRoot } from './common.js';
+import { apiRoot } from './common';
 
 import type { APICourse, TermTypicallyOffered } from '@prisma/client';
 

@@ -5,7 +5,7 @@
 
 import fs from 'fs';
 
-import { apiRoot } from './common.js';
+import { apiRoot } from './common';
 
 import type { APICourse, CourseRequisite } from '@prisma/client';
 
