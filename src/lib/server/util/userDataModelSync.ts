@@ -7,6 +7,8 @@ import { v4 as uuid } from 'uuid';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { dataModelVersion } from '$lib/common/schema/flowchartSchema';
 import { generateFlowHash } from '$lib/common/util/flowDataUtilCommon';
+import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
+import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 const logger = initLogger('Server/Util/UserDataModelSync');
@@ -73,7 +75,7 @@ export function updateFlowchartDataModel(ownerId: string, flow: any): Flowchart 
     logger.info('updated flowchart to version 7');
   }
 
-  newFlowchart.flowHash = generateFlowHash(newFlowchart);
+  newFlowchart.hash = generateFlowHash(newFlowchart);
 
   return newFlowchart;
 }
@@ -91,27 +93,34 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
   const updatedFlowchart: Flowchart = {
     id: uuid(),
     ownerId,
-    name: flow.flowName,
+    name: String(flow.flowName).slice(0, FLOW_NAME_MAX_LENGTH),
     programId: programId as string[],
     startYear: flow.flowStartYear,
     unitTotal: flow.flowUnitTotal,
     notes: flow.flowNotes,
     termData: flow.data.map((term: any) => {
+      const courses = term.classes.map((crs: any) => {
+        return {
+          id: crs.cID,
+          color: crs.cardColor,
+          customId: crs.cCustomID,
+          customDisplayName: crs.cCustomDisplayName,
+          customUnits: crs.cCustomUnits,
+          customDesc: crs.cCustomNote,
+          ...(crs.cProgramIDIndex &&
+            crs.cProgramIDIndex !== 0 && { programIdIndex: crs.cProgramIDIndex })
+        };
+      });
+
       return {
         tIndex: term.tIndex,
-        tUnits: term.tUnits,
-        courses: term.classes.map((crs: any) => {
-          return {
-            id: crs.cID,
-            color: crs.cardColor,
-            customId: crs.cCustomID,
-            customDisplayName: crs.cCustomDisplayName,
-            customUnits: crs.cCustomUnits,
-            customDesc: crs.cCustomNote,
-            ...(crs.cProgramIDIndex &&
-              crs.cProgramIDIndex !== 0 && { programIdIndex: crs.cProgramIDIndex })
-          };
-        })
+        tUnits: computeTermUnits(
+          courses,
+          programId as string[],
+          apiData.courseData,
+          apiData.programData
+        ),
+        courses
       };
     }),
     version: 7,
@@ -120,6 +129,13 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
     importedId: null,
     lastUpdatedUTC: new Date()
   };
+
+  // recompute total units since some flows have them wrong
+  updatedFlowchart.unitTotal = computeTotalUnits(
+    updatedFlowchart.termData,
+    apiData.courseData,
+    apiData.programData
+  );
 
   return updatedFlowchart;
 }
@@ -156,6 +172,11 @@ function updateFlowchartDataVersionToV6(flow: any): any {
 
   const newFlowData: any[] = [];
   oldFlowData.forEach((qtrData: any) => {
+    // some prod data has null terms, omit
+    if (!qtrData) {
+      return;
+    }
+
     const tIndex: number = parseInt(qtrData.qIndex);
     const tUnits: string = qtrData.qUnitsMax
       ? `${qtrData.qUnits}-${qtrData.qUnitsMax}`
@@ -179,6 +200,14 @@ function updateFlowchartDataVersionToV6(flow: any): any {
         cDataNew.cCustomID = '?';
       }
 
+      // some prod data has backwards min-max unit counts, flip em
+      if (cDataNew.cCustomUnits && cDataNew.cCustomUnits.includes('-')) {
+        const parts = cDataNew.cCustomUnits.split('-');
+        if (Number(parts[0]) > Number(parts[1])) {
+          cDataNew.cCustomUnits = `${parts[1]}-${parts[0]}`;
+        }
+      }
+
       classes.push(cDataNew);
     });
 
@@ -198,7 +227,7 @@ function updateFlowchartDataVersionToV6(flow: any): any {
     ],
     flowStartYear: String(flow.flowStartYear),
     flowUnitTotal: String(flow.flowUnitTotal),
-    flowNotes: String(flow.flowNotes),
+    flowNotes: String(flow.flowNotes ?? ''),
     data: newFlowData,
     publishedID: null,
     importedID: null,
