@@ -3,12 +3,13 @@ import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/svelte';
 import { vi } from 'vitest';
+import type { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
 
 // load necessary API data
 await apiDataConfig.init();
 
-async function setFlowNameStartingYear() {
-  await userEvent.type(
+async function setFlowNameStartingYear(user: UserEvent) {
+  await user.type(
     screen.getByRole('textbox', {
       name: 'Flow Name'
     }),
@@ -21,7 +22,7 @@ async function setFlowNameStartingYear() {
   ).toHaveValue('test');
 
   // set year
-  await userEvent.selectOptions(
+  await user.selectOptions(
     screen.getByRole('combobox', {
       name: 'Starting Year'
     }),
@@ -37,6 +38,7 @@ async function setFlowNameStartingYear() {
 // assumes that things are filled out in idx order
 // eg program 1 first, program 2 next
 async function setProgram(
+  user: UserEvent,
   idx: number,
   alreadySelectedProgramIds: string[],
   selectProgramWithMultipleConcs = false
@@ -59,13 +61,13 @@ async function setProgram(
   );
   const program = programList[Math.floor(Math.random() * programList.length)];
 
-  await userEvent.selectOptions(
+  await user.selectOptions(
     screen.getAllByRole('combobox', {
       name: 'Catalog'
     })[idx],
     program.catalog
   );
-  await userEvent.selectOptions(
+  await user.selectOptions(
     screen.getAllByRole('combobox', {
       name: 'Major'
     })[idx],
@@ -73,7 +75,7 @@ async function setProgram(
   );
   // just to satisfy types, but will always be non-null
   if (program.concName) {
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Concentration'
       })[idx],
@@ -373,7 +375,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
 
 describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   test('create valid payloads', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -400,14 +402,14 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const expectedProgramIds: string[] = [];
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
+    const program1 = await setProgram(user, 0, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -416,7 +418,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create second program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -428,7 +430,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program2 = await setProgram(1, expectedProgramIds);
+    const program2 = await setProgram(user, 1, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program2.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
@@ -437,7 +439,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create third program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -449,7 +451,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program3 = await setProgram(2, expectedProgramIds);
+    const program3 = await setProgram(user, 2, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program3.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
@@ -458,7 +460,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create fourth program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -470,7 +472,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program4 = await setProgram(3, expectedProgramIds);
+    const program4 = await setProgram(user, 3, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program4.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(7);
@@ -479,7 +481,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create fifth program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -491,7 +493,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program5 = await setProgram(4, expectedProgramIds);
+    const program5 = await setProgram(user, 4, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program5.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(9);
@@ -513,7 +515,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   });
 
   test('remove program from valid payload is still valid', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -538,7 +540,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
@@ -548,7 +550,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     const expectedProgramIds: string[] = [];
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
+    const program1 = await setProgram(user, 0, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -557,7 +559,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create second program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -569,7 +571,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program2 = await setProgram(1, expectedProgramIds);
+    const program2 = await setProgram(user, 1, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program2.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
@@ -578,7 +580,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create third program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -590,7 +592,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program3 = await setProgram(2, expectedProgramIds);
+    const program3 = await setProgram(user, 2, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program3.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
@@ -599,7 +601,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // remove a program
-    await userEvent.click(
+    await user.click(
       screen.getAllByRole('button', {
         name: 'REMOVE'
       })[0] // 0th remove is on 1st addl program
@@ -612,7 +614,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   });
 
   test('change conc in valid payload is still valid', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -639,14 +641,14 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const expectedProgramIds: string[] = [];
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds, true);
+    const program1 = await setProgram(user, 0, expectedProgramIds, true);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -669,7 +671,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     const newProgram =
       newProgramSelectOptions[Math.floor(Math.random() * newProgramSelectOptions.length)];
 
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', { name: 'Concentration' }),
       newProgram.id
     );
@@ -700,7 +702,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
 describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   test('update once-valid payload w/ 1 program to invalid, expect invalid', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -725,7 +727,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
@@ -735,7 +737,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     const expectedProgramIds: string[] = [];
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
+    const program1 = await setProgram(user, 0, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -744,7 +746,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create second program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -756,7 +758,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program2 = await setProgram(1, expectedProgramIds);
+    const program2 = await setProgram(user, 1, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program2.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
@@ -765,7 +767,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create third program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -777,7 +779,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // populate
-    const program3 = await setProgram(2, expectedProgramIds);
+    const program3 = await setProgram(user, 2, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program3.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
@@ -797,7 +799,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     );
     const newCatalogValue =
       removeSelectedCatalog[Math.floor(Math.random() * removeSelectedCatalog.length)];
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', { name: 'Catalog' })[1],
       newCatalogValue
     );
@@ -825,7 +827,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // set new program and expect valid
-    const newProgram1 = await setProgram(1, expectedProgramIds);
+    const newProgram1 = await setProgram(user, 1, expectedProgramIds);
     expectedProgramIds[1] = newProgram1.id;
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(7);
     expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(7);
@@ -847,10 +849,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       .map((prog) => prog.majorName);
     const newMajorValue =
       removeSelectedMajor[Math.floor(Math.random() * removeSelectedMajor.length)];
-    await userEvent.selectOptions(
-      screen.getAllByRole('combobox', { name: 'Major' })[1],
-      newMajorValue
-    );
+    await user.selectOptions(screen.getAllByRole('combobox', { name: 'Major' })[1], newMajorValue);
 
     expect(
       screen.getAllByRole('combobox', {
@@ -875,7 +874,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   });
 
   test('cannot create a program with same major (same catalog)', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -900,7 +899,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
@@ -910,7 +909,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     const expectedProgramIds: string[] = [];
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
+    const program1 = await setProgram(user, 0, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -919,7 +918,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create second program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -935,13 +934,13 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       (prog) => prog.majorName === program1.majorName && prog.catalog === program1.catalog
     );
     const program2 = programList[Math.floor(Math.random() * programList.length)];
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Catalog'
       })[1],
       program2.catalog
     );
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Major'
       })[1],
@@ -954,7 +953,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     );
     let failed = false;
     try {
-      await userEvent.selectOptions(
+      await user.selectOptions(
         screen.getAllByRole('combobox', {
           name: 'Concentration'
         })[1],
@@ -969,7 +968,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   });
 
   test('cannot create a program with same major (different catalog)', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
@@ -994,7 +993,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(programIds).toStrictEqual(['']);
     expect(optionsValid).toBeFalsy();
 
-    await setFlowNameStartingYear();
+    await setFlowNameStartingYear(user);
     expect(programIdEventHandlerMock).not.toHaveBeenCalled();
     expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
     expect(programIds).toStrictEqual(['']);
@@ -1004,7 +1003,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     const expectedProgramIds: string[] = [];
 
     // populate first program
-    const program1 = await setProgram(0, expectedProgramIds);
+    const program1 = await setProgram(user, 0, expectedProgramIds);
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
     expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
@@ -1013,7 +1012,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // create second program
-    await userEvent.click(
+    await user.click(
       screen.getByRole('button', {
         name: 'Add Program'
       })
@@ -1029,13 +1028,13 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       (prog) => prog.majorName === program1.majorName && prog.catalog !== program1.catalog
     );
     const program2 = programList[Math.floor(Math.random() * programList.length)];
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Catalog'
       })[1],
       program2.catalog
     );
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Major'
       })[1],
@@ -1048,7 +1047,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     );
     let failed = false;
     try {
-      await userEvent.selectOptions(
+      await user.selectOptions(
         screen.getAllByRole('combobox', {
           name: 'Concentration'
         })[1],

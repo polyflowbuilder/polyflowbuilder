@@ -205,7 +205,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
 describe('FlowPropertiesSelector/ProgramSelector program update functionality works', () => {
   // https://cathalmacdonnacha.com/how-to-test-a-select-element-with-react-testing-library
   test('select a random program and expect programIdUpdate', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     // mock program ID update
     let programId = 'uninitialized';
@@ -228,7 +228,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       ]
     }) as HTMLOptionElement;
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Catalog'
       }),
@@ -256,7 +256,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select random major option
     const selectedMajorOption = majorOptions[Math.floor(Math.random() * majorOptions.length)];
     console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
       }),
@@ -288,7 +288,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select a random concentration
     const selectedConcOption = concOptions[Math.floor(Math.random() * concOptions.length)];
     console.log(`selectedConcOption value [${selectedConcOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),
@@ -307,8 +307,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   // https://testing-library.com/docs/dom-testing-library/api-async#findby-queries
   // need to use findBy* here bc state change is async
   test('set input on mount and expect correct response', async () => {
-    userEvent.setup();
-
     const program =
       apiDataConfig.apiData.programData[
         Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
@@ -363,6 +361,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   });
 
   test('set input after mount and expect correct response', async () => {
+    const user = userEvent.setup();
+
     const program =
       apiDataConfig.apiData.programData[
         Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
@@ -402,7 +402,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       ]
     }) as HTMLOptionElement;
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Catalog'
       }),
@@ -429,7 +429,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select random major option
     const selectedMajorOption = majorOptions[Math.floor(Math.random() * majorOptions.length)];
     console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
       }),
@@ -465,7 +465,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select a random concentration
     const selectedConcOption = concOptions[Math.floor(Math.random() * concOptions.length)];
     console.log(`selectedConcOption value [${selectedConcOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),
@@ -524,7 +524,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   });
 
   test('update program in UI and expect correct response', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     // guarantee we pick a program with more than one conc
     const programList = apiDataConfig.apiData.programData.filter(
@@ -566,7 +566,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       name: program.catalog
     }) as HTMLOptionElement;
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Catalog'
       }),
@@ -595,7 +595,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program.majorName
     ) as HTMLOptionElement;
     console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
       }),
@@ -633,7 +633,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program.id
     ) as HTMLOptionElement;
     console.log(`selectedConcOption value [${selectedConcOption.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),
@@ -652,7 +652,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       newSelectedConcOption1 = concOptions[Math.floor(Math.random() * concOptions.length)];
     }
     console.log(`newSelectedConcOption1 value [${newSelectedConcOption1.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),
@@ -687,7 +687,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program1.majorName
     ) as HTMLOptionElement;
     console.log(`selectedMajorOption value [${selectedMajorOption1.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
       }),
@@ -743,7 +743,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program1.id
     ) as HTMLOptionElement;
     console.log(`selectedConcOption value [${selectedConcOption1.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),
@@ -776,7 +776,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       name: program2.catalog
     }) as HTMLOptionElement;
     console.log(`selectedCatalogOption2 value [${selectedCatalogOption2.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Catalog'
       }),
@@ -805,7 +805,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program2.majorName
     ) as HTMLOptionElement;
     console.log(`selectedMajorOption2 value [${selectedMajorOption2.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
       }),
@@ -843,7 +843,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       (opt) => opt.value === program2.id
     ) as HTMLOptionElement;
     console.log(`selectedConcOption2 value [${selectedConcOption2.value}]`);
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
       }),

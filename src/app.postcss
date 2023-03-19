@@ -33,7 +33,6 @@ button.btn-accent:focus-visible {
 .redButton {
   @apply bg-red-200 hover:bg-red-300 text-red-600 border-none btnOutline;
 }
-
 .greenButton {
   @apply bg-green-200 hover:bg-green-300 text-green-500 border-none btnOutline;
 }
@@ -63,4 +62,12 @@ button.btn-accent:focus-visible {
 /* remove modal backdrop */
 .modal {
   background-color: transparent;
+}
+
+/* have paragraphs in tooltip content respect newlines */
+.tippy-content p {
+  white-space: pre-wrap;
+}
+.tippy-content {
+  word-break: break-word;
 }

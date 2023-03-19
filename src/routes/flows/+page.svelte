@@ -1,4 +1,7 @@
 <script lang="ts">
+  // TODO: put these styles in a better place?
+  import 'tippy.js/dist/tippy.css';
+  import 'tippy.js/themes/light-border.css';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { FlowViewer } from '$lib/components/Flows';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';

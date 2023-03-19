@@ -98,7 +98,7 @@ describe('NewFlowModal component tests ', () => {
   });
 
   test('valid program results in ability to create', async () => {
-    userEvent.setup();
+    const user = userEvent.setup();
 
     render(NewFlowModal, {
       props: {
@@ -108,7 +108,7 @@ describe('NewFlowModal component tests ', () => {
       }
     });
 
-    await userEvent.type(
+    await user.type(
       screen.getByRole('textbox', {
         name: 'Flow Name'
       }),
@@ -122,7 +122,7 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByRole('button', { name: 'Create' })).toBeDisabled();
 
     // set year
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Starting Year'
       }),
@@ -141,7 +141,7 @@ describe('NewFlowModal component tests ', () => {
         Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
       ];
 
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Catalog'
       })[0],
@@ -149,7 +149,7 @@ describe('NewFlowModal component tests ', () => {
     );
     expect(screen.getByRole('button', { name: 'Create' })).toBeDisabled();
 
-    await userEvent.selectOptions(
+    await user.selectOptions(
       screen.getAllByRole('combobox', {
         name: 'Major'
       })[0],
@@ -159,7 +159,7 @@ describe('NewFlowModal component tests ', () => {
 
     // just to satisfy types, but will always be non-null
     if (program1.concName) {
-      await userEvent.selectOptions(
+      await user.selectOptions(
         screen.getAllByRole('combobox', {
           name: 'Concentration'
         })[0],
@@ -171,6 +171,8 @@ describe('NewFlowModal component tests ', () => {
   });
 
   test('changing removeGECourses option works', async () => {
+    const user = userEvent.setup();
+
     render(NewFlowModal, {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
@@ -183,11 +185,11 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByRole('checkbox', { name: 'Remove GE Courses' })).not.toBeChecked();
 
     // check and verify
-    await userEvent.click(screen.getByRole('checkbox', { name: 'Remove GE Courses' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Remove GE Courses' }));
     expect(screen.getByRole('checkbox', { name: 'Remove GE Courses' })).toBeChecked();
 
     // uncheck and verify
-    await userEvent.click(screen.getByRole('checkbox', { name: 'Remove GE Courses' }));
+    await user.click(screen.getByRole('checkbox', { name: 'Remove GE Courses' }));
     expect(screen.getByRole('checkbox', { name: 'Remove GE Courses' })).not.toBeChecked();
   });
 });
