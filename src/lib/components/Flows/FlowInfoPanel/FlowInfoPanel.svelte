@@ -3,10 +3,9 @@
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { AddCoursesTab, ManageFlowsTab } from '$lib/components/Flows/FlowInfoPanel';
+  import { PANEL_SIZE_CLOSED, PANEL_SIZE_OPEN } from '$lib/client/config/uiConfig';
 
   // collapsible side panel logic
-  const PANEL_SIZE_OPEN = 300;
-  const PANEL_SIZE_CLOSED = 0;
   let visible = true;
   let size = tweened(PANEL_SIZE_OPEN, {
     duration: 400,
