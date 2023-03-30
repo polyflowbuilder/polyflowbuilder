@@ -1,6 +1,10 @@
 import type { Props } from 'tippy.js';
 
-// TODO: add DNDContainer wrapper type
+// MutableForEachContainer
+export type MutableForEachContainerItemInternal = {
+  id: string;
+  item: unknown;
+};
 
 export type FlowListItemData = {
   id: number;
