@@ -2,13 +2,13 @@ import { browser } from '$app/environment';
 import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import type { FlowListItemData, FlowListUIData } from '$lib/types';
 
-// TODO: integrate dnd functionality
-// TODO: rename types - a bit of a mess right now
-export function buildFlowListDNDItems(flowListUIData: FlowListUIData[]): Array<FlowListItemData> {
+export function buildFlowListContainerItemsData(
+  flowListUIData: FlowListUIData[]
+): Array<FlowListItemData> {
   const items: FlowListItemData[] = [];
   for (let idx = 0; idx < flowListUIData.length; idx++) {
     const itemData: FlowListItemData = {
-      id: idx,
+      idx,
       name: flowListUIData[idx].name,
       tooltipParams: {}
     };

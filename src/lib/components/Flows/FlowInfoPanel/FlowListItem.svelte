@@ -1,7 +1,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
-  import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
   import { tooltip } from '$lib/client/util/tooltipUtil';
+  import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
   import type { FlowListItemData } from '$lib/types';
 
   export let item: FlowListItemData;

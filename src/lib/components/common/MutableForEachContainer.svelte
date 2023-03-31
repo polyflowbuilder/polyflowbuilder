@@ -24,7 +24,6 @@
   export let itemStyle = '';
 
   // drag and drop props
-  export let enableDND = false;
   export let dndType: string = '';
   export let dropFromOthersDisabled = false;
   export let flipDurationMs = 300;
@@ -60,7 +59,7 @@
   }
 </script>
 
-{#if enableDND}
+{#if dndType !== ''}
   <section
     use:dndzone={{
       items: internalItemsData,
