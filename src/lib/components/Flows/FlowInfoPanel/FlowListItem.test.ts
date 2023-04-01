@@ -16,7 +16,7 @@ describe('FlowListItem component tests', () => {
     render(FlowListItem, {
       props: {
         item: {
-          id: 0,
+          idx: 0,
           name: 'test',
           tooltipParams: {
             content: 'hello world'
@@ -56,7 +56,7 @@ describe('FlowListItem component tests', () => {
     render(FlowListItem, {
       props: {
         item: {
-          id: 0,
+          idx: 0,
           // MAX_FLOW_NAME_LENGTH characters
           name: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
           tooltipParams: {
