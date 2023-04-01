@@ -39,6 +39,7 @@ test.describe('create flow routine tests', () => {
     await page
       .getByRole('combobox', { name: 'Concentration' })
       .selectOption('Not Applicable For This Major');
+    await page.getByRole('checkbox', { name: 'Remove GE Courses' }).scrollIntoViewIfNeeded();
     await page.getByRole('checkbox', { name: 'Remove GE Courses' }).click({ force: true });
     await expect(page.getByRole('button', { name: 'Create' })).toBeEnabled();
 
@@ -104,6 +105,7 @@ test.describe('create flow routine tests', () => {
     await page
       .getByRole('combobox', { name: 'Concentration' })
       .selectOption('Not Applicable For This Major');
+    await page.getByRole('checkbox', { name: 'Remove GE Courses' }).scrollIntoViewIfNeeded();
     await page.getByRole('checkbox', { name: 'Remove GE Courses' }).click({ force: true });
     await expect(page.getByRole('button', { name: 'Create' })).toBeEnabled();
 
@@ -171,6 +173,7 @@ test.describe('create flow routine tests', () => {
     await page
       .getByRole('combobox', { name: 'Concentration' })
       .selectOption('Not Applicable For This Major');
+    await page.getByRole('checkbox', { name: 'Remove GE Courses' }).scrollIntoViewIfNeeded();
     await page.getByRole('checkbox', { name: 'Remove GE Courses' }).click({ force: true });
     await expect(page.getByRole('button', { name: 'Create' })).toBeEnabled();
 
@@ -238,6 +241,7 @@ test.describe('create flow routine tests', () => {
     await page
       .getByRole('combobox', { name: 'Concentration' })
       .selectOption('Not Applicable For This Major');
+    await page.getByRole('checkbox', { name: 'Remove GE Courses' }).scrollIntoViewIfNeeded();
     await page.getByRole('checkbox', { name: 'Remove GE Courses' }).click({ force: true });
     await expect(page.getByRole('button', { name: 'Create' })).toBeEnabled();
 

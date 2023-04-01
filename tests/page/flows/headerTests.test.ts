@@ -1,11 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { testNewFlowModal } from './flows/modalTests.test.js';
-import { performLoginFrontend } from '../util/userTestUtil.js';
+import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user.js';
 import type { Page } from '@playwright/test';
 
-const FLOWS_PAGE_TESTS_EMAIL = 'pfb_test_flowsPage_playwright@test.com';
+const FLOWS_PAGE_HEADER_TESTS_EMAIL = 'pfb_test_flowsPage_header_playwright@test.com';
 
 test.describe('flows page tests', () => {
   test.describe.configure({ mode: 'serial' });
@@ -15,7 +14,7 @@ test.describe('flows page tests', () => {
   test.beforeAll(async ({ browser }) => {
     // create account
     await createUser({
-      email: FLOWS_PAGE_TESTS_EMAIL,
+      email: FLOWS_PAGE_HEADER_TESTS_EMAIL,
       username: 'test',
       password: 'test'
     });
@@ -23,11 +22,11 @@ test.describe('flows page tests', () => {
     // login
     // see https://playwright.dev/docs/auth#reuse-the-signed-in-page-in-multiple-tests
     page = await browser.newPage();
-    await performLoginFrontend(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_TESTS_EMAIL);
+    await deleteUser(FLOWS_PAGE_HEADER_TESTS_EMAIL);
   });
 
   test('logout functionality performs redirect', async () => {
@@ -44,11 +43,7 @@ test.describe('flows page tests', () => {
     await expect(page.getByText('Sign In')).toBeVisible();
 
     // do login again to reset state
-    await performLoginFrontend(page, FLOWS_PAGE_TESTS_EMAIL, 'test');
-  });
-
-  test('NewFlowModal tests', async () => {
-    await testNewFlowModal(page);
+    await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
   });
 
   // make sure this test is AT THE VERY END! since account will be deleted
@@ -78,7 +73,7 @@ test.describe('flows page tests', () => {
     // check that account was deleted
     const res = await prisma.user.findFirst({
       where: {
-        email: FLOWS_PAGE_TESTS_EMAIL
+        email: FLOWS_PAGE_HEADER_TESTS_EMAIL
       }
     });
     expect(res).toBeFalsy();
