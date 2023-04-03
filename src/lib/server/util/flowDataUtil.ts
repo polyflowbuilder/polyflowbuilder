@@ -12,7 +12,10 @@ import type { DBFlowchart } from '@prisma/client';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
 
-export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): Flowchart {
+export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): {
+  convertedFlowchart: Flowchart;
+  pos: number;
+} {
   const {
     programId1,
     programId2,
@@ -20,6 +23,7 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): Flowchart
     programId4,
     programId5,
     validationData,
+    pos,
     ...dbFlowchart
   } = flowchart;
 
@@ -36,10 +40,13 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): Flowchart
     ...(validationData && { validationData })
   };
 
-  return convertedFlowchart;
+  return {
+    convertedFlowchart,
+    pos
+  };
 }
 
-export function convertFlowchartToDBFlowchart(flowchart: Flowchart): DBFlowchart {
+export function convertFlowchartToDBFlowchart(flowchart: Flowchart, pos: number): DBFlowchart {
   const { programId, ...userFlowchart } = flowchart;
 
   const convertedFlowchart: DBFlowchart = {
@@ -49,7 +56,8 @@ export function convertFlowchartToDBFlowchart(flowchart: Flowchart): DBFlowchart
     programId3: programId[2] ?? null,
     programId4: programId[3] ?? null,
     programId5: programId[4] ?? null,
-    validationData: flowchart.validationData ?? null
+    validationData: flowchart.validationData ?? null,
+    pos
   };
 
   return convertedFlowchart;

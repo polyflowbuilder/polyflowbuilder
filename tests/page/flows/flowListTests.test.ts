@@ -2,8 +2,43 @@ import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user.js';
+import type { Locator, Page } from '@playwright/test';
 
 const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';
+const FLOW_LIST_ITEM_SELECTOR =
+  '.card > .card-body.text-center > .text-base.select-none.break-words';
+
+// manual drag-and-drop for svelte-dnd-action elements
+// need to emulate manual dragging (maybe svelte-dnd-action quirks)
+async function dragAndDrop(page: Page, locatorToDrag: Locator, locatorDragTarget: Locator) {
+  const locatorToDragBBox = await locatorToDrag.boundingBox();
+  const locatorDragTargetBBox = await locatorDragTarget.boundingBox();
+
+  if (!locatorToDragBBox || !locatorDragTargetBBox) {
+    throw new Error('bounding box not visible and accessible (probably need to scroll into view)');
+  }
+
+  // need to manually emulate mouse movement for successful drags (maybe svelte-dnd-action quirk)
+  // use center of element so we guarantee that we're grabbing the element
+  // (e.g. so we don't miss if we grab corner and it has a border radius)
+  await page.mouse.move(
+    locatorToDragBBox.x + locatorToDragBBox.width / 2,
+    locatorToDragBBox.y + locatorToDragBBox.height / 2
+  );
+  await page.mouse.down();
+
+  await page.mouse.move(
+    locatorDragTargetBBox.x + locatorDragTargetBBox.width / 2,
+    locatorDragTargetBBox.y + locatorDragTargetBBox.height / 2,
+    {
+      steps: 20
+    }
+  );
+  await page.mouse.up();
+
+  // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)
+  await locatorToDrag.click();
+}
 
 async function populateFlowcharts(prisma: PrismaClient, ownerId: string, count: number) {
   for (let i = 0; i < count; i += 1) {
@@ -17,7 +52,8 @@ async function populateFlowcharts(prisma: PrismaClient, ownerId: string, count: 
         version: 7,
         ownerId,
         startYear: '2020',
-        programId1: '8e195e0c-73ce-44f7-a9ae-0212cd7c4b04'
+        programId1: '8e195e0c-73ce-44f7-a9ae-0212cd7c4b04',
+        pos: i
       }
     });
   }
@@ -60,10 +96,7 @@ test.describe('flow list tests', () => {
     await expect(
       page.getByText('You do not have any flows. Start by creating one!')
     ).toBeInViewport();
-    // selector for a flowlistitem
-    await expect(
-      page.locator('.card > .card-body.text-center > .text-base.select-none.break-words')
-    ).toHaveCount(0);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(0);
   });
 
   test('ui for single flowchart in flow list correct', async ({ page }) => {
@@ -74,10 +107,7 @@ test.describe('flow list tests', () => {
     await expect(
       page.getByText('You do not have any flows. Start by creating one!')
     ).not.toBeVisible();
-    // selector for a flowlistitem
-    await expect(
-      page.locator('.card > .card-body.text-center > .text-base.select-none.break-words')
-    ).toHaveCount(1);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(1);
 
     await expect(page.getByText('test flow 0')).toBeVisible();
     await expect(page.getByText('test flow 0')).toBeInViewport();
@@ -92,9 +122,13 @@ test.describe('flow list tests', () => {
       page.getByText('You do not have any flows. Start by creating one!')
     ).not.toBeVisible();
     // selector for a flowlistitem
-    await expect(
-      page.locator('.card > .card-body.text-center > .text-base.select-none.break-words')
-    ).toHaveCount(3);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(3);
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2'
+    ]);
 
     await expect(page.getByText('test flow 0')).toBeVisible();
     await expect(page.getByText('test flow 0')).toBeInViewport();
@@ -104,42 +138,98 @@ test.describe('flow list tests', () => {
     await expect(page.getByText('test flow 2')).toBeInViewport();
   });
 
-  // TODO: wait for POLY-510, currently failing
-  // test('ui for multiple flows in flow list correct (overflow)', async ({ page }) => {
-  //   // populate with more flowcharts
-  //   await populateFlowcharts(prisma, userId, 10);
-  //   await page.reload();
+  test('ui for multiple flows in flow list correct (overflow)', async ({ page }) => {
+    // populate with more flowcharts
+    await populateFlowcharts(prisma, userId, 10);
+    await page.reload();
 
-  //   await expect(
-  //     page.getByText('You do not have any flows. Start by creating one!')
-  //   ).not.toBeVisible();
-  //   // selector for a flowlistitem
-  //   await expect(
-  //     page.locator('.card > .card-body.text-center > .text-base.select-none.break-words')
-  //   ).toHaveCount(10);
+    await expect(
+      page.getByText('You do not have any flows. Start by creating one!')
+    ).not.toBeVisible();
+    // selector for a flowlistitem
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(10);
 
-  //   await expect(page.getByText('test flow 0')).toBeVisible();
-  //   await expect(page.getByText('test flow 0')).toBeInViewport();
-  //   await expect(page.getByText('test flow 1')).toBeVisible();
-  //   await expect(page.getByText('test flow 1')).toBeInViewport();
-  //   await expect(page.getByText('test flow 2')).toBeVisible();
-  //   await expect(page.getByText('test flow 2')).toBeInViewport();
-  //   await expect(page.getByText('test flow 3')).toBeVisible();
-  //   await expect(page.getByText('test flow 3')).toBeInViewport();
-  //   await expect(page.getByText('test flow 4')).toBeVisible();
-  //   await expect(page.getByText('test flow 4')).toBeInViewport();
-  //   await expect(page.getByText('test flow 5')).toBeVisible();
-  //   await expect(page.getByText('test flow 5')).toBeInViewport();
-  //   await expect(page.getByText('test flow 6')).toBeVisible();
-  //   await expect(page.getByText('test flow 6')).toBeInViewport();
-  //   await expect(page.getByText('test flow 7')).toBeVisible();
-  //   await expect(page.getByText('test flow 7')).toBeInViewport();
-  //   await expect(page.getByText('test flow 8')).toBeVisible();
-  //   await expect(page.getByText('test flow 8')).toBeInViewport();
-  //   await expect(page.getByText('test flow 9')).toBeVisible();
-  //   await expect(page.getByText('test flow 9')).toBeInViewport();
-  // });
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 4',
+      'test flow 5',
+      'test flow 6',
+      'test flow 7',
+      'test flow 8',
+      'test flow 9'
+    ]);
 
-  // TODO: wait for POLY-510
-  // test('reordering flows in flow list correct', async () => {});
+    // 8 flow list items are visible w default test resolution
+    await expect(page.getByText('test flow 0')).toBeVisible();
+    await expect(page.getByText('test flow 0')).toBeInViewport();
+    await expect(page.getByText('test flow 1')).toBeVisible();
+    await expect(page.getByText('test flow 1')).toBeInViewport();
+    await expect(page.getByText('test flow 2')).toBeVisible();
+    await expect(page.getByText('test flow 2')).toBeInViewport();
+    await expect(page.getByText('test flow 3')).toBeVisible();
+    await expect(page.getByText('test flow 3')).toBeInViewport();
+    await expect(page.getByText('test flow 4')).toBeVisible();
+    await expect(page.getByText('test flow 4')).toBeInViewport();
+    await expect(page.getByText('test flow 5')).toBeVisible();
+    await expect(page.getByText('test flow 5')).toBeInViewport();
+    await expect(page.getByText('test flow 6')).toBeVisible();
+    await expect(page.getByText('test flow 6')).toBeInViewport();
+    await expect(page.getByText('test flow 7')).toBeVisible();
+    await expect(page.getByText('test flow 7')).toBeInViewport();
+
+    // so these should be hidden
+    await expect(page.getByText('test flow 8')).toBeVisible();
+    await expect(page.getByText('test flow 8')).not.toBeInViewport();
+    await expect(page.getByText('test flow 9')).toBeVisible();
+    await expect(page.getByText('test flow 9')).not.toBeInViewport();
+  });
+
+  test('reordering flows in flow list correct', async ({ page }) => {
+    // populate with more flowcharts
+    await populateFlowcharts(prisma, userId, 4);
+    await page.reload();
+
+    await expect(
+      page.getByText('You do not have any flows. Start by creating one!')
+    ).not.toBeVisible();
+    // selector for a flowlistitem
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(4);
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    // now drag and drop to reorder
+    await dragAndDrop(
+      page,
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)
+    );
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 1',
+      'test flow 0',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    await dragAndDrop(
+      page,
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
+    );
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 0'
+    ]);
+  });
 });

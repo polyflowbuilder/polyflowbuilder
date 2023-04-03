@@ -31,7 +31,8 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       version: 7,
       importedId: null,
       publishedId: null,
-      validationData: null
+      validationData: null,
+      pos: 5
     };
     const flow: Flowchart = {
       hash: '',
@@ -50,11 +51,13 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
     };
 
     // convert from DB to user
-    const convertedFlow1 = convertDBFlowchartToFlowchart(dbFlowchart);
+    const { convertedFlowchart: convertedFlow1, pos: convertedFlow1Pos } =
+      convertDBFlowchartToFlowchart(dbFlowchart);
     expect(convertedFlow1).toStrictEqual(flow);
+    expect(convertedFlow1Pos).toBe(dbFlowchart.pos);
 
     // convert from user to DB
-    const convertedFlow2 = convertFlowchartToDBFlowchart(convertedFlow1);
+    const convertedFlow2 = convertFlowchartToDBFlowchart(convertedFlow1, dbFlowchart.pos);
     expect(convertedFlow2).toStrictEqual(dbFlowchart);
   });
 
@@ -440,7 +443,8 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       version: 7,
       importedId: null,
       publishedId: null,
-      validationData: null
+      validationData: null,
+      pos: 55
     };
 
     const flow: Flowchart = {
@@ -465,11 +469,13 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
     };
 
     // convert from DB to user
-    const convertedFlow1 = convertDBFlowchartToFlowchart(dbFlowchart);
+    const { convertedFlowchart: convertedFlow1, pos: convertedFlow1Pos } =
+      convertDBFlowchartToFlowchart(dbFlowchart);
     expect(convertedFlow1).toStrictEqual(flow);
+    expect(convertedFlow1Pos).toBe(dbFlowchart.pos);
 
     // convert from user to DB
-    const convertedFlow2 = convertFlowchartToDBFlowchart(convertedFlow1);
+    const convertedFlow2 = convertFlowchartToDBFlowchart(convertedFlow1, dbFlowchart.pos);
     expect(convertedFlow2).toStrictEqual(dbFlowchart);
   });
 });

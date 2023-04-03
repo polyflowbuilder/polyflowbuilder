@@ -55,8 +55,9 @@ model DBFlowchart {
   hash                  String
   validationData        Json?
   publishedId           String?
-  importedId           String?
+  importedId            String?
   lastUpdatedUTC        DateTime?             @updatedAt @db.DateTime(0)
+  pos                   Int
 
   user                  User                  @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   startYearRelation     StartYear             @relation(fields: [startYear], references: [year], onDelete: Restrict)

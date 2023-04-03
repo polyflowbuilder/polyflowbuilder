@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { getUserFlowcharts } from '$lib/server/db/flowchart.js';
 import { performLoginBackend } from '../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user.js';
-import { convertDBFlowchartToFlowchart } from '$lib/server/util/flowDataUtil.js';
 
 const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
 
@@ -75,7 +75,8 @@ test.describe('getUserFlowcharts API tests', () => {
           startYear: '2020',
           termData: [],
           unitTotal: '0',
-          version: 6
+          version: 6,
+          pos: 4
         },
         {
           hash: '2',
@@ -86,7 +87,8 @@ test.describe('getUserFlowcharts API tests', () => {
           startYear: '2022',
           termData: [],
           unitTotal: '1',
-          version: 6
+          version: 6,
+          pos: 2
         }
       ]
     });
@@ -97,13 +99,8 @@ test.describe('getUserFlowcharts API tests', () => {
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts');
 
-    const expectedFlowcharts = await prisma.dBFlowchart
-      .findMany({
-        where: {
-          ownerId: id.id
-        }
-      })
-      .then((fArr) => fArr.map((f) => convertDBFlowchartToFlowchart(f)));
+    const expectedFlowcharts = await getUserFlowcharts(id.id);
+
     const expectedResponseBody = {
       message: 'User flowchart retrieval successful.',
       // need to serialize date object bc thats what we receive from API

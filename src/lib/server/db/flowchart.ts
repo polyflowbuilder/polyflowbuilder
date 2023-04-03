@@ -9,10 +9,13 @@ export async function getUserFlowcharts(userId: string): Promise<Flowchart[]> {
   const res = await prisma.dBFlowchart.findMany({
     where: {
       ownerId: userId
+    },
+    orderBy: {
+      pos: 'asc'
     }
   });
 
-  const resConverted = res.map((flow) => convertDBFlowchartToFlowchart(flow));
+  const resConverted = res.map((flow) => convertDBFlowchartToFlowchart(flow).convertedFlowchart);
 
   logger.info('Fetched flowcharts for user', userId);
 

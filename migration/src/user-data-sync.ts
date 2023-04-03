@@ -6,6 +6,7 @@ import { getFiles } from '../../api/src/dev/common';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
 import { convertFlowchartToDBFlowchart } from '$lib/server/util/flowDataUtil';
 import { PrismaClient } from '@prisma/client';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { DBFlowchart, User } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -31,7 +32,7 @@ async function syncUserData() {
           flows: []
         };
 
-        for (const flow of userFlowData) {
+        (userFlowData as Flowchart[]).forEach((flow, idx) => {
           const parseResults = flowchartValidationSchema.safeParse({
             ...flow,
             // deserialize into object for validation
@@ -45,9 +46,9 @@ async function syncUserData() {
               parseResults.error.flatten()
             );
           } else {
-            userDataUpload.flows.push(convertFlowchartToDBFlowchart(parseResults.data));
+            userDataUpload.flows.push(convertFlowchartToDBFlowchart(parseResults.data, idx));
           }
-        }
+        });
 
         console.log('successfully validated data for user', userMetadata.username);
         dataToUpload.push(userDataUpload);
@@ -69,7 +70,9 @@ async function syncUserData() {
         // see https://stackoverflow.com/questions/70787660/generated-types-in-prisma-do-not-have-optional-fields-as-defined-in-the-schema
         // for why we have this deletion here
         delete flow.validationData;
-        return flow;
+        return {
+          ...flow
+        };
       })
     });
   }
