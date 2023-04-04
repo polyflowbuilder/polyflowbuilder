@@ -1,7 +1,7 @@
 import { createToken } from '../util/tokenTestUtil.js';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 
 const RESET_PASSWORD_API_TESTS_EMAIL = 'pfb_test_resetPasswordAPI_playwright@test.com';
 

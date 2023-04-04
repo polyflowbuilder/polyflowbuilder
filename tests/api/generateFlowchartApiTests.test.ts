@@ -1,9 +1,9 @@
 import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
 import { performLoginBackend } from '../util/userTestUtil.js';
-import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
-import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema.js';
+import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
+import { createUser, deleteUser } from '$lib/server/db/user';
+import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
 
 const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
   'pfb_test_generateFlowchartAPI_inputs_playwright@test.com';

@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { performLoginFrontend } from '../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import type { Page } from '@playwright/test';
 
 const AUTH_GUARD_TESTS_EMAIL = 'pfb_test_authGuards_playwright@test.com';

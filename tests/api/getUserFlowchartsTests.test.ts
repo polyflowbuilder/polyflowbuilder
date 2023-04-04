@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { getUserFlowcharts } from '$lib/server/db/flowchart.js';
+import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { performLoginBackend } from '../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 
 const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
 

@@ -4,7 +4,7 @@ import { userFlowcharts } from '$lib/client/stores/userDataStore';
 import { chunkListUpdateStore } from '$lib/client/stores/mutateUserDataStore';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { UserDataUpdateChunk } from '$lib/types';
+import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 // wrapper to add an UpdateChunk to the queue
 export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChunk): void {

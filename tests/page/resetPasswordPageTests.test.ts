@@ -1,8 +1,8 @@
 import { createToken } from '../util/tokenTestUtil.js';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { clearTokensByEmail } from '$lib/server/db/token.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { clearTokensByEmail } from '$lib/server/db/token';
+import { createUser, deleteUser } from '$lib/server/db/user';
 
 const RESET_PASSWORD_PAGE_TESTS_EMAIL = 'pfb_test_resetPasswordPage_playwright@test.com';
 const RESET_PASSWORD_VALID_URL = `/resetpassword?token=${encodeURIComponent(

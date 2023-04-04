@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import { performLoginFrontend } from '../util/userTestUtil.js';
 
 const CREATE_FLOW_ROUTINE_TESTS_EMAIL = 'pfb_test_createFlowRoutine_playwright@test.com';

@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import type { Locator, Page } from '@playwright/test';
 
 const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';

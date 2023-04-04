@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { performLoginFrontend } from '../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 
 const RESET_PASSWORD_ROUTINE_TESTS_EMAIL = 'pfb_test_resetPasswordRoutine_playwright@test.com';
 

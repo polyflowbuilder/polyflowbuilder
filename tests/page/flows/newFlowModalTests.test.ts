@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_NEW_FLOW_MODAL_TESTS_EMAIL =

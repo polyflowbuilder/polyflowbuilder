@@ -1,7 +1,7 @@
 // common implementation for updating user data via update chunks (only includes update types common to frontend and backend)
 
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { UserDataUpdateChunk } from '$lib/types';
+import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 export function mutateUserFlowcharts(
   curUserFlowcharts: Flowchart[],

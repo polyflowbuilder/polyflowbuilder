@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
-import type { UserDataUpdateChunk } from '$lib/types';
+import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 // mutation store data
 let delayingBeforeUpdate = false;
