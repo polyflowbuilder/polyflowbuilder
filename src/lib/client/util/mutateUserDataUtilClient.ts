@@ -18,10 +18,21 @@ export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChu
 export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
   console.log('performing update', chunksList);
 
-  userFlowcharts.update((curUserData) => {
+  userFlowcharts.update((curUserFlowcharts) => {
     // don't await, optimistic UI updating for good UX
-    persistUserDataChanges(chunksList, curUserData);
-    return mutateUserFlowcharts(curUserData, chunksList);
+    persistUserDataChanges(chunksList, curUserFlowcharts);
+
+    const mutatedFlowcharts = mutateUserFlowcharts(
+      curUserFlowcharts.map((flowchart, pos) => {
+        return {
+          flowchart,
+          pos
+        };
+      }),
+      chunksList
+    );
+
+    return mutatedFlowcharts.map(({ flowchart }) => flowchart);
   });
 
   chunkListUpdateStore.set([]);

@@ -1,6 +1,7 @@
+import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { updateUserFlowchartsSchema } from '$lib/server/schema/updateUserFlowchartsSchema';
-import { json } from '@sveltejs/kit';
+import { persistUserDataChangesServer } from '$lib/server/util/mutateUserDataUtilServer';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/user/data/updateUserFlowcharts)');
@@ -23,17 +24,24 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     const data = await request.json();
     const parseResults = updateUserFlowchartsSchema.safeParse(data);
     if (parseResults.success) {
-      // TODO: perform the data mutation on the backend
-      // TODO: return status of data mutation (successful or unsuccessful)
-
-      return json(
-        {
-          message: 'User flowchart data changes successfully persisted.'
-        },
-        {
-          status: 200
-        }
+      // perform persist
+      const success = await persistUserDataChangesServer(
+        locals.session.id,
+        parseResults.data.updateChunks
       );
+
+      if (success) {
+        return json(
+          {
+            message: 'User flowchart data changes successfully persisted.'
+          },
+          {
+            status: 200
+          }
+        );
+      } else {
+        throw new Error('User flowchart data change persistence failed');
+      }
     } else {
       const { fieldErrors: validationErrors } = parseResults.error.flatten();
 

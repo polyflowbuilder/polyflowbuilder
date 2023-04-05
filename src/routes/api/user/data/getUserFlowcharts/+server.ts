@@ -20,7 +20,9 @@ export const GET: RequestHandler = async ({ locals }) => {
     }
 
     // get user data
-    const userFlowcharts = await getUserFlowcharts(locals.session.id);
+    const userFlowcharts = (await getUserFlowcharts(locals.session.id)).map(
+      ({ flowchart }) => flowchart
+    );
     return json({
       message: 'User flowchart retrieval successful.',
       flowcharts: userFlowcharts

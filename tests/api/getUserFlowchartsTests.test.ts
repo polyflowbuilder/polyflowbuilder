@@ -99,7 +99,7 @@ test.describe('getUserFlowcharts API tests', () => {
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts');
 
-    const expectedFlowcharts = await getUserFlowcharts(id.id);
+    const expectedFlowcharts = (await getUserFlowcharts(id.id)).map(({ flowchart }) => flowchart);
 
     const expectedResponseBody = {
       message: 'User flowchart retrieval successful.',

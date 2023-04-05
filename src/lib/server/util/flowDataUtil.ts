@@ -10,12 +10,10 @@ import {
 } from '$lib/common/config/flowDataConfig';
 import type { DBFlowchart } from '@prisma/client';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
+import type { MutateFlowchartData } from '$lib/types';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
 
-export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): {
-  convertedFlowchart: Flowchart;
-  pos: number;
-} {
+export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlowchartData {
   const {
     programId1,
     programId2,
@@ -41,13 +39,13 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): {
   };
 
   return {
-    convertedFlowchart,
+    flowchart: convertedFlowchart,
     pos
   };
 }
 
-export function convertFlowchartToDBFlowchart(flowchart: Flowchart, pos: number): DBFlowchart {
-  const { programId, ...userFlowchart } = flowchart;
+export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData): DBFlowchart {
+  const { programId, ...userFlowchart } = flowchartData.flowchart;
 
   const convertedFlowchart: DBFlowchart = {
     ...userFlowchart,
@@ -56,8 +54,8 @@ export function convertFlowchartToDBFlowchart(flowchart: Flowchart, pos: number)
     programId3: programId[2] ?? null,
     programId4: programId[3] ?? null,
     programId5: programId[4] ?? null,
-    validationData: flowchart.validationData ?? null,
-    pos
+    validationData: flowchartData.flowchart.validationData ?? null,
+    pos: flowchartData.pos
   };
 
   return convertedFlowchart;
