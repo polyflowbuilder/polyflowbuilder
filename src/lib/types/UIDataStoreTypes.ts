@@ -5,6 +5,7 @@ type FlowListUIDataDisplayInfo = {
 };
 
 export type FlowListUIData = {
+  id: string;
   name: string;
   startYear: string;
   displayInfo: FlowListUIDataDisplayInfo[];

@@ -9,6 +9,7 @@ export function buildFlowListContainerItemsData(
   for (let idx = 0; idx < flowListUIData.length; idx++) {
     const itemData: FlowListItemData = {
       idx,
+      id: flowListUIData[idx].id,
       name: flowListUIData[idx].name,
       tooltipParams: {}
     };

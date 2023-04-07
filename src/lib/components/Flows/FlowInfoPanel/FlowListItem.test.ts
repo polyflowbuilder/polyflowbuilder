@@ -17,6 +17,7 @@ describe('FlowListItem component tests', () => {
       props: {
         item: {
           idx: 0,
+          id: 'e7b41c83-7359-49eb-9c90-b3c817112514',
           name: 'test',
           tooltipParams: {
             content: 'hello world'
@@ -57,6 +58,7 @@ describe('FlowListItem component tests', () => {
       props: {
         item: {
           idx: 0,
+          id: 'e7b41c83-7359-49eb-9c90-b3c817112514',
           // MAX_FLOW_NAME_LENGTH characters
           name: 'testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest',
           tooltipParams: {

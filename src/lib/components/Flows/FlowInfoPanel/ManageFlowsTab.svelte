@@ -1,6 +1,8 @@
 <script lang="ts">
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import { flowListUIData } from '$lib/client/stores/UIDataStore';
+  import { UserDataUpdateChunkType } from '$lib/types';
+  import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { buildFlowListContainerItemsData } from '$lib/client/util/flowListItemUtil';
   import { FlowInfoPanelActionButtons, FlowListItem } from '$lib/components/Flows/FlowInfoPanel';
   import type { FlowListItemData } from '$lib/types';
@@ -13,9 +15,32 @@
     items.forEach((oldItem) => oldFlowListIdxs.push(oldItem.idx));
     event.detail.forEach((newItem) => newFlowListIdxs.push(newItem.idx));
 
-    // TODO: if idx orders are different, push update to backend
+    // only submit update if order changed
+    if (newFlowListIdxs.toString() !== oldFlowListIdxs.toString()) {
+      // create order entries specifying new positions of moved flows
+      const orderEntryArr: {
+        id: string;
+        pos: number;
+      }[] = [];
+      newFlowListIdxs.forEach((val, idx) => {
+        // only update idxs that changed
+        if (val !== oldFlowListIdxs[idx]) {
+          orderEntryArr.push({
+            id: items[val].id,
+            pos: idx
+          });
+        }
+      });
 
-    items = event.detail;
+      items = event.detail;
+
+      submitUserDataUpdateChunk({
+        type: UserDataUpdateChunkType.FLOW_LIST_CHANGE,
+        data: {
+          order: orderEntryArr
+        }
+      });
+    }
   }
 </script>
 

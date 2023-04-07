@@ -11,7 +11,7 @@ import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
-const logger = initLogger('Server/Util/UserDataModelSync');
+const logger = initLogger('Util/UserDataModelSync');
 
 export function checkUserFlowchartsDataVersion(
   ownerId: string,

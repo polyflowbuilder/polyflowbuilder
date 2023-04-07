@@ -8,6 +8,7 @@ export type MutableForEachContainerItemInternal = {
 
 export type FlowListItemData = {
   idx: number;
+  id: string;
   name: string;
   tooltipParams: Partial<Props>;
 };

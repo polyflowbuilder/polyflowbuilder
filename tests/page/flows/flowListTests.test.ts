@@ -219,12 +219,30 @@ test.describe('flow list tests', () => {
       'test flow 3'
     ]);
 
+    // expect state to be the same after a reload (testing persistence)
+    await page.reload();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 1',
+      'test flow 0',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    // then reorder further and test persistence again
     await dragAndDrop(
       page,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
     );
 
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 0'
+    ]);
+
+    await page.reload();
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 1',
       'test flow 2',

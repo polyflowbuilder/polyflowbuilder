@@ -130,6 +130,10 @@ test.describe('reset password page tests (token)', () => {
     await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
     await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', true);
 
+    // wait 1 second bc time precision is 1 second, so need to wait 1 second
+    // for instant expiry to take effect
+    await new Promise((r) => setTimeout(r, 1000));
+
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');

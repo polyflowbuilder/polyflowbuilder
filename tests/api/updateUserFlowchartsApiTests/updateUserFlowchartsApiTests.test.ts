@@ -1,20 +1,50 @@
+import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from '../util/userTestUtil.js';
+import { performLoginBackend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { UserDataUpdateChunkType } from '$lib/common/schema/mutateUserDataSchema';
+import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 const UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_playwright@test.com';
 
 test.describe('update user flowchart api tests', () => {
+  const prisma = new PrismaClient();
+  let flowId: string;
+
   test.beforeAll(async () => {
     // create account
-    await createUser({
+    const id = await createUser({
       email: UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL,
       username: 'test',
       password: 'test'
     });
+
+    if (!id) {
+      throw new Error('id is null');
+    }
+
+    // create dummy flowcharts to tinker with
+    flowId = (
+      await prisma.dBFlowchart.create({
+        data: {
+          hash: '1',
+          name: 'test1',
+          notes: '',
+          ownerId: id,
+          programId1: '0017f92d-d73f-4819-9d59-8c658cd29be5',
+          startYear: '2020',
+          termData: [],
+          unitTotal: '0',
+          version: 7,
+          pos: 0
+        },
+        select: {
+          id: true,
+          lastUpdatedUTC: true
+        }
+      })
+    ).id;
   });
 
   test.afterAll(async () => {
@@ -91,7 +121,7 @@ test.describe('update user flowchart api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('improper update chunk in update chunks array returns 400', async ({ request }) => {
+  test('improper update chunk format in update chunks array returns 400', async ({ request }) => {
     await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -111,7 +141,7 @@ test.describe('update user flowchart api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('proper update chunk in update chunks array returns 200', async ({ request }) => {
+  test('invalid update chunk data in update chunks array returns 400', async ({ request }) => {
     await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
 
     const updateChunk: UserDataUpdateChunk = {
@@ -120,6 +150,35 @@ test.describe('update user flowchart api tests', () => {
         order: [
           {
             id: '9f96fd34-c25f-4b0c-af5e-a6478bbbfea6',
+            pos: 2
+          }
+        ]
+      }
+    };
+
+    const res = await request.post('/api/user/data/updateUserFlowcharts', {
+      data: {
+        updateChunks: [updateChunk]
+      }
+    });
+
+    const expectedResponseBody = {
+      message: 'Requested user flowchart updates are not valid for these data.'
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
+  test('proper update chunk in update chunks array returns 200', async ({ request }) => {
+    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+
+    const updateChunk: UserDataUpdateChunk = {
+      type: UserDataUpdateChunkType.FLOW_LIST_CHANGE,
+      data: {
+        order: [
+          {
+            id: flowId,
             pos: 2
           }
         ]

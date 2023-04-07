@@ -19,10 +19,8 @@ export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
   console.log('performing update', chunksList);
 
   userFlowcharts.update((curUserFlowcharts) => {
-    // don't await, optimistic UI updating for good UX
-    persistUserDataChanges(chunksList, curUserFlowcharts);
-
-    const mutatedFlowcharts = mutateUserFlowcharts(
+    // update client first
+    const mutateUserFlowchartsResult = mutateUserFlowcharts(
       curUserFlowcharts.map((flowchart, pos) => {
         return {
           flowchart,
@@ -32,19 +30,33 @@ export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
       chunksList
     );
 
-    return mutatedFlowcharts.map(({ flowchart }) => flowchart);
+    // only update server if successful
+    if (mutateUserFlowchartsResult.success) {
+      // don't await, optimistic UI updating for good UX
+      sendUserDataChangePersistRequest(chunksList, curUserFlowcharts);
+
+      return mutateUserFlowchartsResult.flowchartsData.map(({ flowchart }) => flowchart);
+    } else {
+      // TODO: add client-side debug flag to show errors that came from mutation
+      alert(
+        'ERROR: PolyFlowBuilder could not perform the requested changes. Please file a bug report!'
+      );
+      return curUserFlowcharts;
+    }
   });
 
   chunkListUpdateStore.set([]);
 }
 
-async function persistUserDataChanges(
+async function sendUserDataChangePersistRequest(
   chunksList: UserDataUpdateChunk[],
   curUserFlowcharts: Flowchart[]
 ): Promise<void> {
   await fetch('/api/user/data/updateUserFlowcharts', {
     method: 'POST',
-    body: JSON.stringify(chunksList),
+    body: JSON.stringify({
+      updateChunks: chunksList
+    }),
     headers: {
       'Content-Type': 'application/json'
     }

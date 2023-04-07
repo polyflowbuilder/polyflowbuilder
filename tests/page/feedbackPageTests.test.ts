@@ -47,6 +47,8 @@ test.describe('feedback page tests', () => {
 
   test('feedback fails with invalid email (type 2)', async ({ page }) => {
     await page.getByLabel('email').fill('invalidemail@test');
+
+    // TODO: test flaky bc sometimes this fill FAILS TO FILL!
     await page.getByLabel('feedback').fill(FEEDBACK_CONTENT);
     await page.getByRole('button', { name: 'Submit Feedback' }).click();
 

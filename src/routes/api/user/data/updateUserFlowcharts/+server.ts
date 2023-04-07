@@ -25,6 +25,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     const parseResults = updateUserFlowchartsSchema.safeParse(data);
     if (parseResults.success) {
       // perform persist
+      logger.info(`Updating user flowchart data for user ${locals.session.id}`);
       const success = await persistUserDataChangesServer(
         locals.session.id,
         parseResults.data.updateChunks
@@ -40,7 +41,14 @@ export const POST: RequestHandler = async ({ request, locals }) => {
           }
         );
       } else {
-        throw new Error('User flowchart data change persistence failed');
+        return json(
+          {
+            message: 'Requested user flowchart updates are not valid for these data.'
+          },
+          {
+            status: 400
+          }
+        );
       }
     } else {
       const { fieldErrors: validationErrors } = parseResults.error.flatten();

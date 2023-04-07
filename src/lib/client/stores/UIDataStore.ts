@@ -20,6 +20,7 @@ export const flowListUIData = derived([userFlowcharts, programData], ([userFlows
         });
 
         return {
+          id: flow.id,
           name: flow.name,
           startYear: flow.startYear,
           displayInfo: selectedProgramDataArr.map((prog) => {
