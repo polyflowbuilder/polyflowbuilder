@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { FLOW_LIST_ITEM_SELECTOR } from '../../util/selectorTestUtil.js';
 import type { Locator, Page } from '@playwright/test';
 
 const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';
-const FLOW_LIST_ITEM_SELECTOR =
-  '.card > .card-body.text-center > .text-base.select-none.break-words';
 
 // manual drag-and-drop for svelte-dnd-action elements
 // need to emulate manual dragging (maybe svelte-dnd-action quirks)
@@ -38,25 +38,6 @@ async function dragAndDrop(page: Page, locatorToDrag: Locator, locatorDragTarget
 
   // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)
   await locatorToDrag.click();
-}
-
-async function populateFlowcharts(prisma: PrismaClient, ownerId: string, count: number) {
-  for (let i = 0; i < count; i += 1) {
-    await prisma.dBFlowchart.create({
-      data: {
-        hash: '0',
-        name: `test flow ${i}`,
-        notes: '',
-        termData: [],
-        unitTotal: '0',
-        version: 7,
-        ownerId,
-        startYear: '2020',
-        programId1: '8e195e0c-73ce-44f7-a9ae-0212cd7c4b04',
-        pos: i
-      }
-    });
-  }
 }
 
 test.describe('flow list tests', () => {

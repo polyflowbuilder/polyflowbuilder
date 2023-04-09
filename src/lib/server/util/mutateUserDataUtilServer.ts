@@ -3,7 +3,7 @@
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import { UserDataUpdateChunkType } from '$lib/types';
-import { getUserFlowcharts, updateFlowcharts } from '$lib/server/db/flowchart';
+import { getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 const logger = initLogger('Util/MutateUserDataUtilServer');
@@ -22,7 +22,10 @@ function getFlowchartModifyIdsFromChunkList(chunksList: UserDataUpdateChunk[]): 
         });
         break;
       }
-      // TODO: add other cases in the future
+      case UserDataUpdateChunkType.FLOW_UPSERT_ALL: {
+        flowchartModifyIds.add(chunk.data.flowchart.id);
+        break;
+      }
     }
   });
 
@@ -59,7 +62,7 @@ export async function persistUserDataChangesServer(
   );
 
   // persist updated flowcharts to database if flow mutation successful
-  await updateFlowcharts(mutateUserFlowchartsResult.flowchartsData);
+  await upsertFlowcharts(mutateUserFlowchartsResult.flowchartsData);
 
   return true;
 }

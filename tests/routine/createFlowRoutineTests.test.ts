@@ -1,17 +1,29 @@
+import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { createUser, deleteUser } from '$lib/server/db/user';
+import { populateFlowcharts } from '../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
+import { FLOW_LIST_ITEM_SELECTOR } from '../util/selectorTestUtil.js';
 
 const CREATE_FLOW_ROUTINE_TESTS_EMAIL = 'pfb_test_createFlowRoutine_playwright@test.com';
 
 test.describe('create flow routine tests', () => {
+  const prisma = new PrismaClient();
+
   test.beforeAll(async () => {
     // create account
-    await createUser({
+    const id = await createUser({
       email: CREATE_FLOW_ROUTINE_TESTS_EMAIL,
       username: 'test',
       password: 'test'
     });
+
+    if (!id) {
+      throw new Error('id null');
+    }
+
+    // create test flow to verify creation behavior in frontend
+    await populateFlowcharts(prisma, id, 1);
   });
 
   test.afterAll(async () => {
@@ -19,6 +31,7 @@ test.describe('create flow routine tests', () => {
     await deleteUser(CREATE_FLOW_ROUTINE_TESTS_EMAIL);
   });
 
+  // TODO: test that newly created flowchart is selected and loaded into editor on creation
   test('user able to create new flowchart', async ({ page }) => {
     await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
 
@@ -26,13 +39,16 @@ test.describe('create flow routine tests', () => {
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
 
+    // make sure test flow exists
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText(['test flow 0']);
+
     // open the flow modal
     await page.getByRole('button', { name: 'New Flow' }).click();
     await expect(page.getByText('Create New Flowchart')).toBeVisible();
     await expect(page.getByRole('button', { name: 'Create' })).toBeDisabled();
 
     // fill out modal
-    await page.getByRole('textbox', { name: 'Flow Name' }).fill('test');
+    await page.getByRole('textbox', { name: 'Flow Name' }).fill('pfb_test_createFlowRoutine');
     await page.getByRole('combobox', { name: 'Starting Year' }).selectOption('2020');
     await page.getByRole('combobox', { name: 'Catalog' }).selectOption('2019-2020');
     await page.getByRole('combobox', { name: 'Major' }).selectOption('Computer Engineering');
@@ -63,6 +79,19 @@ test.describe('create flow routine tests', () => {
     await expect(page.getByRole('button', { name: 'New Flow' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'New Flow' })).toBeEnabled();
     await expect(page.getByText('Create New Flowchart')).not.toBeVisible();
+
+    // check if new flow appeared at bottom of flow list
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'pfb_test_createFlowRoutine'
+    ]);
+
+    // reload the page and expect new flow to persist
+    await page.reload();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'pfb_test_createFlowRoutine'
+    ]);
   });
 
   test('401 case handled properly', async ({ page }) => {
@@ -269,9 +298,3 @@ test.describe('create flow routine tests', () => {
     await expect(page.getByText('Create New Flowchart')).toBeVisible();
   });
 });
-
-// TODO: add tests for the following:
-// 1. if new flowchart was added to bottom of flowlist
-// 2. if new flowchart was selected and loaded into editor
-// 3. if new flowchart exists in user data
-// 4. reload and see if new flowchart exists in user data (persist)

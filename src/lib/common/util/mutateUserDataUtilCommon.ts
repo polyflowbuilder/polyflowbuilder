@@ -12,6 +12,8 @@ export function mutateUserFlowcharts(
 
   const newUserFlowchartsData = structuredClone(curUserFlowchartsData);
 
+  // each chunk needs to modify the lastUpdatedUTC time explicitly since not all
+  // flows in curUserFlowchartsData are actually updated for a particular update chunk
   updateChunks.forEach((chunk) => {
     switch (chunk.type) {
       case UserDataUpdateChunkType.FLOW_LIST_CHANGE: {
@@ -34,6 +36,7 @@ export function mutateUserFlowcharts(
           }
 
           newUserFlowchartsData[flowDataArrIdx].pos = flowPosEntry.pos;
+          newUserFlowchartsData[flowDataArrIdx].flowchart.lastUpdatedUTC = new Date();
         }
 
         // then sort flows by pos since frontend requires this
@@ -41,8 +44,23 @@ export function mutateUserFlowcharts(
 
         break;
       }
+      case UserDataUpdateChunkType.FLOW_UPSERT_ALL: {
+        const flowDataArrIdx = newUserFlowchartsData.findIndex(
+          (flowData) => flowData.flowchart.id === chunk.data.flowchart.id
+        );
+
+        // replace if found, add if not (upsert)
+        if (flowDataArrIdx === -1) {
+          newUserFlowchartsData.push(chunk.data);
+        } else {
+          newUserFlowchartsData[flowDataArrIdx] = chunk.data;
+        }
+
+        break;
+      }
       default: {
-        errors.push(`Unrecognized update chunk type ${chunk.type}`);
+        // typecast since if we handle all known types above, chunk will resolve to type never
+        errors.push(`Unrecognized update chunk type ${(chunk as UserDataUpdateChunk).type}`);
         break;
       }
     }

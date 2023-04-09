@@ -2,7 +2,11 @@
   import FlowPropertiesSelector from '$lib/components/common/FlowPropertiesSelector';
   import { tick } from 'svelte';
   import { Toggle } from '$lib/components/common';
+  import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { newFlowModalOpen } from '$lib/client/stores/modalStateStore';
+  import { MODAL_CLOSE_TIME_MS } from '$lib/client/config/uiConfig';
+  import { UserDataUpdateChunkType } from '$lib/types';
+  import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import type { Program } from '@prisma/client';
 
   // component required data
@@ -65,6 +69,17 @@
       }
     );
     if (reqSuccess) {
+      // TODO: update client course cache
+
+      // persist creation update
+      submitUserDataUpdateChunk({
+        type: UserDataUpdateChunkType.FLOW_UPSERT_ALL,
+        data: {
+          flowchart: res.generatedFlowchart,
+          pos: $userFlowcharts.length
+        }
+      });
+
       // close modal on success
       closeModal();
     }
@@ -76,7 +91,7 @@
     $newFlowModalOpen = false;
 
     // wait for closing animation before resetting values
-    await new Promise((r) => setTimeout(r, 100));
+    await new Promise((r) => setTimeout(r, MODAL_CLOSE_TIME_MS));
     flowName = '';
     flowStartYear = '';
     removeGECourses = false;

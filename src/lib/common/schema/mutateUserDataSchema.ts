@@ -1,8 +1,17 @@
 import { z } from 'zod';
 import { UserDataUpdateChunkType } from '$lib/types';
+import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+
+const positionSchema = z
+  .number({
+    required_error: 'Position field is required.'
+  })
+  .nonnegative({
+    message: 'Position field must not be negative.'
+  });
 
 // validation schemas for user data mutation types
-const FlowListChangeUpdateChunkSchema = z.object({
+const flowListChangeUpdateChunkSchema = z.object({
   type: z.literal(UserDataUpdateChunkType.FLOW_LIST_CHANGE, {
     required_error: 'Incorrect type field for FLOW_LIST_CHANGE update chunk.'
   }),
@@ -18,13 +27,7 @@ const FlowListChangeUpdateChunkSchema = z.object({
               .uuid({
                 message: 'ID for order entry must be a UUID.'
               }),
-            pos: z
-              .number({
-                required_error: 'Position for order entry is required.'
-              })
-              .nonnegative({
-                message: 'Position for order entry must not be negative.'
-              })
+            pos: positionSchema
           }),
           {
             required_error: 'Order field for update chunk required.'
@@ -40,8 +43,24 @@ const FlowListChangeUpdateChunkSchema = z.object({
   )
 });
 
+const flowUpsertAllUpdateChunkSchema = z.object({
+  type: z.literal(UserDataUpdateChunkType.FLOW_UPSERT_ALL, {
+    required_error: 'Incorrect type field for FLOW_UPSERT_ALL update chunk.'
+  }),
+  data: z.object(
+    {
+      flowchart: flowchartValidationSchema,
+      pos: positionSchema
+    },
+    {
+      required_error: 'Data field for update chunk required.'
+    }
+  )
+});
+
 export const UserDataUpdateChunkSchema = z.discriminatedUnion('type', [
-  FlowListChangeUpdateChunkSchema
+  flowListChangeUpdateChunkSchema,
+  flowUpsertAllUpdateChunkSchema
 ]);
 
 export type UserDataUpdateChunk = z.infer<typeof UserDataUpdateChunkSchema>;

@@ -1,6 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
+import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginBackend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
@@ -12,35 +13,6 @@ const FLOW_LIST_CHANGE_TESTS_API_EMAIL =
 
 const FLOW_LIST_CHANGE_TESTS_API_OTHER_USER_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_other_playwright@test.com';
-
-async function populateFlowcharts(prisma: PrismaClient, ownerId: string, count: number) {
-  const ids: string[] = [];
-
-  for (let i = 0; i < count; i += 1) {
-    const { id } = await prisma.dBFlowchart.create({
-      data: {
-        hash: '0',
-        name: `test flow ${i}`,
-        notes: '',
-        termData: [],
-        unitTotal: '0',
-        version: 7,
-        ownerId,
-        startYear: '2020',
-        programId1: '8e195e0c-73ce-44f7-a9ae-0212cd7c4b04',
-        pos: i
-      },
-      select: {
-        id: true,
-        lastUpdatedUTC: true
-      }
-    });
-
-    ids.push(id);
-  }
-
-  return ids;
-}
 
 test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
@@ -179,7 +151,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        updateChunks: ['ID for order entry is required.', 'Position for order entry is required.']
+        updateChunks: ['ID for order entry is required.', 'Position field is required.']
       }
     };
 
@@ -211,10 +183,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        updateChunks: [
-          'ID for order entry must be a UUID.',
-          'Position for order entry must not be negative.'
-        ]
+        updateChunks: ['ID for order entry must be a UUID.', 'Position field must not be negative.']
       }
     };
 

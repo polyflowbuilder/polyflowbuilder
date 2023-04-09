@@ -3,7 +3,8 @@
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 export enum UserDataUpdateChunkType {
-  FLOW_LIST_CHANGE
+  FLOW_LIST_CHANGE,
+  FLOW_UPSERT_ALL
 }
 
 export type MutateFlowchartData = {

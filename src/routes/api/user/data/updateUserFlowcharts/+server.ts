@@ -2,6 +2,7 @@ import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { updateUserFlowchartsSchema } from '$lib/server/schema/updateUserFlowchartsSchema';
 import { persistUserDataChangesServer } from '$lib/server/util/mutateUserDataUtilServer';
+import { applyTransformToNestedObjectProperties } from '$lib/common/util/objectUtilCommon';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/user/data/updateUserFlowcharts)');
@@ -20,8 +21,18 @@ export const POST: RequestHandler = async ({ request, locals }) => {
       );
     }
 
-    // validation
+    // preprocess input payload by reconstructing object properties that are required
+    // in the validation schema. these properties are serialized when sent over the network
+    // so they need to be reconstructed in their original object form for validation to pass
     const data = await request.json();
+    applyTransformToNestedObjectProperties(
+      data,
+      'lastUpdatedUTC',
+      (_, v) => typeof v === 'string',
+      (d) => new Date(d)
+    );
+
+    // validation
     const parseResults = updateUserFlowchartsSchema.safeParse(data);
     if (parseResults.success) {
       // perform persist
