@@ -1,4 +1,4 @@
-import { derived } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 import { programData } from './apiDataStore';
 import { userFlowcharts } from './userDataStore';
 import type { FlowListUIData } from '$lib/types';
@@ -37,3 +37,5 @@ export const flowListUIData = derived([userFlowcharts, programData], ([userFlows
       });
   return flowListData;
 });
+
+export const selectedFlowIndex = writable<number>(-1);

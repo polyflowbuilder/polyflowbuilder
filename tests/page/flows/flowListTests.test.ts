@@ -1,62 +1,15 @@
+import { dragAndDrop } from '../../util/frontendInteractionUtil.js';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../../util/selectorTestUtil.js';
-import type { Locator, Page } from '@playwright/test';
+import {
+  FLOW_LIST_ITEM_SELECTED_SELECTOR,
+  FLOW_LIST_ITEM_SELECTOR
+} from '../../util/selectorTestUtil.js';
 
 const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';
-
-// manual drag-and-drop for svelte-dnd-action elements
-// need to emulate manual dragging (maybe svelte-dnd-action quirks)
-// locatorDragTarget is either a locator or [xOffset, yOffset] from locatorToDrag
-async function dragAndDrop(
-  page: Page,
-  locatorToDrag: Locator,
-  locatorDragTarget: Locator | [number, number]
-) {
-  const locatorToDragBBox = await locatorToDrag.boundingBox();
-  if (!locatorToDragBBox) {
-    throw new Error(
-      'locatorToDrag bounding box not visible and accessible (probably need to scroll into view)'
-    );
-  }
-
-  const srcX = locatorToDragBBox.x + locatorToDragBBox.width / 2;
-  const srcY = locatorToDragBBox.y + locatorToDragBBox.height / 2;
-
-  let destX: number;
-  let destY: number;
-
-  if (locatorDragTarget instanceof Array) {
-    destX = srcX + locatorDragTarget[0];
-    destY = srcY + locatorDragTarget[1];
-  } else {
-    const locatorDragTargetBBox = await locatorDragTarget.boundingBox();
-
-    if (!locatorDragTargetBBox) {
-      throw new Error(
-        'locatorDragTarget bounding box not visible and accessible (probably need to scroll into view)'
-      );
-    }
-
-    destX = locatorDragTargetBBox.x + locatorDragTargetBBox.width / 2;
-    destY = locatorDragTargetBBox.y + locatorDragTargetBBox.height / 2;
-  }
-
-  // need to manually emulate mouse movement for successful drags (maybe svelte-dnd-action quirk)
-  // use center of element so we guarantee that we're grabbing the element
-  // (e.g. so we don't miss if we grab corner and it has a border radius)
-  await page.mouse.move(srcX, srcY);
-  await page.mouse.down();
-
-  await page.mouse.move(destX, destY, { steps: 20 });
-  await page.mouse.up();
-
-  // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)
-  await locatorToDrag.click();
-}
 
 test.describe('flow list tests', () => {
   let userId: string;
@@ -99,7 +52,6 @@ test.describe('flow list tests', () => {
   });
 
   test('ui for single flowchart in flow list correct', async ({ page }) => {
-    // populate with a single flowchart
     await populateFlowcharts(prisma, userId, 1);
     await page.reload();
 
@@ -113,7 +65,6 @@ test.describe('flow list tests', () => {
   });
 
   test('ui for multiple flows in flow list correct (no overflow)', async ({ page }) => {
-    // populate with more flowcharts
     await populateFlowcharts(prisma, userId, 3);
     await page.reload();
 
@@ -138,7 +89,6 @@ test.describe('flow list tests', () => {
   });
 
   test('ui for multiple flows in flow list correct (overflow)', async ({ page }) => {
-    // populate with more flowcharts
     await populateFlowcharts(prisma, userId, 10);
     await page.reload();
 
@@ -187,7 +137,6 @@ test.describe('flow list tests', () => {
   });
 
   test('reordering flows in flow list correct', async ({ page }) => {
-    // populate with more flowcharts
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -250,7 +199,6 @@ test.describe('flow list tests', () => {
   });
 
   test('dragging but not reordering flows works as expected (poly-533)', async ({ page }) => {
-    // populate with more flowcharts
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -293,5 +241,67 @@ test.describe('flow list tests', () => {
       'test flow 0',
       'test flow 3'
     ]);
+  });
+
+  test('flow selection works', async ({ page }) => {
+    await populateFlowcharts(prisma, userId, 4);
+    await page.reload();
+
+    await expect(
+      page.getByText('You do not have any flows. Start by creating one!')
+    ).not.toBeVisible();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(4);
+
+    // no flow should be selected
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
+
+    // click on a flow and expect it to be selected (a few times)
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0).click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(1);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).not.toHaveClass(/selected/);
+
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3).click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(1);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).toHaveClass(/selected/);
+
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1).click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(1);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)).toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).not.toHaveClass(/selected/);
+
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2).click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(1);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)).toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).not.toHaveClass(/selected/);
+
+    // now drag something around and expect selection to reset
+    await dragAndDrop(
+      page,
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2),
+      false
+    );
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)).not.toHaveClass(/selected/);
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).not.toHaveClass(/selected/);
   });
 });

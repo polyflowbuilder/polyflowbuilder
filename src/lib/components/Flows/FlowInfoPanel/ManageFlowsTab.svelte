@@ -1,9 +1,9 @@
 <script lang="ts">
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
-  import { flowListUIData } from '$lib/client/stores/UIDataStore';
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { buildFlowListContainerItemsData } from '$lib/client/util/flowListItemUtil';
+  import { flowListUIData, selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { FlowInfoPanelActionButtons, FlowListItem } from '$lib/components/Flows/FlowInfoPanel';
   import type { FlowListItemData } from '$lib/types';
   import type {
@@ -14,6 +14,7 @@
   $: items = buildFlowListContainerItemsData($flowListUIData);
 
   function onFlowListItemReorder(event: CustomEvent<FlowListItemData[]>) {
+    $selectedFlowIndex = -1;
     const oldFlowListIdxs: number[] = [];
     const newFlowListIdxs: number[] = [];
     items.forEach((oldItem) => oldFlowListIdxs.push(oldItem.idx));

@@ -2,12 +2,24 @@
   import Fa from 'svelte-fa';
   import { tooltip } from '$lib/client/util/tooltipUtil';
   import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import type { FlowListItemData } from '$lib/types';
 
   export let item: FlowListItemData;
+
+  // selection logic & UI
+  $: selected = $selectedFlowIndex === item.idx;
+
+  function handleClick() {
+    if ($selectedFlowIndex !== item.idx) {
+      $selectedFlowIndex = item.idx;
+    }
+  }
 </script>
 
-<div class="card">
+<!-- TODO: add keyboard support, might be weird due to svelte-dnd-action accessibility -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="card" class:selected on:click={handleClick}>
   <div class="card-body text-center">
     <span class="text-base select-none w-[90%] break-words">
       {item.name}

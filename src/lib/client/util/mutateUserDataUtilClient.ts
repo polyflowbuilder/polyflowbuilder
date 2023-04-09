@@ -16,8 +16,6 @@ export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChu
 
 // TODO: integrate other types of user data, currently just flowcharts
 export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
-  console.log('performing update', chunksList);
-
   userFlowcharts.update((curUserFlowcharts) => {
     // update client first
     const mutateUserFlowchartsResult = mutateUserFlowcharts(
