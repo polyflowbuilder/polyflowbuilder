@@ -6,6 +6,10 @@
   import { buildFlowListContainerItemsData } from '$lib/client/util/flowListItemUtil';
   import { FlowInfoPanelActionButtons, FlowListItem } from '$lib/components/Flows/FlowInfoPanel';
   import type { FlowListItemData } from '$lib/types';
+  import type {
+    FlowListChangeOrderEntry,
+    FlowListChangeOrderField
+  } from '$lib/common/schema/mutateUserDataSchema';
 
   $: items = buildFlowListContainerItemsData($flowListUIData);
 
@@ -18,10 +22,7 @@
     // only submit update if order changed
     if (newFlowListIdxs.toString() !== oldFlowListIdxs.toString()) {
       // create order entries specifying new positions of moved flows
-      const orderEntryArr: {
-        id: string;
-        pos: number;
-      }[] = [];
+      const orderEntryArr: FlowListChangeOrderEntry[] = [];
       newFlowListIdxs.forEach((val, idx) => {
         // only update idxs that changed
         if (val !== oldFlowListIdxs[idx]) {
@@ -32,15 +33,19 @@
         }
       });
 
-      items = event.detail;
-
       submitUserDataUpdateChunk({
         type: UserDataUpdateChunkType.FLOW_LIST_CHANGE,
         data: {
-          order: orderEntryArr
+          // typecast here bc chunk type expects that at least one
+          // entry is guaranteed to exist, whereas standard array type
+          // can't guarantee that - since we know we have at least two
+          // entries if we get to this point, it's safe to cast
+          order: orderEntryArr as FlowListChangeOrderField
         }
       });
     }
+
+    items = event.detail;
   }
 </script>
 

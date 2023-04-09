@@ -10,30 +10,48 @@ const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwrigh
 
 // manual drag-and-drop for svelte-dnd-action elements
 // need to emulate manual dragging (maybe svelte-dnd-action quirks)
-async function dragAndDrop(page: Page, locatorToDrag: Locator, locatorDragTarget: Locator) {
+// locatorDragTarget is either a locator or [xOffset, yOffset] from locatorToDrag
+async function dragAndDrop(
+  page: Page,
+  locatorToDrag: Locator,
+  locatorDragTarget: Locator | [number, number]
+) {
   const locatorToDragBBox = await locatorToDrag.boundingBox();
-  const locatorDragTargetBBox = await locatorDragTarget.boundingBox();
+  if (!locatorToDragBBox) {
+    throw new Error(
+      'locatorToDrag bounding box not visible and accessible (probably need to scroll into view)'
+    );
+  }
 
-  if (!locatorToDragBBox || !locatorDragTargetBBox) {
-    throw new Error('bounding box not visible and accessible (probably need to scroll into view)');
+  const srcX = locatorToDragBBox.x + locatorToDragBBox.width / 2;
+  const srcY = locatorToDragBBox.y + locatorToDragBBox.height / 2;
+
+  let destX: number;
+  let destY: number;
+
+  if (locatorDragTarget instanceof Array) {
+    destX = srcX + locatorDragTarget[0];
+    destY = srcY + locatorDragTarget[1];
+  } else {
+    const locatorDragTargetBBox = await locatorDragTarget.boundingBox();
+
+    if (!locatorDragTargetBBox) {
+      throw new Error(
+        'locatorDragTarget bounding box not visible and accessible (probably need to scroll into view)'
+      );
+    }
+
+    destX = locatorDragTargetBBox.x + locatorDragTargetBBox.width / 2;
+    destY = locatorDragTargetBBox.y + locatorDragTargetBBox.height / 2;
   }
 
   // need to manually emulate mouse movement for successful drags (maybe svelte-dnd-action quirk)
   // use center of element so we guarantee that we're grabbing the element
   // (e.g. so we don't miss if we grab corner and it has a border radius)
-  await page.mouse.move(
-    locatorToDragBBox.x + locatorToDragBBox.width / 2,
-    locatorToDragBBox.y + locatorToDragBBox.height / 2
-  );
+  await page.mouse.move(srcX, srcY);
   await page.mouse.down();
 
-  await page.mouse.move(
-    locatorDragTargetBBox.x + locatorDragTargetBBox.width / 2,
-    locatorDragTargetBBox.y + locatorDragTargetBBox.height / 2,
-    {
-      steps: 20
-    }
-  );
+  await page.mouse.move(destX, destY, { steps: 20 });
   await page.mouse.up();
 
   // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)
@@ -176,7 +194,6 @@ test.describe('flow list tests', () => {
     await expect(
       page.getByText('You do not have any flows. Start by creating one!')
     ).not.toBeVisible();
-    // selector for a flowlistitem
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(4);
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
@@ -229,6 +246,52 @@ test.describe('flow list tests', () => {
       'test flow 2',
       'test flow 3',
       'test flow 0'
+    ]);
+  });
+
+  test('dragging but not reordering flows works as expected (poly-533)', async ({ page }) => {
+    // populate with more flowcharts
+    await populateFlowcharts(prisma, userId, 4);
+    await page.reload();
+
+    await expect(
+      page.getByText('You do not have any flows. Start by creating one!')
+    ).not.toBeVisible();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(4);
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    // now drag and drop but don't reorder
+    const locator = await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0).boundingBox();
+    if (!locator) {
+      throw new Error('locator null');
+    }
+    await dragAndDrop(page, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    // now drag and drop and reorder
+    await dragAndDrop(
+      page,
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
+    );
+
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 1',
+      'test flow 2',
+      'test flow 0',
+      'test flow 3'
     ]);
   });
 });
