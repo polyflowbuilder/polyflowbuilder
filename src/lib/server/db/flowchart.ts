@@ -89,3 +89,15 @@ export async function upsertFlowcharts(flowcharts: MutateFlowchartData[]): Promi
     )}]`
   );
 }
+
+export async function deleteFlowcharts(ids: string[]): Promise<void> {
+  await prisma.dBFlowchart.deleteMany({
+    where: {
+      id: {
+        in: ids
+      }
+    }
+  });
+
+  logger.info(`Successfully deleted flowcharts [${ids}]`);
+}

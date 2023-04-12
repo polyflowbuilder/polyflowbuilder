@@ -3,7 +3,7 @@
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import { UserDataUpdateChunkType } from '$lib/types';
-import { getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
+import { deleteFlowcharts, getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 const logger = initLogger('Util/MutateUserDataUtilServer');
@@ -24,6 +24,10 @@ function getFlowchartModifyIdsFromChunkList(chunksList: UserDataUpdateChunk[]): 
       }
       case UserDataUpdateChunkType.FLOW_UPSERT_ALL: {
         flowchartModifyIds.add(chunk.data.flowchart.id);
+        break;
+      }
+      case UserDataUpdateChunkType.FLOW_DELETE: {
+        flowchartModifyIds.add(chunk.data.id);
         break;
       }
     }
@@ -62,7 +66,18 @@ export async function persistUserDataChangesServer(
   );
 
   // persist updated flowcharts to database if flow mutation successful
-  await upsertFlowcharts(mutateUserFlowchartsResult.flowchartsData);
+  // do it this way since multiple chunks may come in that do deletes and updates
+  const updatedFlowchartIdsSet = new Set(
+    mutateUserFlowchartsResult.flowchartsData.map((flow) => flow.flowchart.id)
+  );
+  const deletedFlowchartIds = flowchartModifyIds.filter((id) => !updatedFlowchartIdsSet.has(id));
+
+  if (deletedFlowchartIds.length) {
+    await deleteFlowcharts(deletedFlowchartIds);
+  }
+  if (updatedFlowchartIdsSet.size) {
+    await upsertFlowcharts(mutateUserFlowchartsResult.flowchartsData);
+  }
 
   return true;
 }

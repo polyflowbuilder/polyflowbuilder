@@ -6,7 +6,7 @@ import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_HEADER_TESTS_EMAIL = 'pfb_test_flowsPage_header_playwright@test.com';
 
-test.describe('flows page tests', () => {
+test.describe('flows page header tests', () => {
   test.describe.configure({ mode: 'serial' });
   let page: Page;
   const prisma = new PrismaClient();

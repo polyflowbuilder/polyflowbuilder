@@ -64,9 +64,28 @@ const flowUpsertAllUpdateChunkSchema = z.object({
   )
 });
 
+const flowDeleteUpdateChunkSchema = z.object({
+  type: z.literal(UserDataUpdateChunkType.FLOW_DELETE, {
+    required_error: 'Incorrect type field for FLOW_DELETE update chunk.'
+  }),
+  data: z.object(
+    {
+      id: z
+        .string({
+          required_error: 'ID field for FLOW_DELETE update chunk required.'
+        })
+        .uuid('ID field for FLOW_DELETE update chunk must be a UUID.')
+    },
+    {
+      required_error: 'Data field for update chunk required.'
+    }
+  )
+});
+
 export const UserDataUpdateChunkSchema = z.discriminatedUnion('type', [
   flowListChangeUpdateChunkSchema,
-  flowUpsertAllUpdateChunkSchema
+  flowUpsertAllUpdateChunkSchema,
+  flowDeleteUpdateChunkSchema
 ]);
 
 export type FlowListChangeOrderField = z.infer<typeof flowListChangeOrderFieldSchema>;

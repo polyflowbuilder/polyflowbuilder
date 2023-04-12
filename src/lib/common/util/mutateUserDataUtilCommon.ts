@@ -23,7 +23,7 @@ export function mutateUserFlowcharts(
             (flowData) => flowData.flowchart.id === flowPosEntry.id
           );
 
-          // should only occur in test env
+          // need to validate as user may pass bad ids
           if (flowDataArrIdx === -1) {
             errors.push(
               `Unable to find flowchart ${
@@ -55,6 +55,28 @@ export function mutateUserFlowcharts(
         } else {
           newUserFlowchartsData[flowDataArrIdx] = chunk.data;
         }
+
+        break;
+      }
+      case UserDataUpdateChunkType.FLOW_DELETE: {
+        const flowDataArrIdx = newUserFlowchartsData.findIndex(
+          (flowData) => flowData.flowchart.id === chunk.data.id
+        );
+
+        // need to validate as user may pass bad ids
+        if (flowDataArrIdx === -1) {
+          errors.push(
+            `Unable to find flowchart ${
+              chunk.data.id
+            } referenced in flowPosEntry for FLOW_DELETE update chunk from provided flowchart list [${newUserFlowchartsData.map(
+              ({ flowchart }) => flowchart.id
+            )}]`
+          );
+          break;
+        }
+
+        // delete the flowchart
+        newUserFlowchartsData.splice(flowDataArrIdx, 1);
 
         break;
       }
