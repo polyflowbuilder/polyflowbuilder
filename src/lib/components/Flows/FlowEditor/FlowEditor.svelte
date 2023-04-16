@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { FlowEditorHeader } from '$lib/components/Flows/FlowEditor';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
   export let flowchart: Flowchart;
@@ -7,7 +8,9 @@
 </script>
 
 <div class="h-full">
-  <div class="flowEditorHeader">{flowchart.name}</div>
+  <div class="flowEditorHeader">
+    <FlowEditorHeader name={flowchart.name} />
+  </div>
   <div class="flowEditorTermsContainer">termcount: {flowchart.termData.length}</div>
   <div class="flowEditorFooter">units: {flowchart.unitTotal}</div>
 </div>
@@ -15,9 +18,10 @@
 <style lang="postcss">
   .flowEditorHeader {
     height: 3rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   .flowEditorTermsContainer {
+    /* 3rem header, 3rem footer */
     height: calc(100% - 3rem - 3rem);
     border: 1px solid black;
   }

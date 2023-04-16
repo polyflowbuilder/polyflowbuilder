@@ -1,2 +1,3 @@
 import FlowEditor from './FlowEditor.svelte';
-export { FlowEditor };
+import FlowEditorHeader from './FlowEditorHeader.svelte';
+export { FlowEditor, FlowEditorHeader };
