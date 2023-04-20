@@ -1,22 +1,28 @@
-<script>
+<script lang="ts">
   import { FlowEditor } from '$lib/components/Flows/FlowEditor';
-  import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
+  import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+
+  export let flowchart: Flowchart | null;
+
+  // TODO: bind to user toggle and have user toggle override this default option
+  $: displayCreditBin = flowchart?.termData.find((term) => term.tIndex === -1)?.tUnits !== '0';
 </script>
 
 <!-- main container to view and edit a user's flowchart in -->
 
-<div class="flowViewer card flex-1">
-  <div class="card-body p-2 h-full">
-    {#if $selectedFlowIndex === -1}
+<!-- width class here is for making sure term container elements dont expand parent container size -->
+<!-- see https://stackoverflow.com/questions/43809612/prevent-a-child-element-from-overflowing-its-parent-in-flexbox -->
+<div class="flowViewer card flex-1 min-w-0">
+  <div class="card-body p-2">
+    {#if flowchart !== null}
+      <FlowEditor {flowchart} {displayCreditBin} />
+    {:else}
       <div class="m-auto">
         <!-- center text when viewer gets small -->
         <h2 class="font-medium text-center text-polyGreen text-4xl">
           No flow selected. Please select or create a flow.
         </h2>
       </div>
-    {:else}
-      <FlowEditor flowchart={$userFlowcharts[$selectedFlowIndex]} />
     {/if}
   </div>
 </div>
