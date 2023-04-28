@@ -46,7 +46,12 @@ async function syncUserData() {
               parseResults.error.flatten()
             );
           } else {
-            userDataUpload.flows.push(convertFlowchartToDBFlowchart(parseResults.data, idx));
+            userDataUpload.flows.push(
+              convertFlowchartToDBFlowchart({
+                flowchart: parseResults.data,
+                pos: idx
+              })
+            );
           }
         });
 

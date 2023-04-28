@@ -67,8 +67,8 @@ async function getTermTypicallyOfferedData() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   records.forEach((record: any) => {
     const courseName = record.Course.replace('-', '');
-    const catalog = allCourseData.find((c) => c.id === courseName)?.catalog;
-    if (!catalog) {
+    const catalogs = allCourseData.filter((c) => c.id === courseName).map((c) => c.catalog);
+    if (!catalogs.length) {
       console.log(
         'TERM TYPICALLY OFFERED COURSE DOES NOT EXIST IN COURSE DATA! SKIPPING',
         courseName
@@ -77,14 +77,18 @@ async function getTermTypicallyOfferedData() {
     } else if (termData.find((cTermData) => cTermData.id === courseName)) {
       console.log('DUPLICATE COURSE FOUND IN TTO DATA', courseName);
     } else {
-      termData.push({
-        id: courseName,
-        catalog,
-        termSummer: record.Summer === 'Summer',
-        termFall: record.Fall === 'Fall',
-        termWinter: record.Winter === 'Winter',
-        termSpring: record.Spring === 'Spring'
-      });
+      // add all catalogs for this course so we can
+      // do a join when loading api data into server
+      for (const catalog of catalogs) {
+        termData.push({
+          id: courseName,
+          catalog,
+          termSummer: record.Summer === 'Summer',
+          termFall: record.Fall === 'Fall',
+          termWinter: record.Winter === 'Winter',
+          termSpring: record.Spring === 'Spring'
+        });
+      }
     }
   });
 

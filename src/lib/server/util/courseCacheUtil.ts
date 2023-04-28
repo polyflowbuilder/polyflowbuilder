@@ -1,8 +1,7 @@
 import { apiData } from '$lib/server/config/apiDataConfig';
 import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { APICourse } from '@prisma/client';
-import type { CourseCache } from '$lib/types';
+import type { APICourseFull, CourseCache } from '$lib/types';
 
 export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[] {
   const flowchartCourseCache: CourseCache[] = apiData.catalogs.map((catalog) => ({
@@ -50,7 +49,7 @@ export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[
 }
 
 export function generateUserCourseCache(userFlowcharts: Flowchart[]): CourseCache[] {
-  const courseCacheSets: Array<Set<APICourse>> = apiData.catalogs.map(() => new Set());
+  const courseCacheSets: Array<Set<APICourseFull>> = apiData.catalogs.map(() => new Set());
 
   // TODO: can we optimize this? O(n^3)
   userFlowcharts.forEach((flow) => {

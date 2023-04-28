@@ -3,6 +3,7 @@ import {
   generateCourseCacheFlowchart,
   generateUserCourseCache
 } from '$lib/server/util/courseCacheUtil';
+import { cloneAndDeleteNestedProperty } from '../../../../tests/util/testUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
 
@@ -85,7 +86,8 @@ describe('generateCourseCacheFlowchart tests', () => {
                 desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
                 addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               },
               {
                 id: 'AGB301',
@@ -95,7 +97,8 @@ describe('generateCourseCacheFlowchart tests', () => {
                 desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
                 addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               },
               {
                 id: 'JOUR312',
@@ -105,12 +108,15 @@ describe('generateCourseCacheFlowchart tests', () => {
                 desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
                 addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               }
             ]
     }));
 
-    expect(generateCourseCacheFlowchart(flow1)).toStrictEqual(expectedCourseCache);
+    expect(
+      cloneAndDeleteNestedProperty(generateCourseCacheFlowchart(flow1), 'dynamicTerms')
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
 
   test('generate course cache for one flowchart with two catalogs', () => {
@@ -194,7 +200,8 @@ describe('generateCourseCacheFlowchart tests', () => {
         desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
         addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'AGB301',
@@ -204,7 +211,8 @@ describe('generateCourseCacheFlowchart tests', () => {
         desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'JOUR312',
@@ -214,7 +222,8 @@ describe('generateCourseCacheFlowchart tests', () => {
         desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
@@ -227,11 +236,14 @@ describe('generateCourseCacheFlowchart tests', () => {
         desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
         addl: 'Term Typically Offered: F, SP\nCR/NC\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
-    expect(generateCourseCacheFlowchart(flow1)).toStrictEqual(expectedCourseCache);
+    expect(
+      cloneAndDeleteNestedProperty(generateCourseCacheFlowchart(flow1), 'dynamicTerms')
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
 });
 
@@ -320,7 +332,8 @@ describe('generateUserCourseCache tests', () => {
                 desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
                 addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               },
               {
                 id: 'AGB301',
@@ -330,7 +343,8 @@ describe('generateUserCourseCache tests', () => {
                 desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
                 addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               },
               {
                 id: 'JOUR312',
@@ -340,12 +354,15 @@ describe('generateUserCourseCache tests', () => {
                 desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
                 addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
                 gwrCourse: false,
-                uscpCourse: false
+                uscpCourse: false,
+                dynamicTerms: null
               }
             ]
     }));
 
-    expect(generateUserCourseCache([flow1])).toStrictEqual(expectedCourseCache);
+    expect(
+      cloneAndDeleteNestedProperty(generateUserCourseCache([flow1]), 'dynamicTerms')
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
 
   test('generate user course cache for one flowchart with two catalogs', () => {
@@ -429,7 +446,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
         addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'AGB301',
@@ -439,7 +457,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'JOUR312',
@@ -449,7 +468,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
@@ -462,11 +482,14 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
         addl: 'Term Typically Offered: F, SP\nCR/NC\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
-    expect(generateUserCourseCache([flow1])).toStrictEqual(expectedCourseCache);
+    expect(
+      cloneAndDeleteNestedProperty(generateUserCourseCache([flow1]), 'dynamicTerms')
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
 
   test('generate user course cache for user with two flowcharts', () => {
@@ -585,7 +608,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
         addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'AGB301',
@@ -595,7 +619,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       },
       {
         id: 'JOUR312',
@@ -605,7 +630,8 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
         addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
@@ -618,10 +644,13 @@ describe('generateUserCourseCache tests', () => {
         desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
         addl: 'Term Typically Offered: F, SP\nCR/NC\n',
         gwrCourse: false,
-        uscpCourse: false
+        uscpCourse: false,
+        dynamicTerms: null
       }
     ];
 
-    expect(generateUserCourseCache([flow1, flow2])).toStrictEqual(expectedCourseCache);
+    expect(
+      cloneAndDeleteNestedProperty(generateUserCourseCache([flow1, flow2]), 'dynamicTerms')
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
 });

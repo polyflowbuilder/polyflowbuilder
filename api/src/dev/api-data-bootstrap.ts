@@ -7,7 +7,13 @@
 
 import fs from 'fs';
 import type { APIData } from '$lib/types';
-import type { APICourse, CourseRequisite, DBNotification, GECourse } from '@prisma/client';
+import type {
+  APICourse,
+  CourseRequisite,
+  DBNotification,
+  GECourse,
+  TermTypicallyOffered
+} from '@prisma/client';
 
 export const API_DATA_ROOT = '../../';
 
@@ -38,6 +44,10 @@ export function init() {
   apiData.programData = JSON.parse(
     fs.readFileSync(`${API_DATA_ROOT}/cpslo-template-flow-data.json`, 'utf8')
   ).flows;
+
+  const termTypicallyOffered: TermTypicallyOffered[] = JSON.parse(
+    fs.readFileSync(`${API_DATA_ROOT}/cpslo-term-typically-offered.json`, 'utf8')
+  );
 
   // read in course data
   for (const catalog of apiData.catalogs) {
@@ -74,7 +84,22 @@ export function init() {
     // add loaded data to apiData
     apiData.courseData.push({
       catalog,
-      courses
+      courses: courses.map((crs) => {
+        const ttoData = termTypicallyOffered.find(
+          (ttoCourse) => ttoCourse.catalog === crs.catalog && ttoCourse.id === crs.id
+        );
+        return {
+          ...crs,
+          dynamicTerms: ttoData
+            ? {
+                termFall: ttoData.termFall,
+                termWinter: ttoData.termWinter,
+                termSpring: ttoData.termSpring,
+                termSummer: ttoData.termSummer
+              }
+            : null
+        };
+      })
     });
     apiData.geCourseData.push(...geCourses);
     apiData.reqCourseData.push(...reqCourseData);

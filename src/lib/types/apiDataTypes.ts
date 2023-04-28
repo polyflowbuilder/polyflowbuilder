@@ -1,8 +1,18 @@
-import type { APICourse, CourseRequisite, GECourse, Program } from '@prisma/client';
+import type {
+  APICourse,
+  CourseRequisite,
+  GECourse,
+  Program,
+  TermTypicallyOffered
+} from '@prisma/client';
+
+export type APICourseFull = APICourse & {
+  dynamicTerms: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
+};
 
 export type CourseCache = {
   catalog: string;
-  courses: APICourse[];
+  courses: APICourseFull[];
 };
 
 export type APIData = {

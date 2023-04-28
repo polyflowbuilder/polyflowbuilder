@@ -164,7 +164,6 @@ model CourseRequisite {
   @@id([id, catalog])
 }
 
-// to get around needing id+catalog when term typically offered doesnt use catalog, will just use an arbitrary catalog
 model TermTypicallyOffered {
   id                    String
   catalog               String

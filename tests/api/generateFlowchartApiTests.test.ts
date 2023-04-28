@@ -4,6 +4,7 @@ import { performLoginBackend } from '../util/userTestUtil.js';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import { cloneAndDeleteNestedProperty } from '../util/testUtil.js';
 
 const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
   'pfb_test_generateFlowchartAPI_inputs_playwright@test.com';
@@ -2958,7 +2959,10 @@ test.describe('generate flowchart api output tests', () => {
     delete resData.generatedFlowchart.hash;
     delete resData.generatedFlowchart.lastUpdatedUTC;
 
-    expect(resData).toStrictEqual(expectedResponseBody);
+    // remove dynamicTerms as this can change over time
+    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    );
   });
 
   test('generate valid flowchart with 1 program without coursecache', async ({ request }) => {
@@ -3042,7 +3046,10 @@ test.describe('generate flowchart api output tests', () => {
     delete resData.generatedFlowchart.hash;
     delete resData.generatedFlowchart.lastUpdatedUTC;
 
-    expect(resData).toStrictEqual(expectedResponseBody);
+    // remove dynamicTerms as this can change over time
+    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    );
   });
 
   test('generate valid flowchart with multiple programs', async ({ request }) => {
@@ -3081,6 +3088,9 @@ test.describe('generate flowchart api output tests', () => {
     delete resData.generatedFlowchart.hash;
     delete resData.generatedFlowchart.lastUpdatedUTC;
 
-    expect(resData).toStrictEqual(expectedResponseBody);
+    // remove dynamicTerms as this can change over time
+    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    );
   });
 });
