@@ -3,6 +3,7 @@ import {
   generateCourseCacheFlowchart,
   generateUserCourseCache
 } from '$lib/server/util/courseCacheUtil';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { cloneAndDeleteNestedProperty } from '../../../../tests/util/testUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
@@ -23,7 +24,7 @@ describe('generateCourseCacheFlowchart tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -67,7 +68,7 @@ describe('generateCourseCacheFlowchart tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -172,7 +173,7 @@ describe('generateCourseCacheFlowchart tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -269,7 +270,7 @@ describe('generateUserCourseCache tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -313,7 +314,7 @@ describe('generateUserCourseCache tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -418,7 +419,7 @@ describe('generateUserCourseCache tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -523,7 +524,7 @@ describe('generateUserCourseCache tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -580,7 +581,7 @@ describe('generateUserCourseCache tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };

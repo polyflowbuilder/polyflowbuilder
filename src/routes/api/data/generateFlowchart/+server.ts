@@ -36,8 +36,6 @@ export const GET: RequestHandler = async ({ locals, url }) => {
     if (parseResults.success) {
       const generatedFlowchart = await generateFlowchart(parseResults.data);
 
-      // TODO: persist newly generated flowchart to user model
-
       return json({
         message: 'Flowchart successfully generated.',
         generatedFlowchart,

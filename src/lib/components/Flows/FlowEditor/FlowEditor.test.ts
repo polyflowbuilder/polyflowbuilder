@@ -1,5 +1,6 @@
 import FlowEditor from './FlowEditor.svelte';
 import { render, screen } from '@testing-library/svelte';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 const TEST_FLOWCHART: Flowchart = {
@@ -164,7 +165,7 @@ const TEST_FLOWCHART: Flowchart = {
       ]
     }
   ],
-  version: 7,
+  version: CURRENT_FLOW_DATA_VERSION,
   hash: 'c77ca499708c3890ecf5b7e7556df944.f660f328881ca3bbb89ce6247ba08bfc',
   publishedId: null,
   importedId: null,

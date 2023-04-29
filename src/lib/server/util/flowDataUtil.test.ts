@@ -1,10 +1,11 @@
-import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import {
   convertDBFlowchartToFlowchart,
   convertFlowchartToDBFlowchart
 } from '$lib/server/util/flowDataUtil';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import type { DBFlowchart } from '@prisma/client';
+import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 // generateFlowchart will be tested in API and e2e tests
 
@@ -28,7 +29,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null,
       validationData: null,
@@ -45,7 +46,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -439,7 +440,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       startYear: '',
       termData: flowTermData,
       unitTotal: '183-185',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null,
       validationData: null,
@@ -462,7 +463,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
       startYear: '',
       termData: flowTermData,
       unitTotal: '183-185',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };

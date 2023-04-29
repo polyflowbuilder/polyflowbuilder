@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test';
 import { performLoginBackend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 const UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL =
@@ -36,7 +37,7 @@ test.describe('update user flowchart api tests', () => {
           startYear: '2020',
           termData: [],
           unitTotal: '0',
-          version: 7,
+          version: CURRENT_FLOW_DATA_VERSION,
           pos: 0
         },
         select: {

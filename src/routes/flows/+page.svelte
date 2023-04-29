@@ -3,6 +3,7 @@
   import 'tippy.js/dist/tippy.css';
   import 'tippy.js/themes/light-border.css';
   import { FlowViewer } from '$lib/components/Flows';
+  import { courseCache } from '$lib/client/stores/apiDataStore';
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
@@ -13,6 +14,9 @@
 
   $: if (data.flowcharts) {
     userFlowcharts.set(data.flowcharts);
+  }
+  $: if (data.courseCache) {
+    courseCache.set(data.courseCache);
   }
 
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;

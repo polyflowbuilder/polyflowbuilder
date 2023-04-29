@@ -1,10 +1,10 @@
 import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
 import { performLoginBackend } from '../util/userTestUtil.js';
-import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
 import { cloneAndDeleteNestedProperty } from '../util/testUtil.js';
+import { CURRENT_FLOW_DATA_VERSION, FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 
 const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
   'pfb_test_generateFlowchartAPI_inputs_playwright@test.com';
@@ -372,7 +372,7 @@ const responsePayload1 = {
     ],
     unitTotal: '189',
     notes: '',
-    version: 7,
+    version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null
   },
@@ -664,7 +664,7 @@ const responsePayload1 = {
     ],
     unitTotal: '149',
     notes: '',
-    version: 7,
+    version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null
   },
@@ -1837,7 +1837,7 @@ const responsePayload2 = {
     ],
     unitTotal: '343-347',
     notes: '',
-    version: 7,
+    version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null
   },

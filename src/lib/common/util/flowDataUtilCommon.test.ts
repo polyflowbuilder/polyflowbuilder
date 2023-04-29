@@ -1,4 +1,5 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { CURRENT_FLOW_DATA_VERSION } from '../config/flowDataConfig';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import type { CourseCache } from '$lib/types';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
@@ -19,7 +20,7 @@ describe('generateFlowHash tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -40,7 +41,7 @@ describe('generateFlowHash tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -58,7 +59,7 @@ describe('generateFlowHash tests', () => {
       startYear: '',
       lastUpdatedUTC: new Date(),
       unitTotal: '',
-      version: 7
+      version: CURRENT_FLOW_DATA_VERSION
     };
     expect(generateFlowHash(flow1)).toBe(
       'fe16d77876a4bf219b30edcf94e7eea3.38197c976d620a5d6a5cb79a6bbb9d7c'
@@ -80,7 +81,7 @@ describe('generateFlowHash tests', () => {
       startYear: '',
       termData: [],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -98,7 +99,7 @@ describe('generateFlowHash tests', () => {
       startYear: '',
       lastUpdatedUTC: new Date(),
       unitTotal: '',
-      version: 7
+      version: CURRENT_FLOW_DATA_VERSION
     };
 
     const flowHash1Parts = generateFlowHash(flow1).split('.');
@@ -140,7 +141,7 @@ describe('generateFlowHash tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -170,7 +171,7 @@ describe('generateFlowHash tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -214,7 +215,7 @@ describe('generateFlowHash tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };
@@ -244,7 +245,7 @@ describe('generateFlowHash tests', () => {
         }
       ],
       unitTotal: '',
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       importedId: null,
       publishedId: null
     };

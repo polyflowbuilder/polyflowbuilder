@@ -5,6 +5,7 @@ import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginBackend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes.js';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
 
 const FLOW_UPSERT_ALL_TESTS_API_EMAIL =
@@ -154,7 +155,7 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
           tUnits: '0'
         }
       ],
-      version: 7,
+      version: CURRENT_FLOW_DATA_VERSION,
       hash: '0cc175b9c0f1b6a831c399e269772661.0cc175b9c0f1b6a831c399e269772661',
       publishedId: null,
       importedId: null,
