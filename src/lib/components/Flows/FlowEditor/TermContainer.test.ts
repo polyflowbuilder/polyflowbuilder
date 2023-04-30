@@ -49,13 +49,14 @@ describe('TermContainer component tests', () => {
       }
     });
 
-    // TODO: update logic for courses in termcontainer body
+    // expect no courses in the container
+    expect(document.querySelectorAll('.courseItem')).toHaveLength(0);
 
     expect(screen.getByText('test term 1')).toBeVisible();
     expect(screen.getByText('0')).toBeVisible();
   });
 
-  test('term with courses', () => {
+  test('term with courses that are visible in viewport', () => {
     render(TermContainer, {
       props: {
         term: TEST_TERM_COURSES,
@@ -63,7 +64,24 @@ describe('TermContainer component tests', () => {
       }
     });
 
-    // TODO: update logic for courses in termcontainer body
+    // expect all courses to be visible
+    // can't do an overflow test here in vitest bc parent doesn't restrict height
+    expect(document.querySelectorAll('.courseItem')).toHaveLength(5);
+    expect(document.querySelectorAll('.courseItem')[0]).toBeVisible();
+    expect(document.querySelectorAll('.courseItem')[1]).toBeVisible();
+    expect(document.querySelectorAll('.courseItem')[2]).toBeVisible();
+    expect(document.querySelectorAll('.courseItem')[3]).toBeVisible();
+    expect(document.querySelectorAll('.courseItem')[4]).toBeVisible();
+
+    expect(
+      screen.getByText(
+        'this is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longe'
+      )
+    ).toBeVisible();
+    expect(screen.getByText('MATH142')).toBeVisible();
+    expect(screen.getByText('MATH153')).toBeVisible();
+    expect(screen.getByText('MATH96')).toBeVisible();
+    expect(screen.getByText('MATH112')).toBeVisible();
 
     expect(screen.getByText('test term 2')).toBeVisible();
     expect(screen.getByText('17 (5)')).toBeVisible();

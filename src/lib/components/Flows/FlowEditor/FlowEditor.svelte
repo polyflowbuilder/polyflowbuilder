@@ -20,7 +20,11 @@
     <div class="h-full flex border-2 overflow-x-scroll border-slate-400">
       {#if flowchart.termData.slice(1).length}
         {#each displayedTermData as term}
-          <TermContainer termName={generateTermString(term.tIndex, flowchart.startYear)} {term} />
+          <TermContainer
+            flowProgramId={flowchart.programId}
+            termName={generateTermString(term.tIndex, flowchart.startYear)}
+            {term}
+          />
         {/each}
       {:else}
         <!-- TODO: make this text configurable if we use the viewer in other places on the website -->

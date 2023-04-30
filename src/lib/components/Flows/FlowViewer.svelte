@@ -13,7 +13,7 @@
 <!-- width class here is for making sure term container elements dont expand parent container size -->
 <!-- see https://stackoverflow.com/questions/43809612/prevent-a-child-element-from-overflowing-its-parent-in-flexbox -->
 <div class="flowViewer card flex-1 min-w-0">
-  <div class="card-body p-2">
+  <div class="card-body p-2 h-full">
     {#if flowchart !== null}
       <FlowEditor {flowchart} {displayCreditBin} />
     {:else}
