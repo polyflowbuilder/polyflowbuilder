@@ -77,7 +77,8 @@ export function buildTermCourseItemsData(
         theme: 'light',
         allowHTML: true,
         content: generateCourseItemTooltipHTML(computedCourseDisplayValues),
-        maxWidth: MAX_TOOLTIP_WIDTH_PX
+        maxWidth: MAX_TOOLTIP_WIDTH_PX,
+        hideOnClick: false
       };
     }
     items.push(itemData);

@@ -15,7 +15,7 @@
 <div class="flowViewer card flex-1 min-w-0">
   <div class="card-body p-2 h-full">
     {#if flowchart !== null}
-      <FlowEditor {flowchart} {displayCreditBin} />
+      <FlowEditor {flowchart} flowchartId={flowchart.id} {displayCreditBin} />
     {:else}
       <div class="m-auto">
         <!-- center text when viewer gets small -->
