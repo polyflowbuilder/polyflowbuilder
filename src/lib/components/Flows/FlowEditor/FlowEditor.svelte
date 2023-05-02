@@ -1,8 +1,14 @@
 <script lang="ts">
   import { afterUpdate } from 'svelte';
+  import { computeGroupUnits } from '$lib/client/util/unitCounterUtilClient';
   import { generateTermString } from '$lib/client/util/flowTermUtilClient';
   import { TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
-  import { FlowEditorHeader, TermContainer } from '$lib/components/Flows/FlowEditor';
+  import { courseCache, programData } from '$lib/client/stores/apiDataStore';
+  import {
+    FlowEditorHeader,
+    FlowEditorFooter,
+    TermContainer
+  } from '$lib/components/Flows/FlowEditor';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
   // props
@@ -20,6 +26,9 @@
   $: enableLeftScrollArrow = scrollable && termsContainerScroll > 0;
   $: enableRightScrollArrow =
     scrollable && termsContainerClientWidth + termsContainerScroll < termsContainerScrollWidth;
+
+  // for group unit counts
+  $: unitCounts = computeGroupUnits(flowchart, $courseCache, $programData);
 
   // scroll width for terms container is only accurate after DOM is in sync with state
   afterUpdate(() => {
@@ -80,7 +89,9 @@
       {/if}
     </div>
   </div>
-  <div class="flowEditorFooter">units: {flowchart.unitTotal}</div>
+  <div class="flowEditorFooter">
+    <FlowEditorFooter {unitCounts} />
+  </div>
 </div>
 
 <style lang="postcss">

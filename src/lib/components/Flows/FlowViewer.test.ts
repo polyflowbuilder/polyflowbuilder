@@ -1,7 +1,16 @@
-import FlowViewer from './FlowViewer.svelte';
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { mockCourseDataStore, mockProgramDataStore } from '../../../../tests/util/storeMocks';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+
+await apiDataConfig.init();
+
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the programData and courseCache stores FAILS!! because vi.mock() MUST be called
+// before the FlowEditor component is imported or else things break
+import FlowViewer from './FlowViewer.svelte';
 
 const TEST_FLOWCHART: Flowchart = {
   id: '118d3c00-541b-411d-8e8c-2e55bc5948fd',
@@ -174,6 +183,19 @@ const TEST_FLOWCHART: Flowchart = {
 };
 
 describe('FlowViewer component tests', () => {
+  // need to mock out relevant stores since FlowViewer depends on this
+  // (computeGroupUnits)
+  beforeAll(() => {
+    vi.mock('$lib/client/stores/apiDataStore', () => {
+      return {
+        programData: mockProgramDataStore,
+        courseCache: mockCourseDataStore
+      };
+    });
+    mockProgramDataStore.mockSetSubscribeValue(apiDataConfig.apiData.programData);
+    mockCourseDataStore.mockSetSubscribeValue(apiDataConfig.apiData.courseData);
+  });
+
   test('no flowchart selected', () => {
     render(FlowViewer, {
       props: {
@@ -222,8 +244,48 @@ describe('FlowViewer component tests', () => {
     expect(screen.getByText('Winter 2024')).toBeVisible();
     expect(screen.getByText('Spring 2024')).toBeVisible();
 
-    // TODO: update footer tests
-    expect(screen.getByText('units: 76')).toBeVisible();
+    // TODO: consolidate with unitCounterUtilClient test util
+    expect(
+      screen.getByText('Major: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Support: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #1: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #2: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('GE: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Free Elective: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Other: 76', {
+        exact: true
+      })
+    ).toBeVisible();
+
+    expect(
+      screen.getByText('Total Units: 76', {
+        exact: true
+      })
+    ).toBeVisible();
   });
 
   test('flowchart selected, courses in credit bin', () => {
@@ -268,7 +330,47 @@ describe('FlowViewer component tests', () => {
     expect(screen.getByText('Winter 2024')).toBeVisible();
     expect(screen.getByText('Spring 2024')).toBeVisible();
 
-    // TODO: update footer tests
-    expect(screen.getByText('units: 76')).toBeVisible();
+    // TODO: consolidate with unitCounterUtilClient test util
+    expect(
+      screen.getByText('Major: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Support: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #1: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #2: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('GE: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Free Elective: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Other: 81', {
+        exact: true
+      })
+    ).toBeVisible();
+
+    expect(
+      screen.getByText('Total Units: 76', {
+        exact: true
+      })
+    ).toBeVisible();
   });
 });

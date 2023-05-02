@@ -41,3 +41,14 @@ export type ComputedCourseItemDisplayData = {
     termsOffered: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
   };
 };
+
+export type FlowEditorFooterUnitCounts = {
+  major: string;
+  support: string;
+  conc1: string;
+  conc2: string;
+  ge: string;
+  elective: string;
+  other: string;
+  total: string;
+};

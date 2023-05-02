@@ -1,7 +1,17 @@
-import FlowEditor from './FlowEditor.svelte';
+import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { mockCourseDataStore, mockProgramDataStore } from '../../../../../tests/util/storeMocks';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the programData and courseCache stores FAILS!! because vi.mock() MUST be called
+// before the FlowEditor component is imported or else things break
+import FlowEditor from './FlowEditor.svelte';
+
+// init api data
+await apiDataConfig.init();
 
 const TEST_FLOWCHART: Flowchart = {
   id: '118d3c00-541b-411d-8e8c-2e55bc5948fd',
@@ -174,10 +184,24 @@ const TEST_FLOWCHART: Flowchart = {
 };
 
 describe('FlowEditor component tests', () => {
+  // need to mock out relevant stores since FlowEditor depends on this
+  // (computeGroupUnits)
+  beforeAll(() => {
+    vi.mock('$lib/client/stores/apiDataStore', () => {
+      return {
+        programData: mockProgramDataStore,
+        courseCache: mockCourseDataStore
+      };
+    });
+    mockProgramDataStore.mockSetSubscribeValue(apiDataConfig.apiData.programData);
+    mockCourseDataStore.mockSetSubscribeValue(apiDataConfig.apiData.courseData);
+  });
+
   test('not displaying credit bin', () => {
     render(FlowEditor, {
       props: {
         flowchart: TEST_FLOWCHART,
+        flowchartId: TEST_FLOWCHART.id,
         displayCreditBin: false
       }
     });
@@ -199,14 +223,55 @@ describe('FlowEditor component tests', () => {
     expect(screen.getByText('45 (10)')).toBeVisible();
     expect(screen.getByText('14 (5)')).toBeVisible();
 
-    // TODO: update logic for footer
-    expect(screen.getByText('units: 76')).toBeVisible();
+    // TODO: consolidate with unitCounterUtilClient test util
+    expect(
+      screen.getByText('Major: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Support: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #1: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #2: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('GE: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Free Elective: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Other: 76', {
+        exact: true
+      })
+    ).toBeVisible();
+
+    expect(
+      screen.getByText('Total Units: 76', {
+        exact: true
+      })
+    ).toBeVisible();
   });
 
   test('displaying credit bin', () => {
     render(FlowEditor, {
       props: {
         flowchart: TEST_FLOWCHART,
+        flowchartId: TEST_FLOWCHART.id,
         displayCreditBin: true
       }
     });
@@ -229,8 +294,48 @@ describe('FlowEditor component tests', () => {
     expect(screen.getByText('45 (10)')).toBeVisible();
     expect(screen.getByText('14 (5)')).toBeVisible();
 
-    // TODO: update logic for footer
-    expect(screen.getByText('units: 76')).toBeVisible();
+    // TODO: consolidate with unitCounterUtilClient test util
+    expect(
+      screen.getByText('Major: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Support: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #1: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #2: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('GE: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Free Elective: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Other: 76', {
+        exact: true
+      })
+    ).toBeVisible();
+
+    expect(
+      screen.getByText('Total Units: 76', {
+        exact: true
+      })
+    ).toBeVisible();
   });
 
   test('flowchart with no terms', () => {
@@ -243,6 +348,7 @@ describe('FlowEditor component tests', () => {
     render(FlowEditor, {
       props: {
         flowchart: testFlowchartWithNoTerms,
+        flowchartId: testFlowchartWithNoTerms.id,
         displayCreditBin: true
       }
     });
@@ -265,7 +371,47 @@ describe('FlowEditor component tests', () => {
     expect(screen.queryByText('45 (10)')).toBeNull();
     expect(screen.queryByText('14 (5)')).toBeNull();
 
-    // TODO: update logic for footer
-    expect(screen.getByText('units: 0')).toBeVisible();
+    // TODO: consolidate with unitCounterUtilClient test util
+    expect(
+      screen.getByText('Major: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Support: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #1: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Concentration #2: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('GE: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Free Elective: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+    expect(
+      screen.getByText('Other: 0', {
+        exact: true
+      })
+    ).toBeVisible();
+
+    expect(
+      screen.getByText('Total Units: 0', {
+        exact: true
+      })
+    ).toBeVisible();
   });
 });

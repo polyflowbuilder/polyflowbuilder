@@ -45,6 +45,7 @@ describe('TermContainer component tests', () => {
     render(TermContainer, {
       props: {
         term: TEST_TERM_EMPTY,
+        flowProgramId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
         termName: 'test term 1'
       }
     });
@@ -60,6 +61,7 @@ describe('TermContainer component tests', () => {
     render(TermContainer, {
       props: {
         term: TEST_TERM_COURSES,
+        flowProgramId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
         termName: 'test term 2'
       }
     });
