@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { getUserFlowcharts } from '$lib/server/db/flowchart.js';
+import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';

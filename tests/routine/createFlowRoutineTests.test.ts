@@ -23,7 +23,7 @@ test.describe('create flow routine tests', () => {
     }
 
     // create test flow to verify creation behavior in frontend
-    await populateFlowcharts(prisma, id, 1);
+    await populateFlowcharts(prisma, id, 10);
   });
 
   test.afterAll(async () => {
@@ -31,7 +31,6 @@ test.describe('create flow routine tests', () => {
     await deleteUser(CREATE_FLOW_ROUTINE_TESTS_EMAIL);
   });
 
-  // TODO: test that newly created flowchart is selected and loaded into editor on creation
   test('user able to create new flowchart', async ({ page }) => {
     await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
 
@@ -39,8 +38,19 @@ test.describe('create flow routine tests', () => {
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
 
-    // make sure test flow exists
-    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText(['test flow 0']);
+    // make sure test flows exist
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 4',
+      'test flow 5',
+      'test flow 6',
+      'test flow 7',
+      'test flow 8',
+      'test flow 9'
+    ]);
 
     // open the flow modal
     await page.getByRole('button', { name: 'New Flow' }).click();
@@ -83,15 +93,60 @@ test.describe('create flow routine tests', () => {
     // check if new flow appeared at bottom of flow list
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 4',
+      'test flow 5',
+      'test flow 6',
+      'test flow 7',
+      'test flow 8',
+      'test flow 9',
       'pfb_test_createFlowRoutine'
     ]);
+
+    // check that flowchart was selected
+    await expect(
+      page.getByRole('heading', {
+        name: 'pfb_test_createFlowRoutine'
+      })
+    ).toBeInViewport();
+
+    // check that flow list item for new flowchart was scrolled into view
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).last()).toBeInViewport();
+
+    // check that the course cache was updated properly
+    await expect(
+      page.getByText('Introduction to Computing', {
+        exact: true
+      })
+    ).toBeInViewport();
 
     // reload the page and expect new flow to persist
     await page.reload();
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3',
+      'test flow 4',
+      'test flow 5',
+      'test flow 6',
+      'test flow 7',
+      'test flow 8',
+      'test flow 9',
       'pfb_test_createFlowRoutine'
     ]);
+
+    // select the flowchart again
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).last().click();
+
+    // verify that the course cache is loaded properly
+    await expect(
+      page.getByText('Introduction to Computing', {
+        exact: true
+      })
+    ).toBeInViewport();
   });
 
   test('401 case handled properly', async ({ page }) => {

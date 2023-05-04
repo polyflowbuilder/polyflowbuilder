@@ -2,12 +2,17 @@
   import FlowPropertiesSelector from '$lib/components/common/FlowPropertiesSelector';
   import { tick } from 'svelte';
   import { Toggle } from '$lib/components/common';
+  import { courseCache } from '$lib/client/stores/apiDataStore';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { newFlowModalOpen } from '$lib/client/stores/modalStateStore';
+  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { MODAL_CLOSE_TIME_MS } from '$lib/client/config/uiConfig';
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
+  import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import type { Program } from '@prisma/client';
+  import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+  import type { CourseCache } from '$lib/types';
 
   // component required data
   export let startYearsData: string[];
@@ -47,29 +52,38 @@
       removeGECourses: String(removeGECourses)
     };
     const searchParams = new URLSearchParams(payload);
-    const res = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`).then(
-      (resp) => {
-        switch (resp.status) {
-          case 200:
-            return resp.json();
-          case 401:
-            alert(
-              'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
-            );
-            reqSuccess = false;
-            break;
-          default:
-            alert(
-              'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
-            );
-            reqSuccess = false;
-            break;
-        }
-        return;
+    const res: {
+      generatedFlowchart: Flowchart;
+      courseCache: CourseCache[];
+    } = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`).then((resp) => {
+      switch (resp.status) {
+        case 200:
+          return resp.json();
+        case 401:
+          alert(
+            'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
+          );
+          reqSuccess = false;
+          break;
+        default:
+          alert(
+            'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
+          );
+          reqSuccess = false;
+          break;
       }
-    );
+      return;
+    });
     if (reqSuccess) {
-      // TODO: update client course cache
+      // TODO: empty flowchart case
+      const newCourseCache = $courseCache;
+      res.courseCache.forEach((courseCacheEntry, i) => {
+        // TODO: optimize by making course cache a set!
+        newCourseCache[i].courses = Array.from(
+          new Set([...newCourseCache[i].courses, ...courseCacheEntry.courses])
+        );
+      });
+      $courseCache = newCourseCache;
 
       // persist creation update
       submitUserDataUpdateChunk({
@@ -79,6 +93,12 @@
           pos: $userFlowcharts.length
         }
       });
+
+      // select the flowchart
+      // need to do timeout since the updates are applied after chunk delay time
+      setTimeout(() => {
+        $selectedFlowIndex = $userFlowcharts.length - 1;
+      }, UPDATE_CHUNK_DELAY_TIME_MS);
 
       // close modal on success
       closeModal();

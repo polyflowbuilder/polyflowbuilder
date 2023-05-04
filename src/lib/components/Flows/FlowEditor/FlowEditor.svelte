@@ -83,7 +83,7 @@
         {/each}
       {:else}
         <!-- TODO: make this text configurable if we use the viewer in other places on the website -->
-        <h2 class="font-medium m-auto text-polyGreen text-4xl">
+        <h2 class="font-medium m-auto text-center text-polyGreen text-4xl">
           This flow does not have any terms. Add terms by clicking "Actions", then "Add Terms".
         </h2>
       {/if}

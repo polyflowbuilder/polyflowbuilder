@@ -7,6 +7,8 @@
 
   export let item: FlowListItemData;
 
+  let elem: Element;
+
   // selection logic & UI
   $: selected = $selectedFlowIndex === item.idx;
 
@@ -15,11 +17,24 @@
       $selectedFlowIndex = item.idx;
     }
   }
+
+  // scroll into view on selected
+  $: handleScrollIntoView($selectedFlowIndex);
+
+  function handleScrollIntoView(idx: number) {
+    if (elem && idx === item.idx) {
+      elem.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'nearest'
+      });
+    }
+  }
 </script>
 
 <!-- TODO: add keyboard support, might be weird due to svelte-dnd-action accessibility -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="card" class:selected on:click={handleClick}>
+<div class="card" class:selected on:click={handleClick} bind:this={elem}>
   <div class="card-body text-center">
     <span class="text-base select-none w-[90%] break-words">
       {item.name}
