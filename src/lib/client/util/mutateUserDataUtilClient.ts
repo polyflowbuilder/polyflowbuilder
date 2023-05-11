@@ -3,7 +3,9 @@
 import { userFlowcharts } from '$lib/client/stores/userDataStore';
 import { chunkListUpdateStore } from '$lib/client/stores/mutateUserDataStore';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
+import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 // wrapper to add an UpdateChunk to the queue
@@ -15,7 +17,11 @@ export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChu
 }
 
 // TODO: integrate other types of user data, currently just flowcharts
-export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
+export function performUpdate(
+  chunksList: UserDataUpdateChunk[],
+  courseCache: CourseCache[],
+  programCache: Program[]
+): void {
   userFlowcharts.update((curUserFlowcharts) => {
     // update client first
     const mutateUserFlowchartsResult = mutateUserFlowcharts(
@@ -25,7 +31,9 @@ export function performUpdate(chunksList: UserDataUpdateChunk[]): void {
           pos
         };
       }),
-      chunksList
+      chunksList,
+      courseCache,
+      programCache
     );
 
     // only update server if successful

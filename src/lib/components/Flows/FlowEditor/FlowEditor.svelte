@@ -76,6 +76,7 @@
       {#if flowchart.termData.slice(1).length}
         {#each displayedTermData as term}
           <TermContainer
+            flowId={flowchart.id}
             flowProgramId={flowchart.programId}
             termName={generateTermString(term.tIndex, flowchart.startYear)}
             {term}

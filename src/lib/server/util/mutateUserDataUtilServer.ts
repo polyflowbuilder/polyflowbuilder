@@ -1,5 +1,6 @@
 // util functions for persisting user data changes to backend
 
+import { apiData } from '../config/apiDataConfig';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import { UserDataUpdateChunkType } from '$lib/types';
@@ -30,6 +31,10 @@ function getFlowchartModifyIdsFromChunkList(chunksList: UserDataUpdateChunk[]): 
         flowchartModifyIds.add(chunk.data.id);
         break;
       }
+      case UserDataUpdateChunkType.TERM_MOD: {
+        flowchartModifyIds.add(chunk.data.id);
+        break;
+      }
     }
   });
 
@@ -49,7 +54,12 @@ export async function persistUserDataChangesServer(
   const userFlowchartsData = await getUserFlowcharts(userId, flowchartModifyIds);
 
   // perform updates
-  const mutateUserFlowchartsResult = mutateUserFlowcharts(userFlowchartsData, chunksList);
+  const mutateUserFlowchartsResult = mutateUserFlowcharts(
+    userFlowchartsData,
+    chunksList,
+    apiData.courseData,
+    apiData.programData
+  );
 
   if (!mutateUserFlowchartsResult.success) {
     logger.warn(

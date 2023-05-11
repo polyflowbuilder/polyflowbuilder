@@ -3,14 +3,16 @@
 import { browser } from '$app/environment';
 import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
-import type {
-  APICourseFull,
-  ComputedCourseItemDisplayData,
-  CourseCache,
-  CourseItemData
-} from '$lib/types';
-import type { Course } from '$lib/common/schema/flowchartSchema';
+import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import type { Program } from '@prisma/client';
+import type { Course, Term } from '$lib/common/schema/flowchartSchema';
+import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
+import type {
+  CourseCache,
+  APICourseFull,
+  CourseItemData,
+  ComputedCourseItemDisplayData
+} from '$lib/types';
 
 export function computeCourseDisplayValues(
   course: Course,
@@ -44,12 +46,12 @@ export function buildTermCourseItemsData(
   flowProgramId: string[],
   courseCache: CourseCache[],
   programCache: Program[],
-  courseData: Course[]
+  termData: Term
 ): CourseItemData[] {
   const items: CourseItemData[] = [];
 
-  for (let cIdx = 0; cIdx < courseData.length; cIdx++) {
-    const course = courseData[cIdx];
+  for (let cIndex = 0; cIndex < termData.courses.length; cIndex++) {
+    const course = termData.courses[cIndex];
     const courseMetadata =
       courseCache
         .find(
@@ -66,7 +68,9 @@ export function buildTermCourseItemsData(
       units: computedCourseDisplayValues.units,
       color: computedCourseDisplayValues.color,
       metadata: {
-        flowProgramIndex: course.programIdIndex || 0
+        flowProgramIndex: course.programIdIndex || 0,
+        tIndex: termData.tIndex,
+        cIndex
       },
       tooltipParams: {}
     };
@@ -84,6 +88,63 @@ export function buildTermCourseItemsData(
     items.push(itemData);
   }
   return items;
+}
+
+// TODO: clean up this function at some point
+export function buildTermModUpdateChunkFromCourseItems(
+  flowId: string,
+  flowProgramId: string[],
+  courseCache: CourseCache[],
+  programCache: Program[],
+  courseItems: CourseItemData[],
+  tIndex: number
+): UserDataUpdateChunk {
+  const updateChunk: UserDataUpdateChunk = {
+    type: UserDataUpdateChunkType.TERM_MOD,
+    data: {
+      id: flowId,
+      tIndex,
+      termData: []
+    }
+  };
+
+  courseItems.forEach((item) => {
+    const { flowProgramIndex, ...posData } = item.metadata;
+
+    // TODO: remove magic number
+    if (posData.tIndex === -2) {
+      // do a lookup from course cache if we come from search
+      const catalog = getCourseCatalogFromCourse(flowProgramIndex, flowProgramId, programCache);
+      const cache = courseCache.find((cache) => cache.catalog === catalog);
+      const courseData = cache?.courses.find((course) => course.id === item.idName);
+
+      if (!courseData) {
+        throw new Error(
+          'unable to find course data in cache in buildTermmodUpdateChunkFromCourseItems'
+        );
+      }
+
+      updateChunk.data.termData.push({
+        from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
+        data: {
+          id: courseData.id,
+          color: '#FFFFFF',
+          // only include program index if nonzero
+          ...(flowProgramIndex && {
+            programIdIndex: flowProgramIndex
+          })
+        }
+      });
+    } else {
+      // add source position from existing data model
+      updateChunk.data.termData.push({
+        from: UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING,
+        data: posData
+      });
+    }
+  });
+
+  return updateChunk;
 }
 
 function generateCourseItemTooltipHTML(data: ComputedCourseItemDisplayData): Element {

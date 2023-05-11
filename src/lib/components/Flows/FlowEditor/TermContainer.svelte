@@ -2,19 +2,48 @@
   import CourseItem from './CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import { courseCache, programData } from '$lib/client/stores/apiDataStore';
-  import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
+  import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { COURSE_ITEM_SIZE_PX, TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
+  import {
+    buildTermCourseItemsData,
+    buildTermModUpdateChunkFromCourseItems
+  } from '$lib/client/util/courseItemUtil';
   import type { Term } from '$lib/common/schema/flowchartSchema';
   import type { CourseItemData } from '$lib/types';
 
+  export let flowId: string;
   export let flowProgramId: string[];
+
   export let term: Term;
   export let termName: string;
 
-  $: items = buildTermCourseItemsData(flowProgramId, $courseCache, $programData, term.courses);
+  $: items = buildTermCourseItemsData(flowProgramId, $courseCache, $programData, term);
 
   function onCourseItemReorder(event: CustomEvent<CourseItemData[]>) {
-    // TODO: do a bunch of stuff here
+    // build indexes for comparison
+    const oldIdxs = items.map((courseData) => [
+      courseData.metadata.tIndex,
+      courseData.metadata.cIndex
+    ]);
+    const newIdxs = event.detail.map((courseData) => [
+      courseData.metadata.tIndex,
+      courseData.metadata.cIndex
+    ]);
+
+    // if we have differences, build term diff and submit update chunk
+    if (oldIdxs.toString() !== newIdxs.toString()) {
+      const termModUpdateChunk = buildTermModUpdateChunkFromCourseItems(
+        flowId,
+        flowProgramId,
+        $courseCache,
+        $programData,
+        event.detail,
+        term.tIndex
+      );
+
+      submitUserDataUpdateChunk(termModUpdateChunk);
+    }
+
     items = event.detail;
   }
 </script>

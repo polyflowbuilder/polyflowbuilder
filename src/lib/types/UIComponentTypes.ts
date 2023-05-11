@@ -25,6 +25,10 @@ export type CourseItemData = {
   metadata: {
     // to assign searched courses to a program
     flowProgramIndex: number;
+
+    // to associate course item with its data model representation
+    tIndex: number;
+    cIndex: number;
   };
 };
 
