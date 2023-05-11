@@ -1,8 +1,7 @@
-import type { PageLoad } from './$types';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
 
-export const load: PageLoad = async ({ fetch }) => {
+export const load = async ({ fetch }) => {
   // get flowcharts with course cache
   // if we include multiple requests, make sure they are using the promise streaming SK flow
   const userFlowcharts = await fetch('/api/user/data/getUserFlowcharts?includeCourseCache=true');

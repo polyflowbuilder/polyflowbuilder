@@ -3,7 +3,6 @@ import { validateToken } from '$lib/server/db/token';
 import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/resetpassword)');
 
@@ -63,7 +62,7 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = async (event) => {
+export const load = async (event) => {
   redirectIfAuthenticated(event);
 
   // validate correct URL

@@ -2,9 +2,8 @@
   import { enhance } from '$app/forms';
   import { AlertError, AlertSuccess } from '$lib/components/common';
   import { FEEDBACK_MESSAGE_MAX_LENGTH } from '$lib/common/config/feedbackConfig';
-  import type { ActionData } from './$types';
 
-  export let form: ActionData;
+  export let form;
 
   let loading = false;
 </script>

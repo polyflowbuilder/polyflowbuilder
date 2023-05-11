@@ -1,6 +1,5 @@
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
-import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = (event) => {
+export const load = (event) => {
   redirectIfAuthenticated(event);
 };

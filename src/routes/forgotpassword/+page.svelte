@@ -3,10 +3,9 @@
   import { faUser } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
   import { AlertError, AlertSuccess } from '$lib/components/common';
-  import type { ActionData, PageData } from './$types';
 
-  export let form: ActionData;
-  export let data: PageData;
+  export let form;
+  export let data;
 
   let loading = false;
   let resetText = 'Submit Password Reset Request';

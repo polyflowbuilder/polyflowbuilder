@@ -4,10 +4,9 @@
   import { enhance } from '$app/forms';
   import { page } from '$app/stores';
   import { AlertError, AlertSuccess } from '$lib/components/common';
-  import type { ActionData, PageData } from './$types';
 
-  export let data: PageData;
-  export let form: ActionData;
+  export let data;
+  export let form;
 
   let password = '';
   let loading = false;

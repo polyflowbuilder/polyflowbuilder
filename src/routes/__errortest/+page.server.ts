@@ -1,8 +1,7 @@
 import { error } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
 
 // route purely for testing error handling
-export const load: PageServerLoad = () => {
+export const load = () => {
   if (process.env['NODE_ENV'] === 'test') {
     throw error(500, {
       message: 'Internal Error'

@@ -1,9 +1,8 @@
 import { browser } from '$app/environment';
 import { programDataLoaded } from '$lib/client/stores/metadataStore';
 import type { Program } from '@prisma/client';
-import type { LayoutLoad } from './$types';
 
-export const load: LayoutLoad = async ({ data, fetch }) => {
+export const load = async ({ data, fetch }) => {
   async function getAvailableProgramData(): Promise<{
     catalogs: string[];
     startYears: string[];

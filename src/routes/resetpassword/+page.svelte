@@ -4,10 +4,9 @@
   import { faLock } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
   import { AlertError } from '$lib/components/common';
-  import type { ActionData, PageData } from './$types';
 
-  export let form: ActionData;
-  export let data: PageData;
+  export let form;
+  export let data;
 
   let password = '';
   let passwordConfirm = '';

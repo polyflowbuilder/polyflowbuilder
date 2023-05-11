@@ -2,7 +2,6 @@ import { initLogger } from '$lib/common/config/loggerConfig';
 import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
 import type { UserRegistrationData } from '$lib/server/schema/registerSchema';
 
 const logger = initLogger('ServerRouteHandler (/register');
@@ -72,6 +71,6 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = (event) => {
+export const load = (event) => {
   redirectIfAuthenticated(event);
 };

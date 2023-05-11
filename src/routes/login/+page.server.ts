@@ -3,7 +3,6 @@ import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
 import type { UserLoginData } from '$lib/server/schema/loginSchema';
-import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/login)');
 
@@ -67,7 +66,7 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = (event) => {
+export const load = (event) => {
   redirectIfAuthenticated(event);
 
   // for ephemeral login page notifs

@@ -2,9 +2,8 @@
   import '../app.postcss';
   import { catalogYearsData, programData, startYearsData } from '$lib/client/stores/apiDataStore';
   import { Footer, Header } from '$lib/components/common';
-  import type { PageData } from './$types';
 
-  export let data: PageData;
+  export let data;
 
   // init metadata in app
   $: if (data.programData) {

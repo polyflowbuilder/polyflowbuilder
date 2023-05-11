@@ -2,7 +2,6 @@ import { fail } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
 import type { Actions } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
 
 const logger = initLogger('ServerRouteHandler (/forgotpassword');
 
@@ -56,7 +55,7 @@ export const actions: Actions = {
   }
 };
 
-export const load: PageServerLoad = (event) => {
+export const load = (event) => {
   redirectIfAuthenticated(event);
 
   // for ephemeral forgot password notifs

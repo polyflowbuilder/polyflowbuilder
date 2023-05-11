@@ -8,9 +8,8 @@
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
-  import type { PageData } from './$types';
 
-  export let data: PageData;
+  export let data;
 
   $: if (data.flowcharts) {
     userFlowcharts.set(data.flowcharts);
