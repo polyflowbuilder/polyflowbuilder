@@ -100,7 +100,7 @@ export function buildTermModUpdateChunkFromCourseItems(
   tIndex: number
 ): UserDataUpdateChunk {
   const updateChunk: UserDataUpdateChunk = {
-    type: UserDataUpdateChunkType.TERM_MOD,
+    type: UserDataUpdateChunkType.FLOW_TERM_MOD,
     data: {
       id: flowId,
       tIndex,

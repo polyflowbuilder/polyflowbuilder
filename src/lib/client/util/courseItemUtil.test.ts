@@ -2,7 +2,8 @@ import { computeCourseDisplayValues } from './courseItemUtil';
 import type { Course } from '$lib/common/schema/flowchartSchema';
 import type { APICourseFull, ComputedCourseItemDisplayData } from '$lib/types';
 
-// TODO: add tests for buildTermCourseItemsData, generateCourseItemTooltipHTML
+// TODO: add tests for buildTermCourseItemsData, generateCourseItemTooltipHTML,
+// buildTermModUpdateChunkFromCourseItems
 
 describe('computeCourseDisplayValues tests', () => {
   const courseMetadata: APICourseFull = {

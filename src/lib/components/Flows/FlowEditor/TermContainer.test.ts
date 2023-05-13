@@ -44,8 +44,9 @@ describe('TermContainer component tests', () => {
   test('empty term', () => {
     render(TermContainer, {
       props: {
-        term: TEST_TERM_EMPTY,
+        flowId: '68be11b7-389b-4ebc-9b95-8997e7314497',
         flowProgramId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
+        term: TEST_TERM_EMPTY,
         termName: 'test term 1'
       }
     });
@@ -60,8 +61,9 @@ describe('TermContainer component tests', () => {
   test('term with courses that are visible in viewport', () => {
     render(TermContainer, {
       props: {
-        term: TEST_TERM_COURSES,
+        flowId: '68be11b7-389b-4ebc-9b95-8997e7314497',
         flowProgramId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
+        term: TEST_TERM_COURSES,
         termName: 'test term 2'
       }
     });

@@ -6,7 +6,7 @@ export enum UserDataUpdateChunkType {
   FLOW_LIST_CHANGE,
   FLOW_UPSERT_ALL,
   FLOW_DELETE,
-  TERM_MOD
+  FLOW_TERM_MOD
 }
 
 export enum UserDataUpdateChunkTERM_MODCourseDataFrom {

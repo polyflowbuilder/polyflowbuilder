@@ -13,7 +13,9 @@ describe('CourseItem component tests', () => {
           displayName: 'test course',
           idName: 'TEST101',
           metadata: {
-            flowProgramIndex: 0
+            flowProgramIndex: 0,
+            tIndex: 0,
+            cIndex: 0
           },
           tooltipParams: {
             content: 'hello world'
@@ -60,7 +62,9 @@ describe('CourseItem component tests', () => {
           displayName: 'test course',
           idName: 'TEST101',
           metadata: {
-            flowProgramIndex: 0
+            flowProgramIndex: 0,
+            tIndex: 0,
+            cIndex: 0
           },
           tooltipParams: {
             content: 'hello world'
@@ -107,7 +111,9 @@ describe('CourseItem component tests', () => {
           displayName: 'test course',
           idName: 'TEST101',
           metadata: {
-            flowProgramIndex: 0
+            flowProgramIndex: 0,
+            tIndex: 0,
+            cIndex: 0
           },
           tooltipParams: {
             content: 'hello world'

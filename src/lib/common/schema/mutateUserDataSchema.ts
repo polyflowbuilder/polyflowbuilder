@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { courseSchema } from '$lib/common/schema/flowchartSchema';
-import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
 import { flowchartTermDataSchema } from '$lib/common/schema/flowchartSchema';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
 
 const positionSchema = z
   .number({
@@ -86,7 +86,7 @@ const flowDeleteUpdateChunkSchema = z.object({
 
 const termModUpdateCourseFromExistingSchema = z.object({
   from: z.literal(UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING, {
-    required_error: 'Incorrect type for from field for existing TERM_MOD from fragment.'
+    required_error: 'Incorrect type for from field for existing FLOW_TERM_MOD from fragment.'
   }),
   data: z.object({
     tIndex: flowchartTermDataSchema.shape.tIndex,
@@ -105,32 +105,50 @@ const termModUpdateCourseFromExistingSchema = z.object({
 
 const termModUpdateCourseFromNewSchema = z.object({
   from: z.literal(UserDataUpdateChunkTERM_MODCourseDataFrom.NEW, {
-    required_error: 'Incorrect type for from field for new TERM_MOD from fragment.'
+    required_error: 'Incorrect type for from field for new FLOW_TERM_MOD from fragment.'
   }),
   data: courseSchema
 });
 
 const termModUpdateChunkSchema = z.object({
-  type: z.literal(UserDataUpdateChunkType.TERM_MOD, {
-    required_error: 'Incorrect type field for TERM_MOD update chunk.'
+  type: z.literal(UserDataUpdateChunkType.FLOW_TERM_MOD, {
+    required_error: 'Incorrect type field for FLOW_TERM_MOD update chunk.'
   }),
   data: z.object(
     {
       id: z
         .string({
-          required_error: 'ID field for TERM_MOD update chunk required.'
+          required_error: 'ID field for FLOW_TERM_MOD update chunk required.'
         })
-        .uuid('ID field for TERM_MOD update chunk must be a UUID.'),
+        .uuid('ID field for FLOW_TERM_MOD update chunk must be a UUID.'),
       tIndex: flowchartTermDataSchema.shape.tIndex,
-      termData: z.array(
-        z.discriminatedUnion(
-          'from',
-          [termModUpdateCourseFromExistingSchema, termModUpdateCourseFromNewSchema],
+      termData: z
+        .array(
+          z.discriminatedUnion(
+            'from',
+            [termModUpdateCourseFromExistingSchema, termModUpdateCourseFromNewSchema],
+            {
+              errorMap: (issue, ctx) => {
+                if (issue.code === z.ZodIssueCode.invalid_union_discriminator) {
+                  return {
+                    message:
+                      'Invalid valid for from field in FLOW_TERM_MOD update chunk termData entry.'
+                  };
+                }
+
+                return {
+                  message: ctx.defaultError
+                };
+              }
+            }
+          ),
           {
-            required_error: 'Term data field required for TERM_MOD update chunk.'
+            required_error: 'Term data field required for FLOW_TERM_MOD update chunk.'
           }
         )
-      )
+        .nonempty({
+          message: 'Term data array must not be empty.'
+        })
     },
     {
       required_error: 'Data field for update chunk required.'

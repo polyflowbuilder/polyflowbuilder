@@ -86,7 +86,7 @@ export function mutateUserFlowcharts(
 
         break;
       }
-      case UserDataUpdateChunkType.TERM_MOD: {
+      case UserDataUpdateChunkType.FLOW_TERM_MOD: {
         const flowDataArrIdx = newUserFlowchartsData.findIndex(
           (flowData) => flowData.flowchart.id === chunk.data.id
         );
@@ -97,7 +97,7 @@ export function mutateUserFlowcharts(
           errors.push(
             `Unable to find flowchart ${
               chunk.data.id
-            } referenced in flowPosEntry for TERM_MOD update chunk from provided flowchart list [${newUserFlowchartsData.map(
+            } referenced in flowPosEntry for FLOW_TERM_MOD update chunk from provided flowchart list [${newUserFlowchartsData.map(
               ({ flowchart }) => flowchart.id
             )}]`
           );
@@ -118,7 +118,7 @@ export function mutateUserFlowcharts(
 
         if (termDataArrIdx === -1) {
           errors.push(
-            `Unable to find destination term [${chunk.data.tIndex}] for flowchart ${chunk.data.id} referenced in TERM_MOD update chunk.`
+            `Unable to find destination term [${chunk.data.tIndex}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
           );
           break;
         }
@@ -134,7 +134,7 @@ export function mutateUserFlowcharts(
 
             if (!course) {
               errors.push(
-                `Unable to find existing course at position [${courseDiff.data.tIndex}, ${courseDiff.data.cIndex}] for flowchart ${chunk.data.id} referenced in TERM_MOD update chunk.`
+                `Unable to find existing course at position [${courseDiff.data.tIndex}, ${courseDiff.data.cIndex}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
               );
               encounteredError = true;
               return;

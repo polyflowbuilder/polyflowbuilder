@@ -44,7 +44,8 @@ export async function dragAndDrop(
   await page.mouse.move(srcX, srcY);
   await page.mouse.down();
 
-  await page.mouse.move(destX, destY, { steps: 20 });
+  // if tests are not performing as expected, bump up drag resolution via step count
+  await page.mouse.move(destX, destY, { steps: 50 });
   await page.mouse.up();
 
   // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)

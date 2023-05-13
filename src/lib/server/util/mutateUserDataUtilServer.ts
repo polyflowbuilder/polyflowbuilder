@@ -31,7 +31,7 @@ function getFlowchartModifyIdsFromChunkList(chunksList: UserDataUpdateChunk[]): 
         flowchartModifyIds.add(chunk.data.id);
         break;
       }
-      case UserDataUpdateChunkType.TERM_MOD: {
+      case UserDataUpdateChunkType.FLOW_TERM_MOD: {
         flowchartModifyIds.add(chunk.data.id);
         break;
       }
