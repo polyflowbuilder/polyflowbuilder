@@ -32,6 +32,6 @@ export const handleError: HandleServerError = ({ error, event }) => {
   if (!event.route.id) {
     logger.warn('User attempted to navigate to nonexistent page', event.url.pathname);
   } else {
-    logger.error('An internal error has occurred', error, event);
+    logger.error('An internal error has occurred:', error, event);
   }
 };

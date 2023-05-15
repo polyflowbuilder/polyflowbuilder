@@ -1,4 +1,5 @@
 import util from 'util';
+import DailyRotateFile from 'winston-daily-rotate-file';
 import { format, createLogger, transports } from 'winston';
 import type { LoggerOptions } from 'winston';
 
@@ -15,10 +16,23 @@ const combineMessageAndSplatFormat = format((info) => {
   return info;
 });
 
+const dailyLogFileRotationTransport: DailyRotateFile = new DailyRotateFile({
+  filename: 'polyflowbuilder-%DATE%.log',
+  // NOTE: in prod, will use fallback bc env vars are not loaded early enough in envConfig
+  // for LOG_DIRECTORY to be available -- will probably address in the future
+  dirname: process.env['LOG_DIRECTORY'] ?? 'logs',
+  zippedArchive: true,
+  auditFile: 'loghistory.json',
+  createSymlink: true
+});
+
 function createLoggerConfig(source: string): LoggerOptions {
   return {
     level: 'verbose',
-    transports: [new transports.Console()],
+    transports:
+      process.env['NODE_ENV'] === 'production'
+        ? [dailyLogFileRotationTransport]
+        : [new transports.Console()],
     format: format.combine(
       combineMessageAndSplatFormat(),
       format.timestamp({
@@ -28,7 +42,9 @@ function createLoggerConfig(source: string): LoggerOptions {
         level: true
       }),
       format.printf((info) => `[${info.level}] [${source}] [${info.timestamp}]: ${info.message}`)
-    )
+    ),
+    handleExceptions: true,
+    exitOnError: false
   };
 }
 
