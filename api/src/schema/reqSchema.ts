@@ -95,7 +95,8 @@ export const requisiteValidationSchema = z
       });
       ctx.addIssue({
         code: 'custom',
-        message: 'APICourse catalog and ID pair are invalid'
+        message: 'APICourse catalog and ID pair are invalid.',
+        path: ['id']
       });
     }
     // verify prereq

@@ -61,6 +61,7 @@
     "@prisma/client": "^4.10.1",
     "argon2": "^0.30.3",
     "dotenv": "^16.0.3",
+    "fuse.js": "^6.6.2",
     "nodemailer": "^6.9.0",
     "object-hash": "^3.0.0",
     "tippy.js": "^6.3.7",

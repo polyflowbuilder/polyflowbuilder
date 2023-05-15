@@ -6,7 +6,11 @@ import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommo
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import type { Program } from '@prisma/client';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
-import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
+import type {
+  UserDataUpdateChunk,
+  TermModChangeTermDataEntry,
+  TermModChangeTermDataField
+} from '$lib/common/schema/mutateUserDataSchema';
 import type {
   CourseCache,
   APICourseFull,
@@ -99,14 +103,7 @@ export function buildTermModUpdateChunkFromCourseItems(
   courseItems: CourseItemData[],
   tIndex: number
 ): UserDataUpdateChunk {
-  const updateChunk: UserDataUpdateChunk = {
-    type: UserDataUpdateChunkType.FLOW_TERM_MOD,
-    data: {
-      id: flowId,
-      tIndex,
-      termData: []
-    }
-  };
+  const newTermData: TermModChangeTermDataEntry[] = [];
 
   courseItems.forEach((item) => {
     const { flowProgramIndex, ...posData } = item.metadata;
@@ -124,7 +121,7 @@ export function buildTermModUpdateChunkFromCourseItems(
         );
       }
 
-      updateChunk.data.termData.push({
+      newTermData.push({
         from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
         data: {
           id: courseData.id,
@@ -137,14 +134,23 @@ export function buildTermModUpdateChunkFromCourseItems(
       });
     } else {
       // add source position from existing data model
-      updateChunk.data.termData.push({
+      newTermData.push({
         from: UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING,
         data: posData
       });
     }
   });
 
-  return updateChunk;
+  return {
+    type: UserDataUpdateChunkType.FLOW_TERM_MOD,
+    data: {
+      id: flowId,
+      tIndex,
+      // safe to typecast bc we validate earlier in TermContainer
+      // that that the termData array (course changes) will not be empty
+      termData: newTermData as TermModChangeTermDataField
+    }
+  };
 }
 
 function generateCourseItemTooltipHTML(data: ComputedCourseItemDisplayData): Element {

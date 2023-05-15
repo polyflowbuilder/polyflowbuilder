@@ -110,6 +110,32 @@ const termModUpdateCourseFromNewSchema = z.object({
   data: courseSchema
 });
 
+const termModUpdateTermDataEntrySchema = z.discriminatedUnion(
+  'from',
+  [termModUpdateCourseFromExistingSchema, termModUpdateCourseFromNewSchema],
+  {
+    errorMap: (issue, ctx) => {
+      if (issue.code === z.ZodIssueCode.invalid_union_discriminator) {
+        return {
+          message: 'Invalid valid for from field in FLOW_TERM_MOD update chunk termData entry.'
+        };
+      }
+
+      return {
+        message: ctx.defaultError
+      };
+    }
+  }
+);
+
+const termModUpdateTermDataFieldSchema = z
+  .array(termModUpdateTermDataEntrySchema, {
+    required_error: 'Term data field required for FLOW_TERM_MOD update chunk.'
+  })
+  .nonempty({
+    message: 'Term data array must not be empty.'
+  });
+
 const termModUpdateChunkSchema = z.object({
   type: z.literal(UserDataUpdateChunkType.FLOW_TERM_MOD, {
     required_error: 'Incorrect type field for FLOW_TERM_MOD update chunk.'
@@ -122,33 +148,7 @@ const termModUpdateChunkSchema = z.object({
         })
         .uuid('ID field for FLOW_TERM_MOD update chunk must be a UUID.'),
       tIndex: flowchartTermDataSchema.shape.tIndex,
-      termData: z
-        .array(
-          z.discriminatedUnion(
-            'from',
-            [termModUpdateCourseFromExistingSchema, termModUpdateCourseFromNewSchema],
-            {
-              errorMap: (issue, ctx) => {
-                if (issue.code === z.ZodIssueCode.invalid_union_discriminator) {
-                  return {
-                    message:
-                      'Invalid valid for from field in FLOW_TERM_MOD update chunk termData entry.'
-                  };
-                }
-
-                return {
-                  message: ctx.defaultError
-                };
-              }
-            }
-          ),
-          {
-            required_error: 'Term data field required for FLOW_TERM_MOD update chunk.'
-          }
-        )
-        .nonempty({
-          message: 'Term data array must not be empty.'
-        })
+      termData: termModUpdateTermDataFieldSchema
     },
     {
       required_error: 'Data field for update chunk required.'
@@ -165,5 +165,8 @@ export const UserDataUpdateChunkSchema = z.discriminatedUnion('type', [
 
 export type FlowListChangeOrderField = z.infer<typeof flowListChangeOrderFieldSchema>;
 export type FlowListChangeOrderEntry = z.infer<typeof flowListChangeOrderEntrySchema>;
+
+export type TermModChangeTermDataField = z.infer<typeof termModUpdateTermDataFieldSchema>;
+export type TermModChangeTermDataEntry = z.infer<typeof termModUpdateTermDataEntrySchema>;
 
 export type UserDataUpdateChunk = z.infer<typeof UserDataUpdateChunkSchema>;
