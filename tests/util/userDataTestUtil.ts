@@ -11,6 +11,7 @@ export async function populateFlowcharts(
     info: {
       termCount: number;
       longTermCount: number;
+      programCount?: number;
     };
   }[] = []
 ) {
@@ -35,6 +36,9 @@ export async function populateFlowcharts(
       ownerId,
       startYear: '2020',
       programId1: '8e195e0c-73ce-44f7-a9ae-0212cd7c4b04',
+      ...(Number(flowCustomizationInfo?.info.programCount) >= 2 && {
+        programId2: '2fde861b-a98e-4564-a0ab-1854a9d4bbb1'
+      }),
       pos: i
     };
 
