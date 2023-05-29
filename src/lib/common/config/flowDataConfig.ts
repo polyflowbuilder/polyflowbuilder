@@ -8,6 +8,8 @@ export const CUSTOM_COURSE_CARD_DESC_MAX_LENGTH = 1500;
 
 export const CURRENT_FLOW_DATA_VERSION = 7;
 
+export const FLOW_TERM_COUNT_MAX = 28;
+
 // 4 years starting in the fall, skipping summer
 export const FLOW_DEFAULT_TERM_DATA = [
   { courses: [], tIndex: -1, tUnits: '0' },

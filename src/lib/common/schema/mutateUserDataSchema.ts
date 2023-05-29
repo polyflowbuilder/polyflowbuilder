@@ -156,11 +156,28 @@ const termModUpdateChunkSchema = z.object({
   )
 });
 
+const addTermsUpdateChunkSchema = z.object({
+  type: z.literal(UserDataUpdateChunkType.FLOW_TERMS_ADD, {
+    required_error: 'Incorrect type field for FLOW_TERMS_ADD update chunk.'
+  }),
+  data: z.object({
+    id: z
+      .string({
+        required_error: 'ID field for FLOW_TERMS_ADD update chunk required.'
+      })
+      .uuid('ID field for FLOW_TERMS_ADD update chunk must be a UUID.'),
+    tIndexes: z.array(flowchartTermDataSchema.shape.tIndex, {
+      required_error: 'tIndexes field is required for FLOW_TERMS_ADD update chunk.'
+    })
+  })
+});
+
 export const UserDataUpdateChunkSchema = z.discriminatedUnion('type', [
   flowListChangeUpdateChunkSchema,
   flowUpsertAllUpdateChunkSchema,
   flowDeleteUpdateChunkSchema,
-  termModUpdateChunkSchema
+  termModUpdateChunkSchema,
+  addTermsUpdateChunkSchema
 ]);
 
 export type FlowListChangeOrderField = z.infer<typeof flowListChangeOrderFieldSchema>;

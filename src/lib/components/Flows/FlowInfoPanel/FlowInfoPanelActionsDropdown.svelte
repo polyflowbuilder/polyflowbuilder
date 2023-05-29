@@ -1,6 +1,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+  import { addTermsModalOpen } from '$lib/client/stores/modalStateStore';
 
   export let actionsButtonDisabled: boolean;
 </script>
@@ -18,8 +19,8 @@
   </button>
 
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100">
-    <li><a>hello1</a></li>
+  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-56">
+    <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
     <li><a>hello2</a></li>
     <li><a>hello3</a></li>
     <li><a>hello4</a></li>

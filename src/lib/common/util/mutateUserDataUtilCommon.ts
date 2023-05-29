@@ -1,5 +1,6 @@
 // common implementation for updating user data via update chunks (only includes update types common to frontend and backend)
 
+import { performAddTerms } from './flowTermUtilCommon';
 import { computeTermUnits } from './unitCounterUtilCommon';
 import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
 import type { Term } from '../schema/flowchartSchema';
@@ -156,6 +157,18 @@ export function mutateUserFlowcharts(
           newUserFlowchartsData[flowDataArrIdx].flowchart.termData[termDataArrIdx] = newTermData;
         }
 
+        break;
+      }
+      case UserDataUpdateChunkType.FLOW_TERMS_ADD: {
+        const flowDataArrIdx = newUserFlowchartsData.findIndex(
+          (flowData) => flowData.flowchart.id === chunk.data.id
+        );
+
+        // insert new terms as requested
+        newUserFlowchartsData[flowDataArrIdx].flowchart = performAddTerms(
+          chunk.data.tIndexes,
+          newUserFlowchartsData[flowDataArrIdx].flowchart
+        );
         break;
       }
       default: {
