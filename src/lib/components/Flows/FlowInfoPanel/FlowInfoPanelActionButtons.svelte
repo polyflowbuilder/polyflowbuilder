@@ -4,6 +4,7 @@
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
+  import { FlowInfoPanelActionsDropdown } from '$lib/components/Flows/FlowInfoPanel';
   import type {
     FlowListChangeOrderEntry,
     FlowListChangeOrderField
@@ -54,10 +55,7 @@
     <button class="flex-1 mx-1 btn btn-almostmd btn-accent" on:click={openNewFlowModal}
       >New Flow</button
     >
-    <button
-      class="flex-1 mx-1 btn btn-almostmd bg-gray-400 border-none hover:bg-gray-500"
-      disabled={$selectedFlowIndex === -1}>Actions</button
-    >
+    <FlowInfoPanelActionsDropdown actionsButtonDisabled={$selectedFlowIndex === -1} />
     <button
       class="flex-1 mx-1 btn btn-almostmd bg-red-500 border-none hover:bg-red-600"
       disabled={$selectedFlowIndex === -1}
