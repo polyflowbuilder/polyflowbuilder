@@ -18,9 +18,9 @@ export function initSearch(query: string, catalog: string) {
   } else {
     clearTimeout(beforeSearchTimer);
   }
-  beforeSearchTimer = setTimeout(async () => {
+  beforeSearchTimer = setTimeout(() => {
     delayingBeforeSearch = false;
-    const searchResults = await performSearch(query, catalog);
+    const searchResults = performSearch(query, catalog);
     activeSearchResults.set(searchResults);
   }, SEARCH_DELAY_TIME_MS);
 }
