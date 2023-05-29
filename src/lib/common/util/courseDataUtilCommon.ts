@@ -2,11 +2,11 @@
 
 import type { Program } from '@prisma/client';
 
-export function getCourseCatalogFromCourse(
-  courseProgramIDIndex: number,
+export function getCatalogFromProgramIDIndex(
+  programIDIndex: number,
   programId: string[],
   programCache: Program[]
 ): string | undefined {
-  const program = programCache.find((prog) => prog.id === programId[courseProgramIDIndex]);
+  const program = programCache.find((prog) => prog.id === programId[programIDIndex]);
   return program?.catalog;
 }

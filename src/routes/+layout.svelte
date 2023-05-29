@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.postcss';
-  import { catalogYearsData, programData, startYearsData } from '$lib/client/stores/apiDataStore';
   import { Footer, Header } from '$lib/components/common';
+  import { catalogYearsData, programData, startYearsData } from '$lib/client/stores/apiDataStore';
 
   export let data;
 

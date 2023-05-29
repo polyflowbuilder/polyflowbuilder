@@ -1,6 +1,6 @@
 import { COLORS } from '$lib/common/config/colorConfig';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
-import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, FlowEditorFooterUnitCounts } from '$lib/types';
@@ -35,7 +35,7 @@ export function computeGroupUnits(
   flowchart.termData.forEach((term) => {
     term.courses.forEach((course) => {
       // perform lookup if necessary
-      const courseCatalog = getCourseCatalogFromCourse(
+      const courseCatalog = getCatalogFromProgramIDIndex(
         course.programIdIndex || 0,
         flowchart.programId,
         programCache

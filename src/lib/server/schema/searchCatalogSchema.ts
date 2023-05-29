@@ -20,3 +20,5 @@ export const searchCatalogSchema = z.object({
     required_error: 'Query field for catalog search is required.'
   })
 });
+
+export type SearchCatalogInput = z.infer<typeof searchCatalogSchema>;

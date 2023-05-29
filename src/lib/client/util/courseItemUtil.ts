@@ -2,7 +2,7 @@
 
 import { browser } from '$app/environment';
 import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
-import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import type { Program } from '@prisma/client';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
@@ -61,7 +61,7 @@ export function buildTermCourseItemsData(
         .find(
           (cacheEntry) =>
             cacheEntry.catalog ===
-            getCourseCatalogFromCourse(course.programIdIndex || 0, flowProgramId, programCache)
+            getCatalogFromProgramIDIndex(course.programIdIndex || 0, flowProgramId, programCache)
         )
         ?.courses.find((c) => c.id === course.id) || null;
     const computedCourseDisplayValues = computeCourseDisplayValues(course, courseMetadata);
@@ -111,7 +111,7 @@ export function buildTermModUpdateChunkFromCourseItems(
     // TODO: remove magic number
     if (posData.tIndex === -2) {
       // do a lookup from course cache if we come from search
-      const catalog = getCourseCatalogFromCourse(flowProgramIndex, flowProgramId, programCache);
+      const catalog = getCatalogFromProgramIDIndex(flowProgramIndex, flowProgramId, programCache);
       const cache = courseCache.find((cache) => cache.catalog === catalog);
       const courseData = cache?.courses.find((course) => course.id === item.idName);
 

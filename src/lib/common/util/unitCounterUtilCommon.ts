@@ -1,6 +1,6 @@
 // util functions related to unit counting
 
-import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { CourseCache } from '$lib/types';
 import type { Course, Term } from '../schema/flowchartSchema';
@@ -30,7 +30,7 @@ export function computeTermUnits(
   termData.forEach((c) => {
     if (c.id) {
       // select the correct catalog
-      const courseCatalog = getCourseCatalogFromCourse(
+      const courseCatalog = getCatalogFromProgramIDIndex(
         c.programIdIndex ?? 0,
         programId,
         programCache

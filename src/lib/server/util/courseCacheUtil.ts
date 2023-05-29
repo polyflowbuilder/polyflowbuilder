@@ -1,5 +1,5 @@
 import { apiData } from '$lib/server/config/apiDataConfig';
-import { getCourseCatalogFromCourse } from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { APICourseFull, CourseCache } from '$lib/types';
 
@@ -15,7 +15,7 @@ export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[
       // TODO: optimize the courses data structure to use lookups instead of find() operations?
       if (c.id) {
         // select the correct catalog
-        const courseCatalog = getCourseCatalogFromCourse(
+        const courseCatalog = getCatalogFromProgramIDIndex(
           c.programIdIndex ?? 0,
           flowchart.programId,
           apiData.programData

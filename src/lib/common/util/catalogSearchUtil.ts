@@ -7,20 +7,18 @@ import {
   SANITIZE_REGEX
 } from '$lib/common/config/catalogSearchConfig';
 import type { APICourseFull } from '$lib/types';
+import type { CatalogSearchResults } from '$lib/types/courseSearchTypes';
 
 export function performCatalogSearch(
-  searchTerm: string,
+  query: string,
   catalogCourses: APICourseFull[]
-): {
-  searchResults: APICourseFull[];
-  searchLimitExceeded: boolean;
-} {
+): CatalogSearchResults {
   // sanitize input to prevent DoS by regex hijacking
-  const searchTermSanitized = SANITIZE_REGEX(searchTerm);
+  const querySanitized = SANITIZE_REGEX(query);
   let searchResults: APICourseFull[] = [];
   let searchLimitExceeded = false;
 
-  if (searchTermSanitized && catalogCourses) {
+  if (querySanitized && catalogCourses) {
     // fuzzy searching
     const fuseSearch = new Fuse(catalogCourses, {
       keys: ['id', 'displayName', 'desc'],
@@ -29,7 +27,7 @@ export function performCatalogSearch(
     });
 
     searchResults = fuseSearch
-      .search(searchTermSanitized)
+      .search(querySanitized)
       // TODO: not sure when the score won't be present, but if it's not
       // don't include any of those results
       .filter((fuseResult) => fuseResult?.score || 1 <= FUZZY_SEARCH_THRESOLD)

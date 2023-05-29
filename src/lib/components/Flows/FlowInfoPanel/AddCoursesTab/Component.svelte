@@ -1,6 +1,11 @@
 <script lang="ts">
-  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import CourseSearchProgramSelector from './CourseSearchProgramSelector.svelte';
+  import { initSearch } from '$lib/client/util/courseSearchUtil';
+  import { programData } from '$lib/client/stores/apiDataStore';
+  import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
+  import { activeSearchResults } from '$lib/client/stores/catalogSearchStore';
+  import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 
   let searchProgramIndex = -1;
   let query = '';
@@ -11,6 +16,19 @@
     query = '';
     searchProgramIndex = $selectedFlowIndex !== -1 ? 0 : -1;
   }
+
+  $: selectedCatalog = getCatalogFromProgramIDIndex(
+    searchProgramIndex,
+    $userFlowcharts[$selectedFlowIndex]?.programId || '',
+    $programData
+  );
+  $: {
+    if (selectedCatalog) {
+      initSearch(query, selectedCatalog);
+    }
+  }
+
+  $: console.log('activesearchresults', $activeSearchResults);
 </script>
 
 <!-- TODO: add "template classes" like blanks and GEs here -->

@@ -3,14 +3,16 @@
   import 'tippy.js/dist/tippy.css';
   import 'tippy.js/themes/light-border.css';
   import { FlowViewer } from '$lib/components/Flows';
-  import { courseCache } from '$lib/client/stores/apiDataStore';
+  import { searchCache } from '$lib/client/stores/catalogSearchStore.js';
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
+  import { catalogYearsData, courseCache } from '$lib/client/stores/apiDataStore';
 
   export let data;
 
+  // init data brought down from server
   $: if (data.flowcharts) {
     userFlowcharts.set(data.flowcharts);
   }
@@ -18,7 +20,12 @@
     courseCache.set(data.courseCache);
   }
 
+  // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
+  $: $searchCache = $catalogYearsData.map((catalog) => ({
+    catalog,
+    queries: []
+  }));
 </script>
 
 <div class="flowContainer w-full flex">
