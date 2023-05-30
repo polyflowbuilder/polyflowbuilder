@@ -3,3 +3,4 @@ import { writable } from 'svelte/store';
 
 export const newFlowModalOpen = writable(false);
 export const addTermsModalOpen = writable(false);
+export const deleteTermsModalOpen = writable(false);

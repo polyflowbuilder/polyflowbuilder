@@ -1,9 +1,9 @@
 // common implementation for updating user data via update chunks (only includes update types common to frontend and backend)
 
-import { performAddTerms } from './flowTermUtilCommon';
-import { computeTermUnits } from './unitCounterUtilCommon';
+import { computeTermUnits } from '$lib/common/util/unitCounterUtilCommon';
+import { performAddTerms, performDeleteTerms } from '$lib/common/util/flowTermUtilCommon';
 import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
-import type { Term } from '../schema/flowchartSchema';
+import type { Term } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
 import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
@@ -155,6 +155,8 @@ export function mutateUserFlowcharts(
           );
 
           newUserFlowchartsData[flowDataArrIdx].flowchart.termData[termDataArrIdx] = newTermData;
+
+          newUserFlowchartsData[flowDataArrIdx].flowchart.lastUpdatedUTC = new Date();
         }
 
         break;
@@ -164,11 +166,53 @@ export function mutateUserFlowcharts(
           (flowData) => flowData.flowchart.id === chunk.data.id
         );
 
+        // need to validate as user may pass bad ids
+        if (flowDataArrIdx === -1) {
+          errors.push(
+            `Unable to find flowchart ${
+              chunk.data.id
+            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData.map(
+              ({ flowchart }) => flowchart.id
+            )}]`
+          );
+          break;
+        }
+
         // insert new terms as requested
         newUserFlowchartsData[flowDataArrIdx].flowchart = performAddTerms(
           chunk.data.tIndexes,
           newUserFlowchartsData[flowDataArrIdx].flowchart
         );
+
+        newUserFlowchartsData[flowDataArrIdx].flowchart.lastUpdatedUTC = new Date();
+
+        break;
+      }
+      case UserDataUpdateChunkType.FLOW_TERMS_DELETE: {
+        const flowDataArrIdx = newUserFlowchartsData.findIndex(
+          (flowData) => flowData.flowchart.id === chunk.data.id
+        );
+
+        // need to validate as user may pass bad ids
+        if (flowDataArrIdx === -1) {
+          errors.push(
+            `Unable to find flowchart ${
+              chunk.data.id
+            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData.map(
+              ({ flowchart }) => flowchart.id
+            )}]`
+          );
+          break;
+        }
+
+        // delete terms as requested
+        newUserFlowchartsData[flowDataArrIdx].flowchart = performDeleteTerms(
+          chunk.data.tIndexes,
+          newUserFlowchartsData[flowDataArrIdx].flowchart
+        );
+
+        newUserFlowchartsData[flowDataArrIdx].flowchart.lastUpdatedUTC = new Date();
+
         break;
       }
       default: {

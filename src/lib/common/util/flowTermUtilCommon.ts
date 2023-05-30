@@ -23,3 +23,12 @@ export function performAddTerms(termAddIdxs: number[], flowchart: Flowchart): Fl
 
   return newFlowchart;
 }
+
+// effectively just a wrapper
+export function performDeleteTerms(termDeleteIdxs: number[], flowchart: Flowchart): Flowchart {
+  const newFlowchart = flowchart;
+  newFlowchart.termData = newFlowchart.termData.filter(
+    (termData) => !termDeleteIdxs.includes(termData.tIndex)
+  );
+  return newFlowchart;
+}

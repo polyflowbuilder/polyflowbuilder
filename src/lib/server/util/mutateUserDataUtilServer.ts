@@ -38,6 +38,11 @@ function getFlowchartModifyIdsFromChunkList(chunksList: UserDataUpdateChunk[]): 
       }
       case UserDataUpdateChunkType.FLOW_TERMS_ADD: {
         flowchartModifyIds.add(chunk.data.id);
+        break;
+      }
+      case UserDataUpdateChunkType.FLOW_TERMS_DELETE: {
+        flowchartModifyIds.add(chunk.data.id);
+        break;
       }
     }
   });
