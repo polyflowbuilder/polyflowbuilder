@@ -172,12 +172,36 @@ test.describe('flowchart viewer tests', () => {
     ).not.toBeVisible();
 
     // term containers
-    await expect(page.getByText('Summer 2020')).toBeInViewport();
-    await expect(page.getByText('Fall 2020')).toBeInViewport();
-    await expect(page.getByText('Winter 2021')).toBeInViewport();
-    await expect(page.getByText('Spring 2021')).toBeInViewport();
-    await expect(page.getByText('Summer 2021')).toBeInViewport();
-    await expect(page.getByText('Fall 2021')).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2020'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2020'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Winter 2021'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Spring 2021'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2021'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2021'
+      })
+    ).toBeInViewport();
 
     // courses
 
@@ -294,15 +318,43 @@ test.describe('flowchart viewer tests', () => {
     ).not.toBeVisible();
 
     // term containers
-    await expect(page.getByText('Summer 2020')).toBeInViewport();
-    await expect(page.getByText('Fall 2020')).toBeInViewport();
-    await expect(page.getByText('Winter 2021')).toBeInViewport();
-    await expect(page.getByText('Spring 2021')).toBeInViewport();
-    await expect(page.getByText('Summer 2021')).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2020'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2020'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Winter 2021'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Spring 2021'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2021'
+      })
+    ).toBeInViewport();
 
     // can't see the last term
-    await expect(page.getByText('Fall 2021')).toBeVisible();
-    await expect(page.getByText('Fall 2021')).not.toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2021'
+      })
+    ).toBeVisible();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2021'
+      })
+    ).not.toBeInViewport();
     await expect(page.getByText('45 (10)').nth(1)).toBeVisible();
     await expect(page.getByText('45 (10)').nth(1)).not.toBeInViewport();
     await expect(
@@ -340,7 +392,11 @@ test.describe('flowchart viewer tests', () => {
     await expect(page.getByLabel('flow editor right scroll')).toBeDisabled();
 
     // we can now see the last term
-    await expect(page.getByText('Fall 2021')).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Fall 2021'
+      })
+    ).toBeInViewport();
     await expect(page.getByText('45 (10)').nth(1)).toBeInViewport();
     await expect(
       page
@@ -358,8 +414,16 @@ test.describe('flowchart viewer tests', () => {
     ).toBeInViewport();
 
     // but now we cannot see the first term
-    await expect(page.getByText('Summer 2020')).toBeVisible();
-    await expect(page.getByText('Summer 2020')).not.toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2020'
+      })
+    ).toBeVisible();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2020'
+      })
+    ).not.toBeInViewport();
     await expect(page.getByText('13 (4)').nth(0)).toBeVisible();
     await expect(page.getByText('13 (4)').nth(0)).not.toBeInViewport();
     await expect(
@@ -383,7 +447,11 @@ test.describe('flowchart viewer tests', () => {
     await expect(page.getByLabel('flow editor left scroll')).toBeDisabled();
 
     // now we can see the first term again
-    await expect(page.getByText('Summer 2020')).toBeInViewport();
+    await expect(
+      page.getByRole('heading', {
+        name: 'Summer 2020'
+      })
+    ).toBeInViewport();
     await expect(page.getByText('13 (4)').nth(0)).toBeInViewport();
     await expect(
       page
