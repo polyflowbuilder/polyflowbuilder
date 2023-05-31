@@ -168,36 +168,6 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
   test('improperly formatted flow term mod chunk returns 400 (#5)', async ({ request }) => {
     await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
 
-    // termdata must not be empty
-    const res = await request.post('/api/user/data/updateUserFlowcharts', {
-      data: {
-        updateChunks: [
-          {
-            type: UserDataUpdateChunkType.FLOW_TERM_MOD,
-            data: {
-              // bogus data to pass validation
-              id: 'b21255e4-5476-4f36-a093-94407698b400',
-              tIndex: 0,
-              termData: []
-            }
-          }
-        ]
-      }
-    });
-
-    const expectedResponseBody = {
-      message: 'Invalid input received.',
-      validationErrors: {
-        updateChunks: ['Term data array must not be empty.']
-      }
-    };
-
-    expect(res.status()).toBe(400);
-    expect(await res.json()).toStrictEqual(expectedResponseBody);
-  });
-  test('improperly formatted flow term mod chunk returns 400 (#6)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
-
     // term data from type invalid
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -229,7 +199,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(res.status()).toBe(400);
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
-  test('improperly formatted flow term mod chunk returns 400 (#7)', async ({ request }) => {
+  test('improperly formatted flow term mod chunk returns 400 (#6)', async ({ request }) => {
     await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
 
     // term data from=EXISTING data invalid
@@ -332,7 +302,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(res3.status()).toBe(400);
     expect(await res3.json()).toStrictEqual(expectedResponseBody3);
   });
-  test('improperly formatted flow term mod chunk returns 400 (#8)', async ({ request }) => {
+  test('improperly formatted flow term mod chunk returns 400 (#7)', async ({ request }) => {
     await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
 
     // term data from=NEW data invalid
@@ -402,7 +372,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(res2.status()).toBe(400);
     expect(await res2.json()).toStrictEqual(expectedResponseBody2);
   });
-  test('improperly formatted flow term mod chunk returns 400 (#9)', async ({ request }) => {
+  test('improperly formatted flow term mod chunk returns 400 (#8)', async ({ request }) => {
     await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
 
     // flowchart id not found in user flow list

@@ -128,13 +128,9 @@ const termModUpdateTermDataEntrySchema = z.discriminatedUnion(
   }
 );
 
-const termModUpdateTermDataFieldSchema = z
-  .array(termModUpdateTermDataEntrySchema, {
-    required_error: 'Term data field required for FLOW_TERM_MOD update chunk.'
-  })
-  .nonempty({
-    message: 'Term data array must not be empty.'
-  });
+const termModUpdateTermDataFieldSchema = z.array(termModUpdateTermDataEntrySchema, {
+  required_error: 'Term data field required for FLOW_TERM_MOD update chunk.'
+});
 
 const termModUpdateChunkSchema = z.object({
   type: z.literal(UserDataUpdateChunkType.FLOW_TERM_MOD, {

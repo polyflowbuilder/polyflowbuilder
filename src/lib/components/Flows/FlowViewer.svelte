@@ -5,6 +5,8 @@
   export let flowchart: Flowchart | null;
   export let displayCreditBin: boolean = false;
 
+  // TODO: with this logic, the credit bin is hidden automatically when all courses are removed
+  // from it - is this what we want?
   $: displayCreditBin = flowchart?.termData.find((term) => term.tIndex === -1)?.tUnits !== '0';
 </script>
 
