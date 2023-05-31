@@ -1,7 +1,11 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
-  import { addTermsModalOpen, deleteTermsModalOpen } from '$lib/client/stores/modalStateStore';
+  import {
+    addTermsModalOpen,
+    deleteTermsModalOpen,
+    editFlowPropertiesModalOpen
+  } from '$lib/client/stores/modalStateStore';
 
   export let actionsButtonDisabled: boolean;
 </script>
@@ -24,7 +28,11 @@
     <li>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
     </li>
-    <li><a>hello3</a></li>
+    <li>
+      <a href={'#'} on:click|preventDefault={() => ($editFlowPropertiesModalOpen = true)}
+        >Edit Flow Properties</a
+      >
+    </li>
     <li><a>hello4</a></li>
   </ul>
 </div>

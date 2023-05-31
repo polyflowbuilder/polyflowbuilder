@@ -1,6 +1,11 @@
 <script lang="ts">
-  import { NewFlowModal, AddTermsModal, DeleteTermsModal } from '$lib/components/Flows/modals';
   import { startYearsData, catalogYearsData, programData } from '$lib/client/stores/apiDataStore';
+  import {
+    NewFlowModal,
+    AddTermsModal,
+    DeleteTermsModal,
+    EditFlowPropertiesModal
+  } from '$lib/components/Flows/modals';
 </script>
 
 <div>
@@ -11,4 +16,5 @@
   />
   <AddTermsModal />
   <DeleteTermsModal />
+  <EditFlowPropertiesModal />
 </div>
