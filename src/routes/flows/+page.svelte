@@ -7,8 +7,8 @@
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { catalogYearsData, courseCache } from '$lib/client/stores/apiDataStore';
+  import { selectedFlowIndex, viewingCreditBin } from '$lib/client/stores/UIDataStore';
 
   export let data;
 
@@ -30,7 +30,7 @@
 
 <div class="flowContainer w-full flex">
   <FlowInfoPanel />
-  <FlowViewer flowchart={selectedFlowchart} />
+  <FlowViewer flowchart={selectedFlowchart} bind:displayCreditBin={$viewingCreditBin} />
 </div>
 
 <ModalWrapper />

@@ -39,3 +39,5 @@ export const flowListUIData = derived([userFlowcharts, programData], ([userFlows
 });
 
 export const selectedFlowIndex = writable<number>(-1);
+
+export const viewingCreditBin = writable(false);

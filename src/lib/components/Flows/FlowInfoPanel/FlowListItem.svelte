@@ -2,7 +2,8 @@
   import Fa from 'svelte-fa';
   import { tooltip } from '$lib/client/util/tooltipUtil';
   import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-  import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
+  import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { selectedFlowIndex, viewingCreditBin } from '$lib/client/stores/UIDataStore';
   import type { FlowListItemData } from '$lib/types';
 
   export let item: FlowListItemData;
@@ -15,6 +16,9 @@
   function handleClick() {
     if ($selectedFlowIndex !== item.idx) {
       $selectedFlowIndex = item.idx;
+      $viewingCreditBin =
+        $userFlowcharts[$selectedFlowIndex]?.termData.find((term) => term.tIndex === -1)?.tUnits !==
+        '0';
     }
   }
 

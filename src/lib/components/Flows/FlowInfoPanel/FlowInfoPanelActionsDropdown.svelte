@@ -1,6 +1,8 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
+  import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+  import { viewingCreditBin } from '$lib/client/stores/UIDataStore';
   import {
     addTermsModalOpen,
     deleteTermsModalOpen,
@@ -23,7 +25,7 @@
   </button>
 
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-56">
+  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60">
     <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
     <li>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
@@ -33,6 +35,17 @@
         >Edit Flow Properties</a
       >
     </li>
-    <li><a>hello4</a></li>
+    <li>
+      <a
+        href={'#'}
+        on:click|preventDefault={() => ($viewingCreditBin = !$viewingCreditBin)}
+        class="relative"
+      >
+        <span>View Credit Bin</span>
+        <span class="absolute right-0 top-[6px]">
+          <Toggle name={'View Credit Bin'} bind:checked={$viewingCreditBin} />
+        </span>
+      </a>
+    </li>
   </ul>
 </div>

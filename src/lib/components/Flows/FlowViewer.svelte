@@ -3,8 +3,8 @@
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
   export let flowchart: Flowchart | null;
+  export let displayCreditBin: boolean = false;
 
-  // TODO: bind to user toggle and have user toggle override this default option
   $: displayCreditBin = flowchart?.termData.find((term) => term.tIndex === -1)?.tUnits !== '0';
 </script>
 
