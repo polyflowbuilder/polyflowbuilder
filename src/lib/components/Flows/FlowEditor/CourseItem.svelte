@@ -2,13 +2,22 @@
   import 'tippy.js/dist/tippy.css';
   import 'tippy.js/themes/light.css';
   import { tooltip } from '$lib/client/util/tooltipUtil';
+  import { createEventDispatcher } from 'svelte';
   import type { CourseItemData } from '$lib/types';
+
+  const dispatch = createEventDispatcher();
 
   export let item: CourseItemData;
 
   $: color = item.color || 'white';
 
-  let selected = false;
+  function onCourseItemClick() {
+    dispatch('itemEvent', {
+      selected: !item.metadata.selected,
+      tIndex: item.metadata.tIndex,
+      cIndex: item.metadata.cIndex
+    });
+  }
 </script>
 
 <!-- TODO: investigate accessibility of tooltip -->
@@ -20,9 +29,9 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
   class="courseItem select-none card shadow inline-block rounded-none p-1 w-full h-full"
-  class:selected
+  class:selected={item.metadata.selected}
   style="background-color: {color}"
-  on:click={() => (selected = !selected)}
+  on:click={onCourseItemClick}
   use:tooltip={item.tooltipParams}
 >
   <h6 class="font-semibold multilineText mb-1">

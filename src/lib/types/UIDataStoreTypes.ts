@@ -13,3 +13,9 @@ export type FlowListUIData = {
   published: boolean;
   imported: boolean;
 };
+
+export type SelectedCourse = {
+  selected: boolean;
+  tIndex: number;
+  cIndex: number;
+};

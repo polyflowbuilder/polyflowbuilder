@@ -15,7 +15,8 @@ describe('CourseItem component tests', () => {
           metadata: {
             flowProgramIndex: 0,
             tIndex: 0,
-            cIndex: 0
+            cIndex: 0,
+            selected: false
           },
           tooltipParams: {
             content: 'hello world'
@@ -64,7 +65,8 @@ describe('CourseItem component tests', () => {
           metadata: {
             flowProgramIndex: 0,
             tIndex: 0,
-            cIndex: 0
+            cIndex: 0,
+            selected: false
           },
           tooltipParams: {
             content: 'hello world'
@@ -113,7 +115,8 @@ describe('CourseItem component tests', () => {
           metadata: {
             flowProgramIndex: 0,
             tIndex: 0,
-            cIndex: 0
+            cIndex: 0,
+            selected: false
           },
           tooltipParams: {
             content: 'hello world'

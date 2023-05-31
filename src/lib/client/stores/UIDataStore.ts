@@ -1,6 +1,6 @@
-import { derived, writable } from 'svelte/store';
 import { programData } from './apiDataStore';
 import { userFlowcharts } from './userDataStore';
+import { derived, writable } from 'svelte/store';
 import type { FlowListUIData } from '$lib/types';
 
 // required data for flow list UI
@@ -41,3 +41,5 @@ export const flowListUIData = derived([userFlowcharts, programData], ([userFlows
 export const selectedFlowIndex = writable<number>(-1);
 
 export const viewingCreditBin = writable(false);
+
+export const selectedCourses = writable<Set<string>>(new Set());

@@ -29,6 +29,8 @@ export type CourseItemData = {
     // to associate course item with its data model representation
     tIndex: number;
     cIndex: number;
+
+    selected: boolean;
   };
 };
 

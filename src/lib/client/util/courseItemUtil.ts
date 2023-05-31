@@ -50,7 +50,8 @@ export function buildTermCourseItemsData(
   flowProgramId: string[],
   courseCache: CourseCache[],
   programCache: Program[],
-  termData: Term
+  termData: Term,
+  selectedCourses: Set<string>
 ): CourseItemData[] {
   const items: CourseItemData[] = [];
 
@@ -74,7 +75,8 @@ export function buildTermCourseItemsData(
       metadata: {
         flowProgramIndex: course.programIdIndex || 0,
         tIndex: termData.tIndex,
-        cIndex
+        cIndex,
+        selected: selectedCourses.has(`${termData.tIndex}-${cIndex}`)
       },
       tooltipParams: {}
     };

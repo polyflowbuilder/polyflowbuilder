@@ -1,15 +1,17 @@
 <script lang="ts">
   import CourseItem from './CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
+  import { selectedCourses } from '$lib/client/stores/UIDataStore';
   import { courseCache, programData } from '$lib/client/stores/apiDataStore';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
+  import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import { COURSE_ITEM_SIZE_PX, TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
   import {
     buildTermCourseItemsData,
     buildTermModUpdateChunkFromCourseItems
   } from '$lib/client/util/courseItemUtil';
   import type { Term } from '$lib/common/schema/flowchartSchema';
-  import type { CourseItemData } from '$lib/types';
+  import type { CourseItemData, SelectedCourse } from '$lib/types';
 
   export let flowId: string;
   export let flowProgramId: string[];
@@ -17,7 +19,13 @@
   export let term: Term;
   export let termName: string;
 
-  $: items = buildTermCourseItemsData(flowProgramId, $courseCache, $programData, term);
+  $: items = buildTermCourseItemsData(
+    flowProgramId,
+    $courseCache,
+    $programData,
+    term,
+    $selectedCourses
+  );
 
   function onCourseItemReorder(event: CustomEvent<CourseItemData[]>) {
     // build indexes for comparison
@@ -32,6 +40,7 @@
 
     // if we have differences, build term diff and submit update chunk
     if (oldIdxs.toString() !== newIdxs.toString()) {
+      // build term diff and submit update chunk
       const termModUpdateChunk = buildTermModUpdateChunkFromCourseItems(
         flowId,
         flowProgramId,
@@ -40,11 +49,36 @@
         event.detail,
         term.tIndex
       );
-
       submitUserDataUpdateChunk(termModUpdateChunk);
+
+      // update selected courses
+      items.forEach((item) => {
+        $selectedCourses.delete(`${item.metadata.tIndex}-${item.metadata.cIndex}`);
+      });
+      event.detail.forEach((crs, i) => {
+        if (crs.metadata.selected) {
+          $selectedCourses.add(`${term.tIndex}-${i}`);
+        }
+      });
+      // update the selected courses after the TERM_MOD update has been applied
+      // TODO: should probably add a callback/hook for when the update is done,
+      // but this works just fine for now
+      setTimeout(() => {
+        $selectedCourses = $selectedCourses;
+      }, UPDATE_CHUNK_DELAY_TIME_MS + 1);
     }
 
     items = event.detail;
+  }
+
+  function onCourseSelectedChange(event: CustomEvent<SelectedCourse>) {
+    if (event.detail.selected) {
+      $selectedCourses.add(`${event.detail.tIndex}-${event.detail.cIndex}`);
+    } else {
+      $selectedCourses.delete(`${event.detail.tIndex}-${event.detail.cIndex}`);
+    }
+    // need to assign to trigger reactivity
+    $selectedCourses = $selectedCourses;
   }
 </script>
 
@@ -67,6 +101,7 @@
       dndType="termContainer"
       itemStyle="width: {COURSE_ITEM_SIZE_PX}px; height: {COURSE_ITEM_SIZE_PX}px; margin: 0.5rem auto;"
       on:itemsReorder={onCourseItemReorder}
+      on:itemEvent={onCourseSelectedChange}
     />
   </div>
   <div class="termContainerFooter">

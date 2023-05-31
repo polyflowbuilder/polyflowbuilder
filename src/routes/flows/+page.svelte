@@ -8,7 +8,11 @@
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { catalogYearsData, courseCache } from '$lib/client/stores/apiDataStore';
-  import { selectedFlowIndex, viewingCreditBin } from '$lib/client/stores/UIDataStore';
+  import {
+    selectedCourses,
+    selectedFlowIndex,
+    viewingCreditBin
+  } from '$lib/client/stores/UIDataStore';
 
   export let data;
 
@@ -26,6 +30,18 @@
     catalog,
     queries: []
   }));
+
+  // TODO: move this logic into the FlowEditor?
+  $: {
+    $selectedFlowIndex;
+    clearSelectedCourses();
+  }
+  function clearSelectedCourses() {
+    $selectedCourses.clear();
+    $selectedCourses = $selectedCourses;
+  }
+
+  $: console.log('selectedcourses', $selectedCourses);
 </script>
 
 <div class="flowContainer w-full flex">
