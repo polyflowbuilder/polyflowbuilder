@@ -9,6 +9,7 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { catalogYearsData, courseCache } from '$lib/client/stores/apiDataStore';
   import {
+    selectedColor,
     selectedCourses,
     selectedFlowIndex,
     viewingCreditBin
@@ -42,6 +43,7 @@
   }
 
   $: console.log('selectedcourses', $selectedCourses);
+  $: console.log('selectedcolor', $selectedColor);
 </script>
 
 <div class="flowContainer w-full flex">

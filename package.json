@@ -17,6 +17,7 @@
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@playwright/test": "^1.28.1",
+    "@simonwep/pickr": "^1.8.2",
     "@sveltejs/adapter-node": "^1.1.0",
     "@sveltejs/kit": "^1.0.0",
     "@testing-library/dom": "^9.0.0",

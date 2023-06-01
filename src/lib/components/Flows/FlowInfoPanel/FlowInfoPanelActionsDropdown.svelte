@@ -4,6 +4,7 @@
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { deleteSelectedCourses } from '$lib/client/util/flowActionsUtil';
+  import { FlowInfoPanelActionsColorSelector } from '$lib/components/Flows/FlowInfoPanel';
   import {
     selectedCourses,
     viewingCreditBin,
@@ -56,6 +57,9 @@
     <div class="divider my-0 py-0 px-2" />
     <li class="text-gray-400 pointer-events-none">
       <div>{$selectedCourses.size} courses selected</div>
+    </li>
+    <li>
+      <FlowInfoPanelActionsColorSelector />
     </li>
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
       <a

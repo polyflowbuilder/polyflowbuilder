@@ -1,6 +1,7 @@
 import { programData } from './apiDataStore';
 import { userFlowcharts } from './userDataStore';
 import { derived, writable } from 'svelte/store';
+import { COLOR_PICKER_UI_DEFAULT_COLOR } from '../config/uiConfig';
 import type { FlowListUIData } from '$lib/types';
 
 // required data for flow list UI
@@ -43,3 +44,5 @@ export const selectedFlowIndex = writable<number>(-1);
 export const viewingCreditBin = writable(false);
 
 export const selectedCourses = writable<Set<string>>(new Set());
+
+export const selectedColor = writable<string>(COLOR_PICKER_UI_DEFAULT_COLOR);

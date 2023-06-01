@@ -11,3 +11,5 @@ export const FLOW_EDITOR_HEADER_PADDING_PX = 192;
 
 export const TERM_CONTAINER_WIDTH_PX = 130;
 export const COURSE_ITEM_SIZE_PX = 116;
+
+export const COLOR_PICKER_UI_DEFAULT_COLOR = '#1B733C';
