@@ -57,9 +57,21 @@
     </li>
     <div class="divider my-0 py-0 px-2" />
     <li class="text-gray-400 pointer-events-none">
-      <div>{$selectedCourses.size} courses selected</div>
+      <div>
+        {$selectedCourses.size}
+        {$selectedCourses.size === 1 ? 'course' : 'courses'} selected
+      </div>
     </li>
-    <li>
+    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+      <a
+        href={'#'}
+        on:click|preventDefault={() => {
+          $selectedCourses.clear();
+          $selectedCourses = $selectedCourses;
+        }}>Clear Course Selections</a
+      >
+    </li>
+    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
       <FlowInfoPanelActionsColorSelector />
     </li>
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
