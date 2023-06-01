@@ -3,12 +3,13 @@
   import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { deleteSelectedCourses } from '$lib/client/util/flowActionsUtil';
   import { FlowInfoPanelActionsColorSelector } from '$lib/components/Flows/FlowInfoPanel';
+  import { colorSelectedCourses, deleteSelectedCourses } from '$lib/client/util/flowActionsUtil';
   import {
     selectedCourses,
     viewingCreditBin,
-    selectedFlowIndex
+    selectedFlowIndex,
+    selectedColor
   } from '$lib/client/stores/UIDataStore';
   import {
     addTermsModalOpen,
@@ -70,6 +71,18 @@
             $userFlowcharts[$selectedFlowIndex]?.termData,
             $selectedCourses
           )}>Delete Selected Courses</a
+      >
+    </li>
+    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+      <a
+        href={'#'}
+        on:click|preventDefault={() =>
+          colorSelectedCourses(
+            $userFlowcharts[$selectedFlowIndex]?.id,
+            $userFlowcharts[$selectedFlowIndex]?.termData,
+            $selectedCourses,
+            $selectedColor
+          )}>Colorize Selected Courses</a
       >
     </li>
   </ul>

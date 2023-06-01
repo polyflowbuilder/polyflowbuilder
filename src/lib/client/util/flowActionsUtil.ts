@@ -62,3 +62,53 @@ export function deleteSelectedCourses(
     });
   }, UPDATE_CHUNK_DELAY_TIME_MS);
 }
+
+export function colorSelectedCourses(
+  flowchartId: string,
+  termData: Term[],
+  selectedCoursesEntries: Set<string>,
+  selectedColor: string
+) {
+  const changedTIndexes = new Set<number>();
+
+  // collect terms that have deleted courses in them
+  selectedCoursesEntries.forEach((entry) => {
+    changedTIndexes.add(Number(entry.split(',')[0]));
+  });
+
+  // apply color update to each course
+  changedTIndexes.forEach((tIndex) => {
+    const curTermData = termData.find((term) => term.tIndex === tIndex);
+
+    if (!curTermData) {
+      throw new Error('could not find modified term for course deletion');
+    }
+
+    submitUserDataUpdateChunk({
+      type: UserDataUpdateChunkType.FLOW_TERM_MOD,
+      data: {
+        id: flowchartId,
+        tIndex,
+        termData: curTermData.courses.map((course, cIndex) => {
+          if (selectedCoursesEntries.has(`${tIndex},${cIndex}`)) {
+            return {
+              from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
+              data: {
+                ...course,
+                color: selectedColor
+              }
+            };
+          } else {
+            return {
+              from: UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING,
+              data: {
+                tIndex,
+                cIndex
+              }
+            };
+          }
+        })
+      }
+    });
+  });
+}
