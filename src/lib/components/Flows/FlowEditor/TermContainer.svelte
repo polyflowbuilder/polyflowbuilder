@@ -53,11 +53,11 @@
 
       // update selected courses
       items.forEach((item) => {
-        $selectedCourses.delete(`${item.metadata.tIndex}-${item.metadata.cIndex}`);
+        $selectedCourses.delete(`${item.metadata.tIndex},${item.metadata.cIndex}`);
       });
       event.detail.forEach((crs, i) => {
         if (crs.metadata.selected) {
-          $selectedCourses.add(`${term.tIndex}-${i}`);
+          $selectedCourses.add(`${term.tIndex},${i}`);
         }
       });
       // update the selected courses after the TERM_MOD update has been applied
@@ -73,9 +73,9 @@
 
   function onCourseSelectedChange(event: CustomEvent<SelectedCourse>) {
     if (event.detail.selected) {
-      $selectedCourses.add(`${event.detail.tIndex}-${event.detail.cIndex}`);
+      $selectedCourses.add(`${event.detail.tIndex},${event.detail.cIndex}`);
     } else {
-      $selectedCourses.delete(`${event.detail.tIndex}-${event.detail.cIndex}`);
+      $selectedCourses.delete(`${event.detail.tIndex},${event.detail.cIndex}`);
     }
     // need to assign to trigger reactivity
     $selectedCourses = $selectedCourses;

@@ -2,7 +2,13 @@
   import Fa from 'svelte-fa';
   import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
-  import { viewingCreditBin } from '$lib/client/stores/UIDataStore';
+  import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { deleteSelectedCourses } from '$lib/client/util/flowActionsUtil';
+  import {
+    selectedCourses,
+    viewingCreditBin,
+    selectedFlowIndex
+  } from '$lib/client/stores/UIDataStore';
   import {
     addTermsModalOpen,
     deleteTermsModalOpen,
@@ -46,6 +52,21 @@
           <Toggle name={'View Credit Bin'} bind:checked={$viewingCreditBin} />
         </span>
       </a>
+    </li>
+    <div class="divider my-0 py-0 px-2" />
+    <li class="text-gray-400 pointer-events-none">
+      <div>{$selectedCourses.size} courses selected</div>
+    </li>
+    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+      <a
+        href={'#'}
+        on:click|preventDefault={() =>
+          deleteSelectedCourses(
+            $userFlowcharts[$selectedFlowIndex]?.id,
+            $userFlowcharts[$selectedFlowIndex]?.termData,
+            $selectedCourses
+          )}>Delete Selected Courses</a
+      >
     </li>
   </ul>
 </div>

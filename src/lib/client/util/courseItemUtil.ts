@@ -76,7 +76,7 @@ export function buildTermCourseItemsData(
         flowProgramIndex: course.programIdIndex || 0,
         tIndex: termData.tIndex,
         cIndex,
-        selected: selectedCourses.has(`${termData.tIndex}-${cIndex}`)
+        selected: selectedCourses.has(`${termData.tIndex},${cIndex}`)
       },
       tooltipParams: {}
     };
@@ -108,12 +108,14 @@ export function buildTermModUpdateChunkFromCourseItems(
   const newTermData: TermModChangeTermDataEntry[] = [];
 
   courseItems.forEach((item) => {
-    const { flowProgramIndex, ...posData } = item.metadata;
-
     // TODO: remove magic number
-    if (posData.tIndex === -2) {
+    if (item.metadata.tIndex === -2) {
       // do a lookup from course cache if we come from search
-      const catalog = getCatalogFromProgramIDIndex(flowProgramIndex, flowProgramId, programCache);
+      const catalog = getCatalogFromProgramIDIndex(
+        item.metadata.flowProgramIndex,
+        flowProgramId,
+        programCache
+      );
       const cache = courseCache.find((cache) => cache.catalog === catalog);
       const courseData = cache?.courses.find((course) => course.id === item.idName);
 
@@ -129,8 +131,8 @@ export function buildTermModUpdateChunkFromCourseItems(
           id: courseData.id,
           color: '#FFFFFF',
           // only include program index if nonzero
-          ...(flowProgramIndex && {
-            programIdIndex: flowProgramIndex
+          ...(item.metadata.flowProgramIndex && {
+            programIdIndex: item.metadata.flowProgramIndex
           })
         }
       });
@@ -138,7 +140,10 @@ export function buildTermModUpdateChunkFromCourseItems(
       // add source position from existing data model
       newTermData.push({
         from: UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING,
-        data: posData
+        data: {
+          tIndex: item.metadata.tIndex,
+          cIndex: item.metadata.cIndex
+        }
       });
     }
   });
