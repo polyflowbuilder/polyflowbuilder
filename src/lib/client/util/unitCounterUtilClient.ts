@@ -1,4 +1,5 @@
 import { COLORS } from '$lib/common/config/colorConfig';
+import { SANITIZE_REGEX } from '$lib/common/config/catalogSearchConfig';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
@@ -72,4 +73,20 @@ export function computeGroupUnits(
   });
 
   return unitCounts;
+}
+
+// TODO: rename this file for just unit utilities
+export function validateUnitString(unitsInput: string) {
+  const unitsInputSanitized = SANITIZE_REGEX(unitsInput);
+  const validationRegExp = new RegExp(/^\d{1,2}-\d{1,2}$|^\d{1,2}$/);
+
+  // also check for unique numbers if there are ranged units
+  // true when unique units (for single num OR double num case)
+  let ascendingOrderUnits = true;
+  if (validationRegExp && unitsInputSanitized.includes('-')) {
+    const [lowerUnits, upperUnits] = unitsInputSanitized.split('-').map((val) => Number(val));
+    ascendingOrderUnits = lowerUnits < upperUnits;
+  }
+
+  return Boolean(unitsInputSanitized.match(validationRegExp)) && ascendingOrderUnits;
 }

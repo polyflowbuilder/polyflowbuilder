@@ -14,6 +14,7 @@
   import {
     addTermsModalOpen,
     deleteTermsModalOpen,
+    customizeCoursesModalOpen,
     editFlowPropertiesModalOpen
   } from '$lib/client/stores/modalStateStore';
 
@@ -95,6 +96,11 @@
             $selectedCourses,
             $selectedColor
           )}>Colorize Selected Courses</a
+      >
+    </li>
+    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+      <a href={'#'} on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}
+        >Edit Selected Courses</a
       >
     </li>
   </ul>

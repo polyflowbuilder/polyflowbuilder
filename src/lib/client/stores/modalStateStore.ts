@@ -5,3 +5,4 @@ export const newFlowModalOpen = writable(false);
 export const addTermsModalOpen = writable(false);
 export const deleteTermsModalOpen = writable(false);
 export const editFlowPropertiesModalOpen = writable(false);
+export const customizeCoursesModalOpen = writable(false);

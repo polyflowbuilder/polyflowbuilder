@@ -2,12 +2,12 @@ import { selectedCourses } from '../stores/UIDataStore';
 import { submitUserDataUpdateChunk } from './mutateUserDataUtilClient';
 import { UPDATE_CHUNK_DELAY_TIME_MS } from '../config/editorConfig';
 import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
-import type { Term } from '$lib/common/schema/flowchartSchema';
+import type { Course, Term } from '$lib/common/schema/flowchartSchema';
 
 export function deleteSelectedCourses(
   flowchartId: string,
   termData: Term[],
-  selectedCoursesEntries: Set<string>
+  selectedCourseEntries: Set<string>
 ) {
   const termDataIdxs = termData.map((term) => {
     return {
@@ -18,7 +18,7 @@ export function deleteSelectedCourses(
   const changedTIndexes = new Set<number>();
 
   // collect terms that have deleted courses in them
-  selectedCoursesEntries.forEach((entry) => {
+  selectedCourseEntries.forEach((entry) => {
     changedTIndexes.add(Number(entry.split(',')[0]));
   });
 
@@ -32,7 +32,7 @@ export function deleteSelectedCourses(
     }
 
     const cIndexesRemaining = curTermData.cIndexes.filter(
-      (cIndex) => !selectedCoursesEntries.has(`${tIndex},${cIndex}`)
+      (cIndex) => !selectedCourseEntries.has(`${tIndex},${cIndex}`)
     );
 
     submitUserDataUpdateChunk({
@@ -66,13 +66,13 @@ export function deleteSelectedCourses(
 export function colorSelectedCourses(
   flowchartId: string,
   termData: Term[],
-  selectedCoursesEntries: Set<string>,
+  selectedCourseEntries: Set<string>,
   selectedColor: string
 ) {
   const changedTIndexes = new Set<number>();
 
   // collect terms that have deleted courses in them
-  selectedCoursesEntries.forEach((entry) => {
+  selectedCourseEntries.forEach((entry) => {
     changedTIndexes.add(Number(entry.split(',')[0]));
   });
 
@@ -81,7 +81,7 @@ export function colorSelectedCourses(
     const curTermData = termData.find((term) => term.tIndex === tIndex);
 
     if (!curTermData) {
-      throw new Error('could not find modified term for course deletion');
+      throw new Error('could not find modified term for course color change');
     }
 
     submitUserDataUpdateChunk({
@@ -90,13 +90,89 @@ export function colorSelectedCourses(
         id: flowchartId,
         tIndex,
         termData: curTermData.courses.map((course, cIndex) => {
-          if (selectedCoursesEntries.has(`${tIndex},${cIndex}`)) {
+          if (selectedCourseEntries.has(`${tIndex},${cIndex}`)) {
             return {
               from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
               data: {
                 ...course,
                 color: selectedColor
               }
+            };
+          } else {
+            return {
+              from: UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING,
+              data: {
+                tIndex,
+                cIndex
+              }
+            };
+          }
+        })
+      }
+    });
+  });
+}
+
+// TODO: if we have onlyUnitsChange and the unit count is the same
+// as the unit count in the course metadata, remove customUnits property
+export function updateCourseData(
+  flowchartId: string,
+  termData: Term[],
+  selectedCourseEntries: Set<string>,
+  courseChanges: {
+    name: string;
+    displayName: string;
+    desc: string;
+    units: string;
+    onlyUnitsChange: boolean;
+  }
+) {
+  const changedTIndexes = new Set<number>();
+
+  // collect terms that have deleted courses in them
+  selectedCourseEntries.forEach((entry) => {
+    changedTIndexes.add(Number(entry.split(',')[0]));
+  });
+
+  // apply course changes to each applicable course in the term
+  changedTIndexes.forEach((tIndex) => {
+    const curTermData = termData.find((term) => term.tIndex === tIndex);
+
+    if (!curTermData) {
+      throw new Error('could not find modified term for course customize');
+    }
+
+    submitUserDataUpdateChunk({
+      type: UserDataUpdateChunkType.FLOW_TERM_MOD,
+      data: {
+        id: flowchartId,
+        tIndex,
+        termData: curTermData.courses.map((course, cIndex) => {
+          if (selectedCourseEntries.has(`${tIndex},${cIndex}`)) {
+            const newCourseData: Course = courseChanges.onlyUnitsChange
+              ? {
+                  ...course,
+                  customUnits: courseChanges.units
+                }
+              : {
+                  id: null,
+                  color: course.color,
+                  customId: courseChanges.name,
+                  ...(course.programIdIndex && {
+                    programIdIndex: course.programIdIndex
+                  }),
+                  ...(courseChanges.displayName.length && {
+                    customDisplayName: courseChanges.displayName
+                  }),
+                  ...(courseChanges.desc.length && {
+                    customDesc: courseChanges.desc
+                  }),
+                  customUnits: courseChanges.units
+                };
+
+            return {
+              from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
+              data: newCourseData
             };
           } else {
             return {

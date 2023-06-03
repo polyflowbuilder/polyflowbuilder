@@ -4,9 +4,9 @@ import {
   FLOW_NAME_MAX_LENGTH,
   FLOW_PROGRAMS_MAX_COUNT,
   FLOW_NOTES_MAX_LENGTH,
-  CUSTOM_COURSE_CARD_TITLE_MAX_LENGTH,
-  CUSTOM_COURSE_CARD_DISPLAY_NAME_MAX_LENGTH,
-  CUSTOM_COURSE_CARD_DESC_MAX_LENGTH
+  CUSTOM_COURSE_NAME_MAX_LENGTH,
+  CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH,
+  CUSTOM_COURSE_DESC_MAX_LENGTH
 } from '$lib/common/config/flowDataConfig';
 
 // validation schema for user-level flowchart
@@ -73,10 +73,10 @@ export const courseSchema = z
       customId: z
         .string()
         .refine(
-          (customId) => customId.length <= CUSTOM_COURSE_CARD_TITLE_MAX_LENGTH,
+          (customId) => customId.length <= CUSTOM_COURSE_NAME_MAX_LENGTH,
           (customId) => {
             return {
-              message: `Course custom ID too long, length ${customId.length}/${CUSTOM_COURSE_CARD_TITLE_MAX_LENGTH} characters.`
+              message: `Course custom ID too long, length ${customId.length}/${CUSTOM_COURSE_NAME_MAX_LENGTH} characters.`
             };
           }
         )
@@ -84,11 +84,10 @@ export const courseSchema = z
       customDisplayName: z
         .string()
         .refine(
-          (customDisplayName) =>
-            customDisplayName.length <= CUSTOM_COURSE_CARD_DISPLAY_NAME_MAX_LENGTH,
+          (customDisplayName) => customDisplayName.length <= CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH,
           (customDisplayName) => {
             return {
-              message: `Course custom display name too long, length ${customDisplayName.length}/${CUSTOM_COURSE_CARD_DISPLAY_NAME_MAX_LENGTH} characters.`
+              message: `Course custom display name too long, length ${customDisplayName.length}/${CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH} characters.`
             };
           }
         )
@@ -97,10 +96,10 @@ export const courseSchema = z
       customDesc: z
         .string()
         .refine(
-          (customNote) => customNote.length <= CUSTOM_COURSE_CARD_DESC_MAX_LENGTH,
+          (customNote) => customNote.length <= CUSTOM_COURSE_DESC_MAX_LENGTH,
           (customNote) => {
             return {
-              message: `Course custom description name too long, length ${customNote.length}/${CUSTOM_COURSE_CARD_DESC_MAX_LENGTH} characters.`
+              message: `Course custom description name too long, length ${customNote.length}/${CUSTOM_COURSE_DESC_MAX_LENGTH} characters.`
             };
           }
         )
