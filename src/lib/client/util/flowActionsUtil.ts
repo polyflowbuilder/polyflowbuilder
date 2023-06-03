@@ -1,8 +1,10 @@
+import { v4 as uuid } from 'uuid';
 import { selectedCourses } from '../stores/UIDataStore';
+import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { submitUserDataUpdateChunk } from './mutateUserDataUtilClient';
 import { UPDATE_CHUNK_DELAY_TIME_MS } from '../config/editorConfig';
 import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
-import type { Course, Term } from '$lib/common/schema/flowchartSchema';
+import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 export function deleteSelectedCourses(
   flowchartId: string,
@@ -187,4 +189,31 @@ export function updateCourseData(
       }
     });
   });
+}
+
+export function duplicateFlowchart(flowchart: Flowchart, userFlowchartsLength: number) {
+  const newFlowchart = structuredClone(flowchart);
+
+  // update properties
+  newFlowchart.id = uuid();
+  newFlowchart.name = `Copy of ${newFlowchart.name}`.substring(0, FLOW_NAME_MAX_LENGTH);
+  newFlowchart.publishedId = null;
+  newFlowchart.importedId = null;
+
+  submitUserDataUpdateChunk({
+    type: UserDataUpdateChunkType.FLOW_UPSERT_ALL,
+    data: {
+      flowchart: newFlowchart,
+      pos: userFlowchartsLength
+    }
+  });
+
+  // alert after the changes have been made
+  setTimeout(
+    () =>
+      alert(
+        `The flowchart has been copied as "${newFlowchart.name}" and is located at the bottom of your flowchart list.`
+      ),
+    UPDATE_CHUNK_DELAY_TIME_MS
+  );
 }

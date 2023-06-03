@@ -4,7 +4,11 @@
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { FlowInfoPanelActionsColorSelector } from '$lib/components/Flows/FlowInfoPanel';
-  import { colorSelectedCourses, deleteSelectedCourses } from '$lib/client/util/flowActionsUtil';
+  import {
+    duplicateFlowchart,
+    colorSelectedCourses,
+    deleteSelectedCourses
+  } from '$lib/client/util/flowActionsUtil';
   import {
     selectedCourses,
     viewingCreditBin,
@@ -101,6 +105,15 @@
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
       <a href={'#'} on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}
         >Edit Selected Courses</a
+      >
+    </li>
+    <div class="divider my-0 py-0 px-2" />
+    <li>
+      <a
+        href={'#'}
+        on:click|preventDefault={() =>
+          duplicateFlowchart($userFlowcharts[$selectedFlowIndex], $userFlowcharts.length)}
+        >Duplicate Flowchart</a
       >
     </li>
   </ul>
