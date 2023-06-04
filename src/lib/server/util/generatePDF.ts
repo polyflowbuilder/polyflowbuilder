@@ -36,6 +36,11 @@ export function extractPDFDataFromFlowchart(flowchart: Flowchart): FlowchartPDFD
   // create PDF term data
   const pdfTermData: FlowchartPDFTermData[] = [];
   flowchart.termData.forEach((term) => {
+    // don't include credit bin if there are no courses in it
+    if (term.tIndex === -1 && term.courses.length === 0) {
+      return;
+    }
+
     const termData: FlowchartPDFTermData = {
       tName: generateTermString(term.tIndex, flowchart.startYear),
       tData: [],
@@ -86,7 +91,8 @@ export async function generatePDF(flowData: FlowchartPDFData): Promise<Buffer> {
       '--disable-web-security', // these three are required to disable CORS (blocked locally hosted fonts from loading)
       '--disable-features=IsolateOrigins',
       '--disable-site-isolation-trials'
-    ]
+    ],
+    headless: 'new'
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });

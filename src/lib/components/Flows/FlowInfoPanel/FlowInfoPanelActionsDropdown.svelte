@@ -3,7 +3,10 @@
   import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { FlowInfoPanelActionsColorSelector } from '$lib/components/Flows/FlowInfoPanel';
+  import {
+    FlowInfoPanelActionsColorSelector,
+    FlowInfoPanelActionsGeneratePDF
+  } from '$lib/components/Flows/FlowInfoPanel';
   import {
     duplicateFlowchart,
     colorSelectedCourses,
@@ -113,8 +116,9 @@
         href={'#'}
         on:click|preventDefault={() =>
           duplicateFlowchart($userFlowcharts[$selectedFlowIndex], $userFlowcharts.length)}
-        >Duplicate Flowchart</a
+        >Duplicate Flow</a
       >
     </li>
+    <FlowInfoPanelActionsGeneratePDF />
   </ul>
 </div>
