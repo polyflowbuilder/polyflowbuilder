@@ -1,7 +1,7 @@
 <script lang="ts">
   import { afterUpdate } from 'svelte';
   import { computeGroupUnits } from '$lib/client/util/unitCounterUtilClient';
-  import { generateTermString } from '$lib/client/util/flowTermUtilClient';
+  import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
   import { TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
   import { courseCache, programData } from '$lib/client/stores/apiDataStore';
   import {

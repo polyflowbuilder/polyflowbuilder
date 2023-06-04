@@ -1,7 +1,7 @@
 <script lang="ts">
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
-  import { generateTermString } from '$lib/client/util/flowTermUtilClient';
+  import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
   import { deleteTermsModalOpen } from '$lib/client/stores/modalStateStore';
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';

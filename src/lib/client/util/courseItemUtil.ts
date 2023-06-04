@@ -2,49 +2,19 @@
 
 import { browser } from '$app/environment';
 import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
+import {
+  computeCourseDisplayValues,
+  getCatalogFromProgramIDIndex
+} from '$lib/common/util/courseDataUtilCommon';
+import type { Term } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
-import type { Course, Term } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache, CourseItemData, ComputedCourseItemDisplayData } from '$lib/types';
 import type {
   UserDataUpdateChunk,
   TermModChangeTermDataEntry,
   TermModChangeTermDataField
 } from '$lib/common/schema/mutateUserDataSchema';
-import type {
-  CourseCache,
-  APICourseFull,
-  CourseItemData,
-  ComputedCourseItemDisplayData
-} from '$lib/types';
-
-export function computeCourseDisplayValues(
-  course: Course,
-  courseMetadata: APICourseFull | null,
-  // compute values that visible without looking at tooltip (for pdf gen)
-  computeTooltipDisplayData = true
-): ComputedCourseItemDisplayData {
-  if (!course.id && !course.customId) {
-    throw new Error('course id not valid for course');
-  }
-
-  // TODO: error checking for if we're using default course data but it's not defined
-  return {
-    // type cast is safe bc course id will always be nonnull if customId not defined
-    idName: course.customId || (course.id as string),
-    displayName: course.customDisplayName || courseMetadata?.displayName || '',
-    units: course.customUnits || courseMetadata?.units || '0',
-    color: course.color,
-    ...(computeTooltipDisplayData && {
-      tooltip: {
-        custom: !!course.customId,
-        desc: course.customDesc || courseMetadata?.desc || '',
-        addlDesc: course.customDesc ? '' : courseMetadata?.addl || '',
-        termsOffered: courseMetadata?.dynamicTerms || null
-      }
-    })
-  };
-}
 
 export function buildTermCourseItemsData(
   flowProgramId: string[],

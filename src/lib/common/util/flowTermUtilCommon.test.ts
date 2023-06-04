@@ -1,6 +1,8 @@
-// tests for flowTermUtilClient
+// tests for flowTermUtilCommon
 
-import { generateTermString } from './flowTermUtilClient';
+// TODO: add tests for other flowTermUtilCommon functions
+
+import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
 
 // just a sample
 const FLOW_START_YEARS = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'];
