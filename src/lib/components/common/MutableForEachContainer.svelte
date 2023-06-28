@@ -15,7 +15,7 @@
 
   // data props
   export let items: unknown[];
-  export let component: typeof SvelteComponent;
+  export let component: typeof SvelteComponent<any>;
 
   // customization props
   export let containerClass = '';
