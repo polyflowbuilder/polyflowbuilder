@@ -11,8 +11,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
     "test:unit:coverage": "vitest run --coverage",
-    "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -43,7 +43,7 @@
     "mysql2": "^3.2.0",
     "postcss": "^8.4.14",
     "postcss-load-config": "^4.0.1",
-    "prettier": "^2.8.0",
+    "prettier": "^3.0.0",
     "prettier-plugin-svelte": "^2.8.1",
     "prisma": "^4.9.0",
     "svelte": "^4.0.0",
