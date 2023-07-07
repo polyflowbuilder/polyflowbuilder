@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { modal } from '$lib/client/util/modalUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
@@ -34,7 +35,7 @@
   }
 </script>
 
-<div class="modal" class:modal-open={$deleteTermsModalOpen} tabindex="-1">
+<dialog use:modal={deleteTermsModalOpen} class="modal">
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Remove Flowchart Terms</h2>
 
@@ -67,4 +68,4 @@
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>
-</div>
+</dialog>

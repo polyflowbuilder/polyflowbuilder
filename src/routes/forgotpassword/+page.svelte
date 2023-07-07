@@ -60,11 +60,11 @@
         }}
       >
         <div class="form-control">
-          <label class="input-group w-full">
-            <span><Fa icon={faUser} /></span>
+          <label class="join group-input">
+            <span class="join-item"><Fa icon={faUser} /></span>
             <label class="sr-only" for="email">Email</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="email"
               id="email"
               name="email"
@@ -81,10 +81,10 @@
 
           <button
             class="btn btn-accent btn-block mt-6"
-            class:loading
             disabled={loading}
             type="submit"
           >
+            <span class={loading ? 'loading loading-spinner' : ''}/>
             {resetText}
           </button>
         </div>

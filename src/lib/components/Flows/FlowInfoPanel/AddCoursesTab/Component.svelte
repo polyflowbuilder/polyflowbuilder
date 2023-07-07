@@ -89,7 +89,7 @@
 
   <div class="text-center overflow-y-scroll mb-3">
     {#await $activeSearchResults}
-      <div class="searchSpinner" />
+      <div class="loading loading-spinner w-16 text-polyGreen" />
     {:then results}
       <!-- TODO: redo logic for when to show results, a bit funky looking in the UI -->
       {#if results && searchProgramIndex !== -1 && $searchCache
@@ -126,31 +126,3 @@
     {/await}
   </div>
 </div>
-
-<style lang="postcss">
-  /* for the animated search spinner */
-  .searchSpinner {
-    display: inline-block;
-    width: 74px;
-    height: 74px;
-    margin-top: 4rem;
-  }
-  .searchSpinner::after {
-    content: '';
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #1b733c #1b733c #fff #fff; /* first is polyGreen */
-    animation: searchSpinnerAnimation 2s linear infinite;
-  }
-  @keyframes searchSpinnerAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>

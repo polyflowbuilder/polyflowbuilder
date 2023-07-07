@@ -1,4 +1,4 @@
-const { '[data-theme=light]': lightTheme } = require('daisyui/src/colors/themes');
+const { '[data-theme=light]': lightTheme } = require('daisyui/src/theming/themes');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config = {
@@ -28,6 +28,8 @@ const config = {
   daisyui: {
     themes: [
       {
+        // TODO: hardcode light theme into here so we don't get theme changes
+        // when updating daisyUI
         // overriding some properties of the light theme we are using
         // need to restart dev server for changes to take effect
         light: {

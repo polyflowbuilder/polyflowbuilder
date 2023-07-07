@@ -88,10 +88,12 @@
 
           <button
             class="btn btn-accent btn-block mt-6"
-            class:loading
             disabled={loading}
-            type="submit">Submit Feedback</button
+            type="submit"
           >
+            <span class={loading ? 'loading loading-spinner' : ''}/>
+            Submit Feedback
+          </button>
         </div>
       </form>
     </div>

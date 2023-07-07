@@ -50,35 +50,7 @@
   <a href={'#'} class="flex justify-between" on:click|preventDefault={generatePDF}>
     <span>Export Flow as PDF</span>
     {#if generatingPDF}
-      <span class="spinner" />
+      <span class="loading loading-spinner loading-sm text-polyGreen" />
     {/if}
   </a>
 </li>
-
-<style lang="postcss">
-  /* for the animated spinner */
-  .spinner {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 0.5rem;
-  }
-  .spinner::after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    border-color: #1b733c #1b733c #fff #fff; /* first is polyGreen */
-    animation: spinnerAnimation 2s linear infinite;
-  }
-  @keyframes spinnerAnimation {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-</style>

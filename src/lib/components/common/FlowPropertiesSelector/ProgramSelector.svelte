@@ -108,10 +108,10 @@
 
 <div>
   <div class="mb-2">
-    <label class="input-group">
-      <span class="min-w-[8rem] w-32">Catalog</span>
+    <label class="join group-input">
+      <span class="join-item min-w-[8rem] w-32">Catalog</span>
       <select
-        class="select font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
+        class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programCatalogYear"
         required
         bind:value={programCatalogYear}
@@ -127,10 +127,10 @@
   </div>
 
   <div class="mb-2">
-    <label class="input-group">
-      <span class="min-w-[8rem] w-32">Major</span>
+    <label class="join group-input">
+      <span class="join-item min-w-[8rem] w-32">Major</span>
       <select
-        class="select font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
+        class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programName"
         required
         bind:value={programName}
@@ -150,10 +150,10 @@
   </div>
 
   <div class="mb-2">
-    <label class="input-group">
-      <span class="min-w-[8rem] w-32">Concentration</span>
+    <label class="join group-input">
+      <span class="join-item min-w-[8rem] w-32">Concentration</span>
       <select
-        class="select font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
+        class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programAddlName"
         required
         bind:value={programId}

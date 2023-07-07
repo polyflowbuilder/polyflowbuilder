@@ -1,6 +1,7 @@
 <script lang="ts">
   import FlowPropertiesSelector from '$lib/components/common/FlowPropertiesSelector';
   import { tick } from 'svelte';
+  import { modal } from '$lib/client/util/modalUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { MODAL_CLOSE_TIME_MS } from '$lib/client/config/uiConfig';
@@ -77,7 +78,7 @@
   }
 </script>
 
-<div class="modal" class:modal-open={$editFlowPropertiesModalOpen} tabindex="-1">
+<dialog use:modal={editFlowPropertiesModalOpen} class="modal">
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Edit Flowchart Properties</h2>
 
@@ -124,7 +125,7 @@
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>
-</div>
+</dialog>
 
 <style lang="postcss">
   .modal-box {

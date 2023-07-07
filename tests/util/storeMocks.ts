@@ -9,6 +9,7 @@ import type { Program } from '@prisma/client';
 // set stores
 const mockProgramDataWritable = writable<Program[]>([]);
 const mockCourseDataWritable = writable<CourseCache[]>([]);
+const mockNewFlowModalOpenWritable = writable<boolean>(false);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
@@ -18,4 +19,9 @@ export const mockProgramDataStore = {
 export const mockCourseDataStore = {
   subscribe: mockCourseDataWritable.subscribe,
   mockSetSubscribeValue: (val: CourseCache[]) => mockCourseDataWritable.set(val)
+};
+
+export const mockNewFlowModalOpenStore = {
+  subscribe: mockNewFlowModalOpenWritable.subscribe,
+  mockSetSubscribeValue: (val: boolean) => mockNewFlowModalOpenWritable.set(val)
 };

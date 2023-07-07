@@ -60,11 +60,11 @@
         }}
       >
         <div class="form-control">
-          <label class="input-group w-full mt-6">
-            <span><Fa icon={faLock} /></span>
+          <label class="join group-input mt-6">
+            <span class="join-item"><Fa icon={faLock} /></span>
             <label class="sr-only" for="password">Password</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="password"
               id="password"
               name="password"
@@ -79,11 +79,11 @@
             >
           {/if}
 
-          <label class="input-group w-full mt-6">
-            <span><Fa icon={faLock} /></span>
+          <label class="join group-input mt-6">
+            <span class="join-item"><Fa icon={faLock} /></span>
             <label class="sr-only" for="passwordConfirm">Repeat Password</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="password"
               id="passwordConfirm"
               name="passwordConfirm"
@@ -100,10 +100,10 @@
 
           <button
             class="btn btn-accent btn-block mt-6"
-            class:loading
             disabled={loading}
             type="submit"
           >
+            <span class={loading ? 'loading loading-spinner' : ''}/>
             {resetText}
           </button>
         </div>

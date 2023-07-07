@@ -31,7 +31,7 @@
 <div class="dropdown">
   <button
     tabindex="0"
-    class="flex-1 mx-1 btn btn-almostmd bg-gray-400 border-none hover:bg-gray-500"
+    class="flex-1 gap-0 btn btn-almostmd border-none text-white bg-gray-400 hover:bg-gray-500"
     disabled={actionsButtonDisabled}
   >
     Actions
@@ -41,7 +41,7 @@
   </button>
 
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60">
+  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]">
     <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
     <li>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
-  import { enhance } from '$app/forms';
   import { page } from '$app/stores';
+  import { enhance } from '$app/forms';
   import { AlertError } from '$lib/components/common';
   import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -60,11 +60,11 @@
         }}
       >
         <div class="form-control">
-          <label class="input-group w-full">
-            <span><Fa icon={faUser} /></span>
+          <label class="join group-input">
+            <span class="join-item"><Fa icon={faUser} /></span>
             <label class="sr-only" for="username">Username</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="text"
               id="username"
               name="username"
@@ -79,11 +79,11 @@
             >
           {/if}
 
-          <label class="input-group w-full mt-6">
-            <span><Fa icon={faEnvelope} /></span>
+          <label class="join group-input mt-6">
+            <span class="join-item"><Fa icon={faEnvelope} /></span>
             <label class="sr-only" for="email">Email</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="email"
               id="email"
               name="email"
@@ -98,11 +98,11 @@
             >
           {/if}
 
-          <label class="input-group w-full mt-6">
-            <span><Fa icon={faLock} /></span>
+          <label class="join group-input mt-6">
+            <span class="join-item"><Fa icon={faLock} /></span>
             <label class="sr-only" for="password">Password</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="password"
               id="password"
               name="password"
@@ -117,11 +117,11 @@
             >
           {/if}
 
-          <label class="input-group w-full mt-6">
-            <span><Fa icon={faLock} /></span>
+          <label class="join group-input mt-6">
+            <span class="join-item"><Fa icon={faLock} /></span>
             <label class="sr-only" for="passwordConfirm">Repeat Password</label>
             <input
-              class="input input-bordered mx-auto w-full"
+              class="input join-item input-bordered mx-auto w-full"
               type="password"
               id="passwordConfirm"
               name="passwordConfirm"
@@ -138,10 +138,10 @@
 
           <button
             class="btn btn-accent btn-block mt-6"
-            class:loading
             disabled={loading}
             type="submit"
           >
+            <span class={loading ? 'loading loading-spinner' : ''}/>
             {registerText}
           </button>
         </div>

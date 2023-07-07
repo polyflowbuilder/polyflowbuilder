@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { modal } from '$lib/client/util/modalUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { updateCourseData } from '$lib/client/util/flowActionsUtil';
   import { validateUnitString } from '$lib/client/util/unitCounterUtilClient';
@@ -152,7 +153,7 @@
   }
 </script>
 
-<div class="modal" class:modal-open={$customizeCoursesModalOpen} tabindex="-1">
+<dialog use:modal={customizeCoursesModalOpen} class="modal">
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">
       Customize {selectedCoursesData.length === 1 ? 'Course' : 'Courses'}
@@ -272,7 +273,7 @@
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>
-</div>
+</dialog>
 
 <style lang="postcss">
   /* expand modal size */

@@ -13,6 +13,14 @@ button.btn-accent:focus-visible {
   outline: 2px solid hsl(var(--a));
 }
 
+/* make borders on input elements easier to see */
+.input-bordered,
+.select-bordered,
+.textarea-bordered {
+  --tw-border-opacity: 0.2;
+  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+}
+
 /* keep alert styles consistent */
 .alert-success {
   @apply bg-green-100 text-green-600;
@@ -60,8 +68,8 @@ button.btn-accent:focus-visible {
 }
 
 /* remove modal backdrop */
-.modal {
-  background-color: transparent;
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* have paragraphs in tooltip content respect newlines */
@@ -70,4 +78,27 @@ button.btn-accent:focus-visible {
 }
 .tippy-content {
   word-break: break-word;
+}
+
+/* make sure active dropdown items have the correct colors */
+/* sourced from menu applied styles */
+.menu li > *:not(ul):not(details):active,
+.menu li > *:not(ul):not(details).active,
+.menu li > details > summary:active {
+  background-color: hsl(var(--bc) / 0.25);
+  color: white;
+}
+
+/* preserve input-group styles with new daisyui join */
+.join.group-input {
+  @apply w-full items-stretch;
+}
+.group-input > span {
+  --tw-bg-opacity: 1;
+  display: flex;
+  align-items: center;
+  background-color: hsl(var(--b3) / var(--tw-bg-opacity));
+  padding-left: 1rem;   /* 16 px */
+  padding-right: 1rem;  /* 16 px */
+  user-select: none;
 }

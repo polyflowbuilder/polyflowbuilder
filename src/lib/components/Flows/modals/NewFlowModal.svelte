@@ -1,6 +1,7 @@
 <script lang="ts">
   import FlowPropertiesSelector from '$lib/components/common/FlowPropertiesSelector';
   import { tick } from 'svelte';
+  import { modal } from '$lib/client/util/modalUtil';
   import { Toggle } from '$lib/components/common';
   import { courseCache } from '$lib/client/stores/apiDataStore';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
@@ -124,7 +125,7 @@
   }
 </script>
 
-<div class="modal" class:modal-open={$newFlowModalOpen} tabindex="-1">
+<dialog use:modal={newFlowModalOpen} class="modal">
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Create New Flowchart</h2>
 
@@ -153,17 +154,19 @@
     <div class="flex mt-4">
       <button
         class="btn btn-almostmd btn-accent flex-1"
-        class:loading
         disabled={!createFlowOptionsValid}
-        on:click={createFlowchart}>Create</button
+        on:click={createFlowchart}
       >
+        <span class={loading ? 'loading loading-spinner' : ''}/>
+        Create
+      </button>
       <div class="divider divider-horizontal" />
       <button class="btn btn-almostmd flex-1" disabled={loading} on:click={closeModal}>
         Cancel
       </button>
     </div>
   </div>
-</div>
+</dialog>
 
 <style lang="postcss">
   /* expand modal size */

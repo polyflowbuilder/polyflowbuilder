@@ -13,10 +13,10 @@
 </script>
 
 <div>
-  <label class="input-group input-group-sm">
-    <span class="select-none">Program:</span>
+  <label class="join group-input group-input-sm">
+    <span class="join-item">Program:</span>
     <select
-      class="select select-bordered select-sm overflow-ellipsis flowProgramSelector"
+      class="select join-item select-bordered select-sm overflow-ellipsis flowProgramSelector"
       aria-label="course search program selector"
       disabled={$selectedFlowIndex === -1}
       bind:value={searchProgramIndex}
@@ -36,5 +36,10 @@
   /* 91px is the width of the gray pill on the left */
   .flowProgramSelector {
     width: calc(100% - 91px);
+  }
+
+  .group-input-sm {
+    font-size: 0.875rem;  /* 14px */
+    line-height: 2rem;    /* 32px */
   }
 </style>

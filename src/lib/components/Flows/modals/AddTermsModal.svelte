@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { modal } from '$lib/client/util/modalUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { addTermsModalOpen } from '$lib/client/stores/modalStateStore';
@@ -27,7 +28,7 @@
   }
 </script>
 
-<div class="modal" class:modal-open={$addTermsModalOpen} tabindex="-1">
+<dialog use:modal={addTermsModalOpen} class="modal">
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Add Flowchart Terms</h2>
 
@@ -60,4 +61,4 @@
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>
-</div>
+</dialog>

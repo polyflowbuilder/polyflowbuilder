@@ -57,7 +57,7 @@
     >
     <FlowInfoPanelActionsDropdown actionsButtonDisabled={$selectedFlowIndex === -1} />
     <button
-      class="flex-1 mx-1 btn btn-almostmd bg-red-500 border-none hover:bg-red-600"
+      class="flex-1 mx-1 btn btn-almostmd border-none text-white bg-red-500 hover:bg-red-600"
       disabled={$selectedFlowIndex === -1}
       on:click={() => {
         if (
