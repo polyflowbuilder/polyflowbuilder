@@ -4,12 +4,6 @@
   import { PUBLIC_PFB_DISCORD_LINK } from '$env/static/public';
 </script>
 
-<svelte:head>
-  <script
-    src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-alpha13/dist/js/index.min.js"
-  ></script>
-</svelte:head>
-
 <main class="container mx-auto text-center">
   <h1 class="text-polyGreen mt-8 mb-4 text-4xl font-medium">Welcome to PolyFlowBuilder!</h1>
   <p>

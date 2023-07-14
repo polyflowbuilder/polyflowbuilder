@@ -23,7 +23,7 @@ const config = {
     }
   },
 
-  plugins: [require('daisyui'), require('tw-elements/dist/plugin')],
+  plugins: [require('daisyui'), require('tw-elements/dist/plugin.cjs')],
 
   daisyui: {
     themes: [
