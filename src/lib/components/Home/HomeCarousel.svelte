@@ -5,7 +5,17 @@
   onMount(async () => {
     const { Carousel, initTE } = await import('tw-elements');
     initTE({ Carousel });
+
+    // need to emulate mouseover and mouseout bc
+    // carousel will not start autoplaying without this
+    // TODO: recheck this hack when updates come out
+    setTimeout(() => {
+      carouselElem.dispatchEvent(new Event('mouseover'));
+      carouselElem.dispatchEvent(new Event('mouseout'));
+    });
   });
+
+  let carouselElem: HTMLDivElement;
 
   export let imageData: {
     src: string;
@@ -19,6 +29,7 @@
   class="relative"
   data-te-carousel-init
   data-te-carousel-slide
+  bind:this={carouselElem}
 >
   <!--Carousel indicators-->
   <div
@@ -44,7 +55,7 @@
   >
     {#each imageData as img, i}
       <div
-        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        class="carouselItem relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         class:hidden={i !== 0}
         data-te-carousel-active={i === 0 ? '' : null}
         data-te-carousel-item

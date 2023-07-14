@@ -20,7 +20,7 @@ test.describe('homepage tests', () => {
   });
 
   test('clicking slide button goes to correct slide', async ({ page }) => {
-    const buttons = await page.locator('.carousel-indicators > button').all();
+    const buttons = await page.locator('div[data-te-carousel-indicators] > button').all();
 
     // click random button
     const randIdx = Math.floor(Math.random() * buttons.length);

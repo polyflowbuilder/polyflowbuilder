@@ -4,8 +4,8 @@ import type { Page } from '@playwright/test';
 
 // run tests to verify a certain carousel slide is visible to the user
 export async function checkCarouselSlide(page: Page, slideIndex: number) {
-  const slideImage = page.locator('.carousel-item.active > div > img');
-  const slideImageContainer = page.locator('.carousel-item.active');
+  const slideImage = page.locator('.carouselItem[data-te-carousel-active] > div > img');
+  const slideImageContainer = page.locator('.carouselItem[data-te-carousel-active]');
 
   // check image source
   expect(await slideImage.getAttribute('src')).toBe(homeCarouselImageData[slideIndex].src);
