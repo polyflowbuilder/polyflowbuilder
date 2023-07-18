@@ -1,11 +1,8 @@
-import type { Writable } from "svelte/store";
+import type { Writable } from 'svelte/store';
 
 // modal action to bind modal store state to modal open state
-export function modal(
-  dialog: HTMLDialogElement,
-  modalStateStore: Writable<boolean>
-) {
-  modalStateStore.subscribe(state => {
+export function modal(dialog: HTMLDialogElement, modalStateStore: Writable<boolean>) {
+  modalStateStore.subscribe((state) => {
     if (state) {
       dialog.showModal();
     } else {

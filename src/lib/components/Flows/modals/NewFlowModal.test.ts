@@ -13,7 +13,6 @@ import NewFlowModal from './NewFlowModal.svelte';
 await apiDataConfig.init();
 
 describe('NewFlowModal component tests ', () => {
-
   beforeAll(() => {
     // TODO: jsdom (vitest runtime) doesn't support HTMLDialogElement yet,
     // so this code is to mock HTMLDialogElement functions for tests to pass
@@ -34,7 +33,7 @@ describe('NewFlowModal component tests ', () => {
     vi.mock('$lib/client/stores/modalStateStore', () => {
       return {
         newFlowModalOpen: mockNewFlowModalOpenStore
-      }
+      };
     });
   });
 

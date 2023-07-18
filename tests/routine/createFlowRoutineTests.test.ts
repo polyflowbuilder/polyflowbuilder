@@ -74,11 +74,15 @@ test.describe('create flow routine tests', () => {
     // (need to setup listener before the event fires)
     const responsePromise = page.waitForResponse(/\/api\/data\/generateFlowchart/);
     await page.getByRole('button', { name: 'Create' }).click();
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).toHaveClass(/loading/);
+    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).toHaveClass(
+      /loading/
+    );
     const response = await responsePromise;
 
     // done, check response
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(/loading/);
+    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(
+      /loading/
+    );
     expect(response.ok()).toBeTruthy();
     const resJson = await response.json();
     expect(resJson).toHaveProperty('generatedFlowchart');
@@ -200,7 +204,9 @@ test.describe('create flow routine tests', () => {
     const response = await responsePromise;
 
     // done, check response
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(/loading/);
+    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(
+      /loading/
+    );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(401);
     const resJson = await response.json();
@@ -268,7 +274,9 @@ test.describe('create flow routine tests', () => {
     const response = await responsePromise;
 
     // done, check response
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(/loading/);
+    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(
+      /loading/
+    );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(400);
     const resJson = await response.json();
@@ -336,7 +344,9 @@ test.describe('create flow routine tests', () => {
     const response = await responsePromise;
 
     // done, check response
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(/loading/);
+    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(
+      /loading/
+    );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(500);
     const resJson = await response.json();

@@ -13,15 +13,21 @@ const mockNewFlowModalOpenWritable = writable<boolean>(false);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
-  mockSetSubscribeValue: (val: Program[]) => mockProgramDataWritable.set(val)
+  mockSetSubscribeValue: (val: Program[]) => {
+    mockProgramDataWritable.set(val);
+  }
 };
 
 export const mockCourseDataStore = {
   subscribe: mockCourseDataWritable.subscribe,
-  mockSetSubscribeValue: (val: CourseCache[]) => mockCourseDataWritable.set(val)
+  mockSetSubscribeValue: (val: CourseCache[]) => {
+    mockCourseDataWritable.set(val);
+  }
 };
 
 export const mockNewFlowModalOpenStore = {
   subscribe: mockNewFlowModalOpenWritable.subscribe,
-  mockSetSubscribeValue: (val: boolean) => mockNewFlowModalOpenWritable.set(val)
+  mockSetSubscribeValue: (val: boolean) => {
+    mockNewFlowModalOpenWritable.set(val);
+  }
 };
