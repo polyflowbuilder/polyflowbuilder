@@ -4,7 +4,10 @@
   import { FLOW_NAME_MAX_LENGTH, FLOW_PROGRAMS_MAX_COUNT } from '$lib/common/config/flowDataConfig';
   import type { Program } from '@prisma/client';
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher<{
+    optionsValidUpdate: boolean;
+    flowProgramIdsUpdate: string[];
+  }>();
 
   // component required data
   export let startYearsData: string[];
@@ -36,17 +39,27 @@
     flowNameValid && flowStartYear.length > 0 && !flowProgramIds.includes('');
 
   // do all updates through inputs to ensure UI is updated correctly
-  async function addProgram() {
+  function addProgram() {
     programIdInputs = [...programIdInputs, ''];
   }
-  async function deleteProgram(i: number) {
+  function deleteProgram(i: number) {
     programIdInputs = programIdInputs.filter((_, idx) => idx !== i);
   }
   // wrap this to prevent duplicate updates
-  async function updateProgram(i: number, updatedProgramId: string) {
+  function updateProgram(i: number, updatedProgramId: string) {
     if (flowProgramIds[i] !== updatedProgramId) {
       flowProgramIds[i] = updatedProgramId;
     }
+  }
+
+  // TODO: cannot have typescript in markup, so need separate function with unknown type
+  // see https://github.com/sveltejs/svelte/issues/4701
+  // see https://stackoverflow.com/questions/63337868/svelte-typescript-unexpected-tokensvelteparse-error-when-adding-type-to-an-ev
+  function programIdUpdateEventHandler(e: CustomEvent<unknown>, i: number) {
+    updateProgram(i, (e as CustomEvent<string>).detail);
+  }
+  function deleteProgramEventHandler(e: CustomEvent<number>) {
+    deleteProgram(e.detail);
   }
 </script>
 
@@ -109,8 +122,10 @@
         programIdInput={flowProgramIdInput}
         alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
         {i}
-        on:programIdUpdate={(e) => updateProgram(i, e.detail)}
-        on:deleteProgram={(e) => deleteProgram(e.detail)}
+        on:programIdUpdate={(e) => {
+          programIdUpdateEventHandler(e, i);
+        }}
+        on:deleteProgram={deleteProgramEventHandler}
       />
     {/each}
 

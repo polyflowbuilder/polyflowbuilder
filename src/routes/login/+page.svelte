@@ -4,9 +4,10 @@
   import { enhance } from '$app/forms';
   import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
   import { AlertError, AlertSuccess } from '$lib/components/common';
+  import type { ActionData, PageData } from './$types';
 
-  export let data;
-  export let form;
+  export let data: PageData;
+  export let form: ActionData;
 
   let password = '';
   let loading = false;
@@ -34,11 +35,11 @@
         />
       {/if}
 
-      {#if !form?.success && $page.status === 401}
+      {#if $page.status === 401}
         <AlertError text="Incorrect email address and/or password." addlClass="mb-6" />
       {/if}
 
-      {#if form?.error}
+      {#if $page.status === 500}
         <AlertError
           text="An error occurred when attempting login. Please try again a bit later."
           addlClass="mb-6"
@@ -50,21 +51,23 @@
         use:enhance={() => {
           loading = true;
           loginText = 'Signing In ...';
-          return async ({ update }) => {
-            // always reset so that we don't see multiple alerts at the same time
-            data.cameFromRegister = false;
-            data.cameFromResetPassword = false;
-            data.cameFromUnauthorized = false;
-            await update();
-            // on success, dont disable loader so continuity is not broken on enhanced page
-            if ($page.status !== 200) {
-              loading = false;
-              loginText = 'Sign In';
-            }
-            // reset pw field on failed POST bc form is only reset on success response
-            if ($page.status === 400 || $page.status === 401) {
-              password = '';
-            }
+          return ({ update }) => {
+            void (async () => {
+              // always reset so that we don't see multiple alerts at the same time
+              data.cameFromRegister = false;
+              data.cameFromResetPassword = false;
+              data.cameFromUnauthorized = false;
+              await update();
+              // on success, dont disable loader so continuity is not broken on enhanced page
+              if ($page.status !== 200) {
+                loading = false;
+                loginText = 'Sign In';
+              }
+              // reset pw field on failed POST bc form is only reset on success response
+              if ($page.status === 400 || $page.status === 401) {
+                password = '';
+              }
+            })();
           };
         }}
       >
@@ -78,13 +81,13 @@
               id="email"
               name="email"
               placeholder="Email address"
-              value={form?.data?.email ?? ''}
+              value={form?.data.email ?? ''}
               required
             />
           </label>
-          {#if form?.loginValidationErrors?.email}
+          {#if form?.data.loginValidationErrors?.email}
             <small id="emailError" class="text-red-600 label label-text-alt"
-              >{form?.loginValidationErrors?.email[0]}</small
+              >{form.data.loginValidationErrors.email[0]}</small
             >
           {/if}
 
@@ -101,18 +104,14 @@
               required
             />
           </label>
-          {#if form?.loginValidationErrors?.password}
+          {#if form?.data.loginValidationErrors?.password}
             <small id="passwordError" class="text-red-600 label label-text-alt"
-              >{form?.loginValidationErrors?.password[0]}</small
+              >{form.data.loginValidationErrors.password[0]}</small
             >
           {/if}
 
-          <button
-            class="btn btn-accent btn-block mt-6"
-            disabled={loading}
-            type="submit"
-          >
-            <span class={loading ? 'loading loading-spinner' : ''}/>
+          <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
+            <span class={loading ? 'loading loading-spinner' : ''} />
             {loginText}
           </button>
         </div>

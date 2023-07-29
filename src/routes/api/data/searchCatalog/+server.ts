@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
 
     // validation
-    const data = await request.json();
+    const data = (await request.json()) as unknown;
     const parseResults = searchCatalogSchema.safeParse(data);
     if (parseResults.success) {
       const catalogCourses = apiData.courseData.find(

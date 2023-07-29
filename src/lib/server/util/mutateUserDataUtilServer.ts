@@ -79,9 +79,9 @@ export async function persistUserDataChangesServer(
   }
 
   logger.info(
-    `Applied updates [${chunksList.map(
-      (chunk) => UserDataUpdateChunkType[chunk.type]
-    )}] to flowcharts [${flowchartModifyIds}]`
+    `Applied updates [${chunksList
+      .map((chunk) => UserDataUpdateChunkType[chunk.type])
+      .join(',')}] to flowcharts [${flowchartModifyIds.join(',')}]`
   );
 
   // persist updated flowcharts to database if flow mutation successful

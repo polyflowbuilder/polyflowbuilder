@@ -316,18 +316,11 @@ export const flowchartValidationSchemaBase = z.object(
 
 // base + extra refinements on base
 export const flowchartValidationSchema = flowchartValidationSchemaBase.superRefine(
-  ({ termData, programId }, ctx) => {
-    // make sure program Ids after the first one dont have 'null'
-    // interspersed with valid IDs (eg should be all valid then all null)
-    for (let i = 1; i < programId.length; i += 1) {
-      if (programId[i] !== null && programId[i - 1] === null) {
-        ctx.addIssue({
-          code: 'custom',
-          message: 'Found null programId before nonnull programId.',
-          path: ['programId']
-        });
-      }
-    }
+  ({ termData }, ctx) => {
+    // NOTE: removed programId null checks interspersed w/ valid IDs
+    // bc programIds can ONLY be strings - this was getting mixed up with the
+    // type for the Flowchart on the backend w/ Prisma, NOT this flowchart schema,
+    // which is the frontend, non-DB representation
 
     // verify creditBin term present
     if (!termData.find((term) => term.tIndex === -1)) {

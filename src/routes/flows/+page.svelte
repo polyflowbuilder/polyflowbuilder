@@ -14,8 +14,9 @@
     selectedFlowIndex,
     viewingCreditBin
   } from '$lib/client/stores/UIDataStore';
+  import type { PageData } from './$types';
 
-  export let data;
+  export let data: PageData;
 
   // init data brought down from server
   $: if (data.flowcharts) {

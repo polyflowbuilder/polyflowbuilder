@@ -3,7 +3,10 @@
 
   // TODO: look into alternatives due to large bundle here
   onMount(async () => {
+    // ignores here bc no typing information yet available
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { Carousel, initTE } = await import('tw-elements');
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     initTE({ Carousel });
 
     // need to emulate mouseover and mouseout bc
@@ -50,9 +53,7 @@
   </div>
 
   <!--Carousel items-->
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
-  >
+  <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
     {#each imageData as img, i}
       <div
         class="carouselItem relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
@@ -91,11 +92,7 @@
         stroke="currentColor"
         class="h-6 w-6"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 19.5L8.25 12l7.5-7.5"
-        />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
       </svg>
     </span>
     <span
@@ -120,11 +117,7 @@
         stroke="currentColor"
         class="h-6 w-6"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5"
-        />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
       </svg>
     </span>
     <span

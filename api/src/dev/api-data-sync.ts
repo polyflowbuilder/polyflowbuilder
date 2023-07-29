@@ -1,11 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
+import { ZodError } from 'zod';
 import { Prisma, PrismaClient } from '@prisma/client';
-import { apiRoot, getFiles, nthIndex } from './common';
-
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import { apiRoot, getFiles, nthIndex } from './common';
 
 import type {
   TermTypicallyOffered,
@@ -16,10 +15,10 @@ import type {
   Program
 } from '@prisma/client';
 
-type TemplateFlowchartMetadata = {
+interface TemplateFlowchartMetadata {
   flows: Program[];
   cSheets: Program[];
-};
+}
 
 const prisma = new PrismaClient();
 
@@ -43,12 +42,12 @@ async function clearAPIData() {
 async function syncCatalogStartYears() {
   console.log('starting db sync of catalog and start years ...');
 
-  const catalogYears: string[] = JSON.parse(
+  const catalogYears = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  );
-  const startYears: string[] = JSON.parse(
+  ) as string[];
+  const startYears = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-start-years.json`, 'utf8')
-  );
+  ) as string[];
 
   await prisma.catalog.createMany({
     data: catalogYears.map((catalog) => {
@@ -74,24 +73,23 @@ async function syncCatalogStartYears() {
 async function syncCourseData() {
   console.log('starting db sync of course data ...');
 
-  const catalogYears: string[] = JSON.parse(
+  const catalogYears = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  );
+  ) as string[];
 
-  for (let i = 0; i < catalogYears.length; i += 1) {
-    const curCatalogYear = catalogYears[i];
-    const courseData: APICourse[] = JSON.parse(
+  for (const curCatalogYear of catalogYears) {
+    const courseData = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}.json`, 'utf8')
-    );
-    const geCourseData: GECourse[] = JSON.parse(
+    ) as APICourse[];
+    const geCourseData = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-GE.json`, 'utf8')
-    );
-    const reqCourseData: CourseRequisite[] = JSON.parse(
+    ) as GECourse[];
+    const reqCourseData = JSON.parse(
       fs.readFileSync(
         `${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-req.json`,
         'utf8'
       )
-    );
+    ) as CourseRequisite[];
 
     console.log('syncing course data for catalog', curCatalogYear);
     await prisma.aPICourse.createMany({
@@ -104,12 +102,12 @@ async function syncCourseData() {
       fs.existsSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-override.json`)
     ) {
       console.log('applying course override data for catalog', curCatalogYear);
-      const courseOverrideData: APICourse[] = JSON.parse(
+      const courseOverrideData = JSON.parse(
         fs.readFileSync(
           `${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}-override.json`,
           'utf8'
         )
-      );
+      ) as APICourse[];
 
       for await (const course of courseOverrideData) {
         console.log('update course', course.id);
@@ -151,9 +149,9 @@ async function syncCourseData() {
 }
 
 async function syncProgramData() {
-  const programData: TemplateFlowchartMetadata = JSON.parse(
+  const programData = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
-  );
+  ) as TemplateFlowchartMetadata;
 
   console.log('syncing program data with db ...');
   await prisma.program.createMany({
@@ -163,9 +161,9 @@ async function syncProgramData() {
 }
 
 async function syncTermTypicallyOfferedData() {
-  const termTypicallyOfferedData: TermTypicallyOffered[] = JSON.parse(
+  const termTypicallyOfferedData = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-term-typically-offered.json`, 'utf8')
-  );
+  ) as TermTypicallyOffered[];
 
   console.log('syncing term typically offered data with db ...');
   await prisma.termTypicallyOffered.createMany({
@@ -178,9 +176,9 @@ async function syncTemplateFlowcharts() {
   console.log('starting update of default flows to database ...');
 
   // load template data
-  const flowDataLinks: TemplateFlowchartMetadata = JSON.parse(
+  const flowDataLinks = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
-  );
+  ) as TemplateFlowchartMetadata;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const defaultFlows: TemplateFlowchart[] = [];
@@ -190,67 +188,45 @@ async function syncTemplateFlowcharts() {
     if (path.extname(f) === '.json') {
       console.log(`validating schema for ${f}`);
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let defaultFlowData: Flowchart | null = null;
-
       try {
-        const rawFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
-        if (rawFlowData.lastUpdatedUTC) {
-          rawFlowData.lastUpdatedUTC = new Date(rawFlowData.lastUpdatedUTC);
+        const rawFlowData = JSON.parse(fs.readFileSync(f, 'utf8')) as unknown;
+        const defaultFlowData = flowchartValidationSchema.parse(rawFlowData);
+
+        const flowProgramData = flowDataLinks.flows.find(
+          (flowDataLinkEntry) => flowDataLinkEntry.id === defaultFlowData.programId[0]
+        );
+
+        if (!flowProgramData) {
+          console.log('FLOWPROGRAMDATA RETURNED UNDEFINED, SKIPPING (most likely a name mismatch)');
+          continue;
         }
 
-        const parseResults = flowchartValidationSchema.safeParse(rawFlowData);
+        const flowCSheetData = flowDataLinks.cSheets.find(
+          (flowCSheetLinkEntry) =>
+            flowCSheetLinkEntry.code ===
+            (flowProgramData.code.substring(0, nthIndex(flowProgramData.code, '.', 2)) ||
+              flowProgramData.code)
+        );
 
-        if (parseResults.success) {
-          defaultFlowData = parseResults.data;
+        if (!flowCSheetData) {
+          console.log('FLOWCSHEETDATA RETURNED UNDEFINED, SKIPPING (most likely a name mismatch)');
+          continue;
+        }
+
+        // create appropriate TemplateFlowchart entry
+        defaultFlows.push({
+          programId: flowProgramData.id,
+          flowUnitTotal: defaultFlowData.unitTotal,
+          termData: defaultFlowData.termData,
+          version: defaultFlowData.version,
+          notes: `This is a default, template flowchart. Change it to fit your needs! Here are some official Cal Poly resources for this flowchart:\n\n* Flowchart: "${flowProgramData.dataLink}"\n* Curriculum Sheet: "${flowCSheetData.dataLink}"`
+        });
+      } catch (e) {
+        if (e instanceof ZodError) {
+          console.log('flowchart validation failed', e);
         } else {
-          console.log(
-            'flow',
-            f,
-            'failed validation with the following errors (will be skipped):',
-            parseResults.error.flatten()
-          );
+          console.log('error occurred while getting flow-specific notes, skipping', e);
         }
-      } catch {
-        console.log('error with parsing (most likely file is empty)');
-      }
-      if (defaultFlowData != null) {
-        // use cpslo-default-flow-data-links to generate flow-specific notes
-        try {
-          const flowProgramData = flowDataLinks.flows.find(
-            (flowDataLinkEntry) => flowDataLinkEntry.id === defaultFlowData.programId[0]
-          );
-          const flowCSheetData = flowDataLinks.cSheets.find(
-            (flowCSheetLinkEntry) =>
-              flowCSheetLinkEntry.code ===
-              (flowProgramData?.code.substring(0, nthIndex(flowProgramData?.code ?? '', '.', 2)) ||
-                flowProgramData.code)
-          );
-
-          if (!flowProgramData) {
-            console.log(
-              'FLOWPROGRAMDATA RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)'
-            );
-          }
-          if (!flowCSheetData) {
-            console.log(
-              'FLOWCSHEETDATA RETURNED UNDEFINED, EXPECT BAD LOOKUP (most likely a name mismatch)'
-            );
-          }
-
-          // create appropriate TemplateFlowchart entry
-          defaultFlows.push({
-            programId: flowProgramData.id,
-            flowUnitTotal: defaultFlowData.unitTotal,
-            termData: defaultFlowData.termData,
-            version: defaultFlowData.version,
-            notes: `This is a default, template flowchart. Change it to fit your needs! Here are some official Cal Poly resources for this flowchart:\n\n* Flowchart: "${flowProgramData.dataLink}"\n* Curriculum Sheet: "${flowCSheetData.dataLink}"`
-          });
-        } catch (error) {
-          console.log('error occurred while getting flow-specific notes, skipping', error);
-        }
-      } else {
-        console.log('skipping data upload');
       }
     }
   }
@@ -274,4 +250,4 @@ async function syncAllAPIData() {
   await syncTemplateFlowcharts();
 }
 
-syncAllAPIData();
+void syncAllAPIData();

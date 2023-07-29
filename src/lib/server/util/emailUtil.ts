@@ -11,7 +11,7 @@ export function sendEmail(messagePayload: Options): SMTPTransport.SentMessageInf
   let sentMessageInfo: SMTPTransport.SentMessageInfo | null = null;
 
   // don't send an email if we're in the testing environment
-  if (process.env['NODE_ENV'] === 'test') {
+  if (process.env.NODE_ENV === 'test') {
     logger.info('detected running in a test environment, aborting email send');
   } else {
     transport.sendMail(messagePayload, (err, info) => {

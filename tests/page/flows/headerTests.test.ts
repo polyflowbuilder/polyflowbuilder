@@ -57,7 +57,11 @@ test.describe('flows page header tests', () => {
     expect((await page.context().cookies())[0].name).toBe('sId');
 
     // then confirm the delete
-    page.on('dialog', (dialog) => dialog.accept());
+    page.on('dialog', (dialog) => {
+      dialog.accept().catch(() => {
+        throw new Error('accepting dialog failed');
+      });
+    });
     await page.locator('.avatar').click();
     await page.getByText('Delete Account').click();
 

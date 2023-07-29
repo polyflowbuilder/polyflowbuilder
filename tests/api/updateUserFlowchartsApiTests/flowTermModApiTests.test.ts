@@ -8,9 +8,17 @@ import {
   UserDataUpdateChunkType
 } from '$lib/types/mutateUserDataTypes.js';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
+import type { CourseCache } from '$lib/types/apiDataTypes.js';
 
 const FLOW_TERM_MOD_TESTS_API_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_TERM_MOD_playwright@test.com';
+
+// see API route for expected return type
+interface GetUserFlowchartsExpectedReturnType {
+  message: string;
+  flowcharts: Flowchart[];
+  courseCache: CourseCache[] | undefined;
+}
 
 test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
@@ -461,9 +469,9 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     // now verify that the request was persisted
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowRes.status()).toBe(200);
-    const initFlowsResJSON = await initFlowRes.json();
+    const initFlowsResJSON = (await initFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const initFlowcharts: Flowchart[] = initFlowsResJSON.flowcharts;
-    expect(initFlowsResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(initFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(initFlowcharts.length).toBe(1);
 
     // check term content correct
@@ -539,9 +547,9 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     // now verify that the request was persisted
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowRes.status()).toBe(200);
-    const initFlowsResJSON = await initFlowRes.json();
+    const initFlowsResJSON = (await initFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const initFlowcharts: Flowchart[] = initFlowsResJSON.flowcharts;
-    expect(initFlowsResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(initFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(initFlowcharts.length).toBe(1);
 
     // check term content correct
@@ -626,9 +634,9 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     // now verify that the request was persisted
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowRes.status()).toBe(200);
-    const initFlowsResJSON = await initFlowRes.json();
+    const initFlowsResJSON = (await initFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const initFlowcharts: Flowchart[] = initFlowsResJSON.flowcharts;
-    expect(initFlowsResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(initFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(initFlowcharts.length).toBe(1);
 
     // check term content correct
@@ -722,9 +730,9 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     // now verify that the request was persisted
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowRes.status()).toBe(200);
-    const initFlowsResJSON = await initFlowRes.json();
+    const initFlowsResJSON = (await initFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const initFlowcharts: Flowchart[] = initFlowsResJSON.flowcharts;
-    expect(initFlowsResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(initFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(initFlowcharts.length).toBe(1);
 
     // check term content correct

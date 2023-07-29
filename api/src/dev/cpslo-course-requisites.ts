@@ -13,12 +13,12 @@ import type { APICourse, CourseRequisite } from '@prisma/client';
 function generateCourseRequisiteData(catalogYearString: string) {
   console.log(`generating course prereq/coreq/recommended data for ${catalogYearString}...`);
   // read data
-  const courseData: APICourse[] = JSON.parse(
+  const courseData = JSON.parse(
     fs.readFileSync(
       `${apiRoot}/data/courses/${catalogYearString}/${catalogYearString}.json`,
       'utf8'
     )
-  );
+  ) as APICourse[];
   const prereqData: CourseRequisite[] = [];
 
   // for static course data overrides
@@ -41,31 +41,31 @@ function generateCourseRequisiteData(catalogYearString: string) {
     );
 
     // extra cond for prereq due to 'prerequisites' (with an s)
-    if (searchString.indexOf('Prerequisite:') !== -1) {
+    if (searchString.includes('Prerequisite:')) {
       prereqString = searchString.substring(
         searchString.indexOf('Prerequisite:') + 14,
         searchString.indexOf('.', searchString.indexOf('Prerequisite:'))
       );
-    } else if (searchString.indexOf('Prerequisites:') !== -1) {
+    } else if (searchString.includes('Prerequisites:')) {
       prereqString = searchString.substring(
         searchString.indexOf('Prerequisites:') + 15,
         searchString.indexOf('.', searchString.indexOf('Prerequisites:'))
       );
     }
 
-    if (searchString.indexOf('Corequisite:') !== -1) {
+    if (searchString.includes('Corequisite:')) {
       coreqString = searchString.substring(
         searchString.indexOf('Corequisite:') + 13,
         searchString.indexOf('.', searchString.indexOf('Corequisite:'))
       );
     }
-    if (searchString.indexOf('Recommended:') !== -1) {
+    if (searchString.includes('Recommended:')) {
       recommendedString = searchString.substring(
         searchString.indexOf('Recommended:') + 13,
         searchString.indexOf('.', searchString.indexOf('Recommended:'))
       );
     }
-    if (searchString.indexOf('Concurrent:') !== -1) {
+    if (searchString.includes('Concurrent:')) {
       concurrentString = searchString.substring(
         searchString.indexOf('Concurrent:') + 12,
         searchString.indexOf('.', searchString.indexOf('Concurrent:'))
@@ -79,11 +79,11 @@ function generateCourseRequisiteData(catalogYearString: string) {
       'Corequisite'
     );
     if (
-      searchStringCDescCheck.indexOf('Prerequisite:') !== -1 ||
-      searchStringCDescCheck.indexOf('Prerequisites:') !== -1 ||
-      searchStringCDescCheck.indexOf('Corequisite:') !== -1 ||
-      searchStringCDescCheck.indexOf('Recommended:') !== -1 ||
-      searchStringCDescCheck.indexOf('Concurrent:') !== -1
+      searchStringCDescCheck.includes('Prerequisite:') ||
+      searchStringCDescCheck.includes('Prerequisites:') ||
+      searchStringCDescCheck.includes('Corequisite:') ||
+      searchStringCDescCheck.includes('Recommended:') ||
+      searchStringCDescCheck.includes('Concurrent:')
     ) {
       // create [catalog]-override.json and add these courses into it for easier modification
       console.log(
@@ -118,6 +118,8 @@ function generateCourseRequisiteData(catalogYearString: string) {
     fs.existsSync(
       `${apiRoot}/data/courses/${catalogYearString}/${catalogYearString}-override.json`
     ) &&
+    // disable lint rule here bc we may change this manually
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
     !OVERWRITE_EXISTING_OVERRIDE_COURSE_LIST
   ) {
     console.log(
@@ -139,36 +141,8 @@ function generateCourseRequisiteDataAllCatalogs() {
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
   ) as string[];
 
-  catalogNames.forEach((catalogName) => generateCourseRequisiteData(catalogName));
-}
-
-// only needed temporarily
-function convertOldRequisiteDataToNew() {
-  const catalogNames = JSON.parse(
-    fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  ) as string[];
-
   catalogNames.forEach((catalogName) => {
-    const oldReqData: any[] = JSON.parse(
-      fs.readFileSync(`${apiRoot}/data/courses/${catalogName}/${catalogName}-req.json`, 'utf8')
-    );
-    const newReqData: CourseRequisite[] = [];
-
-    oldReqData.forEach((val) => {
-      newReqData.push({
-        catalog: catalogName,
-        id: val.cID,
-        prerequisite: val.prereq,
-        corequisite: val.coreq,
-        recommended: val.recomm,
-        concurrent: val.concur
-      });
-    });
-
-    fs.writeFileSync(
-      `${apiRoot}/data/courses/${catalogName}/${catalogName}-req-updated.json`,
-      JSON.stringify(newReqData, null, 2)
-    );
+    generateCourseRequisiteData(catalogName);
   });
 }
 

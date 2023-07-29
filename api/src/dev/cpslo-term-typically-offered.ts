@@ -40,7 +40,13 @@ async function getTermTypicallyOfferedData() {
   // get JSON records out of CSV
   console.log('getting JSON records from CSV ...');
   const fileContent = fs.readFileSync(`${apiRoot}/data/cpslo-term-typically-offered.csv`);
-  const records = csvParse(fileContent, { columns: true });
+  const records = csvParse(fileContent, { columns: true }) as {
+    Course: string;
+    Summer: string;
+    Winter: string;
+    Fall: string;
+    Spring: string;
+  }[];
 
   // trim records to only what we need (can't use imported types here)
   const termData: TermTypicallyOffered[] = [];
@@ -51,11 +57,11 @@ async function getTermTypicallyOfferedData() {
   const allCourseData: APICourse[] = [];
   const eligibleCatalogYears: string[] = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  );
+  ) as string[];
   for (const c of eligibleCatalogYears) {
-    const courseDataSpecificCatalog: APICourse[] = JSON.parse(
+    const courseDataSpecificCatalog = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${c}/${c}.json`, 'utf8')
-    );
+    ) as APICourse[];
     allCourseData.push(...courseDataSpecificCatalog);
   }
 
@@ -65,7 +71,7 @@ async function getTermTypicallyOfferedData() {
   // );
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  records.forEach((record: any) => {
+  records.forEach((record) => {
     const courseName = record.Course.replace('-', '');
     const catalogs = allCourseData.filter((c) => c.id === courseName).map((c) => c.catalog);
     if (!catalogs.length) {
@@ -106,4 +112,4 @@ async function getTermTypicallyOfferedData() {
   console.log('term data update complete');
 }
 
-getTermTypicallyOfferedData();
+void getTermTypicallyOfferedData();

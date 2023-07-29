@@ -16,19 +16,19 @@ export enum UserDataUpdateChunkTERM_MODCourseDataFrom {
   EXISTING
 }
 
-export type MutateFlowchartData = {
+export interface MutateFlowchartData {
   flowchart: Flowchart;
   pos: number;
-};
+}
 
-type MutateUserDataUtilCommonResultSuccess = {
+interface MutateUserDataUtilCommonResultSuccess {
   success: true;
   flowchartsData: MutateFlowchartData[];
-};
-type MutateUserDataUtilCommonResultFailure = {
+}
+interface MutateUserDataUtilCommonResultFailure {
   success: false;
   errors: string[];
-};
+}
 export type MutateUserDataUtilCommonResult =
   | MutateUserDataUtilCommonResultSuccess
   | MutateUserDataUtilCommonResultFailure;

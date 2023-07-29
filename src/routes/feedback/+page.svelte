@@ -2,8 +2,9 @@
   import { enhance } from '$app/forms';
   import { AlertError, AlertSuccess } from '$lib/components/common';
   import { FEEDBACK_MESSAGE_MAX_LENGTH } from '$lib/common/config/feedbackConfig';
+  import type { ActionData } from './$types';
 
-  export let form;
+  export let form: ActionData;
 
   let loading = false;
 </script>
@@ -32,9 +33,11 @@
         method="POST"
         use:enhance={() => {
           loading = true;
-          return async ({ update }) => {
-            loading = false;
-            await update();
+          return ({ update }) => {
+            void (async () => {
+              loading = false;
+              await update();
+            })();
           };
         }}
       >
@@ -67,7 +70,7 @@
           </small>
           {#if form?.feedbackValidationErrors?.email}
             <small id="emailError" class="text-red-600 label label-text-alt"
-              >{form?.feedbackValidationErrors?.email[0]}</small
+              >{form.feedbackValidationErrors.email[0]}</small
             >
           {/if}
 
@@ -82,16 +85,12 @@
           />
           {#if form?.feedbackValidationErrors?.feedback}
             <small id="feedbackError" class="text-red-600 label label-text-alt"
-              >{form?.feedbackValidationErrors?.feedback[0]}</small
+              >{form.feedbackValidationErrors.feedback[0]}</small
             >
           {/if}
 
-          <button
-            class="btn btn-accent btn-block mt-6"
-            disabled={loading}
-            type="submit"
-          >
-            <span class={loading ? 'loading loading-spinner' : ''}/>
+          <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
+            <span class={loading ? 'loading loading-spinner' : ''} />
             Submit Feedback
           </button>
         </div>

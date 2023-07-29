@@ -13,7 +13,7 @@ test.describe('reset password page tests (no token)', () => {
   test('navigation with no searchparams redirects', async ({ page }) => {
     await page.goto('/resetpassword');
 
-    expect(page).toHaveURL(/.*forgotpassword/);
+    await expect(page).toHaveURL(/.*forgotpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
@@ -24,7 +24,7 @@ test.describe('reset password page tests (no token)', () => {
   test('navigation with invalid token searchparam redirects', async ({ page }) => {
     await page.goto(RESET_PASSWORD_VALID_URL);
 
-    expect(page).toHaveURL(/.*forgotpassword/);
+    await expect(page).toHaveURL(/.*forgotpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
@@ -35,7 +35,7 @@ test.describe('reset password page tests (no token)', () => {
   test('navigation with invalid email searchparam redirects', async ({ page }) => {
     await page.goto(`/resetpassword?token=${encodeURIComponent('testtoken')}&email=invalidemail`);
 
-    expect(page).toHaveURL(/.*forgotpassword/);
+    await expect(page).toHaveURL(/.*forgotpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(
@@ -71,7 +71,7 @@ test.describe('reset password page tests (token)', () => {
   });
 
   test('authorized reset password page has expected content', async ({ page }) => {
-    expect(page).toHaveURL(/.*resetpassword/);
+    await expect(page).toHaveURL(/.*resetpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
   });

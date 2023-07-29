@@ -3,7 +3,10 @@
   import { createEventDispatcher } from 'svelte';
   import type { Program } from '@prisma/client';
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher<{
+    deleteProgram: number;
+    programIdUpdate: string;
+  }>();
 
   // passthrough props for ProgramSelector
 
@@ -16,6 +19,13 @@
 
   // customization props
   export let i: number;
+
+  // TODO: cannot have typescript in markup, so need separate function with unknown type
+  // see https://github.com/sveltejs/svelte/issues/4701
+  // see https://stackoverflow.com/questions/63337868/svelte-typescript-unexpected-tokensvelteparse-error-when-adding-type-to-an-ev
+  function programIdUpdateEventHandler(e: CustomEvent<string>) {
+    dispatch('programIdUpdate', e.detail);
+  }
 </script>
 
 <div class="border rounded-md bg-slate-50 border-base-300 p-2 mb-4">
@@ -36,6 +46,6 @@
     {alreadySelectedProgramIds}
     {defaultOptionText}
     {disableSelectingDefaultOption}
-    on:programIdUpdate={(e) => dispatch('programIdUpdate', e.detail)}
+    on:programIdUpdate={programIdUpdateEventHandler}
   />
 </div>

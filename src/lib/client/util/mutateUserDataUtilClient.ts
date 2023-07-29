@@ -39,7 +39,8 @@ export function performUpdate(
     // only update server if successful
     if (mutateUserFlowchartsResult.success) {
       // don't await, optimistic UI updating for good UX
-      sendUserDataChangePersistRequest(chunksList, curUserFlowcharts);
+      // failure paths handled in function, so no need for error checking here also
+      void sendUserDataChangePersistRequest(chunksList, curUserFlowcharts);
 
       return mutateUserFlowchartsResult.flowchartsData.map(({ flowchart }) => flowchart);
     } else {

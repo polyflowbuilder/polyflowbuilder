@@ -37,7 +37,7 @@ describe('NewFlowModal component tests ', () => {
     });
   });
 
-  test('default state for NewFlowModal correct', async () => {
+  test('default state for NewFlowModal correct', () => {
     render(NewFlowModal, {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,

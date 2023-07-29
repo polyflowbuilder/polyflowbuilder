@@ -5,17 +5,16 @@
 function findNestedObjectPath(
   inputObj: unknown,
   inputKey: string,
-  predicate: (key: string, value: string) => boolean
+  predicate: (key: string, value: unknown) => boolean
 ) {
   const path: string[] = [];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function keyExists(obj: any, key: string): boolean {
+  function keyExists(obj: unknown, key: string): boolean {
     if (!obj || (typeof obj !== 'object' && !Array.isArray(obj))) {
       return false;
     } else if (
       Object.prototype.hasOwnProperty.call(obj, key) &&
-      predicate(key, obj[key]) === true
+      predicate(key, (obj as Record<string, unknown>)[key])
     ) {
       path.push(key);
       return true;
@@ -33,7 +32,7 @@ function findNestedObjectPath(
     } else {
       for (const k in obj) {
         path.push(k);
-        const result = keyExists(obj[k], key);
+        const result = keyExists((obj as Record<string, unknown>)[k], key);
         if (result) {
           return result;
         }
@@ -51,12 +50,10 @@ function findNestedObjectPath(
 // find all deep inputKeys in inputObj that match predicate
 // then for each match, apply transform function to mutate original inputObj
 export function applyTransformToNestedObjectProperties(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  inputObj: any,
+  inputObj: Record<string, unknown>,
   inputKey: string,
-  predicate: (key: string, value: string) => boolean,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  transform: (obj: any) => any
+  predicate: (key: string, value: unknown) => boolean,
+  transform: (obj: unknown) => unknown
 ) {
   let curObj = inputObj;
 
@@ -74,10 +71,10 @@ export function applyTransformToNestedObjectProperties(
       if (i === res.length - 1) {
         curObj[pieces[0]] = transform(curObj[pieces[0]]);
       } else {
-        curObj = curObj[pieces[0]];
+        curObj = curObj[pieces[0]] as Record<string, unknown>;
         if (pieces.length === 2) {
           const idx = Number(pieces[1].replace(']', ''));
-          curObj = curObj[idx];
+          curObj = curObj[idx] as Record<string, unknown>;
         }
       }
     }

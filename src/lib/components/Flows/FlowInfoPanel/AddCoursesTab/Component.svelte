@@ -11,11 +11,15 @@
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
   import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
+  import type { Flowchart } from '$lib/common/schema/flowchartSchema';
   import type { CourseItemData } from '$lib/types';
 
   let searchProgramIndex = -1;
   let query = '';
   let items: CourseItemData[] = [];
+
+  // for optional type
+  $: selectedFlow = $userFlowcharts[$selectedFlowIndex] as Flowchart | undefined;
 
   // reset searches when we switch flows
   $: {
@@ -26,7 +30,7 @@
 
   $: selectedCatalog = getCatalogFromProgramIDIndex(
     searchProgramIndex,
-    $userFlowcharts[$selectedFlowIndex]?.programId || '',
+    selectedFlow?.programId ?? [''],
     $programData
   );
   $: {
@@ -36,9 +40,9 @@
   }
 
   // getting results from search
-  $: $activeSearchResults?.then((results) => {
+  $: void $activeSearchResults?.then((results) => {
     items = buildTermCourseItemsData(
-      $userFlowcharts[$selectedFlowIndex].programId,
+      selectedFlow?.programId ?? [''],
       $courseCache,
       $programData,
       {

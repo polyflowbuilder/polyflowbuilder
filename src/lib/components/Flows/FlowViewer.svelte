@@ -3,7 +3,7 @@
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
   export let flowchart: Flowchart | null;
-  export let displayCreditBin: boolean = false;
+  export let displayCreditBin = false;
 
   // TODO: with this logic, the credit bin is hidden automatically when all courses are removed
   // from it - is this what we want?

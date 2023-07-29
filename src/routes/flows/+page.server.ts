@@ -1,5 +1,6 @@
 import { redirectIfAnonymous } from '$lib/server/util/authUtil';
+import type { PageServerLoad } from './$types';
 
-export const load = async (event) => {
+export const load: PageServerLoad = (event) => {
   redirectIfAnonymous(event);
 };

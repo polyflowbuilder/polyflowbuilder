@@ -14,14 +14,20 @@ declare global {
         username: string;
       };
     }
-    // interface PageData {}
+    interface PageData {
+      session?: {
+        id: string;
+        email: string;
+        username: string;
+      };
+    }
     // interface Platform {}
   }
 
   // need var so the client is defined globally
   // TODO: find a way to remove this
   // eslint-disable-next-line no-var
-  var prisma_DO_NOT_IMPORT: PrismaClient;
+  var prisma_DO_NOT_IMPORT: PrismaClient | undefined;
 }
 
 export {};

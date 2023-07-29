@@ -81,13 +81,13 @@
         }
 
         newCourseName = course.customId;
-        newCourseDisplayName = course.customDisplayName || '';
-        newCourseDescription = course.customDesc || '';
-        newCourseUnits = course.customUnits || '0';
+        newCourseDisplayName = course.customDisplayName ?? '';
+        newCourseDescription = course.customDesc ?? '';
+        newCourseUnits = course.customUnits ?? '0';
       } else {
         // perform lookup if course is standard
         const courseCatalog = getCatalogFromProgramIDIndex(
-          course.programIdIndex || 0,
+          course.programIdIndex ?? 0,
           $userFlowcharts[$selectedFlowIndex].programId,
           $programData
         );

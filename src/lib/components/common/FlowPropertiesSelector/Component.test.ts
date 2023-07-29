@@ -54,10 +54,9 @@ async function setProgram(
     (prog) =>
       !alreadySelectedMajorNames.includes(prog.majorName) &&
       (!selectProgramWithMultipleConcs ||
-        (selectProgramWithMultipleConcs &&
-          apiDataConfig.apiData.programData.filter(
-            (prog2) => prog2.catalog === prog.catalog && prog2.majorName === prog.majorName
-          ).length > 1))
+        apiDataConfig.apiData.programData.filter(
+          (prog2) => prog2.catalog === prog.catalog && prog2.majorName === prog.majorName
+        ).length > 1)
   );
   const program = programList[Math.floor(Math.random() * programList.length)];
 
@@ -189,7 +188,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -211,7 +210,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -233,7 +232,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -255,7 +254,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -277,7 +276,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -299,7 +298,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -321,7 +320,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -344,7 +343,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -366,7 +365,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
     // (eg when reactive stuff is setup)
     // see https://github.com/sveltejs/svelte/issues/4470
     let optionsValid = false;
-    const mock = vi.fn((event) => (optionsValid = event.detail));
+    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
     component.$on('optionsValidUpdate', mock);
     expect(mock).toHaveBeenCalledTimes(0);
     expect(optionsValid).toBeFalsy();
@@ -390,8 +389,12 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 
@@ -530,8 +533,12 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 
@@ -629,8 +636,12 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 
@@ -662,11 +673,9 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
       .filter(
         (prog) =>
           prog.id !==
-          (
-            screen.getByRole('combobox', {
-              name: 'Concentration'
-            }) as HTMLOptionElement
-          ).value
+          screen.getByRole<HTMLSelectElement>('combobox', {
+            name: 'Concentration'
+          }).value
       );
     const newProgram =
       newProgramSelectOptions[Math.floor(Math.random() * newProgramSelectOptions.length)];
@@ -717,8 +726,12 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 
@@ -889,8 +902,12 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 
@@ -983,8 +1000,12 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     let programIds = [''];
     let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn((event) => (programIds = event.detail));
-    const optionsValidEventHandlerMock = vi.fn((event) => (optionsValid = event.detail));
+    const programIdEventHandlerMock = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidEventHandlerMock = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
     component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
     component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
 

@@ -3,13 +3,22 @@ import { expect, test } from '@playwright/test';
 import { performLoginBackend } from '../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
-import { cloneAndDeleteNestedProperty } from '../util/testUtil.js';
 import { CURRENT_FLOW_DATA_VERSION, FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
+import { cloneAndDeleteNestedProperty, deleteObjectProperties } from '../util/testUtil.js';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types/apiDataTypes.js';
 
 const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
   'pfb_test_generateFlowchartAPI_inputs_playwright@test.com';
 const GENERATE_FLOWCHART_TESTS_API_2_EMAIL =
   'pfb_test_generateFlowchartAPI_outputs_playwright@test.com';
+
+// see API for expected return type
+interface GenerateFlowchartExpectedReturnType {
+  message: string;
+  generatedFlowchart: Flowchart;
+  courseCache: CourseCache[] | undefined;
+}
 
 const responsePayload1 = {
   generatedFlowchart: {
@@ -2935,11 +2944,9 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object
-    const resData = await res.json();
-    resData.generatedFlowchart.lastUpdatedUTC = new Date(
-      resData.generatedFlowchart?.lastUpdatedUTC
-    );
+    // make sure date is serialized back to Date object for flowchart validation
+    const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
+    resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -2954,13 +2961,19 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison since they change on every request
-    delete resData.generatedFlowchart.id;
-    delete resData.generatedFlowchart.hash;
-    delete resData.generatedFlowchart.lastUpdatedUTC;
+    // remove these fields before comparison but after validation since they change on every request
+    const resDataRelevantProperties = {
+      message: resData.message,
+      generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
+        'id',
+        'hash',
+        'lastUpdatedUTC'
+      ]),
+      courseCache: resData.courseCache
+    };
 
     // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
       cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
     );
   });
@@ -2979,10 +2992,8 @@ test.describe('generate flowchart api output tests', () => {
     expect(res.status()).toBe(200);
 
     // make sure date is serialized back to Date object
-    const resData = await res.json();
-    resData.generatedFlowchart.lastUpdatedUTC = new Date(
-      resData.generatedFlowchart?.lastUpdatedUTC
-    );
+    const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
+    resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -2996,12 +3007,20 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison since they change on every request
-    delete resData.generatedFlowchart.id;
-    delete resData.generatedFlowchart.hash;
-    delete resData.generatedFlowchart.lastUpdatedUTC;
+    // remove these fields before comparison but after validation since they change on every request
+    const resDataRelevantProperties = {
+      message: resData.message,
+      generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
+        'id',
+        'hash',
+        'lastUpdatedUTC'
+      ])
+    };
 
-    expect(resData).toStrictEqual(expectedResponseBody);
+    // remove dynamicTerms as this can change over time
+    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
+      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    );
   });
 
   test('generate valid flowchart with 1 program without ge courses', async ({ request }) => {
@@ -3018,10 +3037,8 @@ test.describe('generate flowchart api output tests', () => {
     expect(res.status()).toBe(200);
 
     // make sure date is serialized back to Date object
-    const resData = await res.json();
-    resData.generatedFlowchart.lastUpdatedUTC = new Date(
-      resData.generatedFlowchart?.lastUpdatedUTC
-    );
+    const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
+    resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -3041,13 +3058,19 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison since they change on every request
-    delete resData.generatedFlowchart.id;
-    delete resData.generatedFlowchart.hash;
-    delete resData.generatedFlowchart.lastUpdatedUTC;
+    // remove these fields before comparison but after validation since they change on every request
+    const resDataRelevantProperties = {
+      message: resData.message,
+      generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
+        'id',
+        'hash',
+        'lastUpdatedUTC'
+      ]),
+      courseCache: resData.courseCache
+    };
 
     // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
       cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
     );
   });
@@ -3065,10 +3088,8 @@ test.describe('generate flowchart api output tests', () => {
     expect(res.status()).toBe(200);
 
     // make sure date is serialized back to Date object
-    const resData = await res.json();
-    resData.generatedFlowchart.lastUpdatedUTC = new Date(
-      resData.generatedFlowchart?.lastUpdatedUTC
-    );
+    const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
+    resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -3083,13 +3104,19 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison since they change on every request
-    delete resData.generatedFlowchart.id;
-    delete resData.generatedFlowchart.hash;
-    delete resData.generatedFlowchart.lastUpdatedUTC;
+    // remove these fields before comparison but after validation since they change on every request
+    const resDataRelevantProperties = {
+      message: resData.message,
+      generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
+        'id',
+        'hash',
+        'lastUpdatedUTC'
+      ]),
+      courseCache: resData.courseCache
+    };
 
     // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resData, 'dynamicTerms')).toStrictEqual(
+    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
       cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
     );
   });

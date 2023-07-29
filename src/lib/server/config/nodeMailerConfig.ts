@@ -10,12 +10,12 @@ let transportOptions: Options;
 // configuration for sending emails
 function init(): void {
   transportAuth = {
-    user: process.env['EMAIL_USER'],
-    pass: process.env['EMAIL_PASS']
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
   };
   transportOptions = {
-    host: process.env['EMAIL_HOST'],
-    port: parseInt(process.env['EMAIL_PORT'] as string, 10),
+    host: process.env.EMAIL_HOST,
+    port: parseInt(process.env.EMAIL_PORT ?? '10'),
     secure: true,
     auth: transportAuth
   };

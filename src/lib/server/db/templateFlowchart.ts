@@ -13,7 +13,7 @@ export async function getTemplateFlowcharts(programId: string[]): Promise<Templa
     }
   });
 
-  logger.info(`Successfully got template flowchart(s) ${programId}`);
+  logger.info(`Successfully got template flowchart(s) ${programId.join(',')}`);
 
   return res;
 }

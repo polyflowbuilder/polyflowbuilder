@@ -37,7 +37,7 @@ export function computeGroupUnits(
     term.courses.forEach((course) => {
       // perform lookup if necessary
       const courseCatalog = getCatalogFromProgramIDIndex(
-        course.programIdIndex || 0,
+        course.programIdIndex ?? 0,
         flowchart.programId,
         programCache
       );
@@ -83,7 +83,7 @@ export function validateUnitString(unitsInput: string) {
   // also check for unique numbers if there are ranged units
   // true when unique units (for single num OR double num case)
   let ascendingOrderUnits = true;
-  if (validationRegExp && unitsInputSanitized.includes('-')) {
+  if (unitsInputSanitized.includes('-')) {
     const [lowerUnits, upperUnits] = unitsInputSanitized.split('-').map((val) => Number(val));
     ascendingOrderUnits = lowerUnits < upperUnits;
   }

@@ -38,6 +38,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
     const flow: Flowchart = {
       hash: '',
       id: '',
+      // eslint-disable-next-line @typescript-eslint/non-nullable-type-assertion-style
       lastUpdatedUTC: dbFlowchart.lastUpdatedUTC as Date,
       name: '',
       notes: '',
@@ -450,6 +451,7 @@ describe('flowchart <-> dbflowchart conversion tests', () => {
     const flow: Flowchart = {
       hash: '',
       id: '',
+      // eslint-disable-next-line @typescript-eslint/non-nullable-type-assertion-style
       lastUpdatedUTC: dbFlowchart.lastUpdatedUTC as Date,
       name: '',
       notes: '',

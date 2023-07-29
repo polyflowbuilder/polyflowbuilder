@@ -84,7 +84,7 @@ test.describe('create flow routine tests', () => {
       /loading/
     );
     expect(response.ok()).toBeTruthy();
-    const resJson = await response.json();
+    const resJson: unknown = await response.json();
     expect(resJson).toHaveProperty('generatedFlowchart');
     expect(resJson).toHaveProperty('message');
     expect(resJson).toHaveProperty('courseCache');
@@ -171,7 +171,9 @@ test.describe('create flow routine tests', () => {
       expect(dialog.message()).toBe(
         'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
       );
-      dialog.accept();
+      dialog.accept().catch(() => {
+        throw new Error('accepting dialog failed');
+      });
     });
 
     await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
@@ -209,7 +211,7 @@ test.describe('create flow routine tests', () => {
     );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(401);
-    const resJson = await response.json();
+    const resJson: unknown = await response.json();
     expect(resJson).toStrictEqual({
       message: 'Generate flowchart request must be authenticated.'
     });
@@ -241,7 +243,9 @@ test.describe('create flow routine tests', () => {
       expect(dialog.message()).toBe(
         'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
       );
-      dialog.accept();
+      dialog.accept().catch(() => {
+        throw new Error('accepting dialog failed');
+      });
     });
 
     await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
@@ -279,7 +283,7 @@ test.describe('create flow routine tests', () => {
     );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(400);
-    const resJson = await response.json();
+    const resJson: unknown = await response.json();
     expect(resJson).toStrictEqual({
       message: 'Invalid input received.'
     });
@@ -311,7 +315,9 @@ test.describe('create flow routine tests', () => {
       expect(dialog.message()).toBe(
         'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
       );
-      dialog.accept();
+      dialog.accept().catch(() => {
+        throw new Error('accepting dialog failed');
+      });
     });
 
     await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
@@ -349,7 +355,7 @@ test.describe('create flow routine tests', () => {
     );
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toBe(500);
-    const resJson = await response.json();
+    const resJson: unknown = await response.json();
     expect(resJson).toStrictEqual({
       message: 'An error occurred while generating new flowchart, please try again a bit later.'
     });

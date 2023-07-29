@@ -209,11 +209,9 @@ export function duplicateFlowchart(flowchart: Flowchart, userFlowchartsLength: n
   });
 
   // alert after the changes have been made
-  setTimeout(
-    () =>
-      alert(
-        `The flowchart has been copied as "${newFlowchart.name}" and is located at the bottom of your flowchart list.`
-      ),
-    UPDATE_CHUNK_DELAY_TIME_MS
-  );
+  setTimeout(() => {
+    alert(
+      `The flowchart has been copied as "${newFlowchart.name}" and is located at the bottom of your flowchart list.`
+    );
+  }, UPDATE_CHUNK_DELAY_TIME_MS);
 }

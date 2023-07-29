@@ -4,7 +4,7 @@ import type { FlowListItemData, FlowListUIData } from '$lib/types';
 
 export function buildFlowListContainerItemsData(
   flowListUIData: FlowListUIData[]
-): Array<FlowListItemData> {
+): FlowListItemData[] {
   const items: FlowListItemData[] = [];
   for (let idx = 0; idx < flowListUIData.length; idx++) {
     const itemData: FlowListItemData = {
@@ -46,7 +46,7 @@ function generateFlowListItemTooltipHTML(flowListItemData: FlowListUIData): Elem
 
   // add info for each program
   flowListItemData.displayInfo.forEach((displayInfoProgram) => {
-    (tooltipElem.lastElementChild as Element).insertAdjacentHTML(
+    getLastElementChildNotNull(tooltipElem).insertAdjacentHTML(
       'afterend',
       "<div class='divider my-1'></div>"
     );
@@ -71,14 +71,21 @@ function generateFlowListItemTooltipHTML(flowListItemData: FlowListUIData): Elem
   });
 
   if (flowListItemData.notes) {
-    (tooltipElem.lastElementChild as Element).insertAdjacentHTML(
+    getLastElementChildNotNull(tooltipElem).insertAdjacentHTML(
       'afterend',
       '<div class="divider my-1"></div><p class="text-sm mb-1"><strong>Notes:</strong></p><p></p>'
     );
-    (tooltipElem.lastElementChild as Element).appendChild(
+    getLastElementChildNotNull(tooltipElem).appendChild(
       document.createTextNode(flowListItemData.notes)
     );
   }
 
   return tooltipElem;
+}
+
+function getLastElementChildNotNull(elem: Element) {
+  if (elem.lastElementChild === null) {
+    throw new Error('assertLastElementChildNotNull failed');
+  }
+  return elem.lastElementChild;
 }

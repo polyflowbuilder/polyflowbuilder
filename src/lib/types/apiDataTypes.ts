@@ -10,12 +10,12 @@ export type APICourseFull = APICourse & {
   dynamicTerms: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
 };
 
-export type CourseCache = {
+export interface CourseCache {
   catalog: string;
   courses: APICourseFull[];
-};
+}
 
-export type APIData = {
+export interface APIData {
   // available flowchart data
   catalogs: string[];
   startYears: string[];
@@ -25,8 +25,8 @@ export type APIData = {
   courseData: CourseCache[];
   geCourseData: GECourse[];
   reqCourseData: CourseRequisite[];
-};
+}
 
-export type APINotificationContent = {
+export interface APINotificationContent {
   content: string;
-};
+}

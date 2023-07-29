@@ -1,11 +1,11 @@
 import type { APICourseFull } from '$lib/types';
 
-export type CatalogSearchResults = {
+export interface CatalogSearchResults {
   searchResults: APICourseFull[];
   searchLimitExceeded: boolean;
-};
+}
 
-export type SearchCache = {
+export interface SearchCache {
   catalog: string;
   queries: string[];
-};
+}

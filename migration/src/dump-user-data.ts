@@ -16,7 +16,7 @@ function initEnv() {
     path: `${process.cwd()}/../../.env`
   });
   // now check to make sure they're actually loaded and exit otherwise
-  if (!process.env['DOMAIN']) {
+  if (!process.env.DOMAIN) {
     console.log('ENVIRONMENT VARIABLES FAILED TO LOAD! Exiting ...');
     process.exit(-1);
   }
@@ -26,10 +26,10 @@ function initEnv() {
 
 async function initDB() {
   conPool = mysql.createPool({
-    host: process.env['MIGRATION_DB_HOST'],
-    user: process.env['MIGRATION_DB_USER'],
-    password: process.env['MIGRATION_DB_PASS'],
-    database: process.env['MIGRATION_DB_NAME'],
+    host: process.env.MIGRATION_DB_HOST,
+    user: process.env.MIGRATION_DB_USER,
+    password: process.env.MIGRATION_DB_PASS,
+    database: process.env.MIGRATION_DB_NAME,
     connectionLimit: 10,
     // see https://github.com/sidorares/node-mysql2/issues/875
     // flag documentation: https://github.com/mysqljs/mysql#connection-flags
@@ -44,7 +44,7 @@ async function initDB() {
 
 // fetch users in batches so that we don't crash on a single request w many users
 async function getUserDataBatch() {
-  const sqlQuery = `SELECT * FROM ${process.env['MIGRATION_DB_TABLE_USERS']} WHERE id > ? LIMIT ?`;
+  const sqlQuery = `SELECT * FROM ${process.env.MIGRATION_DB_TABLE_USERS} WHERE id > ? LIMIT ?`;
 
   if (!conPool) {
     throw new Error('DB connection not valid');
@@ -55,7 +55,7 @@ async function getUserDataBatch() {
     FieldPacket[]
   ];
 
-  userIdCursor = res[0].at(-1)?.id;
+  userIdCursor = res[0].at(-1)?.id as number;
 
   if (!userIdCursor) {
     console.log('finish fetching users');
@@ -88,4 +88,4 @@ async function dumpUserData() {
   process.exit();
 }
 
-dumpUserData();
+void dumpUserData();

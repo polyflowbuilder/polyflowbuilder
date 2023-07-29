@@ -52,10 +52,7 @@ async function performSearch(query: string, catalog: string): Promise<CatalogSea
     catalog
   };
 
-  const searchResults: {
-    message: string;
-    results: CatalogSearchResults;
-  } | null = await fetch('/api/data/searchCatalog', {
+  const searchResults = (await fetch('/api/data/searchCatalog', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -78,7 +75,10 @@ async function performSearch(query: string, catalog: string): Promise<CatalogSea
       );
       console.error('Catalog search request failed with error:', err);
       return null;
-    });
+    })) as {
+    message: string;
+    results: CatalogSearchResults;
+  } | null;
 
   if (!searchResults) {
     return {

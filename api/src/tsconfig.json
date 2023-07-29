@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "$lib": ["../../../src/lib"],
-      "$lib/*": ["../../../src/lib/*"]
+      "$lib": ["../../src/lib"],
+      "$lib/*": ["../../src/lib/*"]
     },
     "baseUrl": "./",
     "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "preserveValueImports": true,
+    "strictNullChecks": true,
     "lib": ["esnext", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
     "module": "esnext",

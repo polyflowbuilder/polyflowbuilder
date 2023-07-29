@@ -15,40 +15,40 @@ export enum CourseValidationType {
   CONCURRENT_REQUISITE
 }
 
-export type FlowValidationData = {
+export interface FlowValidationData {
   email: string;
   data: Flowchart;
-};
+}
 
-export type ValidationCriteria = {
+export interface ValidationCriteria {
   notes: string;
   valid: boolean;
-};
+}
 
-export type ValidationRequisiteData = {
+export interface ValidationRequisiteData {
   reqStr: string;
   successCode: CourseValidationStatus;
   override: boolean; // for user to override req
-};
+}
 
-export type ValidationRequisiteCheckObject = {
+export interface ValidationRequisiteCheckObject {
   cID: string;
   coReq: ValidationRequisiteData[];
   conReq: ValidationRequisiteData[];
   pReq: ValidationRequisiteData[];
   recReq: ValidationRequisiteData[];
   status: CourseValidationStatus;
-};
+}
 
-export type ValidationDataSummary = {
+export interface ValidationDataSummary {
   UDMnChck: ValidationCriteria;
   USCPChck: ValidationCriteria;
   _GWRChck: ValidationCriteria;
   unitChck: ValidationCriteria;
-};
+}
 
-export type ValidationDataFull = {
+export interface ValidationDataFull {
   hash: string;
   summaryData: ValidationDataSummary;
   reqsData: ValidationRequisiteCheckObject[];
-};
+}

@@ -9,7 +9,7 @@ const logger = initLogger('APIRouteHandler (/api/auth/resetpassword)');
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const data = await request.json();
+    const data = (await request.json()) as unknown;
 
     // validation
     const parseResults = resetPasswordSchema.safeParse(data);

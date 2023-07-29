@@ -4,8 +4,9 @@
   import { enhance } from '$app/forms';
   import { AlertError } from '$lib/components/common';
   import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+  import type { ActionData } from './$types';
 
-  export let form;
+  export let form: ActionData;
 
   let password = '';
   let passwordConfirm = '';
@@ -19,14 +20,14 @@
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">Create Account</h2>
       <div class="divider" />
 
-      {#if !form?.success && form?.userExists}
+      {#if $page.status === 400 && form?.data.userExists}
         <AlertError
           text="An account with this email address already exists. Please use another email address."
           addlClass="mb-4"
         />
       {/if}
 
-      {#if form?.error}
+      {#if $page.status === 500}
         <AlertError
           text="An error occurred when registering your account. Please try again a bit later."
           addlClass="mb-4"
@@ -42,20 +43,22 @@
         use:enhance={() => {
           loading = true;
           registerText = 'Creating Account ...';
-          return async ({ update }) => {
-            loading = false;
-            registerText = 'Create Account!';
-            await update();
-            // on success, dont disable loader so continuity is not broken on enhanced page
-            if ($page.status !== 201) {
+          return ({ update }) => {
+            void (async () => {
               loading = false;
               registerText = 'Create Account!';
-            }
-            // reset pw fields on failed POST bc form is only reset on success response
-            if ($page.status === 400) {
-              password = '';
-              passwordConfirm = '';
-            }
+              await update();
+              // on success, dont disable loader so continuity is not broken on enhanced page
+              if ($page.status !== 201) {
+                loading = false;
+                registerText = 'Create Account!';
+              }
+              // reset pw fields on failed POST bc form is only reset on success response
+              if ($page.status === 400) {
+                password = '';
+                passwordConfirm = '';
+              }
+            })();
           };
         }}
       >
@@ -69,13 +72,13 @@
               id="username"
               name="username"
               placeholder="Username"
-              value={form?.data?.username ?? ''}
+              value={form?.data.username ?? ''}
               required
             />
           </label>
-          {#if form?.registerValidationErrors?.username}
+          {#if form?.data.registerValidationErrors?.username}
             <small id="usernameError" class="text-red-600 label label-text-alt"
-              >{form?.registerValidationErrors?.username[0]}</small
+              >{form.data.registerValidationErrors.username[0]}</small
             >
           {/if}
 
@@ -88,13 +91,13 @@
               id="email"
               name="email"
               placeholder="Email address"
-              value={form?.data?.email ?? ''}
+              value={form?.data.email ?? ''}
               required
             />
           </label>
-          {#if form?.registerValidationErrors?.email}
+          {#if form?.data.registerValidationErrors?.email}
             <small id="emailError" class="text-red-600 label label-text-alt"
-              >{form?.registerValidationErrors?.email[0]}</small
+              >{form.data.registerValidationErrors.email[0]}</small
             >
           {/if}
 
@@ -111,9 +114,9 @@
               required
             />
           </label>
-          {#if form?.registerValidationErrors?.password}
+          {#if form?.data.registerValidationErrors?.password}
             <small id="passwordError" class="text-red-600 label label-text-alt"
-              >{form?.registerValidationErrors?.password[0]}</small
+              >{form.data.registerValidationErrors.password[0]}</small
             >
           {/if}
 
@@ -130,18 +133,14 @@
               required
             />
           </label>
-          {#if form?.registerValidationErrors?.passwordConfirm}
+          {#if form?.data.registerValidationErrors?.passwordConfirm}
             <small id="passwordConfirmError" class="text-red-600 label label-text-alt"
-              >{form?.registerValidationErrors?.passwordConfirm[0]}</small
+              >{form.data.registerValidationErrors.passwordConfirm[0]}</small
             >
           {/if}
 
-          <button
-            class="btn btn-accent btn-block mt-6"
-            disabled={loading}
-            type="submit"
-          >
-            <span class={loading ? 'loading loading-spinner' : ''}/>
+          <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
+            <span class={loading ? 'loading loading-spinner' : ''} />
             {registerText}
           </button>
         </div>

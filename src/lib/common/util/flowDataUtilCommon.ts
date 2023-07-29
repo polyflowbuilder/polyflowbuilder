@@ -47,9 +47,9 @@ export function mergeFlowchartsCourseData(
 ): Term[] {
   // get list of all term indexes between all valid templates
   const allTermIndexesSet = new Set<number>();
-  flowchartsTermData.forEach((flowchartTermData) =>
-    flowchartTermData.forEach((termData) => allTermIndexesSet.add(termData.tIndex))
-  );
+  flowchartsTermData.forEach((flowchartTermData) => {
+    flowchartTermData.forEach((termData) => allTermIndexesSet.add(termData.tIndex));
+  });
 
   // init merged term data with all present terms
   const mergedFlowchartsTermData: Term[] = Array.from(allTermIndexesSet)

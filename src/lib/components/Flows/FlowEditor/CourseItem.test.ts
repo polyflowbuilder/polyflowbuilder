@@ -140,12 +140,17 @@ describe('CourseItem component tests', () => {
     expect(screen.queryByText('hello world')).toBeNull();
 
     // hover on course and expect visible
-    await user.hover(document.querySelector('.courseItem') as Element);
+    const courseItem = document.querySelector('.courseItem');
+    if (!courseItem) {
+      throw new Error('courseItem not found');
+    }
+
+    await user.hover(courseItem);
     expect(screen.getByText('hello world')).toBeVisible();
 
     // unhover and expect not visible again after its transition duration time
     // goes invisible instead of being deleted bc may be shown subsequent times
-    await user.unhover(document.querySelector('.courseItem') as Element);
+    await user.unhover(courseItem);
     await new Promise((r) => setTimeout(r, 300));
     expect(screen.getByText('hello world')).not.toBeVisible();
 

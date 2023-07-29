@@ -18,7 +18,7 @@ export function performCatalogSearch(
   let searchResults: APICourseFull[] = [];
   let searchLimitExceeded = false;
 
-  if (querySanitized && catalogCourses) {
+  if (querySanitized && catalogCourses.length) {
     // fuzzy searching
     const fuseSearch = new Fuse(catalogCourses, {
       keys: ['id', 'displayName', 'desc'],
@@ -30,7 +30,7 @@ export function performCatalogSearch(
       .search(querySanitized)
       // TODO: not sure when the score won't be present, but if it's not
       // don't include any of those results
-      .filter((fuseResult) => fuseResult?.score || 1 <= FUZZY_SEARCH_THRESOLD)
+      .filter((fuseResult) => (fuseResult.score ?? 1) <= FUZZY_SEARCH_THRESOLD)
       .map((fuseResult) => catalogCourses[fuseResult.refIndex]);
 
     searchLimitExceeded = searchResults.length > MAX_SEARCH_RESULTS_RETURN_COUNT;

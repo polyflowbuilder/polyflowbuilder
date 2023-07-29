@@ -22,7 +22,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
     }
 
     // validation
-    const data = Object.fromEntries(url.searchParams);
+    const data = Object.fromEntries(url.searchParams) as Record<string, string | undefined>;
     const parseResults = generateFlowchartSchema.safeParse({
       // convert from string-encoded data
       ...data,

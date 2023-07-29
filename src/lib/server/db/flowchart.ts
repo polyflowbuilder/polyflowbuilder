@@ -65,7 +65,7 @@ export async function upsertFlowcharts(flowcharts: MutateFlowchartData[]): Promi
 
       const upsertData = {
         ...dbFlow,
-        termData: dbFlow.termData ?? Prisma.DbNull,
+        termData: dbFlow.termData,
         validationData: dbFlow.validationData ?? Prisma.DbNull
       };
 
@@ -84,9 +84,9 @@ export async function upsertFlowcharts(flowcharts: MutateFlowchartData[]): Promi
   });
 
   logger.info(
-    `Successfully persisted updates for flowcharts [${flowTransactionQueryPieces.map(
-      (queryPiece) => queryPiece.id
-    )}]`
+    `Successfully persisted updates for flowcharts [${flowTransactionQueryPieces
+      .map((queryPiece) => queryPiece.id)
+      .join(',')}]`
   );
 }
 
@@ -99,5 +99,5 @@ export async function deleteFlowcharts(ids: string[]): Promise<void> {
     }
   });
 
-  logger.info(`Successfully deleted flowcharts [${ids}]`);
+  logger.info(`Successfully deleted flowcharts [${ids.join(',')}]`);
 }

@@ -29,7 +29,7 @@ function generateReqOrBlocks(reqString: string) {
 }
 
 function validateRequisiteString(input: string, catalog: string, courseData: APICourse[]) {
-  if (input.slice(0, 6) === '$SKIP$' || input === '') {
+  if (input.startsWith('$SKIP$') || input === '') {
     return true;
   }
 

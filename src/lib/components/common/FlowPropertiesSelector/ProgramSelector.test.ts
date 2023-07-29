@@ -131,7 +131,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     });
 
     let programId = 'uninitialized';
-    const mock = vi.fn((event) => (programId = event.detail));
+    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
     component.$on('programIdUpdate', mock);
 
     // want to make sure this was not updated
@@ -209,7 +209,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event) => (programId = event.detail));
+    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
@@ -222,11 +222,11 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // select random catalog
 
-    const selectedCatalogOption = screen.getByRole('option', {
+    const selectedCatalogOption = screen.getByRole<HTMLOptionElement>('option', {
       name: apiDataConfig.apiData.catalogs[
         Math.floor(Math.random() * apiDataConfig.apiData.catalogs.length)
       ]
-    }) as HTMLOptionElement;
+    });
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -245,9 +245,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.majorName)
         .sort()
     );
-    const majorOptions = screen.getAllByRole('option', {
+    const majorOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedPrograms.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of majorOptions) {
       expect(option).toBeVisible();
     }
@@ -277,9 +277,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.concName)
         .sort()
     );
-    const concOptions = screen.getAllByRole('option', {
+    const concOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedConcOptions.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of concOptions) {
       expect(option).toBeVisible();
     }
@@ -315,7 +315,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event) => (programId = event.detail));
+    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
@@ -329,18 +329,18 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // check correct catalog
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.catalog
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
     // check correct major
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.majorName
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
@@ -350,9 +350,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     }
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.concName
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
@@ -371,7 +371,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event) => (programId = event.detail));
+    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
@@ -385,7 +385,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // expect nothing at first
     const initSelectedOptions = screen
       .getAllByRole('option', {
-        name: (_, element) => (element as HTMLOptionElement).selected === true
+        name: (_, element) => (element as HTMLOptionElement).selected
       })
       .map((elem) => elem.textContent);
     expect(initSelectedOptions.length).toBe(3);
@@ -396,11 +396,11 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select a random program (same code as test above)
 
     // select random catalog
-    const selectedCatalogOption = screen.getByRole('option', {
+    const selectedCatalogOption = screen.getByRole<HTMLOptionElement>('option', {
       name: apiDataConfig.apiData.catalogs[
         Math.floor(Math.random() * apiDataConfig.apiData.catalogs.length)
       ]
-    }) as HTMLOptionElement;
+    });
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -418,9 +418,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.majorName)
         .sort()
     );
-    const majorOptions = screen.getAllByRole('option', {
+    const majorOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedPrograms.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of majorOptions) {
       expect(option).toBeVisible();
     }
@@ -449,9 +449,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.concName)
         .sort()
     );
-    const concOptions = screen.getAllByRole('option', {
+    const concOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedConcOptions.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of concOptions) {
       expect(option).toBeVisible();
     }
@@ -491,18 +491,18 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // check correct catalog
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.catalog
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
     // check correct major
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.majorName
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
@@ -512,9 +512,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     }
     expect(
       (
-        (await screen.findByRole('option', {
+        await screen.findByRole<HTMLOptionElement>('option', {
           name: program.concName
-        })) as HTMLOptionElement
+        })
       ).selected
     ).toBe(true);
 
@@ -537,7 +537,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event) => (programId = event.detail));
+    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
@@ -551,7 +551,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // expect nothing at first
     const initSelectedOptions = screen
       .getAllByRole('option', {
-        name: (_, element) => (element as HTMLOptionElement).selected === true
+        name: (_, element) => (element as HTMLOptionElement).selected
       })
       .map((elem) => elem.textContent);
     expect(initSelectedOptions.length).toBe(3);
@@ -562,9 +562,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // select the given program
 
     // select catalog
-    const selectedCatalogOption = screen.getByRole('option', {
+    const selectedCatalogOption = screen.getByRole<HTMLOptionElement>('option', {
       name: program.catalog
-    }) as HTMLOptionElement;
+    });
     console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -582,18 +582,19 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.majorName)
         .sort()
     );
-    const majorOptions = screen.getAllByRole('option', {
+    const majorOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedPrograms.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of majorOptions) {
       expect(option).toBeVisible();
     }
     expect(majorOptions.length).toBe(expectedPrograms.size);
 
     // select major option
-    const selectedMajorOption = majorOptions.find(
-      (opt) => opt.value === program.majorName
-    ) as HTMLOptionElement;
+    const selectedMajorOption = majorOptions.find((opt) => opt.value === program.majorName);
+    if (!selectedMajorOption) {
+      throw new Error('selectedMajorOption not found');
+    }
     console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -615,9 +616,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.concName)
         .sort()
     );
-    const concOptions = screen.getAllByRole('option', {
+    const concOptions = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedConcOptions.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of concOptions) {
       expect(option).toBeVisible();
     }
@@ -629,9 +630,10 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     expect(concOptions.length).toBe(expectedConcOptions.size);
 
     // select a concentration
-    const selectedConcOption = concOptions.find(
-      (opt) => opt.value === program.id
-    ) as HTMLOptionElement;
+    const selectedConcOption = concOptions.find((opt) => opt.value === program.id);
+    if (!selectedConcOption) {
+      throw new Error('selectedConcOption not found');
+    }
     console.log(`selectedConcOption value [${selectedConcOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -683,9 +685,10 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     console.log(`selected program1 id [${program1.id}]`);
 
     // update the major
-    const selectedMajorOption1 = majorOptions.find(
-      (opt) => opt.value === program1.majorName
-    ) as HTMLOptionElement;
+    const selectedMajorOption1 = majorOptions.find((opt) => opt.value === program1.majorName);
+    if (!selectedMajorOption1) {
+      throw new Error('selectedMajorOption1 not found');
+    }
     console.log(`selectedMajorOption value [${selectedMajorOption1.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -725,9 +728,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.concName)
         .sort()
     );
-    const concOptions1 = screen.getAllByRole('option', {
+    const concOptions1 = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedConcOptions1.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of concOptions1) {
       expect(option).toBeVisible();
     }
@@ -739,9 +742,10 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     expect(concOptions1.length).toBe(expectedConcOptions1.size);
 
     // select a concentration
-    const selectedConcOption1 = concOptions1.find(
-      (opt) => opt.value === program1.id
-    ) as HTMLOptionElement;
+    const selectedConcOption1 = concOptions1.find((opt) => opt.value === program1.id);
+    if (!selectedConcOption1) {
+      throw new Error('selectedConcOption1 not found');
+    }
     console.log(`selectedConcOption value [${selectedConcOption1.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -772,9 +776,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     );
 
     // select catalog
-    const selectedCatalogOption2 = screen.getByRole('option', {
+    const selectedCatalogOption2 = screen.getByRole<HTMLOptionElement>('option', {
       name: program2.catalog
-    }) as HTMLOptionElement;
+    });
     console.log(`selectedCatalogOption2 value [${selectedCatalogOption2.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -792,18 +796,19 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.majorName)
         .sort()
     );
-    const majorOptions2 = screen.getAllByRole('option', {
+    const majorOptions2 = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedPrograms2.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of majorOptions2) {
       expect(option).toBeVisible();
     }
     expect(majorOptions2.length).toBe(expectedPrograms2.size);
 
     // select major option
-    const selectedMajorOption2 = majorOptions2.find(
-      (opt) => opt.value === program2.majorName
-    ) as HTMLOptionElement;
+    const selectedMajorOption2 = majorOptions2.find((opt) => opt.value === program2.majorName);
+    if (!selectedMajorOption2) {
+      throw new Error('selectedMajorOption2 not found');
+    }
     console.log(`selectedMajorOption2 value [${selectedMajorOption2.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
@@ -825,9 +830,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         .map((prog) => prog.concName)
         .sort()
     );
-    const concOptions2 = screen.getAllByRole('option', {
+    const concOptions2 = screen.getAllByRole<HTMLOptionElement>('option', {
       name: (accessibleName) => expectedConcOptions2.has(accessibleName)
-    }) as HTMLOptionElement[];
+    });
     for (const option of concOptions2) {
       expect(option).toBeVisible();
     }
@@ -839,9 +844,10 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     expect(concOptions2.length).toBe(expectedConcOptions2.size);
 
     // select a concentration
-    const selectedConcOption2 = concOptions2.find(
-      (opt) => opt.value === program2.id
-    ) as HTMLOptionElement;
+    const selectedConcOption2 = concOptions2.find((opt) => opt.value === program2.id);
+    if (!selectedConcOption2) {
+      throw new Error('selectedConcOption2 not found');
+    }
     console.log(`selectedConcOption2 value [${selectedConcOption2.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {

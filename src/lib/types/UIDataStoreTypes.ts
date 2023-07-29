@@ -1,10 +1,10 @@
-type FlowListUIDataDisplayInfo = {
+interface FlowListUIDataDisplayInfo {
   catalog: string;
   majorName: string;
   concName: string | null;
-};
+}
 
-export type FlowListUIData = {
+export interface FlowListUIData {
   id: string;
   name: string;
   startYear: string;
@@ -12,10 +12,10 @@ export type FlowListUIData = {
   notes: string;
   published: boolean;
   imported: boolean;
-};
+}
 
-export type SelectedCourse = {
+export interface SelectedCourse {
   selected: boolean;
   tIndex: number;
   cIndex: number;
-};
+}

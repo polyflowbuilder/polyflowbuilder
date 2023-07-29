@@ -9,7 +9,7 @@ export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[
     courses: []
   }));
 
-  flowchart.termData?.forEach((termData) => {
+  flowchart.termData.forEach((termData) => {
     termData.courses.forEach((c) => {
       // skip all custom courses
       // TODO: optimize the courses data structure to use lookups instead of find() operations?
@@ -49,7 +49,7 @@ export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[
 }
 
 export function generateUserCourseCache(userFlowcharts: Flowchart[]): CourseCache[] {
-  const courseCacheSets: Array<Set<APICourseFull>> = apiData.catalogs.map(() => new Set());
+  const courseCacheSets: Set<APICourseFull>[] = apiData.catalogs.map(() => new Set());
 
   // TODO: can we optimize this? O(n^3)
   userFlowcharts.forEach((flow) => {

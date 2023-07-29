@@ -7,12 +7,20 @@ import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { MutateFlowchartData } from '$lib/types/mutateUserDataTypes';
+import type { CourseCache } from '$lib/types/apiDataTypes.js';
 
 const FLOW_LIST_CHANGE_TESTS_API_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_playwright@test.com';
 
 const FLOW_LIST_CHANGE_TESTS_API_OTHER_USER_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_other_playwright@test.com';
+
+// see API route for expected return type
+interface GetUserFlowchartsExpectedReturnType {
+  message: string;
+  flowcharts: Flowchart[];
+  courseCache: CourseCache[] | undefined;
+}
 
 test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
@@ -291,10 +299,10 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
     const persistRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(persistRes.status()).toBe(200);
 
-    const persistResJSON = await persistRes.json();
+    const persistResJSON = (await persistRes.json()) as GetUserFlowchartsExpectedReturnType;
     const flowcharts: Flowchart[] = persistResJSON.flowcharts;
 
-    expect(persistResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(persistResJSON.message).toEqual('User flowchart retrieval successful.');
 
     const { lastUpdatedUTC: flow0LastUpdated, ...flow0 } = flowcharts[0];
     const { lastUpdatedUTC: flow1LastUpdated, ...flow1 } = flowcharts[1];

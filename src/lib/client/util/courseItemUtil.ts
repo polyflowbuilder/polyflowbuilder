@@ -12,8 +12,7 @@ import type { Program } from '@prisma/client';
 import type { CourseCache, CourseItemData, ComputedCourseItemDisplayData } from '$lib/types';
 import type {
   UserDataUpdateChunk,
-  TermModChangeTermDataEntry,
-  TermModChangeTermDataField
+  TermModChangeTermDataEntry
 } from '$lib/common/schema/mutateUserDataSchema';
 
 export function buildTermCourseItemsData(
@@ -32,9 +31,9 @@ export function buildTermCourseItemsData(
         .find(
           (cacheEntry) =>
             cacheEntry.catalog ===
-            getCatalogFromProgramIDIndex(course.programIdIndex || 0, flowProgramId, programCache)
+            getCatalogFromProgramIDIndex(course.programIdIndex ?? 0, flowProgramId, programCache)
         )
-        ?.courses.find((c) => c.id === course.id) || null;
+        ?.courses.find((c) => c.id === course.id) ?? null;
     const computedCourseDisplayValues = computeCourseDisplayValues(course, courseMetadata);
 
     const itemData: CourseItemData = {
@@ -43,7 +42,7 @@ export function buildTermCourseItemsData(
       units: computedCourseDisplayValues.units,
       color: computedCourseDisplayValues.color,
       metadata: {
-        flowProgramIndex: course.programIdIndex || 0,
+        flowProgramIndex: course.programIdIndex ?? 0,
         tIndex: termData.tIndex,
         cIndex,
         selected: selectedCourses.has(`${termData.tIndex},${cIndex}`)
@@ -123,9 +122,9 @@ export function buildTermModUpdateChunkFromCourseItems(
     data: {
       id: flowId,
       tIndex,
-      // safe to typecast bc we validate earlier in TermContainer
+      // safe bc we validate earlier in TermContainer
       // that that the termData array (course changes) will not be empty
-      termData: newTermData as TermModChangeTermDataField
+      termData: newTermData
     }
   };
 }
@@ -141,24 +140,24 @@ function generateCourseItemTooltipHTML(data: ComputedCourseItemDisplayData): Ele
   if (data.displayName) {
     const displayNameElem = document.createElement('p');
     displayNameElem.appendChild(document.createTextNode(data.displayName));
-    (tooltipElem.lastElementChild as Element).insertAdjacentElement('afterend', displayNameElem);
+    getLastElementChildNotNull(tooltipElem).insertAdjacentElement('afterend', displayNameElem);
   }
 
   if (data.tooltip) {
-    (tooltipElem.lastElementChild as Element).insertAdjacentHTML(
+    getLastElementChildNotNull(tooltipElem).insertAdjacentHTML(
       'afterend',
       '<div class="divider my-1"></div>'
     );
 
     if (data.tooltip.desc.length) {
-      (tooltipElem.lastElementChild as Element).insertAdjacentHTML(
+      getLastElementChildNotNull(tooltipElem).insertAdjacentHTML(
         'afterend',
         `<p>${data.tooltip.desc}</p>`
       );
     }
 
     if (!data.tooltip.custom && (data.tooltip.addlDesc.length || data.tooltip.termsOffered)) {
-      (tooltipElem.lastElementChild as Element).insertAdjacentHTML(
+      getLastElementChildNotNull(tooltipElem).insertAdjacentHTML(
         'afterend',
         `<div class="divider my-1"></div>`
       );
@@ -166,7 +165,7 @@ function generateCourseItemTooltipHTML(data: ComputedCourseItemDisplayData): Ele
       if (data.tooltip.addlDesc.length) {
         const addlDescElem = document.createElement('p');
         addlDescElem.appendChild(document.createTextNode(data.tooltip.addlDesc));
-        (tooltipElem.lastElementChild as Element).insertAdjacentElement('afterend', addlDescElem);
+        getLastElementChildNotNull(tooltipElem).insertAdjacentElement('afterend', addlDescElem);
       }
 
       const termsOfferedElem = document.createElement('p');
@@ -195,9 +194,16 @@ function generateCourseItemTooltipHTML(data: ComputedCourseItemDisplayData): Ele
           document.createTextNode(`\nTerms Typically Offered (Dynamic): No Information Available`)
         );
       }
-      (tooltipElem.lastElementChild as Element).insertAdjacentElement('afterend', termsOfferedElem);
+      getLastElementChildNotNull(tooltipElem).insertAdjacentElement('afterend', termsOfferedElem);
     }
   }
 
   return tooltipElem;
+}
+
+function getLastElementChildNotNull(elem: Element) {
+  if (elem.lastElementChild === null) {
+    throw new Error('assertLastElementChildNotNull failed');
+  }
+  return elem.lastElementChild;
 }

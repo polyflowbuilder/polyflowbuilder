@@ -37,12 +37,16 @@ describe('FlowListItem component tests', () => {
     expect(screen.queryByText('hello world')).toBeNull();
 
     // hover on tooltip and expect visible
-    await user.hover(document.querySelector('.text-blue-500') as Element);
+    const elem = document.querySelector('.text-blue-500');
+    if (!elem) {
+      throw new Error('hover element not found');
+    }
+    await user.hover(elem);
     expect(screen.getByText('hello world')).toBeVisible();
 
     // unhover and expect not visible again after its transition duration time
     // goes invisible instead of being deleted bc may be shown subsequent times
-    await user.unhover(document.querySelector('.text-blue-500') as Element);
+    await user.unhover(elem);
     await new Promise((r) => setTimeout(r, 300));
     expect(screen.getByText('hello world')).not.toBeVisible();
   });
@@ -83,12 +87,16 @@ describe('FlowListItem component tests', () => {
     expect(screen.queryByText('hello world')).toBeNull();
 
     // hover on tooltip and expect visible
-    await user.hover(document.querySelector('.text-blue-500') as Element);
+    const elem = document.querySelector('.text-blue-500');
+    if (!elem) {
+      throw new Error('hover element not found');
+    }
+    await user.hover(elem);
     expect(screen.getByText('hello world')).toBeVisible();
 
     // unhover and expect not visible again after its transition duration time
     // goes invisible instead of being deleted bc may be shown subsequent times
-    await user.unhover(document.querySelector('.text-blue-500') as Element);
+    await user.unhover(elem);
     await new Promise((r) => setTimeout(r, 300));
     expect(screen.getByText('hello world')).not.toBeVisible();
   });

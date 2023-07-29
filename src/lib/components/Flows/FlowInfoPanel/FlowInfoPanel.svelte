@@ -12,9 +12,9 @@
     easing: cubicOut
   });
   $: if (visible) {
-    size.set(PANEL_SIZE_OPEN);
+    void size.set(PANEL_SIZE_OPEN);
   } else {
-    size.set(PANEL_SIZE_CLOSED);
+    void size.set(PANEL_SIZE_CLOSED);
   }
 
   let activeTab: 'manageFlows' | 'addCourses' = 'manageFlows';

@@ -18,7 +18,9 @@ async function assertCorrectFailureHandling(page: Page, dialogMessage: string) {
     // multiple dialogs pop up (confirmation and unauthorized),
     // but we only care about the last one
     lastDialogMessage = dialog.message();
-    dialog.accept();
+    dialog.accept().catch(() => {
+      throw new Error('accepting dialog failed');
+    });
   });
 
   const originalCount = await page.locator(FLOW_LIST_ITEM_SELECTOR).count();
@@ -26,7 +28,7 @@ async function assertCorrectFailureHandling(page: Page, dialogMessage: string) {
 
   // no flow should be selected
   await expect(page.getByText('Delete Flow')).toBeDisabled();
-  expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
+  await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
 
   // select a flow, delete option should be available
   await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0).click();
@@ -53,7 +55,7 @@ async function assertCorrectFlowDelete(
 ) {
   // no flow should be selected
   await expect(page.getByText('Delete Flow')).toBeDisabled();
-  expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
+  await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
 
   // select a flow, delete option should be available
   await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(deleteIdx).click();
@@ -67,7 +69,7 @@ async function assertCorrectFlowDelete(
 
   // no flow should be selected
   await expect(page.getByText('Delete Flow')).toBeDisabled();
-  expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
+  await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
 
   // refresh to test persistence
   await page.reload();
@@ -110,7 +112,11 @@ test.describe('flow delete tests', () => {
   });
 
   test('user able to delete flowchart', async ({ page }) => {
-    page.on('dialog', (dialog) => dialog.accept());
+    page.on('dialog', (dialog) => {
+      dialog.accept().catch(() => {
+        throw new Error('accepting dialog failed');
+      });
+    });
 
     await performLoginFrontend(page, FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);

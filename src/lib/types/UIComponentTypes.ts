@@ -2,20 +2,20 @@ import type { Props } from 'tippy.js';
 import type { TermTypicallyOffered } from '@prisma/client';
 
 // MutableForEachContainer
-export type MutableForEachContainerItemInternal = {
+export interface MutableForEachContainerItemInternal {
   id: string;
   item: unknown;
-};
+}
 
 // item types for MutableForEachContainer
-export type FlowListItemData = {
+export interface FlowListItemData {
   idx: number;
   id: string;
   name: string;
   tooltipParams: Partial<Props>;
-};
+}
 
-export type CourseItemData = {
+export interface CourseItemData {
   idName: string;
   displayName: string;
   units: string;
@@ -32,9 +32,9 @@ export type CourseItemData = {
 
     selected: boolean;
   };
-};
+}
 
-export type ComputedCourseItemDisplayData = {
+export interface ComputedCourseItemDisplayData {
   idName: string;
   displayName: string;
   units: string;
@@ -46,9 +46,9 @@ export type ComputedCourseItemDisplayData = {
     addlDesc: string;
     termsOffered: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
   };
-};
+}
 
-export type FlowEditorFooterUnitCounts = {
+export interface FlowEditorFooterUnitCounts {
   major: string;
   support: string;
   conc1: string;
@@ -57,4 +57,4 @@ export type FlowEditorFooterUnitCounts = {
   elective: string;
   other: string;
   total: string;
-};
+}

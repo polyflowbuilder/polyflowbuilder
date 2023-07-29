@@ -24,3 +24,5 @@ export const resetPasswordSchema = z
       });
     }
   });
+
+export type ResetPasswordData = z.infer<typeof resetPasswordSchema>;

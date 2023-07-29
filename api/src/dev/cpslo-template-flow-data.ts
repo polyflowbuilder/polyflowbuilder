@@ -6,14 +6,15 @@ import { JSDOM } from 'jsdom';
 import { v4 as uuid } from 'uuid';
 
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
-import { apiRoot, asyncWait, nthIndex, fetchRetry, getFiles } from './common';
 import { updateFlowchartDataModel } from '$lib/server/util/userDataModelSync';
+import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import { apiRoot, asyncWait, nthIndex, fetchRetry, getFiles } from './common';
 import type { Program } from '@prisma/client';
 
-type TemplateFlowchartMetadata = {
+interface TemplateFlowchartMetadata {
   flows: Program[];
   cSheets: Program[];
-};
+}
 
 // helper for scrapeTemplateFlowchartMetadataDirect
 function parseOptionsResponse(optionsResponse: string) {
@@ -23,13 +24,14 @@ function parseOptionsResponse(optionsResponse: string) {
     .map((val) => val.replace("<option value='", '').split("'>"));
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function scrapeTemplateFlowMetadata() {
   console.log('starting scrapeTemplateFlowchartMetadata ...');
 
   // only scrape links for catalogs that are eligible
   const eligibleCatalogYears: string[] = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  );
+  ) as string[];
 
   console.log('eligible catalog years for scrape', eligibleCatalogYears);
 
@@ -44,9 +46,8 @@ async function scrapeTemplateFlowMetadata() {
 
   const fetchWait = 500;
 
-  const cYearSelectorOpts = (
-    document.querySelector('#dots_roadmapCatalogYear') as HTMLSelectElement | null
-  )?.options;
+  const cYearSelectorOpts = document.querySelector<HTMLSelectElement>('#dots_roadmapCatalogYear')
+    ?.options;
 
   if (!cYearSelectorOpts) {
     console.log('CYEARSELECTOR RETURNED NULL, BAIL!');
@@ -159,17 +160,19 @@ async function scrapeTemplateFlowMetadata() {
   process.exit(0);
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function downloadPDFsFromLinks() {
   const downloadIdleTime = 100;
 
   console.log('starting download of PDFs from links ...');
 
   // read in
-  const allLinkData: TemplateFlowchartMetadata = JSON.parse(
+  const { flows, cSheets }: TemplateFlowchartMetadata = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
-  );
-  const { flows } = allLinkData;
-  const { cSheets } = allLinkData;
+  ) as {
+    flows: Program[];
+    cSheets: Program[];
+  };
 
   // now download all of these PDFs!!
 
@@ -194,7 +197,7 @@ async function downloadPDFsFromLinks() {
   let workingDir = '';
 
   // will occur when TCP connection is closed - wait for a bit, redownload
-  process.on('uncaughtException', async () => {
+  process.on('uncaughtException', (async () => {
     console.log(`CAUGHT TCP CLOSE, redownloading ${globalLinkWorkingOn}`);
 
     const file = fs.createWriteStream(`${workingDir}/${path.basename(globalLinkWorkingOn)}`);
@@ -204,7 +207,7 @@ async function downloadPDFsFromLinks() {
 
     await asyncWait(downloadIdleTime);
     console.log('redownloaded successfully, continue ...');
-  });
+  }) as NodeJS.UncaughtExceptionListener);
 
   console.log('download default flows ...');
   for (const flowData of flows) {
@@ -243,11 +246,16 @@ async function downloadPDFsFromLinks() {
 }
 
 // creating JSON files based off of flowchart PDF names
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function createJSONFiles() {
   // read in link data to make folders
   const allLinkData: TemplateFlowchartMetadata = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
-  );
+  ) as {
+    flows: Program[];
+    cSheets: Program[];
+  };
+
   const { flows } = allLinkData;
 
   const jsonRootDir = `${apiRoot}/data/flows/json`;
@@ -269,6 +277,7 @@ function createJSONFiles() {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function updateTemplateFlowchartsToLatestDataVersion() {
   await apiDataConfig.init();
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
@@ -276,15 +285,14 @@ async function updateTemplateFlowchartsToLatestDataVersion() {
       console.log(`attempt data version update for flowchart ${f}`);
       try {
         // read, update, and write back out
-        const templateFlowData = JSON.parse(fs.readFileSync(f, 'utf8'));
+        const templateFlowDataFile = JSON.parse(fs.readFileSync(f, 'utf8')) as unknown;
 
-        if (!templateFlowData?.dataModelVersion && !templateFlowData?.version) {
-          throw new Error('not a valid flowchart file');
-        }
+        // error will be thrown if this is not a valid template file
+        const validatedTemplateFlowData = flowchartValidationSchema.parse(templateFlowDataFile);
 
         const updatedTemplateFlowData = updateFlowchartDataModel(
           '11111111-1111-1111-1111-111111111111',
-          templateFlowData
+          validatedTemplateFlowData
         );
         fs.writeFileSync(f, JSON.stringify(updatedTemplateFlowData, null, 2));
       } catch {
@@ -294,7 +302,7 @@ async function updateTemplateFlowchartsToLatestDataVersion() {
   }
 }
 
-// scrapeTemplateFlowMetadata();
-//downloadPDFsFromLinks();
-// createJSONFiles();
-updateTemplateFlowchartsToLatestDataVersion();
+// void scrapeTemplateFlowMetadata();
+// void downloadPDFsFromLinks();
+// void createJSONFiles();
+void updateTemplateFlowchartsToLatestDataVersion();

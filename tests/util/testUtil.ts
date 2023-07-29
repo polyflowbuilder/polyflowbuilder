@@ -1,15 +1,13 @@
 // general test utilities that don't belong in any one category
 
 // see https://stackoverflow.com/a/4460624
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function cloneAndDeleteNestedProperty(item: any, property: string) {
+export function cloneAndDeleteNestedProperty(item: unknown, property: string): unknown {
   if (!item) {
     return item;
   } // null, undefined values check
 
   const types = [Number, String, Boolean];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let result: any;
+  let result: unknown;
 
   // normalizing primitives if someone did new String('aaa'), or new Number('444');
   types.forEach(function (type) {
@@ -21,9 +19,8 @@ export function cloneAndDeleteNestedProperty(item: any, property: string) {
   if (typeof result == 'undefined') {
     if (Object.prototype.toString.call(item) === '[object Array]') {
       result = [];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (item as any[]).forEach(function (child, index) {
-        result[index] = cloneAndDeleteNestedProperty(child, property);
+      (item as unknown[]).forEach(function (child, index) {
+        (result as unknown[])[index] = cloneAndDeleteNestedProperty(child, property);
       });
     } else if (typeof item == 'object') {
       // testing that this is DOM
@@ -38,7 +35,10 @@ export function cloneAndDeleteNestedProperty(item: any, property: string) {
           result = {};
           for (const i in item) {
             if (i !== property) {
-              result[i] = cloneAndDeleteNestedProperty(item[i], property);
+              (result as Record<string, unknown>)[i] = cloneAndDeleteNestedProperty(
+                (item as Record<string, unknown>)[i],
+                property
+              );
             }
           }
         }
@@ -58,4 +58,11 @@ export function cloneAndDeleteNestedProperty(item: any, property: string) {
   }
 
   return result;
+}
+
+// helper function to remove object properties in a type safe way
+export function deleteObjectProperties(object: Record<string, unknown>, properties: string[]) {
+  const excludeKeys = new Set(properties);
+
+  return Object.fromEntries(Object.entries(object).filter(([key]) => !excludeKeys.has(key)));
 }

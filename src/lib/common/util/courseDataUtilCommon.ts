@@ -25,17 +25,17 @@ export function computeCourseDisplayValues(
 
   // TODO: error checking for if we're using default course data but it's not defined
   return {
-    // type cast is safe bc course id will always be nonnull if customId not defined
-    idName: course.customId || (course.id as string),
-    displayName: course.customDisplayName || courseMetadata?.displayName || '',
-    units: course.customUnits || courseMetadata?.units || '0',
+    // should never see 'unknown', course.id will always be nonnull if course.customId is null
+    idName: course.customId ?? course.id ?? 'unknown',
+    displayName: course.customDisplayName ?? courseMetadata?.displayName ?? '',
+    units: course.customUnits ?? courseMetadata?.units ?? '0',
     color: course.color,
     ...(computeTooltipDisplayData && {
       tooltip: {
         custom: !!course.customId,
-        desc: course.customDesc || courseMetadata?.desc || '',
-        addlDesc: course.customDesc ? '' : courseMetadata?.addl || '',
-        termsOffered: courseMetadata?.dynamicTerms || null
+        desc: course.customDesc ?? courseMetadata?.desc ?? '',
+        addlDesc: course.customDesc ? '' : courseMetadata?.addl ?? '',
+        termsOffered: courseMetadata?.dynamicTerms ?? null
       }
     })
   };

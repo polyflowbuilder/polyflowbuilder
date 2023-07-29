@@ -58,7 +58,7 @@ test.describe('auth guard tests', () => {
 
     // reset password page - guarded under its own thing
     await page.goto('/resetpassword');
-    expect(page).toHaveURL(/.*forgotpassword/);
+    await expect(page).toHaveURL(/.*forgotpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
     await expect(page.locator('.alert-error')).toBeVisible();
     await expect(page.locator('.alert-error')).toHaveText(

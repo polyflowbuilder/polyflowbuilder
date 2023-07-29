@@ -2,7 +2,9 @@
   import { createEventDispatcher, tick } from 'svelte';
   import type { Program } from '@prisma/client';
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher<{
+    programIdUpdate: string;
+  }>();
 
   // external data props
 
@@ -32,7 +34,7 @@
   });
 
   // react to change in program input
-  $: updateInputs(programIdInput);
+  $: void updateInputs(programIdInput);
 
   // prevent dispatch during middle of updateInputs (ticking)
   $: if (!updating) {
@@ -74,10 +76,10 @@
     return [...new Set(majors.sort())];
   }
   function buildConcentrationOptions(progCatalogYear: string, majorName: string) {
-    const concentrationList: Array<{
+    const concentrationList: {
       name: string;
       id: string;
-    }> = [];
+    }[] = [];
     programData.forEach((progData) => {
       if (
         progData.catalog === progCatalogYear &&

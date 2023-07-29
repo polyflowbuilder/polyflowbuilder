@@ -18,7 +18,17 @@ async function updateUserFlowchartDataModels() {
     if (path.extname(f) === '.json') {
       console.log(`attempt data version update for user data ${f}`);
 
-      const userData = JSON.parse(fs.readFileSync(f, 'utf8'));
+      const userData = JSON.parse(fs.readFileSync(f, 'utf8')) as {
+        username: string;
+        password: string;
+        email: string;
+        createDate: string;
+        lastLoginDate: string;
+        data: {
+          flows: Record<string, unknown>[];
+          notifs: number[];
+        };
+      };
 
       // build new user object
       const newUserData: User = {
@@ -35,7 +45,7 @@ async function updateUserFlowchartDataModels() {
       // update each flowchart
       for (const flow of userData.data.flows) {
         // there are flows in prod data that are just null for some reason, skip these
-        if (flow?.dataModelVersion || flow?.version) {
+        if (flow.dataModelVersion || flow.version) {
           updatedFlowcharts.push(updateFlowchartDataModel(newUserData.id, flow));
         }
       }
@@ -55,4 +65,4 @@ async function updateUserFlowchartDataModels() {
   }
 }
 
-updateUserFlowchartDataModels();
+void updateUserFlowchartDataModels();

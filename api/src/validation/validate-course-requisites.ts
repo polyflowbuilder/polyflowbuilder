@@ -6,23 +6,23 @@ import { requisiteValidationSchema } from '../schema/reqSchema';
 import type { APICourse, CourseRequisite } from '@prisma/client';
 
 // seutp data
-export const catalogYears: string[] = JSON.parse(
+export const catalogYears = JSON.parse(
   fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-);
+) as string[];
 export const allCourseData: APICourse[] = [];
 for (const cYear of catalogYears) {
-  const courseData: APICourse[] = JSON.parse(
+  const courseData = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/courses/${cYear}/${cYear}.json`, 'utf8')
-  );
+  ) as APICourse[];
   allCourseData.push(...courseData);
 }
 
 function validateCatalogCourseRequisites(catalog: string) {
   // read in req data
   console.log('validating course requisites for catalog', catalog, '\n');
-  const reqCourseData: CourseRequisite[] = JSON.parse(
+  const reqCourseData = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/courses/${catalog}/${catalog}-req.json`, 'utf8')
-  );
+  ) as CourseRequisite[];
 
   // do validations
   let validationErrorCount = 0;

@@ -54,12 +54,12 @@ export function extractPDFDataFromFlowchart(flowchart: Flowchart): FlowchartPDFD
             (cacheEntry) =>
               cacheEntry.catalog ===
               getCatalogFromProgramIDIndex(
-                course.programIdIndex || 0,
+                course.programIdIndex ?? 0,
                 flowchart.programId,
                 apiData.programData
               )
           )
-          ?.courses.find((c) => c.id === course.id) || null;
+          ?.courses.find((c) => c.id === course.id) ?? null;
 
       termData.tData.push(computeCourseDisplayValues(course, courseMetadata, false));
     });

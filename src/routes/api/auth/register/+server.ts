@@ -3,13 +3,12 @@ import { createUser } from '$lib/server/db/user';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { registerValidationSchema } from '$lib/server/schema/registerSchema';
 import type { RequestHandler } from '@sveltejs/kit';
-import type { UserRegistrationData } from '$lib/server/schema/registerSchema';
 
 const logger = initLogger('APIRouteHandler (/api/auth/register');
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const data = (await request.json()) as UserRegistrationData;
+    const data = (await request.json()) as unknown;
 
     // validation
     const parseResults = registerValidationSchema.safeParse(data);

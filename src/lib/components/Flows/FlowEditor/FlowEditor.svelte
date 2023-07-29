@@ -20,7 +20,7 @@
   let termsContainerScroll = 0;
   let termsContainerClientWidth = 0;
   let termsContainerScrollWidth = 0;
-  let termsContainer: Element;
+  let termsContainer: Element | undefined;
 
   $: scrollable = termsContainerScrollWidth > termsContainerClientWidth;
   $: enableLeftScrollArrow = scrollable && termsContainerScroll > 0;
@@ -36,6 +36,22 @@
       termsContainerScrollWidth = termsContainer.scrollWidth;
     }
   });
+
+  function leftScrollArrowClickEventHandler() {
+    if (termsContainer) {
+      termsContainer.scrollLeft -= TERM_CONTAINER_WIDTH_PX;
+    }
+  }
+  function rigthScrollArrowClickEventHandler() {
+    if (termsContainer) {
+      termsContainer.scrollLeft += TERM_CONTAINER_WIDTH_PX;
+    }
+  }
+  function scrollEventHandler() {
+    if (termsContainer) {
+      termsContainerScroll = termsContainer.scrollLeft;
+    }
+  }
 
   // TODO: test later that any flow updates don't reset the scroll
   // scroll should only reset when a flow is changed
@@ -62,8 +78,8 @@
       name={flowchart.name}
       {enableLeftScrollArrow}
       {enableRightScrollArrow}
-      on:leftScrollArrowClick={() => (termsContainer.scrollLeft -= TERM_CONTAINER_WIDTH_PX)}
-      on:rightScrollArrowClick={() => (termsContainer.scrollLeft += TERM_CONTAINER_WIDTH_PX)}
+      on:leftScrollArrowClick={leftScrollArrowClickEventHandler}
+      on:rightScrollArrowClick={rigthScrollArrowClickEventHandler}
     />
   </div>
   <!-- bind here bc if we bind width in child element below centering of term containers breaks -->
@@ -71,7 +87,7 @@
     <div
       class="h-full flex border-2 overflow-x-scroll border-slate-400"
       bind:this={termsContainer}
-      on:scroll={() => (termsContainerScroll = termsContainer.scrollLeft)}
+      on:scroll={scrollEventHandler}
     >
       {#if flowchart.termData.slice(1).length}
         {#each displayedTermData as term}

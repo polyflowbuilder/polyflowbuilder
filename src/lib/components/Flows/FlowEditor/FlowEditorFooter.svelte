@@ -94,7 +94,9 @@
     observer.observe(groupUnitElem);
     observer.observe(totalUnitElem);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   });
 </script>
 

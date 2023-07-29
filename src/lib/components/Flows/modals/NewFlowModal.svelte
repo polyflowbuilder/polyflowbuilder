@@ -38,8 +38,6 @@
   let loading = false;
 
   async function createFlowchart() {
-    let reqSuccess = true;
-
     if (loading) {
       return;
     }
@@ -53,59 +51,60 @@
       removeGECourses: String(removeGECourses)
     };
     const searchParams = new URLSearchParams(payload);
-    const res: {
-      generatedFlowchart: Flowchart;
-      courseCache: CourseCache[];
-    } = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`).then((resp) => {
-      switch (resp.status) {
-        case 200:
-          return resp.json();
-        case 401:
-          alert(
-            'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
-          );
-          reqSuccess = false;
-          break;
-        default:
-          alert(
-            'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
-          );
-          reqSuccess = false;
-          break;
+
+    const resp = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    switch (resp.status) {
+      case 200: {
+        const respJson = (await resp.json()) as {
+          generatedFlowchart: Flowchart;
+          courseCache: CourseCache[];
+        };
+        persistNewFlowchart(respJson);
+        break;
       }
-      return;
-    });
-    if (reqSuccess) {
-      // TODO: empty flowchart case
-      const newCourseCache = $courseCache;
-      res.courseCache.forEach((courseCacheEntry, i) => {
-        // TODO: optimize by making course cache a set!
-        newCourseCache[i].courses = Array.from(
-          new Set([...newCourseCache[i].courses, ...courseCacheEntry.courses])
+      case 401:
+        alert(
+          'The request to create a new flowchart was unauthenticated. Please refresh the page and try again.'
         );
-      });
-      $courseCache = newCourseCache;
-
-      // persist creation update
-      submitUserDataUpdateChunk({
-        type: UserDataUpdateChunkType.FLOW_UPSERT_ALL,
-        data: {
-          flowchart: res.generatedFlowchart,
-          pos: $userFlowcharts.length
-        }
-      });
-
-      // select the flowchart
-      // need to do timeout since the updates are applied after chunk delay time
-      setTimeout(() => {
-        $selectedFlowIndex = $userFlowcharts.length - 1;
-      }, UPDATE_CHUNK_DELAY_TIME_MS);
-
-      // close modal on success
-      closeModal();
+        break;
+      default:
+        alert(
+          'An error occurred while trying to create a new flowchart. Please refresh the page, and submit a bug report if this error persists.'
+        );
+        break;
     }
 
     loading = false;
+  }
+
+  function persistNewFlowchart(res: { generatedFlowchart: Flowchart; courseCache: CourseCache[] }) {
+    // TODO: empty flowchart case
+    const newCourseCache = $courseCache;
+    res.courseCache.forEach((courseCacheEntry, i) => {
+      // TODO: optimize by making course cache a set!
+      newCourseCache[i].courses = Array.from(
+        new Set([...newCourseCache[i].courses, ...courseCacheEntry.courses])
+      );
+    });
+    $courseCache = newCourseCache;
+
+    // persist creation update
+    submitUserDataUpdateChunk({
+      type: UserDataUpdateChunkType.FLOW_UPSERT_ALL,
+      data: {
+        flowchart: res.generatedFlowchart,
+        pos: $userFlowcharts.length
+      }
+    });
+
+    // select the flowchart
+    // need to do timeout since the updates are applied after chunk delay time
+    setTimeout(() => {
+      $selectedFlowIndex = $userFlowcharts.length - 1;
+    }, UPDATE_CHUNK_DELAY_TIME_MS);
+
+    // close modal on success
+    void closeModal();
   }
 
   async function closeModal() {
@@ -123,6 +122,16 @@
     await tick();
     programIdInputs = [''];
   }
+
+  // TODO: cannot have typescript in markup, so need separate function with unknown type
+  // see https://github.com/sveltejs/svelte/issues/4701
+  // see https://stackoverflow.com/questions/63337868/svelte-typescript-unexpected-tokensvelteparse-error-when-adding-type-to-an-ev
+  function flowProgramIdsUpdateEventHandler(e: CustomEvent<string[]>) {
+    programIds = e.detail;
+  }
+  function optionsValidUpdateEventHandler(e: CustomEvent<boolean>) {
+    createFlowOptionsValid = e.detail;
+  }
 </script>
 
 <dialog use:modal={newFlowModalOpen} class="modal">
@@ -139,8 +148,8 @@
         {catalogYearsData}
         {programData}
         {programIdInputs}
-        on:flowProgramIdsUpdate={(e) => (programIds = e.detail)}
-        on:optionsValidUpdate={(e) => (createFlowOptionsValid = e.detail)}
+        on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
+        on:optionsValidUpdate={optionsValidUpdateEventHandler}
       />
 
       <h3 class="select-none">Flow Generation Options:</h3>
@@ -157,7 +166,7 @@
         disabled={!createFlowOptionsValid}
         on:click={createFlowchart}
       >
-        <span class={loading ? 'loading loading-spinner' : ''}/>
+        <span class={loading ? 'loading loading-spinner' : ''} />
         Create
       </button>
       <div class="divider divider-horizontal" />

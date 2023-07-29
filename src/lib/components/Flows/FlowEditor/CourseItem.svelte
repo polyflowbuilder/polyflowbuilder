@@ -22,6 +22,7 @@
 
 <!-- TODO: investigate accessibility of tooltip -->
 <!-- TODO: address accessibility -->
+<!-- TODO: look into whether aria role + tabindex is correct -->
 <!-- 
   exact width and height controlled by MutableForEachContainer to make sure
   selection containers are correct
@@ -32,6 +33,9 @@
   class:selected={item.metadata.selected}
   style="background-color: {color}"
   on:click={onCourseItemClick}
+  role="treeitem"
+  aria-selected="false"
+  tabindex="-1"
   use:tooltip={item.tooltipParams}
 >
   <h6 class="font-semibold multilineText mb-1">

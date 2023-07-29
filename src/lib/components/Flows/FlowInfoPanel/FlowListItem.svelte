@@ -8,7 +8,7 @@
 
   export let item: FlowListItemData;
 
-  let elem: Element;
+  let elem: Element | undefined;
 
   // selection logic & UI
   $: selected = $selectedFlowIndex === item.idx;
@@ -37,8 +37,17 @@
 </script>
 
 <!-- TODO: add keyboard support, might be weird due to svelte-dnd-action accessibility -->
+<!-- TODO: see if the aria-role is correct -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="card" class:selected on:click={handleClick} bind:this={elem}>
+<div
+  class="card"
+  class:selected
+  on:click={handleClick}
+  role="treeitem"
+  aria-selected="false"
+  tabindex="-1"
+  bind:this={elem}
+>
   <div class="card-body text-center">
     <span class="text-base select-none w-[90%] break-words">
       {item.name}

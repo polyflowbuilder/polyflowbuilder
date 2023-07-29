@@ -13,13 +13,11 @@ export const apiRoot = `${__dirname}/../../../api`;
 
 // recursively return all files in directory asynchronously
 export async function* getFiles(dir: string): AsyncGenerator<string> {
-  const { resolve } = path;
-  const { readdir } = fs.promises;
-  const dirents = await readdir(dir, { withFileTypes: true });
+  const dirents = await fs.promises.readdir(dir, { withFileTypes: true });
 
-  for (let i = 0; i < dirents.length; i += 1) {
-    const res = resolve(dir, dirents[i].name);
-    if (dirents[i].isDirectory()) {
+  for (const dirent of dirents) {
+    const res = path.resolve(dir, dirent.name);
+    if (dirent.isDirectory()) {
       yield* getFiles(res);
     } else {
       yield res;

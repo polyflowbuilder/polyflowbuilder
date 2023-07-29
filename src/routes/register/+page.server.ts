@@ -1,8 +1,14 @@
+/* eslint-disable @typescript-eslint/no-throw-literal */
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
+import type { z } from 'zod';
 import type { Actions } from '@sveltejs/kit';
-import type { UserRegistrationData } from '$lib/server/schema/registerSchema';
+import type { PageServerLoad } from './$types';
+import type {
+  UserRegistrationData,
+  registerValidationSchema
+} from '$lib/server/schema/registerSchema';
 
 const logger = initLogger('ServerRouteHandler (/register');
 
@@ -25,44 +31,45 @@ export const actions: Actions = {
           break;
         }
         case 400: {
-          const resBody = await res.json();
+          const resBody = (await res.json()) as {
+            message: string;
+            validationErrors?: z.inferFlattenedErrors<
+              typeof registerValidationSchema
+            >['fieldErrors'];
+          };
           if (resBody.message === 'An account with this email already exists.') {
             return fail(400, {
-              success: false,
-              userExists: true,
               data: {
+                userExists: true,
                 username: data.username,
-                email: data.email
+                email: data.email,
+                // need this explicitly to ensure types are inferred correctly
+                registerValidationErrors: undefined
               }
             });
           } else {
             return fail(400, {
-              success: false,
               data: {
-                username: data?.username,
-                email: data?.email
-              },
-              registerValidationErrors: resBody.validationErrors
+                // need this explicitly to ensure types are inferred correctly
+                userExists: undefined,
+                username: data.username,
+                email: data.email,
+                registerValidationErrors: resBody.validationErrors
+              }
             });
           }
         }
         case 500: {
-          return fail(500, {
-            error: true
-          });
+          return fail(500);
         }
         default: {
           logger.error('Unexpected response code received:', res.status);
-          return fail(500, {
-            error: true
-          });
+          return fail(500);
         }
       }
     } catch (error) {
       logger.error('an internal error occurred', error);
-      return fail(500, {
-        error: true
-      });
+      return fail(500);
     }
 
     // will only make it here if registration was successful
@@ -71,6 +78,6 @@ export const actions: Actions = {
   }
 };
 
-export const load = (event) => {
+export const load: PageServerLoad = (event) => {
   redirectIfAuthenticated(event);
 };

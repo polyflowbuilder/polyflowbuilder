@@ -1,11 +1,13 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
+  import { page } from '$app/stores';
   import { faUser } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
   import { AlertError, AlertSuccess } from '$lib/components/common';
+  import type { ActionData, PageData } from './$types';
 
-  export let form;
-  export let data;
+  export let data: PageData;
+  export let form: ActionData;
 
   let loading = false;
   let resetText = 'Submit Password Reset Request';
@@ -26,7 +28,7 @@
         />
       {/if}
 
-      {#if data?.cameFromResetPassword}
+      {#if data.cameFromResetPassword}
         <AlertError
           text="The provided password reset link has expired or is incorrect. Please try the reset
       process again."
@@ -34,7 +36,7 @@
         />
       {/if}
 
-      {#if form?.error}
+      {#if $page.status === 500}
         <AlertError
           text="An error occurred when sending the password reset request. Please try again a bit
       later."
@@ -52,10 +54,12 @@
         use:enhance={() => {
           loading = true;
           resetText = 'Submitting Password Reset Request ...';
-          return async ({ update }) => {
-            loading = false;
-            resetText = 'Submit Password Reset Request';
-            await update();
+          return ({ update }) => {
+            void (async () => {
+              loading = false;
+              resetText = 'Submit Password Reset Request';
+              await update();
+            })();
           };
         }}
       >
@@ -73,18 +77,14 @@
               required
             />
           </label>
-          {#if form?.forgotPasswordValidationErrors?.email}
+          {#if form?.data?.forgotPasswordValidationErrors.email}
             <small id="emailError" class="text-red-600 label label-text-alt"
-              >{form?.forgotPasswordValidationErrors?.email[0]}</small
+              >{form.data.forgotPasswordValidationErrors.email[0]}</small
             >
           {/if}
 
-          <button
-            class="btn btn-accent btn-block mt-6"
-            disabled={loading}
-            type="submit"
-          >
-            <span class={loading ? 'loading loading-spinner' : ''}/>
+          <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
+            <span class={loading ? 'loading loading-spinner' : ''} />
             {resetText}
           </button>
         </div>

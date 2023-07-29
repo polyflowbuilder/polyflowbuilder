@@ -1,6 +1,6 @@
 import type { ValidationDataFull } from './flowchartValidationTypes';
 
-type UserCourse = {
+interface UserCourse {
   cID: string | null;
   cardColor: string;
 
@@ -9,19 +9,19 @@ type UserCourse = {
   cCustomUnits?: string;
   cCustomNote?: string;
   cProgramIDIndex?: number; // for multiple program support
-};
+}
 
-type UserTerm = {
+interface UserTerm {
   tIndex: number;
   tUnits: string; // b/c we can have ranged units
   classes: UserCourse[];
-};
+}
 
 type UserValidationData = ValidationDataFull & {
   timestamp: string;
 };
 
-type Flowchart = {
+interface Flowchart {
   flowName: string;
   flowId: string[]; // array of program IDs
   flowStartYear: string;
@@ -33,16 +33,16 @@ type Flowchart = {
   validationData?: UserValidationData;
   publishedID: string | null;
   importedID: string | null;
-};
+}
 
-type UserData = {
+interface UserData {
   flows: Flowchart[];
   notifs: string[];
-};
+}
 
 // user data object representation on frontend
-type User = {
+export interface User {
   username: string;
   email: string;
   data: UserData;
-};
+}

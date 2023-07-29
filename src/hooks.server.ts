@@ -17,7 +17,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 };
 
 async function setSession(event: RequestEvent) {
-  const sessionId = event.cookies.get('sId') || '';
+  const sessionId = event.cookies.get('sId') ?? '';
   const sessionUser = await getValidTokenUser(sessionId, 'SESSION');
   if (sessionUser) {
     event.locals.session = {

@@ -76,7 +76,7 @@ test.describe('reset password routine tests', () => {
         waitUntil: 'networkidle'
       }
     );
-    expect(page).toHaveURL(/.*resetpassword/);
+    await expect(page).toHaveURL(/.*resetpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
 

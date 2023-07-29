@@ -41,7 +41,10 @@
   </button>
 
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <ul tabindex="0" class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]">
+  <ul
+    tabindex="0"
+    class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]"
+  >
     <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
     <li>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
@@ -85,24 +88,26 @@
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
       <a
         href={'#'}
-        on:click|preventDefault={() =>
+        on:click|preventDefault={() => {
           deleteSelectedCourses(
             $userFlowcharts[$selectedFlowIndex]?.id,
             $userFlowcharts[$selectedFlowIndex]?.termData,
             $selectedCourses
-          )}>Delete Selected Courses</a
+          );
+        }}>Delete Selected Courses</a
       >
     </li>
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
       <a
         href={'#'}
-        on:click|preventDefault={() =>
+        on:click|preventDefault={() => {
           colorSelectedCourses(
             $userFlowcharts[$selectedFlowIndex]?.id,
             $userFlowcharts[$selectedFlowIndex]?.termData,
             $selectedCourses,
             $selectedColor
-          )}>Colorize Selected Courses</a
+          );
+        }}>Colorize Selected Courses</a
       >
     </li>
     <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
@@ -114,9 +119,9 @@
     <li>
       <a
         href={'#'}
-        on:click|preventDefault={() =>
-          duplicateFlowchart($userFlowcharts[$selectedFlowIndex], $userFlowcharts.length)}
-        >Duplicate Flow</a
+        on:click|preventDefault={() => {
+          duplicateFlowchart($userFlowcharts[$selectedFlowIndex], $userFlowcharts.length);
+        }}>Duplicate Flow</a
       >
     </li>
     <FlowInfoPanelActionsGeneratePDF />

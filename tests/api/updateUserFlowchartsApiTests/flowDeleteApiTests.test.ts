@@ -5,9 +5,17 @@ import { performLoginBackend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes.js';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types/apiDataTypes.js';
 
 const FLOW_DELETE_TESTS_API_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_DELETE_playwright@test.com';
+
+// see API route for expected return type
+interface GetUserFlowchartsExpectedReturnType {
+  message: string;
+  flowcharts: Flowchart[];
+  courseCache: CourseCache[] | undefined;
+}
 
 test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
@@ -119,9 +127,9 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
     // perform GET and expect flowchart to exist
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowRes.status()).toBe(200);
-    const initFlowsResJSON = await initFlowRes.json();
+    const initFlowsResJSON = (await initFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const initFlowcharts: Flowchart[] = initFlowsResJSON.flowcharts;
-    expect(initFlowsResJSON.message as string).toEqual('User flowchart retrieval successful.');
+    expect(initFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(initFlowcharts.length).toBe(1);
     expect(initFlowcharts[0].id).toBe(flowId);
 
@@ -148,11 +156,10 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
     // now check to verify that the flowchart is deleted
     const afterDeleteFlowRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(afterDeleteFlowRes.status()).toBe(200);
-    const afterDeleteFlowsResJSON = await afterDeleteFlowRes.json();
+    const afterDeleteFlowsResJSON =
+      (await afterDeleteFlowRes.json()) as GetUserFlowchartsExpectedReturnType;
     const afterDeleteFlowcharts: Flowchart[] = afterDeleteFlowsResJSON.flowcharts;
-    expect(afterDeleteFlowsResJSON.message as string).toEqual(
-      'User flowchart retrieval successful.'
-    );
+    expect(afterDeleteFlowsResJSON.message).toEqual('User flowchart retrieval successful.');
     expect(afterDeleteFlowcharts.length).toBe(0);
   });
 });

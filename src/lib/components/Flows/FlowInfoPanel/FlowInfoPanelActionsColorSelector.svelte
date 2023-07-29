@@ -6,9 +6,9 @@
   import type Pickr from '@simonwep/pickr';
 
   // color selector state
-  let openColorSelectorButton: HTMLElement;
+  let openColorSelectorButton: HTMLElement | undefined;
   let colorPicker: Pickr;
-  let PickrObject: typeof Pickr;
+  let PickrObject: typeof Pickr | undefined;
 
   onMount(async () => {
     // have to dynamically import or else we get a 'self is not defined' error (SSR related)
@@ -16,15 +16,16 @@
     PickrObject = PickrModule.default;
   });
 
-  $: {
-    if (PickrObject) {
-      colorPicker?.destroy();
-      initColorPicker(openColorSelectorButton);
-    }
-  }
+  $: initColorPicker(PickrObject, openColorSelectorButton);
 
-  function initColorPicker(node: HTMLElement) {
-    const pickr = new PickrObject({
+  function initColorPicker(pickrObject: typeof PickrObject, node: HTMLElement | undefined) {
+    if (!pickrObject || !node) {
+      return;
+    }
+
+    // TODO: POLY-590
+    // colorPicker.destroy();
+    colorPicker = new pickrObject({
       el: node,
       useAsButton: true,
       default: $selectedColor,
@@ -53,7 +54,7 @@
     }).on('save', (color: Pickr.HSVaColor) => {
       const colorHex = color.toHEXA().toString();
       selectedColor.set(colorHex);
-      pickr.hide();
+      colorPicker.hide();
 
       // so that when we use keyboard shortcuts to color a specific course
       // after picking one from Pickr, it doesn't focus on the pickr 'save & close' button,

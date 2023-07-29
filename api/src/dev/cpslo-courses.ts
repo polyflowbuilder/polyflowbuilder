@@ -36,7 +36,7 @@ async function getAllProgramLinks(root: string): Promise<string[]> {
   const dom = new JSDOM(text);
   const parentTable = dom.window.document.querySelectorAll('.sitemaplink');
 
-  for (const tElement of Array.from(parentTable) as Element[]) {
+  for (const tElement of Array.from(parentTable)) {
     // grab href to get full link
     const namedItem = tElement.attributes.getNamedItem('href');
     if (namedItem) {
@@ -71,7 +71,7 @@ async function getAllCoursesCatalog(
     console.log(`prefix is ${prefix}`);
 
     const courseBlocks = dom.window.document.querySelectorAll('.courseblock');
-    for (const courseBlock of Array.from(courseBlocks) as Element[]) {
+    for (const courseBlock of Array.from(courseBlocks)) {
       // grab course ID and display name; not optimal as we're relying on
       // HTML formatting on unknown webpage that may change in future, breaking this!
       const courseIdSelector = courseBlock.querySelector('.courseblocktitle > strong')?.textContent;
@@ -158,4 +158,4 @@ async function buildCourseDataAllCatalogYears() {
 }
 
 // how to run: (in dev dir) "ts-node-esm cpslo-courses.ts"
-buildCourseDataAllCatalogYears();
+void buildCourseDataAllCatalogYears();

@@ -35,9 +35,9 @@ export function mutateUserFlowcharts(
             errors.push(
               `Unable to find flowchart ${
                 flowPosEntry.id
-              } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData.map(
-                ({ flowchart }) => flowchart.id
-              )}]`
+              } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData
+                .map(({ flowchart }) => flowchart.id)
+                .join(',')}]`
             );
             break;
           }
@@ -75,9 +75,9 @@ export function mutateUserFlowcharts(
           errors.push(
             `Unable to find flowchart ${
               chunk.data.id
-            } referenced in flowPosEntry for FLOW_DELETE update chunk from provided flowchart list [${newUserFlowchartsData.map(
-              ({ flowchart }) => flowchart.id
-            )}]`
+            } referenced in flowPosEntry for FLOW_DELETE update chunk from provided flowchart list [${newUserFlowchartsData
+              .map(({ flowchart }) => flowchart.id)
+              .join(',')}]`
           );
           break;
         }
@@ -91,19 +91,20 @@ export function mutateUserFlowcharts(
         const flowDataArrIdx = newUserFlowchartsData.findIndex(
           (flowData) => flowData.flowchart.id === chunk.data.id
         );
-        const flowData = newUserFlowchartsData[flowDataArrIdx]?.flowchart;
 
         // need to validate as user may pass bad ids
-        if (!flowData) {
+        if (flowDataArrIdx === -1) {
           errors.push(
             `Unable to find flowchart ${
               chunk.data.id
-            } referenced in flowPosEntry for FLOW_TERM_MOD update chunk from provided flowchart list [${newUserFlowchartsData.map(
-              ({ flowchart }) => flowchart.id
-            )}]`
+            } referenced in flowPosEntry for FLOW_TERM_MOD update chunk from provided flowchart list [${newUserFlowchartsData
+              .map(({ flowchart }) => flowchart.id)
+              .join(',')}]`
           );
           break;
         }
+
+        const flowData = newUserFlowchartsData[flowDataArrIdx]?.flowchart;
 
         // build the new term data from term diff received
         let encounteredError = false;
@@ -124,7 +125,7 @@ export function mutateUserFlowcharts(
           break;
         }
 
-        chunk.data.termData.forEach((courseDiff) => {
+        for (const courseDiff of chunk.data.termData) {
           if (courseDiff.from === UserDataUpdateChunkTERM_MODCourseDataFrom.NEW) {
             // insert new course data if new
             newTermData.courses.push(courseDiff.data);
@@ -138,12 +139,12 @@ export function mutateUserFlowcharts(
                 `Unable to find existing course at position [${courseDiff.data.tIndex}, ${courseDiff.data.cIndex}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
               );
               encounteredError = true;
-              return;
+              continue;
             }
 
             newTermData.courses.push(course);
           }
-        });
+        }
 
         // only finish update if we didn't run into errors on building course data
         if (!encounteredError) {
@@ -171,9 +172,9 @@ export function mutateUserFlowcharts(
           errors.push(
             `Unable to find flowchart ${
               chunk.data.id
-            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData.map(
-              ({ flowchart }) => flowchart.id
-            )}]`
+            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData
+              .map(({ flowchart }) => flowchart.id)
+              .join(',')}]`
           );
           break;
         }
@@ -198,9 +199,9 @@ export function mutateUserFlowcharts(
           errors.push(
             `Unable to find flowchart ${
               chunk.data.id
-            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData.map(
-              ({ flowchart }) => flowchart.id
-            )}]`
+            } referenced in flowPosEntry for FLOW_LIST_CHANGE update chunk from provided flowchart list [${newUserFlowchartsData
+              .map(({ flowchart }) => flowchart.id)
+              .join(',')}]`
           );
           break;
         }

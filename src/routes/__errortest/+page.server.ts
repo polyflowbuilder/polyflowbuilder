@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-throw-literal */
 import { error } from '@sveltejs/kit';
 
 // route purely for testing error handling
 export const load = () => {
-  if (process.env['NODE_ENV'] === 'test') {
+  if (process.env.NODE_ENV === 'test') {
     throw error(500, {
       message: 'Internal Error'
     });

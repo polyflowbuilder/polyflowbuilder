@@ -1,21 +1,21 @@
 // TODO: remove and just use ComputedCourseItemDisplayData?
-export type FlowchartPDFCourseData = {
+export interface FlowchartPDFCourseData {
   idName: string;
   displayName: string;
   color: string;
   units: string;
-};
+}
 
-export type FlowchartPDFTermData = {
+export interface FlowchartPDFTermData {
   tName: string;
   tUnits: string;
   tData: FlowchartPDFCourseData[];
-};
+}
 
-export type FlowchartPDFData = {
+export interface FlowchartPDFData {
   name: string;
   programStringFriendly: string;
   unitTotal: string;
   notes: string;
   data: FlowchartPDFTermData[];
-};
+}

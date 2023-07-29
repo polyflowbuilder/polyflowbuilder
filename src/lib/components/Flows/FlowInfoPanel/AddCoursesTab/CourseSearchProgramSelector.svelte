@@ -25,7 +25,7 @@
         <option disabled value={-1}>Select a Flowchart</option>
       {/if}
 
-      {#each $userFlowcharts[$selectedFlowIndex]?.programId || [] as _, i}
+      {#each $userFlowcharts[$selectedFlowIndex]?.programId ?? [] as _, i}
         <option value={i}>{createSearchFlowProgramSelectorFriendlyName(i)}</option>
       {/each}
     </select>
@@ -39,7 +39,7 @@
   }
 
   .group-input-sm {
-    font-size: 0.875rem;  /* 14px */
-    line-height: 2rem;    /* 32px */
+    font-size: 0.875rem; /* 14px */
+    line-height: 2rem; /* 32px */
   }
 </style>

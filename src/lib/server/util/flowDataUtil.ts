@@ -34,6 +34,7 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlo
     // Prisma schema marked as Date|null, but only bc it can be left out
     // when passing flowchart update data - the actual date will always
     // be present in the DB, so safe to make this typecast
+    // eslint-disable-next-line @typescript-eslint/non-nullable-type-assertion-style
     lastUpdatedUTC: flowchart.lastUpdatedUTC as Date,
     ...(validationData && { validationData })
   };
@@ -91,15 +92,13 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
 
   // process options
   if (data.removeGECourses) {
-    for (let i = 0; i < generatedFlowchart.termData.length; i += 1) {
-      const origCourseCount = generatedFlowchart.termData[i].courses.length;
-      generatedFlowchart.termData[i].courses = generatedFlowchart.termData[i].courses.filter(
-        (c) => !COLORS.ge.includes(c.color)
-      );
+    for (const term of generatedFlowchart.termData) {
+      const origCourseCount = term.courses.length;
+      term.courses = term.courses.filter((c) => !COLORS.ge.includes(c.color));
       // recompute term units on change
-      if (generatedFlowchart.termData[i].courses.length !== origCourseCount) {
-        generatedFlowchart.termData[i].tUnits = computeTermUnits(
-          generatedFlowchart.termData[i].courses,
+      if (term.courses.length !== origCourseCount) {
+        term.tUnits = computeTermUnits(
+          term.courses,
           generatedFlowchart.programId,
           apiData.courseData,
           apiData.programData

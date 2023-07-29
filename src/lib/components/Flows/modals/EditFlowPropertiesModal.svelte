@@ -21,7 +21,8 @@
   let flowPropertiesValid = false;
   let flowNotes = '';
 
-  $: selectedFlowchart = $userFlowcharts[$selectedFlowIndex];
+  // add the optional type bc not inferred
+  $: selectedFlowchart = $userFlowcharts[$selectedFlowIndex] as Flowchart | undefined;
   $: onFlowchartChange(selectedFlowchart);
 
   function onFlowchartChange(flowchart: Flowchart | undefined) {
@@ -38,15 +39,19 @@
 
   $: changesMade =
     flowName !== selectedFlowchart?.name ||
-    flowStartYear !== selectedFlowchart?.startYear ||
-    selectedFlowchart?.programId.join(',') !== flowProgramIds.join(',') ||
-    selectedFlowchart?.notes !== flowNotes;
+    flowStartYear !== selectedFlowchart.startYear ||
+    selectedFlowchart.programId.join(',') !== flowProgramIds.join(',') ||
+    selectedFlowchart.notes !== flowNotes;
 
   $: changesValid = changesMade && flowPropertiesValid;
 
   // use a FLOW_UPSERT_ALL update chunk instead of a more specific one
   // so that we can support program changes in the future
   function updateFlowchartProperties() {
+    if (!selectedFlowchart) {
+      throw new Error('selectedFlowchart undefined on updateFlowchartProperties');
+    }
+
     const newFlowchart = structuredClone(selectedFlowchart);
     newFlowchart.name = flowName;
     newFlowchart.startYear = flowStartYear;
@@ -60,7 +65,7 @@
       }
     });
 
-    closeModal();
+    void closeModal();
   }
 
   async function closeModal() {
@@ -75,6 +80,16 @@
     await tick();
 
     onFlowchartChange($userFlowcharts[$selectedFlowIndex]);
+  }
+
+  // TODO: cannot have typescript in markup, so need separate function with unknown type
+  // see https://github.com/sveltejs/svelte/issues/4701
+  // see https://stackoverflow.com/questions/63337868/svelte-typescript-unexpected-tokensvelteparse-error-when-adding-type-to-an-ev
+  function flowProgramIdsUpdateEventHandler(e: CustomEvent<string[]>) {
+    flowProgramIds = e.detail;
+  }
+  function optionsValidUpdateEventHandler(e: CustomEvent<boolean>) {
+    flowPropertiesValid = e.detail;
   }
 </script>
 
@@ -91,8 +106,8 @@
       catalogYearsData={$catalogYearsData}
       programData={$programData}
       programIdInputs={flowProgramIdInputs}
-      on:flowProgramIdsUpdate={(e) => (flowProgramIds = e.detail)}
-      on:optionsValidUpdate={(e) => (flowPropertiesValid = e.detail)}
+      on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
+      on:optionsValidUpdate={optionsValidUpdateEventHandler}
     />
 
     <div class="label">

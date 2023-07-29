@@ -24,12 +24,12 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     // preprocess input payload by reconstructing object properties that are required
     // in the validation schema. these properties are serialized when sent over the network
     // so they need to be reconstructed in their original object form for validation to pass
-    const data = await request.json();
+    const data = (await request.json()) as Record<string, unknown>;
     applyTransformToNestedObjectProperties(
       data,
       'lastUpdatedUTC',
       (_, v) => typeof v === 'string',
-      (d) => new Date(d)
+      (d) => new Date(d as string)
     );
 
     // validation

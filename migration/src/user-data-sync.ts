@@ -25,14 +25,19 @@ async function syncUserData() {
       console.log(`validating data for user ${f}`);
 
       try {
-        const { user: userMetadata, flows: userFlowData } = JSON.parse(fs.readFileSync(f, 'utf8'));
+        const { user: userMetadata, flows: userFlowData } = JSON.parse(
+          fs.readFileSync(f, 'utf8')
+        ) as {
+          user: User;
+          flows: Flowchart[];
+        };
 
         const userDataUpload = {
           user: userMetadata,
-          flows: []
+          flows: [] as DBFlowchart[]
         };
 
-        (userFlowData as Flowchart[]).forEach((flow, idx) => {
+        userFlowData.forEach((flow, idx) => {
           const parseResults = flowchartValidationSchema.safeParse({
             ...flow,
             // deserialize into object for validation
@@ -40,7 +45,7 @@ async function syncUserData() {
           });
 
           // do it this way to fix type error with discriminated union
-          if (parseResults.success === false) {
+          if (!parseResults.success) {
             console.log(
               `user [${userMetadata.username}] flow [${flow.name}] failed validation with the following errors (will be skipped):`,
               parseResults.error.flatten()
@@ -85,4 +90,4 @@ async function syncUserData() {
   console.log('finished syncing user data to db');
 }
 
-syncUserData();
+void syncUserData();

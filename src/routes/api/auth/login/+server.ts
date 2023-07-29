@@ -5,14 +5,13 @@ import { SESSION_MAX_AGE } from '$lib/server/config/envConfig';
 import { loginValidationSchema } from '$lib/server/schema/loginSchema';
 import { upsertToken, clearTokensByEmail } from '$lib/server/db/token';
 import { getUserByEmail, updateUser, deleteUser } from '$lib/server/db/user';
-import type { UserLoginData } from '$lib/server/schema/loginSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/auth/login)');
 
 export const POST: RequestHandler = async ({ request, cookies }) => {
   try {
-    const data = (await request.json()) as UserLoginData;
+    const data = (await request.json()) as unknown;
 
     // validation
     const parseResults = loginValidationSchema.safeParse(data);

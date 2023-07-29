@@ -5,7 +5,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/getAvailableProgramData)');
 
-export const GET: RequestHandler = async () => {
+export const GET: RequestHandler = () => {
   try {
     return json({
       catalogs: apiData.catalogs,

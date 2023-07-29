@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // performs any server-side user data mutation before sending data to client.
 // currently just includes updating flow data model versions before sending to client
 
@@ -13,9 +12,69 @@ import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 const logger = initLogger('Util/UserDataModelSync');
 
+// TODO: put these types into a better place?
+
+// <V6 types
+interface FlowchartV5ModelQuarter {
+  qIndex?: number;
+  qUnits: number;
+  qUnitsMax?: number;
+  classes: {
+    classId: string | null;
+    cardColor: string;
+    cCustomUnits?: string;
+    cCustomCardTitle?: string;
+    cCustomCardDisplayName?: string;
+    cCustomNote?: string;
+  }[];
+}
+
+interface FlowchartV5Model {
+  flowName: string;
+  flowMajor: string;
+  flowConcentration: string;
+  flowStartYear: string;
+  flowCatalogYear: string;
+  flowUnitTotal: string;
+  flowNotes: string;
+  flowHash?: string;
+  dataModelVersion: number;
+  cbData?: FlowchartV5ModelQuarter;
+  data: FlowchartV5ModelQuarter[];
+}
+
+// V6 types
+interface FlowchartV6ModelQuarter {
+  tIndex: number;
+  tUnits: string;
+  classes: {
+    cID: string | null;
+    cardColor: string;
+    cCustomID?: string;
+    cCustomDisplayName?: string;
+    cCustomUnits?: string;
+    cCustomNote?: string;
+    cProgramIDIndex?: number;
+  }[];
+}
+
+// omitting validationData property bc this will not be transferred on model sync
+interface FlowchartV6Model {
+  flowName: string;
+  flowId: string[];
+  flowStartYear: string;
+  flowUnitTotal: string;
+  flowNotes: string;
+  data: FlowchartV6ModelQuarter[];
+  dataModelVersion: number;
+  flowHash: string;
+  publishedID: string | null;
+  importedID: string | null;
+}
+
 export function checkUserFlowchartsDataVersion(
   ownerId: string,
-  userFlowchartsOld: any[]
+  userFlowchartsOld: Record<string, unknown>[]
 ): {
   flowcharts: Flowchart[];
   userDataUpdated: boolean;
@@ -27,14 +86,14 @@ export function checkUserFlowchartsDataVersion(
   for (const flowchart of userFlowchartsOld) {
     if (
       (!flowchart.dataModelVersion && !flowchart.version) ||
-      flowchart.dataModelVersion < dataModelVersion ||
-      flowchart.version < dataModelVersion
+      (flowchart.dataModelVersion as number) < dataModelVersion ||
+      (flowchart.version as number) < dataModelVersion
     ) {
       flowcharts.push(updateFlowchartDataModel(ownerId, flowchart));
       userDataUpdated = true;
       numFlowsUpgraded += 1;
     } else {
-      flowcharts.push(flowchart);
+      flowcharts.push(flowchart as Flowchart);
     }
   }
 
@@ -55,39 +114,49 @@ export function checkUserFlowchartsDataVersion(
   };
 }
 
-export function updateFlowchartDataModel(ownerId: string, flow: any): Flowchart {
-  let newFlowchart: any = flow;
+export function updateFlowchartDataModel(
+  ownerId: string,
+  flow: Record<string, unknown>
+): Flowchart {
+  let newFlowchart = flow;
 
   // <v6 to v6
   while (!newFlowchart.version && newFlowchart.dataModelVersion !== 6) {
-    if (newFlowchart.dataModelVersion < 6) {
+    if ((newFlowchart.dataModelVersion as number) < 6) {
       logger.info(
         'updated flowchart to datamodelversion 6 from version',
         newFlowchart.dataModelVersion
       );
-      newFlowchart = updateFlowchartDataVersionToV6(newFlowchart);
+      // type circus here bc the newFlowchart shape changes significantly
+      newFlowchart = updateFlowchartDataVersionToV6(
+        newFlowchart as unknown as FlowchartV5Model
+      ) as unknown as Record<string, unknown>;
     }
   }
 
   // v6 to v7, do it this way bc we go from dataModelVersion -> version
   if (!newFlowchart.version) {
-    newFlowchart = updateFlowchartDataVersionToV7(ownerId, newFlowchart);
+    // type circus here bc the newFlowchart shape changes significantly
+    newFlowchart = updateFlowchartDataVersionToV7(
+      ownerId,
+      newFlowchart as unknown as FlowchartV6Model
+    );
     logger.info('updated flowchart to version 7');
   }
 
-  newFlowchart.hash = generateFlowHash(newFlowchart);
+  newFlowchart.hash = generateFlowHash(newFlowchart as Flowchart);
 
-  return newFlowchart;
+  return newFlowchart as Flowchart;
 }
 
 // from v6 to v7
-function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
-  const programId = (
-    typeof flow.flowId === 'string' ? [flow.flowId] : (flow.flowId as string[])
-  ).map((code) => apiData.programData.find((prog) => prog.code === code)?.id);
+function updateFlowchartDataVersionToV7(ownerId: string, flow: FlowchartV6Model): Flowchart {
+  const programId = (typeof flow.flowId === 'string' ? [flow.flowId] : flow.flowId).map(
+    (code) => apiData.programData.find((prog) => prog.code === code)?.id
+  );
 
   if (programId.includes(undefined)) {
-    throw new Error(`failed to map all flowId codes to programIds: ${flow.flowId}`);
+    throw new Error(`failed to map all flowId codes to programIds: ${flow.flowId.join(',')}`);
   }
 
   const updatedFlowchart: Flowchart = {
@@ -98,8 +167,8 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
     startYear: flow.flowStartYear,
     unitTotal: flow.flowUnitTotal,
     notes: flow.flowNotes,
-    termData: flow.data.map((term: any) => {
-      const courses = term.classes.map((crs: any) => {
+    termData: flow.data.map((term) => {
+      const courses = term.classes.map((crs) => {
         return {
           id: crs.cID,
           color: crs.cardColor,
@@ -141,7 +210,7 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: any): Flowchart {
 }
 
 // from <v6 to v6
-function updateFlowchartDataVersionToV6(flow: any): any {
+function updateFlowchartDataVersionToV6(flow: FlowchartV5Model): FlowchartV6Model {
   const flowIDCatalogYear = apiData.catalogs
     .find((catalog) => catalog === flow.flowCatalogYear)
     ?.split('-')
@@ -154,7 +223,8 @@ function updateFlowchartDataVersionToV6(flow: any): any {
     );
   }
 
-  const oldFlowData = flow.data;
+  // some prod data has null terms
+  const oldFlowData = flow.data as (FlowchartV5ModelQuarter | null)[];
 
   // require cbdata now
   if (flow.cbData) {
@@ -165,35 +235,35 @@ function updateFlowchartDataVersionToV6(flow: any): any {
     // use old schema so it gets converted properly
     oldFlowData.unshift({
       qIndex: -1,
-      qUnits: '0',
+      qUnits: 0,
       classes: []
     });
   }
 
-  const newFlowData: any[] = [];
-  oldFlowData.forEach((qtrData: any) => {
-    // some prod data has null terms, omit
+  const newFlowData = [] as FlowchartV6Model['data'];
+  oldFlowData.forEach((qtrData) => {
+    // remove null terms
     if (!qtrData) {
       return;
     }
 
-    const tIndex: number = parseInt(qtrData.qIndex);
+    const tIndex: number = parseInt(String(qtrData.qIndex));
     const tUnits: string = qtrData.qUnitsMax
       ? `${qtrData.qUnits}-${qtrData.qUnitsMax}`
       : `${qtrData.qUnits}`;
-    const classes: any[] = [];
+    const classes = [] as FlowchartV6ModelQuarter['classes'];
 
-    qtrData.classes.forEach((cData: any) => {
-      const cDataNew = {
-        ...cData,
-        cID: cData.classId,
-        cardColor: RGBToHex(cData.cardColor),
-        cCustomID: cData.cCustomCardTitle,
-        cCustomDisplayName: cData.cCustomCardDisplayName
-      };
-      delete cDataNew.classId;
-      delete cDataNew.cCustomCardTitle;
-      delete cDataNew.cCustomCardDisplayName;
+    qtrData.classes.forEach((cData) => {
+      const cDataNew = deleteObjectProperties(
+        {
+          ...cData,
+          cID: cData.classId,
+          cardColor: RGBToHex(cData.cardColor),
+          cCustomID: cData.cCustomCardTitle,
+          cCustomDisplayName: cData.cCustomCardDisplayName
+        },
+        ['classId', 'cCustomCardTitle', 'cCustomCardDisplayName']
+      ) as FlowchartV6ModelQuarter['classes'][0];
 
       // to force custom courses to have a cCustomID
       if (!cDataNew.cID && !cDataNew.cCustomID) {
@@ -201,7 +271,7 @@ function updateFlowchartDataVersionToV6(flow: any): any {
       }
 
       // some prod data has backwards min-max unit counts, flip em
-      if (cDataNew.cCustomUnits && cDataNew.cCustomUnits.includes('-')) {
+      if (cDataNew.cCustomUnits?.includes('-')) {
         const parts = cDataNew.cCustomUnits.split('-');
         if (Number(parts[0]) > Number(parts[1])) {
           cDataNew.cCustomUnits = `${parts[1]}-${parts[0]}`;
@@ -218,7 +288,7 @@ function updateFlowchartDataVersionToV6(flow: any): any {
     });
   });
 
-  const flowchartV6: any = {
+  const flowchartV6 = {
     flowName: String(flow.flowName),
     flowId: [
       `${flowIDCatalogYear}.${flow.flowMajor}${
@@ -227,12 +297,12 @@ function updateFlowchartDataVersionToV6(flow: any): any {
     ],
     flowStartYear: String(flow.flowStartYear),
     flowUnitTotal: String(flow.flowUnitTotal),
-    flowNotes: String(flow.flowNotes ?? ''),
+    flowNotes: String(flow.flowNotes || ''),
     data: newFlowData,
     publishedID: null,
     importedID: null,
     dataModelVersion: 6
-  };
+  } as FlowchartV6Model;
   // purge validation data, force regeneration
 
   return flowchartV6;
@@ -240,7 +310,7 @@ function updateFlowchartDataVersionToV6(flow: any): any {
 
 function RGBToHex(rgb: string): string {
   // Choose correct separator
-  const sep = rgb.indexOf(',') > -1 ? ',' : ' ';
+  const sep = rgb.includes(',') ? ',' : ' ';
   // Turn "rgb(r,g,b)" into [r,g,b]
   const rgbArr = rgb.substring(4).split(')')[0].split(sep);
 
@@ -253,4 +323,11 @@ function RGBToHex(rgb: string): string {
   b = b.length == 1 ? '0' + b : b;
 
   return ('#' + r + g + b).toUpperCase();
+}
+
+// see testUtil.ts
+export function deleteObjectProperties(object: Record<string, unknown>, properties: string[]) {
+  const excludeKeys = new Set(properties);
+
+  return Object.fromEntries(Object.entries(object).filter(([key]) => !excludeKeys.has(key)));
 }

@@ -15,7 +15,7 @@
 
   // data props
   export let items: unknown[];
-  export let component: typeof SvelteComponent<any>;
+  export let component: typeof SvelteComponent<{ item: unknown }>;
 
   // customization props
   export let containerClass = '';
@@ -24,7 +24,7 @@
   export let itemStyle = '';
 
   // drag and drop props
-  export let dndType: string = '';
+  export let dndType = '';
   export let dropFromOthersDisabled = false;
   export let flipDurationMs = 300;
 

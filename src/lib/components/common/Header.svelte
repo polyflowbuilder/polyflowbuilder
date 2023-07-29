@@ -72,7 +72,7 @@
     </div>
   </div>
   <div class="flex">
-    {#if $page.data?.session}
+    {#if $page.data.session}
       <div class="indicator">
         <!-- TODO: reimplement alert indicator when adding notifications -->
         <a
@@ -91,7 +91,7 @@
         >
           <div class="rounded-full">
             <img
-              src={`https://ui-avatars.com/api/?name=${$page.data.session?.username}`}
+              src={`https://ui-avatars.com/api/?name=${$page.data.session.username}`}
               alt="user"
             />
           </div>
@@ -104,7 +104,7 @@
           <li class="text-gray-800 pointer-events-none">
             <div class="w-52">
               <p class="overflow-hidden text-ellipsis m-auto font-semibold text-md">
-                {$page.data.session?.username}
+                {$page.data.session.username}
               </p>
             </div>
           </li>

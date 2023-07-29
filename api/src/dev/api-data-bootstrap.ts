@@ -8,10 +8,11 @@
 import fs from 'fs';
 import type { APIData } from '$lib/types';
 import type {
-  APICourse,
-  CourseRequisite,
-  DBNotification,
+  Program,
   GECourse,
+  APICourse,
+  DBNotification,
+  CourseRequisite,
   TermTypicallyOffered
 } from '@prisma/client';
 
@@ -35,39 +36,42 @@ export function init() {
   // read in files
   apiData.catalogs = JSON.parse(
     fs.readFileSync(`${API_DATA_ROOT}/cpslo-catalog-years.json`, 'utf8')
-  );
+  ) as string[];
 
   apiData.startYears = JSON.parse(
     fs.readFileSync(`${API_DATA_ROOT}/cpslo-start-years.json`, 'utf8')
-  );
+  ) as string[];
 
-  apiData.programData = JSON.parse(
-    fs.readFileSync(`${API_DATA_ROOT}/cpslo-template-flow-data.json`, 'utf8')
+  apiData.programData = (
+    JSON.parse(fs.readFileSync(`${API_DATA_ROOT}/cpslo-template-flow-data.json`, 'utf8')) as {
+      flows: Program[];
+      cSheets: Program[];
+    }
   ).flows;
 
-  const termTypicallyOffered: TermTypicallyOffered[] = JSON.parse(
+  const termTypicallyOffered = JSON.parse(
     fs.readFileSync(`${API_DATA_ROOT}/cpslo-term-typically-offered.json`, 'utf8')
-  );
+  ) as TermTypicallyOffered[];
 
   // read in course data
   for (const catalog of apiData.catalogs) {
     console.log('loading catalog data for year', catalog);
 
-    const courses: APICourse[] = JSON.parse(
+    const courses = JSON.parse(
       fs.readFileSync(`${API_DATA_ROOT}/data/courses/${catalog}/${catalog}.json`, 'utf8')
-    );
+    ) as APICourse[];
     const geCourses: GECourse[] = JSON.parse(
       fs.readFileSync(`${API_DATA_ROOT}/courses/${catalog}/${catalog}-GE.json`, 'utf8')
-    );
+    ) as GECourse[];
     const reqCourseData: CourseRequisite[] = JSON.parse(
       fs.readFileSync(`${API_DATA_ROOT}/courses/${catalog}/${catalog}-req.json`, 'utf8')
-    );
+    ) as CourseRequisite[];
 
     // load static course override data if present and update
     if (fs.existsSync(`${API_DATA_ROOT}/courses/${catalog}/${catalog}-override.json`)) {
       const overrideCourseList: APICourse[] = JSON.parse(
         fs.readFileSync(`${API_DATA_ROOT}/courses/${catalog}/${catalog}-override.json`, 'utf8')
-      );
+      ) as APICourse[];
 
       overrideCourseList.forEach((course: APICourse) => {
         const overrideIndex = courses.findIndex((cObj) => cObj.id === course.id);

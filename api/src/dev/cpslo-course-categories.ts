@@ -8,9 +8,11 @@ import type { APICourse, GECourse } from '@prisma/client';
 function sniffGWRCourses(inFile: string, outFile: string) {
   console.log(`starting sniffGWRcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData = JSON.parse(fs.readFileSync(inFile, 'utf8')) as APICourse[];
   const gwrCourses: string[] = [];
 
+  // linter erroneously detecting we could use for-of when we need iterator i
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < courseData.length; i += 1) {
     const c = courseData[i];
     if (c.addl.includes('GWR\n') || c.addl.includes('GWR;')) {
@@ -28,9 +30,11 @@ function sniffGWRCourses(inFile: string, outFile: string) {
 function sniffUSCPCourses(inFile: string, outFile: string) {
   console.log(`starting sniffUSCPcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData = JSON.parse(fs.readFileSync(inFile, 'utf8')) as APICourse[];
   const uscpCourses: string[] = [];
 
+  // linter erroneously detecting we could use for-of when we need iterator i
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < courseData.length; i += 1) {
     const c = courseData[i];
     if (c.addl.includes('USCP\n') || c.addl.includes('USCP;')) {
@@ -48,12 +52,10 @@ function sniffUSCPCourses(inFile: string, outFile: string) {
 function sniffGECourses(inFile: string, outFile: string) {
   console.log(`starting sniffGEcourses, infile ${inFile}, outFile ${outFile}`);
 
-  const courseData: APICourse[] = JSON.parse(fs.readFileSync(inFile, 'utf8'));
+  const courseData = JSON.parse(fs.readFileSync(inFile, 'utf8')) as APICourse[];
   const geCourses: GECourse[] = [];
 
-  for (let i = 0; i < courseData.length; i += 1) {
-    const c = courseData[i];
-
+  for (const c of courseData) {
     if (c.addl.includes('GE Area A1\n') || c.addl.includes('GE Area A1;')) {
       geCourses.push({
         catalog: c.catalog,
@@ -181,7 +183,7 @@ function findGWRUSCPGECoursesAllCatalogs() {
 
   const catalogYears: string[] = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
-  );
+  ) as string[];
 
   (async () => {
     for await (const f of catalogYears) {
@@ -203,7 +205,9 @@ function findGWRUSCPGECoursesAllCatalogs() {
         `${apiRoot}/data/courses/${f}/${f}-GE.json`
       );
     }
-  })();
+  })().catch(() => {
+    throw new Error('error occurred when sniffing courses');
+  });
 }
 
 // run after we generate courses using cpslo-courses as it requires that folder structure to exist

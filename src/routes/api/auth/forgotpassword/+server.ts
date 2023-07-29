@@ -8,7 +8,7 @@ const logger = initLogger('APIRouteHandler (/api/auth/forgotpassword');
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const data = await request.json();
+    const data = (await request.json()) as unknown;
 
     // validation
     const parseResults = forgotPasswordSchema.safeParse(data);
