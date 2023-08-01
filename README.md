@@ -1,38 +1,41 @@
-# create-svelte
+![Logo](https://polyflowbuilder.duncanapple.io/assets/logo.png)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# About
 
-## Creating a project
+PolyFlowBuilder is a tool allows you to easily visualize and plan your academic path during your stay at Cal Poly SLO.
 
-If you're seeing this, you've probably already done this step. Congrats!
+I wrote this during the Summer of 2020 from scratch, and it's my first full-stack, production-quality web app. Meant as a replacement to the aging PolyFlows, it is much more up-to-date, is being actively developed, and aims to make course planning at CPSLO as efficient and productive as possible.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Take PolyFlowBuilder for a spin on the [official website](https://polyflowbuilder.duncanapple.io).
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Main Features
 
-## Developing
+- Can create flowcharts with a specified catalog year, starting year, major, and concentration (if applicable), and it will auto-populate with the respective flowchart (if it's available)
+- Default flowchart templates are available for the 2015-2017 catalog all the way up to the 2022-2026 catalog
+- Drag-and-drop interface for managing individual courses on your flowchart
+- Each class contains information about its catalog description, unit count, and prerequisites (if any)
+- Can color your classes with specific and custom colors (designating major classes, support classes, GEs, etc...)
+- You can export your created flowchart as a PDF for printing or for markup (I find this especially handy myself) (will be improved in future updates)
+- You can validate your flowchart to ensure that you have the minimum units, minimum upper-division units, GWR class, USCP class, Curriculum Sheet validation, and class-by-class prerequisite validation (with curriculum sheet validation planned in the future!)
+- Can add notes to your flowchart
+- Can add/remove terms from your flowchart (i.e. if you're taking summer classes at CP)
+- Can create custom classes (i.e. if you need an "elective" placeholder, or anything else of that nature)
+- "Credit Bin" allows you to keep track of courses you've earned units for towards your degree that you got from other instutitions (e.g. incoming transfer units, floating units, etc.)
+- Can create as many flows as you need to succeed
+- Term data is included in course information if available, sourced from public Cal Poly data provided by the Registrar's Office
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Roadmap
 
-```bash
-npm run dev
+- Multiple major/minor support
+- Quarter-to-Semester (Q2S) transition support
+- Flowchart Marketplace
+- Improved PDF Exports
+- More Advanced Validation Suites
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Support
 
-## Building
+For support with PolyFlowBuilder features, issues, concerns, or anything else related to the project, submit a [Feedback Form](https://polyflowbuilder.duncanapple.io/feedback) on PolyFlowBuilder's official website.
 
-To create a production version of your app:
+## Maintainers
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- @AGuyWhoIsBored ([BitBucket](https://bitbucket.org/AGuyWhoIsBored), [GitHub](https://github.com/AGuyWhoIsBored))
