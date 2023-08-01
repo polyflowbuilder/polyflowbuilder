@@ -8,6 +8,8 @@ I wrote this during the Summer of 2020 from scratch, and it's my first full-stac
 
 Take PolyFlowBuilder for a spin on the [official website](https://polyflowbuilder.duncanapple.io).
 
+Beta versions of the application are deployed on the [beta website](https://beta.polyflowbuilder.duncanapple.io). **Note that anything may change at any time (including data loss) on the beta website.**
+
 ## Main Features
 
 - Can create flowcharts with a specified catalog year, starting year, major, and concentration (if applicable), and it will auto-populate with the respective flowchart (if it's available)
@@ -34,8 +36,12 @@ Take PolyFlowBuilder for a spin on the [official website](https://polyflowbuilde
 
 ## Support
 
-For support with PolyFlowBuilder features, issues, concerns, or anything else related to the project, submit a [Feedback Form](https://polyflowbuilder.duncanapple.io/feedback) on PolyFlowBuilder's official website.
+For support with PolyFlowBuilder featuqres, issues, concerns, or anything else related to the project, you can either:
+
+1. [Submit feedback](https://polyflowbuilder.duncanapple.io/feedback) on PolyFlowBuilder's official website.
+
+2. Join the official PolyFlowBuilder [Discord server](https://discord.gg/xCadnCRC9f) and ask your question there.
 
 ## Maintainers
 
-- @AGuyWhoIsBored ([BitBucket](https://bitbucket.org/AGuyWhoIsBored), [GitHub](https://github.com/AGuyWhoIsBored))
+- @AGuyWhoIsBored ([BitBucket](https://bitbucket.org/AGuyWhoIsBored), [GitHub](https://github.com/AGuyWhoIsBored), [LinkedIn](https://linkedin.com/in/dapplegarth))
