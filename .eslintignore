@@ -3,6 +3,8 @@ node_modules
 /build
 /.svelte-kit
 /package
+/coverage
+/test-results
 .env
 .env.*
 !.env.example
