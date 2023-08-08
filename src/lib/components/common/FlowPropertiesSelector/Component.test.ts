@@ -848,17 +848,17 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // then change major and expect conc to reset while everything else stays the same
+    // make sure we pick a major that isn't already selected in another program (second filter)
+    const selectedMajors = expectedProgramIds.map((prog) => {
+      const progMetadata = apiDataConfig.apiData.programData.find((entry) => entry.id === prog);
+      if (!progMetadata) {
+        throw new Error(`progMetadata for program ${prog} not found`);
+      }
+      return progMetadata.majorName;
+    });
     const removeSelectedMajor = apiDataConfig.apiData.programData
       .filter((prog) => prog.catalog === newProgram1.catalog)
-      .filter(
-        (prog) =>
-          prog.majorName !==
-          (
-            screen.getAllByRole('combobox', {
-              name: 'Major'
-            })[1] as HTMLOptionElement
-          ).value
-      )
+      .filter((prog) => !selectedMajors.includes(prog.majorName))
       .map((prog) => prog.majorName);
     const newMajorValue =
       removeSelectedMajor[Math.floor(Math.random() * removeSelectedMajor.length)];

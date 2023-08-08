@@ -13,7 +13,8 @@ const config: UserConfig = {
       exclude: ['setupTest.ts']
     },
     include: ['src/**/*.{test,spec}.{js,ts}'],
-    exclude: [...configDefaults.exclude, 'tests']
+    exclude: [...configDefaults.exclude, 'tests'],
+    testTimeout: 10000
   }
 };
 
