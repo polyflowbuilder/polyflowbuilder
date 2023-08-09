@@ -2,7 +2,7 @@ import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { mockNewFlowModalOpenStore } from '../../../../../tests/util/storeMocks';
+import { mockModalOpenStore } from '../../../../../tests/util/storeMocks';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called
@@ -17,7 +17,7 @@ describe('NewFlowModal component tests ', () => {
     // need to mock out relevant store
     vi.mock('$lib/client/stores/modalStateStore', () => {
       return {
-        newFlowModalOpen: mockNewFlowModalOpenStore
+        newFlowModalOpen: mockModalOpenStore
       };
     });
   });
@@ -35,7 +35,7 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
 
     // update store state for visibility
-    mockNewFlowModalOpenStore.mockSetSubscribeValue(true);
+    mockModalOpenStore.mockSetSubscribeValue(true);
 
     // now ensure modal is visible
     expect(screen.getByText('Create New Flowchart')).toBeVisible();
