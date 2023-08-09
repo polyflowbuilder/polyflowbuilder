@@ -16,37 +16,27 @@ const mockUserFlowchartsWritable = writable<Flowchart[]>([]);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
-  set: (val: Program[]) => {
-    mockProgramDataWritable.set(val);
-  }
+  set: mockProgramDataWritable.set
 };
 
 export const mockCourseDataStore = {
   subscribe: mockCourseDataWritable.subscribe,
-  set: (val: CourseCache[]) => {
-    mockCourseDataWritable.set(val);
-  }
+  set: mockCourseDataWritable.set
 };
 
 // general-purpose mock modal store since we will only be
 // using this mock for one store at a time
 export const mockModalOpenStore = {
   subscribe: mockModalOpenWritable.subscribe,
-  set: (val: boolean) => {
-    mockModalOpenWritable.set(val);
-  }
+  set: mockModalOpenWritable.set
 };
 
 export const mockSelectedFlowIndexStore = {
   subscribe: mockSelectedFlowIndexWritable.subscribe,
-  set: (val: number) => {
-    mockSelectedFlowIndexWritable.set(val);
-  }
+  set: mockSelectedFlowIndexWritable.set
 };
 
 export const mockUserFlowchartsStore = {
   subscribe: mockUserFlowchartsWritable.subscribe,
-  set: (val: Flowchart[]) => {
-    mockUserFlowchartsWritable.set(val);
-  }
+  set: mockUserFlowchartsWritable.set
 };
