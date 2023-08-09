@@ -81,3 +81,18 @@ vi.mock('$app/stores', (): typeof stores => {
     updated
   };
 });
+
+// TODO: jsdom (vitest runtime) doesn't support HTMLDialogElement yet,
+// so this code is to mock HTMLDialogElement functions for tests to pass
+// see https://github.com/jsdom/jsdom/issues/3294
+// NEED to mock the 'open' attribute bc jsdom / jest-dom require this attribute
+// to match the semantic visibility status
+HTMLDialogElement.prototype.show = vi.fn(function mock(this: HTMLDialogElement) {
+  this.open = true;
+});
+HTMLDialogElement.prototype.showModal = vi.fn(function mock(this: HTMLDialogElement) {
+  this.open = true;
+});
+HTMLDialogElement.prototype.close = vi.fn(function mock(this: HTMLDialogElement) {
+  this.open = false;
+});
