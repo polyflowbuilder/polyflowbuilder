@@ -3,13 +3,16 @@
 // https://github.com/sveltejs/kit/discussions/9759
 
 import { writable } from 'svelte/store';
-import type { CourseCache } from '$lib/types';
 import type { Program } from '@prisma/client';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types';
 
 // set stores
 const mockProgramDataWritable = writable<Program[]>([]);
 const mockCourseDataWritable = writable<CourseCache[]>([]);
 const mockModalOpenWritable = writable<boolean>(false);
+const mockSelectedFlowIndexWritable = writable<number>(-1);
+const mockUserFlowchartsWritable = writable<Flowchart[]>([]);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
@@ -31,5 +34,19 @@ export const mockModalOpenStore = {
   subscribe: mockModalOpenWritable.subscribe,
   set: (val: boolean) => {
     mockModalOpenWritable.set(val);
+  }
+};
+
+export const mockSelectedFlowIndexStore = {
+  subscribe: mockSelectedFlowIndexWritable.subscribe,
+  set: (val: number) => {
+    mockSelectedFlowIndexWritable.set(val);
+  }
+};
+
+export const mockUserFlowchartsStore = {
+  subscribe: mockUserFlowchartsWritable.subscribe,
+  set: (val: Flowchart[]) => {
+    mockUserFlowchartsWritable.set(val);
   }
 };
