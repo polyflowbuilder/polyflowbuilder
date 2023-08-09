@@ -35,7 +35,7 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
 
     // update store state for visibility
-    mockModalOpenStore.mockSetSubscribeValue(true);
+    mockModalOpenStore.set(true);
 
     // now ensure modal is visible
     expect(screen.getByText('Create New Flowchart')).toBeVisible();

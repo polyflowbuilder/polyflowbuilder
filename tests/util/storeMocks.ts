@@ -13,14 +13,14 @@ const mockModalOpenWritable = writable<boolean>(false);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
-  mockSetSubscribeValue: (val: Program[]) => {
+  set: (val: Program[]) => {
     mockProgramDataWritable.set(val);
   }
 };
 
 export const mockCourseDataStore = {
   subscribe: mockCourseDataWritable.subscribe,
-  mockSetSubscribeValue: (val: CourseCache[]) => {
+  set: (val: CourseCache[]) => {
     mockCourseDataWritable.set(val);
   }
 };
@@ -29,7 +29,7 @@ export const mockCourseDataStore = {
 // using this mock for one store at a time
 export const mockModalOpenStore = {
   subscribe: mockModalOpenWritable.subscribe,
-  mockSetSubscribeValue: (val: boolean) => {
+  set: (val: boolean) => {
     mockModalOpenWritable.set(val);
   }
 };

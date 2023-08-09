@@ -192,8 +192,8 @@ describe('FlowViewer component tests', () => {
         courseCache: mockCourseDataStore
       };
     });
-    mockProgramDataStore.mockSetSubscribeValue(apiDataConfig.apiData.programData);
-    mockCourseDataStore.mockSetSubscribeValue(apiDataConfig.apiData.courseData);
+    mockProgramDataStore.set(apiDataConfig.apiData.programData);
+    mockCourseDataStore.set(apiDataConfig.apiData.courseData);
   });
 
   test('no flowchart selected', () => {
