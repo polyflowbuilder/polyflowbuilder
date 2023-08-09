@@ -189,8 +189,11 @@ async function syncTemplateFlowcharts() {
       console.log(`validating schema for ${f}`);
 
       try {
-        const rawFlowData = JSON.parse(fs.readFileSync(f, 'utf8')) as unknown;
-        const defaultFlowData = flowchartValidationSchema.parse(rawFlowData);
+        const rawFlowData = JSON.parse(fs.readFileSync(f, 'utf8')) as Record<string, unknown>;
+        const defaultFlowData = flowchartValidationSchema.parse({
+          ...rawFlowData,
+          lastUpdatedUTC: new Date(rawFlowData.lastUpdatedUTC as string)
+        });
 
         const flowProgramData = flowDataLinks.flows.find(
           (flowDataLinkEntry) => flowDataLinkEntry.id === defaultFlowData.programId[0]
