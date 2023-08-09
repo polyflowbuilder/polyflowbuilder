@@ -22,7 +22,12 @@ const config: UserConfig = {
   server: {
     fs: {
       allow: process.env.VITEST
-        ? ['setupTest.ts', 'tests/util/storeMocks.ts', 'tests/util/testUtil.ts']
+        ? [
+            'setupTest.ts',
+            'tests/util/storeMocks.ts',
+            'tests/util/testUtil.ts',
+            'tests/util/testFlowcharts.ts'
+          ]
         : undefined
     }
   }

@@ -13,6 +13,8 @@ const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
 const GENERATE_FLOWCHART_TESTS_API_2_EMAIL =
   'pfb_test_generateFlowchartAPI_outputs_playwright@test.com';
 
+// TODO: move responsePayload1 and responsePayload2 to testFlowcharts.ts?
+
 // see API for expected return type
 interface GenerateFlowchartExpectedReturnType {
   message: string;
