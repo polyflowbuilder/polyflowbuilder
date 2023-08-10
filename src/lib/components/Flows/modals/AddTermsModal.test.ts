@@ -1,12 +1,12 @@
 import userEvent from '@testing-library/user-event';
-import { act, getAllByRole, render, screen } from '@testing-library/svelte';
+import { vi } from 'vitest';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../../tests/util/testFlowcharts';
+import { act, getAllByRole, queryAllByRole, render, screen } from '@testing-library/svelte';
 import {
   mockModalOpenStore,
   mockSelectedFlowIndexStore,
   mockUserFlowchartsStore
 } from '../../../../../tests/util/storeMocks';
-import { vi } from 'vitest';
-import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../../tests/util/testFlowcharts';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the addTermsModalOpenStore FAILS!! because vi.mock() MUST be called
@@ -225,5 +225,17 @@ describe('AddTermsModal component tests', () => {
         name: 'Add Terms to Flowchart'
       })
     ).toBeEnabled();
+
+    // close modal and reopen to verify that all options are cleared
+    await user.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(screen.getByText('Add Flowchart Terms')).not.toBeVisible();
+    mockModalOpenStore.set(true);
+    expect(screen.getByText('Add Flowchart Terms')).toBeVisible();
+
+    expect(
+      queryAllByRole<HTMLOptionElement>(multiselect, 'option', {
+        selected: true
+      })
+    ).toStrictEqual([]);
   });
 });
