@@ -22,7 +22,9 @@ describe('NewFlowModal component tests ', () => {
     });
   });
 
-  test('default state for NewFlowModal correct', () => {
+  test('default state for NewFlowModal correct', async () => {
+    const user = userEvent.setup();
+
     render(NewFlowModal, {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
@@ -116,6 +118,13 @@ describe('NewFlowModal component tests ', () => {
     // button state valid
     expect(screen.getByRole('button', { name: 'Create' })).toBeDisabled();
     expect(screen.getByRole('button', { name: 'Cancel' })).toBeEnabled();
+
+    // closing modal updates state properly
+    await user.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
+
+    // make sure modal is set to visible for other tests
+    mockModalOpenStore.set(true);
   });
 
   test('valid program results in ability to create', async () => {
