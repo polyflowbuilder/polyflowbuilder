@@ -1,44 +1,9 @@
 import TermContainer from './TermContainer.svelte';
 import { render, screen } from '@testing-library/svelte';
-import type { Term } from '$lib/common/schema/flowchartSchema';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../../tests/util/testFlowcharts';
 
-const TEST_TERM_COURSES: Term = {
-  tIndex: 25,
-  tUnits: '17',
-  courses: [
-    {
-      id: null,
-      color: '#FFFFFF',
-      customId:
-        'this is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longe',
-      customUnits: '5',
-      customDisplayName:
-        'nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice '
-    },
-    {
-      id: 'MATH142',
-      color: '#FFFFFF'
-    },
-    {
-      id: 'MATH153',
-      color: '#FFFFFF'
-    },
-    {
-      id: 'MATH96',
-      color: '#FFFFFF'
-    },
-    {
-      id: 'MATH112',
-      color: '#FFFFFF'
-    }
-  ]
-};
-
-const TEST_TERM_EMPTY: Term = {
-  tIndex: 0,
-  tUnits: '0',
-  courses: []
-};
+const TEST_TERM_EMPTY = TEST_FLOWCHART_SINGLE_PROGRAM_2.termData[0];
+const TEST_TERM_COURSES = TEST_FLOWCHART_SINGLE_PROGRAM_2.termData[1];
 
 describe('TermContainer component tests', () => {
   test('empty term', () => {

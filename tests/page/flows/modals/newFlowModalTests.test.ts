@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from '../../util/userTestUtil.js';
+import { performLoginFrontend } from '../../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import type { Page } from '@playwright/test';
 

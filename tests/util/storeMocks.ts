@@ -3,31 +3,40 @@
 // https://github.com/sveltejs/kit/discussions/9759
 
 import { writable } from 'svelte/store';
-import type { CourseCache } from '$lib/types';
 import type { Program } from '@prisma/client';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types';
 
 // set stores
 const mockProgramDataWritable = writable<Program[]>([]);
 const mockCourseDataWritable = writable<CourseCache[]>([]);
-const mockNewFlowModalOpenWritable = writable<boolean>(false);
+const mockModalOpenWritable = writable<boolean>(false);
+const mockSelectedFlowIndexWritable = writable<number>(-1);
+const mockUserFlowchartsWritable = writable<Flowchart[]>([]);
 
 export const mockProgramDataStore = {
   subscribe: mockProgramDataWritable.subscribe,
-  mockSetSubscribeValue: (val: Program[]) => {
-    mockProgramDataWritable.set(val);
-  }
+  set: mockProgramDataWritable.set
 };
 
 export const mockCourseDataStore = {
   subscribe: mockCourseDataWritable.subscribe,
-  mockSetSubscribeValue: (val: CourseCache[]) => {
-    mockCourseDataWritable.set(val);
-  }
+  set: mockCourseDataWritable.set
 };
 
-export const mockNewFlowModalOpenStore = {
-  subscribe: mockNewFlowModalOpenWritable.subscribe,
-  mockSetSubscribeValue: (val: boolean) => {
-    mockNewFlowModalOpenWritable.set(val);
-  }
+// general-purpose mock modal store since we will only be
+// using this mock for one store at a time
+export const mockModalOpenStore = {
+  subscribe: mockModalOpenWritable.subscribe,
+  set: mockModalOpenWritable.set
+};
+
+export const mockSelectedFlowIndexStore = {
+  subscribe: mockSelectedFlowIndexWritable.subscribe,
+  set: mockSelectedFlowIndexWritable.set
+};
+
+export const mockUserFlowchartsStore = {
+  subscribe: mockUserFlowchartsWritable.subscribe,
+  set: mockUserFlowchartsWritable.set
 };

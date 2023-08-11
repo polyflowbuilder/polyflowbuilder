@@ -43,6 +43,7 @@
       class="w-full select select-bordered"
       multiple
       name="addTerms"
+      aria-label="select flowchart terms to add"
       size="15"
       bind:value={selectedTermValues}
     >

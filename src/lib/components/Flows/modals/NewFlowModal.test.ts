@@ -2,7 +2,7 @@ import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { mockNewFlowModalOpenStore } from '../../../../../tests/util/storeMocks';
+import { mockModalOpenStore } from '../../../../../tests/util/storeMocks';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called
@@ -14,30 +14,17 @@ await apiDataConfig.init();
 
 describe('NewFlowModal component tests ', () => {
   beforeAll(() => {
-    // TODO: jsdom (vitest runtime) doesn't support HTMLDialogElement yet,
-    // so this code is to mock HTMLDialogElement functions for tests to pass
-    // see https://github.com/jsdom/jsdom/issues/3294
-    // NEED to mock the 'open' attribute bc jsdom / jest-dom require this attribute
-    // to match the semantic visibility status
-    HTMLDialogElement.prototype.show = vi.fn(function mock(this: HTMLDialogElement) {
-      this.open = true;
-    });
-    HTMLDialogElement.prototype.showModal = vi.fn(function mock(this: HTMLDialogElement) {
-      this.open = true;
-    });
-    HTMLDialogElement.prototype.close = vi.fn(function mock(this: HTMLDialogElement) {
-      this.open = false;
-    });
-
     // need to mock out relevant store
     vi.mock('$lib/client/stores/modalStateStore', () => {
       return {
-        newFlowModalOpen: mockNewFlowModalOpenStore
+        newFlowModalOpen: mockModalOpenStore
       };
     });
   });
 
-  test('default state for NewFlowModal correct', () => {
+  test('default state for NewFlowModal correct', async () => {
+    const user = userEvent.setup();
+
     render(NewFlowModal, {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
@@ -50,7 +37,7 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
 
     // update store state for visibility
-    mockNewFlowModalOpenStore.mockSetSubscribeValue(true);
+    mockModalOpenStore.set(true);
 
     // now ensure modal is visible
     expect(screen.getByText('Create New Flowchart')).toBeVisible();
@@ -131,6 +118,13 @@ describe('NewFlowModal component tests ', () => {
     // button state valid
     expect(screen.getByRole('button', { name: 'Create' })).toBeDisabled();
     expect(screen.getByRole('button', { name: 'Cancel' })).toBeEnabled();
+
+    // closing modal updates state properly
+    await user.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
+
+    // make sure modal is set to visible for other tests
+    mockModalOpenStore.set(true);
   });
 
   test('valid program results in ability to create', async () => {

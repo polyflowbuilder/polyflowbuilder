@@ -5,6 +5,9 @@ import { performLoginFrontend } from '../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { FLOW_LIST_ITEM_SELECTOR } from '../util/selectorTestUtil.js';
 
+// TODO: is this a "routine", or an "Action"? figure out what routine is and
+// reorganize the tests
+
 const CREATE_FLOW_ROUTINE_TESTS_EMAIL = 'pfb_test_createFlowRoutine_playwright@test.com';
 
 test.describe('create flow routine tests', () => {
