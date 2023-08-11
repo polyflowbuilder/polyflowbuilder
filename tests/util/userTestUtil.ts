@@ -29,6 +29,11 @@ export async function performLoginFrontend(page: Page, email: string, password: 
     throw new Error('prevlastlogintimeutc null');
   }
 
+  // wait at least 1 second before attempting login to make sure
+  // we don't get false positives with checking lastLoginTimeUTC diff
+  // (times are stored with second precision)
+  await page.waitForTimeout(1000);
+
   await page.getByLabel('email').fill(email);
   await page.getByLabel('password').fill(password);
   await page.getByRole('button', { name: 'Sign In' }).click();
