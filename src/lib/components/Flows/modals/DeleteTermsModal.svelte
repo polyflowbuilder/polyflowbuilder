@@ -41,7 +41,7 @@
 
     <div class="divider" />
 
-    <label class="label" for="addTerms">
+    <label class="label" for="deleteTerms">
       <span class="label-text text-base"
         >Select the terms you wish to remove to your flowchart (multiple terms can be selected):</span
       >
@@ -49,7 +49,7 @@
     <select
       class="w-full select select-bordered"
       multiple
-      name="addTerms"
+      name="deleteTerms"
       size="15"
       bind:value={selectedTermValues}
     >
