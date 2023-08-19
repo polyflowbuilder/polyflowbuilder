@@ -52,4 +52,7 @@ export async function dragAndDrop(
   if (doEndClick) {
     await locatorToDrag.click();
   }
+
+  // if tests are not performing as expected, bump up timeout to let elements "settle" in headless mode
+  await page.waitForTimeout(100);
 }
