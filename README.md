@@ -67,7 +67,7 @@ Some major features planned for the future of PolyFlowBuilder (in no particular 
 
 The PolyFlowBuilder source is licensed under the [AGPL-3.0 license](https://choosealicense.com/licenses/agpl-3.0/). See [LICENSE](https://github.com/polyflowbuilder/polyflowbuilder/blob/main/LICENSE).
 
-The PolyFlowBuilder Database is licensed under the [ODbL license](https://choosealicense.com/licenses/odbl-1.0/). See [LICENSE-DATA](https://github.com/polyflowbuilder/polyflowbuilder/blob/main/LICENSE-DATA). Attribution is required for any and all public use of this data; see the [Attribution](#attribution) section for more information.
+The PolyFlowBuilder Database is licensed under the [ODbL license](https://choosealicense.com/licenses/odbl-1.0/). See [LICENSE-DATA](https://github.com/polyflowbuilder/polyflowbuilder/blob/main/LICENSE-DATA.md). Attribution is required for any and all public use of this data; see the [Attribution](#attribution) section for more information.
 
 ## Attribution
 
