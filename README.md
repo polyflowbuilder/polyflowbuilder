@@ -14,7 +14,7 @@ Meant as a replacement to the now-gone PolyFlows (see a [Wayback Machine snapsho
 
 PolyFlowBuilder was rewritten during the 2022-2023 academic year at Cal Poly as a senior project to allow the project to grow, scale, and to be more organized for future maintenance. See the final senior project report [here](https://www.dropbox.com/scl/fi/jlxaqddehsy94283eaipo/Applegarth-CPE-Senior-Project-Final-Report.pdf?rlkey=5nakk1ebdzpauv2zbtlppsocq&dl=0).
 
-Since the Summer of 2023, PolyFlowBuilder has been open source to ensure the vision of the project continues and does not become deprecated like its predecessor PolyFlows.
+Since the August 20, 2023, PolyFlowBuilder has been open source to ensure the vision of the project continues and does not become deprecated like its predecessor PolyFlows.
 
 ## Main Features
 
