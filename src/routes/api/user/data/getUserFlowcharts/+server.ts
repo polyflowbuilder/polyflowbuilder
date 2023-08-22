@@ -25,19 +25,28 @@ export const GET: RequestHandler = async ({ locals, url }) => {
     const data = Object.fromEntries(url.searchParams);
     const parseResults = getUserFlowchartsSchema.safeParse({
       // convert from string-encoded data
-      includeCourseCache: data.includeCourseCache ? data.includeCourseCache === 'true' : undefined
+      includeCourseCache: data.includeCourseCache ? data.includeCourseCache === 'true' : undefined,
+      includeProgramMetadata: data.includeProgramMetadata
+        ? data.includeProgramMetadata === 'true'
+        : undefined
     });
     if (parseResults.success) {
       // get user data
-      const userFlowcharts = (await getUserFlowcharts(locals.session.id)).map(
-        ({ flowchart }) => flowchart
+      const userFlowchartsData = await getUserFlowcharts(
+        locals.session.id,
+        [],
+        parseResults.data.includeProgramMetadata
       );
+      const userFlowcharts = userFlowchartsData.map(({ flowchart }) => flowchart);
 
       return json({
         message: 'User flowchart retrieval successful.',
         flowcharts: userFlowcharts,
         ...(parseResults.data.includeCourseCache && {
           courseCache: generateUserCourseCache(userFlowcharts)
+        }),
+        ...(parseResults.data.includeProgramMetadata && {
+          programMetadata: userFlowchartsData.map(({ programMetadata }) => programMetadata)
         })
       });
     } else {
