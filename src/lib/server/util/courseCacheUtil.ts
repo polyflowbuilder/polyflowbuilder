@@ -1,7 +1,7 @@
 import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { APICourseFull, CourseCache } from '$lib/types';
 
 export async function generateCourseCacheFlowchart(
@@ -69,25 +69,27 @@ export async function generateUserCourseCache(
   programCache: Program[]
 ): Promise<CourseCache[]> {
   const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];
-  const courseCacheSets: Set<APICourseFull>[] = catalogs.map(() => new Set());
+  const userCourseCache: CourseCache[] = catalogs.map((catalog) => {
+    return {
+      catalog,
+      courses: []
+    };
+  });
+  // only keep the IDs in here vs. the entire course object so === equality works properly
+  const courseCacheSets: Set<string>[] = catalogs.map(() => new Set());
 
-  // TODO: can we optimize this? O(n^3)
+  // TODO: can we optimize this? O(mnp)
   for await (const flow of userFlowcharts) {
     const flowchartCourseCacheData = await generateCourseCacheFlowchart(flow, programCache);
     flowchartCourseCacheData.forEach((flowchartCourseCacheDataCatalog, i) => {
       flowchartCourseCacheDataCatalog.courses.forEach((crs) => {
-        courseCacheSets[i].add(crs);
+        if (!courseCacheSets[i].has(`${crs.catalog},${crs.id}`)) {
+          courseCacheSets[i].add(`${crs.catalog},${crs.id}`);
+          userCourseCache[i].courses.push(crs);
+        }
       });
     });
   }
-
-  const userCourseCache: CourseCache[] = [];
-  catalogs.forEach((catalog, i) =>
-    userCourseCache.push({
-      catalog,
-      courses: Array.from(courseCacheSets[i])
-    })
-  );
 
   return userCourseCache;
 }
