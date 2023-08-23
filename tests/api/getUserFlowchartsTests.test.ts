@@ -64,32 +64,7 @@ test.describe('getUserFlowcharts API tests', () => {
     const expectedResponseBody = {
       message: 'User flowchart retrieval successful.',
       flowcharts: [],
-      courseCache: [
-        {
-          catalog: '2015-2017',
-          courses: []
-        },
-        {
-          catalog: '2017-2019',
-          courses: []
-        },
-        {
-          catalog: '2019-2020',
-          courses: []
-        },
-        {
-          catalog: '2020-2021',
-          courses: []
-        },
-        {
-          catalog: '2021-2022',
-          courses: []
-        },
-        {
-          catalog: '2022-2026',
-          courses: []
-        }
-      ]
+      courseCache: []
     };
 
     expect(res.status()).toBe(200);
@@ -263,6 +238,17 @@ test.describe('getUserFlowcharts API tests', () => {
           catalog: '2015-2017',
           courses: [
             {
+              id: 'CHEM124',
+              catalog: '2015-2017',
+              displayName: 'General Chemistry for Physical Science and Engineering I',
+              units: '4',
+              desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
+              addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
+              gwrCourse: false,
+              uscpCourse: false,
+              dynamicTerms: null
+            },
+            {
               id: 'CPE101',
               catalog: '2015-2017',
               displayName: 'Fundamentals of Computer Science I',
@@ -283,17 +269,6 @@ test.describe('getUserFlowcharts API tests', () => {
               gwrCourse: false,
               uscpCourse: false,
               dynamicTerms: null
-            },
-            {
-              id: 'CHEM124',
-              catalog: '2015-2017',
-              displayName: 'General Chemistry for Physical Science and Engineering I',
-              units: '4',
-              desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
-              addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
             }
           ]
         },
@@ -301,23 +276,23 @@ test.describe('getUserFlowcharts API tests', () => {
           catalog: '2017-2019',
           courses: [
             {
-              id: 'AGC301',
-              catalog: '2017-2019',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
               id: 'AGB301',
               catalog: '2017-2019',
               displayName: 'Food and Fiber Marketing',
               units: '4',
               desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
               addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+              gwrCourse: false,
+              uscpCourse: false,
+              dynamicTerms: null
+            },
+            {
+              id: 'AGC301',
+              catalog: '2017-2019',
+              displayName: 'New Media Communication Strategies in Agriculture',
+              units: '4',
+              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+              addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
               gwrCourse: false,
               uscpCourse: false,
               dynamicTerms: null
@@ -334,22 +309,6 @@ test.describe('getUserFlowcharts API tests', () => {
               dynamicTerms: null
             }
           ]
-        },
-        {
-          catalog: '2019-2020',
-          courses: []
-        },
-        {
-          catalog: '2020-2021',
-          courses: []
-        },
-        {
-          catalog: '2021-2022',
-          courses: []
-        },
-        {
-          catalog: '2022-2026',
-          courses: []
         }
       ]
     };
