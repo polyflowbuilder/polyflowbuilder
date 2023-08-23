@@ -2,20 +2,21 @@ import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { APICourseFull, CourseCache } from '$lib/types';
+import type { CourseCache } from '$lib/types';
 
 export async function generateCourseCacheFlowchart(
   flowchart: Flowchart,
   programCache: Program[]
 ): Promise<CourseCache[]> {
   const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];
-  const courseCacheSets: Set<APICourseFull>[] = catalogs.map(() => new Set());
-
-  // gather courses that need to be fetched
-  const courseIds: {
-    id: string;
-    catalog: string;
-  }[] = [];
+  const flowchartCourseCache: CourseCache[] = catalogs.map((catalog) => {
+    return {
+      catalog,
+      courses: []
+    };
+  });
+  // only keep the IDs in here vs. the entire course object so === equality works properly
+  const courseIds = new Set<string>();
 
   flowchart.termData.forEach((termData) => {
     termData.courses.forEach((c) => {
@@ -33,16 +34,22 @@ export async function generateCourseCacheFlowchart(
           throw new Error('courseCacheUtil: undefined courseCatalog');
         }
 
-        courseIds.push({
-          id: c.id,
-          catalog: courseCatalog
-        });
+        // dedup to ensure we only request one lookup per unique course
+        courseIds.add(`${courseCatalog},${c.id}`);
       }
     });
   });
 
   // get the courses
-  const courses = await getCourseData(courseIds);
+  const courses = await getCourseData(
+    [...courseIds].map((courseId) => {
+      const parts = courseId.split(',');
+      return {
+        catalog: parts[0],
+        id: parts[1]
+      };
+    })
+  );
 
   // map courses to course cache
   courses.forEach((crs) => {
@@ -51,16 +58,9 @@ export async function generateCourseCacheFlowchart(
       throw new Error('courseCacheUtil: undefined catalog in courseCache Set');
     }
 
-    courseCacheSets[idx].add(crs);
+    flowchartCourseCache[idx].courses.push(crs);
   });
 
-  const flowchartCourseCache: CourseCache[] = [];
-  catalogs.forEach((catalog, i) =>
-    flowchartCourseCache.push({
-      catalog,
-      courses: Array.from(courseCacheSets[i])
-    })
-  );
   return flowchartCourseCache;
 }
 
@@ -76,7 +76,7 @@ export async function generateUserCourseCache(
     };
   });
   // only keep the IDs in here vs. the entire course object so === equality works properly
-  const courseCacheSets: Set<string>[] = catalogs.map(() => new Set());
+  const courseCacheSets = catalogs.map(() => new Set<string>());
 
   // TODO: can we optimize this? O(mnp)
   for await (const flow of userFlowcharts) {
