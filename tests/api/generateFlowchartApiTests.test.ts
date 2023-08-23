@@ -1114,28 +1114,15 @@ const responsePayload1 = {
           uscpCourse: false
         }
       ]
-    },
-    {
-      catalog: '2017-2019',
-      courses: []
-    },
-    {
-      catalog: '2019-2020',
-      courses: []
-    },
-    {
-      catalog: '2020-2021',
-      courses: []
-    },
-    {
-      catalog: '2021-2022',
-      courses: []
-    },
-    {
-      catalog: '2022-2026',
-      courses: []
     }
-  ]
+  ] // sort to ensure order of items doesn't matter in cache
+    .map((cache) => {
+      return {
+        catalog: cache.catalog,
+        courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+      };
+    })
+    .sort((a, b) => a.catalog.localeCompare(b.catalog))
 };
 
 const responsePayload2 = {
@@ -2289,22 +2276,6 @@ const responsePayload2 = {
       ]
     },
     {
-      catalog: '2017-2019',
-      courses: []
-    },
-    {
-      catalog: '2019-2020',
-      courses: []
-    },
-    {
-      catalog: '2020-2021',
-      courses: []
-    },
-    {
-      catalog: '2021-2022',
-      courses: []
-    },
-    {
       catalog: '2022-2026',
       courses: [
         {
@@ -2620,6 +2591,14 @@ const responsePayload2 = {
       ]
     }
   ]
+    // sort to ensure order of items doesn't matter in cache
+    .map((cache) => {
+      return {
+        catalog: cache.catalog,
+        courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+      };
+    })
+    .sort((a, b) => a.catalog.localeCompare(b.catalog))
 };
 
 test.describe('generate flowchart api input tests', () => {
@@ -2971,7 +2950,15 @@ test.describe('generate flowchart api output tests', () => {
         'hash',
         'lastUpdatedUTC'
       ]),
+      // sort to ensure order of items doesn't matter in cache
       courseCache: resData.courseCache
+        ?.map((cache) => {
+          return {
+            catalog: cache.catalog,
+            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+          };
+        })
+        .sort((a, b) => a.catalog.localeCompare(b.catalog))
     };
 
     // remove dynamicTerms as this can change over time
@@ -3114,7 +3101,15 @@ test.describe('generate flowchart api output tests', () => {
         'hash',
         'lastUpdatedUTC'
       ]),
+      // sort to ensure order of items doesn't matter in cache
       courseCache: resData.courseCache
+        ?.map((cache) => {
+          return {
+            catalog: cache.catalog,
+            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+          };
+        })
+        .sort((a, b) => a.catalog.localeCompare(b.catalog))
     };
 
     // remove dynamicTerms as this can change over time

@@ -1,4 +1,5 @@
 import { json } from '@sveltejs/kit';
+import { apiData } from '$lib/server/config/apiDataConfig';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { generateFlowchart } from '$lib/server/util/flowDataUtil';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
@@ -40,7 +41,8 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         message: 'Flowchart successfully generated.',
         generatedFlowchart,
         ...(parseResults.data.generateCourseCache && {
-          courseCache: generateCourseCacheFlowchart(generatedFlowchart)
+          // TODO: move away from this: https://github.com/polyflowbuilder/polyflowbuilder/issues/2
+          courseCache: await generateCourseCacheFlowchart(generatedFlowchart, apiData.programData)
         })
       });
     } else {
