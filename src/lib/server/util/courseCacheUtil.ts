@@ -1,8 +1,7 @@
-import { Prisma } from '@prisma/client';
-import { prisma } from '$lib/server/db/prisma';
+import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { APICourse, Program } from '@prisma/client';
+import type { Program } from '@prisma/client';
 import type { APICourseFull, CourseCache } from '$lib/types';
 
 export async function generateCourseCacheFlowchart(
@@ -13,7 +12,10 @@ export async function generateCourseCacheFlowchart(
   const courseCacheSets: Set<APICourseFull>[] = catalogs.map(() => new Set());
 
   // gather courses that need to be fetched
-  const courseIds: Prisma.Sql[] = [];
+  const courseIds: {
+    id: string;
+    catalog: string;
+  }[] = [];
 
   flowchart.termData.forEach((termData) => {
     termData.courses.forEach((c) => {
@@ -31,46 +33,16 @@ export async function generateCourseCacheFlowchart(
           throw new Error('courseCacheUtil: undefined courseCatalog');
         }
 
-        courseIds.push(Prisma.sql`(${Prisma.join([c.id, courseCatalog])})`);
+        courseIds.push({
+          id: c.id,
+          catalog: courseCatalog
+        });
       }
     });
   });
 
-  // TODO: move this logic to an API route
-  // fetch the courses from the DB
-  // ternary to make sure we only query if we have courses to query for
-  const courses: APICourseFull[] = courseIds.length
-    ? (
-        await prisma.$queryRaw<
-          (APICourse & {
-            termSummer: number | null;
-            termFall: number | null;
-            termWinter: number | null;
-            termSpring: number | null;
-          })[]
-        >`SELECT * FROM Course LEFT JOIN TermTypicallyOffered USING (id, catalog) WHERE (id, catalog) IN (${Prisma.join(
-          courseIds
-        )})`
-      ).map((dbCourseDataRaw) => {
-        const { termSummer, termFall, termWinter, termSpring, ...crs } = dbCourseDataRaw;
-
-        // if no tto data is present, all four entries will be null, so just pick one to check
-        return {
-          ...crs,
-          uscpCourse: !!crs.uscpCourse,
-          gwrCourse: !!crs.gwrCourse,
-          dynamicTerms:
-            termSummer === null
-              ? null
-              : {
-                  termSummer: !!termSummer,
-                  termFall: !!termFall,
-                  termWinter: !!termWinter,
-                  termSpring: !!termSpring
-                }
-        };
-      })
-    : [];
+  // get the courses
+  const courses = await getCourseData(courseIds);
 
   // map courses to course cache
   courses.forEach((crs) => {
