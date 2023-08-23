@@ -61,7 +61,8 @@ export async function generateCourseCacheFlowchart(
     flowchartCourseCache[idx].courses.push(crs);
   });
 
-  return flowchartCourseCache;
+  // only return caches that have courses in them
+  return flowchartCourseCache.filter((cache) => cache.courses.length);
 }
 
 export async function generateUserCourseCache(
@@ -81,15 +82,22 @@ export async function generateUserCourseCache(
   // TODO: can we optimize this? O(mnp)
   for await (const flow of userFlowcharts) {
     const flowchartCourseCacheData = await generateCourseCacheFlowchart(flow, programCache);
-    flowchartCourseCacheData.forEach((flowchartCourseCacheDataCatalog, i) => {
+    flowchartCourseCacheData.forEach((flowchartCourseCacheDataCatalog) => {
+      const idx = catalogs.findIndex(
+        (catalog) => catalog === flowchartCourseCacheDataCatalog.catalog
+      );
+      if (idx === -1) {
+        throw new Error('courseCacheUtil: mismatch in catalog indexes');
+      }
       flowchartCourseCacheDataCatalog.courses.forEach((crs) => {
-        if (!courseCacheSets[i].has(`${crs.catalog},${crs.id}`)) {
-          courseCacheSets[i].add(`${crs.catalog},${crs.id}`);
-          userCourseCache[i].courses.push(crs);
+        if (!courseCacheSets[idx].has(`${crs.catalog},${crs.id}`)) {
+          courseCacheSets[idx].add(`${crs.catalog},${crs.id}`);
+          userCourseCache[idx].courses.push(crs);
         }
       });
     });
   }
 
-  return userCourseCache;
+  // only return caches that have courses in them
+  return userCourseCache.filter((cache) => cache.courses.length);
 }

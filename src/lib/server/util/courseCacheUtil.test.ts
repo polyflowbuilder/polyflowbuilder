@@ -269,6 +269,91 @@ describe('generateCourseCacheFlowchart tests', () => {
       )
     ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
   });
+
+  test('generated flowchart course cache only includes catalogs that have courses in them', async () => {
+    const flow1: Flowchart = {
+      hash: '',
+      id: '',
+      lastUpdatedUTC: new Date(),
+      name: '',
+      notes: '',
+      ownerId: '',
+      programId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
+      startYear: '',
+      termData: [
+        {
+          tIndex: 1,
+          tUnits: '12',
+          courses: [
+            {
+              color: '#FEFD9A',
+              id: 'AGC301'
+            },
+            {
+              color: '#FEFD9A',
+              id: 'AGB301'
+            },
+            {
+              color: '#FEFD9A',
+              id: 'JOUR312'
+            }
+          ]
+        }
+      ],
+      unitTotal: '',
+      version: CURRENT_FLOW_DATA_VERSION,
+      importedId: null,
+      publishedId: null
+    };
+
+    const expectedCourseCache: CourseCache[] = [
+      {
+        catalog: '2015-2017',
+        courses: [
+          {
+            id: 'AGB301',
+            catalog: '2015-2017',
+            displayName: 'Food and Fiber Marketing',
+            units: '4',
+            desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+            addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          },
+          {
+            id: 'AGC301',
+            catalog: '2015-2017',
+            displayName: 'New Media Communication Strategies in Agriculture',
+            units: '4',
+            desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+            addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          },
+          {
+            id: 'JOUR312',
+            catalog: '2015-2017',
+            displayName: 'Public Relations',
+            units: '4',
+            desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+            addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          }
+        ]
+      }
+    ];
+
+    expect(
+      cloneAndDeleteNestedProperty(
+        await generateCourseCacheFlowchart(flow1, apiDataConfig.apiData.programData),
+        'dynamicTerms'
+      )
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
+  });
 });
 
 describe('generateUserCourseCache tests', () => {
@@ -672,6 +757,91 @@ describe('generateUserCourseCache tests', () => {
     expect(
       cloneAndDeleteNestedProperty(
         await generateUserCourseCache([flow1, flow2], programCache),
+        'dynamicTerms'
+      )
+    ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
+  });
+
+  test('generated user course cache only includes catalogs with courses in them', async () => {
+    const flow1: Flowchart = {
+      hash: '',
+      id: '',
+      lastUpdatedUTC: new Date(),
+      name: '',
+      notes: '',
+      ownerId: '',
+      programId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
+      startYear: '',
+      termData: [
+        {
+          tIndex: 1,
+          tUnits: '12',
+          courses: [
+            {
+              color: '#FEFD9A',
+              id: 'AGC301'
+            },
+            {
+              color: '#FEFD9A',
+              id: 'AGB301'
+            },
+            {
+              color: '#FEFD9A',
+              id: 'JOUR312'
+            }
+          ]
+        }
+      ],
+      unitTotal: '',
+      version: CURRENT_FLOW_DATA_VERSION,
+      importedId: null,
+      publishedId: null
+    };
+
+    const expectedCourseCache: CourseCache[] = [
+      {
+        catalog: '2015-2017',
+        courses: [
+          {
+            id: 'AGB301',
+            catalog: '2015-2017',
+            displayName: 'Food and Fiber Marketing',
+            units: '4',
+            desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+            addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          },
+          {
+            id: 'AGC301',
+            catalog: '2015-2017',
+            displayName: 'New Media Communication Strategies in Agriculture',
+            units: '4',
+            desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+            addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          },
+          {
+            id: 'JOUR312',
+            catalog: '2015-2017',
+            displayName: 'Public Relations',
+            units: '4',
+            desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+            addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+            gwrCourse: false,
+            uscpCourse: false,
+            dynamicTerms: null
+          }
+        ]
+      }
+    ];
+
+    expect(
+      cloneAndDeleteNestedProperty(
+        await generateUserCourseCache([flow1], apiDataConfig.apiData.programData),
         'dynamicTerms'
       )
     ).toStrictEqual(cloneAndDeleteNestedProperty(expectedCourseCache, 'dynamicTerms'));
