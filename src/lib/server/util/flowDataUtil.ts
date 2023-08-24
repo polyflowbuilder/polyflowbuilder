@@ -8,9 +8,9 @@ import {
   CURRENT_FLOW_DATA_VERSION,
   FLOW_DEFAULT_TERM_DATA
 } from '$lib/common/config/flowDataConfig';
-import type { DBFlowchart } from '@prisma/client';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 import type { MutateFlowchartData } from '$lib/types';
+import type { DBFlowchart, Program } from '@prisma/client';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
 
 export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlowchartData {
@@ -62,12 +62,15 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
   return convertedFlowchart;
 }
 
-export async function generateFlowchart(data: GenerateFlowchartData): Promise<Flowchart> {
+export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
+  flowchart: Flowchart;
+  programMetadata: Program[];
+}> {
   const templateFlowcharts = await getTemplateFlowcharts(data.programIds);
 
   // presumably templateFlowchart termData has been validated before being accessed here so explicitly cast
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
-    templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData as Term[]),
+    templateFlowcharts.map((templateFlowchart) => templateFlowchart.flowchart.termData as Term[]),
     data.programIds,
     apiData.courseData,
     apiData.programData
@@ -119,5 +122,10 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
   // compute hash
   generatedFlowchart.hash = generateFlowHash(generatedFlowchart);
 
-  return generatedFlowchart;
+  // safe to map programMetadata here (re: dedup) request is validated to have
+  // unique programIds before generating
+  return {
+    flowchart: generatedFlowchart,
+    programMetadata: templateFlowcharts.map((data) => data.programMetadata)
+  };
 }
