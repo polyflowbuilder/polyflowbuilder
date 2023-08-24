@@ -5,6 +5,7 @@ import {
   convertDBFlowchartToFlowchart,
   convertFlowchartToDBFlowchart
 } from '$lib/server/util/flowDataUtil';
+import type { Program } from '@prisma/client';
 import type { MutateFlowchartData } from '$lib/types';
 
 const logger = initLogger('DB/Flowchart');
@@ -12,8 +13,13 @@ const logger = initLogger('DB/Flowchart');
 // TODO: add tests for this?
 export async function getUserFlowcharts(
   userId: string,
-  ids: string[] = []
-): Promise<MutateFlowchartData[]> {
+  ids: string[] = [],
+  includeProgramMetadata = false
+): Promise<
+  (MutateFlowchartData & {
+    programMetadata?: Program[];
+  })[]
+> {
   const res = await prisma.dBFlowchart.findMany({
     where: {
       ownerId: userId,
@@ -25,10 +31,40 @@ export async function getUserFlowcharts(
     },
     orderBy: {
       pos: 'asc'
+    },
+    include: {
+      programId1Relation: includeProgramMetadata,
+      programId2Relation: includeProgramMetadata,
+      programId3Relation: includeProgramMetadata,
+      programId4Relation: includeProgramMetadata,
+      programId5Relation: includeProgramMetadata
     }
   });
 
-  const resConverted = res.map((flow) => convertDBFlowchartToFlowchart(flow));
+  const resConverted = res.map((flowData) => {
+    const {
+      programId1Relation,
+      programId2Relation,
+      programId3Relation,
+      programId4Relation,
+      programId5Relation,
+      ...flow
+    } = flowData;
+
+    // need type guard for ts to be happy with the filter
+    return {
+      ...convertDBFlowchartToFlowchart(flow),
+      programMetadata: [
+        programId1Relation,
+        programId2Relation,
+        programId3Relation,
+        programId4Relation,
+        programId5Relation
+      ].filter((prog): prog is Program => {
+        return prog !== null;
+      })
+    };
+  });
 
   logger.info('Fetched flowcharts for user', userId);
 

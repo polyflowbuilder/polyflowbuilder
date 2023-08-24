@@ -1,13 +1,22 @@
-import { apiData } from '$lib/server/config/apiDataConfig';
+import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { APICourseFull, CourseCache } from '$lib/types';
+import type { CourseCache } from '$lib/types';
 
-export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[] {
-  const flowchartCourseCache: CourseCache[] = apiData.catalogs.map((catalog) => ({
-    catalog,
-    courses: []
-  }));
+export async function generateCourseCacheFlowchart(
+  flowchart: Flowchart,
+  programCache: Program[]
+): Promise<CourseCache[]> {
+  const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];
+  const flowchartCourseCache: CourseCache[] = catalogs.map((catalog) => {
+    return {
+      catalog,
+      courses: []
+    };
+  });
+  // only keep the IDs in here vs. the entire course object so === equality works properly
+  const courseIds = new Set<string>();
 
   flowchart.termData.forEach((termData) => {
     termData.courses.forEach((c) => {
@@ -18,56 +27,77 @@ export function generateCourseCacheFlowchart(flowchart: Flowchart): CourseCache[
         const courseCatalog = getCatalogFromProgramIDIndex(
           c.programIdIndex ?? 0,
           flowchart.programId,
-          apiData.programData
+          programCache
         );
 
         if (!courseCatalog) {
           throw new Error('courseCacheUtil: undefined courseCatalog');
         }
 
-        // get the associated course data
-        const courseMetadata = apiData.courseData
-          .find((cache) => cache.catalog === courseCatalog)
-          ?.courses.find((crs) => crs.id === c.id);
-
-        const catalogCourseCache = flowchartCourseCache.find(
-          (cache) => cache.catalog === courseCatalog
-        )?.courses;
-
-        if (!catalogCourseCache) {
-          throw new Error('courseCacheUtil: undefined catalog in course cache');
-        }
-
-        if (courseMetadata) {
-          catalogCourseCache.push(courseMetadata);
-        }
+        // dedup to ensure we only request one lookup per unique course
+        courseIds.add(`${courseCatalog},${c.id}`);
       }
     });
   });
 
-  return flowchartCourseCache;
-}
-
-export function generateUserCourseCache(userFlowcharts: Flowchart[]): CourseCache[] {
-  const courseCacheSets: Set<APICourseFull>[] = apiData.catalogs.map(() => new Set());
-
-  // TODO: can we optimize this? O(n^3)
-  userFlowcharts.forEach((flow) => {
-    const flowchartCourseCacheData = generateCourseCacheFlowchart(flow);
-    flowchartCourseCacheData.forEach((flowchartCourseCacheDataCatalog, i) => {
-      flowchartCourseCacheDataCatalog.courses.forEach((crs) => {
-        courseCacheSets[i].add(crs);
-      });
-    });
-  });
-
-  const userCourseCache: CourseCache[] = [];
-  apiData.catalogs.forEach((catalog, i) =>
-    userCourseCache.push({
-      catalog,
-      courses: Array.from(courseCacheSets[i])
+  // get the courses
+  const courses = await getCourseData(
+    [...courseIds].map((courseId) => {
+      const parts = courseId.split(',');
+      return {
+        catalog: parts[0],
+        id: parts[1]
+      };
     })
   );
 
-  return userCourseCache;
+  // map courses to course cache
+  courses.forEach((crs) => {
+    const idx = catalogs.findIndex((catalog) => catalog === crs.catalog);
+    if (idx === -1) {
+      throw new Error('courseCacheUtil: undefined catalog in courseCache Set');
+    }
+
+    flowchartCourseCache[idx].courses.push(crs);
+  });
+
+  // only return caches that have courses in them
+  return flowchartCourseCache.filter((cache) => cache.courses.length);
+}
+
+export async function generateUserCourseCache(
+  userFlowcharts: Flowchart[],
+  programCache: Program[]
+): Promise<CourseCache[]> {
+  const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];
+  const userCourseCache: CourseCache[] = catalogs.map((catalog) => {
+    return {
+      catalog,
+      courses: []
+    };
+  });
+  // only keep the IDs in here vs. the entire course object so === equality works properly
+  const courseCacheSets = catalogs.map(() => new Set<string>());
+
+  // TODO: can we optimize this? O(mnp)
+  for await (const flow of userFlowcharts) {
+    const flowchartCourseCacheData = await generateCourseCacheFlowchart(flow, programCache);
+    flowchartCourseCacheData.forEach((flowchartCourseCacheDataCatalog) => {
+      const idx = catalogs.findIndex(
+        (catalog) => catalog === flowchartCourseCacheDataCatalog.catalog
+      );
+      if (idx === -1) {
+        throw new Error('courseCacheUtil: mismatch in catalog indexes');
+      }
+      flowchartCourseCacheDataCatalog.courses.forEach((crs) => {
+        if (!courseCacheSets[idx].has(`${crs.catalog},${crs.id}`)) {
+          courseCacheSets[idx].add(`${crs.catalog},${crs.id}`);
+          userCourseCache[idx].courses.push(crs);
+        }
+      });
+    });
+  }
+
+  // only return caches that have courses in them
+  return userCourseCache.filter((cache) => cache.courses.length);
 }
