@@ -80,11 +80,25 @@
   function persistNewFlowchart(res: { generatedFlowchart: Flowchart; courseCache: CourseCache[] }) {
     // TODO: empty flowchart case
     const newCourseCache = $courseCache;
-    res.courseCache.forEach((courseCacheEntry, i) => {
-      // TODO: optimize by making course cache a set!
-      newCourseCache[i].courses = Array.from(
-        new Set([...newCourseCache[i].courses, ...courseCacheEntry.courses])
-      );
+    res.courseCache.forEach((courseCacheEntry) => {
+      const idx = newCourseCache.findIndex((cache) => cache.catalog === courseCacheEntry.catalog);
+
+      // new catalog
+      if (idx === -1) {
+        newCourseCache.push(courseCacheEntry);
+      } else {
+        // get courses that need to be added
+        const existingCourseIds = new Set(
+          newCourseCache[idx].courses.map((crs) => `${crs.catalog},${crs.id}`)
+        );
+        const newCourses = courseCacheEntry.courses.filter((crs) => {
+          const id = `${crs.catalog},${crs.id}`;
+          return !existingCourseIds.has(id);
+        });
+
+        // add missing courses
+        newCourseCache[idx].courses.push(...newCourses);
+      }
     });
     $courseCache = newCourseCache;
 
@@ -163,7 +177,7 @@
     <div class="flex mt-4">
       <button
         class="btn btn-almostmd btn-accent flex-1"
-        disabled={!createFlowOptionsValid}
+        disabled={!createFlowOptionsValid || loading}
         on:click={createFlowchart}
       >
         <span class={loading ? 'loading loading-spinner' : ''} />
