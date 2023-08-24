@@ -122,7 +122,7 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
   // compute hash
   generatedFlowchart.hash = generateFlowHash(generatedFlowchart);
 
-  // safe to map programMetadata here (re: dedup) request is validated to have
+  // safe to map programMetadata here (re: dedup) as request is validated to have
   // unique programIds before generating
   return {
     flowchart: generatedFlowchart,
