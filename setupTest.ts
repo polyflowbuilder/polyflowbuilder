@@ -1,15 +1,12 @@
 // see https://github.com/davipon/svelte-component-test-recipes#setup
 
+import '@testing-library/jest-dom/vitest';
 import * as environment from '$app/environment';
 import * as navigation from '$app/navigation';
 import * as stores from '$app/stores';
-import matchers from '@testing-library/jest-dom/matchers';
+import { vi } from 'vitest';
 import { readable } from 'svelte/store';
-import { expect, vi } from 'vitest';
 import type { Navigation, Page } from '@sveltejs/kit';
-
-// Add custom jest matchers
-expect.extend(matchers);
 
 // Mock SvelteKit runtime module $app/environment
 vi.mock('$app/environment', (): typeof environment => ({
