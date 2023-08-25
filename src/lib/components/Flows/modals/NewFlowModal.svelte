@@ -16,7 +16,7 @@
   import type { CourseCache } from '$lib/types';
 
   // component required data
-  export let startYearsData: string[];
+  export let availableFlowchartStartYears: string[];
   export let catalogYearsData: string[];
   export let programCache: Program[];
 
@@ -158,7 +158,7 @@
       <FlowPropertiesSelector
         bind:flowName
         bind:flowStartYear
-        {startYearsData}
+        {availableFlowchartStartYears}
         {catalogYearsData}
         {programCache}
         {programIdInputs}

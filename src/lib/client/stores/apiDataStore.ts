@@ -4,7 +4,7 @@ import type { Program } from '@prisma/client';
 import type { CourseCache } from '$lib/types';
 
 // API data for flowcharts
-export const startYearsData = writeOnceStore<string[]>([]);
+export const availableFlowchartStartYears = writeOnceStore<string[]>([]);
 export const catalogYearsData = writeOnceStore<string[]>([]);
 export const programCache = writeOnceStore<Program[]>([]);
 

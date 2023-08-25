@@ -89,7 +89,7 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
   test('default state for Component correct', () => {
     render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -175,7 +175,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('empty everything is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -197,7 +197,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just name is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
@@ -219,7 +219,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just start year is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -241,7 +241,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just a valid program is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -263,7 +263,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but name is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -285,7 +285,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but start year is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
@@ -307,7 +307,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but valid program is invalid', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
@@ -329,7 +329,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything valid except name too long', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName:
@@ -352,7 +352,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything valid except additional empty programs', () => {
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
@@ -378,7 +378,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -522,7 +522,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -625,7 +625,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -715,7 +715,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -891,7 +891,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',
@@ -989,7 +989,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programCache: apiDataConfig.apiData.programData,
         flowName: '',

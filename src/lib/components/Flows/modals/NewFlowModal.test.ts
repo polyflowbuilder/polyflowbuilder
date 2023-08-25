@@ -27,7 +27,7 @@ describe('NewFlowModal component tests ', () => {
 
     render(NewFlowModal, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programData: apiDataConfig.apiData.programData
       }
@@ -132,7 +132,7 @@ describe('NewFlowModal component tests ', () => {
 
     render(NewFlowModal, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programData: apiDataConfig.apiData.programData
       }
@@ -205,7 +205,7 @@ describe('NewFlowModal component tests ', () => {
 
     render(NewFlowModal, {
       props: {
-        startYearsData: apiDataConfig.apiData.startYears,
+        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         programData: apiDataConfig.apiData.programData
       }

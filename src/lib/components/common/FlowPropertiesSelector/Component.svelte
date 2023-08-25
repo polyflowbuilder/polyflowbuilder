@@ -10,7 +10,7 @@
   }>();
 
   // component required data
-  export let startYearsData: string[];
+  export let availableFlowchartStartYears: string[];
   export let catalogYearsData: string[];
   export let programCache: Program[];
 
@@ -104,7 +104,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each startYearsData as startYear}
+        {#each availableFlowchartStartYears as startYear}
           <option value={startYear}>{startYear}</option>
         {/each}
       </select>
