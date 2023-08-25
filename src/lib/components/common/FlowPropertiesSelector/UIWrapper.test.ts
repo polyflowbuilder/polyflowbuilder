@@ -6,7 +6,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
     render(UIWrapper, {
       props: {
         availableFlowchartCatalogs: [],
-        programData: [],
+        programCache: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
         i: 0
@@ -23,7 +23,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
     render(UIWrapper, {
       props: {
         availableFlowchartCatalogs: [],
-        programData: [],
+        programCache: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
         i: 2
@@ -41,7 +41,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
     render(UIWrapper, {
       props: {
         availableFlowchartCatalogs: [],
-        programData: [],
+        programCache: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
         i: 0,

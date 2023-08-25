@@ -29,7 +29,7 @@ describe('NewFlowModal component tests ', () => {
       props: {
         availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
+        programCache: apiDataConfig.apiData.programData
       }
     });
 
@@ -134,7 +134,7 @@ describe('NewFlowModal component tests ', () => {
       props: {
         availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
+        programCache: apiDataConfig.apiData.programData
       }
     });
 
@@ -207,7 +207,7 @@ describe('NewFlowModal component tests ', () => {
       props: {
         availableFlowchartStartYears: apiDataConfig.apiData.startYears,
         availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
+        programCache: apiDataConfig.apiData.programData
       }
     });
 

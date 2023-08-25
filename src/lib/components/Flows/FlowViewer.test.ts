@@ -7,7 +7,7 @@ import { mockCourseDataStore, mockProgramDataStore } from '../../../../tests/uti
 await apiDataConfig.init();
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
-// the programData and courseCache stores FAILS!! because vi.mock() MUST be called
+// the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
 // before the FlowEditor component is imported or else things break
 import FlowViewer from './FlowViewer.svelte';
 
@@ -17,7 +17,7 @@ describe('FlowViewer component tests', () => {
   beforeAll(() => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
-        programData: mockProgramDataStore,
+        programCache: mockProgramDataStore,
         courseCache: mockCourseDataStore
       };
     });
