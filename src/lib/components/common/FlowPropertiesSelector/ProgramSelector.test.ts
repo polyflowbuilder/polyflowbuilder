@@ -15,7 +15,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     render(ProgramSelector, {
       props: {
         programCache: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
+        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
       }
@@ -51,7 +51,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     render(ProgramSelector, {
       props: {
         programCache: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
+        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
       }
@@ -86,7 +86,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     render(ProgramSelector, {
       props: {
         programCache: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
+        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
       }
@@ -124,7 +124,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     const { component } = render(ProgramSelector, {
       props: {
         programCache: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
+        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
       }
@@ -144,7 +144,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
   test('changing defaultOptionText customization prop works', () => {
     // default already tested, so try switching
     render(ProgramSelector, {
-      catalogYearsData: [],
+      availableFlowchartCatalogs: [],
       programCache: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
@@ -173,7 +173,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     const view = render(ProgramSelector, {
       props: {
         programCache: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
+        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
       }
@@ -188,7 +188,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
 
     // enabled
     view.rerender({
-      catalogYearsData: [],
+      availableFlowchartCatalogs: [],
       programCache: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
@@ -212,7 +212,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
+      availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
       programCache: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
       programIdInput: ''
@@ -326,7 +326,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
+      availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
       programCache: apiDataConfig.apiData.programData,
       programIdInput: program.id,
       alreadySelectedProgramIds: []
@@ -388,7 +388,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
+      availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
       programCache: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
       programIdInput: ''
@@ -565,7 +565,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
+      availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
       programCache: apiDataConfig.apiData.programData,
       programIdInput: '',
       alreadySelectedProgramIds: []

@@ -11,7 +11,7 @@
 
   // component required data
   export let availableFlowchartStartYears: string[];
-  export let catalogYearsData: string[];
+  export let availableFlowchartCatalogs: string[];
   export let programCache: Program[];
 
   // data props
@@ -117,7 +117,7 @@
 
     {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
       <UIWrapper
-        {catalogYearsData}
+        {availableFlowchartCatalogs}
         {programCache}
         programIdInput={flowProgramIdInput}
         alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}

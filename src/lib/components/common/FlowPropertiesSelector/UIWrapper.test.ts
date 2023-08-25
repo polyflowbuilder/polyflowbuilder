@@ -5,7 +5,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
   test('index 0 display correct', () => {
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
+        availableFlowchartCatalogs: [],
         programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
@@ -22,7 +22,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
   test('index >0 display correct', () => {
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
+        availableFlowchartCatalogs: [],
         programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
@@ -40,7 +40,7 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
     // just pass one passthru prop and expect the rest of them to work
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
+        availableFlowchartCatalogs: [],
         programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],

@@ -10,7 +10,7 @@
 
   // passthrough props for ProgramSelector
 
-  export let catalogYearsData: string[];
+  export let availableFlowchartCatalogs: string[];
   export let programCache: Program[];
   export let programIdInput: string;
   export let alreadySelectedProgramIds: string[];
@@ -40,7 +40,7 @@
     {/if}
   </div>
   <ProgramSelector
-    {catalogYearsData}
+    {availableFlowchartCatalogs}
     {programCache}
     {programIdInput}
     {alreadySelectedProgramIds}

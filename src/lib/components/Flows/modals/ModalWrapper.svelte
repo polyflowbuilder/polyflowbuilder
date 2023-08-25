@@ -1,7 +1,7 @@
 <script lang="ts">
   import {
     programCache,
-    catalogYearsData,
+    availableFlowchartCatalogs,
     availableFlowchartStartYears
   } from '$lib/client/stores/apiDataStore';
   import {
@@ -16,7 +16,7 @@
 <div>
   <NewFlowModal
     availableFlowchartStartYears={$availableFlowchartStartYears}
-    catalogYearsData={$catalogYearsData}
+    availableFlowchartCatalogs={$availableFlowchartCatalogs}
     programCache={$programCache}
   />
   <AddTermsModal />

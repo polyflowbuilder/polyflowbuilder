@@ -17,7 +17,7 @@
 
   // component required data
   export let availableFlowchartStartYears: string[];
-  export let catalogYearsData: string[];
+  export let availableFlowchartCatalogs: string[];
   export let programCache: Program[];
 
   // data props
@@ -159,7 +159,7 @@
         bind:flowName
         bind:flowStartYear
         {availableFlowchartStartYears}
-        {catalogYearsData}
+        {availableFlowchartCatalogs}
         {programCache}
         {programIdInputs}
         on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}

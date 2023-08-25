@@ -7,7 +7,7 @@
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { catalogYearsData, courseCache } from '$lib/client/stores/apiDataStore';
+  import { availableFlowchartCatalogs, courseCache } from '$lib/client/stores/apiDataStore';
   import {
     selectedColor,
     selectedCourses,
@@ -24,7 +24,7 @@
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
-  $: $searchCache = $catalogYearsData.map((catalog) => ({
+  $: $searchCache = $availableFlowchartCatalogs.map((catalog) => ({
     catalog,
     queries: []
   }));

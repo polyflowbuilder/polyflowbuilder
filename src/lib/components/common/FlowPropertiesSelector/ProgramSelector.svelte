@@ -9,7 +9,7 @@
   // external data props
 
   // component required data
-  export let catalogYearsData: string[];
+  export let availableFlowchartCatalogs: string[];
   export let programCache: Program[];
 
   // component inputs
@@ -121,7 +121,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each catalogYearsData as catalogYear}
+        {#each availableFlowchartCatalogs as catalogYear}
           <option value={catalogYear}>{catalogYear}</option>
         {/each}
       </select>

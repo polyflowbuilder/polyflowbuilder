@@ -11,7 +11,7 @@
   import { editFlowPropertiesModalOpen } from '$lib/client/stores/modalStateStore';
   import {
     programCache,
-    catalogYearsData,
+    availableFlowchartCatalogs,
     availableFlowchartStartYears
   } from '$lib/client/stores/apiDataStore';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
@@ -107,7 +107,7 @@
       bind:flowName
       bind:flowStartYear
       availableFlowchartStartYears={$availableFlowchartStartYears}
-      catalogYearsData={$catalogYearsData}
+      availableFlowchartCatalogs={$availableFlowchartCatalogs}
       programCache={$programCache}
       programIdInputs={flowProgramIdInputs}
       on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
