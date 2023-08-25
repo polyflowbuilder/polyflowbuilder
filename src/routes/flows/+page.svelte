@@ -34,7 +34,7 @@
 
   // API data caches
   courseCache.set(data.userData.courseCache);
-  programCache.init(data.userData.programMetadata);
+  programCache.set(data.userData.programMetadata);
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
