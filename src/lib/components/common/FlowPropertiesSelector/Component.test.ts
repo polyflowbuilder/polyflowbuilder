@@ -91,7 +91,7 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -177,7 +177,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -199,7 +199,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['']
@@ -221,7 +221,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '2021-2022',
         programIdInputs: ['']
@@ -243,7 +243,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -265,7 +265,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -287,7 +287,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -309,7 +309,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['']
@@ -331,7 +331,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName:
           'sdlkvmsdklvmksdlvmlksdmvkldsmvklsdmvklsdmvlksdmvksldmvsdlkvmsdlkmvslkdvmslkkmlvslksd',
         flowStartYear: '2020-2021',
@@ -354,7 +354,7 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9', '', '']
@@ -380,7 +380,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -524,7 +524,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -627,7 +627,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -717,7 +717,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -893,7 +893,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -991,7 +991,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       props: {
         startYearsData: apiDataConfig.apiData.startYears,
         catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']

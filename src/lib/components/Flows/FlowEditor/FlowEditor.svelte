@@ -3,7 +3,7 @@
   import { computeGroupUnits } from '$lib/client/util/unitCounterUtilClient';
   import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
   import { TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
-  import { courseCache, programData } from '$lib/client/stores/apiDataStore';
+  import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import {
     FlowEditorHeader,
     FlowEditorFooter,
@@ -28,7 +28,7 @@
     scrollable && termsContainerClientWidth + termsContainerScroll < termsContainerScrollWidth;
 
   // for group unit counts
-  $: unitCounts = computeGroupUnits(flowchart, $courseCache, $programData);
+  $: unitCounts = computeGroupUnits(flowchart, $courseCache, $programCache);
 
   // scroll width for terms container is only accurate after DOM is in sync with state
   afterUpdate(() => {

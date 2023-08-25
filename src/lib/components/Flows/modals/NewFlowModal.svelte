@@ -18,7 +18,7 @@
   // component required data
   export let startYearsData: string[];
   export let catalogYearsData: string[];
-  export let programData: Program[];
+  export let programCache: Program[];
 
   // data props
 
@@ -160,7 +160,7 @@
         bind:flowStartYear
         {startYearsData}
         {catalogYearsData}
-        {programData}
+        {programCache}
         {programIdInputs}
         on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
         on:optionsValidUpdate={optionsValidUpdateEventHandler}

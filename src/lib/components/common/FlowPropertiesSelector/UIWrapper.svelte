@@ -11,7 +11,7 @@
   // passthrough props for ProgramSelector
 
   export let catalogYearsData: string[];
-  export let programData: Program[];
+  export let programCache: Program[];
   export let programIdInput: string;
   export let alreadySelectedProgramIds: string[];
   export let defaultOptionText = 'Choose ...';
@@ -41,7 +41,7 @@
   </div>
   <ProgramSelector
     {catalogYearsData}
-    {programData}
+    {programCache}
     {programIdInput}
     {alreadySelectedProgramIds}
     {defaultOptionText}

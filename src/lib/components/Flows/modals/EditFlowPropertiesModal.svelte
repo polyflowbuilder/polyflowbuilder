@@ -9,7 +9,7 @@
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { editFlowPropertiesModalOpen } from '$lib/client/stores/modalStateStore';
-  import { startYearsData, catalogYearsData, programData } from '$lib/client/stores/apiDataStore';
+  import { startYearsData, catalogYearsData, programCache } from '$lib/client/stores/apiDataStore';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
   // TODO: add support for editing programs
@@ -104,7 +104,7 @@
       bind:flowStartYear
       startYearsData={$startYearsData}
       catalogYearsData={$catalogYearsData}
-      programData={$programData}
+      programCache={$programCache}
       programIdInputs={flowProgramIdInputs}
       on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
       on:optionsValidUpdate={optionsValidUpdateEventHandler}

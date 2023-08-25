@@ -14,7 +14,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   test('default state for catalog selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
@@ -50,7 +50,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   test('default state for major selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
@@ -85,7 +85,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   test('default state for major selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
@@ -123,7 +123,7 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
 
     const { component } = render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
@@ -145,7 +145,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     // default already tested, so try switching
     render(ProgramSelector, {
       catalogYearsData: [],
-      programData: [],
+      programCache: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
       defaultOptionText: 'test'
@@ -172,7 +172,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     // test default
     const view = render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
+        programCache: apiDataConfig.apiData.programData,
         catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
         programIdInput: ''
@@ -189,7 +189,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     // enabled
     view.rerender({
       catalogYearsData: [],
-      programData: [],
+      programCache: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
       disableSelectingDefaultOption: false
@@ -213,7 +213,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
+      programCache: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
       programIdInput: ''
     });
@@ -327,7 +327,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
+      programCache: apiDataConfig.apiData.programData,
       programIdInput: program.id,
       alreadySelectedProgramIds: []
     });
@@ -389,7 +389,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
+      programCache: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
       programIdInput: ''
     });
@@ -566,7 +566,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     const { component } = render(ProgramSelector, {
       catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
+      programCache: apiDataConfig.apiData.programData,
       programIdInput: '',
       alreadySelectedProgramIds: []
     });

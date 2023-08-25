@@ -3,7 +3,7 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { updateCourseData } from '$lib/client/util/flowActionsUtil';
   import { validateUnitString } from '$lib/client/util/unitCounterUtilClient';
-  import { courseCache, programData } from '$lib/client/stores/apiDataStore';
+  import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { customizeCoursesModalOpen } from '$lib/client/stores/modalStateStore';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
@@ -89,7 +89,7 @@
         const courseCatalog = getCatalogFromProgramIDIndex(
           course.programIdIndex ?? 0,
           $userFlowcharts[$selectedFlowIndex].programId,
-          $programData
+          $programCache
         );
         const courseMetadata = $courseCache
           .find((cache) => cache.catalog === courseCatalog)
