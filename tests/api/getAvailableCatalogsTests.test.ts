@@ -5,7 +5,7 @@ import { createUser, deleteUser } from '$lib/server/db/user';
 const GET_AVAILABLE_CATALOGS_API_TESTS_EMAIL =
   'pfb_test_getAvailableCatalogsAPI_playwright@test.com';
 
-test.describe('getAvailableStartYears tests', () => {
+test.describe('getAvailableCatalogsTests tests', () => {
   test.beforeAll(async () => {
     // create account
     await createUser({
