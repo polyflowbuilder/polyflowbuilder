@@ -7,20 +7,34 @@
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
-  import { availableFlowchartCatalogs, courseCache } from '$lib/client/stores/apiDataStore';
   import {
     selectedColor,
     selectedCourses,
-    selectedFlowIndex,
-    viewingCreditBin
+    viewingCreditBin,
+    selectedFlowIndex
   } from '$lib/client/stores/UIDataStore';
+  import {
+    courseCache,
+    programCache,
+    availableFlowchartCatalogs,
+    availableFlowchartStartYears
+  } from '$lib/client/stores/apiDataStore';
   import type { PageData } from './$types';
 
   export let data: PageData;
 
   // init data brought down from server
+
+  // user flowcharts
   userFlowcharts.set(data.userData.flowcharts);
+
+  // API data
+  availableFlowchartCatalogs.init(data.flowchartCatalogs);
+  availableFlowchartStartYears.init(data.flowchartStartYears);
+
+  // API data caches
   courseCache.set(data.userData.courseCache);
+  programCache.init(data.userData.programMetadata);
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
