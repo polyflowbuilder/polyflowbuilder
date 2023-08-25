@@ -19,12 +19,8 @@
   export let data: PageData;
 
   // init data brought down from server
-  $: if (data.flowcharts) {
-    userFlowcharts.set(data.flowcharts);
-  }
-  $: if (data.courseCache) {
-    courseCache.set(data.courseCache);
-  }
+  userFlowcharts.set(data.userData.flowcharts);
+  courseCache.set(data.userData.courseCache);
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
