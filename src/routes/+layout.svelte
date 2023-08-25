@@ -1,17 +1,6 @@
 <script lang="ts">
   import '../app.postcss';
   import { Footer, Header } from '$lib/components/common';
-  import { catalogYearsData, programData, startYearsData } from '$lib/client/stores/apiDataStore';
-  import type { LayoutData } from './$types';
-
-  export let data: LayoutData;
-
-  // init metadata in app
-  $: if (data.programData) {
-    startYearsData.init(data.programData.startYears);
-    catalogYearsData.init(data.programData.catalogs);
-    programData.init(data.programData.programData);
-  }
 </script>
 
 <svelte:head>
