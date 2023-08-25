@@ -1,5 +1,15 @@
 import { z } from 'zod';
 
+// TODO: move to a more central place?
+export const catalogSchema = z
+  .string({
+    required_error: 'Catalog is required.'
+  })
+  .refine((catalog) => {
+    const parts = catalog.split('-').map((part) => Number(part));
+    return catalog.length === 9 && !isNaN(parts[0]) && !isNaN(parts[1]) && parts[1] > parts[0];
+  }, 'Invalid catalog format.');
+
 // validation schema for api/data/queryAvailablePrograms endpoint
 // currently only support the following query types:
 // 1. id
@@ -25,16 +35,7 @@ export const queryAvailableProgramsSchema = z.object({
               required_error: 'Major name is required.'
             })
             .min(1, 'Major name must not be empty.'),
-          catalog: z
-            .string({
-              required_error: 'Catalog is required.'
-            })
-            .refine((catalog) => {
-              const parts = catalog.split('-').map((part) => Number(part));
-              return (
-                catalog.length === 9 && !isNaN(parts[0]) && !isNaN(parts[1]) && parts[1] > parts[0]
-              );
-            }, 'Invalid catalog format.')
+          catalog: catalogSchema
         })
         .strict({
           message: 'Invalid query for available programs.'
