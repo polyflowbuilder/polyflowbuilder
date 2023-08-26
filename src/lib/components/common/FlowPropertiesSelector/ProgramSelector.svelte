@@ -8,11 +8,13 @@
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
+    fetchingDataUpdate: boolean;
   }>();
 
   // component inputs
   export let programIdInput: string;
   export let alreadySelectedProgramIds: string[];
+  export let fetchingData: boolean;
 
   // customization props
   export let defaultOptionText = 'Choose ...';
@@ -73,6 +75,7 @@
 
     // does not exist, fetch entries
     if (idx === -1) {
+      dispatch('fetchingDataUpdate', true);
       const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
       const resJson = (await res.json()) as {
         message: string;
@@ -86,6 +89,7 @@
         }
       ];
       idx = $majorNameCache.length - 1;
+      dispatch('fetchingDataUpdate', false);
     }
 
     // select
@@ -131,6 +135,7 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programCatalogYear"
+        disabled={fetchingData}
         required
         bind:value={programCatalogYear}
       >
@@ -150,6 +155,7 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programName"
+        disabled={fetchingData}
         required
         bind:value={programName}
       >
@@ -173,6 +179,7 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programAddlName"
+        disabled={fetchingData}
         required
         bind:value={programId}
       >

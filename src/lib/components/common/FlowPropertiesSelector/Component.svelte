@@ -21,6 +21,9 @@
   export let flowNamePlaceholderText = 'My New Flowchart';
   export let disableSelectingDefaultOption = true;
 
+  // internal data variables
+  let fetchingData = false;
+
   // make sure output is a copy of the inputs whenever the inputs change
   $: flowProgramIds = programIdInputs;
 
@@ -55,6 +58,9 @@
   }
   function deleteProgramEventHandler(e: CustomEvent<number>) {
     deleteProgram(e.detail);
+  }
+  function fetchingDataUpdateEventHandler(e: CustomEvent<boolean>) {
+    fetchingData = e.detail;
   }
 </script>
 
@@ -107,7 +113,12 @@
   </div>
 
   <div class="mb-2">
-    <p class="label pb-0">Programs:</p>
+    <p class="label pb-0">
+      Programs:
+      {#if fetchingData}
+        <span class="ml-2 loading loading-spinner w-5" />
+      {/if}
+    </p>
     <div class="divider mt-0 mb-2" />
 
     {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
@@ -115,10 +126,12 @@
         programIdInput={flowProgramIdInput}
         alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
         {i}
+        {fetchingData}
         on:programIdUpdate={(e) => {
           programIdUpdateEventHandler(e, i);
         }}
         on:deleteProgram={deleteProgramEventHandler}
+        on:fetchingDataUpdate={fetchingDataUpdateEventHandler}
       />
     {/each}
 

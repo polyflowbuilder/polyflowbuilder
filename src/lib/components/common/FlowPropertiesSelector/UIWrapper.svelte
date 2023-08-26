@@ -5,6 +5,7 @@
   const dispatch = createEventDispatcher<{
     deleteProgram: number;
     programIdUpdate: string;
+    fetchingDataUpdate: boolean;
   }>();
 
   // passthrough props for ProgramSelector
@@ -13,6 +14,7 @@
   export let alreadySelectedProgramIds: string[];
   export let defaultOptionText = 'Choose ...';
   export let disableSelectingDefaultOption = true;
+  export let fetchingData: boolean;
 
   // customization props
   export let i: number;
@@ -22,6 +24,9 @@
   // see https://stackoverflow.com/questions/63337868/svelte-typescript-unexpected-tokensvelteparse-error-when-adding-type-to-an-ev
   function programIdUpdateEventHandler(e: CustomEvent<string>) {
     dispatch('programIdUpdate', e.detail);
+  }
+  function fetchingDataUpdateEventHandler(e: CustomEvent<boolean>) {
+    dispatch('fetchingDataUpdate', e.detail);
   }
 </script>
 
@@ -41,6 +46,8 @@
     {alreadySelectedProgramIds}
     {defaultOptionText}
     {disableSelectingDefaultOption}
+    {fetchingData}
     on:programIdUpdate={programIdUpdateEventHandler}
+    on:fetchingDataUpdate={fetchingDataUpdateEventHandler}
   />
 </div>
