@@ -1,6 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher, tick } from 'svelte';
-  import { availableFlowchartCatalogs, programCache } from '$lib/client/stores/apiDataStore';
+  import {
+    programCache,
+    majorNameCache,
+    availableFlowchartCatalogs
+  } from '$lib/client/stores/apiDataStore';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
@@ -19,6 +23,7 @@
   let programName = '';
   let programId = '';
   let updating = false;
+  let majorOptions: string[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
     const majorName = $programCache.find((prog) => prog.id === id)?.majorName;
     if (!majorName) {
@@ -29,6 +34,11 @@
 
   // react to change in program input
   $: void updateInputs(programIdInput);
+
+  // react to change in catalog year to fetch new major options
+  $: if (programCatalogYear) {
+    void loadMajorOptions(programCatalogYear);
+  }
 
   // prevent dispatch during middle of updateInputs (ticking)
   $: if (!updating) {
@@ -57,17 +67,29 @@
     updating = false;
   }
 
-  // generate major and concentration options for UI
-  function buildMajorOptions(progCatalogYear: string) {
-    const majors: string[] = [];
-    $programCache.forEach((progData) => {
-      if (progData.catalog === progCatalogYear) {
-        majors.push(progData.majorName);
-      }
-    });
+  // load major and concentration options for UI
+  async function loadMajorOptions(progCatalogYear: string) {
+    let idx = $majorNameCache.findIndex((cacheEntry) => cacheEntry.catalog === progCatalogYear);
 
-    // dedupe
-    return [...new Set(majors.sort())];
+    // does not exist, fetch entries
+    if (idx === -1) {
+      const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
+      const resJson = (await res.json()) as {
+        message: string;
+        results: string[];
+      };
+      $majorNameCache = [
+        ...$majorNameCache,
+        {
+          catalog: progCatalogYear,
+          majorNames: resJson.results.sort()
+        }
+      ];
+      idx = $majorNameCache.length - 1;
+    }
+
+    // select
+    majorOptions = $majorNameCache[idx].majorNames;
   }
   function buildConcentrationOptions(progCatalogYear: string, majorName: string) {
     const concentrationList: {
@@ -135,7 +157,7 @@
           >{defaultOptionText}</option
         >
         {#if programCatalogYear}
-          {#each buildMajorOptions(programCatalogYear) as major}
+          {#each majorOptions as major}
             <option disabled={alreadySelectedMajorNames.includes(major)} value={major}
               >{major}</option
             >
