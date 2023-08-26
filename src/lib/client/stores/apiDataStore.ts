@@ -8,6 +8,7 @@ export const availableFlowchartStartYears = writeOnceStore<string[]>([]);
 export const availableFlowchartCatalogs = writeOnceStore<string[]>([]);
 
 // API data caches
-export const majorNameCache = writable<MajorNameCache[]>([]);
 export const programCache = writable<Program[]>([]);
 export const courseCache = writable<CourseCache[]>([]);
+export const majorNameCache = writable<MajorNameCache[]>([]);
+export const catalogMajorNameCache = writable<Set<string>>(new Set<string>());

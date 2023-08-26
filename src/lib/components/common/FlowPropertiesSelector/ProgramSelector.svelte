@@ -3,8 +3,10 @@
   import {
     programCache,
     majorNameCache,
+    catalogMajorNameCache,
     availableFlowchartCatalogs
   } from '$lib/client/stores/apiDataStore';
+  import type { Program } from '@prisma/client';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
@@ -26,6 +28,10 @@
   let programId = '';
   let updating = false;
   let majorOptions: string[] = [];
+  let concOptions: {
+    name: string;
+    id: string;
+  }[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
     const majorName = $programCache.find((prog) => prog.id === id)?.majorName;
     if (!majorName) {
@@ -40,6 +46,10 @@
   // react to change in catalog year to fetch new major options
   $: if (programCatalogYear) {
     void loadMajorOptions(programCatalogYear);
+  }
+  // react to change in catalog and major to fetch new conc options
+  $: if (programCatalogYear && programName) {
+    void loadConcentrationOptions(programCatalogYear, programName);
   }
 
   // prevent dispatch during middle of updateInputs (ticking)
@@ -95,26 +105,45 @@
     // select
     majorOptions = $majorNameCache[idx].majorNames;
   }
-  function buildConcentrationOptions(progCatalogYear: string, majorName: string) {
-    const concentrationList: {
-      name: string;
-      id: string;
-    }[] = [];
-    $programCache.forEach((progData) => {
-      if (
-        progData.catalog === progCatalogYear &&
-        progData.majorName === majorName &&
-        // bc may be null - won't be null in this case but could be (eg for minors)
-        progData.concName
-      ) {
-        concentrationList.push({
-          name: progData.concName,
-          id: progData.id
-        });
-      }
-    });
+  async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
+    // fetch programs for this program if we don't have them
+    if (!$catalogMajorNameCache.has(`${progCatalogYear}|${majorName}`)) {
+      dispatch('fetchingDataUpdate', true);
+      const res = await fetch(
+        `/api/data/queryAvailablePrograms?catalog=${progCatalogYear}&majorName=${majorName}`
+      );
+      const resJson = (await res.json()) as {
+        message: string;
+        results: Program[];
+      };
 
-    return concentrationList.sort((a, b) => a.name.localeCompare(b.name));
+      // TODO: optimize this
+      const existingProgramIds = new Set($programCache.map((entry) => entry.id));
+      for (const entry of resJson.results) {
+        if (!existingProgramIds.has(entry.id)) {
+          $programCache.push(entry);
+        }
+      }
+      $catalogMajorNameCache.add(`${progCatalogYear}|${majorName}`);
+
+      $programCache = $programCache;
+      $catalogMajorNameCache = $catalogMajorNameCache;
+      dispatch('fetchingDataUpdate', false);
+    }
+
+    // grab and set all relevant concentrations
+    concOptions = $programCache
+      .filter((entry) => entry.catalog === progCatalogYear && entry.majorName === majorName)
+      .map((entry) => {
+        if (!entry.concName) {
+          throw new Error(`program ${entry.id} has no concName`);
+        }
+        return {
+          name: entry.concName,
+          id: entry.id
+        };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // reset the major & concentration when their respective parents change
@@ -187,7 +216,7 @@
           >{defaultOptionText}</option
         >
         {#if programName}
-          {#each buildConcentrationOptions(programCatalogYear, programName) as concentration}
+          {#each concOptions as concentration}
             <option value={concentration.id}>{concentration.name}</option>
           {/each}
         {/if}
