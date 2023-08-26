@@ -1,7 +1,6 @@
 <script lang="ts">
   import ProgramSelector from './ProgramSelector.svelte';
   import { createEventDispatcher } from 'svelte';
-  import type { Program } from '@prisma/client';
 
   const dispatch = createEventDispatcher<{
     deleteProgram: number;
@@ -10,8 +9,6 @@
 
   // passthrough props for ProgramSelector
 
-  export let availableFlowchartCatalogs: string[];
-  export let programCache: Program[];
   export let programIdInput: string;
   export let alreadySelectedProgramIds: string[];
   export let defaultOptionText = 'Choose ...';
@@ -40,8 +37,6 @@
     {/if}
   </div>
   <ProgramSelector
-    {availableFlowchartCatalogs}
-    {programCache}
     {programIdInput}
     {alreadySelectedProgramIds}
     {defaultOptionText}

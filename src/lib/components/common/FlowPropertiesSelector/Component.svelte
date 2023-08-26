@@ -1,18 +1,13 @@
 <script lang="ts">
   import UIWrapper from './UIWrapper.svelte';
   import { createEventDispatcher } from 'svelte';
+  import { availableFlowchartStartYears } from '$lib/client/stores/apiDataStore';
   import { FLOW_NAME_MAX_LENGTH, FLOW_PROGRAMS_MAX_COUNT } from '$lib/common/config/flowDataConfig';
-  import type { Program } from '@prisma/client';
 
   const dispatch = createEventDispatcher<{
     optionsValidUpdate: boolean;
     flowProgramIdsUpdate: string[];
   }>();
-
-  // component required data
-  export let availableFlowchartStartYears: string[];
-  export let availableFlowchartCatalogs: string[];
-  export let programCache: Program[];
 
   // data props
   export let flowName: string;
@@ -104,7 +99,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each availableFlowchartStartYears as startYear}
+        {#each $availableFlowchartStartYears as startYear}
           <option value={startYear}>{startYear}</option>
         {/each}
       </select>
@@ -117,8 +112,6 @@
 
     {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
       <UIWrapper
-        {availableFlowchartCatalogs}
-        {programCache}
         programIdInput={flowProgramIdInput}
         alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
         {i}

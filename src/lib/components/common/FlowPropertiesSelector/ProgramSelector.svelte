@@ -1,16 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher, tick } from 'svelte';
-  import type { Program } from '@prisma/client';
+  import { availableFlowchartCatalogs, programCache } from '$lib/client/stores/apiDataStore';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
   }>();
-
-  // external data props
-
-  // component required data
-  export let availableFlowchartCatalogs: string[];
-  export let programCache: Program[];
 
   // component inputs
   export let programIdInput: string;
@@ -26,7 +20,7 @@
   let programId = '';
   let updating = false;
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
-    const majorName = programCache.find((prog) => prog.id === id)?.majorName;
+    const majorName = $programCache.find((prog) => prog.id === id)?.majorName;
     if (!majorName) {
       throw new Error('invalid program id in alreadySelectedProgramIds: ' + id);
     }
@@ -45,7 +39,7 @@
     updating = true;
     if (input !== '') {
       // find the program if it's valid
-      const program = programCache.find((prog) => prog.id === input);
+      const program = $programCache.find((prog) => prog.id === input);
       if (!program) {
         throw new Error('invalid program received as input: ' + input);
       }
@@ -66,7 +60,7 @@
   // generate major and concentration options for UI
   function buildMajorOptions(progCatalogYear: string) {
     const majors: string[] = [];
-    programCache.forEach((progData) => {
+    $programCache.forEach((progData) => {
       if (progData.catalog === progCatalogYear) {
         majors.push(progData.majorName);
       }
@@ -80,7 +74,7 @@
       name: string;
       id: string;
     }[] = [];
-    programCache.forEach((progData) => {
+    $programCache.forEach((progData) => {
       if (
         progData.catalog === progCatalogYear &&
         progData.majorName === majorName &&
@@ -121,7 +115,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each availableFlowchartCatalogs as catalogYear}
+        {#each $availableFlowchartCatalogs as catalogYear}
           <option value={catalogYear}>{catalogYear}</option>
         {/each}
       </select>
