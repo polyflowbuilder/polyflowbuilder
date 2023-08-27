@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
@@ -136,6 +137,10 @@ model APICourse {
   geRelation            GECourse[]
   requisiteRelation     CourseRequisite?
   termTypOffRelation    TermTypicallyOffered?
+
+  // for searching
+  @@fulltext([id])
+  @@fulltext([displayName])
 
   @@id([id, catalog])
   @@map("Course")
