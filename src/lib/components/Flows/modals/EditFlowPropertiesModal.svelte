@@ -106,9 +106,6 @@
     <FlowPropertiesSelector
       bind:flowName
       bind:flowStartYear
-      availableFlowchartStartYears={$availableFlowchartStartYears}
-      availableFlowchartCatalogs={$availableFlowchartCatalogs}
-      programCache={$programCache}
       programIdInputs={flowProgramIdInputs}
       on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
       on:optionsValidUpdate={optionsValidUpdateEventHandler}
