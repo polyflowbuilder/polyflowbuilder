@@ -1,20 +1,22 @@
 <script lang="ts">
   import { createEventDispatcher, tick } from 'svelte';
+  import {
+    programCache,
+    majorNameCache,
+    catalogMajorNameCache,
+    availableFlowchartCatalogs
+  } from '$lib/client/stores/apiDataStore';
   import type { Program } from '@prisma/client';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
+    fetchingDataUpdate: boolean;
   }>();
-
-  // external data props
-
-  // component required data
-  export let catalogYearsData: string[];
-  export let programData: Program[];
 
   // component inputs
   export let programIdInput: string;
   export let alreadySelectedProgramIds: string[];
+  export let fetchingData: boolean;
 
   // customization props
   export let defaultOptionText = 'Choose ...';
@@ -25,8 +27,13 @@
   let programName = '';
   let programId = '';
   let updating = false;
+  let majorOptions: string[] = [];
+  let concOptions: {
+    name: string;
+    id: string;
+  }[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
-    const majorName = programData.find((prog) => prog.id === id)?.majorName;
+    const majorName = $programCache.find((prog) => prog.id === id)?.majorName;
     if (!majorName) {
       throw new Error('invalid program id in alreadySelectedProgramIds: ' + id);
     }
@@ -35,6 +42,15 @@
 
   // react to change in program input
   $: void updateInputs(programIdInput);
+
+  // react to change in catalog year to fetch new major options
+  $: if (programCatalogYear) {
+    void loadMajorOptions(programCatalogYear);
+  }
+  // react to change in catalog and major to fetch new conc options
+  $: if (programCatalogYear && programName) {
+    void loadConcentrationOptions(programCatalogYear, programName);
+  }
 
   // prevent dispatch during middle of updateInputs (ticking)
   $: if (!updating) {
@@ -45,7 +61,7 @@
     updating = true;
     if (input !== '') {
       // find the program if it's valid
-      const program = programData.find((prog) => prog.id === input);
+      const program = $programCache.find((prog) => prog.id === input);
       if (!program) {
         throw new Error('invalid program received as input: ' + input);
       }
@@ -63,38 +79,71 @@
     updating = false;
   }
 
-  // generate major and concentration options for UI
-  function buildMajorOptions(progCatalogYear: string) {
-    const majors: string[] = [];
-    programData.forEach((progData) => {
-      if (progData.catalog === progCatalogYear) {
-        majors.push(progData.majorName);
-      }
-    });
+  // load major and concentration options for UI
+  async function loadMajorOptions(progCatalogYear: string) {
+    let idx = $majorNameCache.findIndex((cacheEntry) => cacheEntry.catalog === progCatalogYear);
 
-    // dedupe
-    return [...new Set(majors.sort())];
+    // does not exist, fetch entries
+    if (idx === -1) {
+      dispatch('fetchingDataUpdate', true);
+      const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
+      const resJson = (await res.json()) as {
+        message: string;
+        results: string[];
+      };
+      $majorNameCache = [
+        ...$majorNameCache,
+        {
+          catalog: progCatalogYear,
+          majorNames: resJson.results.sort()
+        }
+      ];
+      idx = $majorNameCache.length - 1;
+      dispatch('fetchingDataUpdate', false);
+    }
+
+    // select
+    majorOptions = $majorNameCache[idx].majorNames;
   }
-  function buildConcentrationOptions(progCatalogYear: string, majorName: string) {
-    const concentrationList: {
-      name: string;
-      id: string;
-    }[] = [];
-    programData.forEach((progData) => {
-      if (
-        progData.catalog === progCatalogYear &&
-        progData.majorName === majorName &&
-        // bc may be null - won't be null in this case but could be (eg for minors)
-        progData.concName
-      ) {
-        concentrationList.push({
-          name: progData.concName,
-          id: progData.id
-        });
-      }
-    });
+  async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
+    // fetch programs for this program if we don't have them
+    if (!$catalogMajorNameCache.has(`${progCatalogYear}|${majorName}`)) {
+      dispatch('fetchingDataUpdate', true);
+      const res = await fetch(
+        `/api/data/queryAvailablePrograms?catalog=${progCatalogYear}&majorName=${majorName}`
+      );
+      const resJson = (await res.json()) as {
+        message: string;
+        results: Program[];
+      };
 
-    return concentrationList.sort((a, b) => a.name.localeCompare(b.name));
+      // TODO: optimize this
+      const existingProgramIds = new Set($programCache.map((entry) => entry.id));
+      for (const entry of resJson.results) {
+        if (!existingProgramIds.has(entry.id)) {
+          $programCache.push(entry);
+        }
+      }
+      $catalogMajorNameCache.add(`${progCatalogYear}|${majorName}`);
+
+      $programCache = $programCache;
+      $catalogMajorNameCache = $catalogMajorNameCache;
+      dispatch('fetchingDataUpdate', false);
+    }
+
+    // grab and set all relevant concentrations
+    concOptions = $programCache
+      .filter((entry) => entry.catalog === progCatalogYear && entry.majorName === majorName)
+      .map((entry) => {
+        if (!entry.concName) {
+          throw new Error(`program ${entry.id} has no concName`);
+        }
+        return {
+          name: entry.concName,
+          id: entry.id
+        };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // reset the major & concentration when their respective parents change
@@ -115,13 +164,14 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programCatalogYear"
+        disabled={fetchingData}
         required
         bind:value={programCatalogYear}
       >
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each catalogYearsData as catalogYear}
+        {#each $availableFlowchartCatalogs as catalogYear}
           <option value={catalogYear}>{catalogYear}</option>
         {/each}
       </select>
@@ -134,6 +184,7 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programName"
+        disabled={fetchingData}
         required
         bind:value={programName}
       >
@@ -141,7 +192,7 @@
           >{defaultOptionText}</option
         >
         {#if programCatalogYear}
-          {#each buildMajorOptions(programCatalogYear) as major}
+          {#each majorOptions as major}
             <option disabled={alreadySelectedMajorNames.includes(major)} value={major}
               >{major}</option
             >
@@ -157,6 +208,7 @@
       <select
         class="select join-item font-medium select-sm select-bordered flex-1 overflow-hidden overflow-ellipsis"
         name="programAddlName"
+        disabled={fetchingData}
         required
         bind:value={programId}
       >
@@ -164,7 +216,7 @@
           >{defaultOptionText}</option
         >
         {#if programName}
-          {#each buildConcentrationOptions(programCatalogYear, programName) as concentration}
+          {#each concOptions as concentration}
             <option value={concentration.id}>{concentration.name}</option>
           {/each}
         {/if}

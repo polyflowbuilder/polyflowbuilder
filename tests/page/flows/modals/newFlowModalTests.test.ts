@@ -50,10 +50,63 @@ test.describe('new flow modal tests', () => {
   test('modal accepts valid input', async ({ page }) => {
     // create valid inputs
     await page.getByRole('button', { name: 'New Flow' }).click();
+
+    // make sure not in default loading state
+    await expect(
+      page
+        .getByText('Programs:', {
+          exact: true
+        })
+        .locator('span')
+    ).toHaveCount(0);
+
     await page.getByRole('textbox', { name: 'Flow Name' }).fill('test');
     await page.getByRole('combobox', { name: 'Starting Year' }).selectOption('2020');
+
+    // make sure fetching queryAvailableMajors works properly with loading state
+    const response1Promise = page.waitForResponse(/\/api\/data\/queryAvailableMajors/);
     await page.getByRole('combobox', { name: 'Catalog' }).selectOption('2019-2020');
+    await expect(
+      page
+        .getByText('Programs:', {
+          exact: true
+        })
+        .locator('span')
+    ).toHaveClass(/loading-spinner/);
+    const response1 = await response1Promise;
+
+    // done, verify correct
+    await expect(
+      page
+        .getByText('Programs:', {
+          exact: true
+        })
+        .locator('span')
+    ).toHaveCount(0);
+    expect(response1.ok()).toBeTruthy();
+
+    // make sure fetching queryAvailablePrograms works properly with loading state
+    const response2Promise = page.waitForResponse(/\/api\/data\/queryAvailablePrograms/);
     await page.getByRole('combobox', { name: 'Major' }).selectOption('Computer Engineering');
+    await expect(
+      page
+        .getByText('Programs:', {
+          exact: true
+        })
+        .locator('span')
+    ).toHaveClass(/loading-spinner/);
+    const response2 = await response2Promise;
+
+    // done, verify correct
+    await expect(
+      page
+        .getByText('Programs:', {
+          exact: true
+        })
+        .locator('span')
+    ).toHaveCount(0);
+    expect(response2.ok()).toBeTruthy();
+
     await page
       .getByRole('combobox', { name: 'Concentration' })
       .selectOption('Not Applicable For This Major');

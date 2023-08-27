@@ -2,7 +2,7 @@
   import CourseItem from './CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import { selectedCourses } from '$lib/client/stores/UIDataStore';
-  import { courseCache, programData } from '$lib/client/stores/apiDataStore';
+  import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import { COURSE_ITEM_SIZE_PX, TERM_CONTAINER_WIDTH_PX } from '$lib/client/config/uiConfig';
@@ -22,7 +22,7 @@
   $: items = buildTermCourseItemsData(
     flowProgramId,
     $courseCache,
-    $programData,
+    $programCache,
     term,
     $selectedCourses
   );
@@ -45,7 +45,7 @@
         flowId,
         flowProgramId,
         $courseCache,
-        $programData,
+        $programCache,
         event.detail,
         term.tIndex
       );

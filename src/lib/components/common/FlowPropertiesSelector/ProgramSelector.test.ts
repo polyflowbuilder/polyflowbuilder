@@ -1,8 +1,14 @@
-import ProgramSelector from './ProgramSelector.svelte';
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { act, render, screen, getAllByRole, findByRole } from '@testing-library/svelte';
+import {
+  mockProgramCacheStore,
+  initMockedAPIDataStores,
+  mockMajorNameCacheStore,
+  mockCatalogMajorNameCacheStore,
+  mockAvailableFlowchartCatalogsStore
+} from '../../../../../tests/util/storeMocks';
 import type { Program } from '@prisma/client';
 
 // see https://github.com/davipon/svelte-component-test-recipes
@@ -10,33 +16,44 @@ import type { Program } from '@prisma/client';
 // load necessary API data
 await apiDataConfig.init();
 
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
+// before the FlowEditor component is imported or else things break
+import ProgramSelector from './ProgramSelector.svelte';
+
 describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
+  // need to mock out relevant stores since ProgramSelector depends on these
+  // mock call is hoisted to top of file
+  beforeAll(() => {
+    vi.mock('$lib/client/stores/apiDataStore', () => {
+      return {
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+        programCache: mockProgramCacheStore,
+        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
+        majorNameCache: mockMajorNameCacheStore
+      };
+    });
+    mockAvailableFlowchartCatalogsStore.set(apiDataConfig.apiData.catalogs);
+  });
+
   test('default state for catalog selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
-        programIdInput: ''
+        programIdInput: '',
+        fetchingData: false
       }
     });
 
+    const catalogCombobox = screen.getByRole('combobox', {
+      name: 'Catalog'
+    });
+
     // ensure visible with correct values
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Catalog'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Catalog'
-      })
-    ).toHaveValue('');
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Catalog'
-      })
-    ).toHaveTextContent('Choose ...');
+    expect(catalogCombobox).toBeVisible();
+    expect(catalogCombobox).toBeEnabled();
+    expect(catalogCombobox).toHaveValue('');
+    expect(catalogCombobox).toHaveTextContent('Choose ...');
 
     // make sure we have selectable options
     expect(
@@ -50,29 +67,21 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   test('default state for major selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
-        programIdInput: ''
+        programIdInput: '',
+        fetchingData: false
       }
     });
 
+    const majorCombobox = screen.getByRole('combobox', {
+      name: 'Major'
+    });
+
     // ensure visible with correct values
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Major'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Major'
-      })
-    ).toHaveValue('');
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Major'
-      })
-    ).toHaveTextContent('Choose ...');
+    expect(majorCombobox).toBeVisible();
+    expect(majorCombobox).toBeEnabled();
+    expect(majorCombobox).toHaveValue('');
+    expect(majorCombobox).toHaveTextContent('Choose ...');
 
     // no selectable options visible at mount time
     expect(
@@ -82,32 +91,24 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     ).toHaveLength(1);
   });
 
-  test('default state for major selector correct', () => {
+  test('default state for concentration selector correct', () => {
     render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
-        programIdInput: ''
+        programIdInput: '',
+        fetchingData: false
       }
     });
 
+    const concentrationCombobox = screen.getByRole('combobox', {
+      name: 'Concentration'
+    });
+
     // ensure visible with correct values
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Concentration'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Concentration'
-      })
-    ).toHaveValue('');
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Concentration'
-      })
-    ).toHaveTextContent('Choose ...');
+    expect(concentrationCombobox).toBeVisible();
+    expect(concentrationCombobox).toBeEnabled();
+    expect(concentrationCombobox).toHaveValue('');
+    expect(concentrationCombobox).toHaveTextContent('Choose ...');
 
     // no selectable options visible at mount time
     expect(
@@ -123,10 +124,9 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
 
     const { component } = render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
-        programIdInput: ''
+        programIdInput: '',
+        fetchingData: false
       }
     });
 
@@ -144,10 +144,9 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
   test('changing defaultOptionText customization prop works', () => {
     // default already tested, so try switching
     render(ProgramSelector, {
-      catalogYearsData: [],
-      programData: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
+      fetchingData: false,
       defaultOptionText: 'test'
     });
 
@@ -172,10 +171,9 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     // test default
     const view = render(ProgramSelector, {
       props: {
-        programData: apiDataConfig.apiData.programData,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
         alreadySelectedProgramIds: [],
-        programIdInput: ''
+        programIdInput: '',
+        fetchingData: false
       }
     });
 
@@ -188,11 +186,10 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
 
     // enabled
     view.rerender({
-      catalogYearsData: [],
-      programData: [],
       alreadySelectedProgramIds: [],
       programIdInput: '',
-      disableSelectingDefaultOption: false
+      disableSelectingDefaultOption: false,
+      fetchingData: false
     });
     for (const elem of screen.getAllByRole('option', {
       name: 'Choose ...'
@@ -200,9 +197,38 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
       expect(elem).toBeEnabled();
     }
   });
+
+  test('changing fetchingData customization prop works', () => {
+    // default tested, so try switching
+    render(ProgramSelector, {
+      alreadySelectedProgramIds: [],
+      programIdInput: '',
+      fetchingData: true
+    });
+
+    // all fields should be disabled
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Catalog'
+      })
+    ).toBeDisabled();
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Major'
+      })
+    ).toBeDisabled();
+    expect(
+      screen.getByRole('combobox', {
+        name: 'Concentration'
+      })
+    ).toBeDisabled();
+  });
 });
 
 describe('FlowPropertiesSelector/ProgramSelector program update functionality works', () => {
+  // dont need to remock bc hoisted, but do need to re-init relevant stores
+  beforeAll(initMockedAPIDataStores);
+
   // https://cathalmacdonnacha.com/how-to-test-a-select-element-with-react-testing-library
   test('select a random program and expect programIdUpdate', async () => {
     const user = userEvent.setup();
@@ -212,10 +238,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
-      programIdInput: ''
+      programIdInput: '',
+      fetchingData: false
     });
 
     component.$on('programIdUpdate', mock);
@@ -326,10 +351,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
       programIdInput: program.id,
-      alreadySelectedProgramIds: []
+      alreadySelectedProgramIds: [],
+      fetchingData: false
     });
 
     component.$on('programIdUpdate', mock);
@@ -388,10 +412,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
       alreadySelectedProgramIds: [],
-      programIdInput: ''
+      programIdInput: '',
+      fetchingData: false
     });
 
     component.$on('programIdUpdate', mock);
@@ -565,10 +588,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
 
     const { component } = render(ProgramSelector, {
-      catalogYearsData: apiDataConfig.apiData.catalogs,
-      programData: apiDataConfig.apiData.programData,
       programIdInput: '',
-      alreadySelectedProgramIds: []
+      alreadySelectedProgramIds: [],
+      fetchingData: false
     });
 
     component.$on('programIdUpdate', mock);

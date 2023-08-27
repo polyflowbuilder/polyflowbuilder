@@ -11,14 +11,8 @@
   import { UserDataUpdateChunkType } from '$lib/types';
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
-  import type { Program } from '@prisma/client';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
   import type { CourseCache } from '$lib/types';
-
-  // component required data
-  export let startYearsData: string[];
-  export let catalogYearsData: string[];
-  export let programData: Program[];
 
   // data props
 
@@ -158,9 +152,6 @@
       <FlowPropertiesSelector
         bind:flowName
         bind:flowStartYear
-        {startYearsData}
-        {catalogYearsData}
-        {programData}
         {programIdInputs}
         on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
         on:optionsValidUpdate={optionsValidUpdateEventHandler}

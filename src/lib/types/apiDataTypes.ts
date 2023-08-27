@@ -15,6 +15,11 @@ export interface CourseCache {
   courses: APICourseFull[];
 }
 
+export interface MajorNameCache {
+  catalog: string;
+  majorNames: string[];
+}
+
 export interface APIData {
   // available flowchart data
   catalogs: string[];

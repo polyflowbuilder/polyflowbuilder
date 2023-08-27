@@ -2,7 +2,16 @@ import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { mockModalOpenStore } from '../../../../../tests/util/storeMocks';
+import {
+  mockModalOpenStore,
+  mockCourseCacheStore,
+  mockProgramCacheStore,
+  mockMajorNameCacheStore,
+  initMockedAPIDataStores,
+  mockCatalogMajorNameCacheStore,
+  mockAvailableFlowchartCatalogsStore,
+  mockAvailableFlowchartStartYearsStore
+} from '../../../../../tests/util/storeMocks';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called
@@ -12,7 +21,7 @@ import NewFlowModal from './NewFlowModal.svelte';
 // load necessary API data
 await apiDataConfig.init();
 
-describe('NewFlowModal component tests ', () => {
+describe('NewFlowModal component tests', () => {
   beforeAll(() => {
     // need to mock out relevant store
     vi.mock('$lib/client/stores/modalStateStore', () => {
@@ -20,18 +29,23 @@ describe('NewFlowModal component tests ', () => {
         newFlowModalOpen: mockModalOpenStore
       };
     });
+    vi.mock('$lib/client/stores/apiDataStore', () => {
+      return {
+        courseCache: mockCourseCacheStore,
+        programCache: mockProgramCacheStore,
+        majorNameCache: mockMajorNameCacheStore,
+        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
+      };
+    });
+    initMockedAPIDataStores();
   });
 
   test('default state for NewFlowModal correct', async () => {
     const user = userEvent.setup();
 
-    render(NewFlowModal, {
-      props: {
-        startYearsData: apiDataConfig.apiData.startYears,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
-      }
-    });
+    render(NewFlowModal);
 
     // ensure modal is not visible at first
     expect(screen.getByText('Create New Flowchart')).not.toBeVisible();
@@ -43,31 +57,32 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.getByText('Create New Flowchart')).toBeVisible();
 
     // make sure FlowPropertiesSelector values are at default
+
+    const flowNameElement = screen.getByRole('textbox', {
+      name: 'Flow Name'
+    });
+    const flowStartingYearElement = screen.getByRole('combobox', {
+      name: 'Starting Year'
+    });
+    const flowProgramCatalogElements = screen.getAllByRole('combobox', {
+      name: 'Catalog'
+    });
+    const flowProgramMajorElements = screen.getAllByRole('combobox', {
+      name: 'Major'
+    });
+    const flowProgramConcentrationElements = screen.getAllByRole('combobox', {
+      name: 'Concentration'
+    });
+
     // flow name
-    expect(
-      screen.getByRole('textbox', {
-        name: 'Flow Name'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('textbox', {
-        name: 'Flow Name'
-      })
-    ).toHaveTextContent('');
+    expect(flowNameElement).toBeVisible();
+    expect(flowNameElement).toHaveTextContent('');
     expect(screen.getByText('(0/80)')).toBeVisible();
     expect(screen.getByText('(0/80)')).toHaveClass('text-red-600');
 
     // starting year
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Starting Year'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Starting Year'
-      })
-    ).toHaveTextContent('Choose ...');
+    expect(flowStartingYearElement).toBeVisible();
+    expect(flowStartingYearElement).toHaveTextContent('Choose ...');
 
     // correct program count
     expect(screen.getAllByText('PRIMARY').length).toBe(1);
@@ -75,38 +90,14 @@ describe('NewFlowModal component tests ', () => {
     expect(screen.queryAllByText('ADDITIONAL').length).toBe(0);
 
     // empty first program
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Catalog'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Catalog'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramCatalogElements.length).toBe(1);
+    expect(flowProgramCatalogElements[0]).toHaveTextContent('Choose ...');
 
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Major'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Major'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramMajorElements.length).toBe(1);
+    expect(flowProgramMajorElements[0]).toHaveTextContent('Choose ...');
 
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Concentration'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Concentration'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramConcentrationElements.length).toBe(1);
+    expect(flowProgramConcentrationElements[0]).toHaveTextContent('Choose ...');
 
     // can add program
     expect(screen.getByRole('button', { name: 'Add Program' })).toBeVisible();
@@ -130,13 +121,7 @@ describe('NewFlowModal component tests ', () => {
   test('valid program results in ability to create', async () => {
     const user = userEvent.setup();
 
-    render(NewFlowModal, {
-      props: {
-        startYearsData: apiDataConfig.apiData.startYears,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
-      }
-    });
+    render(NewFlowModal);
 
     await user.type(
       screen.getByRole('textbox', {
@@ -203,13 +188,7 @@ describe('NewFlowModal component tests ', () => {
   test('changing removeGECourses option works', async () => {
     const user = userEvent.setup();
 
-    render(NewFlowModal, {
-      props: {
-        startYearsData: apiDataConfig.apiData.startYears,
-        catalogYearsData: apiDataConfig.apiData.catalogs,
-        programData: apiDataConfig.apiData.programData
-      }
-    });
+    render(NewFlowModal);
 
     // starts as not checked
     expect(screen.getByRole('checkbox', { name: 'Remove GE Courses' })).not.toBeChecked();

@@ -5,10 +5,9 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
   test('index 0 display correct', () => {
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
-        programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
+        fetchingData: false,
         i: 0
       }
     });
@@ -22,10 +21,9 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
   test('index >0 display correct', () => {
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
-        programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
+        fetchingData: false,
         i: 2
       }
     });
@@ -40,10 +38,9 @@ describe('FlowPropertiesSelector/UIWrapper functionality tests', () => {
     // just pass one passthru prop and expect the rest of them to work
     render(UIWrapper, {
       props: {
-        catalogYearsData: [],
-        programData: [],
         programIdInput: '',
         alreadySelectedProgramIds: [],
+        fetchingData: false,
         i: 0,
         defaultOptionText: 'test'
       }

@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import { performUpdate } from '$lib/client/util/mutateUserDataUtilClient';
 import { derived, writable } from 'svelte/store';
-import { courseCache, programData } from './apiDataStore';
+import { courseCache, programCache } from './apiDataStore';
 import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
@@ -11,19 +11,19 @@ let updateTimer: ReturnType<typeof setTimeout>;
 export const chunkListUpdateStore = writable<UserDataUpdateChunk[]>([]);
 
 // using this derived store as an internal intermediary to get reactive updates
-// for when courseCache and programData are updated as well
+// for when courseCache and programCache are updated as well
 const mutationDataStore = derived(
-  [chunkListUpdateStore, courseCache, programData],
-  ([chunkList, courseCache, programData]) => {
+  [chunkListUpdateStore, courseCache, programCache],
+  ([chunkList, courseCache, programCache]) => {
     return {
       chunkList,
       courseCache,
-      programData
+      programCache
     };
   }
 );
 
-mutationDataStore.subscribe(({ chunkList, courseCache, programData }) => {
+mutationDataStore.subscribe(({ chunkList, courseCache, programCache }) => {
   if (browser && chunkList.length) {
     if (!delayingBeforeUpdate) {
       delayingBeforeUpdate = true;
@@ -32,7 +32,7 @@ mutationDataStore.subscribe(({ chunkList, courseCache, programData }) => {
     }
     updateTimer = setTimeout(() => {
       delayingBeforeUpdate = false;
-      performUpdate(chunkList, courseCache, programData);
+      performUpdate(chunkList, courseCache, programCache);
     }, UPDATE_CHUNK_DELAY_TIME_MS);
   }
 });

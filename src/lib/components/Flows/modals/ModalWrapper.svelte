@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { startYearsData, catalogYearsData, programData } from '$lib/client/stores/apiDataStore';
   import {
     NewFlowModal,
     AddTermsModal,
@@ -10,11 +9,7 @@
 </script>
 
 <div>
-  <NewFlowModal
-    startYearsData={$startYearsData}
-    catalogYearsData={$catalogYearsData}
-    programData={$programData}
-  />
+  <NewFlowModal />
   <AddTermsModal />
   <DeleteTermsModal />
   <EditFlowPropertiesModal />

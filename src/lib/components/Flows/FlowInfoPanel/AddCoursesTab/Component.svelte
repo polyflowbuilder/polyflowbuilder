@@ -6,8 +6,8 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
-  import { courseCache, programData } from '$lib/client/stores/apiDataStore';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
+  import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
   import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
@@ -31,7 +31,7 @@
   $: selectedCatalog = getCatalogFromProgramIDIndex(
     searchProgramIndex,
     selectedFlow?.programId ?? [''],
-    $programData
+    $programCache
   );
   $: {
     if (selectedCatalog) {
@@ -44,7 +44,7 @@
     items = buildTermCourseItemsData(
       selectedFlow?.programId ?? [''],
       $courseCache,
-      $programData,
+      $programCache,
       {
         // TODO: remove magic number
         tIndex: -2,
