@@ -8,20 +8,20 @@ import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
 
 // set stores
-const mockProgramDataWritable = writable<Program[]>([]);
-const mockCourseDataWritable = writable<CourseCache[]>([]);
+const mockProgramCacheWritable = writable<Program[]>([]);
+const mockCourseCacheWritable = writable<CourseCache[]>([]);
 const mockModalOpenWritable = writable<boolean>(false);
 const mockSelectedFlowIndexWritable = writable<number>(-1);
 const mockUserFlowchartsWritable = writable<Flowchart[]>([]);
 
-export const mockProgramDataStore = {
-  subscribe: mockProgramDataWritable.subscribe,
-  set: mockProgramDataWritable.set
+export const mockProgramCacheStore = {
+  subscribe: mockProgramCacheWritable.subscribe,
+  set: mockProgramCacheWritable.set
 };
 
-export const mockCourseDataStore = {
-  subscribe: mockCourseDataWritable.subscribe,
-  set: mockCourseDataWritable.set
+export const mockCourseCacheStore = {
+  subscribe: mockCourseCacheWritable.subscribe,
+  set: mockCourseCacheWritable.set
 };
 
 // general-purpose mock modal store since we will only be

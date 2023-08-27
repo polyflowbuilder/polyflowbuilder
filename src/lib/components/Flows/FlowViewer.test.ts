@@ -2,7 +2,7 @@ import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../tests/util/testFlowcharts';
-import { mockCourseDataStore, mockProgramDataStore } from '../../../../tests/util/storeMocks';
+import { mockCourseCacheStore, mockProgramCacheStore } from '../../../../tests/util/storeMocks';
 
 await apiDataConfig.init();
 
@@ -17,12 +17,12 @@ describe('FlowViewer component tests', () => {
   beforeAll(() => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
-        programCache: mockProgramDataStore,
-        courseCache: mockCourseDataStore
+        programCache: mockProgramCacheStore,
+        courseCache: mockCourseCacheStore
       };
     });
-    mockProgramDataStore.set(apiDataConfig.apiData.programData);
-    mockCourseDataStore.set(apiDataConfig.apiData.courseData);
+    mockProgramCacheStore.set(apiDataConfig.apiData.programData);
+    mockCourseCacheStore.set(apiDataConfig.apiData.courseData);
   });
 
   test('no flowchart selected', () => {
