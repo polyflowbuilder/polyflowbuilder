@@ -2,6 +2,7 @@
 // needs to be in another file, see issue:
 // https://github.com/sveltejs/kit/discussions/9759
 
+import { apiData } from '$lib/server/config/apiDataConfig';
 import { writable } from 'svelte/store';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
@@ -37,3 +38,33 @@ export const mockModalOpenStore = mockModalOpenWritable;
 export const mockSelectedFlowIndexStore = mockSelectedFlowIndexWritable;
 
 export const mockUserFlowchartsStore = mockUserFlowchartsWritable;
+
+// configuring mocks
+export function initMockedAPIDataStores() {
+  // init all apiData in caches so we don't make any network requests
+  // (this will be tested in integration/e2e tests)
+
+  const mockCatalogMajorNameCacheValue = new Set(
+    apiData.programData.map((entry) => `${entry.catalog}|${entry.majorName}`)
+  );
+  const mockMajorNameCacheValue = apiData.catalogs.map((catalog) => {
+    const majorNames = [
+      ...new Set(
+        apiData.programData
+          .filter((entry) => entry.catalog === catalog)
+          .map((entry) => entry.majorName)
+          .sort()
+      )
+    ];
+    return {
+      catalog,
+      majorNames
+    };
+  });
+
+  mockAvailableFlowchartStartYearsStore.set(apiData.startYears);
+  mockAvailableFlowchartCatalogsStore.set(apiData.catalogs);
+  mockProgramCacheStore.set(apiData.programData);
+  mockMajorNameCacheStore.set(mockMajorNameCacheValue);
+  mockCatalogMajorNameCacheStore.set(mockCatalogMajorNameCacheValue);
+}

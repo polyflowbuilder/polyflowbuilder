@@ -4,6 +4,7 @@ import { vi } from 'vitest';
 import { act, render, screen, getAllByRole, findByRole } from '@testing-library/svelte';
 import {
   mockProgramCacheStore,
+  initMockedAPIDataStores,
   mockMajorNameCacheStore,
   mockCatalogMajorNameCacheStore,
   mockAvailableFlowchartCatalogsStore
@@ -226,33 +227,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
 
 describe('FlowPropertiesSelector/ProgramSelector program update functionality works', () => {
   // dont need to remock bc hoisted, but do need to re-init relevant stores
-  beforeAll(() => {
-    // init all apiData in caches so we don't make any network requests
-    // (this will be tested in integration/e2e tests)
-
-    const mockCatalogMajorNameCacheValue = new Set(
-      apiDataConfig.apiData.programData.map((entry) => `${entry.catalog}|${entry.majorName}`)
-    );
-    const mockMajorNameCacheValue = apiDataConfig.apiData.catalogs.map((catalog) => {
-      const majorNames = [
-        ...new Set(
-          apiDataConfig.apiData.programData
-            .filter((entry) => entry.catalog === catalog)
-            .map((entry) => entry.majorName)
-            .sort()
-        )
-      ];
-      return {
-        catalog,
-        majorNames
-      };
-    });
-
-    mockAvailableFlowchartCatalogsStore.set(apiDataConfig.apiData.catalogs);
-    mockProgramCacheStore.set(apiDataConfig.apiData.programData);
-    mockMajorNameCacheStore.set(mockMajorNameCacheValue);
-    mockCatalogMajorNameCacheStore.set(mockCatalogMajorNameCacheValue);
-  });
+  beforeAll(initMockedAPIDataStores);
 
   // https://cathalmacdonnacha.com/how-to-test-a-select-element-with-react-testing-library
   test('select a random program and expect programIdUpdate', async () => {
