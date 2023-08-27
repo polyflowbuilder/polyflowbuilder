@@ -1,12 +1,24 @@
-import Component from './Component.svelte';
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
-import { render, screen } from '@testing-library/svelte';
 import { vi } from 'vitest';
+import { render, screen } from '@testing-library/svelte';
+import {
+  mockProgramCacheStore,
+  mockMajorNameCacheStore,
+  initMockedAPIDataStores,
+  mockCatalogMajorNameCacheStore,
+  mockAvailableFlowchartCatalogsStore,
+  mockAvailableFlowchartStartYearsStore
+} from '../../../../../tests/util/storeMocks';
 import type { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
 
 // load necessary API data
 await apiDataConfig.init();
+
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
+// before the FlowEditor component is imported or else things break
+import Component from './Component.svelte';
 
 async function setFlowNameStartingYear(user: UserEvent) {
   await user.type(
@@ -86,12 +98,23 @@ async function setProgram(
 }
 
 describe('FlowPropertiesSelector/Component initial mount tests', () => {
+  // need to mock out relevant stores since FlowPropertiesSelector depends on these
+  // mock call is hoisted to top of file
+  beforeAll(() => {
+    vi.mock('$lib/client/stores/apiDataStore', () => {
+      return {
+        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore,
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+        programCache: mockProgramCacheStore,
+        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
+        majorNameCache: mockMajorNameCacheStore
+      };
+    });
+  });
+
   test('default state for Component correct', () => {
     render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -100,31 +123,31 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
 
     // ensure visible with correct values
 
+    const flowNameElement = screen.getByRole('textbox', {
+      name: 'Flow Name'
+    });
+    const flowStartingYearElement = screen.getByRole('combobox', {
+      name: 'Starting Year'
+    });
+    const flowProgramCatalogElements = screen.getAllByRole('combobox', {
+      name: 'Catalog'
+    });
+    const flowProgramMajorElements = screen.getAllByRole('combobox', {
+      name: 'Major'
+    });
+    const flowProgramConcentrationElements = screen.getAllByRole('combobox', {
+      name: 'Concentration'
+    });
+
     // flow name
-    expect(
-      screen.getByRole('textbox', {
-        name: 'Flow Name'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('textbox', {
-        name: 'Flow Name'
-      })
-    ).toHaveTextContent('');
+    expect(flowNameElement).toBeVisible();
+    expect(flowNameElement).toHaveTextContent('');
     expect(screen.getByText('(0/80)')).toBeVisible();
     expect(screen.getByText('(0/80)')).toHaveClass('text-red-600');
 
     // starting year
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Starting Year'
-      })
-    ).toBeVisible();
-    expect(
-      screen.getByRole('combobox', {
-        name: 'Starting Year'
-      })
-    ).toHaveTextContent('Choose ...');
+    expect(flowStartingYearElement).toBeVisible();
+    expect(flowStartingYearElement).toHaveTextContent('Choose ...');
 
     // correct program count
     expect(screen.getAllByText('PRIMARY').length).toBe(1);
@@ -132,38 +155,14 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
     expect(screen.queryAllByText('ADDITIONAL').length).toBe(0);
 
     // empty first program
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Catalog'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Catalog'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramCatalogElements.length).toBe(1);
+    expect(flowProgramCatalogElements[0]).toHaveTextContent('Choose ...');
 
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Major'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Major'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramMajorElements.length).toBe(1);
+    expect(flowProgramMajorElements[0]).toHaveTextContent('Choose ...');
 
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Concentration'
-      }).length
-    ).toBe(1);
-    expect(
-      screen.getAllByRole('combobox', {
-        name: 'Concentration'
-      })[0]
-    ).toHaveTextContent('Choose ...');
+    expect(flowProgramConcentrationElements.length).toBe(1);
+    expect(flowProgramConcentrationElements[0]).toHaveTextContent('Choose ...');
 
     // can add program
     expect(screen.getByRole('button', { name: 'Add Program' })).toBeVisible();
@@ -172,12 +171,12 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
 });
 
 describe('FlowPropertiesSelector/Component invalid options tests', () => {
+  // dont need to remock bc hoisted, but do need to re-init relevant stores
+  beforeAll(initMockedAPIDataStores);
+
   test('empty everything is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -197,9 +196,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just name is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['']
@@ -219,9 +215,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just start year is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '2021-2022',
         programIdInputs: ['']
@@ -241,9 +234,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('just a valid program is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -263,9 +253,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but name is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -285,9 +272,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but start year is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
@@ -307,9 +291,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything but valid program is invalid', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['']
@@ -329,9 +310,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything valid except name too long', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName:
           'sdlkvmsdklvmksdlvmlksdmvkldsmvklsdmvklsdmvlksdmvksldmvsdlkvmsdlkmvslkdvmslkkmlvslksd',
         flowStartYear: '2020-2021',
@@ -352,9 +330,6 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   test('everything valid except additional empty programs', () => {
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9', '', '']
@@ -373,14 +348,14 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
 });
 
 describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
+  // dont need to remock bc hoisted, but do need to re-init relevant stores
+  beforeAll(initMockedAPIDataStores);
+
   test('create valid payloads', async () => {
     const user = userEvent.setup();
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -522,9 +497,6 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -625,9 +597,6 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -715,9 +684,6 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -891,9 +857,6 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
@@ -989,9 +952,6 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
 
     const { component } = render(Component, {
       props: {
-        availableFlowchartStartYears: apiDataConfig.apiData.startYears,
-        availableFlowchartCatalogs: apiDataConfig.apiData.catalogs,
-        programCache: apiDataConfig.apiData.programData,
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
