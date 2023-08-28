@@ -1,7 +1,7 @@
 <script lang="ts">
   import CourseItem from '../../FlowEditor/CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
-  import CourseSearchProgramSelector from './CourseSearchProgramSelector.svelte';
+  import CourseSearchOptionsSelector from './CourseSearchOptionsSelector.svelte';
   import { initSearch } from '$lib/client/util/courseSearchUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
@@ -13,9 +13,14 @@
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
   import type { CourseItemData } from '$lib/types';
+  import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 
+  // search options
   let searchProgramIndex = -1;
   let query = '';
+  let field: CatalogSearchValidFields = 'displayName';
+
+  // search results
   let items: CourseItemData[] = [];
 
   // for optional type
@@ -24,8 +29,9 @@
   // reset searches when we switch flows
   $: {
     $selectedFlowIndex;
-    query = '';
     searchProgramIndex = $selectedFlowIndex !== -1 ? 0 : -1;
+    field = 'displayName';
+    query = '';
   }
 
   $: selectedCatalog = getCatalogFromProgramIDIndex(
@@ -35,7 +41,7 @@
   );
   $: {
     if (selectedCatalog) {
-      initSearch(query, selectedCatalog);
+      initSearch(query, selectedCatalog, field);
     }
   }
 
@@ -73,23 +79,12 @@
 
 <!-- TODO: add "template classes" like blanks and GEs here -->
 <div class="flex flex-col h-full">
-  <h2 class="text-4xl font-medium text-polyGreen text-center">Add Courses</h2>
+  <h2 class="text-4xl font-medium text-polyGreen text-center mb-2">Add Courses</h2>
 
-  <div class="mt-4">
-    <CourseSearchProgramSelector bind:searchProgramIndex />
-
-    <input
-      class="mt-4 input input-bordered input-sm w-full"
-      aria-label="course search query input"
-      role="searchbox"
-      placeholder="Search for courses to add"
-      bind:value={query}
-      disabled={$selectedFlowIndex === -1}
-    />
-  </div>
+  <CourseSearchOptionsSelector bind:searchProgramIndex bind:field bind:query />
 
   <!-- TODO: divider moves up slightly when course results are rendered, fix this -->
-  <div class="divider my-4" />
+  <div class="divider my-2" />
 
   <div class="text-center overflow-y-scroll mb-3">
     {#await $activeSearchResults}

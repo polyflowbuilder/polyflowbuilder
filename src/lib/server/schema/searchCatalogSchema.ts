@@ -26,4 +26,4 @@ export const searchCatalogSchema = z.object({
     .default('displayName')
 });
 
-export type SearchCatalogInput = z.infer<typeof searchCatalogSchema>;
+export type CatalogSearchValidFields = z.infer<typeof searchCatalogSchema>['field'];

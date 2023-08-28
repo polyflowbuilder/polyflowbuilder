@@ -2,7 +2,7 @@ import { courseCache } from '$lib/client/stores/apiDataStore';
 import { SEARCH_DELAY_TIME_MS } from '$lib/common/config/catalogSearchConfig';
 import { performCatalogSearch } from '$lib/common/util/catalogSearchUtil';
 import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
-import type { SearchCatalogInput } from '$lib/server/schema/searchCatalogSchema';
+import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types';
 
 let delayingBeforeSearch = false;
@@ -12,7 +12,7 @@ let fullCourseCache: CourseCache[] = [];
 searchCache.subscribe((cache) => (fullSearchCache = cache));
 courseCache.subscribe((cache) => (fullCourseCache = cache));
 
-export function initSearch(query: string, catalog: string) {
+export function initSearch(query: string, catalog: string, field: CatalogSearchValidFields) {
   if (!delayingBeforeSearch) {
     delayingBeforeSearch = true;
   } else {
@@ -20,12 +20,16 @@ export function initSearch(query: string, catalog: string) {
   }
   beforeSearchTimer = setTimeout(() => {
     delayingBeforeSearch = false;
-    const searchResults = performSearch(query, catalog);
+    const searchResults = performSearch(query, catalog, field);
     activeSearchResults.set(searchResults);
   }, SEARCH_DELAY_TIME_MS);
 }
 
-async function performSearch(query: string, catalog: string): Promise<CatalogSearchResults> {
+async function performSearch(
+  query: string,
+  catalog: string,
+  field: CatalogSearchValidFields
+): Promise<CatalogSearchResults> {
   if (!query) {
     return {
       searchResults: [],
@@ -42,23 +46,18 @@ async function performSearch(query: string, catalog: string): Promise<CatalogSea
   }
 
   // do local search if we already searched this term
-  if (fullSearchCache[searchCacheIdx].queries.includes(query)) {
+  if (fullSearchCache[searchCacheIdx].queries.includes(`${field}|${query}`)) {
     return performCatalogSearch(query, fullCourseCache[courseCacheIdx].courses);
   }
 
   // if not, send request for search
-  const searchPayload: SearchCatalogInput = {
+  const searchParams = new URLSearchParams({
+    catalog,
     query,
-    catalog
-  };
+    field
+  });
 
-  const searchResults = (await fetch('/api/data/searchCatalog', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(searchPayload)
-  })
+  const searchResults = (await fetch(`/api/data/searchCatalog?${searchParams.toString()}`)
     .then((resp) => {
       if (!resp.ok) {
         alert(
@@ -89,7 +88,7 @@ async function performSearch(query: string, catalog: string): Promise<CatalogSea
 
   // if the request is successful, update caches and return
   searchCache.update((caches) => {
-    caches[searchCacheIdx].queries.push(query);
+    caches[searchCacheIdx].queries.push(`${field}|${query}`);
     return caches;
   });
   courseCache.update((caches) => {
