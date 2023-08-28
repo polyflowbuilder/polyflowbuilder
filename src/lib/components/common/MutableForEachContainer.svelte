@@ -60,36 +60,42 @@
 </script>
 
 {#if dndType !== ''}
-  <section
-    use:dndzone={{
-      items: internalItemsData,
-      dropTargetStyle: {},
-      type: dndType,
-      dropFromOthersDisabled
-    }}
-    on:consider={handleConsider}
-    on:finalize={handleFinalize}
-    class={containerClass}
-    style={containerStyle}
-  >
-    {#each internalItemsData as internalItem (internalItem.id)}
-      <div animate:flip={{ duration: flipDurationMs }} class={itemClass} style={itemStyle}>
-        <svelte:component this={component} item={internalItem.item} on:itemEvent />
-      </div>
-    {/each}
-  </section>
+  <div class="mutableForEachContainer">
+    <section
+      use:dndzone={{
+        items: internalItemsData,
+        dropTargetStyle: {},
+        type: dndType,
+        dropFromOthersDisabled
+      }}
+      on:consider={handleConsider}
+      on:finalize={handleFinalize}
+      class={containerClass}
+      style={containerStyle}
+    >
+      {#each internalItemsData as internalItem (internalItem.id)}
+        <div animate:flip={{ duration: flipDurationMs }} class={itemClass} style={itemStyle}>
+          <svelte:component this={component} item={internalItem.item} on:itemEvent />
+        </div>
+      {/each}
+    </section>
+    <slot />
+  </div>
 {:else}
-  <section class={containerClass} style={containerStyle}>
-    {#each internalItemsData as internalItem (internalItem.id)}
-      <div class={itemClass} style={itemStyle}>
-        <svelte:component this={component} item={internalItem.item} on:itemEvent />
-      </div>
-    {/each}
-  </section>
+  <div class="mutableForEachContainer">
+    <section class={containerClass} style={containerStyle}>
+      {#each internalItemsData as internalItem (internalItem.id)}
+        <div class={itemClass} style={itemStyle}>
+          <svelte:component this={component} item={internalItem.item} on:itemEvent />
+        </div>
+      {/each}
+    </section>
+    <slot />
+  </div>
 {/if}
 
 <style lang="postcss">
-  section {
+  div.mutableForEachContainer {
     /* allow scrolling */
     overflow: auto;
     height: 100%;
