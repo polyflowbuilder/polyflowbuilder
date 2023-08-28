@@ -1,7 +1,38 @@
 import { prisma } from '$lib/server/db/prisma';
 import { Prisma } from '@prisma/client';
+import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
 import type { APICourse } from '@prisma/client';
-import type { APICourseFull } from '$lib/types';
+import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
+import type { APICourseFull, CatalogSearchResults } from '$lib/types';
+
+function mapDBFullCourseDataRawToAPICourseFull(
+  courses: (APICourse & {
+    termSummer: number | null;
+    termFall: number | null;
+    termWinter: number | null;
+    termSpring: number | null;
+  })[]
+): APICourseFull[] {
+  return courses.map((dbCourseDataRaw) => {
+    const { termSummer, termFall, termWinter, termSpring, ...crs } = dbCourseDataRaw;
+
+    // if no tto data is present, all four entries will be null, so just pick one to check
+    return {
+      ...crs,
+      uscpCourse: !!crs.uscpCourse,
+      gwrCourse: !!crs.gwrCourse,
+      dynamicTerms:
+        termSummer === null
+          ? null
+          : {
+              termSummer: !!termSummer,
+              termFall: !!termFall,
+              termWinter: !!termWinter,
+              termSpring: !!termSpring
+            }
+    };
+  });
+}
 
 export async function getCourseData(
   searchCourses: {
@@ -25,7 +56,7 @@ export async function getCourseData(
   // fetch the courses from the DB
   // ternary to make sure we only query if we have courses to query for
   return inputCourses.length
-    ? (
+    ? mapDBFullCourseDataRawToAPICourseFull(
         await prisma.$queryRaw<
           (APICourse & {
             termSummer: number | null;
@@ -36,24 +67,33 @@ export async function getCourseData(
         >`SELECT * FROM Course LEFT JOIN TermTypicallyOffered USING (id, catalog) WHERE (id, catalog) IN (${Prisma.join(
           inputCourses
         )})`
-      ).map((dbCourseDataRaw) => {
-        const { termSummer, termFall, termWinter, termSpring, ...crs } = dbCourseDataRaw;
-
-        // if no tto data is present, all four entries will be null, so just pick one to check
-        return {
-          ...crs,
-          uscpCourse: !!crs.uscpCourse,
-          gwrCourse: !!crs.gwrCourse,
-          dynamicTerms:
-            termSummer === null
-              ? null
-              : {
-                  termSummer: !!termSummer,
-                  termFall: !!termFall,
-                  termWinter: !!termWinter,
-                  termSpring: !!termSpring
-                }
-        };
-      })
+      )
     : [];
+}
+
+export async function searchCatalog(
+  catalog: string,
+  query: string,
+  field: CatalogSearchValidFields
+): Promise<CatalogSearchResults> {
+  const results = mapDBFullCourseDataRawToAPICourseFull(
+    await prisma.$queryRaw<
+      (APICourse & {
+        termSummer: number | null;
+        termFall: number | null;
+        termWinter: number | null;
+        termSpring: number | null;
+      })[]
+      // limit by 1 more than max so we can detect if we went over
+    >`SELECT * FROM Course LEFT JOIN TermTypicallyOffered USING (id, catalog) WHERE catalog = ${catalog} AND MATCH (${Prisma.raw(
+      field
+    )}) AGAINST (${query} IN BOOLEAN MODE) ORDER BY MATCH (${Prisma.raw(
+      field
+    )}) AGAINST (${query} IN BOOLEAN MODE) DESC LIMIT ${MAX_SEARCH_RESULTS_RETURN_COUNT + 1};`
+  );
+
+  return {
+    searchResults: results.slice(0, MAX_SEARCH_RESULTS_RETURN_COUNT),
+    searchLimitExceeded: results.length > MAX_SEARCH_RESULTS_RETURN_COUNT
+  };
 }
