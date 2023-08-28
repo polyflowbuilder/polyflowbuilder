@@ -7,12 +7,12 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
-  import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
   import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
+  import { faExclamationCircle, faFileCircleXmark } from '@fortawesome/free-solid-svg-icons';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
   import type { CourseItemData } from '$lib/types';
   import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
@@ -43,6 +43,8 @@
   );
   $: {
     if (selectedCatalog) {
+      // reset results in UI so we don't see stale results during new query
+      $activeSearchResults = undefined;
       initSearch(query, selectedCatalog, field);
     }
   }
@@ -80,32 +82,40 @@
 </script>
 
 <!-- TODO: add "template classes" like blanks and GEs here -->
-<div class="flex flex-col h-full">
-  <h2 class="text-4xl font-medium text-polyGreen text-center mb-2">Add Courses</h2>
+<div class="h-full">
+  <div class="max-h-full flex flex-col">
+    <div>
+      <h2 class="text-4xl font-medium text-polyGreen text-center mb-2">Add Courses</h2>
+      <CourseSearchOptionsSelector bind:searchProgramIndex bind:field bind:query />
+      <div class="divider my-2" />
+    </div>
 
-  <CourseSearchOptionsSelector bind:searchProgramIndex bind:field bind:query />
-
-  <!-- TODO: divider moves up slightly when course results are rendered, fix this -->
-  <div class="divider my-2" />
-
-  <div class="text-center overflow-auto mb-3">
     {#await $activeSearchResults}
-      <div class="loading loading-spinner w-16 text-polyGreen" />
+      <div class="text-center">
+        <div class="loading loading-spinner w-16 text-polyGreen" />
+      </div>
     {:then results}
-      <!-- TODO: redo logic for when to show results, a bit funky looking in the UI -->
       {#if results && searchProgramIndex !== -1 && $searchCache
           .find((entry) => entry.catalog === selectedCatalog)
           ?.searches.find((searchRecord) => searchRecord.query === `${field}|${query}`)}
         {#if !results.searchValid}
-          <div class="invalidSearchExclamation pb-2">
-            <Fa icon={faExclamationCircle} style="margin: auto;" />
+          <div class="text-center">
+            <div class="invalidSearchIcon pb-2">
+              <Fa icon={faExclamationCircle} style="margin: auto;" />
+            </div>
+            <small class="text-gray-500"
+              >Invalid search query. Please try a different search query.</small
+            >
           </div>
-          <small class="text-gray-500"
-            >Invalid search query. Please try a different search query.</small
-          >
         {:else if results.searchResults.length === 0}
-          <small class="text-gray-500">No results found - please try a different search.</small>
+          <div class="text-center">
+            <div class="noResultsIcon pb-2">
+              <Fa icon={faFileCircleXmark} style="margin: auto;" />
+            </div>
+            <small class="text-gray-500">No results found. Please try a different search.</small>
+          </div>
         {:else}
+          <!-- TODO: the text in the slot should always stay at the bottom of the results section -->
           <MutableForEachContainer
             {items}
             component={CourseItem}
@@ -113,24 +123,22 @@
             dropFromOthersDisabled={true}
             on:itemsReorder={onSearchItemsReorder}
             itemStyle="width: {COURSE_ITEM_SIZE_PX}px; height: {COURSE_ITEM_SIZE_PX}px; margin: 0.5rem auto;"
-            containerStyle="display: grid; grid-template-columns: repeat(2, 1fr);"
-          />
-        {/if}
-
-        <!-- TODO: address double scroll bars when these are present -->
-        <!-- TODO; maybe create an "after" slot in the mutableforeachcontainer to allow for this? -->
-        {#if results.searchLimitExceeded}
-          <small class="text-gray-500"
-            >Search results were capped at {MAX_SEARCH_RESULTS_RETURN_COUNT} courses.</small
+            containerStyle="display: grid; grid-template-columns: repeat(2, 1fr); text-align: center;"
           >
-        {/if}
-
-        <!-- TODO: keep this here? -->
-        {#if results.searchValid}
-          <small class="text-gray-500"
-            >If you could not find a particular course, check that you are searching the correct
-            course catalog (if applicable).</small
-          >
+            <div class="text-center">
+              {#if results.searchLimitExceeded}
+                <small class="text-gray-500"
+                  >Search results were capped at {MAX_SEARCH_RESULTS_RETURN_COUNT} courses.</small
+                >
+              {/if}
+              {#if results.searchValid}
+                <small class="text-gray-500"
+                  >If you could not find a particular course, verify and narrow your search options
+                  if applicable.</small
+                >
+              {/if}
+            </div>
+          </MutableForEachContainer>
         {/if}
       {/if}
     {/await}
@@ -138,8 +146,13 @@
 </div>
 
 <style lang="postcss">
-  .invalidSearchExclamation {
-    color: #ef4444;
+  .invalidSearchIcon {
+    @apply text-red-600;
+    font-size: 4rem;
+  }
+
+  .noResultsIcon {
+    @apply text-gray-400;
     font-size: 4rem;
   }
 </style>
