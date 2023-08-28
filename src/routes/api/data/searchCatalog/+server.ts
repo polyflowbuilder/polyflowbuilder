@@ -7,7 +7,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/searchCatalog)');
 
-export const POST: RequestHandler = async ({ request, locals }) => {
+export const GET: RequestHandler = ({ locals, url }) => {
   try {
     // ensure user is authenticated
     if (!locals.session) {
@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
 
     // validation
-    const data = (await request.json()) as unknown;
+    const data = Object.fromEntries(url.searchParams);
     const parseResults = searchCatalogSchema.safeParse(data);
     if (parseResults.success) {
       const catalogCourses = apiData.courseData.find(
