@@ -1,6 +1,5 @@
 import { courseCache } from '$lib/client/stores/apiDataStore';
 import { SEARCH_DELAY_TIME_MS } from '$lib/common/config/catalogSearchConfig';
-import { performCatalogSearch } from '$lib/common/util/catalogSearchUtil';
 import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
 import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types';
@@ -33,7 +32,8 @@ async function performSearch(
   if (!query) {
     return {
       searchResults: [],
-      searchLimitExceeded: false
+      searchLimitExceeded: false,
+      searchValid: true
     };
   }
 
@@ -46,8 +46,24 @@ async function performSearch(
   }
 
   // do local search if we already searched this term
-  if (fullSearchCache[searchCacheIdx].queries.includes(`${field}|${query}`)) {
-    return performCatalogSearch(query, fullCourseCache[courseCacheIdx].courses);
+  const searchRecord = fullSearchCache[searchCacheIdx].searches.find(
+    (search) => search.query === `${field}|${query}`
+  );
+
+  if (searchRecord) {
+    // TODO: optimize this
+    // do it this way to return results in the order they were originally received in
+    return {
+      searchResults: searchRecord.searchResults.map((result) => {
+        const course = fullCourseCache[courseCacheIdx].courses.find((crs) => crs.id === result);
+        if (!course) {
+          throw new Error(`course ${result} present in searchCache and not present in courseCache`);
+        }
+        return course;
+      }),
+      searchLimitExceeded: searchRecord.searchLimitExceeded,
+      searchValid: searchRecord.searchValid
+    };
   }
 
   // if not, send request for search
@@ -56,9 +72,18 @@ async function performSearch(
     query,
     field
   });
-
   const searchResults = (await fetch(`/api/data/searchCatalog?${searchParams.toString()}`)
     .then((resp) => {
+      if (resp.status === 400) {
+        return {
+          message: 'invalid',
+          results: {
+            searchResults: [],
+            searchLimitExceeded: false,
+            searchValid: false
+          }
+        };
+      }
       if (!resp.ok) {
         alert(
           'Catalog search request failed. Please try again or file a bug report if this persists.'
@@ -82,13 +107,19 @@ async function performSearch(
   if (!searchResults) {
     return {
       searchResults: [],
-      searchLimitExceeded: false
+      searchLimitExceeded: false,
+      searchValid: true
     };
   }
 
   // if the request is successful, update caches and return
   searchCache.update((caches) => {
-    caches[searchCacheIdx].queries.push(`${field}|${query}`);
+    caches[searchCacheIdx].searches.push({
+      query: `${field}|${query}`,
+      searchValid: searchResults.results.searchValid,
+      searchLimitExceeded: searchResults.results.searchLimitExceeded,
+      searchResults: searchResults.results.searchResults.map((crs) => crs.id)
+    });
     return caches;
   });
   courseCache.update((caches) => {

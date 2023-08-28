@@ -40,7 +40,7 @@
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
   $: $searchCache = $availableFlowchartCatalogs.map((catalog) => ({
     catalog,
-    queries: []
+    searches: []
   }));
 
   // TODO: move this logic into the FlowEditor?

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Fa from 'svelte-fa';
   import CourseItem from '../../FlowEditor/CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import CourseSearchOptionsSelector from './CourseSearchOptionsSelector.svelte';
@@ -6,6 +7,7 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
+  import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
@@ -86,15 +88,22 @@
   <!-- TODO: divider moves up slightly when course results are rendered, fix this -->
   <div class="divider my-2" />
 
-  <div class="text-center overflow-y-scroll mb-3">
+  <div class="text-center overflow-auto mb-3">
     {#await $activeSearchResults}
       <div class="loading loading-spinner w-16 text-polyGreen" />
     {:then results}
       <!-- TODO: redo logic for when to show results, a bit funky looking in the UI -->
       {#if results && searchProgramIndex !== -1 && $searchCache
           .find((entry) => entry.catalog === selectedCatalog)
-          ?.queries.includes(query)}
-        {#if results.searchResults.length === 0}
+          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${query}`)}
+        {#if !results.searchValid}
+          <div class="invalidSearchExclamation pb-2">
+            <Fa icon={faExclamationCircle} style="margin: auto;" />
+          </div>
+          <small class="text-gray-500"
+            >Invalid search query. Please try a different search query.</small
+          >
+        {:else if results.searchResults.length === 0}
           <small class="text-gray-500">No results found - please try a different search.</small>
         {:else}
           <MutableForEachContainer
@@ -117,11 +126,20 @@
         {/if}
 
         <!-- TODO: keep this here? -->
-        <small class="text-gray-500"
-          >If you could not find a particular course, check that you are searching the correct
-          course catalog (if applicable).</small
-        >
+        {#if results.searchValid}
+          <small class="text-gray-500"
+            >If you could not find a particular course, check that you are searching the correct
+            course catalog (if applicable).</small
+          >
+        {/if}
       {/if}
     {/await}
   </div>
 </div>
+
+<style lang="postcss">
+  .invalidSearchExclamation {
+    color: #ef4444;
+    font-size: 4rem;
+  }
+</style>

@@ -94,6 +94,7 @@ export async function searchCatalog(
 
   return {
     searchResults: results.slice(0, MAX_SEARCH_RESULTS_RETURN_COUNT),
-    searchLimitExceeded: results.length > MAX_SEARCH_RESULTS_RETURN_COUNT
+    searchLimitExceeded: results.length > MAX_SEARCH_RESULTS_RETURN_COUNT,
+    searchValid: true
   };
 }
