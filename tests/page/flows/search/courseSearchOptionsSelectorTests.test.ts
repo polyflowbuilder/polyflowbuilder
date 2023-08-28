@@ -1,13 +1,16 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginFrontend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from '../../../util/userDataTestUtil.js';
+import { performLoginFrontend } from '../../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../../util/selectorTestUtil.js';
+import { FLOW_LIST_ITEM_SELECTOR } from '../../../util/selectorTestUtil.js';
 
-const FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL = 'pfb_test_flowPage_courseSearch_playwright@test.com';
+const FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL =
+  'pfb_test_flowPage_courseSearchOptions_playwright@test.com';
 
-test.describe('course search tests', () => {
+// put these tests here instead of w/ component bc this component uses
+// a lot of stores and setting up state is easier when doing it in an e2e env
+test.describe('CourseSearchOptionsSelector tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
 
@@ -72,6 +75,16 @@ test.describe('course search tests', () => {
     await expect(courseSearchProgramSelector).toHaveText('Select a Flowchart');
     await expect(courseSearchProgramSelector).toHaveValue('-1');
 
+    // expect default state of field selector
+    const courseSearchFieldSelector = page.getByRole('combobox', {
+      name: 'course search field selector'
+    });
+
+    await expect(courseSearchFieldSelector).toBeVisible();
+    await expect(courseSearchFieldSelector).toBeInViewport();
+    await expect(courseSearchFieldSelector).toBeDisabled();
+    await expect(courseSearchFieldSelector).toHaveValue('displayName');
+
     // expect default state of query box
     const courseSearchQueryBox = page.getByRole('searchbox', {
       name: 'course search query input'
@@ -121,6 +134,15 @@ test.describe('course search tests', () => {
       '2022-2026 - Aerospace Engineering - Astronautics'
     );
     await expect(courseSearchProgramSelector).toHaveValue('0');
+
+    const courseSearchFieldSelector = page.getByRole('combobox', {
+      name: 'course search field selector'
+    });
+
+    await expect(courseSearchFieldSelector).toBeVisible();
+    await expect(courseSearchFieldSelector).toBeInViewport();
+    await expect(courseSearchFieldSelector).toBeEnabled();
+    await expect(courseSearchFieldSelector).toHaveValue('displayName');
 
     const courseSearchQueryBox = page.getByRole('searchbox', {
       name: 'course search query input'
@@ -174,6 +196,15 @@ test.describe('course search tests', () => {
     ]);
     await expect(courseSearchProgramSelector).toHaveValue('0');
 
+    const courseSearchFieldSelector = page.getByRole('combobox', {
+      name: 'course search field selector'
+    });
+
+    await expect(courseSearchFieldSelector).toBeVisible();
+    await expect(courseSearchFieldSelector).toBeInViewport();
+    await expect(courseSearchFieldSelector).toBeEnabled();
+    await expect(courseSearchFieldSelector).toHaveValue('displayName');
+
     const courseSearchQueryBox = page.getByRole('searchbox', {
       name: 'course search query input'
     });
@@ -207,6 +238,13 @@ test.describe('course search tests', () => {
         name: 'Add Courses'
       })
       .click();
+
+    // adjust field selector
+    await page
+      .getByRole('combobox', {
+        name: 'course search field selector'
+      })
+      .selectOption('id');
 
     // fill in search with some value
     await page
@@ -246,6 +284,12 @@ test.describe('course search tests', () => {
       .click();
 
     // make sure that the text is gone and program options changed
+    await expect(
+      page.getByRole('combobox', {
+        name: 'course search field selector'
+      })
+    ).toHaveValue('displayName');
+
     await expect(
       page.getByRole('searchbox', {
         name: 'course search query input'
