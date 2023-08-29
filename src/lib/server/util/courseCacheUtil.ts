@@ -1,11 +1,16 @@
 import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import type { Term } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
 
 export async function generateCourseCacheFlowcharts(
-  flowcharts: Flowchart[],
+  // smaller type than full Flowchart so we can pass TemplateFlowchart
+  // information into here as well
+  flowcharts: {
+    programId: string[];
+    termData: Term[];
+  }[],
   programCache: Program[]
 ): Promise<CourseCache[]> {
   const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];

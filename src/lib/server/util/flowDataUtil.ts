@@ -63,11 +63,19 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
 }
 
 export async function generateFlowchart(data: GenerateFlowchartData): Promise<Flowchart> {
-  const templateFlowcharts = await getTemplateFlowcharts(data.programIds);
+  // fetch required data
+  // presumably templateFlowchart termData has been validated before being persisted to DB
+  // and accessed here so safe to explicitly cast
+  const templateFlowcharts = (await getTemplateFlowcharts(data.programIds)).map((flowchart) => {
+    return {
+      ...flowchart,
+      programId: [flowchart.programId],
+      termData: flowchart.termData as Term[]
+    };
+  });
 
-  // presumably templateFlowchart termData has been validated before being accessed here so explicitly cast
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
-    templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData as Term[]),
+    templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData),
     data.programIds,
     apiData.courseData,
     apiData.programData
