@@ -20,7 +20,7 @@ export const generateFlowchartSchema = z.object({
   programIds: z
     .array(
       z.string().uuid({
-        message: 'Invalid format for program unique ID.'
+        message: 'Invalid format for program unique ID(s).'
       }),
       {
         required_error: 'Program Id(s) required.'
