@@ -1,24 +1,12 @@
 import { z } from 'zod';
-import { apiData } from '$lib/server/config/apiDataConfig';
+import { catalogSchema } from '$lib/server/schema/common';
 
 export const searchCatalogSchema = z.object({
-  catalog: z
-    .string({
-      required_error: 'Catalog field for catalog search is required.'
-    })
-    .superRefine((obj, ctx) => {
-      // verify valid catalog
-      if (!apiData.catalogs.includes(obj)) {
-        ctx.addIssue({
-          code: 'custom',
-          message: `Catalog field for catalog search is invalid, received ${obj}.`,
-          path: ['catalog']
-        });
-      }
-    }),
+  catalog: catalogSchema,
   query: z.string({
     required_error: 'Query field for catalog search is required.'
-  })
+  }),
+  field: z.enum(['id', 'displayName']).default('displayName')
 });
 
-export type SearchCatalogInput = z.infer<typeof searchCatalogSchema>;
+export type CatalogSearchValidFields = z.infer<typeof searchCatalogSchema>['field'];

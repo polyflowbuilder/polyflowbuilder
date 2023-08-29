@@ -1,13 +1,13 @@
 import { json } from '@sveltejs/kit';
-import { apiData } from '$lib/server/config/apiDataConfig';
+import { Prisma } from '@prisma/client';
 import { initLogger } from '$lib/common/config/loggerConfig';
+import { searchCatalog } from '$lib/server/db/course';
 import { searchCatalogSchema } from '$lib/server/schema/searchCatalogSchema';
-import { performCatalogSearch } from '$lib/common/util/catalogSearchUtil';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/searchCatalog)');
 
-export const POST: RequestHandler = async ({ request, locals }) => {
+export const GET: RequestHandler = async ({ locals, url }) => {
   try {
     // ensure user is authenticated
     if (!locals.session) {
@@ -22,23 +22,35 @@ export const POST: RequestHandler = async ({ request, locals }) => {
     }
 
     // validation
-    const data = (await request.json()) as unknown;
+    const data = Object.fromEntries(url.searchParams);
     const parseResults = searchCatalogSchema.safeParse(data);
     if (parseResults.success) {
-      const catalogCourses = apiData.courseData.find(
-        (cache) => cache.catalog === parseResults.data.catalog
-      );
+      try {
+        const searchResults = await searchCatalog(
+          parseResults.data.catalog,
+          parseResults.data.query,
+          parseResults.data.field
+        );
 
-      if (!catalogCourses) {
-        throw new Error(`Unable to find catalog ${parseResults.data.catalog} in API catalog data`);
+        return json({
+          message: 'Catalog search request successful.',
+          results: searchResults
+        });
+      } catch (error) {
+        // query valid check bc some queries can be invalid
+        // see https://dev.mysql.com/doc/refman/8.0/en/fulltext-boolean.html
+        if (error instanceof Prisma.PrismaClientKnownRequestError && error.meta?.code === '1064') {
+          return json(
+            {
+              message: 'The search query is invalid.'
+            },
+            {
+              status: 400
+            }
+          );
+        }
+        throw error;
       }
-
-      const searchResults = performCatalogSearch(parseResults.data.query, catalogCourses.courses);
-
-      return json({
-        message: 'Catalog search request successful.',
-        results: searchResults
-      });
     } else {
       const { fieldErrors: validationErrors } = parseResults.error.flatten();
 

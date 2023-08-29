@@ -40,7 +40,7 @@
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
   $: $searchCache = $availableFlowchartCatalogs.map((catalog) => ({
     catalog,
-    queries: []
+    searches: []
   }));
 
   // TODO: move this logic into the FlowEditor?
@@ -52,9 +52,6 @@
     $selectedCourses.clear();
     $selectedCourses = $selectedCourses;
   }
-
-  $: console.log('selectedcourses', $selectedCourses);
-  $: console.log('selectedcolor', $selectedColor);
 </script>
 
 <div class="flowContainer w-full flex">

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { catalogSchema } from '$lib/server/schema/queryAvailableProgramsSchema';
+import { catalogSchema } from '$lib/server/schema/common';
 
 export const queryAvailableMajorsSchema = z.object(
   {
