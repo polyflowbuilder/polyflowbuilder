@@ -68,7 +68,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         );
       }
 
-      const { flowchart: generatedFlowchart, rest } = await generateFlowchart(parseResults.data);
+      const generatedFlowchart = await generateFlowchart(parseResults.data);
 
       return json({
         message: 'Flowchart successfully generated.',

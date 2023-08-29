@@ -62,15 +62,12 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
   return convertedFlowchart;
 }
 
-export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
-  flowchart: Flowchart;
-  programMetadata: Program[];
-}> {
+export async function generateFlowchart(data: GenerateFlowchartData): Promise<Flowchart> {
   const templateFlowcharts = await getTemplateFlowcharts(data.programIds);
 
   // presumably templateFlowchart termData has been validated before being accessed here so explicitly cast
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
-    templateFlowcharts.map((templateFlowchart) => templateFlowchart.flowchart.termData as Term[]),
+    templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData as Term[]),
     data.programIds,
     apiData.courseData,
     apiData.programData
@@ -122,10 +119,5 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
   // compute hash
   generatedFlowchart.hash = generateFlowHash(generatedFlowchart);
 
-  // safe to map programMetadata here (re: dedup) as request is validated to have
-  // unique programIds before generating
-  return {
-    flowchart: generatedFlowchart,
-    programMetadata: templateFlowcharts.map((data) => data.programMetadata)
-  };
+  return generatedFlowchart;
 }
