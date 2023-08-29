@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
-import { getStartYears } from '$lib/server/db/startYear';
 import { generateFlowchart } from '$lib/server/util/flowDataUtil';
+import { validateStartYear } from '$lib/server/db/startYear';
 import { getProgramsFromIds } from '$lib/server/db/program';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
 import { generateCourseCacheFlowchart } from '$lib/server/util/courseCacheUtil';
@@ -37,12 +37,11 @@ export const GET: RequestHandler = async ({ locals, url }) => {
     });
     if (parseResults.success) {
       // fetch start years and program data to do additional validation
-      const startYears = await getStartYears();
+      const startYearValid = await validateStartYear(parseResults.data.startYear);
       const programMetadata = await getProgramsFromIds(parseResults.data.programIds);
-      const programIdsSet = new Set(parseResults.data.programIds);
 
       // validate start year
-      if (!startYears.includes(parseResults.data.startYear)) {
+      if (!startYearValid) {
         return json(
           {
             message: 'Invalid start year.'
@@ -54,13 +53,14 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       }
 
       // validate programIds
+      const programIdsSet = new Set(parseResults.data.programIds);
       const invalidProgramIds = programMetadata
         .map((prog) => prog.id)
         .filter((id) => !programIdsSet.has(id));
       if (invalidProgramIds.length) {
         return json(
           {
-            message: `Invalid program IDs IDs ${invalidProgramIds.toString()}.`
+            message: `Invalid program IDs ${invalidProgramIds.toString()}.`
           },
           {
             status: 400
