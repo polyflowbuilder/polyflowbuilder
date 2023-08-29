@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { apiData } from '$lib/server/config/apiDataConfig';
+import { startYearSchema } from '$lib/server/schema/common';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 
 // validation schema for generate flowchart payload
@@ -15,22 +15,13 @@ export const generateFlowchartSchema = z.object({
     .max(FLOW_NAME_MAX_LENGTH, {
       message: `Flowchart name too long, max length is ${FLOW_NAME_MAX_LENGTH} characters.`
     }),
-  startYear: z
-    .string({
-      required_error: 'Start year is required.'
-    })
-    .refine((startYear) => apiData.startYears.includes(startYear), 'Invalid start year.'),
+  startYear: startYearSchema,
   // encoded as comma-separated values in single string due to search param string requirements
   programIds: z
     .array(
-      z.string().refine(
-        (progId) => apiData.programData.find((prog) => prog.id === progId),
-        (progId) => {
-          return {
-            message: `Program ID ${progId} is invalid.`
-          };
-        }
-      ),
+      z.string().uuid({
+        message: 'Invalid format for program unique ID.'
+      }),
       {
         required_error: 'Program Id(s) required.'
       }
