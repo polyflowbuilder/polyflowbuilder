@@ -2729,7 +2729,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        startYear: ['Invalid start year.']
+        startYear: ['Invalid start year format.']
       }
     };
 
@@ -2753,7 +2753,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID invalid is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 
@@ -2777,7 +2777,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID invalid is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 
@@ -2799,7 +2799,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID  is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 

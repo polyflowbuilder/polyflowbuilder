@@ -11,7 +11,9 @@ export async function generateCourseCacheFlowcharts(
     programId: string[];
     termData: Term[];
   }[],
-  programCache: Program[]
+  programCache: Program[],
+  // for merge use cases e.g. generateFlowchart
+  enforceUniqueCoursesAcrossCaches = false
 ): Promise<CourseCache[]> {
   const catalogs = [...new Set(programCache.map((prog) => prog.catalog))];
   const flowchartCourseCache: CourseCache[] = catalogs.map((catalog) => {
@@ -21,6 +23,7 @@ export async function generateCourseCacheFlowcharts(
     };
   });
   // only keep the IDs in here vs. the entire course object so === equality works properly
+  const courseCatalogAndIds = new Set<string>();
   const courseIds = new Set<string>();
 
   flowcharts.forEach((flowchart) => {
@@ -40,7 +43,12 @@ export async function generateCourseCacheFlowcharts(
           }
 
           // dedup to ensure we only request one lookup per unique course
-          courseIds.add(`${courseCatalog},${c.id}`);
+          if (!courseIds.has(c.id)) {
+            courseCatalogAndIds.add(`${courseCatalog},${c.id}`);
+          }
+          if (enforceUniqueCoursesAcrossCaches) {
+            courseIds.add(c.id);
+          }
         }
       });
     });
@@ -48,7 +56,7 @@ export async function generateCourseCacheFlowcharts(
 
   // get the courses
   const courses = await getCourseData(
-    [...courseIds].map((courseId) => {
+    [...courseCatalogAndIds].map((courseId) => {
       const parts = courseId.split(',');
       return {
         catalog: parts[0],
