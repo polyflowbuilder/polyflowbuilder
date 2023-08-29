@@ -5,7 +5,7 @@ import { performLoginFrontend } from '../../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { FLOW_LIST_ITEM_SELECTOR } from '../../../util/selectorTestUtil.js';
 
-const FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL =
+const FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL =
   'pfb_test_flowPage_courseSearchOptions_playwright@test.com';
 
 // put these tests here instead of w/ component bc this component uses
@@ -17,7 +17,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   test.beforeAll(async () => {
     // create account
     const id = await createUser({
-      email: FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL,
+      email: FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL,
       username: 'test',
       password: 'test'
     });
@@ -43,13 +43,13 @@ test.describe('CourseSearchOptionsSelector tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL);
+    await deleteUser(FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL);
   });
 
   test('course search program selector is disabled when no flowchart is selected', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -99,7 +99,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   test('course search program selector only has one option w/ flowchart that has one program', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -157,7 +157,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   test('course search program selector has shows multiple options w/ flowchart that has multiple programs', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -216,7 +216,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   });
 
   test('switching flowcharts resets query term', async ({ page }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
