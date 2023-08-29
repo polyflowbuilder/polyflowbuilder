@@ -1,7 +1,7 @@
 import { COLORS } from '$lib/common/config/colorConfig';
-import { apiData } from '$lib/server/config/apiDataConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
+import { generateCourseCacheFlowcharts } from './courseCacheUtil';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import {
@@ -9,9 +9,9 @@ import {
   FLOW_DEFAULT_TERM_DATA
 } from '$lib/common/config/flowDataConfig';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
-import type { MutateFlowchartData } from '$lib/types';
 import type { DBFlowchart, Program } from '@prisma/client';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
+import type { CourseCache, MutateFlowchartData } from '$lib/types';
 
 export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlowchartData {
   const {
@@ -62,7 +62,13 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
   return convertedFlowchart;
 }
 
-export async function generateFlowchart(data: GenerateFlowchartData): Promise<Flowchart> {
+export async function generateFlowchart(
+  data: GenerateFlowchartData,
+  programCache: Program[]
+): Promise<{
+  flowchart: Flowchart;
+  courseCache: CourseCache[];
+}> {
   // fetch required data
   // presumably templateFlowchart termData has been validated before being persisted to DB
   // and accessed here so safe to explicitly cast
@@ -73,12 +79,13 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
       termData: flowchart.termData as Term[]
     };
   });
+  const courseCache = await generateCourseCacheFlowcharts(templateFlowcharts, programCache);
 
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
     templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData),
     data.programIds,
-    apiData.courseData,
-    apiData.programData
+    courseCache,
+    programCache
   );
 
   // actually create the flowchart
@@ -108,8 +115,8 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
         term.tUnits = computeTermUnits(
           term.courses,
           generatedFlowchart.programId,
-          apiData.courseData,
-          apiData.programData
+          courseCache,
+          programCache
         );
       }
     }
@@ -118,8 +125,8 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
   // compute total units
   generatedFlowchart.unitTotal = computeTotalUnits(
     generatedFlowchart.termData,
-    apiData.courseData,
-    apiData.programData,
+    courseCache,
+    programCache,
     true,
     generatedFlowchart.programId
   );
@@ -127,5 +134,8 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<Fl
   // compute hash
   generatedFlowchart.hash = generateFlowHash(generatedFlowchart);
 
-  return generatedFlowchart;
+  return {
+    flowchart: generatedFlowchart,
+    courseCache
+  };
 }

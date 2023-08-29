@@ -4,7 +4,6 @@ import { generateFlowchart } from '$lib/server/util/flowDataUtil';
 import { validateStartYear } from '$lib/server/db/startYear';
 import { getProgramsFromIds } from '$lib/server/db/program';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
-import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/generateFlowchart)');
@@ -68,13 +67,16 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         );
       }
 
-      const generatedFlowchart = await generateFlowchart(parseResults.data, programMetadata);
+      const { flowchart: generatedFlowchart, courseCache } = await generateFlowchart(
+        parseResults.data,
+        programMetadata
+      );
 
       return json({
         message: 'Flowchart successfully generated.',
         generatedFlowchart,
         ...(parseResults.data.generateCourseCache && {
-          courseCache: await generateCourseCacheFlowcharts([generatedFlowchart], programMetadata)
+          courseCache
         })
       });
     } else {
