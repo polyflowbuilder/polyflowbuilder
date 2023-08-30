@@ -1,17 +1,18 @@
 import { COLORS } from '$lib/common/config/colorConfig';
-import { apiData } from '$lib/server/config/apiDataConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import { generateCourseCacheFlowcharts } from './courseCacheUtil';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import {
   CURRENT_FLOW_DATA_VERSION,
   FLOW_DEFAULT_TERM_DATA
 } from '$lib/common/config/flowDataConfig';
-import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
-import type { MutateFlowchartData } from '$lib/types';
 import type { DBFlowchart, Program } from '@prisma/client';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
+import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache, MutateFlowchartData } from '$lib/types';
 
 export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlowchartData {
   const {
@@ -62,18 +63,30 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
   return convertedFlowchart;
 }
 
-export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
+export async function generateFlowchart(
+  data: GenerateFlowchartData,
+  programCache: Program[]
+): Promise<{
   flowchart: Flowchart;
-  programMetadata: Program[];
+  courseCache: CourseCache[];
 }> {
-  const templateFlowcharts = await getTemplateFlowcharts(data.programIds);
+  // fetch required data
+  // presumably templateFlowchart termData has been validated before being persisted to DB
+  // and accessed here so safe to explicitly cast
+  const templateFlowcharts = (await getTemplateFlowcharts(data.programIds)).map((flowchart) => {
+    return {
+      ...flowchart,
+      programId: [flowchart.programId],
+      termData: flowchart.termData as Term[]
+    };
+  });
+  let courseCache = await generateCourseCacheFlowcharts(templateFlowcharts, programCache, true);
 
-  // presumably templateFlowchart termData has been validated before being accessed here so explicitly cast
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
-    templateFlowcharts.map((templateFlowchart) => templateFlowchart.flowchart.termData as Term[]),
+    templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData),
     data.programIds,
-    apiData.courseData,
-    apiData.programData
+    courseCache,
+    programCache
   );
 
   // actually create the flowchart
@@ -94,27 +107,60 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
   };
 
   // process options
+
+  // TODO: optimize
   if (data.removeGECourses) {
+    const allRemovedCoursesKeysSet = new Set<string>();
     for (const term of generatedFlowchart.termData) {
-      const origCourseCount = term.courses.length;
-      term.courses = term.courses.filter((c) => !COLORS.ge.includes(c.color));
-      // recompute term units on change
-      if (term.courses.length !== origCourseCount) {
+      const notRemovedCourses: Course[] = [];
+      term.courses.forEach((c) => {
+        if (COLORS.ge.includes(c.color)) {
+          // some GE courses may be custom so
+          // they dont need to be removed from courseCache
+          if (c.id) {
+            allRemovedCoursesKeysSet.add(
+              `${getCatalogFromProgramIDIndex(
+                c.programIdIndex ?? 0,
+                generatedFlowchart.programId,
+                programCache
+              )}|${c.id}`
+            );
+          }
+        } else {
+          notRemovedCourses.push(c);
+        }
+      });
+
+      // recompute term data if applicable
+      if (term.courses.length !== notRemovedCourses.length) {
+        term.courses = notRemovedCourses;
         term.tUnits = computeTermUnits(
           term.courses,
           generatedFlowchart.programId,
-          apiData.courseData,
-          apiData.programData
+          courseCache,
+          programCache
         );
       }
+    }
+
+    // recompute course cache if applicable
+    if (allRemovedCoursesKeysSet.size) {
+      courseCache = courseCache.map((cache) => {
+        return {
+          catalog: cache.catalog,
+          courses: cache.courses.filter(
+            (crs) => !allRemovedCoursesKeysSet.has(`${crs.catalog}|${crs.id}`)
+          )
+        };
+      });
     }
   }
 
   // compute total units
   generatedFlowchart.unitTotal = computeTotalUnits(
     generatedFlowchart.termData,
-    apiData.courseData,
-    apiData.programData,
+    courseCache,
+    programCache,
     true,
     generatedFlowchart.programId
   );
@@ -122,10 +168,8 @@ export async function generateFlowchart(data: GenerateFlowchartData): Promise<{
   // compute hash
   generatedFlowchart.hash = generateFlowHash(generatedFlowchart);
 
-  // safe to map programMetadata here (re: dedup) as request is validated to have
-  // unique programIds before generating
   return {
     flowchart: generatedFlowchart,
-    programMetadata: templateFlowcharts.map((data) => data.programMetadata)
+    courseCache
   };
 }

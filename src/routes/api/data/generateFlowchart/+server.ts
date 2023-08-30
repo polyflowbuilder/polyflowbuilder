@@ -1,8 +1,9 @@
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { generateFlowchart } from '$lib/server/util/flowDataUtil';
+import { validateStartYear } from '$lib/server/db/startYear';
+import { getProgramsFromIds } from '$lib/server/db/program';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
-import { generateCourseCacheFlowchart } from '$lib/server/util/courseCacheUtil';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/data/generateFlowchart)');
@@ -34,15 +35,53 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         : undefined
     });
     if (parseResults.success) {
-      const { flowchart: generatedFlowchart, programMetadata } = await generateFlowchart(
-        parseResults.data
+      // fetch start years and program data to do additional validation
+      const startYearValid = await validateStartYear(parseResults.data.startYear);
+      const programMetadata = await getProgramsFromIds(parseResults.data.programIds);
+
+      // validate start year
+      if (!startYearValid) {
+        return json(
+          {
+            message: 'Invalid input received.',
+            validationErrors: {
+              startYear: [`Invalid start year ${parseResults.data.startYear}.`]
+            }
+          },
+          {
+            status: 400
+          }
+        );
+      }
+
+      // validate programIds
+      const programIdsSet = new Set(programMetadata.map((prog) => prog.id));
+      const invalidProgramIds = parseResults.data.programIds.filter((id) => !programIdsSet.has(id));
+
+      if (invalidProgramIds.length) {
+        return json(
+          {
+            message: 'Invalid input received.',
+            validationErrors: {
+              programIds: [`Invalid program id(s) ${invalidProgramIds.toString()}.`]
+            }
+          },
+          {
+            status: 400
+          }
+        );
+      }
+
+      const { flowchart: generatedFlowchart, courseCache } = await generateFlowchart(
+        parseResults.data,
+        programMetadata
       );
 
       return json({
         message: 'Flowchart successfully generated.',
         generatedFlowchart,
         ...(parseResults.data.generateCourseCache && {
-          courseCache: await generateCourseCacheFlowchart(generatedFlowchart, programMetadata)
+          courseCache
         })
       });
     } else {

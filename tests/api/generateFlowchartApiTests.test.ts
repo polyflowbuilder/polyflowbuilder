@@ -2715,7 +2715,7 @@ test.describe('generate flowchart api input tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('generate flowchart api returns 400 w invalid start year', async ({ request }) => {
+  test('generate flowchart api returns 400 w invalid start year format', async ({ request }) => {
     await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
 
     const searchParams = new URLSearchParams({
@@ -2729,7 +2729,29 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        startYear: ['Invalid start year.']
+        startYear: ['Invalid start year format.']
+      }
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
+  test('generate flowchart api returns 400 w invalid start year', async ({ request }) => {
+    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+
+    const searchParams = new URLSearchParams({
+      name: 'test',
+      startYear: '2005',
+      programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
+    });
+
+    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+
+    const expectedResponseBody = {
+      message: 'Invalid input received.',
+      validationErrors: {
+        startYear: ['Invalid start year 2005.']
       }
     };
 
@@ -2753,7 +2775,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID invalid is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 
@@ -2777,7 +2799,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID invalid is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 
@@ -2799,7 +2821,7 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        programIds: ['Program ID  is invalid.']
+        programIds: ['Invalid format for program unique ID(s).']
       }
     };
 
@@ -2822,6 +2844,52 @@ test.describe('generate flowchart api input tests', () => {
       message: 'Invalid input received.',
       validationErrors: {
         programIds: ['Cannot have duplicate program ids in flowchart.']
+      }
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
+  test('generate flowchart api returns 400 w nonexistent program id (one)', async ({ request }) => {
+    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+
+    const searchParams = new URLSearchParams({
+      name: 'test',
+      startYear: '2020',
+      programIds: '1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3'
+    });
+
+    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+
+    const expectedResponseBody = {
+      message: 'Invalid input received.',
+      validationErrors: {
+        programIds: ['Invalid program id(s) 1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3.']
+      }
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
+  test('generate flowchart api returns 400 w nonexistent program id (two)', async ({ request }) => {
+    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+
+    const searchParams = new URLSearchParams({
+      name: 'test',
+      startYear: '2020',
+      programIds: '1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3,0c1ea546-75ac-4753-9505-bcac01ef8505'
+    });
+
+    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+
+    const expectedResponseBody = {
+      message: 'Invalid input received.',
+      validationErrors: {
+        programIds: [
+          'Invalid program id(s) 1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3,0c1ea546-75ac-4753-9505-bcac01ef8505.'
+        ]
       }
     };
 

@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { generateUserCourseCache } from '$lib/server/util/courseCacheUtil';
 import { getUserFlowchartsSchema } from '$lib/server/schema/getUserFlowchartsSchema';
+import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { RequestHandler } from '@sveltejs/kit';
@@ -50,7 +50,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         message: 'User flowchart retrieval successful.',
         flowcharts,
         ...(parseResults.data.includeCourseCache && {
-          courseCache: await generateUserCourseCache(flowcharts, programMetadata)
+          courseCache: await generateCourseCacheFlowcharts(flowcharts, programMetadata)
         }),
         ...(parseResults.data.includeProgramMetadata && {
           programMetadata
