@@ -43,7 +43,10 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       if (!startYearValid) {
         return json(
           {
-            message: 'Invalid start year.'
+            message: 'Invalid input received.',
+            validationErrors: {
+              startYear: [`Invalid start year ${parseResults.data.startYear}.`]
+            }
           },
           {
             status: 400
@@ -52,14 +55,16 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       }
 
       // validate programIds
-      const programIdsSet = new Set(parseResults.data.programIds);
-      const invalidProgramIds = programMetadata
-        .map((prog) => prog.id)
-        .filter((id) => !programIdsSet.has(id));
+      const programIdsSet = new Set(programMetadata.map((prog) => prog.id));
+      const invalidProgramIds = parseResults.data.programIds.filter((id) => !programIdsSet.has(id));
+
       if (invalidProgramIds.length) {
         return json(
           {
-            message: `Invalid program IDs ${invalidProgramIds.toString()}.`
+            message: 'Invalid input received.',
+            validationErrors: {
+              programIds: [`Invalid program id(s) ${invalidProgramIds.toString()}.`]
+            }
           },
           {
             status: 400
