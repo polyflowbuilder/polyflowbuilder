@@ -6,10 +6,12 @@ import type { Handle, RequestEvent, HandleServerError } from '@sveltejs/kit';
 const logger = initLogger('Hooks');
 
 // initialize environment
-await loadEnv().catch((err) => {
-  logger.error('An error occurred during environment initialization', err);
+try {
+  loadEnv();
+} catch (error) {
+  logger.error('An error occurred during environment initialization', error);
   process.exit(-1);
-});
+}
 
 export const handle: Handle = async ({ event, resolve }) => {
   await setSession(event);
