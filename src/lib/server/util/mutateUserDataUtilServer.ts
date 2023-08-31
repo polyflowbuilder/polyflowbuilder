@@ -1,11 +1,13 @@
 // util functions for persisting user data changes to backend
 
-import { apiData } from '../config/apiDataConfig';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import { UserDataUpdateChunkType } from '$lib/types';
+import { generateCourseCacheFlowcharts } from './courseCacheUtil';
 import { deleteFlowcharts, getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
+import type { Program } from '@prisma/client';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
+import type { MutateFlowchartData } from '$lib/types';
 
 const logger = initLogger('Util/MutateUserDataUtilServer');
 
@@ -60,14 +62,33 @@ export async function persistUserDataChangesServer(
 ): Promise<boolean> {
   // get flowcharts to modify from chunks
   const flowchartModifyIds = getFlowchartModifyIdsFromChunkList(chunksList);
-  const userFlowchartsData = await getUserFlowcharts(userId, flowchartModifyIds);
+  const userFlowchartsData = await getUserFlowcharts(userId, flowchartModifyIds, true);
+  const flowchartMutationData: MutateFlowchartData[] = [];
+  const programCache: Program[] = [];
+
+  userFlowchartsData.forEach((data) => {
+    flowchartMutationData.push({
+      flowchart: data.flowchart,
+      pos: data.pos
+    });
+    // to satisfy type checking
+    if (data.programMetadata) {
+      programCache.push(...data.programMetadata);
+    }
+  });
+
+  // get course caches for modify
+  const courseCache = await generateCourseCacheFlowcharts(
+    flowchartMutationData.map(({ flowchart }) => flowchart),
+    programCache
+  );
 
   // perform updates
   const mutateUserFlowchartsResult = mutateUserFlowcharts(
     userFlowchartsData,
     chunksList,
-    apiData.courseData,
-    apiData.programData
+    courseCache,
+    programCache
   );
 
   if (!mutateUserFlowchartsResult.success) {
