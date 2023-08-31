@@ -84,6 +84,9 @@ export async function generateCourseCacheFlowcharts(
   return flowchartCourseCache.filter((cache) => cache.courses.length);
 }
 
+// TODO: add tests? - the functionality here is already covered
+// by e2e tests (eg flowTermModApiTests) so not sure if explicit
+// unit tests are required
 export async function generateCourseCacheFromUpdateChunks(
   flowcharts: Flowchart[],
   chunksList: UserDataUpdateChunk[],

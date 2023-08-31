@@ -468,6 +468,60 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
+  test('improperly formatted flow term mod chunk returns 400 (#10)', async ({ request }) => {
+    // create a flow to test with
+    await prisma.dBFlowchart.deleteMany({
+      where: {
+        ownerId: userId
+      }
+    });
+    const flowId = (
+      await populateFlowcharts(prisma, userId, 1, [
+        {
+          idx: 0,
+          info: {
+            termCount: 4,
+            longTermCount: 2
+          }
+        }
+      ])
+    )[0];
+
+    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+
+    // invalid programIdIndex
+    const res = await request.post('/api/user/data/updateUserFlowcharts', {
+      data: {
+        updateChunks: [
+          {
+            type: UserDataUpdateChunkType.FLOW_TERM_MOD,
+            data: {
+              id: flowId,
+              tIndex: 0,
+              termData: [
+                {
+                  from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
+                  data: {
+                    id: 'CPE100',
+                    color: '#FFFFFF',
+                    programIdIndex: 25
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    });
+
+    const expectedResponseBody = {
+      message: 'Requested user flowchart updates are not valid for these data.'
+    };
+
+    expect(res.status()).toBe(400);
+    expect(await res.json()).toStrictEqual(expectedResponseBody);
+  });
+
   test('valid term mod chunk returns 200 (rearrange in single term)', async ({ request }) => {
     // create a flow to test with
     await prisma.dBFlowchart.deleteMany({

@@ -77,11 +77,9 @@ export async function persistUserDataChangesServer(
     }
   });
 
-  // make sure we were able to get all flowcharts
-  if (flowchartMutationData.length !== flowchartModifyIds.length) {
-    logger.warn('Failed to find all requested flowcharts for mutateUserFlowcharts operation');
-    return false;
-  }
+  // dont need to validate whether we fetched all flowcharts
+  // bc this is done later in generateCourseCacheFromUpdateChunks()
+  // and mutateUserFlowcharts() as appropriate
 
   // get course caches for modify
   const courseCache = await generateCourseCacheFromUpdateChunks(
