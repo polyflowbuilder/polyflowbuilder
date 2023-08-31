@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
-import { prisma } from '$lib/server/db/prisma';
 import { initLogger } from '$lib/common/config/loggerConfig';
+import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { generatePDFSchema } from '$lib/server/schema/generatePDFSchema';
-import { convertDBFlowchartToFlowchart } from '$lib/server/util/flowDataUtil';
+import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import { extractPDFDataFromFlowchart, generatePDF } from '$lib/server/util/generatePDF';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -28,14 +28,13 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       ...data
     });
     if (parseResults.success) {
-      const flowchart = await prisma.dBFlowchart.findFirst({
-        where: {
-          ownerId: locals.session.id,
-          id: parseResults.data.flowchartId
-        }
-      });
-
-      if (!flowchart) {
+      // get and validate that we have a flowchart to generate a PDF from
+      const userFlowchartData = await getUserFlowcharts(
+        locals.session.id,
+        [parseResults.data.flowchartId],
+        true
+      );
+      if (!userFlowchartData.length) {
         return json(
           {
             message: 'Unable to locate the requested flowchart for this user.'
@@ -45,13 +44,28 @@ export const GET: RequestHandler = async ({ locals, url }) => {
           }
         );
       }
+      const { flowchart, programMetadata } = userFlowchartData[0];
 
-      logger.info(`Generating flowchart PDF for user ${locals.session.id}`);
+      logger.info(`Generating flowchart PDF for flowchart ${flowchart.id}`);
+
+      // fetch necessary course cache info
+      if (!programMetadata) {
+        throw new Error('programMetadata not found');
+      }
+      const courseCacheFlowchart = await generateCourseCacheFlowcharts(
+        [flowchart],
+        programMetadata
+      );
+
+      // generate the PDF
       const flowchartPDFData = extractPDFDataFromFlowchart(
-        convertDBFlowchartToFlowchart(flowchart).flowchart
+        flowchart,
+        courseCacheFlowchart,
+        programMetadata
       );
       const pdfBuffer = await generatePDF(flowchartPDFData);
-      logger.info(`Flowchart PDF generation for user ${locals.session.id} was successful`);
+
+      logger.info(`Flowchart PDF generation for flowchart ${flowchart.id} was successful`);
 
       return new Response(pdfBuffer, {
         headers: {
