@@ -7,20 +7,25 @@
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
 import pdfTemplateString from '$lib/../../api/data/flows/exports/flowexport.ejs?raw';
-import { apiData } from '../config/apiDataConfig';
 import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
 import {
   computeCourseDisplayValues,
   getCatalogFromProgramIDIndex
 } from '$lib/common/util/courseDataUtilCommon';
+import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types';
 import type { FlowchartPDFData, FlowchartPDFTermData } from '$lib/types/generatePDFTypes';
 
-export function extractPDFDataFromFlowchart(flowchart: Flowchart): FlowchartPDFData {
+export function extractPDFDataFromFlowchart(
+  flowchart: Flowchart,
+  courseCache: CourseCache[],
+  programCache: Program[]
+): FlowchartPDFData {
   // get program friendly names
   const programFriendlyNames = flowchart.programId
     .map((id) => {
-      const programMetadata = apiData.programData.find((program) => program.id === id);
+      const programMetadata = programCache.find((program) => program.id === id);
 
       // TODO: find a way to return non-500 when this happens
       // (look at TERM_MOD logic?)
@@ -49,14 +54,14 @@ export function extractPDFDataFromFlowchart(flowchart: Flowchart): FlowchartPDFD
 
     term.courses.forEach((course) => {
       const courseMetadata =
-        apiData.courseData
+        courseCache
           .find(
             (cacheEntry) =>
               cacheEntry.catalog ===
               getCatalogFromProgramIDIndex(
                 course.programIdIndex ?? 0,
                 flowchart.programId,
-                apiData.programData
+                programCache
               )
           )
           ?.courses.find((c) => c.id === course.id) ?? null;
