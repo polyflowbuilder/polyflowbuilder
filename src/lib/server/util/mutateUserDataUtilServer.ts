@@ -3,7 +3,7 @@
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
 import { UserDataUpdateChunkType } from '$lib/types';
-import { generateCourseCacheFlowcharts } from './courseCacheUtil';
+import { generateCourseCacheFromUpdateChunks } from '$lib/server/util/courseCacheUtil';
 import { deleteFlowcharts, getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
 import type { Program } from '@prisma/client';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
@@ -77,11 +77,24 @@ export async function persistUserDataChangesServer(
     }
   });
 
+  // make sure we were able to get all flowcharts
+  if (flowchartMutationData.length !== flowchartModifyIds.length) {
+    logger.warn('Failed to find all requested flowcharts for mutateUserFlowcharts operation');
+    return false;
+  }
+
   // get course caches for modify
-  const courseCache = await generateCourseCacheFlowcharts(
+  const courseCache = await generateCourseCacheFromUpdateChunks(
     flowchartMutationData.map(({ flowchart }) => flowchart),
+    chunksList,
     programCache
   );
+
+  // make sure course cache generation was successful
+  if (!courseCache) {
+    logger.warn('Failed to generate course cache for mutateUserFlowcharts operation');
+    return false;
+  }
 
   // perform updates
   const mutateUserFlowchartsResult = mutateUserFlowcharts(
