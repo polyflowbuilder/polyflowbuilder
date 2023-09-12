@@ -4,9 +4,9 @@
 
 PolyFlowBuilder is a tool allows you to easily visualize and plan your academic path during your stay at Cal Poly SLO.
 
-Take PolyFlowBuilder for a spin on the [official website](https://polyflowbuilder.duncanapple.io).
+Take PolyFlowBuilder for a spin on the [official website](https://polyflowbuilder.io).
 
-Beta versions of the application are deployed on the [beta website](https://beta.polyflowbuilder.duncanapple.io). **Note that anything may change at any time (including data loss) on the beta website.**
+Beta versions of the application are deployed on the [beta website](https://beta.polyflowbuilder.io). **Note that anything may change at any time (including data loss) on the beta website.**
 
 ## History
 
@@ -92,7 +92,7 @@ If you have any questions about attribution, feel free to [reach out](#support).
 
 For support with PolyFlowBuilder features, issues, concerns, or anything else related to the project, you can either:
 
-1. [Submit feedback](https://polyflowbuilder.duncanapple.io/feedback) on PolyFlowBuilder's official website.
+1. [Submit feedback](https://polyflowbuilder.io/feedback) on PolyFlowBuilder's official website.
 
 2. Join the official PolyFlowBuilder [Discord server](https://discord.gg/xCadnCRC9f) and ask your question there.
 
