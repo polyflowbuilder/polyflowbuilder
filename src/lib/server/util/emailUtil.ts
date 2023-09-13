@@ -44,7 +44,13 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     throw new Error('sendEmail: CF_EMAIL_API_ENDPOINT is not defined');
   }
   logger.info(`Attempting to send '${template.name}' email to '${to}' via email endpoint`);
-  const res = await fetch(process.env.CF_EMAIL_API_ENDPOINT, {
+
+  // fetch in dryrun mode if we're in the test environment
+  const emailEndpoint = `${process.env.CF_EMAIL_API_ENDPOINT}${
+    process.env.NODE_ENV === 'test' ? '?dryrun=true' : ''
+  }`;
+
+  const res = await fetch(emailEndpoint, {
     method: 'POST',
     body: JSON.stringify({
       signature,
