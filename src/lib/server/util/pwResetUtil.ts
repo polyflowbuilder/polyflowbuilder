@@ -37,6 +37,13 @@ export async function startPWResetRoutine(email: string): Promise<void> {
 
     logger.info('reset password email sent successfully for', email);
   } else {
+    // wait a small amount of time to try to mitigate timing attacks
+    await new Promise((r) => {
+      // wait between 500ms and 1500ms
+      const waitTime = Math.floor(Math.random() * (1500 - 500 + 1) + 500);
+      setTimeout(r, waitTime);
+    });
+
     logger.info('reset password email not sent for non-existing account with email', email);
   }
 }
