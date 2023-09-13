@@ -8,8 +8,13 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
   const payload = {
     // request is valid for 1 minute
     expiry: Date.now() + 60000,
-    to,
-    from: process.env.EMAIL_SENDER,
+    to: {
+      email: to
+    },
+    from: {
+      email: process.env.EMAIL_SENDER_EMAIL,
+      name: process.env.EMAIL_SENDER_NAME
+    },
     subject,
     template
   };
@@ -38,7 +43,7 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
   if (!process.env.CF_EMAIL_API_ENDPOINT) {
     throw new Error('sendEmail: CF_EMAIL_API_ENDPOINT is not defined');
   }
-  logger.info(`Attempting to send '${template.name}' email via email endpoint`);
+  logger.info(`Attempting to send '${template.name}' email to '${to}' via email endpoint`);
   const res = await fetch(process.env.CF_EMAIL_API_ENDPOINT, {
     method: 'POST',
     body: JSON.stringify({
@@ -54,5 +59,5 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     const resData = JSON.stringify(await res.json());
     throw new Error(`sendEmail: failed to send email, status [${res.status}], detail [${resData}]`);
   }
-  logger.info('Email send successful');
+  logger.info(`Email send to '${to}' successful`);
 }
