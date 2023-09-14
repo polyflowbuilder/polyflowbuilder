@@ -1,7 +1,9 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
+  import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { goto, invalidateAll } from '$app/navigation';
+  import { PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
   import { faBell, faBars, faSignOutAlt, faUserTimes } from '@fortawesome/free-solid-svg-icons';
 
   async function logout(deleteAcc = false) {
@@ -124,6 +126,13 @@
         </ul>
       </div>
     {:else}
+      <a
+        href={PUBLIC_PFB_GITHUB_LINK}
+        target="_blank"
+        class="hidden xs:inline-flex mr-2 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
+      >
+        <Fa icon={faGithub} scale={1.8} />
+      </a>
       <a href="/login" class="btn btn-outline btn-md rounded-btn mr-3"> Sign In </a>
       <a href="/register" class="btn btn-outline btn-accent btn-md rounded-btn mr-4">
         Create Account
