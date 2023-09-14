@@ -23,9 +23,13 @@ function createLoggerConfig(source: string): LoggerOptions {
       format.timestamp({
         format: 'YYYY-MM-DD HH:mm:ss'
       }),
-      format.colorize({
-        level: true
-      }),
+      ...(process.env.NODE_ENV === 'production'
+        ? [format.uncolorize()]
+        : [
+            format.colorize({
+              level: true
+            })
+          ]),
       format.printf((info) => `[${info.level}] [${source}] [${info.timestamp}]: ${info.message}`)
     ),
     handleExceptions: true,
