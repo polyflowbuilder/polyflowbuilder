@@ -1,5 +1,4 @@
 import dotenv from 'dotenv';
-import * as nodeMailerConfig from '$lib/server/config/nodeMailerConfig';
 import { execSync } from 'child_process';
 import { initLogger } from '$lib/common/config/loggerConfig';
 
@@ -36,7 +35,6 @@ export function loadEnv() {
   logger.info('Environment variables loaded, initializing dependency configurations ...');
 
   // setup things that depend on env vars here
-  nodeMailerConfig.init();
 
   logger.info('PolyFlowBuilder environment initialization complete');
 }

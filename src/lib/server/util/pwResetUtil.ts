@@ -2,7 +2,6 @@ import argon2 from 'argon2';
 import { sendEmail } from './emailUtil';
 import { updateUser } from '$lib/server/db/user';
 import { initLogger } from '$lib/common/config/loggerConfig';
-import { createPasswordResetEmailPayload } from '$lib/server/config/emailConfig';
 import { clearTokensByEmail, upsertToken } from '$lib/server/db/token';
 
 const logger = initLogger('Util/PWResetUtil');
@@ -16,13 +15,36 @@ export async function startPWResetRoutine(email: string): Promise<void> {
   expiryDate.setMinutes(expiryDate.getMinutes() + 30);
 
   await clearTokensByEmail(email, 'PASSWORD_RESET');
-  const res = await upsertToken(email, 'PASSWORD_RESET', expiryDate);
+  const token = await upsertToken(email, 'PASSWORD_RESET', expiryDate);
 
-  if (res) {
-    const passwordResetEmailPayload = createPasswordResetEmailPayload(email, res);
-    sendEmail(passwordResetEmailPayload);
+  if (token) {
+    // send resetpw email
+    if (!process.env.DOMAIN) {
+      throw new Error('DOMAIN is not defined');
+    }
+    await sendEmail(
+      {
+        name: 'resetpw',
+        data: {
+          email,
+          token,
+          domain: process.env.DOMAIN
+        }
+      },
+      email,
+      'PolyFlowBuilder Password Reset'
+    );
 
     logger.info('reset password email sent successfully for', email);
+  } else {
+    // wait a small amount of time to try to mitigate timing attacks
+    await new Promise((r) => {
+      // wait between 500ms and 1500ms
+      const waitTime = Math.floor(Math.random() * (1500 - 500 + 1) + 500);
+      setTimeout(r, waitTime);
+    });
+
+    logger.info('reset password email not sent for non-existing account with email', email);
   }
 }
 

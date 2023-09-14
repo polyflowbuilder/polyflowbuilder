@@ -3,7 +3,6 @@ import { sendEmail } from '$lib/server/util/emailUtil';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { createFeedbackReport } from '$lib/server/db/feedback';
 import { feedbackValidationSchema } from '$lib/server/schema/feedbackSchema';
-import { createFeedbackEmailPayload } from '$lib/server/config/emailConfig';
 import type { Actions } from '@sveltejs/kit';
 import type { FeedbackData } from '$lib/server/schema/feedbackSchema';
 
@@ -17,9 +16,22 @@ export const actions: Actions = {
       // validation
       const parseResults = feedbackValidationSchema.safeParse(data);
       if (parseResults.success) {
-        // send feedback
-        const emailPayload = createFeedbackEmailPayload(parseResults.data);
-        sendEmail(emailPayload);
+        // send feedback email
+        if (!process.env.EMAIL_ADMIN) {
+          throw new Error('EMAIL_ADMIN not defined');
+        }
+        await sendEmail(
+          {
+            name: 'feedback',
+            data: {
+              subject: parseResults.data.subject,
+              feedbackContent: parseResults.data.feedback,
+              returnEmail: parseResults.data.email || undefined
+            }
+          },
+          process.env.EMAIL_ADMIN,
+          'PolyFlowBuilder Feedback Submitted'
+        );
 
         // insert into feedback report table
         await createFeedbackReport(parseResults.data);
