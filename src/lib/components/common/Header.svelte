@@ -1,7 +1,9 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
+  import { faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
   import { goto, invalidateAll } from '$app/navigation';
+  import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
   import { faBell, faBars, faSignOutAlt, faUserTimes } from '@fortawesome/free-solid-svg-icons';
 
   async function logout(deleteAcc = false) {
@@ -52,10 +54,16 @@
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul tabindex="0" class="menu dropdown-content mt-2 p-2 shadow bg-base-100 w-52">
         <li class="text-gray-600">
-          <a href="/about" class="relative"> About </a>
+          <a href="/about" class="relative">About</a>
         </li>
         <li class="text-gray-600">
-          <a href="/feedback" class="relative"> Submit Feedback </a>
+          <a href="/feedback" class="relative">Submit Feedback</a>
+        </li>
+        <li class="text-gray-600">
+          <a href={PUBLIC_PFB_DISCORD_LINK} class="relative">Discord Server</a>
+        </li>
+        <li class="text-gray-600">
+          <a href={PUBLIC_PFB_GITHUB_LINK} class="relative">GitHub Repository</a>
         </li>
       </ul>
     </div>
@@ -72,6 +80,22 @@
     </div>
   </div>
   <div class="flex">
+    <div class="hidden lg:inline">
+      <a
+        href={PUBLIC_PFB_DISCORD_LINK}
+        target="_blank"
+        class="btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
+      >
+        <Fa icon={faDiscord} scale={1.8} />
+      </a>
+      <a
+        href={PUBLIC_PFB_GITHUB_LINK}
+        target="_blank"
+        class="mr-0.5 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
+      >
+        <Fa icon={faGithub} scale={1.8} />
+      </a>
+    </div>
     {#if $page.data.session}
       <div class="indicator">
         <!-- TODO: reimplement alert indicator when adding notifications -->

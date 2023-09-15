@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@playwright/test": "^1.28.1",
     "@simonwep/pickr": "^1.8.2",
