@@ -84,14 +84,14 @@
       <a
         href={PUBLIC_PFB_DISCORD_LINK}
         target="_blank"
-        class="hidden xs:inline-flex mr-2 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
+        class="btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
       >
         <Fa icon={faDiscord} scale={1.8} />
       </a>
       <a
         href={PUBLIC_PFB_GITHUB_LINK}
         target="_blank"
-        class="hidden xs:inline-flex mr-2 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
+        class="mr-0.5 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
       >
         <Fa icon={faGithub} scale={1.8} />
       </a>
