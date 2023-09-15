@@ -103,9 +103,11 @@
 
     <div class="divider" />
 
+    <!-- TODO: implement updating flowchart programs -->
     <FlowPropertiesSelector
       bind:flowName
       bind:flowStartYear
+      exposeProgramSelector={false}
       programIdInputs={flowProgramIdInputs}
       on:flowProgramIdsUpdate={flowProgramIdsUpdateEventHandler}
       on:optionsValidUpdate={optionsValidUpdateEventHandler}

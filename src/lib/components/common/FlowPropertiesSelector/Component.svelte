@@ -20,6 +20,7 @@
   export let defaultOptionText = 'Choose ...';
   export let flowNamePlaceholderText = 'My New Flowchart';
   export let disableSelectingDefaultOption = true;
+  export let exposeProgramSelector = true;
 
   // internal data variables
   let fetchingData = false;
@@ -112,46 +113,49 @@
     </label>
   </div>
 
-  <div class="mb-2">
-    <p class="label pb-0">
-      Programs:
-      {#if fetchingData}
-        <span class="ml-2 loading loading-spinner w-5" />
+  <!-- TODO: remove need for this prop -->
+  {#if exposeProgramSelector}
+    <div class="mb-2">
+      <p class="label pb-0">
+        Programs:
+        {#if fetchingData}
+          <span class="ml-2 loading loading-spinner w-5" />
+        {/if}
+      </p>
+      <div class="divider mt-0 mb-2" />
+
+      {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
+        <UIWrapper
+          programIdInput={flowProgramIdInput}
+          alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
+          {i}
+          {fetchingData}
+          on:programIdUpdate={(e) => {
+            programIdUpdateEventHandler(e, i);
+          }}
+          on:deleteProgram={deleteProgramEventHandler}
+          on:fetchingDataUpdate={fetchingDataUpdateEventHandler}
+        />
+      {/each}
+
+      <div class="flex justify-end mt-4">
+        <button
+          class="btn btn-xs greenButton"
+          disabled={programIdInputs.length === FLOW_PROGRAMS_MAX_COUNT}
+          on:click={addProgram}
+        >
+          Add Program
+        </button>
+      </div>
+
+      {#if programIdInputs.length === FLOW_PROGRAMS_MAX_COUNT}
+        <small class="text-red-600 flex justify-center mt-4"
+          >Max program count reached. If you need more for your flowchart, please reach out to us
+          about your use case.</small
+        >
       {/if}
-    </p>
-    <div class="divider mt-0 mb-2" />
 
-    {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
-      <UIWrapper
-        programIdInput={flowProgramIdInput}
-        alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}
-        {i}
-        {fetchingData}
-        on:programIdUpdate={(e) => {
-          programIdUpdateEventHandler(e, i);
-        }}
-        on:deleteProgram={deleteProgramEventHandler}
-        on:fetchingDataUpdate={fetchingDataUpdateEventHandler}
-      />
-    {/each}
-
-    <div class="flex justify-end mt-4">
-      <button
-        class="btn btn-xs greenButton"
-        disabled={programIdInputs.length === FLOW_PROGRAMS_MAX_COUNT}
-        on:click={addProgram}
-      >
-        Add Program
-      </button>
+      <div class="divider my-2" />
     </div>
-
-    {#if programIdInputs.length === FLOW_PROGRAMS_MAX_COUNT}
-      <small class="text-red-600 flex justify-center mt-4"
-        >Max program count reached. If you need more for your flowchart, please reach out to us
-        about your use case.</small
-      >
-    {/if}
-
-    <div class="divider my-2" />
-  </div>
+  {/if}
 </div>
