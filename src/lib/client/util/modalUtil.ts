@@ -2,7 +2,7 @@ import type { Writable } from 'svelte/store';
 
 // modal action to bind modal store state to modal open state
 export function modal(dialog: HTMLDialogElement, modalStateStore: Writable<boolean>) {
-  modalStateStore.subscribe((state) => {
+  const unsubscribe = modalStateStore.subscribe((state) => {
     if (state) {
       dialog.showModal();
     } else {
@@ -13,4 +13,10 @@ export function modal(dialog: HTMLDialogElement, modalStateStore: Writable<boole
     // and this causes Playwright tests to fail
     dialog.style.visibility = state ? 'visible' : 'hidden';
   });
+
+  return {
+    destroy() {
+      unsubscribe();
+    }
+  };
 }
