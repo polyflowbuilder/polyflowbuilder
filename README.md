@@ -1,4 +1,4 @@
-![Logo](https://polyflowbuilder.duncanapple.io/assets/logo.png)
+![Logo](https://polyflowbuilder.io/assets/logo.png)
 
 ## About
 
