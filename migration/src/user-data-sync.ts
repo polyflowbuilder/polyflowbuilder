@@ -76,9 +76,11 @@ async function syncUserData() {
       data: user.user
     });
     await prisma.dBFlowchart.createMany({
+      // @ts-expect-error this works
       data: user.flows.map((flow) => {
         // see https://stackoverflow.com/questions/70787660/generated-types-in-prisma-do-not-have-optional-fields-as-defined-in-the-schema
         // for why we have this deletion here
+        // @ts-expect-error this works
         delete flow.validationData;
         return {
           ...flow

@@ -45,7 +45,8 @@ async function updateUserFlowchartDataModels() {
       // update each flowchart
       for (const flow of userData.data.flows) {
         // there are flows in prod data that are just null for some reason, skip these
-        if (flow.dataModelVersion || flow.version) {
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+        if (flow?.dataModelVersion || flow?.version) {
           updatedFlowcharts.push(updateFlowchartDataModel(newUserData.id, flow));
         }
       }
