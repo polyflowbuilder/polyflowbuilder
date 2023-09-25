@@ -1,10 +1,17 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
+  import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
   import { faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
   import { goto, invalidateAll } from '$app/navigation';
   import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
-  import { faBell, faBars, faSignOutAlt, faUserTimes } from '@fortawesome/free-solid-svg-icons';
+  import {
+    faBell,
+    faBars,
+    faDoorOpen,
+    faUserTimes,
+    faSignOutAlt
+  } from '@fortawesome/free-solid-svg-icons';
 
   async function logout(deleteAcc = false) {
     try {
@@ -133,6 +140,16 @@
             </div>
           </li>
           <div class="divider m-0 p-0" />
+          <li class="text-gray-800">
+            <a
+              href={'#'}
+              class="relative"
+              on:click|preventDefault={() => ($welcomeModalOpen = true)}
+            >
+              View Welcome Message
+              <Fa icon={faDoorOpen} class="right-4 absolute" />
+            </a>
+          </li>
           <li class="text-gray-800">
             <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
               Log Out
