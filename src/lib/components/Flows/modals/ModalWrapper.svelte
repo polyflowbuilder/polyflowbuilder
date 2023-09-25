@@ -4,7 +4,8 @@
     AddTermsModal,
     DeleteTermsModal,
     EditFlowPropertiesModal,
-    CustomizeCourseModal
+    CustomizeCourseModal,
+    WelcomeModal
   } from '$lib/components/Flows/modals';
 </script>
 
@@ -14,4 +15,5 @@
   <DeleteTermsModal />
   <EditFlowPropertiesModal />
   <CustomizeCourseModal />
+  <WelcomeModal />
 </div>

@@ -3,6 +3,7 @@ import AddTermsModal from './AddTermsModal.svelte';
 import DeleteTermsModal from './DeleteTermsModal.svelte';
 import EditFlowPropertiesModal from './EditFlowPropertiesModal.svelte';
 import CustomizeCourseModal from './CustomizeCourseModal.svelte';
+import WelcomeModal from './WelcomeModal.svelte';
 
 import ModalWrapper from './ModalWrapper.svelte';
 
@@ -12,5 +13,6 @@ export {
   DeleteTermsModal,
   EditFlowPropertiesModal,
   CustomizeCourseModal,
+  WelcomeModal,
   ModalWrapper
 };
