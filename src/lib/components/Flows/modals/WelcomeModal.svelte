@@ -21,8 +21,11 @@
       </p>
       <p class="mb-4">
         PolyFlowBuilder has been rewritten from the ground up to allow the project to grow, scale,
-        and be more organized for years to come. The previous version of PolyFlowBuilder was
-        something thrown together as a summer project and it's frankly a miracle it has been stable
+        and be more organized for years to come. The <a
+          href="https://old.polyflowbuilder.io"
+          class="hyperlink"
+          target="_blank">original version of PolyFlowBuilder</a
+        > was something thrown together as a summer project and it's frankly a miracle it has been stable
         for as long as it has.
       </p>
       <p class="mb-4">
