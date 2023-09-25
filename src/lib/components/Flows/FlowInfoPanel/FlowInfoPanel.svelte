@@ -23,7 +23,7 @@
 <!-- TODO: figure out UI/UX for collapsible side panel -->
 <!-- TODO: auto-collapse when screen size too small -->
 <!-- TODO: allow overlay or permanent set -->
-<input type="checkbox" class="absolute right-0 top-0 z-20" bind:checked={visible} />
+<!-- <input type="checkbox" class="absolute right-0 top-0 z-20" bind:checked={visible} /> -->
 <div class="flowInfoPanel card {!$size ? 'opacity-0' : ''}" style="--boxSize: {$size}px;">
   {#if visible && $size > PANEL_SIZE_OPEN * 0.9}
     <div class="tabs justify-center mt-2">

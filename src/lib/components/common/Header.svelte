@@ -4,14 +4,8 @@
   import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
   import { faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
   import { goto, invalidateAll } from '$app/navigation';
+  import { faBars, faDoorOpen, faUserTimes, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
   import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
-  import {
-    faBell,
-    faBars,
-    faDoorOpen,
-    faUserTimes,
-    faSignOutAlt
-  } from '@fortawesome/free-solid-svg-icons';
 
   async function logout(deleteAcc = false) {
     try {
@@ -104,15 +98,6 @@
       </a>
     </div>
     {#if $page.data.session}
-      <div class="indicator">
-        <!-- TODO: reimplement alert indicator when adding notifications -->
-        <a
-          href={'#'}
-          class="hidden xs:inline-flex mr-2 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
-        >
-          <Fa icon={faBell} scale={1.8} />
-        </a>
-      </div>
       <div class="dropdown dropdown-end">
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <!-- svelte-ignore a11y-label-has-associated-control -->
