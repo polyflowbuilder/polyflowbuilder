@@ -141,16 +141,6 @@
           </li>
           <div class="divider m-0 p-0" />
           <li class="text-gray-800">
-            <a
-              href={'#'}
-              class="relative"
-              on:click|preventDefault={() => ($welcomeModalOpen = true)}
-            >
-              View Welcome Message
-              <Fa icon={faDoorOpen} class="right-4 absolute" />
-            </a>
-          </li>
-          <li class="text-gray-800">
             <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
               Log Out
               <Fa icon={faSignOutAlt} class="right-4 absolute text-green-500" />
@@ -160,6 +150,17 @@
             <a href={'#'} class="relative" on:click|preventDefault={() => logout(true)}>
               Delete Account
               <Fa icon={faUserTimes} class="right-3 absolute text-red-500" />
+            </a>
+          </li>
+          <div class="divider m-0 p-0" />
+          <li class="text-gray-800">
+            <a
+              href={'#'}
+              class="relative"
+              on:click|preventDefault={() => ($welcomeModalOpen = true)}
+            >
+              View Welcome Message
+              <Fa icon={faDoorOpen} class="right-4 absolute" />
             </a>
           </li>
         </ul>
