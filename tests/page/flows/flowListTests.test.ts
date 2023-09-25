@@ -1,13 +1,13 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginFrontend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from '../../util/frontendInteractionUtil.js';
+import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import {
-  FLOW_LIST_ITEM_SELECTED_SELECTOR,
-  FLOW_LIST_ITEM_SELECTOR
-} from '../../util/selectorTestUtil.js';
+  FLOW_LIST_ITEM_SELECTOR,
+  FLOW_LIST_ITEM_SELECTED_SELECTOR
+} from 'tests/util/selectorTestUtil.js';
 
 const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';
 

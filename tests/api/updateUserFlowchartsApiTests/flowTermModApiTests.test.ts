@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginBackend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import {
-  UserDataUpdateChunkTERM_MODCourseDataFrom,
-  UserDataUpdateChunkType
+  UserDataUpdateChunkType,
+  UserDataUpdateChunkTERM_MODCourseDataFrom
 } from '$lib/types/mutateUserDataTypes.js';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
 import type { CourseCache } from '$lib/types/apiDataTypes.js';

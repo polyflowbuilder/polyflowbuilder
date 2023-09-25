@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from '../../../util/userTestUtil';
+import { performLoginFrontend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
 
 const FLOWS_PAGE_MODAL_WELCOME_TESTS_EMAIL = 'pfb_test_flowsPage_modal_welcome_playwright@test.com';

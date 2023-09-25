@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from '../util/userTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 
 const LOGIN_TESTS_EMAIL = 'pfb_test_loginPage_playwright@test.com';

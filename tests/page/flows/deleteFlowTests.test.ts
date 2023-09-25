@@ -2,13 +2,13 @@ import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginFrontend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import {
-  FLOW_LIST_ITEM_SELECTED_SELECTOR,
-  FLOW_LIST_ITEM_SELECTOR
-} from '../../util/selectorTestUtil.js';
+  FLOW_LIST_ITEM_SELECTOR,
+  FLOW_LIST_ITEM_SELECTED_SELECTOR
+} from 'tests/util/selectorTestUtil.js';
 import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL = 'pfb_test_flowPage_deleteFlow_playwright@test.com';
