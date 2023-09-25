@@ -1,9 +1,9 @@
-import { dragAndDrop } from '../../util/frontendInteractionUtil.js';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { dragAndDrop, skipWelcomeMessage } from '../../util/frontendInteractionUtil.js';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_COURSES_SELECTOR,
@@ -36,7 +36,8 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     userId = id;
   });
 
-  test.beforeEach(async () => {
+  test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
     await prisma.dBFlowchart.deleteMany({
       where: {
         ownerId: userId

@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import type { Page } from '@playwright/test';
@@ -22,6 +23,7 @@ test.describe('flows page header tests', () => {
     // login
     // see https://playwright.dev/docs/auth#reuse-the-signed-in-page-in-multiple-tests
     page = await browser.newPage();
+    await skipWelcomeMessage(page);
     await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
   });
 

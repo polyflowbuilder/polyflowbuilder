@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from '../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
@@ -27,6 +28,10 @@ test.describe('create flow routine tests', () => {
 
     // create test flow to verify creation behavior in frontend
     await populateFlowcharts(prisma, id, 10);
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
   });
 
   test.afterAll(async () => {

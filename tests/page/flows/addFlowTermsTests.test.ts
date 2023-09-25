@@ -1,6 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
 import { PrismaClient } from '@prisma/client';
 import {
@@ -241,6 +242,7 @@ test.describe('add flowchart terms tests', () => {
   });
 
   test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
     await performLoginFrontend(page, FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL, 'test');
   });
 

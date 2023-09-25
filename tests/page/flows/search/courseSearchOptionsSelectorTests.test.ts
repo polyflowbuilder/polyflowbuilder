@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from '../../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
@@ -39,6 +40,10 @@ test.describe('CourseSearchOptionsSelector tests', () => {
         }
       }
     ]);
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
   });
 
   test.afterAll(async () => {

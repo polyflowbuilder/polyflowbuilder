@@ -1,9 +1,9 @@
-import { dragAndDrop } from '../../util/frontendInteractionUtil.js';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from '../../util/userDataTestUtil.js';
 import { performLoginFrontend } from '../../util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { dragAndDrop, skipWelcomeMessage } from '../../util/frontendInteractionUtil.js';
 import {
   FLOW_LIST_ITEM_SELECTED_SELECTOR,
   FLOW_LIST_ITEM_SELECTOR
@@ -30,6 +30,7 @@ test.describe('flow list tests', () => {
   });
 
   test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
     await prisma.dBFlowchart.deleteMany({
       where: {
         ownerId: userId
