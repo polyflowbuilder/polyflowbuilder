@@ -3,26 +3,23 @@ import { PrismaClient } from '@prisma/client';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_HEADER_TESTS_EMAIL = 'pfb_test_flowsPage_header_playwright@test.com';
 
 test.describe('flows page header tests', () => {
   test.describe.configure({ mode: 'serial' });
-  let page: Page;
   const prisma = new PrismaClient();
 
-  test.beforeAll(async ({ browser }) => {
+  test.beforeAll(async () => {
     // create account
     await createUser({
       email: FLOWS_PAGE_HEADER_TESTS_EMAIL,
       username: 'test',
       password: 'test'
     });
+  });
 
-    // login
-    // see https://playwright.dev/docs/auth#reuse-the-signed-in-page-in-multiple-tests
-    page = await browser.newPage();
+  test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
     await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
   });
@@ -31,7 +28,7 @@ test.describe('flows page header tests', () => {
     await deleteUser(FLOWS_PAGE_HEADER_TESTS_EMAIL);
   });
 
-  test('logout functionality performs redirect', async () => {
+  test('logout functionality performs redirect', async ({ page }) => {
     await page.locator('.avatar').click();
     await page.getByText('Log Out').click();
 
@@ -43,13 +40,21 @@ test.describe('flows page header tests', () => {
 
     // check header
     await expect(page.getByText('Sign In')).toBeVisible();
+  });
 
-    // do login again to reset state
-    await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
+  test('user able to open welcome modal from header dropdown', async ({ page }) => {
+    // open in header
+    await page.getByRole('img', { name: 'user' }).click();
+    await page.getByText('View Welcome Message', { exact: true }).click();
+
+    // expect modal to be visible
+    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeVisible();
+    await page.getByText('Welcome to PolyFlowBuilder!').scrollIntoViewIfNeeded();
+    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeInViewport();
   });
 
   // make sure this test is AT THE VERY END! since account will be deleted
-  test('delete account functionality works as expected', async () => {
+  test('delete account functionality works as expected', async ({ page }) => {
     // clicking the cancel button does not redirect or delete
     await page.locator('.avatar').click();
     await page.getByText('Delete Account').click();

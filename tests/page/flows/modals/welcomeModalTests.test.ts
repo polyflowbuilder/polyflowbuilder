@@ -47,22 +47,4 @@ test.describe('welcome modal tests', () => {
 
     await expect(page.getByText('Welcome to PolyFlowBuilder!')).not.toBeVisible();
   });
-
-  test('user able to open modal again after closing', async ({ page }) => {
-    // expect modal to be visible
-    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeVisible();
-    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeInViewport();
-
-    // then close
-    await page.getByRole('button', { name: 'Close' }).click();
-
-    // then open again
-    await page.getByRole('img', { name: 'user' }).click();
-    await page.getByText('View Welcome Message', { exact: true }).click();
-
-    // expect modal to be visible again
-    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeVisible();
-    await page.getByText('Welcome to PolyFlowBuilder!').scrollIntoViewIfNeeded();
-    await expect(page.getByText('Welcome to PolyFlowBuilder!')).toBeInViewport();
-  });
 });
