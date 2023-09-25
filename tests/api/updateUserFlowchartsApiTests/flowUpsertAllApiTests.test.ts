@@ -1,8 +1,8 @@
 import { v4 as uuid } from 'uuid';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginBackend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes.js';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';

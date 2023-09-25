@@ -1,9 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../../util/userDataTestUtil.js';
-import { performLoginFrontend } from '../../../util/userTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../../../util/selectorTestUtil.js';
+import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil.js';
 
 const FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL =
   'pfb_test_flowPage_courseSearchOptions_playwright@test.com';
@@ -39,6 +40,10 @@ test.describe('CourseSearchOptionsSelector tests', () => {
         }
       }
     ]);
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
   });
 
   test.afterAll(async () => {

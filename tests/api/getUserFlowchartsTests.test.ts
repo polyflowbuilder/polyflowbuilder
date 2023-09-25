@@ -1,10 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { performLoginBackend } from '../util/userTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
-import { cloneAndDeleteNestedProperty } from '../util/testUtil.js';
+import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil.js';
 
 const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
 

@@ -1,9 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { populateFlowcharts } from '../util/userDataTestUtil.js';
-import { performLoginFrontend } from '../util/userTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../util/selectorTestUtil.js';
+import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil.js';
 
 // TODO: is this a "routine", or an "Action"? figure out what routine is and
 // reorganize the tests
@@ -27,6 +28,10 @@ test.describe('create flow routine tests', () => {
 
     // create test flow to verify creation behavior in frontend
     await populateFlowcharts(prisma, id, 10);
+  });
+
+  test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
   });
 
   test.afterAll(async () => {

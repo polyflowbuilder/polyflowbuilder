@@ -1,13 +1,15 @@
-import { expect, test, type Page } from '@playwright/test';
-import { performLoginFrontend } from '../../util/userTestUtil.js';
-import { createUser, deleteUser } from '$lib/server/db/user';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import {
   FLOW_LIST_ITEM_SELECTOR,
-  TERM_CONTAINER_COURSES_SELECTOR,
-  TERM_CONTAINER_SELECTOR
+  TERM_CONTAINER_SELECTOR,
+  TERM_CONTAINER_COURSES_SELECTOR
 } from 'tests/util/selectorTestUtil.js';
+import type { Page } from '@playwright/test';
 
 const FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL =
   'pfb_test_flowsPage_add_terms_modal_playwright@test.com';
@@ -241,6 +243,7 @@ test.describe('add flowchart terms tests', () => {
   });
 
   test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
     await performLoginFrontend(page, FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL, 'test');
   });
 

@@ -56,3 +56,9 @@ export async function dragAndDrop(
   // if tests are not performing as expected, bump up timeout to let elements "settle" in headless mode
   await page.waitForTimeout(100);
 }
+
+export async function skipWelcomeMessage(page: Page) {
+  await page.addInitScript(() => {
+    window.localStorage.setItem('pfb_welcomeModalOpened', 'true');
+  });
+}

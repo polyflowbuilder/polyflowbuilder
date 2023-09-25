@@ -1,13 +1,13 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { populateFlowcharts } from '../../util/userDataTestUtil.js';
-import { performLoginBackend } from '../../util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { MutateFlowchartData } from '$lib/types/mutateUserDataTypes';
 import type { CourseCache } from '$lib/types/apiDataTypes.js';
+import type { MutateFlowchartData } from '$lib/types/mutateUserDataTypes';
 
 const FLOW_LIST_CHANGE_TESTS_API_EMAIL =
   'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_playwright@test.com';

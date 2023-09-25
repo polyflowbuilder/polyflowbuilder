@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from '../util/userTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 
 const SEARCH_CATALOG_API_TESTS_EMAIL = 'pfb_test_searchCatalogAPI_playwright@test.com';

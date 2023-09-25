@@ -1,10 +1,10 @@
 import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from '../util/userTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
 import { CURRENT_FLOW_DATA_VERSION, FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
-import { cloneAndDeleteNestedProperty, deleteObjectProperties } from '../util/testUtil.js';
+import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil.js';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types/apiDataTypes.js';
 

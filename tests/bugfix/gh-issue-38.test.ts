@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { createUser, deleteUser } from '$lib/server/db/user';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
 import { performLoginFrontend } from 'tests/util/userTestUtil';
+import { createUser, deleteUser } from '$lib/server/db/user';
 
 // bug description: modals fail to open when navigating to the
 // flow editor for the second time (e.g. first time works, then navigate away,
@@ -19,6 +20,7 @@ test.describe('gh-issue-38 bugfix tests', () => {
   });
 
   test.beforeEach(async ({ page }) => {
+    await skipWelcomeMessage(page);
     await performLoginFrontend(page, GH_ISSUE_38_TESTS_EMAIL, 'test');
   });
 

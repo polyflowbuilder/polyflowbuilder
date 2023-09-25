@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from '../../util/userTestUtil.js';
+import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
