@@ -1,10 +1,19 @@
 <script lang="ts">
-  import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
-  import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
   import { modal } from '$lib/client/util/modalUtil';
+  import { onMount } from 'svelte';
+  import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
+  import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
+
+  onMount(() => {
+    const modalSeen = localStorage.getItem('pfb_welcomeModalOpened');
+    if (modalSeen !== 'true') {
+      $welcomeModalOpen = true;
+    }
+  });
 
   function closeModal() {
     $welcomeModalOpen = false;
+    localStorage.setItem('pfb_welcomeModalOpened', 'true');
   }
 </script>
 
