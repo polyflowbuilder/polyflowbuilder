@@ -79,7 +79,11 @@ async function dumpUserData() {
     // save user data
     for (const user of userData) {
       console.log('  writing data for user', user.username);
-      fs.writeFileSync(`../data/dump/${user.username}.json`, JSON.stringify(user, null, 2));
+      // make sure we have PK in file or else we may lose users w/ duplicate usernames
+      fs.writeFileSync(
+        `../data/dump/${String(user.id).padStart(4, '0')}_${user.username}.json`,
+        JSON.stringify(user, null, 2)
+      );
     }
 
     userData = await getUserDataBatch();
