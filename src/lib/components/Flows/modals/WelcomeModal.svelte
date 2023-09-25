@@ -22,7 +22,7 @@
       <p class="mb-4">
         PolyFlowBuilder has been rewritten from the ground up to allow the project to grow, scale,
         and be more organized for years to come. The previous version of PolyFlowBuilder was
-        something I threw together as a summer project and it's frankly a miracle it's been stable
+        something thrown together as a summer project and it's frankly a miracle it has been stable
         for as long as it has.
       </p>
       <p class="mb-4">
@@ -64,8 +64,8 @@
       <p class="mb-4">- Duncan A, PolyFlowBuilder Core Maintainer</p>
 
       <p class="mb-4 text-center text-xs text-gray-500">
-        (view this message again by clicking on the user icon in the top-right icon and selecting
-        "View Welcome Message")
+        (view this message again by clicking on your user icon in the top-right and selecting "View
+        Welcome Message")
       </p>
     </div>
 
