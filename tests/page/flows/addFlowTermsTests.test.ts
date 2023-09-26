@@ -1,12 +1,13 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
 import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
+  getTermContainerCourseLocator,
   TERM_CONTAINER_COURSES_SELECTOR
 } from 'tests/util/selectorTestUtil.js';
 import type { Page } from '@playwright/test';
@@ -402,6 +403,20 @@ test.describe('add flowchart terms tests', () => {
         'Spring 2027'
       ],
       ['Fall 2023']
+    );
+
+    // make sure we can move courses into the new term
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [5, 0]),
+      page.locator(TERM_CONTAINER_SELECTOR).nth(6)
+    );
+
+    await expect(
+      page.locator(TERM_CONTAINER_SELECTOR).nth(6).locator(TERM_CONTAINER_COURSES_SELECTOR)
+    ).toHaveCount(1);
+    await expect(getTermContainerCourseLocator(page, [6, 0]).locator('h6')).toHaveText(
+      '0--- is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longe'
     );
   });
 
