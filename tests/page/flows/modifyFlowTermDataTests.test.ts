@@ -399,4 +399,66 @@ test.describe('FLOW_TERM_MOD update tests', () => {
       '7-- is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longe'
     );
   });
+
+  test('move course to empty term', async ({ page }) => {
+    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+    await expect(page).toHaveURL(/.*flows/);
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
+    expect((await page.context().cookies())[0].name).toBe('sId');
+
+    // load the flowchart
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(1);
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).first().click();
+    await expect(
+      page.getByRole('heading', {
+        name: 'test flow 0'
+      })
+    ).toBeInViewport();
+
+    // verify initial order of courses in the first term
+    await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText(
+      '0--- is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longestthis is the longe'
+    );
+    await expect(getTermContainerCourseLocator(page, [0, 1]).locator('h6')).toHaveText('MATH142');
+    await expect(getTermContainerCourseLocator(page, [0, 2]).locator('h6')).toHaveText('MATH153');
+    await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH96');
+
+    // move courses out of the first term
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [0, 0]),
+      getTermContainerCourseLocator(page, [1, 0])
+    );
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [0, 0]),
+      getTermContainerCourseLocator(page, [1, 0])
+    );
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [0, 0]),
+      getTermContainerCourseLocator(page, [1, 0])
+    );
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [0, 0]),
+      getTermContainerCourseLocator(page, [1, 0]),
+      false
+    );
+
+    // verify first term is empty
+    await expect(
+      page.locator(TERM_CONTAINER_SELECTOR).nth(0).locator(TERM_CONTAINER_COURSES_SELECTOR)
+    ).toHaveCount(0);
+
+    // move course into empty term
+    await dragAndDrop(
+      page,
+      getTermContainerCourseLocator(page, [1, 0]),
+      page.locator(TERM_CONTAINER_SELECTOR).nth(0)
+    );
+
+    // verify course is in first term
+    await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('MATH96');
+  });
 });
