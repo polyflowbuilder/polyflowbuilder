@@ -68,8 +68,6 @@
   }
 
   $: displayedTermData = displayCreditBin ? flowchart.termData : flowchart.termData.slice(1);
-
-  $: console.log('flowchart in editor', flowchart);
 </script>
 
 <div class="h-full">
