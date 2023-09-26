@@ -38,13 +38,16 @@
         for as long as it has.
       </p>
       <p class="mb-4">
-        Also note that PolyFlowBuilder has been made open source to ensure the project's longevitiy!
-        Click on the GitHub icon in the top-right of the screen to view the source code for the
-        project.
+        Also, note that PolyFlowBuilder has been made open source to ensure the project's longevity!
+        Feel free to visit the project's <a
+          href={PUBLIC_PFB_GITHUB_LINK}
+          class="hyperlink"
+          target="_blank">GitHub repository</a
+        > to view the source code for the project.
       </p>
       <p class="mb-4">
-        New features will continue to be developed for PolyFlowBuilder going forward. If you have
-        any questions, bug reports, feature requests, or any other feedback/comments about the
+        PolyFlowBuilder will continue to be actively supported and maintained going forward. If you
+        have any questions, bug reports, feature requests, or any other feedback/comments about the
         project, feel free to reach out and/or get involved via the following channels:
       </p>
       <ul class="list-decimal list-inside mb-4">
@@ -71,7 +74,7 @@
       <p class="mb-4">
         Thank you so much to everyone who has contributed to PolyFlowBuilder's development and
         growth thus far, and thank YOU for using PolyFlowBuilder! I hope this tool is able to help
-        you on your academic journey at Cal Poly, SLO. 😄
+        you achieve academic success at Cal Poly, SLO. 😄
       </p>
       <p class="mb-4">- Duncan A, PolyFlowBuilder Core Maintainer</p>
 
