@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.postcss';
   import { Footer, Header } from '$lib/components/common';
+  import { PUBLIC_PFB_ANALYTICS_ID } from '$env/static/public';
 </script>
 
 <svelte:head>
@@ -17,7 +18,11 @@
   />
   <title>PolyFlowBuilder</title>
 
-  <!-- TODO: add Google Analytics -->
+  <script
+    async
+    src="https://analytics.polyflowbuilder.io/script.js"
+    data-website-id={PUBLIC_PFB_ANALYTICS_ID}
+  ></script>
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
