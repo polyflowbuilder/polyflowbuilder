@@ -95,7 +95,12 @@
 {/if}
 
 <style lang="postcss">
-  div.mutableForEachContainer {
+  /* need both containers to have full height 
+    so courses can be dragged into an empty term
+    (or else dndzone section is 0px tall with empty term)
+  */
+  div.mutableForEachContainer,
+  div.mutableForEachContainer section {
     /* allow scrolling */
     overflow: auto;
     height: 100%;

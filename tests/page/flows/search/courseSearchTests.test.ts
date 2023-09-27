@@ -5,6 +5,7 @@ import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import {
+  TERM_CONTAINER_SELECTOR,
   FLOW_LIST_ITEM_SELECTOR,
   getTermContainerCourseLocator,
   CATALOG_SEARCH_COURSES_SELECTOR
@@ -300,7 +301,9 @@ test.describe('course search tests', () => {
     );
   });
 
-  test('adding course to flowchart from search works properly', async ({ page }) => {
+  test('adding course to flowchart from search works properly (already populated term)', async ({
+    page
+  }) => {
     await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -388,5 +391,106 @@ test.describe('course search tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 2]).locator('h6')).toHaveText('MATH142');
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH153');
     await expect(getTermContainerCourseLocator(page, [0, 4]).locator('h6')).toHaveText('MATH96');
+  });
+
+  test('adding course to flowchart from search works properly (empty term)', async ({ page }) => {
+    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await expect(page).toHaveURL(/.*flows/);
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
+    expect((await page.context().cookies())[0].name).toBe('sId');
+
+    // make sure test flows exist
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText(['test flow 0', 'test flow 1']);
+
+    // select flow
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).first().click();
+    await expect(
+      page.getByRole('heading', {
+        name: 'test flow 0'
+      })
+    ).toBeInViewport();
+
+    // add empty term (see addFlowTermsTests)
+    await page
+      .getByText('Actions', {
+        exact: true
+      })
+      .click();
+    await page
+      .getByText('Add Terms', {
+        exact: true
+      })
+      .click();
+    await page
+      .getByRole('listbox', {
+        name: 'select flowchart terms to add'
+      })
+      .selectOption('Summer 2020');
+    await page
+      .getByRole('button', {
+        name: 'Add Terms to Flowchart'
+      })
+      .click();
+    await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(1);
+
+    // go over to course search tab
+    await page
+      .getByRole('link', {
+        name: 'Add Courses'
+      })
+      .click();
+
+    // expect no search results yet
+    await expect(page.locator(CATALOG_SEARCH_COURSES_SELECTOR)).toHaveCount(0);
+
+    // perform a search and expect request to go out bc its a new search
+    // wrap outgoing call in small delay so we can detect loading
+    await page.route(/\/api\/data\/searchCatalog/, async (route) => {
+      await new Promise((r) => setTimeout(r, 500));
+      await route.continue();
+    });
+    const responsePromise = page.waitForResponse(/\/api\/data\/searchCatalog/);
+    await page
+      .getByRole('searchbox', {
+        name: 'course search query input'
+      })
+      .fill('beekeeping');
+    await expect(page.locator('.flowInfoPanel .loading-spinner')).toHaveCount(1);
+    const response = await responsePromise;
+
+    // done, check response
+    const resJson: unknown = await response.json();
+    expect(response.ok()).toBeTruthy();
+    expect(resJson).toHaveProperty('message');
+    expect(resJson).toHaveProperty('results');
+
+    // expect UI to be updated correctly
+    await assertCorrectUIAfterCatalogSearch(page, ['PLSC175 Beekeeping 3 units'], false, true);
+
+    // now drag this course into a term container
+    await dragAndDrop(
+      page,
+      page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
+      page.locator(TERM_CONTAINER_SELECTOR).nth(0)
+    );
+
+    // verify the course was put there correctly
+    await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('PLSC175');
+
+    // verify that course is still in the search results
+    await assertCorrectUIAfterCatalogSearch(page, ['PLSC175 Beekeeping 3 units'], false, true);
+
+    // now refresh and expect it to persist
+    await page.reload();
+
+    // select flow
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).first().click();
+    await expect(
+      page.getByRole('heading', {
+        name: 'test flow 0'
+      })
+    ).toBeInViewport();
+
+    await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('PLSC175');
   });
 });
