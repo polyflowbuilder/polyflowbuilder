@@ -222,6 +222,58 @@ describe('computeTermUnits tests', () => {
     ).toBe('13-15');
   });
 
+  test('computeTermUnits with term that has mix of standard, standard+customUnits, and custom courses, one program and catalog', () => {
+    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
+      (crsData) => crsData.catalog === '2021-2022'
+    );
+    const termData: Course[] = [
+      // standard courses
+      {
+        color: '#FEFD9A',
+        id: 'AGC301'
+      },
+      {
+        color: '#FEFD9A',
+        id: 'AGB301'
+      },
+      {
+        color: '#FEFD9A',
+        id: 'JOUR312'
+      },
+      // custom courses
+      {
+        color: '#DCFDD2',
+        customDesc:
+          'One course from each of the following GE areas must be completed: A1, A2, A3, C1, C2, Lower-Division C, Upper-Division C, D1, E, F, and GE Elective. Upper-Division C should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP), and Graduation Writing Requirement (GWR) requirements.',
+        customUnits: '4-6',
+        id: null,
+        customId: 'GE'
+      },
+      {
+        color: '#DA9593',
+        customDesc:
+          'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites. Any GWR class or GWR exam can go here.',
+        id: null,
+        customId: 'Graduation Writing Requirement'
+      },
+      // standard+customUnits courses
+      {
+        color: '#FFFFFF',
+        id: 'DATA401',
+        customUnits: '5-8'
+      }
+    ];
+
+    expect(
+      computeTermUnits(
+        termData,
+        ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
+        courseCache,
+        apiDataConfig.apiData.programData
+      )
+    ).toBe('21-26');
+  });
+
   test('computeTermUnits unable to find course catalog', () => {
     const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
       (crsData) => crsData.catalog === '2015-2017'
