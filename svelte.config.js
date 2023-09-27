@@ -18,7 +18,7 @@ const config = {
     csp: {
       mode: 'auto',
       directives: {
-        'script-src': ['self']
+        'script-src': ['self', 'https://analytics.polyflowbuilder.io']
       }
     }
   }
