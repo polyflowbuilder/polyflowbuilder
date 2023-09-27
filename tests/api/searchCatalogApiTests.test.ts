@@ -1,8 +1,49 @@
 import { expect, test } from '@playwright/test';
 import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import type { APICourseFull } from '$lib/types';
 
 const SEARCH_CATALOG_API_TESTS_EMAIL = 'pfb_test_searchCatalogAPI_playwright@test.com';
+
+// TODO: tests nondeterministic ordering for searchResults - should this be deterministic?
+function validateSearchResults(
+  expected: {
+    message: string;
+    results: {
+      searchResults: APICourseFull[];
+      searchLimitExceeded: boolean;
+      searchValid: boolean;
+    };
+  },
+  actualRawJSON: Record<string, unknown>
+) {
+  // expected
+  const { searchResults: expectedSearchResults, ...expectedResults } = expected.results;
+  const expectedResponseBodyWithoutSearchResults = {
+    ...expected,
+    results: expectedResults
+  };
+
+  // actual
+  const { searchResults: actualSearchResults, ...actualResults } = actualRawJSON.results as {
+    searchResults: unknown[];
+  };
+  const actualResponseBodyWithoutSearchResults = {
+    ...actualRawJSON,
+    results: actualResults
+  };
+
+  // everything but search results
+  expect(actualResponseBodyWithoutSearchResults).toStrictEqual(
+    expectedResponseBodyWithoutSearchResults
+  );
+
+  // search results
+  for (const result of expectedSearchResults) {
+    expect(actualSearchResults).toContainEqual(result);
+  }
+  expect(actualSearchResults).toHaveLength(expectedSearchResults.length);
+}
 
 test.describe('searchCatalog API tests', () => {
   test.beforeAll(async () => {
@@ -161,7 +202,7 @@ test.describe('searchCatalog API tests', () => {
     };
 
     expect(res.status()).toBe(200);
-    expect(await res.json()).toStrictEqual(expectedResponseBody);
+    validateSearchResults(expectedResponseBody, (await res.json()) as Record<string, unknown>);
   });
 
   test('valid catalog search request succeeds (search limit exceeded)', async ({ request }) => {
@@ -570,7 +611,7 @@ test.describe('searchCatalog API tests', () => {
     };
 
     expect(res.status()).toBe(200);
-    expect(await res.json()).toStrictEqual(expectedResponseBody);
+    validateSearchResults(expectedResponseBody, (await res.json()) as Record<string, unknown>);
   });
 
   test('valid catalog search request succeeds (random term, no results)', async ({ request }) => {
@@ -594,7 +635,7 @@ test.describe('searchCatalog API tests', () => {
     };
 
     expect(res.status()).toBe(200);
-    expect(await res.json()).toStrictEqual(expectedResponseBody);
+    validateSearchResults(expectedResponseBody, (await res.json()) as Record<string, unknown>);
   });
 
   test('valid catalog search request succeeds (using id field)', async ({ request }) => {
@@ -780,6 +821,6 @@ test.describe('searchCatalog API tests', () => {
     };
 
     expect(res.status()).toBe(200);
-    expect(await res.json()).toStrictEqual(expectedResponseBody);
+    validateSearchResults(expectedResponseBody, (await res.json()) as Record<string, unknown>);
   });
 });
