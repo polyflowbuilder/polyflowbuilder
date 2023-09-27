@@ -345,7 +345,7 @@ describe('computeTotalUnits tests', () => {
       (crsData) => crsData.catalog === '2021-2022'
     );
     expect(computeTotalUnits(flowTermData, courseCache, apiDataConfig.apiData.programData)).toBe(
-      '183-185'
+      '196-198'
     );
   });
 
@@ -368,6 +368,6 @@ describe('computeTotalUnits tests', () => {
       computeTotalUnits(flowTermData, courseCache, apiDataConfig.apiData.programData, true, [
         'fd2f33be-3103-4b3d-a17b-94ced0d7998f'
       ])
-    ).toBe('179-181');
+    ).toBe('192-194');
   });
 });

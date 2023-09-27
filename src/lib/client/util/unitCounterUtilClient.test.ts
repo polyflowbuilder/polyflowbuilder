@@ -31,7 +31,7 @@ describe('computeGroupUnits tests', () => {
       conc2: '0',
       ge: '44',
       elective: '3-4',
-      other: '0',
+      other: '13',
       total: '500'
     };
 
