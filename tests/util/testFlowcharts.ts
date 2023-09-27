@@ -68,7 +68,7 @@ export const TEST_FLOWCHART_SINGLE_PROGRAM_1: Flowchart = {
     },
     {
       tIndex: 3,
-      tUnits: '16',
+      tUnits: '24',
       courses: [
         {
           color: '#FEFD9A',
@@ -89,6 +89,11 @@ export const TEST_FLOWCHART_SINGLE_PROGRAM_1: Flowchart = {
         {
           color: '#DCFDD2',
           id: 'COMS126'
+        },
+        {
+          id: 'CPE101',
+          color: '#FFFFFF',
+          customUnits: '8'
         }
       ]
     },
@@ -218,7 +223,7 @@ export const TEST_FLOWCHART_SINGLE_PROGRAM_1: Flowchart = {
     },
     {
       tIndex: 10,
-      tUnits: '16',
+      tUnits: '21',
       courses: [
         {
           color: '#FEFD9A',
@@ -231,6 +236,11 @@ export const TEST_FLOWCHART_SINGLE_PROGRAM_1: Flowchart = {
         {
           color: '#FEFD9A',
           id: 'JOUR312'
+        },
+        {
+          color: '#FFFFFF',
+          id: 'CPE100',
+          customUnits: '5'
         },
         {
           color: '#DCFDD2',

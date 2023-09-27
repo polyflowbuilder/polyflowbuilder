@@ -50,7 +50,9 @@ export function computeGroupUnits(
         .find((cache) => cache.catalog === courseCatalog)
         ?.courses.find((c) => c.id === course.id);
 
-      const units = course.customId ? course.customUnits : courseMetadata?.units;
+      // customUnits takes precedence even if we have a standard course
+      // (for standard+customUnit cases)
+      const units = course.customUnits ?? courseMetadata?.units;
 
       if (units) {
         if (COLORS.major.includes(course.color)) {
