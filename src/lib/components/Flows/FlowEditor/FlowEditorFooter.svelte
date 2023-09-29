@@ -29,8 +29,9 @@
   }
 
   function updateUnitCounterResponsiveState() {
-    const totalUnitDistance = footerEntryWidth - footerTotalEntryWidth;
-    const distance = totalUnitDistance - footerGroupEntryWidth;
+    // avoid floating point issues by using whole numbers
+    const totalUnitDistance = Math.floor(footerEntryWidth - footerTotalEntryWidth);
+    const distance = Math.floor(totalUnitDistance - footerGroupEntryWidth);
 
     // going in
     if (distance <= 0) {
