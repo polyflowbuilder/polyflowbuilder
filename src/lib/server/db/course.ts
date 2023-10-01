@@ -89,7 +89,9 @@ export async function searchCatalog(
       field
     )}) AGAINST (${query} IN BOOLEAN MODE) ORDER BY MATCH (${Prisma.raw(
       field
-    )}) AGAINST (${query} IN BOOLEAN MODE) DESC LIMIT ${MAX_SEARCH_RESULTS_RETURN_COUNT + 1};`
+    )}) AGAINST (${query} IN BOOLEAN MODE) DESC, id ASC LIMIT ${
+      MAX_SEARCH_RESULTS_RETURN_COUNT + 1
+    };`
   );
 
   return {
