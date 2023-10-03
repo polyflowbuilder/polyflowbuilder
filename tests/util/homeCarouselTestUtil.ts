@@ -14,8 +14,8 @@ export async function checkCarouselSlide(page: Page, slideIndex: number) {
   expect(await slideImage.getAttribute('alt')).toBe(homeCarouselImageData[slideIndex].title);
 
   // check text descriptions
-  expect(await slideImageContainer.innerText()).toBe(
-    `${homeCarouselImageData[slideIndex].title}\n\n${homeCarouselImageData[slideIndex].desc}`
+  expect(await slideImageContainer.textContent()).toBe(
+    ` ${homeCarouselImageData[slideIndex].title} ${homeCarouselImageData[slideIndex].desc} `
   );
 
   // ensure visible
