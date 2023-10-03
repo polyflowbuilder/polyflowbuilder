@@ -4,8 +4,8 @@
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import {
-    FlowInfoPanelActionsColorSelector,
-    FlowInfoPanelActionsGeneratePDF
+    FlowInfoPanelActionsGeneratePDF,
+    FlowInfoPanelActionsColorSelector
   } from '$lib/components/Flows/FlowInfoPanel';
   import {
     duplicateFlowchart,
@@ -13,10 +13,10 @@
     deleteSelectedCourses
   } from '$lib/client/util/flowActionsUtil';
   import {
+    selectedColor,
     selectedCourses,
     viewingCreditBin,
-    selectedFlowIndex,
-    selectedColor
+    selectedFlowIndex
   } from '$lib/client/stores/UIDataStore';
   import {
     addTermsModalOpen,
@@ -29,16 +29,20 @@
 </script>
 
 <div class="dropdown">
-  <button
+  <!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
+  <!-- svelte-ignore a11y-label-has-associated-control -->
+  <label
     tabindex="0"
+    role="button"
     class="flex-1 gap-0 btn btn-almostmd border-none text-white bg-gray-400 hover:bg-gray-500"
-    disabled={actionsButtonDisabled}
+    class:btn-disabled={actionsButtonDisabled}
+    aria-disabled={actionsButtonDisabled}
   >
     Actions
     <span class="ml-1 mb-1">
       <Fa icon={faSortDown} />
     </span>
-  </button>
+  </label>
 
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <ul
