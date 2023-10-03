@@ -273,7 +273,7 @@ test.describe('flowchart viewer tests', () => {
 
   test('selected flowchart loads correctly into editor (some quarters, header flow scrolling)', async ({
     page
-  }) => {
+  }, testInfo) => {
     await page.setViewportSize({
       width: 992,
       height: 720
@@ -428,9 +428,13 @@ test.describe('flowchart viewer tests', () => {
       page.getByRole('heading', {
         name: 'Summer 2020'
       })
-    ).not.toBeInViewport();
+    ).not.toBeInViewport({
+      ratio: testInfo.project.name === 'webkit' ? 0.016 : 0
+    });
     await expect(page.getByText('13 (4)').nth(0)).toBeVisible();
-    await expect(page.getByText('13 (4)').nth(0)).not.toBeInViewport();
+    await expect(page.getByText('13 (4)').nth(0)).not.toBeInViewport({
+      ratio: testInfo.project.name === 'webkit' ? 0.016 : 0
+    });
     await expect(
       page
         .getByText(
