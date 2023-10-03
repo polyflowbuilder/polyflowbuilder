@@ -137,7 +137,7 @@ test.describe('flow list tests', () => {
     await expect(page.getByText('test flow 9')).not.toBeInViewport();
   });
 
-  test('reordering flows in flow list correct', async ({ page }) => {
+  test('reordering flows in flow list correct', async ({ page }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -156,6 +156,7 @@ test.describe('flow list tests', () => {
     // now drag and drop to reorder
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)
     );
@@ -179,6 +180,7 @@ test.describe('flow list tests', () => {
     // then reorder further and test persistence again
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
     );
@@ -199,7 +201,9 @@ test.describe('flow list tests', () => {
     ]);
   });
 
-  test('dragging but not reordering flows works as expected (poly-533)', async ({ page }) => {
+  test('dragging but not reordering flows works as expected (poly-533)', async ({
+    page
+  }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -220,7 +224,7 @@ test.describe('flow list tests', () => {
     if (!locator) {
       throw new Error('locator null');
     }
-    await dragAndDrop(page, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
+    await dragAndDrop(page, testInfo, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
@@ -232,6 +236,7 @@ test.describe('flow list tests', () => {
     // now drag and drop and reorder
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
     );
@@ -244,7 +249,7 @@ test.describe('flow list tests', () => {
     ]);
   });
 
-  test('flow selection works', async ({ page }) => {
+  test('flow selection works', async ({ page }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -294,6 +299,7 @@ test.describe('flow list tests', () => {
     // now drag something around and expect selection to reset
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2),
       false

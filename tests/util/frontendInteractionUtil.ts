@@ -1,10 +1,11 @@
-import type { Locator, Page } from '@playwright/test';
+import type { Locator, Page, TestInfo } from '@playwright/test';
 
 // manual drag-and-drop for svelte-dnd-action elements
 // need to emulate manual dragging (maybe svelte-dnd-action quirks)
 // locatorDragTarget is either a locator or [xOffset, yOffset] from locatorToDrag
 export async function dragAndDrop(
   page: Page,
+  testInfo: TestInfo,
   locatorToDrag: Locator,
   locatorDragTarget: Locator | [number, number],
   doEndClick = true
@@ -45,7 +46,7 @@ export async function dragAndDrop(
   await page.mouse.down();
 
   // if tests are not performing as expected, bump up drag resolution via step count
-  await page.mouse.move(destX, destY, { steps: 50 });
+  await page.mouse.move(destX, destY, { steps: testInfo.project.name === 'webkit' ? 2000 : 50 });
   await page.mouse.up();
 
   // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)

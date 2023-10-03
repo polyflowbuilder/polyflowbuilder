@@ -373,7 +373,7 @@ test.describe('add flowchart terms tests', () => {
     );
   });
 
-  test('user able to add one new flowchart term', async ({ page }) => {
+  test('user able to add one new flowchart term', async ({ page }, testInfo) => {
     await performAddTermsTest(
       page,
       0,
@@ -408,6 +408,7 @@ test.describe('add flowchart terms tests', () => {
     // make sure we can move courses into the new term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 0]),
       page.locator(TERM_CONTAINER_SELECTOR).nth(6)
     );

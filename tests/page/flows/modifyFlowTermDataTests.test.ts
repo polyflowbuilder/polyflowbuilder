@@ -61,7 +61,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await deleteUser(MODIFY_FLOW_TERM_DATA_TESTS_EMAIL);
   });
 
-  test('move courses around in single term', async ({ page }) => {
+  test('move courses around in single term', async ({ page }, testInfo) => {
     await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -87,6 +87,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // then move course in the first term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [0, 1])
     );
@@ -102,10 +103,11 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move more courses around
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 2]),
       getTermContainerCourseLocator(page, [0, 3])
     );
-    await dragAndDrop(page, getTermContainerCourseLocator(page, [0, 0]), [0, 350]);
+    await dragAndDrop(page, testInfo, getTermContainerCourseLocator(page, [0, 0]), [0, 350]);
 
     // check
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText(
@@ -135,7 +137,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH142');
   });
 
-  test('move courses around in multiple terms', async ({ page }) => {
+  test('move courses around in multiple terms', async ({ page }, testInfo) => {
     await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -153,16 +155,19 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move things around
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [4, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 1]),
       getTermContainerCourseLocator(page, [2, 2])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [4, 1]),
       getTermContainerCourseLocator(page, [0, 0])
     );
@@ -170,6 +175,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await getTermContainerCourseLocator(page, [5, 4]).scrollIntoViewIfNeeded();
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 4]),
       getTermContainerCourseLocator(page, [3, 0])
     );
@@ -400,7 +406,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     );
   });
 
-  test('move course to empty term', async ({ page }) => {
+  test('move course to empty term', async ({ page }, testInfo) => {
     await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -426,21 +432,25 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move courses out of the first term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0]),
       false
@@ -454,6 +464,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move course into empty term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [1, 0]),
       page.locator(TERM_CONTAINER_SELECTOR).nth(0)
     );

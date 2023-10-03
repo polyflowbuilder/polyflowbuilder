@@ -303,7 +303,7 @@ test.describe('course search tests', () => {
 
   test('adding course to flowchart from search works properly (already populated term)', async ({
     page
-  }) => {
+  }, testInfo) => {
     await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -357,6 +357,7 @@ test.describe('course search tests', () => {
     // now drag this course into a term container
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
       getTermContainerCourseLocator(page, [0, 1])
     );
@@ -393,7 +394,9 @@ test.describe('course search tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 4]).locator('h6')).toHaveText('MATH96');
   });
 
-  test('adding course to flowchart from search works properly (empty term)', async ({ page }) => {
+  test('adding course to flowchart from search works properly (empty term)', async ({
+    page
+  }, testInfo) => {
     await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -470,6 +473,7 @@ test.describe('course search tests', () => {
     // now drag this course into a term container
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
       page.locator(TERM_CONTAINER_SELECTOR).nth(0)
     );
