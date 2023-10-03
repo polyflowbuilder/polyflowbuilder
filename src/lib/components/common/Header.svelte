@@ -101,11 +101,10 @@
       <div class="dropdown dropdown-end">
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label
-          tabindex="0"
-          class="avatar w-8 xxs:w-10 mr-4 mt-2 xxs:ml-2 rounded-full ring ring-gray-300 hover:ring-gray-400 ring-offset-1 transition hover:cursor-pointer"
-        >
-          <div class="rounded-full">
+        <label tabindex="0" class="avatar">
+          <div
+            class="w-8 xxs:w-10 mr-4 mt-2 xxs:ml-2 rounded-full ring ring-gray-300 hover:ring-gray-400 ring-offset-1 transition hover:cursor-pointer"
+          >
             <img
               src={`https://ui-avatars.com/api/?name=${$page.data.session.username}`}
               alt="user"
