@@ -53,6 +53,9 @@ jobs:
         project: [chromium, chrome, edge, firefox, webkit]
     env:
       DATABASE_URL: mysql://root:root@localhost:3306/main
+      PUBLIC_PFB_DISCORD_LINK: https://discord.gg/xCadnCRC9f
+      PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
+      PUBLIC_PFB_ANALYTICS_ID:
 
     steps:
       - run: sudo systemctl start mysql.service
