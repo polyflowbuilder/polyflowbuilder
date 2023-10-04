@@ -31,7 +31,7 @@ jobs:
     steps:
       - run: sudo systemctl start mysql.service
       - run: |
-          mysql -e 'CREATE DATABASE main;' -u root -p root
+          mysql -e 'CREATE DATABASE main;' --user=root --password=root
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
