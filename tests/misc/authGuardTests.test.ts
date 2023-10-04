@@ -1,9 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 import type { Page } from '@playwright/test';
-
-const AUTH_GUARD_TESTS_EMAIL = 'pfb_test_authGuards_playwright@test.com';
 
 async function canAccessAboutPage(page: Page) {
   await page.goto('/about');
@@ -23,10 +21,14 @@ async function verifyFlowsPage(page: Page) {
 }
 
 test.describe('auth guard tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_authGuards_playwright@test.com', testInfo);
     await createUser({
-      email: AUTH_GUARD_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -34,7 +36,7 @@ test.describe('auth guard tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(AUTH_GUARD_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   // unauthenticated access
@@ -89,7 +91,7 @@ test.describe('auth guard tests', () => {
   });
 
   test('check guards under authenticated status', async ({ page }) => {
-    await performLoginFrontend(page, AUTH_GUARD_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     // should be able to access these regardless of auth status
     await canAccessAboutPage(page);
