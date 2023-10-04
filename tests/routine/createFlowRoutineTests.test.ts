@@ -2,22 +2,23 @@ import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 
 // TODO: is this a "routine", or an "Action"? figure out what routine is and
 // reorganize the tests
 
-const CREATE_FLOW_ROUTINE_TESTS_EMAIL = 'pfb_test_createFlowRoutine_playwright@test.com';
-
 test.describe('create flow routine tests', () => {
   const prisma = new PrismaClient();
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_createFlowRoutine_playwright@test.com', testInfo);
     const id = await createUser({
-      email: CREATE_FLOW_ROUTINE_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -36,11 +37,11 @@ test.describe('create flow routine tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(CREATE_FLOW_ROUTINE_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('user able to create new flowchart', async ({ page }) => {
-    await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -184,7 +185,7 @@ test.describe('create flow routine tests', () => {
       });
     });
 
-    await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -256,7 +257,7 @@ test.describe('create flow routine tests', () => {
       });
     });
 
-    await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -328,7 +329,7 @@ test.describe('create flow routine tests', () => {
       });
     });
 
-    await performLoginFrontend(page, CREATE_FLOW_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
