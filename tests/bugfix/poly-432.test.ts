@@ -1,19 +1,24 @@
 import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 
 // bug description: going from /register to /login pages by
 // clicking links (e.g. the "Sign In" link on the /register page)
 // displays the "Account created! Please login" message unexpectedly
 
-const POLY_432_TESTS_EMAIL = 'pfb_test_poly-432_playwright@test.com';
-
 test.describe('poly-432 bugfix tests', () => {
+  test.describe.configure({ mode: 'serial' });
+  let userEmail: string;
+
   test.afterAll(async () => {
     // delete account
-    await deleteUser(POLY_432_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
-  test('do not see account created message on regular navigation', async ({ page }) => {
+  test('do not see account created message on regular navigation', async ({ page }, testInfo) => {
+    // populate userEmail in first test where we have access to testInfo
+    userEmail = getUserEmailString('pfb_test_poly-432_playwright@test.com', testInfo);
+
     await page.goto('/');
 
     await page.goto('/login');
@@ -41,7 +46,7 @@ test.describe('poly-432 bugfix tests', () => {
     });
 
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill(POLY_432_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();
