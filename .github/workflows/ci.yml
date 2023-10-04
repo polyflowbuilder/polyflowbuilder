@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# cancel in-progress runs on new commits to same PR (gitub.event.number)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run lint
+
+  # TODO: unit tests should not need a database!
+  UnitTest:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: mysql://root:root@localhost:3306/main?connection_limit=10
+
+    steps:
+      - run: sudo systemctl start mysql.service
+      - run: |
+          mysql -e 'CREATE DATABASE main;' --user=root --password=root
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci && npm i -g tsx
+      - run: npx prisma db push
+      - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
+      - run: npm run test:unit:coverage
+
+  BrowserTest:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+        project: [chromium, chrome, msedge, firefox, webkit]
+    env:
+      DATABASE_URL: mysql://root:root@localhost:3306/main?connection_limit=10
+      PUBLIC_PFB_DISCORD_LINK: https://discord.gg/xCadnCRC9f
+      PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
+      PUBLIC_PFB_ANALYTICS_ID:
+      DOMAIN: localhost:4173
+      CF_EMAIL_API_ENDPOINT: ${{ secrets.CF_EMAIL_API_ENDPOINT }}
+      CF_EMAIL_API_PRIV_KEY: ${{ secrets.CF_EMAIL_API_PRIV_KEY }}
+      EMAIL_ADMIN: ${{ secrets.EMAIL_ADMIN }}
+      EMAIL_SENDER_EMAIL: ${{ secrets.EMAIL_SENDER_EMAIL }}
+      EMAIL_SENDER_NAME: ${{ secrets.EMAIL_SENDER_NAME }}
+
+    steps:
+      # setup mysql on different platforms
+      - run: sudo systemctl start mysql.service
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+
+      - run: brew install mysql && mysql.server start && mysql -e "ALTER USER root@localhost IDENTIFIED BY 'root';" --user=root
+        if: ${{ matrix.os == 'macOS-latest' }}
+
+      - run: |
+          mysql -e 'CREATE DATABASE main;' --user=root --password=root
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci && npm i -g tsx
+      - run: npx playwright install --with-deps ${{ matrix.project }}
+      - run: npx prisma db push
+      - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
+      - run: npx playwright test --project=${{ matrix.project }} --reporter=html --trace="retain-on-failure"
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report-${{ matrix.os }}-${{ matrix.project }}
+          path: playwright-report/
+          retention-days: 30

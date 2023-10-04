@@ -41,6 +41,12 @@ test.describe('create flow routine tests', () => {
   });
 
   test('user able to create new flowchart', async ({ page }) => {
+    // add delay to query requests to ensure Playwright can capture loading spinner
+    await page.route(/\/api\/data\/generateFlowchart/, async (route) => {
+      await new Promise((r) => setTimeout(r, 250));
+      void route.continue();
+    });
+
     await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
