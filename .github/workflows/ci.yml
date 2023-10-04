@@ -71,7 +71,7 @@ jobs:
       - run: npx playwright install --with-deps ${{ matrix.project }}
       - run: npx prisma db push
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
-      - run: npx playwright test --project=${{ matrix.project }} --reporter=html
+      - run: npx playwright test --project=${{ matrix.project }} --reporter=html --trace="retain-on-failure"
       - uses: actions/upload-artifact@v3
         if: always()
         with:
