@@ -1,19 +1,21 @@
 import { expect, test } from '@playwright/test';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
-import { performLoginFrontend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 
 // bug description: modals fail to open when navigating to the
 // flow editor for the second time (e.g. first time works, then navigate away,
 // then on second load it doesn't work)
 
-const GH_ISSUE_38_TESTS_EMAIL = 'pfb_test_gh-issue-38_playwright@test.com';
-
 test.describe('gh-issue-38 bugfix tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_gh-issue-38_playwright@test.com', testInfo);
     await createUser({
-      email: GH_ISSUE_38_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -21,11 +23,11 @@ test.describe('gh-issue-38 bugfix tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, GH_ISSUE_38_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(GH_ISSUE_38_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('able to open modals on first load', async ({ page }) => {

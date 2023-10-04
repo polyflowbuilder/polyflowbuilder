@@ -1,13 +1,9 @@
-import { createToken } from 'tests/util/tokenTestUtil.js';
+import { createToken } from 'tests/util/tokenTestUtil';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { clearTokensByEmail } from '$lib/server/db/token';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const RESET_PASSWORD_PAGE_TESTS_EMAIL = 'pfb_test_resetPasswordPage_playwright@test.com';
-const RESET_PASSWORD_VALID_URL = `/resetpassword?token=${encodeURIComponent(
-  'testtoken'
-)}&email=${RESET_PASSWORD_PAGE_TESTS_EMAIL}`;
 
 test.describe('reset password page tests (no token)', () => {
   test('navigation with no searchparams redirects', async ({ page }) => {
@@ -22,7 +18,7 @@ test.describe('reset password page tests (no token)', () => {
   });
 
   test('navigation with invalid token searchparam redirects', async ({ page }) => {
-    await page.goto(RESET_PASSWORD_VALID_URL);
+    await page.goto(`/resetpassword?token=${encodeURIComponent('testtoken')}&email=test@test.com`);
 
     await expect(page).toHaveURL(/.*forgotpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Request Password Reset');
@@ -46,28 +42,31 @@ test.describe('reset password page tests (no token)', () => {
 
 test.describe('reset password page tests (token)', () => {
   const prisma = new PrismaClient();
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_resetPasswordPage_playwright@test.com', testInfo);
     await createUser({
-      email: RESET_PASSWORD_PAGE_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
 
     // set up token in DB
-    await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await createToken(prisma, userEmail, 'PASSWORD_RESET');
   });
 
   test.beforeEach(async ({ page }) => {
-    await page.goto(RESET_PASSWORD_VALID_URL, {
+    await page.goto(`/resetpassword?token=${encodeURIComponent('testtoken')}&email=${userEmail}`, {
       waitUntil: 'networkidle'
     });
   });
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(RESET_PASSWORD_PAGE_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('authorized reset password page has expected content', async ({ page }) => {
@@ -109,7 +108,7 @@ test.describe('reset password page tests (token)', () => {
 
   test('token gets deleted before reset can happen', async ({ page }) => {
     // delete token from DB side
-    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
+    await clearTokensByEmail(userEmail, 'PASSWORD_RESET', prisma);
 
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
@@ -122,13 +121,13 @@ test.describe('reset password page tests (token)', () => {
     );
 
     // recreate the token
-    await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await createToken(prisma, userEmail, 'PASSWORD_RESET');
   });
 
   test('token expires before reset can happen', async ({ page }) => {
     // create token that instantly expired
-    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
-    await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', true);
+    await clearTokensByEmail(userEmail, 'PASSWORD_RESET', prisma);
+    await createToken(prisma, userEmail, 'PASSWORD_RESET', true);
 
     // wait 1 second bc time precision is 1 second, so need to wait 1 second
     // for instant expiry to take effect
@@ -145,19 +144,22 @@ test.describe('reset password page tests (token)', () => {
     );
 
     // reset token
-    await clearTokensByEmail(RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET', prisma);
-    await createToken(prisma, RESET_PASSWORD_PAGE_TESTS_EMAIL, 'PASSWORD_RESET');
+    await clearTokensByEmail(userEmail, 'PASSWORD_RESET', prisma);
+    await createToken(prisma, userEmail, 'PASSWORD_RESET');
   });
 
   test('500 failure case', async ({ page }) => {
     // mock 500 invalid response
-    await page.route(RESET_PASSWORD_VALID_URL, async (route) => {
-      await route.fulfill({
-        status: 200,
-        contentType: 'application/json',
-        body: String.raw`{"type":"failure","status":500,"data":"[{\"error\":1},true]"}`
-      });
-    });
+    await page.route(
+      `/resetpassword?token=${encodeURIComponent('testtoken')}&email=${userEmail}`,
+      async (route) => {
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: String.raw`{"type":"failure","status":500,"data":"[{\"error\":1},true]"}`
+        });
+      }
+    );
 
     // fill and submit
     await page.getByPlaceholder('Password', { exact: true }).fill('test');

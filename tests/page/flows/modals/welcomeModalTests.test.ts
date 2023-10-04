@@ -1,25 +1,30 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const FLOWS_PAGE_MODAL_WELCOME_TESTS_EMAIL = 'pfb_test_flowsPage_modal_welcome_playwright@test.com';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 
 test.describe('welcome modal tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_modal_welcome_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: FLOWS_PAGE_MODAL_WELCOME_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
   });
 
   test.beforeEach(async ({ page }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_MODAL_WELCOME_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_MODAL_WELCOME_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('modal appears on first login and then does not reappear', async ({ page }) => {

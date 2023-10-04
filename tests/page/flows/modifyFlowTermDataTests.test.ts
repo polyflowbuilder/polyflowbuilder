@@ -1,30 +1,34 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
   getTermContainerCourseLocator,
   TERM_CONTAINER_COURSES_SELECTOR
-} from 'tests/util/selectorTestUtil.js';
+} from 'tests/util/selectorTestUtil';
 
 // TODO: include tests that customize courses
 // TODO: include tests that add new courses to terms
 // TODO: include credit bin tests once we add visibility toggle
 
-const MODIFY_FLOW_TERM_DATA_TESTS_EMAIL = 'pfb_test_flowsPage_modifyTermData_playwright@test.com';
-
 test.describe('FLOW_TERM_MOD update tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_modifyTermData_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: MODIFY_FLOW_TERM_DATA_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -58,11 +62,11 @@ test.describe('FLOW_TERM_MOD update tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(MODIFY_FLOW_TERM_DATA_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
-  test('move courses around in single term', async ({ page }) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+  test('move courses around in single term', async ({ page }, testInfo) => {
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -87,6 +91,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // then move course in the first term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [0, 1])
     );
@@ -102,10 +107,11 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move more courses around
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 2]),
       getTermContainerCourseLocator(page, [0, 3])
     );
-    await dragAndDrop(page, getTermContainerCourseLocator(page, [0, 0]), [0, 350]);
+    await dragAndDrop(page, testInfo, getTermContainerCourseLocator(page, [0, 0]), [0, 350]);
 
     // check
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText(
@@ -135,8 +141,8 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH142');
   });
 
-  test('move courses around in multiple terms', async ({ page }) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+  test('move courses around in multiple terms', async ({ page }, testInfo) => {
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -153,16 +159,19 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move things around
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [4, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 1]),
       getTermContainerCourseLocator(page, [2, 2])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [4, 1]),
       getTermContainerCourseLocator(page, [0, 0])
     );
@@ -170,6 +179,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await getTermContainerCourseLocator(page, [5, 4]).scrollIntoViewIfNeeded();
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 4]),
       getTermContainerCourseLocator(page, [3, 0])
     );
@@ -400,8 +410,8 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     );
   });
 
-  test('move course to empty term', async ({ page }) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+  test('move course to empty term', async ({ page }, testInfo) => {
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -426,21 +436,25 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move courses out of the first term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0])
     );
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
       getTermContainerCourseLocator(page, [1, 0]),
       false
@@ -454,6 +468,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     // move course into empty term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [1, 0]),
       page.locator(TERM_CONTAINER_SELECTOR).nth(0)
     );

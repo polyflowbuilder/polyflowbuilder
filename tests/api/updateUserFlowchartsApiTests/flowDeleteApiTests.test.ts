@@ -1,14 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes.js';
+import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
-
-const FLOW_DELETE_TESTS_API_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_FLOW_DELETE_playwright@test.com';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // see API route for expected return type
 interface GetUserFlowchartsExpectedReturnType {
@@ -21,11 +18,17 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
   let userId: string;
   let flowId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_FLOW_DELETE_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOW_DELETE_TESTS_API_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -42,11 +45,11 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOW_DELETE_TESTS_API_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('improperly formatted delete chunk returns 400 (#1)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_DELETE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -70,7 +73,7 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
   });
 
   test('improperly formatted delete chunk returns 400 (#2)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_DELETE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -95,7 +98,7 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
   });
 
   test('improperly formatted delete chunk returns 400 (#3)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_DELETE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -122,7 +125,7 @@ test.describe('FLOW_DELETE payload tests for updateUserFlowcharts API', () => {
   });
 
   test('valid FLOW_DELETE update chunk returns 200 (deleted)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_DELETE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // perform GET and expect flowchart to exist
     const initFlowRes = await request.get('/api/user/data/getUserFlowcharts');

@@ -1,22 +1,25 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
-import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
-
-const UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_playwright@test.com';
 
 test.describe('update user flowchart api tests', () => {
   const prisma = new PrismaClient();
   let flowId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -50,7 +53,7 @@ test.describe('update user flowchart api tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('request returns 401 without authorization', async ({ request }) => {
@@ -65,7 +68,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('missing payload update chunks array returns 400', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {}
@@ -83,7 +86,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('incorrect data type for payload update chunks array returns 400', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -103,7 +106,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('empty payload update chunks array returns 400', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -123,7 +126,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('improper update chunk format in update chunks array returns 400', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -143,7 +146,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('invalid update chunk data in update chunks array returns 400', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const updateChunk: UserDataUpdateChunk = {
       type: UserDataUpdateChunkType.FLOW_LIST_CHANGE,
@@ -172,7 +175,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('proper update chunk in update chunks array returns 200', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const updateChunk: UserDataUpdateChunk = {
       type: UserDataUpdateChunkType.FLOW_LIST_CHANGE,
@@ -201,7 +204,7 @@ test.describe('update user flowchart api tests', () => {
   });
 
   test('send garbage request results in 500', async ({ request }) => {
-    await performLoginBackend(request, UPDATE_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {});
 

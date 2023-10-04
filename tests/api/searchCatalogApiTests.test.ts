@@ -1,14 +1,16 @@
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const SEARCH_CATALOG_API_TESTS_EMAIL = 'pfb_test_searchCatalogAPI_playwright@test.com';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('searchCatalog API tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_searchCatalogAPI_playwright@test.com', testInfo);
     await createUser({
-      email: SEARCH_CATALOG_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -16,7 +18,7 @@ test.describe('searchCatalog API tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(SEARCH_CATALOG_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('fetch results in 400 without authentication', async ({ request }) => {
@@ -32,7 +34,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('empty catalog search request fails', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/searchCatalog');
 
@@ -50,7 +52,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('invalid catalog for catalog search request fails', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(`/api/data/searchCatalog?catalog=invalid&query=test`);
 
@@ -67,7 +69,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('invalid query for catalog search request fails', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({
@@ -86,7 +88,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('invalid field for catalog search request fails', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({
@@ -109,7 +111,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('valid catalog search request succeeds (search limit not exceeded)', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({
@@ -166,7 +168,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('valid catalog search request succeeds (search limit exceeded)', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({
@@ -515,7 +517,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('valid catalog search request succeeds (random term, no results)', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({
@@ -539,7 +541,7 @@ test.describe('searchCatalog API tests', () => {
 
   test('valid catalog search request succeeds (using id field)', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, SEARCH_CATALOG_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/searchCatalog?${new URLSearchParams({

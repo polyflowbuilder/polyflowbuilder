@@ -1,17 +1,14 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import {
   UserDataUpdateChunkType,
   UserDataUpdateChunkTERM_MODCourseDataFrom
-} from '$lib/types/mutateUserDataTypes.js';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
-
-const FLOW_TERM_MOD_TESTS_API_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_FLOW_TERM_MOD_playwright@test.com';
+} from '$lib/types/mutateUserDataTypes';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // see API route for expected return type
 interface GetUserFlowchartsExpectedReturnType {
@@ -23,11 +20,17 @@ interface GetUserFlowchartsExpectedReturnType {
 test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_FLOW_TERM_MOD_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOW_TERM_MOD_TESTS_API_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -41,11 +44,11 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOW_TERM_MOD_TESTS_API_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('improperly formatted flow term mod chunk returns 400 (#1)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // missing data field
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -69,7 +72,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
   test('improperly formatted flow term mod chunk returns 400 (#2)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // missing id field
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -106,7 +109,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
   test('improperly formatted flow term mod chunk returns 400 (#3)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // id is not a uuid
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -145,7 +148,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
   });
 
   test('improperly formatted flow term mod chunk returns 400 (#4)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // termdata missing
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -174,7 +177,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
   test('improperly formatted flow term mod chunk returns 400 (#5)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // term data from type invalid
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -208,7 +211,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
   test('improperly formatted flow term mod chunk returns 400 (#6)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // term data from=EXISTING data invalid
     const res1 = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -311,7 +314,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res3.json()).toStrictEqual(expectedResponseBody3);
   });
   test('improperly formatted flow term mod chunk returns 400 (#7)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // term data from=NEW data invalid
     // just add a couple cases of invalid course data
@@ -381,7 +384,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
     expect(await res2.json()).toStrictEqual(expectedResponseBody2);
   });
   test('improperly formatted flow term mod chunk returns 400 (#8)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // flowchart id not found in user flow list
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -434,7 +437,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // existing indexes are invalid
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -487,7 +490,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // invalid programIdIndex
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -541,7 +544,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // do the request
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -612,7 +615,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // do the request
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -699,7 +702,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // do the request
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
@@ -781,7 +784,7 @@ test.describe('FLOW_TERM_MOD payload tests for updateUserFlowcharts API', () => 
       ])
     )[0];
 
-    await performLoginBackend(request, FLOW_TERM_MOD_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // do the request
     const res = await request.post('/api/user/data/updateUserFlowcharts', {

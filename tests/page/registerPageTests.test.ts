@@ -1,9 +1,15 @@
 import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
-
-const REGISTER_TESTS_EMAIL = 'pfb_test_registerPage_playwright@test.com';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 
 test.describe('registration page tests', () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(({}, testInfo) => {
+    userEmail = getUserEmailString('pfb_test_registerPage_playwright@test.com', testInfo);
+  });
+
   test.beforeEach(async ({ page }) => {
     await page.goto('/register', {
       waitUntil: 'networkidle'
@@ -12,7 +18,7 @@ test.describe('registration page tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(REGISTER_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('register page has expected h1', async ({ page }) => {
@@ -116,7 +122,7 @@ test.describe('registration page tests', () => {
 
   test('registration succeeds and redirects to login page', async ({ page }) => {
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();
@@ -131,7 +137,7 @@ test.describe('registration page tests', () => {
 
   test('registration with an existing email fails', async ({ page }) => {
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();
@@ -155,7 +161,7 @@ test.describe('registration page tests', () => {
     });
 
     await page.getByLabel('username').fill('test');
-    await page.getByLabel('email').fill(REGISTER_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByPlaceholder('Password', { exact: true }).fill('test');
     await page.getByPlaceholder('Repeat Password', { exact: true }).fill('test');
     await page.getByRole('button', { name: 'Create Account!' }).click();

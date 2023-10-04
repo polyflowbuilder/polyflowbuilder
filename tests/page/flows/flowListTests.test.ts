@@ -1,24 +1,25 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   FLOW_LIST_ITEM_SELECTED_SELECTOR
-} from 'tests/util/selectorTestUtil.js';
-
-const FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL = 'pfb_test_flowsPage_flow_list_playwright@test.com';
+} from 'tests/util/selectorTestUtil';
 
 test.describe('flow list tests', () => {
   let userId: string;
+  let userEmail: string;
   const prisma = new PrismaClient();
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowsPage_flow_list_playwright@test.com', testInfo);
     const id = await createUser({
-      email: FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -37,11 +38,11 @@ test.describe('flow list tests', () => {
       }
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_FLOW_LIST_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('ui for empty flows list correct', async ({ page }) => {
@@ -137,7 +138,7 @@ test.describe('flow list tests', () => {
     await expect(page.getByText('test flow 9')).not.toBeInViewport();
   });
 
-  test('reordering flows in flow list correct', async ({ page }) => {
+  test('reordering flows in flow list correct', async ({ page }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -156,6 +157,7 @@ test.describe('flow list tests', () => {
     // now drag and drop to reorder
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)
     );
@@ -179,6 +181,7 @@ test.describe('flow list tests', () => {
     // then reorder further and test persistence again
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
     );
@@ -199,7 +202,9 @@ test.describe('flow list tests', () => {
     ]);
   });
 
-  test('dragging but not reordering flows works as expected (poly-533)', async ({ page }) => {
+  test('dragging but not reordering flows works as expected (poly-533)', async ({
+    page
+  }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -220,7 +225,7 @@ test.describe('flow list tests', () => {
     if (!locator) {
       throw new Error('locator null');
     }
-    await dragAndDrop(page, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
+    await dragAndDrop(page, testInfo, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
@@ -232,6 +237,7 @@ test.describe('flow list tests', () => {
     // now drag and drop and reorder
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
     );
@@ -244,7 +250,7 @@ test.describe('flow list tests', () => {
     ]);
   });
 
-  test('flow selection works', async ({ page }) => {
+  test('flow selection works', async ({ page }, testInfo) => {
     await populateFlowcharts(prisma, userId, 4);
     await page.reload();
 
@@ -294,6 +300,7 @@ test.describe('flow list tests', () => {
     // now drag something around and expect selection to reset
     await dragAndDrop(
       page,
+      testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2),
       false

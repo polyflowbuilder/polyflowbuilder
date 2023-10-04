@@ -1,13 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
-import { performLoginFrontend } from 'tests/util/userTestUtil';
-import { createUser, deleteUser } from '$lib/server/db/user';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { createUser, deleteUser } from '$lib/server/db/user';
 import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import type { Page } from '@playwright/test';
-
-const FLOWS_PAGE_FOOTER_TESTS_EMAIL = 'pfb_test_flowsPage_footer_playwright@test.com';
 
 async function computeTotalUnitDistance(page: Page) {
   const footerElem = page.locator('#flowEditorFooter');
@@ -39,11 +37,14 @@ async function computeDistanceToShrink(page: Page) {
 
 test.describe('flow page footer tests', () => {
   const prisma = new PrismaClient();
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowsPage_footer_playwright@test.com', testInfo);
     const id = await createUser({
-      email: FLOWS_PAGE_FOOTER_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -66,11 +67,11 @@ test.describe('flow page footer tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, FLOWS_PAGE_FOOTER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_FOOTER_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('flow footer resizing works properly', async ({ page }) => {

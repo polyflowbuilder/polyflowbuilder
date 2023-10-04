@@ -1,19 +1,13 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 import type { MutateFlowchartData } from '$lib/types/mutateUserDataTypes';
-
-const FLOW_LIST_CHANGE_TESTS_API_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_playwright@test.com';
-
-const FLOW_LIST_CHANGE_TESTS_API_OTHER_USER_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_other_playwright@test.com';
 
 // see API route for expected return type
 interface GetUserFlowchartsExpectedReturnType {
@@ -26,17 +20,29 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   const prisma = new PrismaClient();
   const flowsMain: MutateFlowchartData[] = [];
   let flowIdOther: string;
+  let userEmail1: string;
+  let userEmail2: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create accounts
+    userEmail1 = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_playwright@test.com',
+      testInfo
+    );
+    userEmail2 = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_FLOW_LIST_CHANGE_other_playwright@test.com',
+      testInfo
+    );
+
     const userIdMain = await createUser({
-      email: FLOW_LIST_CHANGE_TESTS_API_EMAIL,
+      email: userEmail1,
       username: 'test',
       password: 'test'
     });
 
     const userIdOther = await createUser({
-      email: FLOW_LIST_CHANGE_TESTS_API_OTHER_USER_EMAIL,
+      email: userEmail2,
       username: 'test',
       password: 'test'
     });
@@ -60,12 +66,12 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
 
   test.afterAll(async () => {
     // delete accounts
-    await deleteUser(FLOW_LIST_CHANGE_TESTS_API_EMAIL);
-    await deleteUser(FLOW_LIST_CHANGE_TESTS_API_OTHER_USER_EMAIL);
+    await deleteUser(userEmail1);
+    await deleteUser(userEmail2);
   });
 
   test('improperly formatted update chunk returns 400 (#1)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -89,7 +95,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('improperly formatted update chunk returns 400 (#2)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -114,7 +120,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('improperly formatted update chunk returns 400 (#3)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -141,7 +147,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('improperly formatted update chunk returns 400 (#4)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -168,7 +174,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('improperly formatted update chunk returns 400 (#5)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -200,7 +206,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('update chunk that references nonexistent flowchart returns 400', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -231,7 +237,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   test('update chunk that references flowchart not owned by authenticated user returns 400', async ({
     request
   }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -260,7 +266,7 @@ test.describe('FLOW_LIST_CHANGE payload tests for updateUserFlowcharts API', () 
   });
 
   test('valid FLOW_LIST_CHANGE update chunk returns 200', async ({ request }) => {
-    await performLoginBackend(request, FLOW_LIST_CHANGE_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail1, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {

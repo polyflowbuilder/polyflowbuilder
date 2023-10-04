@@ -1,15 +1,19 @@
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL =
-  'pfb_test_queryAvailableProgramsAPI_playwright@test.com';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('queryAvailableProgramsTests tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_queryAvailableProgramsAPI_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -17,11 +21,11 @@ test.describe('queryAvailableProgramsTests tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('program query with no parameters has correct response', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailablePrograms');
 
@@ -39,7 +43,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   test('program query with invalid combination of parameters has correct response', async ({
     request
   }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // id+major
     const res1 = await request.get(
@@ -72,7 +76,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('program query with invalid id format handled correctly', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailablePrograms?id=thisisnotauuid');
 
@@ -88,7 +92,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('program query with invalid majorName format handled correctly', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailablePrograms?catalog=2015-2017&majorName=');
 
@@ -104,7 +108,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('program query with invalid catalog format handled correctly', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res1 = await request.get('/api/data/queryAvailablePrograms?majorName=test&catalog=test');
     const res2 = await request.get('/api/data/queryAvailablePrograms?majorName=test&catalog=15-17');
@@ -133,7 +137,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('successful program query with id, id exists', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       '/api/data/queryAvailablePrograms?id=0017f92d-d73f-4819-9d59-8c658cd29be5'
@@ -159,7 +163,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('successful program query with id, id does not exist', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       '/api/data/queryAvailablePrograms?id=c888a952-751b-4879-afa7-45dd17ba5804'
@@ -175,7 +179,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   });
 
   test('successful program query with catalog+majorName, returns results', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       '/api/data/queryAvailablePrograms?catalog=2015-2017&majorName=Computer Science'
@@ -210,7 +214,7 @@ test.describe('queryAvailableProgramsTests tests', () => {
   test('successful program query with catalog+majorName, does not return results', async ({
     request
   }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_PROGRAMS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       '/api/data/queryAvailablePrograms?catalog=2015-2017&majorName=nice'

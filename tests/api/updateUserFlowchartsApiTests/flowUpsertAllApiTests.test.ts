@@ -1,16 +1,13 @@
 import { v4 as uuid } from 'uuid';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes.js';
-import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
-
-const FLOW_UPSERT_ALL_TESTS_API_EMAIL =
-  'pfb_test_updateUserFlowchartsAPI_FLOW_UPSERT_ALL_playwright@test.com';
+import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // see API route for expected return type
 interface GetUserFlowchartsExpectedReturnType {
@@ -22,11 +19,17 @@ interface GetUserFlowchartsExpectedReturnType {
 test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_updateUserFlowchartsAPI_FLOW_UPSERT_ALL_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOW_UPSERT_ALL_TESTS_API_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -43,11 +46,11 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOW_UPSERT_ALL_TESTS_API_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('improperly formatted upsert chunk returns 400 (#1)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_UPSERT_ALL_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -71,7 +74,7 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
   });
 
   test('improperly formatted upsert chunk returns 400 (#2)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_UPSERT_ALL_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -96,7 +99,7 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
   });
 
   test('improperly formatted upsert chunk returns 400 (#3)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_UPSERT_ALL_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.post('/api/user/data/updateUserFlowcharts', {
       data: {
@@ -139,7 +142,7 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
   });
 
   test('valid FLOW_UPSERT_ALL update chunk returns 200 (create)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_UPSERT_ALL_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // bc other test may run first and modify data
     const initFlowsRes = await request.get('/api/user/data/getUserFlowcharts');
@@ -209,7 +212,7 @@ test.describe('FLOW_UPSERT_ALL payload tests for updateUserFlowcharts API', () =
   });
 
   test('valid FLOW_UPSERT_ALL update chunk returns 200 (update)', async ({ request }) => {
-    await performLoginBackend(request, FLOW_UPSERT_ALL_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const initFlowsRes = await request.get('/api/user/data/getUserFlowcharts');
     expect(initFlowsRes.status()).toBe(200);

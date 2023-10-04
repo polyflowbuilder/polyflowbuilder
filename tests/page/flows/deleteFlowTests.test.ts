@@ -1,17 +1,15 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   FLOW_LIST_ITEM_SELECTED_SELECTOR
-} from 'tests/util/selectorTestUtil.js';
+} from 'tests/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
-
-const FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL = 'pfb_test_flowPage_deleteFlow_playwright@test.com';
 
 async function assertCorrectFailureHandling(page: Page, dialogMessage: string) {
   let lastDialogMessage = '';
@@ -88,11 +86,14 @@ async function assertCorrectFlowDelete(
 test.describe('flow delete tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowPage_deleteFlow_playwright@test.com', testInfo);
     const id = await createUser({
-      email: FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -113,7 +114,7 @@ test.describe('flow delete tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('user able to delete flowchart', async ({ page }) => {
@@ -123,7 +124,7 @@ test.describe('flow delete tests', () => {
       });
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -155,7 +156,7 @@ test.describe('flow delete tests', () => {
       });
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -178,7 +179,7 @@ test.describe('flow delete tests', () => {
       });
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -200,7 +201,7 @@ test.describe('flow delete tests', () => {
       });
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_DELETE_FLOW_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');

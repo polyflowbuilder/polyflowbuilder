@@ -1,17 +1,12 @@
 import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import { CURRENT_FLOW_DATA_VERSION, FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
-import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil.js';
+import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
-
-const GENERATE_FLOWCHART_TESTS_API_1_EMAIL =
-  'pfb_test_generateFlowchartAPI_inputs_playwright@test.com';
-const GENERATE_FLOWCHART_TESTS_API_2_EMAIL =
-  'pfb_test_generateFlowchartAPI_outputs_playwright@test.com';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // TODO: move responsePayload1 and responsePayload2 to testFlowcharts.ts?
 
@@ -2602,10 +2597,17 @@ const responsePayload2 = {
 };
 
 test.describe('generate flowchart api input tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_generateFlowchartAPI_inputs_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: GENERATE_FLOWCHART_TESTS_API_1_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -2613,7 +2615,7 @@ test.describe('generate flowchart api input tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(GENERATE_FLOWCHART_TESTS_API_1_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('generate flowchart api returns 401 without authorization', async ({ request }) => {
@@ -2628,7 +2630,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 without any data', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/generateFlowchart');
 
@@ -2646,7 +2648,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w missing flowchart name', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       startYear: '2020',
@@ -2667,7 +2669,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w empty flowchart name', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: '',
@@ -2689,7 +2691,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w flowchart name too long', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const name = crypto
       .randomBytes(FLOW_NAME_MAX_LENGTH)
@@ -2716,7 +2718,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w invalid start year format', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2738,7 +2740,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w invalid start year', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2762,7 +2764,7 @@ test.describe('generate flowchart api input tests', () => {
   test('generate flowchart api returns 400 w invalid program id (one program)', async ({
     request
   }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2786,7 +2788,7 @@ test.describe('generate flowchart api input tests', () => {
   test('generate flowchart api returns 400 w invalid program id (multiple programs)', async ({
     request
   }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2808,7 +2810,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w empty programs id', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2830,7 +2832,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 with duplicate program ids', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2852,7 +2854,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w nonexistent program id (one)', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2874,7 +2876,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 400 w nonexistent program id (two)', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const searchParams = new URLSearchParams({
       name: 'test',
@@ -2898,7 +2900,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 200 with valid options', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_1_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // will test the responses in a different set of tests
 
@@ -2962,11 +2964,17 @@ test.describe('generate flowchart api input tests', () => {
 
 test.describe('generate flowchart api output tests', () => {
   let ownerId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_generateFlowchartAPI_outputs_playwright@test.com',
+      testInfo
+    );
     const newUserId = await createUser({
-      email: GENERATE_FLOWCHART_TESTS_API_2_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -2978,11 +2986,11 @@ test.describe('generate flowchart api output tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(GENERATE_FLOWCHART_TESTS_API_2_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('generate valid flowchart with 1 program', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_2_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/generateFlowchart?${new URLSearchParams({
@@ -3036,7 +3044,7 @@ test.describe('generate flowchart api output tests', () => {
   });
 
   test('generate valid flowchart with 1 program without coursecache', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_2_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/generateFlowchart?${new URLSearchParams({
@@ -3081,7 +3089,7 @@ test.describe('generate flowchart api output tests', () => {
   });
 
   test('generate valid flowchart with 1 program without ge courses', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_2_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/generateFlowchart?${new URLSearchParams({
@@ -3133,7 +3141,7 @@ test.describe('generate flowchart api output tests', () => {
   });
 
   test('generate valid flowchart with multiple programs', async ({ request }) => {
-    await performLoginBackend(request, GENERATE_FLOWCHART_TESTS_API_2_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
       `/api/data/generateFlowchart?${new URLSearchParams({

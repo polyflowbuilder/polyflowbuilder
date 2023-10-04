@@ -1,19 +1,20 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const FLOWS_PAGE_HEADER_TESTS_EMAIL = 'pfb_test_flowsPage_header_playwright@test.com';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 
 test.describe('flows page header tests', () => {
   test.describe.configure({ mode: 'serial' });
   const prisma = new PrismaClient();
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowsPage_header_playwright@test.com', testInfo);
     await createUser({
-      email: FLOWS_PAGE_HEADER_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -21,11 +22,11 @@ test.describe('flows page header tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, FLOWS_PAGE_HEADER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_HEADER_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('logout functionality performs redirect', async ({ page }) => {
@@ -84,7 +85,7 @@ test.describe('flows page header tests', () => {
     // check that account was deleted
     const res = await prisma.user.findFirst({
       where: {
-        email: FLOWS_PAGE_HEADER_TESTS_EMAIL
+        email: userEmail
       }
     });
     expect(res).toBeFalsy();

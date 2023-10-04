@@ -1,24 +1,27 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil.js';
-
-const FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL =
-  'pfb_test_flowPage_courseSearchOptions_playwright@test.com';
+import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 
 // put these tests here instead of w/ component bc this component uses
 // a lot of stores and setting up state is easier when doing it in an e2e env
 test.describe('CourseSearchOptionsSelector tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowPage_courseSearchOptions_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -48,13 +51,13 @@ test.describe('CourseSearchOptionsSelector tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('course search program selector is disabled when no flowchart is selected', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -104,7 +107,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   test('course search program selector only has one option w/ flowchart that has one program', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -162,7 +165,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   test('course search program selector has shows multiple options w/ flowchart that has multiple programs', async ({
     page
   }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -221,7 +224,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
   });
 
   test('switching flowcharts resets query term', async ({ page }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_OPTIONS_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');

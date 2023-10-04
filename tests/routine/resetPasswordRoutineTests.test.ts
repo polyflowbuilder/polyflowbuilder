@@ -1,16 +1,18 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const RESET_PASSWORD_ROUTINE_TESTS_EMAIL = 'pfb_test_resetPasswordRoutine_playwright@test.com';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 
 test.describe('reset password routine tests', () => {
   const prisma = new PrismaClient();
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_resetPasswordRoutine_playwright@test.com', testInfo);
     await createUser({
-      email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -18,11 +20,11 @@ test.describe('reset password routine tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('user can log in normally with original password', async ({ page }) => {
-    await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -44,7 +46,7 @@ test.describe('reset password routine tests', () => {
     await expect(page).toHaveURL(/.*forgotpassword/);
 
     // enter email and submit request
-    await page.getByLabel('email').fill(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByRole('button', { name: 'Submit Password Reset Request' }).click();
     await expect(page.locator('.alert-success')).toBeVisible();
     await expect(page.locator('.alert-success')).toHaveText(
@@ -56,7 +58,7 @@ test.describe('reset password routine tests', () => {
     // get the token from the DB
     const res = await prisma.token.findFirst({
       where: {
-        email: RESET_PASSWORD_ROUTINE_TESTS_EMAIL,
+        email: userEmail,
         type: 'PASSWORD_RESET'
       },
       select: {
@@ -68,14 +70,9 @@ test.describe('reset password routine tests', () => {
       throw new Error('res did not return a valid token');
     }
 
-    await page.goto(
-      `/resetpassword?token=${encodeURIComponent(
-        res.token
-      )}&email=${RESET_PASSWORD_ROUTINE_TESTS_EMAIL}`,
-      {
-        waitUntil: 'networkidle'
-      }
-    );
+    await page.goto(`/resetpassword?token=${encodeURIComponent(res.token)}&email=${userEmail}`, {
+      waitUntil: 'networkidle'
+    });
     await expect(page).toHaveURL(/.*resetpassword/);
     expect((await page.textContent('h2'))?.trim()).toBe('Reset Password');
     await expect(page.locator('button')).toBeVisible();
@@ -106,7 +103,7 @@ test.describe('reset password routine tests', () => {
     await expect(page.locator('button')).toBeVisible();
 
     // enter old credentials
-    await page.getByLabel('email').fill(RESET_PASSWORD_ROUTINE_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByLabel('password').fill('test');
     await page.getByRole('button', { name: 'Sign In' }).click();
 
@@ -117,7 +114,7 @@ test.describe('reset password routine tests', () => {
   });
 
   test('user able to log in with new password', async ({ page }) => {
-    await performLoginFrontend(page, RESET_PASSWORD_ROUTINE_TESTS_EMAIL, 'newpassword');
+    await performLoginFrontend(page, userEmail, 'newpassword');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');

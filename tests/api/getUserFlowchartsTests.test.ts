@@ -1,20 +1,21 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { performLoginBackend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
-import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil.js';
-
-const GET_USER_FLOWCHARTS_TESTS_API_EMAIL = 'pfb_test_getUserFlowchartsAPI_playwright@test.com';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('getUserFlowcharts API tests', () => {
   const prisma = new PrismaClient();
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_getUserFlowchartsAPI_playwright@test.com', testInfo);
     await createUser({
-      email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -22,7 +23,7 @@ test.describe('getUserFlowcharts API tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(GET_USER_FLOWCHARTS_TESTS_API_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('fetch results in 400 without authentication', async ({ request }) => {
@@ -38,7 +39,7 @@ test.describe('getUserFlowcharts API tests', () => {
 
   test('authenticated request succeeds with 200 empty flowcharts list', async ({ request }) => {
     // perform login
-    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts');
@@ -56,7 +57,7 @@ test.describe('getUserFlowcharts API tests', () => {
     request
   }) => {
     // perform login
-    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts?includeCourseCache=true');
@@ -75,7 +76,7 @@ test.describe('getUserFlowcharts API tests', () => {
     // create flowcharts
     const id = await prisma.user.findFirst({
       where: {
-        email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL
+        email: userEmail
       },
       select: {
         id: true
@@ -115,7 +116,7 @@ test.describe('getUserFlowcharts API tests', () => {
     });
 
     // perform login
-    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts');
@@ -141,7 +142,7 @@ test.describe('getUserFlowcharts API tests', () => {
     // create flowcharts
     const id = await prisma.user.findFirst({
       where: {
-        email: GET_USER_FLOWCHARTS_TESTS_API_EMAIL
+        email: userEmail
       },
       select: {
         id: true
@@ -219,7 +220,7 @@ test.describe('getUserFlowcharts API tests', () => {
     });
 
     // perform login
-    await performLoginBackend(request, GET_USER_FLOWCHARTS_TESTS_API_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     // test with empty flowcharts
     const res = await request.get('/api/user/data/getUserFlowcharts?includeCourseCache=true');

@@ -1,19 +1,16 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
   getTermContainerCourseLocator,
   TERM_CONTAINER_COURSES_SELECTOR
-} from 'tests/util/selectorTestUtil.js';
+} from 'tests/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
-
-const FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL =
-  'pfb_test_flowsPage_add_terms_modal_playwright@test.com';
 
 async function performAddTermsTest(
   page: Page,
@@ -209,11 +206,17 @@ test.describe('add flowchart terms tests', () => {
   test.describe.configure({ mode: 'serial' });
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_add_terms_modal_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -245,11 +248,11 @@ test.describe('add flowchart terms tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('add flowchart terms default state correct', async ({ page }) => {
@@ -373,7 +376,7 @@ test.describe('add flowchart terms tests', () => {
     );
   });
 
-  test('user able to add one new flowchart term', async ({ page }) => {
+  test('user able to add one new flowchart term', async ({ page }, testInfo) => {
     await performAddTermsTest(
       page,
       0,
@@ -408,6 +411,7 @@ test.describe('add flowchart terms tests', () => {
     // make sure we can move courses into the new term
     await dragAndDrop(
       page,
+      testInfo,
       getTermContainerCourseLocator(page, [5, 0]),
       page.locator(TERM_CONTAINER_SELECTOR).nth(6)
     );
