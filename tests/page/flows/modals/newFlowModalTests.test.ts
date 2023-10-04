@@ -1,11 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 import type { Page } from '@playwright/test';
-
-const FLOWS_PAGE_NEW_FLOW_MODAL_TESTS_EMAIL =
-  'pfb_test_flowsPage_new_flow_modal_playwright@test.com';
 
 async function openModalAndVerifyCorrectState(page: Page) {
   await page.getByRole('button', { name: 'New Flow' }).click();
@@ -19,10 +16,17 @@ async function closeModalAndVerifyCorrectState(page: Page) {
 }
 
 test.describe('new flow modal tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_new_flow_modal_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: FLOWS_PAGE_NEW_FLOW_MODAL_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -30,11 +34,11 @@ test.describe('new flow modal tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, FLOWS_PAGE_NEW_FLOW_MODAL_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_NEW_FLOW_MODAL_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('modal default state correct', async ({ page }) => {
