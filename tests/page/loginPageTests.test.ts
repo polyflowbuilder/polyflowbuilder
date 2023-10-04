@@ -1,14 +1,16 @@
 import { expect, test } from '@playwright/test';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const LOGIN_TESTS_EMAIL = 'pfb_test_loginPage_playwright@test.com';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 
 test.describe('login page tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_loginPage_playwright@test.com', testInfo);
     await createUser({
-      email: LOGIN_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -22,7 +24,7 @@ test.describe('login page tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(LOGIN_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('login page has expected h2', async ({ page }) => {
@@ -51,7 +53,7 @@ test.describe('login page tests', () => {
   });
 
   test('correct email but incorrect password', async ({ page }) => {
-    await page.getByLabel('email').fill(LOGIN_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByLabel('password').fill('notthecorrectpassword');
     await page.getByRole('button', { name: 'Sign In' }).click();
 
@@ -73,7 +75,7 @@ test.describe('login page tests', () => {
   });
 
   test('correct credentials, check redirect and cookie', async ({ page }) => {
-    await performLoginFrontend(page, LOGIN_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
 
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
@@ -91,7 +93,7 @@ test.describe('login page tests', () => {
       });
     });
 
-    await page.getByLabel('email').fill(LOGIN_TESTS_EMAIL);
+    await page.getByLabel('email').fill(userEmail);
     await page.getByLabel('password').fill('test');
     await page.getByRole('button', { name: 'Sign In' }).click();
 
