@@ -54,6 +54,15 @@ test.describe('new flow modal tests', () => {
   });
 
   test('modal accepts valid input', async ({ page }) => {
+    // add delay to query requests to ensure Playwright can capture loading spinner
+    await page.route(
+      /\/api\/data\/queryAvailableMajors|\/api\/data\/queryAvailablePrograms/,
+      async (route) => {
+        await new Promise((r) => setTimeout(r, 250));
+        void route.continue();
+      }
+    );
+
     // create valid inputs
     await page.getByRole('button', { name: 'New Flow' }).click();
 
