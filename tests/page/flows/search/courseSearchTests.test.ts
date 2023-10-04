@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 import {
   TERM_CONTAINER_SELECTOR,
   FLOW_LIST_ITEM_SELECTOR,
@@ -12,8 +12,6 @@ import {
 } from 'tests/util/selectorTestUtil.js';
 import type { Page } from '@playwright/test';
 import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema.js';
-
-const FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL = 'pfb_test_flowPage_courseSearch_playwright@test.com';
 
 async function assertCorrectUIAfterCatalogSearch(
   page: Page,
@@ -43,6 +41,7 @@ async function assertCorrectUIAfterCatalogSearch(
 
 async function assertCorrectCatalogSearch(
   page: Page,
+  userEmail: string,
   programIdx: number,
   field: CatalogSearchValidFields,
   query: string,
@@ -50,7 +49,7 @@ async function assertCorrectCatalogSearch(
   searchLimitExceeded = false,
   queryValid = true
 ): Promise<void> {
-  await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+  await performLoginFrontend(page, userEmail, 'test');
   await expect(page).toHaveURL(/.*flows/);
   expect((await page.textContent('h2'))?.trim()).toBe('Flows');
   expect((await page.context().cookies())[0].name).toBe('sId');
@@ -146,11 +145,14 @@ async function assertCorrectCatalogSearch(
 test.describe('course search tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowPage_courseSearch_playwright@test.com', testInfo);
     const id = await createUser({
-      email: FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -180,21 +182,21 @@ test.describe('course search tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('invalid query UI on displayName field works properly', async ({ page }) => {
-    await assertCorrectCatalogSearch(page, 0, 'displayName', '++data', [], false, false);
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'displayName', '++data', [], false, false);
   });
 
   test('catalog search on displayName field works properly (zero results)', async ({ page }) => {
-    await assertCorrectCatalogSearch(page, 0, 'displayName', 'blahblahblahblah', []);
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'displayName', 'blahblahblahblah', []);
   });
 
   test('catalog search on displayName field works properly (nonzero, nonmax results)', async ({
     page
   }) => {
-    await assertCorrectCatalogSearch(page, 0, 'displayName', '"data science"', [
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'displayName', '"data science"', [
       'DATA100 Data Science for All I 4 units',
       'DATA301 Introduction to Data Science 4 units',
       'DATA401 Data Science Process and Ethics 3 units',
@@ -209,6 +211,7 @@ test.describe('course search tests', () => {
   test('catalog search on displayName field works properly (max results)', async ({ page }) => {
     await assertCorrectCatalogSearch(
       page,
+      userEmail,
       0,
       'displayName',
       'computer',
@@ -244,15 +247,15 @@ test.describe('course search tests', () => {
   });
 
   test('invalid query UI on id field works properly', async ({ page }) => {
-    await assertCorrectCatalogSearch(page, 0, 'id', '++data', [], false, false);
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'id', '++data', [], false, false);
   });
 
   test('catalog search on id field works properly (zero results)', async ({ page }) => {
-    await assertCorrectCatalogSearch(page, 0, 'id', 'blahblahblahblah', []);
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'id', 'blahblahblahblah', []);
   });
 
   test('catalog search on id field works properly (nonzero, nonmax results)', async ({ page }) => {
-    await assertCorrectCatalogSearch(page, 0, 'id', 'data4*', [
+    await assertCorrectCatalogSearch(page, userEmail, 0, 'id', 'data4*', [
       'DATA401 Data Science Process and Ethics 3 units',
       'DATA402 Mathematical Foundations of Data Science 3 units',
       'DATA403 Data Science Projects Laboratory 1 unit',
@@ -267,6 +270,7 @@ test.describe('course search tests', () => {
   test('catalog search on id field works properly (max results)', async ({ page }) => {
     await assertCorrectCatalogSearch(
       page,
+      userEmail,
       0,
       'id',
       'cpe*',
@@ -304,7 +308,7 @@ test.describe('course search tests', () => {
   test('adding course to flowchart from search works properly (already populated term)', async ({
     page
   }, testInfo) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -397,7 +401,7 @@ test.describe('course search tests', () => {
   test('adding course to flowchart from search works properly (empty term)', async ({
     page
   }, testInfo) => {
-    await performLoginFrontend(page, FLOWS_PAGE_COURSE_SEARCH_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
