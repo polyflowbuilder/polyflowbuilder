@@ -68,7 +68,7 @@ jobs:
       - run: sudo systemctl start mysql.service
         if: ${{ matrix.os == 'ubuntu-latest' }}
 
-      - run: brew install mysql
+      - run: brew install mysql && brew services start mysql && mysql -e "UPDATE mysql.user SET Password=PASSWORD('root') WHERE User='root';" --user=root
         if: ${{ matrix.os == 'macOS-latest' }}
 
       - run: |
