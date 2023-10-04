@@ -2,10 +2,14 @@
 
 import { expect } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import type { Page } from '@playwright/test';
+import type { Page, TestInfo } from '@playwright/test';
 import type { APIRequestContext } from '@playwright/test';
 
 const prisma = new PrismaClient();
+
+export function getUserEmailString(email: string, testInfo: TestInfo) {
+  return `${testInfo.project.name}_${email}`;
+}
 
 export async function performLoginFrontend(page: Page, email: string, password: string) {
   await page.goto('/login', {
