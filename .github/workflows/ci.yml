@@ -2,9 +2,8 @@ name: CI
 
 on:
   push:
-    branches-ignore: [main]
-  pull_request:
     branches: [main]
+  pull_request:
 
 # cancel in-progress runs on new commits to same PR (gitub.event.number)
 concurrency:
