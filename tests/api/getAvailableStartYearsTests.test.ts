@@ -1,15 +1,19 @@
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const GET_AVAILABLE_START_YEARS_API_TESTS_EMAIL =
-  'pfb_test_getAvailableStartYearsAPI_playwright@test.com';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('getAvailableStartYears tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_getAvailableStartYearsAPI_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: GET_AVAILABLE_START_YEARS_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -17,11 +21,11 @@ test.describe('getAvailableStartYears tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(GET_AVAILABLE_START_YEARS_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('authenticated request is successful', async ({ request }) => {
-    await performLoginBackend(request, GET_AVAILABLE_START_YEARS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/getAvailableStartYears');
     const resData = (await res.json()) as {

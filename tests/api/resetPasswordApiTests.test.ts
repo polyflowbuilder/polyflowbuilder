@@ -1,9 +1,8 @@
 import { createToken } from 'tests/util/tokenTestUtil.js';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const RESET_PASSWORD_API_TESTS_EMAIL = 'pfb_test_resetPasswordAPI_playwright@test.com';
 
 test.describe('reset password api tests', () => {
   test('perform password reset returns 400 without email', async ({ request }) => {
@@ -105,20 +104,21 @@ test.describe('reset password api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
   });
 
-  test('perform password reset returns 200 with valid payload', async ({ request }) => {
+  test('perform password reset returns 200 with valid payload', async ({ request }, testInfo) => {
     // create account
+    const userEmail = getUserEmailString('pfb_test_resetPasswordAPI_playwright@test.com', testInfo);
     await createUser({
-      email: RESET_PASSWORD_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
     // create token
     const prisma = new PrismaClient();
-    await createToken(prisma, RESET_PASSWORD_API_TESTS_EMAIL, 'PASSWORD_RESET');
+    await createToken(prisma, userEmail, 'PASSWORD_RESET');
 
     const res = await request.post('/api/auth/resetpassword', {
       data: {
-        resetEmail: RESET_PASSWORD_API_TESTS_EMAIL,
+        resetEmail: userEmail,
         resetToken: 'testtoken',
         password: 'test',
         passwordConfirm: 'test'
@@ -133,7 +133,7 @@ test.describe('reset password api tests', () => {
     expect(await res.json()).toStrictEqual(expectedResponseBody);
 
     // delete account
-    await deleteUser(RESET_PASSWORD_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('send garbage request results in 500', async ({ request }) => {

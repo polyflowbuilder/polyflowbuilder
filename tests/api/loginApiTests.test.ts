@@ -1,18 +1,20 @@
 import { createUser } from '$lib/server/db/user';
 import { PrismaClient } from '@prisma/client';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 import { expect, request, test } from '@playwright/test';
 import type { APIRequestContext } from '@playwright/test';
 
-const LOGIN_API_TESTS_EMAIL = 'pfb_test_loginAPI_playwright@test.com';
-
 test.describe('login api tests (POST, DELETE)', () => {
-  let sessionRequestContext: APIRequestContext;
   const prisma = new PrismaClient();
+  let sessionRequestContext: APIRequestContext;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_loginAPI_playwright@test.com', testInfo);
     await createUser({
-      email: LOGIN_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -90,7 +92,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     // bad password
     res = await request.post('/api/auth/login', {
       data: {
-        email: LOGIN_API_TESTS_EMAIL,
+        email: userEmail,
         password: 'incorrect'
       }
     });
@@ -107,7 +109,7 @@ test.describe('login api tests (POST, DELETE)', () => {
 
     const res = await sessionRequestContext.post('/api/auth/login', {
       data: {
-        email: LOGIN_API_TESTS_EMAIL,
+        email: userEmail,
         password: 'test'
       }
     });
@@ -152,7 +154,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     // first login
     let res = await sessionRequestContext.post('/api/auth/login', {
       data: {
-        email: LOGIN_API_TESTS_EMAIL,
+        email: userEmail,
         password: 'test'
       }
     });
@@ -179,7 +181,7 @@ test.describe('login api tests (POST, DELETE)', () => {
     // check that user was indeed deleted
     const userCheck = await prisma.user.findFirst({
       where: {
-        email: LOGIN_API_TESTS_EMAIL
+        email: userEmail
       }
     });
     expect(userCheck).toBeFalsy();

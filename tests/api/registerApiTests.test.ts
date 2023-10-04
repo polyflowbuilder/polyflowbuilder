@@ -1,15 +1,21 @@
 import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
-
-const REGISTER_API_TESTS_EMAIL = 'pfb_test_registerAPI_playwright@test.com';
+import { getUserEmailString } from 'tests/util/userTestUtil';
 
 test.describe('register api tests', () => {
+  test.describe.configure({ mode: 'serial' });
+
+  let userEmail: string;
+
   test.afterAll(async () => {
     // delete account
-    await deleteUser(REGISTER_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
-  test('empty payload results in 400', async ({ request }) => {
+  test('empty payload results in 400', async ({ request }, testInfo) => {
+    // populate userEmail in the first test that we have access to testInfo
+    userEmail = getUserEmailString('pfb_test_registerAPI_playwright@test.com', testInfo);
+
     const res = await request.post('/api/auth/register', {
       data: {}
     });
@@ -112,7 +118,7 @@ test.describe('register api tests', () => {
     const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
-        email: REGISTER_API_TESTS_EMAIL,
+        email: userEmail,
         password: 'test',
         passwordConfirm: 'test'
       }
@@ -130,7 +136,7 @@ test.describe('register api tests', () => {
     const res = await request.post('/api/auth/register', {
       data: {
         username: 'test',
-        email: REGISTER_API_TESTS_EMAIL,
+        email: userEmail,
         password: 'test',
         passwordConfirm: 'test'
       }

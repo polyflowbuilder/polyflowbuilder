@@ -1,15 +1,19 @@
 import { expect, test } from '@playwright/test';
-import { performLoginBackend } from 'tests/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-
-const QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL =
-  'pfb_test_queryAvailableMajorsAPI_playwright@test.com';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('queryAvailableMajors tests', () => {
-  test.beforeAll(async () => {
+  let userEmail: string;
+
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_queryAvailableMajorsAPI_playwright@test.com',
+      testInfo
+    );
     await createUser({
-      email: QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -17,11 +21,11 @@ test.describe('queryAvailableMajors tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('major query with no parameters handled properly', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailableMajors');
 
@@ -37,7 +41,7 @@ test.describe('queryAvailableMajors tests', () => {
   });
 
   test('major query with invalid catalog format handled properly', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res1 = await request.get('/api/data/queryAvailableMajors?catalog=test');
     const res2 = await request.get('/api/data/queryAvailableMajors?catalog=15-17');
@@ -62,7 +66,7 @@ test.describe('queryAvailableMajors tests', () => {
   });
 
   test('successful major query with catalog, catalog exists', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailableMajors?catalog=2015-2017');
 
@@ -141,7 +145,7 @@ test.describe('queryAvailableMajors tests', () => {
   });
 
   test('successful major query with catalog, catalog does not exist', async ({ request }) => {
-    await performLoginBackend(request, QUERY_AVAILABLE_MAJORS_API_TESTS_EMAIL, 'test');
+    await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/data/queryAvailableMajors?catalog=2013-2015');
 
