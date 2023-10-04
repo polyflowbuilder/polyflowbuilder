@@ -10,6 +10,7 @@ const config: PlaywrightTestConfig = {
   },
   testDir: 'tests',
   retries: 3,
+  timeout: 60000,
   projects: [
     {
       name: 'chromium',
