@@ -42,3 +42,28 @@ jobs:
       - run: npx prisma db push
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npm run test:unit:coverage
+
+  BrowserTest:
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-2019, macOS-latest]
+        project: [chromium, chrome, edge, firefox, webkit]
+    env:
+      DATABASE_URL: mysql://root:root@localhost:3306/main
+
+    steps:
+      - run: sudo systemctl start mysql.service
+      - run: |
+          mysql -e 'CREATE DATABASE main;' --user=root --password=root
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci && npm i -g tsx
+      - run: npx prisma db push
+      - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
+      - run: npm run test:${{ matrix.project }}
