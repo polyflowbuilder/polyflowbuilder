@@ -56,6 +56,7 @@ jobs:
       PUBLIC_PFB_DISCORD_LINK: https://discord.gg/xCadnCRC9f
       PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
       PUBLIC_PFB_ANALYTICS_ID:
+      DOMAIN: localhost:4173
 
     steps:
       - run: sudo systemctl start mysql.service
