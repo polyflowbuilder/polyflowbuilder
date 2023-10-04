@@ -66,10 +66,10 @@ jobs:
     steps:
       # setup mysql on different platforms
       - run: sudo systemctl start mysql.service
-        if: ${{ matrix.os == "ubuntu-latest" }}
+        if: ${{ matrix.os == 'ubuntu-latest' }}
 
       - run: sudo brew install mysql
-        if: ${{ matrix.os == "macOS-latest" }}
+        if: ${{ matrix.os == 'macOS-latest' }}
 
       - run: |
           mysql -e 'CREATE DATABASE main;' --user=root --password=root
