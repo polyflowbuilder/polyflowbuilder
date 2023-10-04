@@ -57,6 +57,11 @@ jobs:
       PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
       PUBLIC_PFB_ANALYTICS_ID:
       DOMAIN: localhost:4173
+      CF_EMAIL_API_ENDPOINT: ${{ secrets.CF_EMAIL_API_ENDPOINT }}
+      CF_EMAIL_API_PRIV_KEY: ${{ secrets.CF_EMAIL_API_PRIV_KEY }}
+      EMAIL_ADMIN: ${{ secrets.EMAIL_ADMIN }}
+      EMAIL_SENDER_EMAIL: ${{ secrets.EMAIL_SENDER_EMAIL }}
+      EMAIL_SENDER_NAME: ${{ secrets.EMAIL_SENDER_NAME }}
 
     steps:
       - run: sudo systemctl start mysql.service
