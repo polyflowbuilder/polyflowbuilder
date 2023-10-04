@@ -53,10 +53,6 @@
           </select>
           <small class="text-gray-500 label label-text-alt">
             Let us know what type of feedback you are submitting!
-            <br />
-            If you are submitting an Issue, please make sure you have read the "Common Issues and Fixes"
-            section within the PolyFlowBuilder CheatSheet (accessible via the blue question mark in the
-            flow editor) before submitting a request.
           </small>
 
           <label for="email" class="font-semibold label label-text text-lg">Email</label>
