@@ -7,6 +7,7 @@
   export let form: ActionData;
 
   let loading = false;
+  let feedbackText = '';
 </script>
 
 <main class="container mx-auto grid grid-cols-6 gap-4">
@@ -36,6 +37,7 @@
           return ({ update }) => {
             void (async () => {
               loading = false;
+              feedbackText = '';
               await update();
             })();
           };
@@ -51,10 +53,6 @@
           </select>
           <small class="text-gray-500 label label-text-alt">
             Let us know what type of feedback you are submitting!
-            <br />
-            If you are submitting an Issue, please make sure you have read the "Common Issues and Fixes"
-            section within the PolyFlowBuilder CheatSheet (accessible via the blue question mark in the
-            flow editor) before submitting a request.
           </small>
 
           <label for="email" class="font-semibold label label-text text-lg">Email</label>
@@ -74,7 +72,15 @@
             >
           {/if}
 
-          <label for="feedback" class="font-semibold label label-text text-lg">Feedback</label>
+          <label for="feedback" class="font-semibold label label-text text-lg">
+            <span>Feedback</span>
+            <span
+              class="text-sm font-normal"
+              class:text-red-600={!feedbackText.length}
+              class:text-green-700={feedbackText.length}
+              >({feedbackText.length}/{FEEDBACK_MESSAGE_MAX_LENGTH})
+            </span>
+          </label>
           <textarea
             class="textarea h-56 textarea-bordered resize-none"
             id="feedback"
@@ -82,6 +88,7 @@
             placeholder="Enter your feedback here!"
             maxlength={FEEDBACK_MESSAGE_MAX_LENGTH}
             required
+            bind:value={feedbackText}
           />
           {#if form?.feedbackValidationErrors?.feedback}
             <small id="feedbackError" class="text-red-600 label label-text-alt"
@@ -89,7 +96,11 @@
             >
           {/if}
 
-          <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
+          <button
+            class="btn btn-accent btn-block mt-6"
+            disabled={loading || !feedbackText.length}
+            type="submit"
+          >
             <span class={loading ? 'loading loading-spinner' : ''} />
             Submit Feedback
           </button>
