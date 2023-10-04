@@ -9,7 +9,6 @@ test.describe('flows page header tests', () => {
   const prisma = new PrismaClient();
   let userEmail: string;
 
-  // eslint-disable-next-line no-empty-pattern
   test.beforeAll(async ({}, testInfo) => {
     // create account
     userEmail = getUserEmailString('pfb_test_flowsPage_header_playwright@test.com', testInfo);
