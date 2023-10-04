@@ -27,7 +27,7 @@ jobs:
   UnitTest:
     runs-on: ubuntu-latest
     env:
-      DATABASE_URL: mysql://root:root@localhost:3306/main
+      DATABASE_URL: mysql://root:root@localhost:3306/main?connection_limit=10
 
     steps:
       - run: sudo systemctl start mysql.service
@@ -50,9 +50,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macOS-latest]
-        project: [chromium, chrome, edge, firefox, webkit]
+        project: [chromium, chrome, msedge, firefox, webkit]
     env:
-      DATABASE_URL: mysql://root:root@localhost:3306/main
+      DATABASE_URL: mysql://root:root@localhost:3306/main?connection_limit=10
       PUBLIC_PFB_DISCORD_LINK: https://discord.gg/xCadnCRC9f
       PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
       PUBLIC_PFB_ANALYTICS_ID:
@@ -72,3 +72,8 @@ jobs:
       - run: npx prisma db push
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npm run test:${{ matrix.project }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
