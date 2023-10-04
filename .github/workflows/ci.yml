@@ -23,6 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
 
+  # TODO: unit tests should not need a database!
   UnitTest:
     runs-on: ubuntu-latest
     env:
@@ -37,5 +38,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
+      - run: npm ci && npm i -g tsx
+      - run: npx prisma db push
+      - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npm run test:unit:coverage
