@@ -1,4 +1,4 @@
-import { createToken } from 'tests/util/tokenTestUtil.js';
+import { createToken } from 'tests/util/tokenTestUtil';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
 import { clearTokensByEmail } from '$lib/server/db/token';

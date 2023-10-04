@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil.js';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('searchCatalog API tests', () => {
   let userEmail: string;

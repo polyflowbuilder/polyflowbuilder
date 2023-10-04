@@ -1,14 +1,14 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   FLOW_LIST_ITEM_SELECTED_SELECTOR
-} from 'tests/util/selectorTestUtil.js';
+} from 'tests/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
 
 async function assertCorrectFailureHandling(page: Page, dialogMessage: string) {

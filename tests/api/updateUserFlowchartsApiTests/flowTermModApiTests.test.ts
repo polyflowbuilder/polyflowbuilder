@@ -1,14 +1,14 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
+import { populateFlowcharts } from 'tests/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil.js';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import {
   UserDataUpdateChunkType,
   UserDataUpdateChunkTERM_MODCourseDataFrom
-} from '$lib/types/mutateUserDataTypes.js';
-import type { Flowchart } from '$lib/common/schema/flowchartSchema.js';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
+} from '$lib/types/mutateUserDataTypes';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // see API route for expected return type
 interface GetUserFlowchartsExpectedReturnType {

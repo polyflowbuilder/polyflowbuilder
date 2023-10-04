@@ -2,9 +2,9 @@ import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig.js';
-import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil.js';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil.js';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
+import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 
 test.describe('getUserFlowcharts API tests', () => {
   const prisma = new PrismaClient();

@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
 import type { Page } from '@playwright/test';
 
 async function openModalAndVerifyCorrectState(page: Page) {

@@ -2,11 +2,11 @@ import crypto from 'crypto';
 import { expect, test } from '@playwright/test';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil.js';
+import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
 import { CURRENT_FLOW_DATA_VERSION, FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
-import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil.js';
+import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types/apiDataTypes.js';
+import type { CourseCache } from '$lib/types/apiDataTypes';
 
 // TODO: move responsePayload1 and responsePayload2 to testFlowcharts.ts?
 

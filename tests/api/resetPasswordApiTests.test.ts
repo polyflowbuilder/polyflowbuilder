@@ -1,4 +1,4 @@
-import { createToken } from 'tests/util/tokenTestUtil.js';
+import { createToken } from 'tests/util/tokenTestUtil';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserEmailString } from 'tests/util/userTestUtil';
