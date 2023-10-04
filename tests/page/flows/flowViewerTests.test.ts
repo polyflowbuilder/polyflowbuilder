@@ -2,20 +2,21 @@ import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { FLOW_LIST_ITEM_SELECTOR } from 'tests/util/selectorTestUtil.js';
-
-const FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL = 'pfb_test_flowPage_flowViewer_playwright@test.com';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 
 test.describe('flowchart viewer tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString('pfb_test_flowPage_flowViewer_playwright@test.com', testInfo);
     const id = await createUser({
-      email: FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -44,11 +45,11 @@ test.describe('flowchart viewer tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('no flowchart selected state correct', async ({ page }) => {
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -73,7 +74,7 @@ test.describe('flowchart viewer tests', () => {
       height: 1080
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -133,7 +134,7 @@ test.describe('flowchart viewer tests', () => {
       height: 720
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -279,7 +280,7 @@ test.describe('flowchart viewer tests', () => {
       height: 720
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -479,7 +480,7 @@ test.describe('flowchart viewer tests', () => {
       height: 720
     });
 
-    await performLoginFrontend(page, FLOWS_PAGE_FLOW_VIEWER_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');

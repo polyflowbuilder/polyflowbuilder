@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
@@ -15,16 +15,20 @@ import {
 // TODO: include tests that add new courses to terms
 // TODO: include credit bin tests once we add visibility toggle
 
-const MODIFY_FLOW_TERM_DATA_TESTS_EMAIL = 'pfb_test_flowsPage_modifyTermData_playwright@test.com';
-
 test.describe('FLOW_TERM_MOD update tests', () => {
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_modifyTermData_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: MODIFY_FLOW_TERM_DATA_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -58,11 +62,11 @@ test.describe('FLOW_TERM_MOD update tests', () => {
 
   test.afterAll(async () => {
     // delete account
-    await deleteUser(MODIFY_FLOW_TERM_DATA_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('move courses around in single term', async ({ page }, testInfo) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -138,7 +142,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
   });
 
   test('move courses around in multiple terms', async ({ page }, testInfo) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');
@@ -407,7 +411,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
   });
 
   test('move course to empty term', async ({ page }, testInfo) => {
-    await performLoginFrontend(page, MODIFY_FLOW_TERM_DATA_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
     await expect(page).toHaveURL(/.*flows/);
     expect((await page.textContent('h2'))?.trim()).toBe('Flows');
     expect((await page.context().cookies())[0].name).toBe('sId');

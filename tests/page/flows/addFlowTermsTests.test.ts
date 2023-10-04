@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil.js';
-import { performLoginFrontend } from 'tests/util/userTestUtil.js';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil.js';
+import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
@@ -11,9 +11,6 @@ import {
   TERM_CONTAINER_COURSES_SELECTOR
 } from 'tests/util/selectorTestUtil.js';
 import type { Page } from '@playwright/test';
-
-const FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL =
-  'pfb_test_flowsPage_add_terms_modal_playwright@test.com';
 
 async function performAddTermsTest(
   page: Page,
@@ -209,11 +206,17 @@ test.describe('add flowchart terms tests', () => {
   test.describe.configure({ mode: 'serial' });
   const prisma = new PrismaClient();
   let userId: string;
+  let userEmail: string;
 
-  test.beforeAll(async () => {
+  // eslint-disable-next-line no-empty-pattern
+  test.beforeAll(async ({}, testInfo) => {
     // create account
+    userEmail = getUserEmailString(
+      'pfb_test_flowsPage_add_terms_modal_playwright@test.com',
+      testInfo
+    );
     const id = await createUser({
-      email: FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL,
+      email: userEmail,
       username: 'test',
       password: 'test'
     });
@@ -245,11 +248,11 @@ test.describe('add flowchart terms tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await skipWelcomeMessage(page);
-    await performLoginFrontend(page, FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL, 'test');
+    await performLoginFrontend(page, userEmail, 'test');
   });
 
   test.afterAll(async () => {
-    await deleteUser(FLOWS_PAGE_ADD_TERMS_MODAL_TESTS_EMAIL);
+    await deleteUser(userEmail);
   });
 
   test('add flowchart terms default state correct', async ({ page }) => {
