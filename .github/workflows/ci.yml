@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
 
-  Unit Test:
+  UnitTest:
     runs-on: ubuntu-latest
     env:
       DATABASE_URL: mysql://root:root@localhost:3306/main
