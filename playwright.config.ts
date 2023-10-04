@@ -4,6 +4,7 @@ import type { PlaywrightTestConfig } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   webServer: {
     command: 'npm run build && export NODE_ENV=test && npm run preview',
+    reuseExistingServer: !process.env.CI,
     port: 4173,
     timeout: 120000
   },
