@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: lint
+        uses: github/super-linter@v5
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.cjs
+          JAVASCRIPT_DEFAULT_STYLE: prettier
