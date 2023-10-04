@@ -49,7 +49,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-2019, macOS-latest]
+        os: [ubuntu-latest, macOS-latest]
         project: [chromium, chrome, edge, firefox, webkit]
     env:
       DATABASE_URL: mysql://root:root@localhost:3306/main
@@ -68,6 +68,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci && npm i -g tsx
+      - run: npx playwright install --with-deps ${{ matrix.project }}
       - run: npx prisma db push
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npm run test:${{ matrix.project }}

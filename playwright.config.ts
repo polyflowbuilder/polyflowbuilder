@@ -25,7 +25,7 @@ const config: PlaywrightTestConfig = {
       }
     },
     {
-      name: 'edge',
+      name: 'msedge',
       use: {
         ...devices['Desktop Edge'],
         channel: 'msedge'
