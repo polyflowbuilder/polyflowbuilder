@@ -1,5 +1,6 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
+  import { tooltip } from '$lib/client/util/tooltipUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
   import { flowListUIData, selectedFlowIndex } from '$lib/client/stores/UIDataStore';
@@ -36,7 +37,17 @@
         {/each}
       </select>
     </label>
-    <div class="ml-1 mt-1 text-blue-500">
+    <div
+      use:tooltip={{
+        arrow: false,
+        placement: 'right-start',
+        theme: 'light-border',
+        content:
+          "Which program to associate the searched courses with. The search is restricted to the selected program's catalog.",
+        hideOnClick: false
+      }}
+      class="ml-1 mt-1 text-blue-500 hover:text-blue-600 transition cursor-pointer"
+    >
       <Fa icon={faQuestionCircle} />
     </div>
   </div>
@@ -55,7 +66,18 @@
         <option value="id">Course ID</option>
       </select>
     </label>
-    <div class="ml-1 mt-1 text-blue-500">
+    <div
+      use:tooltip={{
+        arrow: false,
+        placement: 'right-start',
+        theme: 'light-border',
+        allowHTML: true,
+        content:
+          '<div class="whitespace-pre-wrap">Which part of the course to search on.\n\n<strong>Course ID: </strong>The ID of the course (e.g. "CPE101"). Note that there is no space in the course ID.\n\n<strong>Course Name: </strong>The name of the course\n(e.g. "Fundamentals of Computer Science").',
+        hideOnClick: false
+      }}
+      class="ml-1 mt-1 text-blue-500 hover:text-blue-600 transition cursor-pointer"
+    >
       <Fa icon={faQuestionCircle} />
     </div>
   </div>
