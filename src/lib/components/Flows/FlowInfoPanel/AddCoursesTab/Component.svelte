@@ -20,7 +20,7 @@
   // search options
   let searchProgramIndex = -1;
   let query = '';
-  let field: CatalogSearchValidFields = 'displayName';
+  let field: CatalogSearchValidFields = 'id';
 
   // search results
   let items: CourseItemData[] = [];
@@ -32,7 +32,7 @@
   $: {
     $selectedFlowIndex;
     searchProgramIndex = $selectedFlowIndex !== -1 ? 0 : -1;
-    field = 'displayName';
+    field = 'id';
     query = '';
   }
 
