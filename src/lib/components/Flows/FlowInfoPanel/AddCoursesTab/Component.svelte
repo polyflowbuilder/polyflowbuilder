@@ -3,13 +3,13 @@
   import CourseItem from '../../FlowEditor/CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import CourseSearchOptionsSelector from './CourseSearchOptionsSelector.svelte';
-  import { initSearch } from '$lib/client/util/courseSearchUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+  import { initSearch, transformRawQuery } from '$lib/client/util/courseSearchUtil';
   import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
   import { faExclamationCircle, faFileCircleXmark } from '@fortawesome/free-solid-svg-icons';
@@ -28,6 +28,9 @@
   // for optional type
   $: selectedFlow = $userFlowcharts[$selectedFlowIndex] as Flowchart | undefined;
 
+  // query transformation
+  $: transformedQuery = transformRawQuery(query);
+
   // reset searches when we switch flows
   $: {
     $selectedFlowIndex;
@@ -45,7 +48,7 @@
     if (selectedCatalog) {
       // reset results in UI so we don't see stale results during new query
       $activeSearchResults = undefined;
-      initSearch(query, selectedCatalog, field);
+      initSearch(transformedQuery, selectedCatalog, field);
     }
   }
 
@@ -97,7 +100,7 @@
     {:then results}
       {#if results && searchProgramIndex !== -1 && $searchCache
           .find((entry) => entry.catalog === selectedCatalog)
-          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${query}`)}
+          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${transformedQuery}`)}
         {#if !results.searchValid}
           <div class="text-center">
             <div class="invalidSearchIcon pb-2">
