@@ -112,7 +112,9 @@
             <div class="noResultsIcon pb-2">
               <Fa icon={faFileCircleXmark} style="margin: auto;" />
             </div>
-            <small class="text-gray-500">No results found. Please try a different search.</small>
+            <small class="text-gray-500"
+              >No results found. Please verify that the search parameters are correct.
+            </small>
           </div>
         {:else}
           <!-- TODO: the text in the slot should always stay at the bottom of the results section -->
@@ -133,8 +135,8 @@
               {/if}
               {#if results.searchValid}
                 <small class="text-gray-500"
-                  >If you could not find a particular course, verify and narrow your search options
-                  if applicable.</small
+                  >If you could not find a particular course, verify and/or narrow your search
+                  parameters.</small
                 >
               {/if}
             </div>
