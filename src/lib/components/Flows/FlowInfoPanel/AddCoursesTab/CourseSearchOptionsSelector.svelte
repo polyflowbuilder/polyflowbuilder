@@ -1,5 +1,7 @@
 <script lang="ts">
+  import Fa from 'svelte-fa';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
   import { flowListUIData, selectedFlowIndex } from '$lib/client/stores/UIDataStore';
 
   export let searchProgramIndex = -1;
@@ -16,37 +18,47 @@
 
 <div>
   <!-- program selector -->
-  <label class="join group-input group-input-sm">
-    <span class="join-item">Program: </span>
-    <select
-      class="select join-item select-bordered select-sm overflow-ellipsis flowProgramSelector"
-      aria-label="course search program selector"
-      disabled={$selectedFlowIndex === -1}
-      bind:value={searchProgramIndex}
-    >
-      {#if $selectedFlowIndex === -1}
-        <option disabled value={-1}>Select a Flowchart</option>
-      {/if}
+  <div class="flex">
+    <label class="join group-input group-input-xs">
+      <span class="join-item">Program: </span>
+      <select
+        class="select join-item select-bordered select-xs overflow-ellipsis flowProgramSelector"
+        aria-label="course search program selector"
+        disabled={$selectedFlowIndex === -1}
+        bind:value={searchProgramIndex}
+      >
+        {#if $selectedFlowIndex === -1}
+          <option disabled value={-1}>Select a Flowchart</option>
+        {/if}
 
-      {#each $userFlowcharts[$selectedFlowIndex]?.programId ?? [] as _, i}
-        <option value={i}>{createSearchFlowProgramSelectorFriendlyName(i)}</option>
-      {/each}
-    </select>
-  </label>
+        {#each $userFlowcharts[$selectedFlowIndex]?.programId ?? [] as _, i}
+          <option value={i}>{createSearchFlowProgramSelectorFriendlyName(i)}</option>
+        {/each}
+      </select>
+    </label>
+    <div class="ml-1 mt-1 text-blue-500">
+      <Fa icon={faQuestionCircle} />
+    </div>
+  </div>
 
   <!-- field selector -->
-  <label class="mt-2 join group-input group-input-sm">
-    <span class="join-item">Search On:</span>
-    <select
-      class="select join-item select-bordered select-sm overflow-ellipsis searchFieldSelector"
-      aria-label="course search field selector"
-      disabled={$selectedFlowIndex === -1}
-      bind:value={field}
-    >
-      <option value="displayName">Course Name</option>
-      <option value="id">Course ID</option>
-    </select>
-  </label>
+  <div class="mt-2 flex">
+    <label class="join group-input group-input-xs">
+      <span class="join-item">Search On:</span>
+      <select
+        class="select join-item select-bordered select-xs overflow-ellipsis searchFieldSelector"
+        aria-label="course search field selector"
+        disabled={$selectedFlowIndex === -1}
+        bind:value={field}
+      >
+        <option value="displayName">Course Name</option>
+        <option value="id">Course ID</option>
+      </select>
+    </label>
+    <div class="ml-1 mt-1 text-blue-500">
+      <Fa icon={faQuestionCircle} />
+    </div>
+  </div>
 
   <!-- query input -->
   <input
@@ -60,17 +72,16 @@
 </div>
 
 <style lang="postcss">
-  /* 91px is the width of the gray pill on the left */
+  /* pixel counts are the width of the gray pill on the left */
   .flowProgramSelector {
-    width: calc(100% - 91px);
+    width: calc(100% - 83px);
   }
-  /* 104px is the width of the gray pill on the left */
   .searchFieldSelector {
-    width: calc(100% - 104px);
+    width: calc(100% - 93px);
   }
 
-  .group-input-sm {
-    font-size: 0.875rem; /* 14px */
-    line-height: 2rem; /* 32px */
+  .group-input-xs {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem; /* 16px */
   }
 </style>
