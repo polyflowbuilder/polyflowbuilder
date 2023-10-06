@@ -6,8 +6,9 @@ import { generateCourseCacheFlowcharts } from './courseCacheUtil';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import {
-  CURRENT_FLOW_DATA_VERSION,
-  FLOW_DEFAULT_TERM_DATA
+  FLOW_NOTES_MAX_LENGTH,
+  FLOW_DEFAULT_TERM_DATA,
+  CURRENT_FLOW_DATA_VERSION
 } from '$lib/common/config/flowDataConfig';
 import type { DBFlowchart, Program } from '@prisma/client';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
@@ -44,6 +45,21 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlo
     flowchart: convertedFlowchart,
     pos
   };
+}
+
+function generateFlowchartNotes(flowchartPrograms: Program[]) {
+  const programNotes = flowchartPrograms.map(
+    (program, i) => `- Program #${i + 1}: ${program.dataLink}`
+  );
+
+  return (
+    'This is an auto-generated flowchart. Change it to fit your needs! ' +
+    'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+    `\n\n${programNotes.join('\n')}\n\n` +
+    'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
+    'and it does not reflect official degree progress or information. ' +
+    'Plan with care and consult an academic advisor if necessary.'
+  ).slice(0, FLOW_NOTES_MAX_LENGTH);
 }
 
 export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData): DBFlowchart {
@@ -98,7 +114,7 @@ export async function generateFlowchart(
     startYear: data.startYear,
     termData: mergedFlowchartTermData.length ? mergedFlowchartTermData : FLOW_DEFAULT_TERM_DATA,
     unitTotal: '0',
-    notes: '',
+    notes: generateFlowchartNotes(programCache),
     version: CURRENT_FLOW_DATA_VERSION,
     hash: '',
     publishedId: null,
