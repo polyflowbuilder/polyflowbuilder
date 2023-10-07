@@ -38,7 +38,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci && npm i -g tsx
-      - run: npx prisma db push
+      - run: npx prisma migrate deploy
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npm run test:unit:coverage
 
@@ -66,7 +66,6 @@ jobs:
       # setup mysql on different platforms
       - run: sudo systemctl start mysql.service
         if: ${{ matrix.os == 'ubuntu-latest' }}
-
       - run: brew install mysql && mysql.server start && mysql -e "ALTER USER root@localhost IDENTIFIED BY 'root';" --user=root
         if: ${{ matrix.os == 'macOS-latest' }}
 
@@ -79,7 +78,7 @@ jobs:
           cache: 'npm'
       - run: npm ci && npm i -g tsx
       - run: npx playwright install --with-deps ${{ matrix.project }}
-      - run: npx prisma db push
+      - run: npx prisma migrate deploy
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npx playwright test --project=${{ matrix.project }} --reporter=html --trace="retain-on-failure"
       - uses: actions/upload-artifact@v3

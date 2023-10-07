@@ -180,7 +180,6 @@ async function syncTemplateFlowcharts() {
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
   ) as TemplateFlowchartMetadata;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const defaultFlows: TemplateFlowchart[] = [];
 
   // recursively find all JSON files and insert into db
@@ -204,25 +203,12 @@ async function syncTemplateFlowcharts() {
           continue;
         }
 
-        const flowCSheetData = flowDataLinks.cSheets.find(
-          (flowCSheetLinkEntry) =>
-            flowCSheetLinkEntry.code ===
-            (flowProgramData.code.substring(0, nthIndex(flowProgramData.code, '.', 2)) ||
-              flowProgramData.code)
-        );
-
-        if (!flowCSheetData) {
-          console.log('FLOWCSHEETDATA RETURNED UNDEFINED, SKIPPING (most likely a name mismatch)');
-          continue;
-        }
-
         // create appropriate TemplateFlowchart entry
         defaultFlows.push({
           programId: flowProgramData.id,
           flowUnitTotal: defaultFlowData.unitTotal,
           termData: defaultFlowData.termData,
-          version: defaultFlowData.version,
-          notes: `This is a default, template flowchart. Change it to fit your needs! Here are some official Cal Poly resources for this flowchart:\n\n* Flowchart: "${flowProgramData.dataLink}"\n* Curriculum Sheet: "${flowCSheetData.dataLink}"`
+          version: defaultFlowData.version
         });
       } catch (e) {
         if (e instanceof ZodError) {

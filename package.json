@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite dev",
+    "start:dev": "vite dev",
+    "start:prod": "prisma migrate deploy && node build",
     "build": "vite build",
     "preview": "vite preview",
     "test:chromium": "playwright test --project=chromium",

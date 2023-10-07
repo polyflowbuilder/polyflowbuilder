@@ -377,7 +377,13 @@ const responsePayload1 = {
       }
     ],
     unitTotal: '189',
-    notes: '',
+    notes:
+      'This is an auto-generated flowchart. Change it to fit your needs! ' +
+      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+      '\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n\n' +
+      'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
+      'and it does not reflect official degree progress or information. ' +
+      'Plan with care and consult an academic advisor if necessary.',
     version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null
@@ -669,7 +675,13 @@ const responsePayload1 = {
       }
     ],
     unitTotal: '149',
-    notes: '',
+    notes:
+      'This is an auto-generated flowchart. Change it to fit your needs! ' +
+      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+      '\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n\n' +
+      'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
+      'and it does not reflect official degree progress or information. ' +
+      'Plan with care and consult an academic advisor if necessary.',
     version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null
@@ -1829,7 +1841,14 @@ const responsePayload2 = {
       }
     ],
     unitTotal: '343-347',
-    notes: '',
+    notes:
+      'This is an auto-generated flowchart. Change it to fit your needs! ' +
+      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:\n\n' +
+      '- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n' +
+      '- Program #2: http://flowcharts.calpoly.edu/downloads/mymap/22-26.76BCHMBSU.PYCBCHMU.pdf\n' +
+      '\nDisclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
+      'and it does not reflect official degree progress or information. ' +
+      'Plan with care and consult an academic advisor if necessary.',
     version: CURRENT_FLOW_DATA_VERSION,
     publishedId: null,
     importedId: null

@@ -85,7 +85,6 @@ model TemplateFlowchart {
   flowUnitTotal         String
   termData              Json
   version               Int
-  notes                 String                @db.VarChar(2000)
 
   programIdRelation     Program               @relation(fields: [programId], references: [id], onDelete: Restrict)
 }
