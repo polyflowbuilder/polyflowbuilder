@@ -1,24 +1,17 @@
 import dotenv from 'dotenv';
-import { execSync } from 'child_process';
+import { version } from '$app/environment';
 import { initLogger } from '$lib/common/config/loggerConfig';
 
 const logger = initLogger('Config/EnvConfig');
-
-export let FULL_VERSION_STRING = 'unknown';
 
 // session max age in seconds
 export const SESSION_MAX_AGE = 60 * 60 * 24;
 
 export function loadEnv() {
   // env stuff specific to server
-  try {
-    const commit = execSync('git rev-parse --short HEAD').toString().slice(0, -1);
-    FULL_VERSION_STRING = `${process.env.npm_package_version} ${commit}`;
-  } catch (e) {
-    logger.error('Failed to get git version for full version string');
-  } finally {
-    logger.info(`Hello world! Initializing PolyFlowBuilder ${FULL_VERSION_STRING} ...`);
-  }
+  logger.info(
+    `Hello world! Initializing PolyFlowBuilder (commit ${version}, environment ${process.env.NODE_ENV}) ...`
+  );
 
   logger.info('Environment working directory is', process.cwd());
 
