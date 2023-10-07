@@ -1,7 +1,13 @@
 <script lang="ts">
   import '../app.postcss';
+  import { onMount } from 'svelte';
+  import { version } from '$app/environment';
   import { Footer, Header } from '$lib/components/common';
   import { PUBLIC_PFB_ANALYTICS_ID } from '$env/static/public';
+
+  onMount(() => {
+    console.log(`PolyFlowBuilder (c) ${new Date().getFullYear()} duncanapple.io (${version})`);
+  });
 </script>
 
 <svelte:head>
