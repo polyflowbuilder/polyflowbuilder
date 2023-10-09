@@ -35,6 +35,11 @@ test.describe('getAvailableCatalogsTests tests', () => {
     expect(res.status()).toBe(200);
     expect(resData).toHaveProperty('catalogs');
     expect(resData.catalogs.length).toBeTruthy();
+
+    // expect entries to be sorted (deterministic order)
+    expect(resData.catalogs).toStrictEqual(
+      [...resData.catalogs].sort((a, b) => a.localeCompare(b))
+    );
   });
 
   test('401 case handled properly', async ({ request }) => {
