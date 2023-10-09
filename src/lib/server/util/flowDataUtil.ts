@@ -88,30 +88,7 @@ export async function generateFlowchart(
 }> {
   // fetch templates
   const fetchedTemplateFlowcharts = await getTemplateFlowcharts(data.programIds);
-
-  // need to sort records from db because their order is indeterministic
-  // and in this context the order of the records needs to exactly match
-  // the order of data.programIds or else downstream routines will fail!
-  const sortedTemplateFlowcharts = fetchedTemplateFlowcharts
-    .map((flowchart) => {
-      const idx = data.programIds.findIndex((id) => flowchart.programId === id);
-      if (idx === -1) {
-        throw new Error(
-          `flowDataUtil: unable to sort fetched template flowcharts (requested ids ${data.programIds.toString()}, fetched ids ${fetchedTemplateFlowcharts
-            .map((flowchart) => flowchart.programId)
-            .toString()})`
-        );
-      }
-
-      return {
-        idx,
-        flowchart
-      };
-    })
-    .sort((a, b) => a.idx - b.idx)
-    .map(({ flowchart }) => flowchart);
-
-  const templateFlowcharts = sortedTemplateFlowcharts.map((flowchart) => {
+  const templateFlowcharts = fetchedTemplateFlowcharts.map((flowchart) => {
     return {
       ...flowchart,
       programId: [flowchart.programId],
