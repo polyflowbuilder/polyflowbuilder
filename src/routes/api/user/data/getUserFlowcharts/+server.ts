@@ -37,12 +37,18 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       const userFlowchartsData = await getUserFlowcharts(locals.session.id, [], true);
       const flowcharts: Flowchart[] = [];
       const programMetadata: Program[] = [];
+      const programMetadataCache: Set<string> = new Set<string>();
 
       userFlowchartsData.forEach((data) => {
         flowcharts.push(data.flowchart);
         // to satisfy type checking
         if (data.programMetadata) {
-          programMetadata.push(...data.programMetadata);
+          for (const programData of data.programMetadata) {
+            if (!programMetadataCache.has(programData.id)) {
+              programMetadata.push(programData);
+              programMetadataCache.add(programData.id);
+            }
+          }
         }
       });
 
