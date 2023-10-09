@@ -3,9 +3,11 @@
   import CourseItem from '../../FlowEditor/CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import CourseSearchOptionsSelector from './CourseSearchOptionsSelector.svelte';
+  import { tooltip } from '$lib/client/util/tooltipUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
+  import { searchHelpTooltipConfig } from '$lib/client/config/catalogSearchConfigClient';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
@@ -118,6 +120,9 @@
             <small class="text-gray-500"
               >No results found. Please verify that the search parameters are correct.
             </small>
+            <small use:tooltip={searchHelpTooltipConfig} class="hyperlink cursor-pointer"
+              >Need help?</small
+            >
           </div>
         {:else}
           <!-- TODO: the text in the slot should always stay at the bottom of the results section -->
@@ -140,6 +145,9 @@
                 <small class="text-gray-500"
                   >If you could not find a particular course, verify and/or narrow your search
                   parameters.</small
+                >
+                <small use:tooltip={searchHelpTooltipConfig} class="hyperlink cursor-pointer"
+                  >Need help?</small
                 >
               {/if}
             </div>
