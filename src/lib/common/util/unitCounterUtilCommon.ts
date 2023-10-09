@@ -1,9 +1,9 @@
 // util functions related to unit counting
 
+import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { CourseCache } from '$lib/types';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 
 export function incrementRangedUnits(unitCount1: string, unitCount2: string): string {
   const unitSplit1 = unitCount1.split('-').map((val) => Number(val));
