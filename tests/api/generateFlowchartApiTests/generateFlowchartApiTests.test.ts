@@ -7,7 +7,8 @@ import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil
 import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil';
 import {
   responsePayload1,
-  responsePayload2
+  responsePayload2,
+  responsePayload3
 } from 'tests/api/generateFlowchartApiTests/expectedResponsePayloads';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types/apiDataTypes';
@@ -586,6 +587,62 @@ test.describe('generate flowchart api output tests', () => {
         ownerId
       },
       courseCache: responsePayload2.courseCache
+    };
+
+    // verify that we got a valid flowchart back
+    // do it this way so when it fails we know what validation step failed
+    expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
+
+    // remove these fields before comparison but after validation since they change on every request
+    const resDataRelevantProperties = {
+      message: resData.message,
+      generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
+        'id',
+        'hash',
+        'lastUpdatedUTC'
+      ]),
+      // sort to ensure order of items doesn't matter in cache
+      courseCache: resData.courseCache
+        ?.map((cache) => {
+          return {
+            catalog: cache.catalog,
+            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+          };
+        })
+        .sort((a, b) => a.catalog.localeCompare(b.catalog))
+    };
+
+    // remove dynamicTerms as this can change over time
+    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
+      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    );
+  });
+
+  test('generate valid flowchart with multiple programs #2 (input programs exposed to indeterministic ordering)', async ({
+    request
+  }) => {
+    await performLoginBackend(request, userEmail, 'test');
+
+    const res = await request.get(
+      `/api/data/generateFlowchart?${new URLSearchParams({
+        name: 'test',
+        startYear: '2015',
+        programIds: 'b3c6505b-3993-40bb-967c-423aaeadc2f6,ac354862-271a-4f0b-86f2-6a79e74bf2db'
+      }).toString()}`
+    );
+    expect(res.status()).toBe(200);
+
+    // make sure date is serialized back to Date object
+    const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
+    resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
+
+    const expectedResponseBody = {
+      message: 'Flowchart successfully generated.',
+      generatedFlowchart: {
+        ...responsePayload3.generatedFlowchart,
+        ownerId
+      },
+      courseCache: responsePayload3.courseCache
     };
 
     // verify that we got a valid flowchart back

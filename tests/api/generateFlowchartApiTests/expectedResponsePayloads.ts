@@ -2597,3 +2597,1409 @@ export const responsePayload2 = {
     })
     .sort((a, b) => a.catalog.localeCompare(b.catalog))
 };
+
+export const responsePayload3 = {
+  message: 'Flowchart successfully generated.',
+  generatedFlowchart: {
+    ownerId: 'd7a9ff04-b365-4342-b6a7-dfc185ad7e3f',
+    name: 'test',
+    programId: ['b3c6505b-3993-40bb-967c-423aaeadc2f6', 'ac354862-271a-4f0b-86f2-6a79e74bf2db'],
+    startYear: '2015',
+    termData: [
+      {
+        tIndex: -1,
+        tUnits: '0',
+        courses: []
+      },
+      {
+        tIndex: 1,
+        tUnits: '28',
+        courses: [
+          {
+            id: 'AGB101',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'AGB202',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'MATH221',
+            color: '#FCD09E'
+          },
+          {
+            id: 'ENGL134',
+            color: '#DCFDD2'
+          },
+          {
+            id: 'ART102',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART182',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART122',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 2,
+        tUnits: '28',
+        courses: [
+          {
+            id: 'AGB212',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'CHEM110',
+            color: '#FCD09E'
+          },
+          {
+            id: 'COMS101',
+            color: '#DCFDD2'
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Elective',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '4'
+          },
+          {
+            id: 'ART103',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART224',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART212',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 3,
+        tUnits: '24',
+        courses: [
+          {
+            id: 'AGB214',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#FCD09E',
+            customId: 'Agricultural Science and Technology Elective',
+            customDesc:
+              'Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.',
+            customUnits: '4'
+          },
+          {
+            id: 'COMS126',
+            color: '#DCFDD2'
+          },
+          {
+            id: 'ART104',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART101',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART222',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 5,
+        tUnits: '32',
+        courses: [
+          {
+            id: 'AGB260',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'AGB323',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'ECON222',
+            color: '#FCD09E'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: 'ART203',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART209',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART213',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 6,
+        tUnits: '32',
+        courses: [
+          {
+            id: 'AGB301',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'AGB General Elective',
+            customDesc:
+              'Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Elective',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '4'
+          },
+          {
+            id: 'ART314',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: 'GRC331',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 7,
+        tUnits: '30',
+        courses: [
+          {
+            id: 'AGB313',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'STAT251',
+            color: '#FCD09E'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Elective',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '2'
+          },
+          {
+            id: 'ART260',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 9,
+        tUnits: '32',
+        courses: [
+          {
+            id: 'AGB308',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'AGB General Elective',
+            customDesc:
+              'Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#FCD09E',
+            customId: 'Agricultural Science and Technology Elective',
+            customDesc:
+              'Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: 'ART324',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: 'ENGL371',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART325',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 10,
+        tUnits: '28',
+        courses: [
+          {
+            id: 'AGB312',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'AGB General Elective',
+            customDesc:
+              'Any AGB General Elective can go here. Select 12 units of AGB courses at the 300-500 level.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DA9593',
+            customId: 'Graduation Writing Requirement',
+            customDesc:
+              'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.'
+          },
+          {
+            id: 'ART315',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART329',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DA9593',
+            customId: 'Graduation Writing Requirement',
+            customDesc:
+              'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here.',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 11,
+        tUnits: '32',
+        courses: [
+          {
+            id: 'AGB327',
+            color: '#FEFD9A'
+          },
+          {
+            id: 'BUS207',
+            color: '#FCD09E'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'Art History Elective',
+            customDesc:
+              'Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART383',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 13,
+        tUnits: '28',
+        courses: [
+          {
+            id: 'AGB369',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'AGB Upper Division General Elective',
+            customDesc:
+              'Any AGB Upper Division General Elective can go here. Select 4 units at the 400 level.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'Upper Division Art Elective',
+            customDesc:
+              'Any upper division art elective can go here. Refer to the online catalog for details.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'Art History Elective',
+            customDesc:
+              'Art History: Select two courses from the following upper division art history courses not already required in major core or concentration: ART310, ART311, ART313, ART314, ART317, ART318, ART370, ART371, ART373, ART/WGS 375.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#F9A3D2',
+            customId: 'Concentration Elective',
+            customDesc:
+              'Any 300-400 level course not already required for the major or concentration; OR ISLA340 & ISLA341. Refer to the online catalog for details.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 14,
+        tUnits: '33',
+        courses: [
+          {
+            id: null,
+            color: '#FEFD9A',
+            customId: 'Choose One',
+            customDesc:
+              'Choose one of the following: AGB460 and AGB 461; or AGB462, AGB463, or AGB464.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#FCD09E',
+            customId: 'Agricultural Science and Technology Elective',
+            customDesc:
+              'Any Agricultural Science and Technology Elective can go here. See course selection in online catalog.',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Electives',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '5'
+          },
+          {
+            id: 'ART483',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: 'ART427',
+            color: '#F9A3D2',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#F9A3D2',
+            customId: 'Concentration Elective',
+            customDesc:
+              'Any 300-400 level course not already required for the major or concentration; OR ISLA340 & ISLA341. Refer to the online catalog for details.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Elective',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      },
+      {
+        tIndex: 15,
+        tUnits: '25',
+        courses: [
+          {
+            id: 'AGB328',
+            color: '#FEFD9A'
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B2, C1, C2, C3, C4, C1-C5 elective, D1, D3, D4, D5, and F. C4, D5, and F should be taken only after Junior standing is reached (90 units). Refer to online catalog for GE course selection and Graduation Writing Requirement (GWR).',
+            customUnits: '4'
+          },
+          {
+            id: null,
+            color: '#D4FFFE',
+            customId: 'Free Electives',
+            customDesc: 'Any free elective can go here.',
+            customUnits: '5'
+          },
+          {
+            id: 'ART463',
+            color: '#FEFD9A',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          },
+          {
+            id: null,
+            color: '#DCFDD2',
+            customId: 'GE',
+            customDesc:
+              'One course from each of the following GE areas must be completed: A1, A2, A3, B1, B1, B2, B3, (B4 [lab] must be completed with either B2 or B3), B1-B5 elective, C1, C2, C4, D1, D2, D3, D4, D5 and F. C4, D5 and F should be taken only after Junior standing is reached (90 units). <strong>Two (2) courses</strong> must be completed in B1. <strong>Upper Division C4 must be satisfied by taking a non-ART course.</strong> Refer to online catalog for GE course selection, United States Cultural Pluralism (USCP) and Graduation Writing Requirement (GWR). USCP requirement can be satisfied by some (but not all) courses within GE categories: C4, D1, D3, D4, D5 or F.',
+            customUnits: '4',
+            programIdIndex: 1
+          }
+        ]
+      }
+    ],
+    unitTotal: '352',
+    notes:
+      'This is an auto-generated flowchart. Change it to fit your needs! The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.10AGBBSU.pdf\n- Program #2: http://flowcharts.calpoly.edu/downloads/mymap/17-19.48ARTBFAU.PHOVARTU.pdf\n\nDisclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, and it does not reflect official degree progress or information. Plan with care and consult an academic advisor if necessary.',
+    version: 7,
+    publishedId: null,
+    importedId: null
+  },
+  courseCache: [
+    {
+      catalog: '2015-2017',
+      courses: [
+        {
+          id: 'AGB101',
+          catalog: '2015-2017',
+          displayName: 'Introduction to Agribusiness',
+          units: '4',
+          desc: 'Orientation to the agribusiness sector of agriculture.  An overview of the breadth, size, scope and management aspects of the agricultural business complex.  Agribusiness students are required to complete this within the first year of the major.  4 lectures.\n',
+          addl: 'Term Typically Offered: F\nPrerequisite: AGB major and freshman standing.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'AGB202',
+          catalog: '2015-2017',
+          displayName: 'Introduction to Sales',
+          units: '4',
+          desc: 'Development of professional business-to-business selling principles within the supply chain, including an introduction to understanding the sales process from different buying and selling perspectives, communication techniques, and basic sales competency. 4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB212',
+          catalog: '2015-2017',
+          displayName: 'Agricultural Economics',
+          units: '4',
+          desc: 'Theoretical development of factors affecting demand and supply for food and fiber and for agricultural inputs. Methods of selecting optimal levels of agricultural production and consumption variables. Evaluation of market structure and price formulation for agricultural products and resources. 4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB214',
+          catalog: '2015-2017',
+          displayName: 'Agribusiness Financial Accounting',
+          units: '4',
+          desc: 'Principles of financial accounting in agribusiness. Preparation for understanding and interpreting financial statements. Exploration of financial reporting standards to provide an understanding of how financial events are reflected in financial statements. The importance of social responsibility in accounting. The accounting cycle, from transactions posting to financial statements through spreadsheet applications. 3 lectures, 1 activity.\n',
+          addl: 'Term Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB260',
+          catalog: '2015-2017',
+          displayName: 'Agribusiness Data Literacy',
+          units: '4',
+          desc: 'Using data and analysis in making decisions related to agribusiness.  Developing basic and intermediate spreadsheet skills necessary to organize, analyze, and summarize information.  Development of data management and analysis as tools to assist in agribusiness problem-solving.  4 lectures.\n',
+          addl: 'Term Typically Offered: F,W,SP,SU\nPrerequisite: AGB 101 or junior standing.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB301',
+          catalog: '2015-2017',
+          displayName: 'Food and Fiber Marketing',
+          units: '4',
+          desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB308',
+          catalog: '2015-2017',
+          displayName: 'Introduction to Agribusiness Finance',
+          units: '4',
+          desc: 'Concepts and analytical methods related to agricultural finance.  Focus on applied spreadsheet analysis of financial statements, time value of money, risk and return, portfolio theory, and capital budgeting within the context of financial institutions specific to agriculture.  Not open to students with credit in AGB 310.  4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 214 and AGB 260.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB312',
+          catalog: '2015-2017',
+          displayName: 'Agricultural Policy',
+          units: '4',
+          desc: 'Agricultural policy objectives and formulation, resource allocation and production adjustments.  Survey of State and Federal agricultural policies as they influence the planning and practices of agribusiness.  4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 and ECON 222.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB313',
+          catalog: '2015-2017',
+          displayName: 'Agriculture Economic Analysis',
+          units: '4',
+          desc: 'Advanced agricultural microeconomics with emphasis on mathematical problem solving; production and cost functions, single and multiple input allocation, agricultural output combinations, agricultural market structures, and economies of size.  4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 and MATH 221.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB323',
+          catalog: '2015-2017',
+          displayName: 'Agribusiness Managerial Accounting',
+          units: '4',
+          desc: 'Agribusiness management with an emphasis on using accounting procedures that will provide useful information in making management decisions, setting objectives, and controlling operations.  3 lectures, 1 activity.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 214.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB327',
+          catalog: '2015-2017',
+          displayName: 'Agribusiness Data Analysis',
+          units: '4',
+          desc: 'Methods in agricultural business data analysis, including multiple regression analysis, analysis of variance, and time series analysis.  Applications include agricultural price forecasting and estimation of the determinants of food and fiber demand.  3 lectures, 1 activity.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: STAT 251 and AGB 260.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB328',
+          catalog: '2015-2017',
+          displayName: 'Decision Tools for Agribusiness',
+          units: '4',
+          desc: 'Development of agribusiness modeling techniques that are applied to solving a diverse and unique set of resource allocation issues encountered throughout the agricultural and food retail sectors.  Techniques include linear programming, decision analysis, and computer simulations.  3 lectures, 1 activity.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: STAT 251 and AGB 260.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'AGB369',
+          catalog: '2015-2017',
+          displayName: 'Agricultural Personnel Management',
+          units: '4',
+          desc: 'Standard topics of California agricultural personnel management:  recruitment; appraisal and performance evaluation; compensation; training and development; discipline; safety and health; labor relations; and immigration policy.  Systemic approach to aspects of managing human capital, and how to implement human resource policies.  Not open to students with credit in AGB 401.  4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 201 or ECON 221; and junior standing.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'BUS207',
+          catalog: '2015-2017',
+          displayName: 'Legal Responsibilities of Business',
+          units: '4',
+          desc: 'Examination of the American legal system and important legal principles for business operations, such as those involved with contracts, torts, agency, business organizations, and employment. Emphasis on how legal principles help define socially responsible conduct. Case studies. 4 lectures.\n',
+          addl: 'Term Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: true,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'CHEM110',
+          catalog: '2015-2017',
+          displayName: 'World of Chemistry',
+          units: '4',
+          desc: 'The fundamentals of chemical cause and effect-structure/function relationships.  The basic principles of chemistry and their applications to solving human problems in organic materials science, biochemistry, toxicology, environmental science, agriculture, nutrition, and medicine.  Not open to students majoring in Chemistry or Biochemistry.  Not open to students with credit in CHEM 111, CHEM 124, or CHEM 127.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
+          addl: 'GE Area B3; GE Area B4\nTerm Typically Offered: F, W, SP\nPrerequisite: Passing score on ELM examination, or an ELM exemption, or MATH 104.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: true,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'COMS101',
+          catalog: '2015-2017',
+          displayName: 'Public Speaking',
+          units: '4',
+          desc: 'Introduction to the principles of public speaking. Practical experience in the development, presentation, and critical analysis of speeches to inform, to persuade, and to actuate. Not open to students with credit in COMS 102. 4 lectures. Crosslisted as COMS/HNRS 101. Fulfills GE A2; for students admitted Fall 2016 or later a grade of C- or better is required to fulfill GE Area A2.\n',
+          addl: 'GE Area A2\nTerm Typically Offered: F,W,SP,SU\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: true,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'COMS126',
+          catalog: '2015-2017',
+          displayName: 'Argument and Advocacy',
+          units: '4',
+          desc: 'The nature of critical thinking as applied in written and oral argument.  Analysis of inductive and deductive reasoning.  Analysis of reasoning, argument, forms of support and fallacies of argument and language.  Instruction in and practical experience in writing sound persuasive arguments and engaging in oral argumentation assignments.  4 lectures.  Fulfills GE A3; for students admitted Fall 2016 or later a grade of C- or better is required to fulfill GE Area A3.\n',
+          addl: 'GE Area A3\nTerm Typically Offered: W, SP\nPrerequisite: Completion of GE Area A1 with a C- or better, or consent of instructor. Recommended: Completion of GE Area A2.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ECON222',
+          catalog: '2015-2017',
+          displayName: 'Macroeconomics',
+          units: '4',
+          desc: 'Introduction to economic problems. Macroeconomic analysis and principles. Aggregate output, employment, prices, and economic policies for changing these variables. International trade and finance. Issues of economic growth and development. Comparative economic systems and economies in transition. 4 lectures. Fulfills GE D2.\n',
+          addl: 'GE Area D2\nTerm Typically Offered: F,W,SP,SU\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ENGL134',
+          catalog: '2015-2017',
+          displayName: 'Writing and Rhetoric',
+          units: '4',
+          desc: 'Rhetorical principles and tactics applied to written work.  Writing as a recursive process that leads to greater organizational coherency, stylistic complexity, and rhetorical awareness.  4 lectures.  Fulfills GE A1; for students admitted Fall 2016 or later a grade of C- or better is required to fulfill GE Area A1.\n',
+          addl: 'GE Area A1\nTerm Typically Offered: F, W, SP\nPrerequisite: Satisfactory score on the English Placement Test.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'MATH221',
+          catalog: '2015-2017',
+          displayName: 'Calculus for Business and Economics',
+          units: '4',
+          desc: 'Polynomial calculus for optimization and marginal analysis, and elementary integration.  Not open to students with credit in MATH 142.  4 lectures.  Fulfills GE B1; for students admitted Fall 2016 or later, a grade of C- or better in one GE B1 course is required to fulfill GE Area B.\n',
+          addl: 'GE Area B1\nTerm Typically Offered: W, SP\nPrerequisite: Completion of ELM requirement and passing score on appropriate Mathematics Placement Examination, or MATH 118.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'STAT251',
+          catalog: '2015-2017',
+          displayName: 'Statistical Inference for Management I',
+          units: '4',
+          desc: 'Descriptive statistics.  Probability and counting rules.  Random variables and probability distributions.  Sampling distributions and point estimation.  Confidence intervals and tests of hypotheses for a single mean and proportion.  4 lectures.  Fulfills GE B1; for students admitted Fall 2016 or later, a grade of C- or better in one GE B1 course is required to fulfill GE Area B.\n',
+          addl: 'GE Area B1\nTerm Typically Offered: F, W, SP\nPrerequisite: Completion of the ELM requirement and a passing score on appropriate Mathematics Placement Examination for MATH 221 eligibility, or MATH 118 or equivalent.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        }
+      ]
+    },
+    {
+      catalog: '2017-2019',
+      courses: [
+        {
+          id: 'ART101',
+          catalog: '2017-2019',
+          displayName: 'The Fundamentals of Drawing',
+          units: '4',
+          desc: 'Introduction to the artistic practice and cultural value of drawing from the Renaissance to the 21st Century. Emphasis and expansion of the practical skills of observation, rendering, and understanding the signs of meaning produced in visual art. Development of formal techniques, media experimentation, and content creation through personal expression. Exercises to encourage growth in technical skill, conceptual innovation, critical thinking, and visual communication. 3 lectures, 1 laboratory. Fulfills GE C3.\n',
+          addl: 'GE Area C3\nTerm Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART102',
+          catalog: '2017-2019',
+          displayName: 'Art and Design Foundation Studies I',
+          units: '4',
+          desc: 'Introduces elements and principles of design, establishing a foundation for all artistic practice. Emphasizing critical thinking and creative problem solving, the interrelationship between form and content are examined. Traditional, digital and lens-based media are explored through individual and collaborative experiences. 3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART103',
+          catalog: '2017-2019',
+          displayName: 'Art and Design Foundation Studies II',
+          units: '4',
+          desc: 'Visual and aesthetic interactions of color, examined through historical and contemporary models.  Formal techniques, media experimentation and content creation, explored through individual and collaborative experiences.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: ART 102.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: null
+        },
+        {
+          id: 'ART104',
+          catalog: '2017-2019',
+          displayName: 'Art and Design Foundation Studies III',
+          units: '4',
+          desc: 'Principles and essential skills for three-dimensional practice in art and design.  Understanding, envisioning, and communicating effectively about space, objects, scale, and the relationship of the body to the built environment.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: SP\nPrerequisite: ART 103.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART122',
+          catalog: '2017-2019',
+          displayName: 'Basic Digital Photography',
+          units: '4',
+          desc: 'Fundamental techniques in photography. Mechanics of digital cameras, optics, composition, perception of light and subject content. Understanding photographic principles and the language of camera vision. Introduction to the impact of photography on culture. Digital camera required. 3 lectures, 1 laboratory. Fulfills GE C3.\n',
+          addl: 'GE Area C3\nTerm Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART182',
+          catalog: '2017-2019',
+          displayName: 'Foundation in Digital Art I',
+          units: '4',
+          desc: 'Introduction to image creation and manipulation, design, illustration, and layout/composition using digital tools, with an emphasis on visual problem solving and creative expression. 3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART203',
+          catalog: '2017-2019',
+          displayName: 'Art Theory and Practice',
+          units: '4',
+          desc: "Contemporary issues in art and design, linking 'ideas' to development of concepts.  Emphasis on individual creative process, and problem solving.  Focus on contemporary critical thinking regarding aesthetics, techniques, and vocabulary.  3 lectures, 1 laboratory.\n",
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: ART 101; and ART 102 or ART 106.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART209',
+          catalog: '2017-2019',
+          displayName: 'Beginning Painting',
+          units: '4',
+          desc: 'Introduction to technical and formal problems in painting.  Exploration of pictorial space, light, and color from observation.  Physical characteristics of paint, various tools, studio methods, and styles of painting.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F, W, SP\nPrerequisite: ART 101.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART212',
+          catalog: '2017-2019',
+          displayName: 'Art History - Renaissance through Baroque Eras',
+          units: '4',
+          desc: 'The significant visual expressions of Northern and Southern European art of the Renaissance and Baroque period. Relevant parallel examples of the art of antiquity and non-European cultures. 4 lectures.\n',
+          addl: 'Term Typically Offered: W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART213',
+          catalog: '2017-2019',
+          displayName: 'Art History- Modern Art, 1900-1945',
+          units: '4',
+          desc: 'Examines the development of significant styles and movements in modern art, including Fauvism, German Expressionism, Cubism, Futurism, Neo-Plasticism, Russian and Soviet avant-gardes, Dada, Surrealism, and/or American modernism. Also introduces selected modern developments in graphic design and photography. 4 lectures. Replaces ART 312.\n',
+          addl: 'Term Typically Offered: F\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART222',
+          catalog: '2017-2019',
+          displayName: 'Black and White Photography',
+          units: '4',
+          desc: "Control and understanding of tonal range under available light. Composition, camera based visual communication skills and concept development. Emphasis on 'photographic seeing' and professional quality printing. 2 lectures, 2 laboratories.\n",
+          addl: 'Term Typically Offered: SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART224',
+          catalog: '2017-2019',
+          displayName: 'Introduction to Artificial Lighting for Photography',
+          units: '4',
+          desc: 'Introduction to studio lighting and contemporary professional studio photography. Production of professional quality prints using digital camera and printing methods. 3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F, W, SP\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART260',
+          catalog: '2017-2019',
+          displayName: 'Critique, Discourse and Practice',
+          units: '4',
+          desc: 'Developing an individual body of artwork.  Rigorous critiques, lectures, and seminar-style discussions aimed at forming a process for discussing artwork.  Art writing, research, and individual conceptual and formal development.  4 lectures.\n',
+          addl: 'Term Typically Offered: SP\nPrerequisite: ART 101 and ART 104.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART314',
+          catalog: '2017-2019',
+          displayName: 'History of Photography',
+          units: '4',
+          desc: 'In-depth survey of the artistic and cultural achievements in photography from its invention to the present day.  Significant photographers, the evolution of aesthetic criteria in the context of other visual arts as well as social/cultural impact.  4 lectures.  Fulfills GE C4 except for Art and Design majors.\n',
+          addl: 'GE Area C4\nTerm Typically Offered: W\nPrerequisite: Junior standing; completion of GE Area A with a grade of C- or better; and completion of GE Area C3.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART315',
+          catalog: '2017-2019',
+          displayName: 'Art History - Art Since 1945',
+          units: '4',
+          desc: 'History of visual art from 1945 to the present.  Focus on significant movements such as Abstract Expressionism, Pop art, minimalism, conceptual art, earthworks, feminism, and postmodernism.  Also focus on new mediums such as performance, video, and installation.  4 lectures.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: ART 112 or ART 211 or ART 212 or ART 213; and Junior standing.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART324',
+          catalog: '2017-2019',
+          displayName: 'Photographic Expression',
+          units: '4',
+          desc: 'Emphasis on personal expression and developing style, introduction to symbology, visual source development and the work of contemporary creative photographers.  Total credit limited to 8 units.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F\nPrerequisite: ART 122 or ART 224. Recommended: ART 222.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART325',
+          catalog: '2017-2019',
+          displayName: 'Advanced Camera and Lighting Techniques',
+          units: '4',
+          desc: 'Emphasis on advanced camera and lighting techniques.  Use of architectural exteriors, interiors, landscapes and studio set-ups to assist mastery of large format cameras.  Other topics include perspective and sharpness correction, lighting (available and artificial), digital imaging and studio equipment.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: F\nPrerequisite: ART 224.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART329',
+          catalog: '2017-2019',
+          displayName: 'Editorial Photography',
+          units: '4',
+          desc: 'Creating, lighting and executing editorial assignments.  Producing photography for corporate needs, i.e.  annual reports, online presentations, brochures and in-house publications.  Emphasis on selecting subject matter and handling lights.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: ART 325.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART383',
+          catalog: '2017-2019',
+          displayName: 'Digital Video I',
+          units: '4',
+          desc: 'Introduction to the use of the DSLR camera as a tool for shooting video and basic digital editing including audio editing.  Topics will include scripting, storyboarding, composition, motion, editing, lighting and sound.  Emphasis on effective communication and expression.  2 lectures, 2 laboratories.\n',
+          addl: 'Term Typically Offered: F, SP\nPrerequisite: ART 122 or ART 224.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: true,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART427',
+          catalog: '2017-2019',
+          displayName: 'Advertising Photography',
+          units: '4',
+          desc: 'Applied principles of design and color to produce a photograph that sells an idea, product, or service.  Joint projects with ART 432, Advertising Design.  Emphasis on thinking, planning, interpreting, and presenting an idea photographically.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: ART 325 and senior standing.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ART463',
+          catalog: '2017-2019',
+          displayName: 'Senior Portfolio Project',
+          units: '4',
+          desc: 'Planning, preparation, and physical production of a portfolio of work for entrance into the professional job market or graduate school.  3 lectures, 1 laboratory.\n',
+          addl: 'Term Typically Offered: SP\nPrerequisite: Senior standing; and ART 260.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: false,
+            termSpring: true
+          }
+        },
+        {
+          id: 'ART483',
+          catalog: '2017-2019',
+          displayName: 'Digital Video II',
+          units: '4',
+          desc: 'Advanced practices in digital video.  Creation of genre-specific narratives using methods in storyboarding, shooting, editing, and sound design.  Advanced methods of storytelling, including documentary video, web-based narratives, and fine art video practices.  Creation of quality expressive videos.  2 lectures, 2 laboratories.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: ART 383.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: false
+          }
+        },
+        {
+          id: 'ENGL371',
+          catalog: '2017-2019',
+          displayName: 'Film Styles and Genres',
+          units: '4',
+          desc: "Major films within particular cinematic genres or styles, with emphasis on critical interpretation, aesthetic appreciation, and the films' historical and cultural contexts.  The Schedule of Classes will list topic selected.  Total credit limited to 12 units.  3 lectures, 1 laboratory.  Fulfills GE C4 except for English majors.  Fulfills GWR for students with junior standing (90 units).\n",
+          addl: 'GE Area C4; GWR\nTerm Typically Offered: W\nPrerequisite: Junior standing or English major; completion of GE Area A with a grade of C- or better; and completion of GE Area C1.\n',
+          gwrCourse: true,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: false,
+            termSpring: false
+          }
+        },
+        {
+          id: 'GRC331',
+          catalog: '2017-2019',
+          displayName: 'Color Management and Quality Analysis',
+          units: '4',
+          desc: 'The physics, psychology, measurement, analysis and management of color for print and electronic documents, including web sites.  Practical application of color correction, color proofing, and production workflows that ensure the best possible color reproduction.  3 lectures, 1 activity.\n',
+          addl: 'Term Typically Offered: W\nPrerequisite: Completion of GE Area B3 and either ART 182 or GRC 202.\n',
+          gwrCourse: false,
+          uscpCourse: false,
+          dynamicTerms: {
+            termSummer: false,
+            termFall: false,
+            termWinter: true,
+            termSpring: false
+          }
+        }
+      ]
+    }
+  ]
+    // sort to ensure order of items doesn't matter in cache
+    .map((cache) => {
+      return {
+        catalog: cache.catalog,
+        courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
+      };
+    })
+    .sort((a, b) => a.catalog.localeCompare(b.catalog))
+};
