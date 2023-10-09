@@ -24,7 +24,7 @@ export const fieldSelectorTooltipConfig: Partial<Props> = {
   theme: 'light-border',
   allowHTML: true,
   content:
-    '<div class="whitespace-pre-wrap">' +
+    '<div style="white-space: pre-wrap;">' +
     'Which part of the course to search on.' +
     '\n\n<strong>Course ID: </strong>The ID of the course (e.g. "CPE101"). ' +
     'Note that <u>there is no space</u> in the course ID.' +
@@ -40,7 +40,7 @@ export const searchHelpTooltipConfig: Partial<Props> = {
   theme: 'light-border',
   allowHTML: true,
   content:
-    '<div class="whitespace-pre-wrap">' +
+    '<div style="white-space: pre-wrap;">' +
     'If you cannot find the courses you are looking for, here are some course searching tips:' +
     '\n\n1. Make sure your query is spelled correctly. The search tool does not support misspelled queries.' +
     '\n\n2. If you are searching on Course ID, ensure that there are no spaces in between the letters and numbers of the ID.' +
