@@ -3,7 +3,7 @@ import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSear
 import {
   SEARCH_DELAY_TIME_MS,
   BOOLEAN_SEARCH_OPERATORS_REGEX
-} from '$lib/common/config/catalogSearchConfig';
+} from '$lib/client/config/catalogSearchConfigClient';
 import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types';
 
