@@ -42,7 +42,7 @@ export const searchHelpTooltipConfig: Partial<Props> = {
   content:
     '<div style="white-space: pre-wrap;">' +
     'If you cannot find the courses you are looking for, here are some course searching tips:' +
-    '\n\n1. Make sure your query is spelled correctly. The search tool does not support misspelled queries.' +
+    '\n\n1. Make sure your query is spelled correctly (searches are not case sensitive). The search tool does not support misspelled queries.' +
     '\n\n2. If you are searching on Course ID, ensure that there are no spaces in between the letters and numbers of the ID.' +
     "\n\n3. Verify that the course you are trying to add is in the selected Program's catalog. Only courses from this catalog are displayed in search results." +
     '</div>',
