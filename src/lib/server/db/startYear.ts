@@ -1,7 +1,14 @@
 import { prisma } from '$lib/server/db/prisma';
 
 export async function getStartYears(): Promise<string[]> {
-  return (await prisma.startYear.findMany()).map((startYear) => startYear.year);
+  return (
+    await prisma.startYear.findMany({
+      // order is indeterministic without explicit sort
+      orderBy: {
+        year: 'asc'
+      }
+    })
+  ).map((startYear) => startYear.year);
 }
 
 export async function validateStartYear(startYear: string): Promise<boolean> {

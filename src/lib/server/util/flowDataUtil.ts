@@ -2,7 +2,7 @@ import { COLORS } from '$lib/common/config/colorConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
-import { generateCourseCacheFlowcharts } from './courseCacheUtil';
+import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import {
@@ -86,16 +86,19 @@ export async function generateFlowchart(
   flowchart: Flowchart;
   courseCache: CourseCache[];
 }> {
-  // fetch required data
-  // presumably templateFlowchart termData has been validated before being persisted to DB
-  // and accessed here so safe to explicitly cast
-  const templateFlowcharts = (await getTemplateFlowcharts(data.programIds)).map((flowchart) => {
+  // fetch templates
+  const fetchedTemplateFlowcharts = await getTemplateFlowcharts(data.programIds);
+  const templateFlowcharts = fetchedTemplateFlowcharts.map((flowchart) => {
     return {
       ...flowchart,
       programId: [flowchart.programId],
+      // presumably templateFlowchart termData has been validated before being persisted to DB
+      // and accessed here so safe to explicitly cast
       termData: flowchart.termData as Term[]
     };
   });
+
+  // generate required course cache for template flowchart
   let courseCache = await generateCourseCacheFlowcharts(templateFlowcharts, programCache, true);
 
   const mergedFlowchartTermData = mergeFlowchartsCourseData(

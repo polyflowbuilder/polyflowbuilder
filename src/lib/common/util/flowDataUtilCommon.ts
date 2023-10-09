@@ -1,8 +1,8 @@
 import hash from 'object-hash';
 import { computeTermUnits } from '$lib/common/util/unitCounterUtilCommon';
 import type { Program } from '@prisma/client';
-import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types';
+import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 // wrapper function to make sure hashes are being generated correctly in different contexts
 // will take the form of [flowMetadataHash].[flowContentHash]

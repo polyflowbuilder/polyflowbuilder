@@ -35,6 +35,11 @@ test.describe('getAvailableStartYears tests', () => {
     expect(res.status()).toBe(200);
     expect(resData).toHaveProperty('startYears');
     expect(resData.startYears.length).toBeTruthy();
+
+    // expect entries to be sorted (deterministic order)
+    expect(resData.startYears).toStrictEqual(
+      [...resData.startYears].sort((a, b) => a.localeCompare(b))
+    );
   });
 
   test('401 case handled properly', async ({ request }) => {

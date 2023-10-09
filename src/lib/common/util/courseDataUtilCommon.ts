@@ -1,7 +1,7 @@
 // handles common functionality with course data
 
+import type { Course } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
-import type { Course } from '../schema/flowchartSchema';
 import type { APICourseFull, ComputedCourseItemDisplayData } from '$lib/types';
 
 export function getCatalogFromProgramIDIndex(
