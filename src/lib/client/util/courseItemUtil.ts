@@ -53,7 +53,7 @@ export function buildTermCourseItemsData(
       itemData.tooltipParams = {
         arrow: false,
         placement: 'right-start',
-        theme: 'light',
+        theme: 'light-border',
         allowHTML: true,
         content: generateCourseItemTooltipHTML(computedCourseDisplayValues),
         maxWidth: MAX_TOOLTIP_WIDTH_PX,

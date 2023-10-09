@@ -91,7 +91,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
     await expect(courseSearchFieldSelector).toBeVisible();
     await expect(courseSearchFieldSelector).toBeInViewport();
     await expect(courseSearchFieldSelector).toBeDisabled();
-    await expect(courseSearchFieldSelector).toHaveValue('displayName');
+    await expect(courseSearchFieldSelector).toHaveValue('id');
 
     // expect default state of query box
     const courseSearchQueryBox = page.getByRole('searchbox', {
@@ -150,7 +150,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
     await expect(courseSearchFieldSelector).toBeVisible();
     await expect(courseSearchFieldSelector).toBeInViewport();
     await expect(courseSearchFieldSelector).toBeEnabled();
-    await expect(courseSearchFieldSelector).toHaveValue('displayName');
+    await expect(courseSearchFieldSelector).toHaveValue('id');
 
     const courseSearchQueryBox = page.getByRole('searchbox', {
       name: 'course search query input'
@@ -211,7 +211,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
     await expect(courseSearchFieldSelector).toBeVisible();
     await expect(courseSearchFieldSelector).toBeInViewport();
     await expect(courseSearchFieldSelector).toBeEnabled();
-    await expect(courseSearchFieldSelector).toHaveValue('displayName');
+    await expect(courseSearchFieldSelector).toHaveValue('id');
 
     const courseSearchQueryBox = page.getByRole('searchbox', {
       name: 'course search query input'
@@ -296,7 +296,7 @@ test.describe('CourseSearchOptionsSelector tests', () => {
       page.getByRole('combobox', {
         name: 'course search field selector'
       })
-    ).toHaveValue('displayName');
+    ).toHaveValue('id');
 
     await expect(
       page.getByRole('searchbox', {

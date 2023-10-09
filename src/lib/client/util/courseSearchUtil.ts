@@ -1,6 +1,9 @@
 import { courseCache } from '$lib/client/stores/apiDataStore';
-import { SEARCH_DELAY_TIME_MS } from '$lib/common/config/catalogSearchConfig';
 import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
+import {
+  SEARCH_DELAY_TIME_MS,
+  BOOLEAN_SEARCH_OPERATORS_REGEX
+} from '$lib/client/config/catalogSearchConfigClient';
 import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types';
 
@@ -10,6 +13,13 @@ let fullSearchCache: SearchCache[] = [];
 let fullCourseCache: CourseCache[] = [];
 searchCache.subscribe((cache) => (fullSearchCache = cache));
 courseCache.subscribe((cache) => (fullCourseCache = cache));
+
+// if any boolean operators are present, return the query as-is
+// else, add a wildcard at the end, as users expect the search tool
+//  to function in this manner
+export function transformRawQuery(query: string): string {
+  return !query.length || BOOLEAN_SEARCH_OPERATORS_REGEX.test(query) ? query : `${query}*`;
+}
 
 export function initSearch(query: string, catalog: string, field: CatalogSearchValidFields) {
   if (!delayingBeforeSearch) {

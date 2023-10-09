@@ -345,7 +345,7 @@ test.describe('course search tests', () => {
       .getByRole('searchbox', {
         name: 'course search query input'
       })
-      .fill('beekeeping');
+      .fill('plsc175');
     await expect(page.locator('.flowInfoPanel .loading-spinner')).toHaveCount(1);
     const response = await responsePromise;
 
@@ -461,7 +461,7 @@ test.describe('course search tests', () => {
       .getByRole('searchbox', {
         name: 'course search query input'
       })
-      .fill('beekeeping');
+      .fill('PlSc175');
     await expect(page.locator('.flowInfoPanel .loading-spinner')).toHaveCount(1);
     const response = await responsePromise;
 

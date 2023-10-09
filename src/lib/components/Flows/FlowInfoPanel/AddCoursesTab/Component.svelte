@@ -3,13 +3,15 @@
   import CourseItem from '../../FlowEditor/CourseItem.svelte';
   import MutableForEachContainer from '$lib/components/common/MutableForEachContainer.svelte';
   import CourseSearchOptionsSelector from './CourseSearchOptionsSelector.svelte';
-  import { initSearch } from '$lib/client/util/courseSearchUtil';
+  import { tooltip } from '$lib/client/util/tooltipUtil';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import { COURSE_ITEM_SIZE_PX } from '$lib/client/config/uiConfig';
+  import { searchHelpTooltipConfig } from '$lib/client/config/catalogSearchConfigClient';
   import { buildTermCourseItemsData } from '$lib/client/util/courseItemUtil';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+  import { initSearch, transformRawQuery } from '$lib/client/util/courseSearchUtil';
   import { MAX_SEARCH_RESULTS_RETURN_COUNT } from '$lib/common/config/catalogSearchConfig';
   import { activeSearchResults, searchCache } from '$lib/client/stores/catalogSearchStore';
   import { faExclamationCircle, faFileCircleXmark } from '@fortawesome/free-solid-svg-icons';
@@ -20,7 +22,7 @@
   // search options
   let searchProgramIndex = -1;
   let query = '';
-  let field: CatalogSearchValidFields = 'displayName';
+  let field: CatalogSearchValidFields = 'id';
 
   // search results
   let items: CourseItemData[] = [];
@@ -28,11 +30,14 @@
   // for optional type
   $: selectedFlow = $userFlowcharts[$selectedFlowIndex] as Flowchart | undefined;
 
+  // query transformation
+  $: transformedQuery = transformRawQuery(query);
+
   // reset searches when we switch flows
   $: {
     $selectedFlowIndex;
     searchProgramIndex = $selectedFlowIndex !== -1 ? 0 : -1;
-    field = 'displayName';
+    field = 'id';
     query = '';
   }
 
@@ -45,7 +50,7 @@
     if (selectedCatalog) {
       // reset results in UI so we don't see stale results during new query
       $activeSearchResults = undefined;
-      initSearch(query, selectedCatalog, field);
+      initSearch(transformedQuery, selectedCatalog, field);
     }
   }
 
@@ -97,7 +102,7 @@
     {:then results}
       {#if results && searchProgramIndex !== -1 && $searchCache
           .find((entry) => entry.catalog === selectedCatalog)
-          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${query}`)}
+          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${transformedQuery}`)}
         {#if !results.searchValid}
           <div class="text-center">
             <div class="invalidSearchIcon pb-2">
@@ -112,7 +117,12 @@
             <div class="noResultsIcon pb-2">
               <Fa icon={faFileCircleXmark} style="margin: auto;" />
             </div>
-            <small class="text-gray-500">No results found. Please try a different search.</small>
+            <small class="text-gray-500"
+              >No results found. Please verify that the search parameters are correct.
+            </small>
+            <small use:tooltip={searchHelpTooltipConfig} class="hyperlink cursor-pointer"
+              >Need help?</small
+            >
           </div>
         {:else}
           <!-- TODO: the text in the slot should always stay at the bottom of the results section -->
@@ -133,8 +143,11 @@
               {/if}
               {#if results.searchValid}
                 <small class="text-gray-500"
-                  >If you could not find a particular course, verify and narrow your search options
-                  if applicable.</small
+                  >If you could not find a particular course, verify and/or narrow your search
+                  parameters.</small
+                >
+                <small use:tooltip={searchHelpTooltipConfig} class="hyperlink cursor-pointer"
+                  >Need help?</small
                 >
               {/if}
             </div>
