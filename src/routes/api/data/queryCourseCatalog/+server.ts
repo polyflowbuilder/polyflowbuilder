@@ -5,7 +5,7 @@ import { searchCatalog } from '$lib/server/db/course';
 import { searchCatalogSchema } from '$lib/server/schema/searchCatalogSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/api/data/searchCatalog)');
+const logger = initLogger('APIRouteHandler (/api/data/queryCourseCatalog)');
 
 export const GET: RequestHandler = async ({ locals, url }) => {
   try {
