@@ -82,7 +82,7 @@ async function performSearch(
     query,
     field
   });
-  const searchResults = (await fetch(`/api/data/searchCatalog?${searchParams.toString()}`)
+  const searchResults = (await fetch(`/api/data/queryCourseCatalog?${searchParams.toString()}`)
     .then((resp) => {
       if (resp.status === 400) {
         return {

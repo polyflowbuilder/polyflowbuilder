@@ -94,7 +94,7 @@ async function assertCorrectCatalogSearch(
   // perform a search and expect request to go out bc its a new search
   // wrap outgoing call in small delay so we can detect loading
   let failOnRoute = false;
-  await page.route(/\/api\/data\/searchCatalog/, async (route) => {
+  await page.route(/\/api\/data\/queryCourseCatalog/, async (route) => {
     if (failOnRoute) {
       throw new Error('unexpected request to searchCatalog intercepted');
     }
@@ -102,7 +102,7 @@ async function assertCorrectCatalogSearch(
     await new Promise((r) => setTimeout(r, 500));
     await route.continue();
   });
-  const responsePromise = page.waitForResponse(/\/api\/data\/searchCatalog/);
+  const responsePromise = page.waitForResponse(/\/api\/data\/queryCourseCatalog/);
   await page
     .getByRole('searchbox', {
       name: 'course search query input'
@@ -336,11 +336,11 @@ test.describe('course search tests', () => {
 
     // perform a search and expect request to go out bc its a new search
     // wrap outgoing call in small delay so we can detect loading
-    await page.route(/\/api\/data\/searchCatalog/, async (route) => {
+    await page.route(/\/api\/data\/queryCourseCatalog/, async (route) => {
       await new Promise((r) => setTimeout(r, 500));
       await route.continue();
     });
-    const responsePromise = page.waitForResponse(/\/api\/data\/searchCatalog/);
+    const responsePromise = page.waitForResponse(/\/api\/data\/queryCourseCatalog/);
     await page
       .getByRole('searchbox', {
         name: 'course search query input'
@@ -452,11 +452,11 @@ test.describe('course search tests', () => {
 
     // perform a search and expect request to go out bc its a new search
     // wrap outgoing call in small delay so we can detect loading
-    await page.route(/\/api\/data\/searchCatalog/, async (route) => {
+    await page.route(/\/api\/data\/queryCourseCatalog/, async (route) => {
       await new Promise((r) => setTimeout(r, 500));
       await route.continue();
     });
-    const responsePromise = page.waitForResponse(/\/api\/data\/searchCatalog/);
+    const responsePromise = page.waitForResponse(/\/api\/data\/queryCourseCatalog/);
     await page
       .getByRole('searchbox', {
         name: 'course search query input'
