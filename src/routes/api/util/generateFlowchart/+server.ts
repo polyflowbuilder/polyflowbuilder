@@ -6,7 +6,7 @@ import { getProgramsFromIds } from '$lib/server/db/program';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/api/data/generateFlowchart)');
+const logger = initLogger('APIRouteHandler (/api/util/generateFlowchart)');
 
 export const GET: RequestHandler = async ({ locals, url }) => {
   try {

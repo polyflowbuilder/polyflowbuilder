@@ -46,7 +46,7 @@
     };
     const searchParams = new URLSearchParams(payload);
 
-    const resp = await fetch(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const resp = await fetch(`/api/util/generateFlowchart?${searchParams.toString()}`);
     switch (resp.status) {
       case 200: {
         const respJson = (await resp.json()) as {
