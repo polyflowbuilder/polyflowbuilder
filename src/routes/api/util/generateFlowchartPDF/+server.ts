@@ -6,7 +6,7 @@ import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil'
 import { extractPDFDataFromFlowchart, generatePDF } from '$lib/server/util/generatePDF';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const logger = initLogger('APIRouteHandler (/api/data/generatePDF)');
+const logger = initLogger('APIRouteHandler (/api/util/generateFlowchartPDF)');
 
 export const GET: RequestHandler = async ({ locals, url }) => {
   try {

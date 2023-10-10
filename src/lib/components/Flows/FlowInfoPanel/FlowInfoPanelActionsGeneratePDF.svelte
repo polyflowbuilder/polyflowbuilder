@@ -11,7 +11,7 @@
     const searchParams = new URLSearchParams({
       flowchartId: $userFlowcharts[$selectedFlowIndex]?.id
     });
-    await fetch(`/api/data/generatePDF?${searchParams.toString()}`)
+    await fetch(`/api/util/generateFlowchartPDF?${searchParams.toString()}`)
       .then(async (resp) => {
         switch (resp.status) {
           case 200: {
