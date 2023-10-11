@@ -43,7 +43,7 @@ test.describe('generate flowchart api input tests', () => {
   });
 
   test('generate flowchart api returns 401 without authorization', async ({ request }) => {
-    const res = await request.get('/api/data/generateFlowchart');
+    const res = await request.get('/api/util/generateFlowchart');
 
     const expectedResponseBody = {
       message: 'Generate flowchart request must be authenticated.'
@@ -56,7 +56,7 @@ test.describe('generate flowchart api input tests', () => {
   test('generate flowchart api returns 400 without any data', async ({ request }) => {
     await performLoginBackend(request, userEmail, 'test');
 
-    const res = await request.get('/api/data/generateFlowchart');
+    const res = await request.get('/api/util/generateFlowchart');
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -79,7 +79,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -101,7 +101,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -128,7 +128,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -150,7 +150,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -172,7 +172,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -196,7 +196,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: 'invalid'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -220,7 +220,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497,invalid'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -242,7 +242,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: ''
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -264,7 +264,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '68be11b7-389b-4ebc-9b95-8997e7314497,68be11b7-389b-4ebc-9b95-8997e7314497'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -286,7 +286,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -308,7 +308,7 @@ test.describe('generate flowchart api input tests', () => {
       programIds: '1e292a2d-bdad-43b3-a89e-5ff8fc9b93d3,0c1ea546-75ac-4753-9505-bcac01ef8505'
     });
 
-    const res = await request.get(`/api/data/generateFlowchart?${searchParams.toString()}`);
+    const res = await request.get(`/api/util/generateFlowchart?${searchParams.toString()}`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -330,7 +330,7 @@ test.describe('generate flowchart api input tests', () => {
 
     // just standard thing
     const res1 = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2020',
         programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
@@ -339,7 +339,7 @@ test.describe('generate flowchart api input tests', () => {
     expect(res1.status()).toBe(200);
 
     const res2 = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'another test!',
         startYear: '2015',
         programIds:
@@ -349,7 +349,7 @@ test.describe('generate flowchart api input tests', () => {
     expect(res2.status()).toBe(200);
 
     const res3 = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'another test!',
         startYear: '2015',
         programIds:
@@ -361,7 +361,7 @@ test.describe('generate flowchart api input tests', () => {
     expect(res3.status()).toBe(200);
 
     const res4 = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'another test!',
         startYear: '2015',
         programIds:
@@ -373,7 +373,7 @@ test.describe('generate flowchart api input tests', () => {
     expect(res4.status()).toBe(200);
 
     const res5 = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'another test!',
         startYear: '2015',
         programIds:
@@ -417,7 +417,7 @@ test.describe('generate flowchart api output tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2020',
         programIds: '68be11b7-389b-4ebc-9b95-8997e7314497'
@@ -471,7 +471,7 @@ test.describe('generate flowchart api output tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2020',
         programIds: '68be11b7-389b-4ebc-9b95-8997e7314497',
@@ -516,7 +516,7 @@ test.describe('generate flowchart api output tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2020',
         programIds: '68be11b7-389b-4ebc-9b95-8997e7314497',
@@ -568,7 +568,7 @@ test.describe('generate flowchart api output tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2020',
         programIds: '68be11b7-389b-4ebc-9b95-8997e7314497,b86e20fd-bea0-4b68-9d40-793b447ef700'
@@ -624,7 +624,7 @@ test.describe('generate flowchart api output tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/generateFlowchart?${new URLSearchParams({
+      `/api/util/generateFlowchart?${new URLSearchParams({
         name: 'test',
         startYear: '2015',
         programIds: 'b3c6505b-3993-40bb-967c-423aaeadc2f6,ac354862-271a-4f0b-86f2-6a79e74bf2db'

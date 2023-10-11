@@ -22,7 +22,7 @@ test.describe('searchCatalog API tests', () => {
   });
 
   test('fetch results in 400 without authentication', async ({ request }) => {
-    const res = await request.get('/api/data/searchCatalog');
+    const res = await request.get('/api/data/queryCourseCatalog');
 
     const expectedResponseBody = {
       message: 'Request was unauthenticated. Please authenticate and try again.'
@@ -36,7 +36,7 @@ test.describe('searchCatalog API tests', () => {
     // perform login
     await performLoginBackend(request, userEmail, 'test');
 
-    const res = await request.get('/api/data/searchCatalog');
+    const res = await request.get('/api/data/queryCourseCatalog');
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -54,7 +54,7 @@ test.describe('searchCatalog API tests', () => {
     // perform login
     await performLoginBackend(request, userEmail, 'test');
 
-    const res = await request.get(`/api/data/searchCatalog?catalog=invalid&query=test`);
+    const res = await request.get(`/api/data/queryCourseCatalog?catalog=invalid&query=test`);
 
     const expectedResponseBody = {
       message: 'Invalid input received.',
@@ -72,7 +72,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2015-2017',
         query: '++data'
       }).toString()}`
@@ -91,7 +91,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2015-2017',
         query: 'test',
         field: 'invalid'
@@ -114,7 +114,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2022-2026',
         query: 'Bowling'
       }).toString()}`
@@ -171,7 +171,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2022-2026',
         query: 'data'
       }).toString()}`
@@ -520,7 +520,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2022-2026',
         query: 'askldfmvklsdmvklsfmvklsdfmvlksdmvkl'
       }).toString()}`
@@ -544,7 +544,7 @@ test.describe('searchCatalog API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get(
-      `/api/data/searchCatalog?${new URLSearchParams({
+      `/api/data/queryCourseCatalog?${new URLSearchParams({
         catalog: '2022-2026',
         query: 'data*',
         field: 'id'

@@ -42,7 +42,7 @@ test.describe('create flow routine tests', () => {
 
   test('user able to create new flowchart', async ({ page }) => {
     // add delay to query requests to ensure Playwright can capture loading spinner
-    await page.route(/\/api\/data\/generateFlowchart/, async (route) => {
+    await page.route(/\/api\/util\/generateFlowchart/, async (route) => {
       await new Promise((r) => setTimeout(r, 250));
       void route.continue();
     });
@@ -87,7 +87,7 @@ test.describe('create flow routine tests', () => {
     // create and wait for response from network
     // need to start waiting for response before request expected to happen so that it doesn't timeout
     // (need to setup listener before the event fires)
-    const responsePromise = page.waitForResponse(/\/api\/data\/generateFlowchart/);
+    const responsePromise = page.waitForResponse(/\/api\/util\/generateFlowchart/);
     await page.getByRole('button', { name: 'Create' }).click();
     await expect(page.getByRole('button', { name: 'Create' }).locator('span')).toHaveClass(
       /loading/
@@ -170,7 +170,7 @@ test.describe('create flow routine tests', () => {
 
   test('401 case handled properly', async ({ page }) => {
     // mock a 401 response
-    await page.route(/\/api\/data\/generateFlowchart/, async (route) => {
+    await page.route(/\/api\/util\/generateFlowchart/, async (route) => {
       await route.fulfill({
         status: 401,
         contentType: 'application/json',
@@ -216,7 +216,7 @@ test.describe('create flow routine tests', () => {
 
     // create and wait for response from network
     // dont check for loading class bc goes away when dialog is handled (eg immediately)
-    const responsePromise = page.waitForResponse(/\/api\/data\/generateFlowchart/);
+    const responsePromise = page.waitForResponse(/\/api\/util\/generateFlowchart/);
     await page.getByRole('button', { name: 'Create' }).click();
     const response = await responsePromise;
 
@@ -242,7 +242,7 @@ test.describe('create flow routine tests', () => {
 
   test('400 case handled properly', async ({ page }) => {
     // mock a 400 response
-    await page.route(/\/api\/data\/generateFlowchart/, async (route) => {
+    await page.route(/\/api\/util\/generateFlowchart/, async (route) => {
       await route.fulfill({
         status: 400,
         contentType: 'application/json',
@@ -288,7 +288,7 @@ test.describe('create flow routine tests', () => {
 
     // create and wait for response from network
     // dont check for loading class bc goes away when dialog is handled (eg immediately)
-    const responsePromise = page.waitForResponse(/\/api\/data\/generateFlowchart/);
+    const responsePromise = page.waitForResponse(/\/api\/util\/generateFlowchart/);
     await page.getByRole('button', { name: 'Create' }).click();
     const response = await responsePromise;
 
@@ -314,7 +314,7 @@ test.describe('create flow routine tests', () => {
 
   test('500 case handled properly', async ({ page }) => {
     // mock a 500 response
-    await page.route(/\/api\/data\/generateFlowchart/, async (route) => {
+    await page.route(/\/api\/util\/generateFlowchart/, async (route) => {
       await route.fulfill({
         status: 500,
         contentType: 'application/json',
@@ -360,7 +360,7 @@ test.describe('create flow routine tests', () => {
 
     // create and wait for response from network
     // dont check for loading class bc goes away when dialog is handled (eg immediately)
-    const responsePromise = page.waitForResponse(/\/api\/data\/generateFlowchart/);
+    const responsePromise = page.waitForResponse(/\/api\/util\/generateFlowchart/);
     await page.getByRole('button', { name: 'Create' }).click();
     const response = await responsePromise;
 
