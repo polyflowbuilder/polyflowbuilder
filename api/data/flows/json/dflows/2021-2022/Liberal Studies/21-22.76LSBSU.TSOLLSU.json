@@ -160,7 +160,8 @@
         {
           "id": null,
           "color": "#BFBFBF",
-          "customId": "Declare Your Concentration",
+          "customId": "Declare your concentration",
+          "customUnits": "0",
           "customDesc": "Declare your concentration at this time."
         }
       ]
@@ -247,6 +248,7 @@
           "id": null,
           "color": "#DA9593",
           "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR course or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
@@ -304,6 +306,7 @@
           "id": null,
           "color": "#BFBFBF",
           "customId": "School of Education Info",
+          "customUnits": "0",
           "customDesc": "Visit the School of Education credential office in Bldg 2, Room 120 for more information on applying to the Multiple Subject credential program."
         }
       ]
