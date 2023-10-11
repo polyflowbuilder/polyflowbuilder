@@ -160,7 +160,8 @@
         {
           "id": null,
           "color": "#BFBFBF",
-          "customId": "Declare your Concentration",
+          "customId": "Declare your concentration",
+          "customUnits": "0",
           "customDesc": "Declare your Concentration around this time."
         }
       ]
@@ -247,6 +248,7 @@
           "id": null,
           "color": "#DA9593",
           "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
         }
       ]
@@ -335,6 +337,7 @@
           "id": null,
           "color": "#BFBFBF",
           "customId": "Visit the School of Education",
+          "customUnits": "0",
           "customDesc": "Visit the School of Education credential office in Building 2, Room 120 for information on applying to the Multiple Subject credential program."
         }
       ]
