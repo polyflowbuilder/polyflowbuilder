@@ -225,6 +225,7 @@ export const responsePayload1 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n'
           }
@@ -563,6 +564,7 @@ export const responsePayload1 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n'
           }
@@ -1526,6 +1528,7 @@ export const responsePayload2 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.\n'
           },
@@ -1620,6 +1623,7 @@ export const responsePayload2 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites.',
             programIdIndex: 1
@@ -2991,6 +2995,7 @@ export const responsePayload3 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites.'
           },
@@ -3017,6 +3022,7 @@ export const responsePayload3 = {
             id: null,
             color: '#DA9593',
             customId: 'Graduation Writing Requirement',
+            customUnits: '0',
             customDesc:
               'Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here.',
             programIdIndex: 1
