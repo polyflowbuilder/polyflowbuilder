@@ -214,6 +214,9 @@ async function syncTemplateFlowcharts() {
         } else {
           console.log('error occurred while getting flow-specific notes, skipping', e);
         }
+
+        // force an abort to make sure all flowcharts are valid
+        process.exit(-1);
       }
     }
   }
