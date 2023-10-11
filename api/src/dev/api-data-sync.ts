@@ -1,18 +1,16 @@
 import fs from 'fs';
 import path from 'path';
-
 import { ZodError } from 'zod';
+import { apiRoot, getFiles } from './common';
 import { Prisma, PrismaClient } from '@prisma/client';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
-import { apiRoot, getFiles, nthIndex } from './common';
-
 import type {
-  TermTypicallyOffered,
-  TemplateFlowchart,
-  CourseRequisite,
+  Program,
   GECourse,
   APICourse,
-  Program
+  CourseRequisite,
+  TemplateFlowchart,
+  TermTypicallyOffered
 } from '@prisma/client';
 
 interface TemplateFlowchartMetadata {
@@ -239,4 +237,15 @@ async function syncAllAPIData() {
   await syncTemplateFlowcharts();
 }
 
-void syncAllAPIData();
+if (process.env.API_DATA_SYNC_SETTINGS) {
+  const options = process.env.API_DATA_SYNC_SETTINGS.split(',');
+  console.log('found sync settings', options);
+
+  if (options.includes('templateFlowcharts')) {
+    await prisma.templateFlowchart.deleteMany();
+    await syncTemplateFlowcharts();
+  }
+} else {
+  console.log('no sync settings found, executing full replace');
+  void syncAllAPIData();
+}

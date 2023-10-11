@@ -177,6 +177,7 @@
           "id": null,
           "color": "#BFBFBF",
           "customId": "Concentration Declaration Due",
+          "customUnits": "0",
           "customDesc": "The concentration declaration should be submitted during this time."
         }
       ]
@@ -211,6 +212,7 @@
           "id": null,
           "color": "#DA9593",
           "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to the current catalog for prerequisites."
         }
       ]
@@ -352,6 +354,5 @@
   "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "publishedId": null,
   "importedId": null,
-  "lastUpdatedUTC": "2023-03-05T20:03:22.899Z",
-  "flowHash": "6334f448532514b516e457cf9a7bdcfd.cf0770ef5bc62b1a766234ac64e44fd4"
+  "lastUpdatedUTC": "2023-03-05T20:03:22.899Z"
 }

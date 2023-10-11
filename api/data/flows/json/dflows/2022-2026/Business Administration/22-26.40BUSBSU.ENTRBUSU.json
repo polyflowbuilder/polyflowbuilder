@@ -178,6 +178,7 @@
           "id": null,
           "color": "#BFBFBF",
           "customId": "Concentration Declaration Due",
+          "customUnits": "0",
           "customDesc": "Concentration Declaration is due at this time."
         }
       ]
@@ -240,6 +241,7 @@
           "id": null,
           "color": "#DA9593",
           "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Refer to current catalog for prerequisites."
         }
       ]
@@ -373,6 +375,5 @@
   "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "publishedId": null,
   "importedId": null,
-  "lastUpdatedUTC": "2023-03-05T20:03:23.587Z",
-  "flowHash": "3b96293278810971fc2a757d2ad2093b.c95e793c2e100ed6a092f23c086ff02a"
+  "lastUpdatedUTC": "2023-03-05T20:03:23.587Z"
 }

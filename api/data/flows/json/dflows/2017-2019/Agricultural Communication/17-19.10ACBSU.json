@@ -185,8 +185,8 @@
         {
           "id": null,
           "color": "#DA9593",
-          "customId": "GWR",
-          "customDisplayName": "Graduation Writing Requirement",
+          "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Replace this placeholder with a a GWR class or the GWR exam."
         }
       ]
@@ -326,6 +326,5 @@
   "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "publishedId": null,
   "importedId": null,
-  "lastUpdatedUTC": "2023-03-05T20:03:22.874Z",
-  "flowHash": "ea54b14e8ce844ce48ceef968932dbf8.1a8f634894c2b8f9c7afe5c74e9d9a25"
+  "lastUpdatedUTC": "2023-03-05T20:03:22.874Z"
 }

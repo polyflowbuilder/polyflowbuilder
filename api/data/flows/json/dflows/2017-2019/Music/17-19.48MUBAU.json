@@ -285,7 +285,8 @@
         {
           "id": null,
           "color": "#BFBFBF",
-          "customId": "MIDPOINT EXAM",
+          "customId": "Midpoint Exam",
+          "customUnits": "0",
           "customDesc": "Midpoint Examination for Music majors."
         }
       ]
@@ -369,6 +370,7 @@
           "id": null,
           "color": "#DA9593",
           "customId": "Graduation Writing Requirement",
+          "customUnits": "0",
           "customDesc": "Students can attempt to fulfill the requirement after 90 earned units; students should complete the requirement before senior year. Any GWR class or GWR exam can go here. Refer to current catalog for prerequisites."
         }
       ]
@@ -542,6 +544,5 @@
   "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "publishedId": null,
   "importedId": null,
-  "lastUpdatedUTC": "2023-03-05T20:03:23.047Z",
-  "flowHash": "f2d8e38e93bc570a600d93a82601490d.60724446d5e4a8614f10edaf6e5b04f7"
+  "lastUpdatedUTC": "2023-03-05T20:03:23.047Z"
 }
