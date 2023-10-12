@@ -1,8 +1,9 @@
+import type { ObjectSet } from '$lib/common/util/ObjectSet';
 import type {
+  Program,
+  GECourse,
   APICourse,
   CourseRequisite,
-  GECourse,
-  Program,
   TermTypicallyOffered
 } from '@prisma/client';
 
@@ -10,10 +11,7 @@ export type APICourseFull = APICourse & {
   dynamicTerms: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
 };
 
-export interface CourseCache {
-  catalog: string;
-  courses: APICourseFull[];
-}
+export type CourseCache = Map<string, ObjectSet<APICourseFull>>;
 
 export interface MajorNameCache {
   catalog: string;
@@ -27,7 +25,7 @@ export interface APIData {
   programData: Program[];
 
   // course-related data
-  courseData: CourseCache[];
+  courseData: CourseCache;
   geCourseData: GECourse[];
   reqCourseData: CourseRequisite[];
 }
