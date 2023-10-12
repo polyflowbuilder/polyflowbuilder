@@ -10,7 +10,7 @@ import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types'
 let delayingBeforeSearch = false;
 let beforeSearchTimer: ReturnType<typeof setTimeout>;
 let fullSearchCache: SearchCache[] = [];
-let fullCourseCache: CourseCache[] = [];
+let fullCourseCache: CourseCache;
 searchCache.subscribe((cache) => (fullSearchCache = cache));
 courseCache.subscribe((cache) => (fullCourseCache = cache));
 
@@ -49,9 +49,8 @@ async function performSearch(
 
   // get appropriate caches
   const searchCacheIdx = fullSearchCache.findIndex((cache) => cache.catalog === catalog);
-  const courseCacheIdx = fullCourseCache.findIndex((cache) => cache.catalog === catalog);
 
-  if (searchCacheIdx === -1 || courseCacheIdx === -1) {
+  if (searchCacheIdx === -1 || !fullCourseCache.has(catalog)) {
     throw new Error(`unable to find cache entries required for search for catalog ${catalog}`);
   }
 
@@ -61,11 +60,10 @@ async function performSearch(
   );
 
   if (searchRecord) {
-    // TODO: optimize this
     // do it this way to return results in the order they were originally received in
     return {
       searchResults: searchRecord.searchResults.map((result) => {
-        const course = fullCourseCache[courseCacheIdx].courses.find((crs) => crs.id === result);
+        const course = fullCourseCache.get(catalog)?.get(result);
         if (!course) {
           throw new Error(`course ${result} present in searchCache and not present in courseCache`);
         }
@@ -132,17 +130,16 @@ async function performSearch(
     });
     return caches;
   });
-  courseCache.update((caches) => {
-    // TODO: convert course cache to a set so this is super fast
+  courseCache.update((cache) => {
     searchResults.results.searchResults.forEach((newCourse) => {
-      if (
-        !caches[courseCacheIdx].courses.find((cachedCourse) => cachedCourse.id === newCourse.id)
-      ) {
-        caches[courseCacheIdx].courses.push(newCourse);
+      const catalogCache = cache.get(catalog);
+      if (!catalogCache) {
+        throw new Error(`courseSearchUtil: could not find catalog ${catalog} in courseCache`);
       }
+      catalogCache.add(newCourse);
     });
 
-    return caches;
+    return cache;
   });
 
   return searchResults.results;
