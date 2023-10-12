@@ -1,6 +1,9 @@
 // util functions related to unit counting
 
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import {
+  getCourseFromCourseCache,
+  getCatalogFromProgramIDIndex
+} from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { CourseCache } from '$lib/types';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
@@ -22,7 +25,7 @@ export function computeTermUnits(
   termData: Course[],
   programId: string[],
   // bc we can call from either client or server
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[]
 ): string {
   let computedTermUnits = '0';
@@ -40,9 +43,7 @@ export function computeTermUnits(
       if (!courseCatalog) {
         throw new Error('unitCounterUtil: undefined courseCatalog');
       }
-      const courseMetadata = courseCache
-        .find((cache) => cache.catalog === courseCatalog)
-        ?.courses.find((crs) => crs.id === c.id);
+      const courseMetadata = getCourseFromCourseCache(c, programId, courseCache, programCache);
       if (!courseMetadata) {
         throw new Error(`unitCounterUtil: unable to find course metadata for course ${c.id}`);
       }
@@ -55,7 +56,7 @@ export function computeTermUnits(
 
 export function computeTotalUnits(
   termsData: Term[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[],
   fullCompute = false,
   programId?: string[]
