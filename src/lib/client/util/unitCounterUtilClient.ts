@@ -1,7 +1,10 @@
 import { COLORS } from '$lib/common/config/colorConfig';
 import { SANITIZE_REGEX } from '$lib/common/config/catalogSearchConfig';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import {
+  getCourseFromCourseCache,
+  getCatalogFromProgramIDIndex
+} from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, FlowEditorFooterUnitCounts } from '$lib/types';
@@ -11,7 +14,7 @@ import type { CourseCache, FlowEditorFooterUnitCounts } from '$lib/types';
 
 export function computeGroupUnits(
   flowchart: Flowchart | null,
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[]
 ): FlowEditorFooterUnitCounts {
   const unitCounts: FlowEditorFooterUnitCounts = {
@@ -46,9 +49,12 @@ export function computeGroupUnits(
         throw new Error('could not find catalog for course in flowchart');
       }
 
-      const courseMetadata = courseCache
-        .find((cache) => cache.catalog === courseCatalog)
-        ?.courses.find((c) => c.id === course.id);
+      const courseMetadata = getCourseFromCourseCache(
+        course,
+        flowchart.programId,
+        courseCache,
+        programCache
+      );
 
       // customUnits takes precedence even if we have a standard course
       // (for standard+customUnit cases)
