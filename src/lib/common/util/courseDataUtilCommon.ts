@@ -2,7 +2,24 @@
 
 import type { Course } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
-import type { APICourseFull, ComputedCourseItemDisplayData } from '$lib/types';
+import type { APICourseFull, ComputedCourseItemDisplayData, CourseCache } from '$lib/types';
+
+export function getCourseFromCourseCache(
+  course: Course,
+  flowProgramId: string[],
+  courseCache: CourseCache,
+  programCache: Program[]
+) {
+  const courseCatalog = getCatalogFromProgramIDIndex(
+    course.programIdIndex ?? 0,
+    flowProgramId,
+    programCache
+  );
+  const courseMetadata =
+    !course.id || !courseCatalog ? null : courseCache.get(courseCatalog)?.get(course.id) ?? null;
+
+  return courseMetadata;
+}
 
 export function getCatalogFromProgramIDIndex(
   programIDIndex: number,
