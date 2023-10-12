@@ -4,8 +4,8 @@ import { browser } from '$app/environment';
 import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import {
-  computeCourseDisplayValues,
-  getCatalogFromProgramIDIndex
+  getCourseFromCourseCache,
+  computeCourseDisplayValues
 } from '$lib/common/util/courseDataUtilCommon';
 import type { Term } from '$lib/common/schema/flowchartSchema';
 import type { Program } from '@prisma/client';
@@ -17,7 +17,7 @@ import type {
 
 export function buildTermCourseItemsData(
   flowProgramId: string[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[],
   termData: Term,
   selectedCourses: Set<string>
@@ -26,14 +26,12 @@ export function buildTermCourseItemsData(
 
   for (let cIndex = 0; cIndex < termData.courses.length; cIndex++) {
     const course = termData.courses[cIndex];
-    const courseMetadata =
-      courseCache
-        .find(
-          (cacheEntry) =>
-            cacheEntry.catalog ===
-            getCatalogFromProgramIDIndex(course.programIdIndex ?? 0, flowProgramId, programCache)
-        )
-        ?.courses.find((c) => c.id === course.id) ?? null;
+    const courseMetadata = getCourseFromCourseCache(
+      course,
+      flowProgramId,
+      courseCache,
+      programCache
+    );
     const computedCourseDisplayValues = computeCourseDisplayValues(course, courseMetadata);
 
     const itemData: CourseItemData = {
@@ -69,7 +67,7 @@ export function buildTermCourseItemsData(
 export function buildTermModUpdateChunkFromCourseItems(
   flowId: string,
   flowProgramId: string[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[],
   courseItems: CourseItemData[],
   tIndex: number
@@ -80,17 +78,20 @@ export function buildTermModUpdateChunkFromCourseItems(
     // TODO: remove magic number
     if (item.metadata.tIndex === -2) {
       // do a lookup from course cache if we come from search
-      const catalog = getCatalogFromProgramIDIndex(
-        item.metadata.flowProgramIndex,
+      const courseData = getCourseFromCourseCache(
+        {
+          id: item.idName,
+          color: item.color,
+          programIdIndex: item.metadata.flowProgramIndex
+        },
         flowProgramId,
+        courseCache,
         programCache
       );
-      const cache = courseCache.find((cache) => cache.catalog === catalog);
-      const courseData = cache?.courses.find((course) => course.id === item.idName);
 
       if (!courseData) {
         throw new Error(
-          'unable to find course data in cache in buildTermmodUpdateChunkFromCourseItems'
+          'unable to find course data in cache in buildTermModUpdateChunkFromCourseItems'
         );
       }
 
