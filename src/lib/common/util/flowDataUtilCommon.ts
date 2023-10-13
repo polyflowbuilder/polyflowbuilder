@@ -41,7 +41,7 @@ export function generateFlowHash(flow: Flowchart): string {
 export function mergeFlowchartsCourseData(
   flowchartsTermData: Term[][],
   programIdMerged: string[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[],
   performCourseMerge = true
 ): Term[] {
