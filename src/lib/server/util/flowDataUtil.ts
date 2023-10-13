@@ -84,7 +84,7 @@ export async function generateFlowchart(
   programCache: Program[]
 ): Promise<{
   flowchart: Flowchart;
-  courseCache: CourseCache[];
+  courseCache: CourseCache;
 }> {
   // fetch templates
   const fetchedTemplateFlowcharts = await getTemplateFlowcharts(data.programIds);
@@ -99,7 +99,7 @@ export async function generateFlowchart(
   });
 
   // generate required course cache for template flowchart
-  let courseCache = await generateCourseCacheFlowcharts(templateFlowcharts, programCache, true);
+  const courseCache = await generateCourseCacheFlowcharts(templateFlowcharts, programCache, true);
 
   const mergedFlowchartTermData = mergeFlowchartsCourseData(
     templateFlowcharts.map((templateFlowchart) => templateFlowchart.termData),
@@ -163,16 +163,14 @@ export async function generateFlowchart(
     }
 
     // recompute course cache if applicable
-    if (allRemovedCoursesKeysSet.size) {
-      courseCache = courseCache.map((cache) => {
-        return {
-          catalog: cache.catalog,
-          courses: cache.courses.filter(
-            (crs) => !allRemovedCoursesKeysSet.has(`${crs.catalog}|${crs.id}`)
-          )
-        };
-      });
-    }
+    allRemovedCoursesKeysSet.forEach((entry) => {
+      const [catalog, id] = entry.split('|');
+      const courseCacheCatalogEntry = courseCache.get(catalog);
+      if (!courseCacheCatalogEntry) {
+        throw new Error(`flowDataUtil: Unable to find catalog ${catalog} in courseCache`);
+      }
+      courseCacheCatalogEntry.deleteByKey(id);
+    });
   }
 
   // compute total units
