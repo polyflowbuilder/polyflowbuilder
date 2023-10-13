@@ -1,5 +1,5 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
-import { CURRENT_FLOW_DATA_VERSION } from '../config/flowDataConfig';
+import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
 import type { CourseCache } from '$lib/types';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
@@ -261,13 +261,10 @@ describe('generateFlowHash tests', () => {
 
 describe('mergeFlowchartsCourseData tests', () => {
   test('merging with empty data', () => {
-    expect(mergeFlowchartsCourseData([], [], [], [])).toEqual([]);
+    expect(mergeFlowchartsCourseData([], [], new Map(), [])).toEqual([]);
   });
 
   test('merge single flowchart data', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017'
-    );
     const flow1TermData: Term[] = [
       {
         tIndex: 1,
@@ -293,16 +290,13 @@ describe('mergeFlowchartsCourseData tests', () => {
       mergeFlowchartsCourseData(
         [flow1TermData],
         ['68be11b7-389b-4ebc-9b95-8997e7314497'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toEqual(flow1TermData);
   });
 
   test('merge two flowcharts data with courseMerge set', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017' || crsData.catalog === '2022-2026'
-    );
     const flow1TermData: Term[] = [
       {
         tIndex: 1,
@@ -407,16 +401,13 @@ describe('mergeFlowchartsCourseData tests', () => {
       mergeFlowchartsCourseData(
         [flow1TermData, flow2TermData],
         ['68be11b7-389b-4ebc-9b95-8997e7314497', 'cb65784d-23d6-44a9-ae7a-03b4b50d5b36'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toEqual(combinedFlowDataMerged);
   });
 
   test('merge 2 w/ courseMerge OFF', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017' || crsData.catalog === '2022-2026'
-    );
     const flow1TermData: Term[] = [
       {
         tIndex: 1,
@@ -531,7 +522,7 @@ describe('mergeFlowchartsCourseData tests', () => {
       mergeFlowchartsCourseData(
         [flow1TermData, flow2TermData],
         ['68be11b7-389b-4ebc-9b95-8997e7314497', 'cb65784d-23d6-44a9-ae7a-03b4b50d5b36'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData,
         false
       )
