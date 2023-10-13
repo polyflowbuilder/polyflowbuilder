@@ -471,7 +471,7 @@ test.describe('generate flowchart api output tests', () => {
     const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(expCourseCache, actCourseCache);
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
 
     // verify everything else is the same
     expect(actRest).toStrictEqual(expRest);
@@ -581,7 +581,7 @@ test.describe('generate flowchart api output tests', () => {
     const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(expCourseCache, actCourseCache);
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
 
     // verify everything else is the same
     expect(actRest).toStrictEqual(expRest);
@@ -643,7 +643,7 @@ test.describe('generate flowchart api output tests', () => {
     const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(expCourseCache, actCourseCache);
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
 
     // verify everything else is the same
     expect(actRest).toStrictEqual(expRest);
@@ -707,7 +707,7 @@ test.describe('generate flowchart api output tests', () => {
     const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(expCourseCache, actCourseCache);
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
 
     // verify everything else is the same
     expect(actRest).toStrictEqual(expRest);

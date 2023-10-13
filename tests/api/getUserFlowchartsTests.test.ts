@@ -339,13 +339,14 @@ test.describe('getUserFlowcharts API tests', () => {
     }
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(
+    await verifyCourseCacheStrictEquality(
       expCourseCache,
       new Map(
         actCourseCache.map(([catalog, courses]) => {
           return [catalog, new ObjectSet((crs) => crs.id, courses)];
         })
-      )
+      ),
+      'playwright'
     );
 
     // verify everything else is the same
@@ -876,13 +877,14 @@ test.describe('getUserFlowcharts API tests', () => {
     }
 
     // verify course caches are the same
-    verifyCourseCacheStrictEquality(
+    await verifyCourseCacheStrictEquality(
       expCourseCache,
       new Map(
         actCourseCache.map(([catalog, courses]) => {
           return [catalog, new ObjectSet((crs) => crs.id, courses)];
         })
-      )
+      ),
+      'playwright'
     );
 
     // verify everything else is the same
