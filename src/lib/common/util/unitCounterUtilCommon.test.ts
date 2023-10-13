@@ -1,12 +1,13 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '../../../../tests/util/testFlowcharts';
 import {
-  incrementRangedUnits,
   computeTermUnits,
-  computeTotalUnits
+  computeTotalUnits,
+  incrementRangedUnits
 } from '$lib/common/util/unitCounterUtilCommon';
 import type { Course } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types';
+import type { ObjectSet } from '$lib/common/util/ObjectSet';
+import type { APICourseFull } from '$lib/types';
 
 // init API data
 await apiDataConfig.init();
@@ -45,9 +46,6 @@ describe('incrementRangedUnits tests', () => {
 
 describe('computeTermUnits tests', () => {
   test('computeTermUnits with term that has no custom courses within one program and catalog', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -67,16 +65,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('12');
   });
 
   test('computeTermUnits with term that has no custom courses within two programs, one catalog', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -97,16 +92,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['fd2f33be-3103-4b3d-a17b-94ced0d7998f', '0edc1eaa-e7fb-40f1-bfef-9382a5bfd776'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('12');
   });
 
   test('computeTermUnits with term that has no custom courses within two programs, two catalogs', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017' || crsData.catalog === '2022-2026'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -127,16 +119,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['68be11b7-389b-4ebc-9b95-8997e7314497', 'cb65784d-23d6-44a9-ae7a-03b4b50d5b36'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('9');
   });
 
   test('computeTermUnits with term that has custom courses, one program and catalog', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -171,16 +160,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('16-18');
   });
 
   test('computeTermUnits with term that has custom courses, two programs and two catalogs', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017' || crsData.catalog === '2022-2026'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -216,16 +202,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['68be11b7-389b-4ebc-9b95-8997e7314497', 'cb65784d-23d6-44a9-ae7a-03b4b50d5b36'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('13-15');
   });
 
   test('computeTermUnits with term that has mix of standard, standard+customUnits, and custom courses, one program and catalog', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
     const termData: Course[] = [
       // standard courses
       {
@@ -268,16 +251,13 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toBe('21-26');
   });
 
   test('computeTermUnits unable to find course catalog', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017'
-    );
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -297,16 +277,17 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['032a4186-fc8a-4614-8c69-b3e43ae21df4'],
-        courseCache,
+        apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
     ).toThrowError('unitCounterUtil: undefined courseCatalog');
   });
 
   test('computeTermUnits unable to find course metadata', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2015-2017'
-    );
+    const courseCache1517Only = new Map([
+      ['2015-2017', apiDataConfig.apiData.courseData.get('2015-2017') as ObjectSet<APICourseFull>]
+    ]);
+
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -326,7 +307,7 @@ describe('computeTermUnits tests', () => {
       computeTermUnits(
         termData,
         ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
-        courseCache,
+        courseCache1517Only,
         apiDataConfig.apiData.programData
       )
     ).toThrowError('unitCounterUtil: unable to find course metadata for course AGC301');
@@ -337,37 +318,39 @@ describe('computeTotalUnits tests', () => {
   const flowTermData = TEST_FLOWCHART_SINGLE_PROGRAM_1.termData;
 
   test('compute total units for empty flowchart', () => {
-    expect(computeTotalUnits([], [], [])).toBe('0');
+    expect(computeTotalUnits([], new Map(), [])).toBe('0');
   });
 
   test('compute total units for standard flowchart, no fullCompute', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
-    expect(computeTotalUnits(flowTermData, courseCache, apiDataConfig.apiData.programData)).toBe(
-      '196-198'
-    );
+    expect(
+      computeTotalUnits(
+        flowTermData,
+        apiDataConfig.apiData.courseData,
+        apiDataConfig.apiData.programData
+      )
+    ).toBe('196-198');
   });
 
   test('compute total units for standard flowchart, fullCompute no programId', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
-
     expect(() =>
-      computeTotalUnits(flowTermData, courseCache, apiDataConfig.apiData.programData, true)
+      computeTotalUnits(
+        flowTermData,
+        apiDataConfig.apiData.courseData,
+        apiDataConfig.apiData.programData,
+        true
+      )
     ).toThrowError('computeTotalUnits: requested fullCompute with no programId');
   });
 
   test('compute total units for standard flowchart, fullCompute with programId', () => {
-    const courseCache: CourseCache[] = apiDataConfig.apiData.courseData.filter(
-      (crsData) => crsData.catalog === '2021-2022'
-    );
-
     expect(
-      computeTotalUnits(flowTermData, courseCache, apiDataConfig.apiData.programData, true, [
-        'fd2f33be-3103-4b3d-a17b-94ced0d7998f'
-      ])
+      computeTotalUnits(
+        flowTermData,
+        apiDataConfig.apiData.courseData,
+        apiDataConfig.apiData.programData,
+        true,
+        ['fd2f33be-3103-4b3d-a17b-94ced0d7998f']
+      )
     ).toBe('192-194');
   });
 });
