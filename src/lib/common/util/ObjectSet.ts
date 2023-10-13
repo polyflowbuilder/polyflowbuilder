@@ -36,6 +36,10 @@ export class ObjectSet<T> {
 
   delete(item: T) {
     const key = this.#keyFunction(item);
+    return this.deleteByKey(key);
+  }
+
+  deleteByKey(key: string) {
     return this.#itemMap.delete(key);
   }
 
