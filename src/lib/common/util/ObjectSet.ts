@@ -43,6 +43,10 @@ export class ObjectSet<T> {
     return this.#itemMap.delete(key);
   }
 
+  keys() {
+    return this.#itemMap.keys();
+  }
+
   values() {
     return this.#itemMap.values();
   }
