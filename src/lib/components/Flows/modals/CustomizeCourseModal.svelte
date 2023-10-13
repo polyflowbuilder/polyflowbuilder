@@ -3,10 +3,10 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { updateCourseData } from '$lib/client/util/flowActionsUtil';
   import { validateUnitString } from '$lib/client/util/unitCounterUtilClient';
+  import { getCourseFromCourseCache } from '$lib/common/util/courseDataUtilCommon';
   import { courseCache, programCache } from '$lib/client/stores/apiDataStore';
   import { customizeCoursesModalOpen } from '$lib/client/stores/modalStateStore';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
-  import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
   import { selectedCourses, selectedFlowIndex } from '$lib/client/stores/UIDataStore';
   import {
     CUSTOM_COURSE_DESC_MAX_LENGTH,
@@ -86,14 +86,12 @@
         newCourseUnits = course.customUnits ?? '0';
       } else {
         // perform lookup if course is standard
-        const courseCatalog = getCatalogFromProgramIDIndex(
-          course.programIdIndex ?? 0,
+        const courseMetadata = getCourseFromCourseCache(
+          course,
           $userFlowcharts[$selectedFlowIndex].programId,
+          $courseCache,
           $programCache
         );
-        const courseMetadata = $courseCache
-          .find((cache) => cache.catalog === courseCatalog)
-          ?.courses.find((c) => c.id === course.id);
 
         if (!courseMetadata) {
           throw new Error('unable to find course metadata for standard course in customize course');

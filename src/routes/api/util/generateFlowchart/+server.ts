@@ -81,7 +81,10 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         message: 'Flowchart successfully generated.',
         generatedFlowchart,
         ...(parseResults.data.generateCourseCache && {
-          courseCache
+          // serialize course cache
+          courseCache: Array.from(courseCache.entries()).map(([catalog, objectSet]) => {
+            return [catalog, Array.from(objectSet.values())];
+          })
         })
       });
     } else {

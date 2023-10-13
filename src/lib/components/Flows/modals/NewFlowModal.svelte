@@ -3,6 +3,7 @@
   import { tick } from 'svelte';
   import { modal } from '$lib/client/util/modalUtil';
   import { Toggle } from '$lib/components/common';
+  import { ObjectSet } from '$lib/common/util/ObjectSet';
   import { courseCache } from '$lib/client/stores/apiDataStore';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { newFlowModalOpen } from '$lib/client/stores/modalStateStore';
@@ -12,7 +13,7 @@
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-  import type { CourseCache } from '$lib/types';
+  import type { APICourseFull, CourseCache } from '$lib/types';
 
   // data props
 
@@ -51,7 +52,7 @@
       case 200: {
         const respJson = (await resp.json()) as {
           generatedFlowchart: Flowchart;
-          courseCache: CourseCache[];
+          courseCache: [string, APICourseFull[]][];
         };
         persistNewFlowchart(respJson);
         break;
@@ -71,30 +72,33 @@
     loading = false;
   }
 
-  function persistNewFlowchart(res: { generatedFlowchart: Flowchart; courseCache: CourseCache[] }) {
+  function persistNewFlowchart(res: {
+    generatedFlowchart: Flowchart;
+    courseCache: [string, APICourseFull[]][];
+  }) {
     // TODO: empty flowchart case
-    const newCourseCache = $courseCache;
-    res.courseCache.forEach((courseCacheEntry) => {
-      const idx = newCourseCache.findIndex((cache) => cache.catalog === courseCacheEntry.catalog);
 
-      // new catalog
-      if (idx === -1) {
-        newCourseCache.push(courseCacheEntry);
+    // deserialize returned course cache
+    const deserializedCourseCache: CourseCache = new Map(
+      res.courseCache.map(([catalog, courses]) => {
+        return [catalog, new ObjectSet((crs) => crs.id, courses)];
+      })
+    );
+
+    Array.from(deserializedCourseCache.entries()).forEach(([catalog, objectSet]) => {
+      const courseCacheCatalogEntry = $courseCache.get(catalog);
+
+      if (!courseCacheCatalogEntry) {
+        $courseCache.set(catalog, objectSet);
       } else {
-        // get courses that need to be added
-        const existingCourseIds = new Set(
-          newCourseCache[idx].courses.map((crs) => `${crs.catalog},${crs.id}`)
-        );
-        const newCourses = courseCacheEntry.courses.filter((crs) => {
-          const id = `${crs.catalog},${crs.id}`;
-          return !existingCourseIds.has(id);
+        Array.from(objectSet.values()).forEach((crs) => {
+          courseCacheCatalogEntry.add(crs);
         });
-
-        // add missing courses
-        newCourseCache[idx].courses.push(...newCourses);
       }
     });
-    $courseCache = newCourseCache;
+
+    // update course cache store
+    $courseCache = $courseCache;
 
     // persist creation update
     submitUserDataUpdateChunk({

@@ -1,23 +1,25 @@
 import crypto from 'crypto';
+import { ObjectSet } from '$lib/common/util/ObjectSet';
 import { expect, test } from '@playwright/test';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
+import { deleteObjectProperties } from 'tests/util/testUtil';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
+import { verifyCourseCacheStrictEquality } from 'tests/util/courseCacheUtil';
 import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
-import { cloneAndDeleteNestedProperty, deleteObjectProperties } from 'tests/util/testUtil';
 import {
   responsePayload1,
   responsePayload2,
   responsePayload3
 } from 'tests/api/generateFlowchartApiTests/expectedResponsePayloads';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types/apiDataTypes';
+import type { APICourseFull } from '$lib/types/apiDataTypes';
 
 // see API for expected return type
 interface GenerateFlowchartExpectedReturnType {
   message: string;
   generatedFlowchart: Flowchart;
-  courseCache: CourseCache[] | undefined;
+  courseCache: [string, APICourseFull[]][] | undefined;
 }
 
 test.describe('generate flowchart api input tests', () => {
@@ -425,7 +427,7 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object for flowchart validation
+    // make sure date is deserialized back to Date object for flowchart validation
     const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
@@ -442,29 +444,37 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison but after validation since they change on every request
-    const resDataRelevantProperties = {
+    const actualResponseBody = {
       message: resData.message,
+      // remove these fields before comparison but after validation since they change on every request
       generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
         'id',
         'hash',
         'lastUpdatedUTC'
       ]),
-      // sort to ensure order of items doesn't matter in cache
+      // deserialize course cache
       courseCache: resData.courseCache
-        ?.map((cache) => {
-          return {
-            catalog: cache.catalog,
-            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
-          };
-        })
-        .sort((a, b) => a.catalog.localeCompare(b.catalog))
+        ? new Map(
+            resData.courseCache.map(([catalog, courses]) => {
+              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+            })
+          )
+        : undefined
     };
 
-    // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
-    );
+    // for type safety
+    if (!actualResponseBody.courseCache) {
+      throw new Error('actualResponseBody courseCache is undefined');
+    }
+
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
+
+    // verify course caches are the same
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 
   test('generate valid flowchart with 1 program without coursecache', async ({ request }) => {
@@ -480,7 +490,7 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object
+    // make sure date is deserialized back to Date object
     const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
@@ -496,9 +506,9 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison but after validation since they change on every request
     const resDataRelevantProperties = {
       message: resData.message,
+      // remove these fields before comparison but after validation since they change on every request
       generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
         'id',
         'hash',
@@ -506,10 +516,7 @@ test.describe('generate flowchart api output tests', () => {
       ])
     };
 
-    // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
-    );
+    expect(resDataRelevantProperties).toStrictEqual(expectedResponseBody);
   });
 
   test('generate valid flowchart with 1 program without ge courses', async ({ request }) => {
@@ -525,9 +532,14 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object
+    // make sure date is deserialized back to Date object
     const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
+
+    // remove GE courses from expected payload
+    const expCourseCacheNoGE = new Map(responsePayload1.courseCache.entries());
+    expCourseCacheNoGE.get('2015-2017')?.deleteByKey('ENGL134');
+    expCourseCacheNoGE.get('2015-2017')?.deleteByKey('COMS101');
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -535,33 +547,44 @@ test.describe('generate flowchart api output tests', () => {
         ...responsePayload1.generatedFlowchartNoGE,
         ownerId
       },
-      courseCache: responsePayload1.courseCache
+      courseCache: expCourseCacheNoGE
     };
-    // to satisfy type safety
-    const cache = expectedResponseBody.courseCache.find((cache) => cache.catalog === '2015-2017');
-    if (cache) {
-      cache.courses = cache.courses.filter((crs) => !['ENGL134', 'COMS101'].includes(crs.id));
-    }
 
     // verify that we got a valid flowchart back
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison but after validation since they change on every request
-    const resDataRelevantProperties = {
+    const actualResponseBody = {
       message: resData.message,
+      // remove these fields before comparison but after validation since they change on every request
       generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
         'id',
         'hash',
         'lastUpdatedUTC'
       ]),
+      // deserialize course cache
       courseCache: resData.courseCache
+        ? new Map(
+            resData.courseCache.map(([catalog, courses]) => {
+              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+            })
+          )
+        : undefined
     };
 
-    // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
-    );
+    // for type safety
+    if (!actualResponseBody.courseCache) {
+      throw new Error('actualResponseBody courseCache is undefined');
+    }
+
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
+
+    // verify course caches are the same
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 
   test('generate valid flowchart with multiple programs', async ({ request }) => {
@@ -576,7 +599,7 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object
+    // make sure date is deserialized back to Date object
     const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
@@ -593,29 +616,37 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison but after validation since they change on every request
-    const resDataRelevantProperties = {
+    const actualResponseBody = {
       message: resData.message,
+      // remove these fields before comparison but after validation since they change on every request
       generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
         'id',
         'hash',
         'lastUpdatedUTC'
       ]),
-      // sort to ensure order of items doesn't matter in cache
+      // deserialize course cache
       courseCache: resData.courseCache
-        ?.map((cache) => {
-          return {
-            catalog: cache.catalog,
-            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
-          };
-        })
-        .sort((a, b) => a.catalog.localeCompare(b.catalog))
+        ? new Map(
+            resData.courseCache.map(([catalog, courses]) => {
+              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+            })
+          )
+        : undefined
     };
 
-    // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
-    );
+    // for type safety
+    if (!actualResponseBody.courseCache) {
+      throw new Error('actualResponseBody courseCache is undefined');
+    }
+
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
+
+    // verify course caches are the same
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 
   test('generate valid flowchart with multiple programs #2 (input programs exposed to indeterministic ordering)', async ({
@@ -632,7 +663,7 @@ test.describe('generate flowchart api output tests', () => {
     );
     expect(res.status()).toBe(200);
 
-    // make sure date is serialized back to Date object
+    // make sure date is deserialized back to Date object
     const resData = (await res.json()) as GenerateFlowchartExpectedReturnType;
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
@@ -649,28 +680,36 @@ test.describe('generate flowchart api output tests', () => {
     // do it this way so when it fails we know what validation step failed
     expect(() => flowchartValidationSchema.parse(resData.generatedFlowchart)).not.toThrowError();
 
-    // remove these fields before comparison but after validation since they change on every request
-    const resDataRelevantProperties = {
+    const actualResponseBody = {
       message: resData.message,
+      // remove these fields before comparison but after validation since they change on every request
       generatedFlowchart: deleteObjectProperties(resData.generatedFlowchart, [
         'id',
         'hash',
         'lastUpdatedUTC'
       ]),
-      // sort to ensure order of items doesn't matter in cache
+      // deserialize course cache
       courseCache: resData.courseCache
-        ?.map((cache) => {
-          return {
-            catalog: cache.catalog,
-            courses: cache.courses.sort((a, b) => a.id.localeCompare(b.id))
-          };
-        })
-        .sort((a, b) => a.catalog.localeCompare(b.catalog))
+        ? new Map(
+            resData.courseCache.map(([catalog, courses]) => {
+              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+            })
+          )
+        : undefined
     };
 
-    // remove dynamicTerms as this can change over time
-    expect(cloneAndDeleteNestedProperty(resDataRelevantProperties, 'dynamicTerms')).toStrictEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
-    );
+    // for type safety
+    if (!actualResponseBody.courseCache) {
+      throw new Error('actualResponseBody courseCache is undefined');
+    }
+
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } = actualResponseBody;
+
+    // verify course caches are the same
+    await verifyCourseCacheStrictEquality(expCourseCache, actCourseCache, 'playwright');
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 });

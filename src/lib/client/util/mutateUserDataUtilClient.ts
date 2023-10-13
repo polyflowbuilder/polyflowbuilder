@@ -19,7 +19,7 @@ export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChu
 // TODO: integrate other types of user data, currently just flowcharts
 export function performUpdate(
   chunksList: UserDataUpdateChunk[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[]
 ): void {
   userFlowcharts.update((curUserFlowcharts) => {

@@ -9,8 +9,8 @@ import puppeteer from 'puppeteer';
 import pdfTemplateString from '$lib/../../api/data/flows/exports/flowexport.ejs?raw';
 import { generateTermString } from '$lib/common/util/flowTermUtilCommon';
 import {
-  computeCourseDisplayValues,
-  getCatalogFromProgramIDIndex
+  getCourseFromCourseCache,
+  computeCourseDisplayValues
 } from '$lib/common/util/courseDataUtilCommon';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
@@ -19,7 +19,7 @@ import type { FlowchartPDFData, FlowchartPDFTermData } from '$lib/types/generate
 
 export function extractPDFDataFromFlowchart(
   flowchart: Flowchart,
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[]
 ): FlowchartPDFData {
   // get program friendly names
@@ -53,19 +53,12 @@ export function extractPDFDataFromFlowchart(
     };
 
     term.courses.forEach((course) => {
-      const courseMetadata =
-        courseCache
-          .find(
-            (cacheEntry) =>
-              cacheEntry.catalog ===
-              getCatalogFromProgramIDIndex(
-                course.programIdIndex ?? 0,
-                flowchart.programId,
-                programCache
-              )
-          )
-          ?.courses.find((c) => c.id === course.id) ?? null;
-
+      const courseMetadata = getCourseFromCourseCache(
+        course,
+        flowchart.programId,
+        courseCache,
+        programCache
+      );
       termData.tData.push(computeCourseDisplayValues(course, courseMetadata, false));
     });
 

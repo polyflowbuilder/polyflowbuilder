@@ -56,7 +56,12 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         message: 'User flowchart retrieval successful.',
         flowcharts,
         ...(parseResults.data.includeCourseCache && {
-          courseCache: await generateCourseCacheFlowcharts(flowcharts, programMetadata)
+          // serialize course cache
+          courseCache: Array.from(
+            (await generateCourseCacheFlowcharts(flowcharts, programMetadata)).entries()
+          ).map(([catalog, objectSet]) => {
+            return [catalog, Array.from(objectSet.values())];
+          })
         }),
         ...(parseResults.data.includeProgramMetadata && {
           programMetadata

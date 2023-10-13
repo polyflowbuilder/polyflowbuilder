@@ -6,7 +6,8 @@
 // option to load from FS instead of DB
 
 import fs from 'fs';
-import type { APIData } from '$lib/types';
+import { ObjectSet } from '$lib/common/util/ObjectSet';
+import type { APICourseFull, APIData } from '$lib/types';
 import type {
   Program,
   GECourse,
@@ -23,7 +24,7 @@ export const apiData: APIData = {
   startYears: [],
   programData: [],
 
-  courseData: [],
+  courseData: new Map(),
   geCourseData: [],
   reqCourseData: []
 };
@@ -86,25 +87,28 @@ export function init() {
     }
 
     // add loaded data to apiData
-    apiData.courseData.push({
+    apiData.courseData.set(
       catalog,
-      courses: courses.map((crs) => {
-        const ttoData = termTypicallyOffered.find(
-          (ttoCourse) => ttoCourse.catalog === crs.catalog && ttoCourse.id === crs.id
-        );
-        return {
-          ...crs,
-          dynamicTerms: ttoData
-            ? {
-                termFall: ttoData.termFall,
-                termWinter: ttoData.termWinter,
-                termSpring: ttoData.termSpring,
-                termSummer: ttoData.termSummer
-              }
-            : null
-        };
-      })
-    });
+      new ObjectSet<APICourseFull>(
+        (crs) => crs.id,
+        courses.map((crs) => {
+          const ttoData = termTypicallyOffered.find(
+            (ttoCourse) => ttoCourse.catalog === crs.catalog && ttoCourse.id === crs.id
+          );
+          return {
+            ...crs,
+            dynamicTerms: ttoData
+              ? {
+                  termFall: ttoData.termFall,
+                  termWinter: ttoData.termWinter,
+                  termSpring: ttoData.termSpring,
+                  termSummer: ttoData.termSummer
+                }
+              : null
+          };
+        })
+      )
+    );
     apiData.geCourseData.push(...geCourses);
     apiData.reqCourseData.push(...reqCourseData);
   }

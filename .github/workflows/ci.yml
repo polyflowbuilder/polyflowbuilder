@@ -13,6 +13,10 @@ concurrency:
 jobs:
   Lint:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_PFB_DISCORD_LINK: https://discord.gg/xCadnCRC9f
+      PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
+      PUBLIC_PFB_ANALYTICS_ID:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
@@ -21,6 +25,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run lint
+      - run: npm run check
 
   # TODO: unit tests should not need a database!
   UnitTest:
