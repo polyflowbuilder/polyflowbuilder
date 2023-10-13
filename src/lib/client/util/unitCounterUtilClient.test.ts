@@ -20,7 +20,7 @@ describe('computeGroupUnits tests', () => {
       total: '0'
     };
 
-    expect(computeGroupUnits(null, [], [])).toStrictEqual(expectedCounts);
+    expect(computeGroupUnits(null, new Map(), [])).toStrictEqual(expectedCounts);
   });
 
   test('standard flowchart, 1 program', () => {
@@ -46,7 +46,7 @@ describe('computeGroupUnits tests', () => {
 
   test('error thrown when unable to find catalog for course', () => {
     expect(() => {
-      computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, [], []);
+      computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, new Map(), []);
     }).toThrowError('could not find catalog for course in flowchart');
   });
 });

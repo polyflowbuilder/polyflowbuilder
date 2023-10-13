@@ -12,7 +12,7 @@ import type { MutateFlowchartData, MutateUserDataUtilCommonResult } from '$lib/t
 export function mutateUserFlowcharts(
   curUserFlowchartsData: MutateFlowchartData[],
   updateChunks: UserDataUpdateChunk[],
-  courseCache: CourseCache[],
+  courseCache: CourseCache,
   programCache: Program[]
 ): MutateUserDataUtilCommonResult {
   const errors: string[] = [];
