@@ -2,13 +2,13 @@
   // TODO: put these styles in a better place?
   import 'tippy.js/dist/tippy.css';
   import 'tippy.js/themes/light-border.css';
+  import { ObjectSet } from '$lib/common/util/ObjectSet';
   import { FlowViewer } from '$lib/components/Flows';
   import { searchCache } from '$lib/client/stores/catalogSearchStore.js';
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import {
-    selectedColor,
     selectedCourses,
     viewingCreditBin,
     selectedFlowIndex
@@ -33,7 +33,14 @@
   availableFlowchartStartYears.init(data.flowchartStartYears);
 
   // API data caches
-  courseCache.set(data.userData.courseCache);
+  courseCache.set(
+    // deserialize course cache
+    new Map(
+      data.userData.courseCache.map(([catalog, courses]) => {
+        return [catalog, new ObjectSet((crs) => crs.id, courses)];
+      })
+    )
+  );
   programCache.set(data.userData.programMetadata);
 
   // init local stores
