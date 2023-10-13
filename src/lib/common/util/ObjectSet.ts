@@ -6,7 +6,7 @@ export class ObjectSet<T> {
   #itemMap: Map<string, T>;
   #keyFunction: (input: T) => string;
 
-  constructor(items: T[] = [], keyFunction: (input: T) => string) {
+  constructor(keyFunction: (input: T) => string, items: T[] = []) {
     this.#itemMap = new Map<string, T>();
     this.#keyFunction = keyFunction;
 
