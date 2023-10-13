@@ -1,10 +1,20 @@
+import { ObjectSet } from '$lib/common/util/ObjectSet';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil';
+import { verifyCourseCacheStrictEquality } from 'tests/util/courseCacheUtil';
 import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import type { APICourseFull } from '$lib/types';
+import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+
+interface GetUserFlowchartsExpectedReturnType {
+  message: string;
+  flowcharts: Flowchart[];
+  courseCache: [string, APICourseFull[]][] | undefined;
+}
 
 test.describe('getUserFlowcharts API tests', () => {
   const prisma = new PrismaClient();
@@ -223,6 +233,7 @@ test.describe('getUserFlowcharts API tests', () => {
     await performLoginBackend(request, userEmail, 'test');
 
     const res = await request.get('/api/user/data/getUserFlowcharts?includeCourseCache=true');
+    expect(res.status()).toBe(200);
 
     const expectedFlowcharts = (await getUserFlowcharts(id.id)).map(({ flowchart }) => flowchart);
 
@@ -233,90 +244,112 @@ test.describe('getUserFlowcharts API tests', () => {
         ...flow,
         lastUpdatedUTC: flow.lastUpdatedUTC.toISOString()
       })),
-      courseCache: [
-        {
-          catalog: '2015-2017',
-          courses: [
-            {
-              id: 'CHEM124',
-              catalog: '2015-2017',
-              displayName: 'General Chemistry for Physical Science and Engineering I',
-              units: '4',
-              desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
-              addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'CPE101',
-              catalog: '2015-2017',
-              displayName: 'Fundamentals of Computer Science I',
-              units: '4',
-              desc: 'Basic principles of algorithmic problem solving and programming using methods of top-down design, stepwise refinement and procedural abstraction.  Basic control structures, data types, and input/output.  Introduction to the software development process:  design, implementation, testing and documentation.  The syntax and semantics of a modern programming language.  Credit not available for students who have taken CSC/CPE 108.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 101.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: Completion of ELM requirement, and passing score on MAPE or MATH 117 with a grade of C- or better or MATH 118 with a grade of C- or better, or consent of instructor.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'CSC480',
-              catalog: '2015-2017',
-              displayName: 'Artificial Intelligence',
-              units: '4',
-              desc: 'Programs and techniques that characterize artificial intelligence.  Programming in a high level language.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 480.\n',
-              addl: 'Term Typically Offered: TBD\nPrerequisite: CSC/CPE 103 with a grade of C- or better.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        },
-        {
-          catalog: '2017-2019',
-          courses: [
-            {
-              id: 'AGB301',
-              catalog: '2017-2019',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2017-2019',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2017-2019',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        }
-      ]
+      courseCache: new Map([
+        [
+          '2015-2017',
+          new ObjectSet<APICourseFull>(
+            (crs) => crs.id,
+            [
+              {
+                id: 'CHEM124',
+                catalog: '2015-2017',
+                displayName: 'General Chemistry for Physical Science and Engineering I',
+                units: '4',
+                desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
+                addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'CPE101',
+                catalog: '2015-2017',
+                displayName: 'Fundamentals of Computer Science I',
+                units: '4',
+                desc: 'Basic principles of algorithmic problem solving and programming using methods of top-down design, stepwise refinement and procedural abstraction.  Basic control structures, data types, and input/output.  Introduction to the software development process:  design, implementation, testing and documentation.  The syntax and semantics of a modern programming language.  Credit not available for students who have taken CSC/CPE 108.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 101.\n',
+                addl: 'Term Typically Offered: F, W, SP\nPrerequisite: Completion of ELM requirement, and passing score on MAPE or MATH 117 with a grade of C- or better or MATH 118 with a grade of C- or better, or consent of instructor.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'CSC480',
+                catalog: '2015-2017',
+                displayName: 'Artificial Intelligence',
+                units: '4',
+                desc: 'Programs and techniques that characterize artificial intelligence.  Programming in a high level language.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 480.\n',
+                addl: 'Term Typically Offered: TBD\nPrerequisite: CSC/CPE 103 with a grade of C- or better.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              }
+            ]
+          )
+        ],
+        [
+          '2017-2019',
+          new ObjectSet<APICourseFull>(
+            (crs) => crs.id,
+            [
+              {
+                id: 'AGB301',
+                catalog: '2017-2019',
+                displayName: 'Food and Fiber Marketing',
+                units: '4',
+                desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+                addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'AGC301',
+                catalog: '2017-2019',
+                displayName: 'New Media Communication Strategies in Agriculture',
+                units: '4',
+                desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+                addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'JOUR312',
+                catalog: '2017-2019',
+                displayName: 'Public Relations',
+                units: '4',
+                desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+                addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              }
+            ]
+          )
+        ]
+      ])
     };
 
-    expect(res.status()).toBe(200);
-    expect(cloneAndDeleteNestedProperty(await res.json(), 'dynamicTerms')).toEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } =
+      (await res.json()) as GetUserFlowchartsExpectedReturnType;
+
+    if (!actCourseCache) {
+      throw new Error('actualResponseBody courseCache undefined');
+    }
+
+    // verify course caches are the same
+    verifyCourseCacheStrictEquality(
+      expCourseCache,
+      new Map(
+        actCourseCache.map(([catalog, courses]) => {
+          return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        })
+      )
     );
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 
   test('authenticated request succeeds with 200 nonempty flowcharts list (+ program metadata, unique programs)', async ({
@@ -718,6 +751,7 @@ test.describe('getUserFlowcharts API tests', () => {
     const res = await request.get(
       '/api/user/data/getUserFlowcharts?includeProgramMetadata=true&includeCourseCache=true'
     );
+    expect(res.status()).toBe(200);
 
     const expectedFlowcharts = (await getUserFlowcharts(id.id)).map(({ flowchart }) => flowchart);
 
@@ -728,84 +762,90 @@ test.describe('getUserFlowcharts API tests', () => {
         ...flow,
         lastUpdatedUTC: flow.lastUpdatedUTC.toISOString()
       })),
-      courseCache: [
-        {
-          catalog: '2015-2017',
-          courses: [
-            {
-              id: 'CHEM124',
-              catalog: '2015-2017',
-              displayName: 'General Chemistry for Physical Science and Engineering I',
-              units: '4',
-              desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
-              addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'CPE101',
-              catalog: '2015-2017',
-              displayName: 'Fundamentals of Computer Science I',
-              units: '4',
-              desc: 'Basic principles of algorithmic problem solving and programming using methods of top-down design, stepwise refinement and procedural abstraction.  Basic control structures, data types, and input/output.  Introduction to the software development process:  design, implementation, testing and documentation.  The syntax and semantics of a modern programming language.  Credit not available for students who have taken CSC/CPE 108.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 101.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: Completion of ELM requirement, and passing score on MAPE or MATH 117 with a grade of C- or better or MATH 118 with a grade of C- or better, or consent of instructor.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'CSC480',
-              catalog: '2015-2017',
-              displayName: 'Artificial Intelligence',
-              units: '4',
-              desc: 'Programs and techniques that characterize artificial intelligence.  Programming in a high level language.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 480.\n',
-              addl: 'Term Typically Offered: TBD\nPrerequisite: CSC/CPE 103 with a grade of C- or better.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        },
-        {
-          catalog: '2017-2019',
-          courses: [
-            {
-              id: 'AGB301',
-              catalog: '2017-2019',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2017-2019',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2017-2019',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        }
-      ],
+      courseCache: new Map([
+        [
+          '2015-2017',
+          new ObjectSet<APICourseFull>(
+            (crs) => crs.id,
+            [
+              {
+                id: 'CHEM124',
+                catalog: '2015-2017',
+                displayName: 'General Chemistry for Physical Science and Engineering I',
+                units: '4',
+                desc: 'Stoichiometry, thermochemistry, atomic structure, bonding, solid-state structures, intermolecular forces, and foundational principles of organic chemistry.  Not open to students with credit in CHEM 127.  Credit will be granted in only one of the following courses:  CHEM 110, CHEM 111, CHEM 124.  3 lectures, 1 laboratory.  Fulfills GE B3 & B4.\n',
+                addl: 'GE Area B4; GE Area B3\nTerm Typically Offered: F,W,SP,SU\nPrerequisite: Passing score on ELM, or an ELM exemption, or credit in MATH 104. Recommended: High school chemistry or equivalent.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'CPE101',
+                catalog: '2015-2017',
+                displayName: 'Fundamentals of Computer Science I',
+                units: '4',
+                desc: 'Basic principles of algorithmic problem solving and programming using methods of top-down design, stepwise refinement and procedural abstraction.  Basic control structures, data types, and input/output.  Introduction to the software development process:  design, implementation, testing and documentation.  The syntax and semantics of a modern programming language.  Credit not available for students who have taken CSC/CPE 108.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 101.\n',
+                addl: 'Term Typically Offered: F, W, SP\nPrerequisite: Completion of ELM requirement, and passing score on MAPE or MATH 117 with a grade of C- or better or MATH 118 with a grade of C- or better, or consent of instructor.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'CSC480',
+                catalog: '2015-2017',
+                displayName: 'Artificial Intelligence',
+                units: '4',
+                desc: 'Programs and techniques that characterize artificial intelligence.  Programming in a high level language.  3 lectures, 1 laboratory.  Crosslisted as CPE/CSC 480.\n',
+                addl: 'Term Typically Offered: TBD\nPrerequisite: CSC/CPE 103 with a grade of C- or better.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              }
+            ]
+          )
+        ],
+        [
+          '2017-2019',
+          new ObjectSet<APICourseFull>(
+            (crs) => crs.id,
+            [
+              {
+                id: 'AGB301',
+                catalog: '2017-2019',
+                displayName: 'Food and Fiber Marketing',
+                units: '4',
+                desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+                addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'AGC301',
+                catalog: '2017-2019',
+                displayName: 'New Media Communication Strategies in Agriculture',
+                units: '4',
+                desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+                addl: 'Term Typically Offered: W\nPrerequisite: Junior standing. Recommended: JOUR 203, JOUR 205.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              },
+              {
+                id: 'JOUR312',
+                catalog: '2017-2019',
+                displayName: 'Public Relations',
+                units: '4',
+                desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+                addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+                gwrCourse: false,
+                uscpCourse: false,
+                dynamicTerms: null
+              }
+            ]
+          )
+        ]
+      ]),
       programMetadata: [
         {
           id: '002e8710-245f-46a4-8689-2ab2f5a47170',
@@ -827,10 +867,26 @@ test.describe('getUserFlowcharts API tests', () => {
       ]
     };
 
-    expect(res.status()).toBe(200);
-    expect(cloneAndDeleteNestedProperty(await res.json(), 'dynamicTerms')).toEqual(
-      cloneAndDeleteNestedProperty(expectedResponseBody, 'dynamicTerms')
+    const { courseCache: expCourseCache, ...expRest } = expectedResponseBody;
+    const { courseCache: actCourseCache, ...actRest } =
+      (await res.json()) as GetUserFlowchartsExpectedReturnType;
+
+    if (!actCourseCache) {
+      throw new Error('actualResponseBody courseCache undefined');
+    }
+
+    // verify course caches are the same
+    verifyCourseCacheStrictEquality(
+      expCourseCache,
+      new Map(
+        actCourseCache.map(([catalog, courses]) => {
+          return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        })
+      )
     );
+
+    // verify everything else is the same
+    expect(actRest).toStrictEqual(expRest);
   });
 
   // TODO: 500 case tests
