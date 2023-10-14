@@ -100,9 +100,7 @@
         <div class="loading loading-spinner w-16 text-polyGreen" />
       </div>
     {:then results}
-      {#if results && searchProgramIndex !== -1 && $searchCache
-          .find((entry) => entry.catalog === selectedCatalog)
-          ?.searches.find((searchRecord) => searchRecord.query === `${field}|${transformedQuery}`)}
+      {#if results && searchProgramIndex !== -1 && $searchCache.has( { catalog: String(selectedCatalog), field, query: transformedQuery } )}
         {#if !results.searchValid}
           <div class="text-center">
             <div class="invalidSearchIcon pb-2">
