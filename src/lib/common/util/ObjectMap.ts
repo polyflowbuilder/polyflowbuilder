@@ -15,6 +15,13 @@ export class ObjectMap<K, V> {
 
     if (options.keyFunction) {
       this._keyFunction = options.keyFunction;
+    } else {
+      this._keyFunction = (input: K) => {
+        if (input && typeof input === 'object') {
+          return Object.values(input).join('|');
+        }
+        return String(input);
+      };
     }
 
     if (options.initItems) {
