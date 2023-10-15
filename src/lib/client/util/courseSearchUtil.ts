@@ -47,11 +47,6 @@ async function performSearch(
     };
   }
 
-  // should never be searching on a catalog that isn't in the course cache already
-  if (!fullCourseCache.has(catalog)) {
-    throw new Error(`unable to find cache entries required for search for catalog ${catalog}`);
-  }
-
   // do local search if we already searched this term
   const searchRecord = fullSearchCache.get({
     catalog,
@@ -62,10 +57,13 @@ async function performSearch(
   if (searchRecord) {
     // do it this way to return results in the order they were originally received in
     return {
-      searchResults: searchRecord.searchResults.map((result) => {
-        const course = fullCourseCache.get(catalog)?.get(result);
+      searchResults: searchRecord.searchResults.map((id) => {
+        const course = fullCourseCache.get({
+          catalog,
+          id
+        });
         if (!course) {
-          throw new Error(`course ${result} present in searchCache and not present in courseCache`);
+          throw new Error(`course ${id} present in searchCache and not present in courseCache`);
         }
         return course;
       }),
@@ -138,11 +136,13 @@ async function performSearch(
   });
   courseCache.update((cache) => {
     searchResults.results.searchResults.forEach((newCourse) => {
-      const catalogCache = cache.get(catalog);
-      if (!catalogCache) {
-        throw new Error(`courseSearchUtil: could not find catalog ${catalog} in courseCache`);
-      }
-      catalogCache.add(newCourse);
+      fullCourseCache.set(
+        {
+          catalog,
+          id: newCourse.id
+        },
+        newCourse
+      );
     });
 
     return cache;
