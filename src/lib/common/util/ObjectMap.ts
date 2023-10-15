@@ -1,16 +1,26 @@
 // like a regular Map except the keys can be objects
 // that can be compared non-referentially via the need
 // for a key function to transform K into a string
+
+interface ObjectMapConstructorOptions<K, V> {
+  keyFunction: (input: K) => string;
+  initItems: [K, V][];
+}
 export class ObjectMap<K, V> {
   _map: Map<string, V>;
   _keyFunction: (input: K) => string;
 
-  constructor(keyFunction: (input: K) => string, items: [K, V][] = []) {
+  constructor(options: Partial<ObjectMapConstructorOptions<K, V>> = {}) {
     this._map = new Map();
-    this._keyFunction = keyFunction;
 
-    for (const [k, v] of items) {
-      this.set(k, v);
+    if (options.keyFunction) {
+      this._keyFunction = options.keyFunction;
+    }
+
+    if (options.initItems) {
+      for (const [k, v] of options.initItems) {
+        this.set(k, v);
+      }
     }
   }
 
