@@ -16,7 +16,7 @@ import type { APICourseFull } from '$lib/types';
 interface GetUserFlowchartsExpectedReturnType {
   message: string;
   flowcharts: Flowchart[];
-  courseCache: [string, APICourseFull][] | undefined;
+  courseCache: APICourseFull[] | undefined;
 }
 
 test.describe('getUserFlowcharts API tests', () => {
@@ -329,14 +329,13 @@ test.describe('getUserFlowcharts API tests', () => {
     await verifyCourseCacheStrictEquality(
       expCourseCache,
       new ObjectMap({
-        initItems: actCourseCache.map(([k, v]) => {
-          const [catalog, id] = k.split('|');
+        initItems: actCourseCache.map((entry) => {
           return [
             {
-              catalog,
-              id
+              catalog: entry.catalog,
+              id: entry.id
             },
-            v
+            entry
           ];
         })
       }),
@@ -858,14 +857,13 @@ test.describe('getUserFlowcharts API tests', () => {
     await verifyCourseCacheStrictEquality(
       expCourseCache,
       new ObjectMap({
-        initItems: actCourseCache.map(([k, v]) => {
-          const [catalog, id] = k.split('|');
+        initItems: actCourseCache.map((entry) => {
           return [
             {
-              catalog,
-              id
+              catalog: entry.catalog,
+              id: entry.id
             },
-            v
+            entry
           ];
         })
       }),

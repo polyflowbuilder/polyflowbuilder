@@ -82,7 +82,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         generatedFlowchart,
         ...(parseResults.data.generateCourseCache && {
           // serialize course cache
-          courseCache: Array.from(courseCache.entries())
+          courseCache: Array.from(courseCache.values())
         })
       });
     } else {

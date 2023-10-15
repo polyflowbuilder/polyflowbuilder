@@ -19,7 +19,7 @@ import type { APICourseFull } from '$lib/types/apiDataTypes';
 interface GenerateFlowchartExpectedReturnType {
   message: string;
   generatedFlowchart: Flowchart;
-  courseCache: [string, APICourseFull][] | undefined;
+  courseCache: APICourseFull[] | undefined;
 }
 
 test.describe('generate flowchart api input tests', () => {
@@ -455,14 +455,13 @@ test.describe('generate flowchart api output tests', () => {
       // deserialize course cache
       courseCache: resData.courseCache
         ? new ObjectMap({
-            initItems: resData.courseCache.map(([k, v]) => {
-              const [catalog, id] = k.split('|');
+            initItems: resData.courseCache.map((entry) => {
               return [
                 {
-                  catalog,
-                  id
+                  catalog: entry.catalog,
+                  id: entry.id
                 },
-                v
+                entry
               ];
             })
           })
@@ -545,14 +544,13 @@ test.describe('generate flowchart api output tests', () => {
 
     // remove GE courses from expected payload
     const expCourseCacheNoGE = new ObjectMap({
-      initItems: resData.courseCache?.map(([k, v]) => {
-        const [catalog, id] = k.split('|');
+      initItems: resData.courseCache?.map((entry) => {
         return [
           {
-            catalog,
-            id
+            catalog: entry.catalog,
+            id: entry.id
           },
-          v
+          entry
         ];
       })
     });
@@ -589,14 +587,13 @@ test.describe('generate flowchart api output tests', () => {
       // deserialize course cache
       courseCache: resData.courseCache
         ? new ObjectMap({
-            initItems: resData.courseCache.map(([k, v]) => {
-              const [catalog, id] = k.split('|');
+            initItems: resData.courseCache.map((entry) => {
               return [
                 {
-                  catalog,
-                  id
+                  catalog: entry.catalog,
+                  id: entry.id
                 },
-                v
+                entry
               ];
             })
           })
@@ -658,14 +655,13 @@ test.describe('generate flowchart api output tests', () => {
       // deserialize course cache
       courseCache: resData.courseCache
         ? new ObjectMap({
-            initItems: resData.courseCache.map(([k, v]) => {
-              const [catalog, id] = k.split('|');
+            initItems: resData.courseCache.map((entry) => {
               return [
                 {
-                  catalog,
-                  id
+                  catalog: entry.catalog,
+                  id: entry.id
                 },
-                v
+                entry
               ];
             })
           })
@@ -729,14 +725,13 @@ test.describe('generate flowchart api output tests', () => {
       // deserialize course cache
       courseCache: resData.courseCache
         ? new ObjectMap({
-            initItems: resData.courseCache.map(([k, v]) => {
-              const [catalog, id] = k.split('|');
+            initItems: resData.courseCache.map((entry) => {
               return [
                 {
-                  catalog,
-                  id
+                  catalog: entry.catalog,
+                  id: entry.id
                 },
-                v
+                entry
               ];
             })
           })

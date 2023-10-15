@@ -58,7 +58,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         ...(parseResults.data.includeCourseCache && {
           // serialize course cache
           courseCache: Array.from(
-            (await generateCourseCacheFlowcharts(flowcharts, programMetadata)).entries()
+            (await generateCourseCacheFlowcharts(flowcharts, programMetadata)).values()
           )
         }),
         ...(parseResults.data.includeProgramMetadata && {
