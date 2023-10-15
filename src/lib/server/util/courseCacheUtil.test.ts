@@ -4,7 +4,7 @@ import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil'
 import {
   createCourseCacheFromEntries,
   verifyCourseCacheStrictEquality
-} from 'tests/util/courseCacheUtil';
+} from '../../../../tests/util/courseCacheUtil';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 

@@ -1,4 +1,5 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { computeGroupUnits } from '$lib/client/util/unitCounterUtilClient';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '../../../../tests/util/testFlowcharts';
 
@@ -20,7 +21,7 @@ describe('computeGroupUnits tests', () => {
       total: '0'
     };
 
-    expect(computeGroupUnits(null, new Map(), [])).toStrictEqual(expectedCounts);
+    expect(computeGroupUnits(null, new ObjectMap(() => ''), [])).toStrictEqual(expectedCounts);
   });
 
   test('standard flowchart, 1 program', () => {
@@ -46,7 +47,7 @@ describe('computeGroupUnits tests', () => {
 
   test('error thrown when unable to find catalog for course', () => {
     expect(() => {
-      computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, new Map(), []);
+      computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, new ObjectMap(() => ''), []);
     }).toThrowError('could not find catalog for course in flowchart');
   });
 });
