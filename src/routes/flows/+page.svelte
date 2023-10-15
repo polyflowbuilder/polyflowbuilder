@@ -35,14 +35,13 @@
   courseCache.set(
     // deserialize course cache
     new ObjectMap({
-      initItems: data.userData.courseCache.map(([k, v]) => {
-        const [catalog, id] = k.split('|');
+      initItems: data.userData.courseCache.map((entry) => {
         return [
           {
-            catalog,
-            id
+            catalog: entry.catalog,
+            id: entry.id
           },
-          v
+          entry
         ];
       })
     })
