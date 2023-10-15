@@ -1,5 +1,5 @@
 import { prisma } from '$lib/server/db/prisma';
-import { ObjectSet } from '$lib/common/util/ObjectSet';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import type { APICourseFull, APIData } from '$lib/types';
 import type { APICourse, DBNotification } from '@prisma/client';
@@ -11,7 +11,7 @@ export const apiData: APIData = {
   startYears: [],
   programData: [],
 
-  courseData: new Map(),
+  courseData: new ObjectMap((k) => `${k.catalog}|${k.id}`),
   geCourseData: [],
   reqCourseData: []
 };
@@ -77,13 +77,13 @@ export async function init(): Promise<void> {
   apiData.programData = dbProgramData;
 
   // initialize course data
-  dbCatalogs.forEach(({ catalog }) => {
+  dbCourseData.forEach((course) => {
     apiData.courseData.set(
-      catalog,
-      new ObjectSet<APICourseFull>(
-        (crs) => crs.id,
-        dbCourseData.filter((crs) => crs.catalog === catalog)
-      )
+      {
+        catalog: course.catalog,
+        id: course.id
+      },
+      course
     );
   });
   apiData.geCourseData = dbGECourseData;
