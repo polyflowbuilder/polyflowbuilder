@@ -6,7 +6,7 @@
 // option to load from FS instead of DB
 
 import fs from 'fs';
-import { ObjectSet } from '$lib/common/util/ObjectSet';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import type { APICourseFull, APIData } from '$lib/types';
 import type {
   Program,
@@ -24,7 +24,7 @@ export const apiData: APIData = {
   startYears: [],
   programData: [],
 
-  courseData: new Map(),
+  courseData: new ObjectMap((k) => `${k.catalog}|${k.id}`),
   geCourseData: [],
   reqCourseData: []
 };
@@ -86,29 +86,34 @@ export function init() {
       );
     }
 
-    // add loaded data to apiData
-    apiData.courseData.set(
-      catalog,
-      new ObjectSet<APICourseFull>(
-        (crs) => crs.id,
-        courses.map((crs) => {
-          const ttoData = termTypicallyOffered.find(
-            (ttoCourse) => ttoCourse.catalog === crs.catalog && ttoCourse.id === crs.id
-          );
-          return {
-            ...crs,
-            dynamicTerms: ttoData
-              ? {
-                  termFall: ttoData.termFall,
-                  termWinter: ttoData.termWinter,
-                  termSpring: ttoData.termSpring,
-                  termSummer: ttoData.termSummer
-                }
-              : null
-          };
-        })
-      )
-    );
+    const coursesMetadata: APICourseFull[] = courses.map((crs) => {
+      const ttoData = termTypicallyOffered.find(
+        (ttoCourse) => ttoCourse.catalog === crs.catalog && ttoCourse.id === crs.id
+      );
+      return {
+        ...crs,
+        dynamicTerms: ttoData
+          ? {
+              termFall: ttoData.termFall,
+              termWinter: ttoData.termWinter,
+              termSpring: ttoData.termSpring,
+              termSummer: ttoData.termSummer
+            }
+          : null
+      };
+    });
+
+    // add loaded courses to cache
+    coursesMetadata.forEach((course) => {
+      apiData.courseData.set(
+        {
+          catalog: course.catalog,
+          id: course.id
+        },
+        course
+      );
+    });
+
     apiData.geCourseData.push(...geCourses);
     apiData.reqCourseData.push(...reqCourseData);
   }
