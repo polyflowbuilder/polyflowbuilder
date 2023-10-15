@@ -21,35 +21,23 @@ export async function verifyCourseCacheStrictEquality(
   actCourseCache: CourseCache,
   testRunner: 'playwright' | 'vitest'
 ) {
-  // make sure all catalogs are present
+  // make sure all entries are present
   const expCatalogs = Array.from(expCourseCache.keys()).sort();
   const actCatalogs = Array.from(actCourseCache.keys()).sort();
 
   await assertToStrictEqual(expCatalogs, actCatalogs, testRunner);
 
-  // for each catalog, expect all courses to be the same
-  for await (const [catalog, expCourseCacheEntries] of expCourseCache) {
-    const actCourseCacheEntries = actCourseCache.get(catalog);
-    if (!actCourseCacheEntries) {
-      throw new Error(`actCourseCache entry for catalog ${catalog} missing`);
-    }
+  // now ensure that each course cache entry is correct
+  for await (const entry of Array.from(expCourseCache.values())) {
+    const expCourseObj = cloneAndDeleteNestedProperty(entry, 'dynamicTerms');
+    const actCourseObj = cloneAndDeleteNestedProperty(
+      actCourseCache.get({
+        catalog: entry.catalog,
+        id: entry.id
+      }),
+      'dynamicTerms'
+    );
 
-    // make sure all courses are present
-    const expCourses = Array.from(expCourseCacheEntries.keys()).sort();
-    const actCourses = Array.from(actCourseCacheEntries.keys()).sort();
-
-    await assertToStrictEqual(expCourses, actCourses, testRunner);
-
-    // now ensure that each course cache entry is correct
-
-    for await (const entry of Array.from(expCourseCacheEntries.values())) {
-      const expCourseObj = cloneAndDeleteNestedProperty(entry, 'dynamicTerms');
-      const actCourseObj = cloneAndDeleteNestedProperty(
-        actCourseCacheEntries.get(entry.id),
-        'dynamicTerms'
-      );
-
-      await assertToStrictEqual(expCourseObj, actCourseObj, testRunner);
-    }
+    await assertToStrictEqual(expCourseObj, actCourseObj, testRunner);
   }
 }
