@@ -34,9 +34,8 @@
   // API data caches
   courseCache.set(
     // deserialize course cache
-    new ObjectMap(
-      (k) => `${k.catalog}|${k.id}`,
-      data.userData.courseCache.map(([k, v]) => {
+    new ObjectMap({
+      initItems: data.userData.courseCache.map(([k, v]) => {
         const [catalog, id] = k.split('|');
         return [
           {
@@ -46,7 +45,7 @@
           v
         ];
       })
-    )
+    })
   );
   programCache.set(data.userData.programMetadata);
 

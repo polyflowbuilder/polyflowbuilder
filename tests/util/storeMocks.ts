@@ -13,7 +13,7 @@ import type { MajorNameCache, CourseCache } from '$lib/types';
 const mockAvailableFlowchartStartYearsWritable = writable<string[]>([]);
 const mockAvailableFlowchartCatalogsWritable = writable<string[]>([]);
 const mockProgramCacheWritable = writable<Program[]>([]);
-const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap((k) => `${k.catalog}|${k.id}`));
+const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap());
 const mockMajorNameCacheWritable = writable<MajorNameCache[]>([]);
 const mockCatalogMajorNameCacheWritable = writable<Set<string>>(new Set<string>());
 const mockModalOpenWritable = writable<boolean>(false);
