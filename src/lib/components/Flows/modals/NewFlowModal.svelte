@@ -3,7 +3,6 @@
   import { tick } from 'svelte';
   import { modal } from '$lib/client/util/modalUtil';
   import { Toggle } from '$lib/components/common';
-  import { ObjectSet } from '$lib/common/util/ObjectSet';
   import { courseCache } from '$lib/client/stores/apiDataStore';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { newFlowModalOpen } from '$lib/client/stores/modalStateStore';
@@ -13,7 +12,7 @@
   import { submitUserDataUpdateChunk } from '$lib/client/util/mutateUserDataUtilClient';
   import { UPDATE_CHUNK_DELAY_TIME_MS } from '$lib/client/config/editorConfig';
   import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-  import type { APICourseFull, CourseCache } from '$lib/types';
+  import type { APICourseFull, CourseCacheKey } from '$lib/types';
 
   // data props
 
@@ -52,7 +51,7 @@
       case 200: {
         const respJson = (await resp.json()) as {
           generatedFlowchart: Flowchart;
-          courseCache: [string, APICourseFull[]][];
+          courseCache: [string, APICourseFull][];
         };
         persistNewFlowchart(respJson);
         break;
@@ -74,27 +73,23 @@
 
   function persistNewFlowchart(res: {
     generatedFlowchart: Flowchart;
-    courseCache: [string, APICourseFull[]][];
+    courseCache: [string, APICourseFull][];
   }) {
     // TODO: empty flowchart case
 
-    // deserialize returned course cache
-    const deserializedCourseCache: CourseCache = new Map(
-      res.courseCache.map(([catalog, courses]) => {
-        return [catalog, new ObjectSet((crs) => crs.id, courses)];
-      })
-    );
-
-    Array.from(deserializedCourseCache.entries()).forEach(([catalog, objectSet]) => {
-      const courseCacheCatalogEntry = $courseCache.get(catalog);
-
-      if (!courseCacheCatalogEntry) {
-        $courseCache.set(catalog, objectSet);
-      } else {
-        Array.from(objectSet.values()).forEach((crs) => {
-          courseCacheCatalogEntry.add(crs);
-        });
-      }
+    // merge returned cache with existing
+    const newCourseCacheEntries = res.courseCache.map(([k, v]) => {
+      const [catalog, id] = k.split('|');
+      return [
+        {
+          catalog,
+          id
+        },
+        v
+      ] as [CourseCacheKey, APICourseFull];
+    });
+    newCourseCacheEntries.forEach(([k, v]) => {
+      $courseCache.set(k, v);
     });
 
     // update course cache store
