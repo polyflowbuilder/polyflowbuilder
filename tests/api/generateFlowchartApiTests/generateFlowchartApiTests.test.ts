@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { ObjectSet } from '$lib/common/util/ObjectSet';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { expect, test } from '@playwright/test';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
@@ -19,7 +19,7 @@ import type { APICourseFull } from '$lib/types/apiDataTypes';
 interface GenerateFlowchartExpectedReturnType {
   message: string;
   generatedFlowchart: Flowchart;
-  courseCache: [string, APICourseFull[]][] | undefined;
+  courseCache: [string, APICourseFull][] | undefined;
 }
 
 test.describe('generate flowchart api input tests', () => {
@@ -454,9 +454,17 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new Map(
-            resData.courseCache.map(([catalog, courses]) => {
-              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        ? new ObjectMap(
+            (k) => `${k.catalog}|${k.id}`,
+            resData.courseCache.map(([k, v]) => {
+              const [catalog, id] = k.split('|');
+              return [
+                {
+                  catalog,
+                  id
+                },
+                v
+              ];
             })
           )
         : undefined
@@ -537,9 +545,27 @@ test.describe('generate flowchart api output tests', () => {
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     // remove GE courses from expected payload
-    const expCourseCacheNoGE = new Map(responsePayload1.courseCache.entries());
-    expCourseCacheNoGE.get('2015-2017')?.deleteByKey('ENGL134');
-    expCourseCacheNoGE.get('2015-2017')?.deleteByKey('COMS101');
+    const expCourseCacheNoGE = new ObjectMap(
+      (k) => `${k.catalog}|${k.id}`,
+      resData.courseCache?.map(([k, v]) => {
+        const [catalog, id] = k.split('|');
+        return [
+          {
+            catalog,
+            id
+          },
+          v
+        ];
+      })
+    );
+    expCourseCacheNoGE.delete({
+      catalog: '2015-2017',
+      id: 'ENGL134'
+    });
+    expCourseCacheNoGE.delete({
+      catalog: '2015-2017',
+      id: 'COMS101'
+    });
 
     const expectedResponseBody = {
       message: 'Flowchart successfully generated.',
@@ -564,9 +590,17 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new Map(
-            resData.courseCache.map(([catalog, courses]) => {
-              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        ? new ObjectMap(
+            (k) => `${k.catalog}|${k.id}`,
+            resData.courseCache.map(([k, v]) => {
+              const [catalog, id] = k.split('|');
+              return [
+                {
+                  catalog,
+                  id
+                },
+                v
+              ];
             })
           )
         : undefined
@@ -626,9 +660,17 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new Map(
-            resData.courseCache.map(([catalog, courses]) => {
-              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        ? new ObjectMap(
+            (k) => `${k.catalog}|${k.id}`,
+            resData.courseCache.map(([k, v]) => {
+              const [catalog, id] = k.split('|');
+              return [
+                {
+                  catalog,
+                  id
+                },
+                v
+              ];
             })
           )
         : undefined
@@ -690,9 +732,17 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new Map(
-            resData.courseCache.map(([catalog, courses]) => {
-              return [catalog, new ObjectSet((crs) => crs.id, courses)];
+        ? new ObjectMap(
+            (k) => `${k.catalog}|${k.id}`,
+            resData.courseCache.map(([k, v]) => {
+              const [catalog, id] = k.split('|');
+              return [
+                {
+                  catalog,
+                  id
+                },
+                v
+              ];
             })
           )
         : undefined
