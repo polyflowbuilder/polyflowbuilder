@@ -11,7 +11,7 @@ export type APICourseFull = APICourse & {
   dynamicTerms: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
 };
 
-interface CourseCacheKey {
+export interface CourseCacheKey {
   catalog: string;
   id: string;
 }
