@@ -9,7 +9,7 @@ import type { CatalogSearchResults, CourseCache, SearchCache } from '$lib/types'
 
 let delayingBeforeSearch = false;
 let beforeSearchTimer: ReturnType<typeof setTimeout>;
-let fullSearchCache: SearchCache[] = [];
+let fullSearchCache: SearchCache;
 let fullCourseCache: CourseCache;
 searchCache.subscribe((cache) => (fullSearchCache = cache));
 courseCache.subscribe((cache) => (fullCourseCache = cache));
@@ -47,17 +47,17 @@ async function performSearch(
     };
   }
 
-  // get appropriate caches
-  const searchCacheIdx = fullSearchCache.findIndex((cache) => cache.catalog === catalog);
-
-  if (searchCacheIdx === -1 || !fullCourseCache.has(catalog)) {
+  // should never be searching on a catalog that isn't in the course cache already
+  if (!fullCourseCache.has(catalog)) {
     throw new Error(`unable to find cache entries required for search for catalog ${catalog}`);
   }
 
   // do local search if we already searched this term
-  const searchRecord = fullSearchCache[searchCacheIdx].searches.find(
-    (search) => search.query === `${field}|${query}`
-  );
+  const searchRecord = fullSearchCache.get({
+    catalog,
+    field,
+    query
+  });
 
   if (searchRecord) {
     // do it this way to return results in the order they were originally received in
@@ -121,14 +121,20 @@ async function performSearch(
   }
 
   // if the request is successful, update caches and return
-  searchCache.update((caches) => {
-    caches[searchCacheIdx].searches.push({
-      query: `${field}|${query}`,
-      searchValid: searchResults.results.searchValid,
-      searchLimitExceeded: searchResults.results.searchLimitExceeded,
-      searchResults: searchResults.results.searchResults.map((crs) => crs.id)
-    });
-    return caches;
+  searchCache.update((cache) => {
+    cache.set(
+      {
+        catalog,
+        field,
+        query
+      },
+      {
+        searchValid: searchResults.results.searchValid,
+        searchLimitExceeded: searchResults.results.searchLimitExceeded,
+        searchResults: searchResults.results.searchResults.map((crs) => crs.id)
+      }
+    );
+    return cache;
   });
   courseCache.update((cache) => {
     searchResults.results.searchResults.forEach((newCourse) => {

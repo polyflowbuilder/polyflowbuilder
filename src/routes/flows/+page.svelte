@@ -4,7 +4,6 @@
   import 'tippy.js/themes/light-border.css';
   import { ObjectSet } from '$lib/common/util/ObjectSet';
   import { FlowViewer } from '$lib/components/Flows';
-  import { searchCache } from '$lib/client/stores/catalogSearchStore.js';
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
@@ -45,10 +44,6 @@
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
-  $: $searchCache = $availableFlowchartCatalogs.map((catalog) => ({
-    catalog,
-    searches: []
-  }));
 
   // TODO: move this logic into the FlowEditor?
   $: {

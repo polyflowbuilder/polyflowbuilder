@@ -1,3 +1,4 @@
+import type { ObjectMap } from '$lib/common/util/ObjectMap';
 import type { APICourseFull } from '$lib/types';
 
 export interface CatalogSearchResults {
@@ -6,13 +7,16 @@ export interface CatalogSearchResults {
   searchValid: boolean;
 }
 
-// TODO: is this tree structure of the interface necessary?
-export interface SearchCache {
+interface SearchCacheKey {
   catalog: string;
-  searches: {
-    query: string;
-    searchValid: boolean;
-    searchLimitExceeded: boolean;
-    searchResults: string[];
-  }[];
+  field: string;
+  query: string;
 }
+
+interface SearchCacheEntry {
+  searchValid: boolean;
+  searchLimitExceeded: boolean;
+  searchResults: string[];
+}
+
+export type SearchCache = ObjectMap<SearchCacheKey, SearchCacheEntry>;
