@@ -21,7 +21,7 @@ export async function generateCourseCacheFlowcharts(
   // for merge use cases e.g. generateFlowchart
   enforceUniqueCoursesAcrossCaches = false
 ): Promise<CourseCache> {
-  const flowchartCourseCache: CourseCache = new ObjectMap((k) => `${k.catalog}|${k.id}`);
+  const flowchartCourseCache: CourseCache = new ObjectMap();
 
   // only keep the IDs in here vs. the entire course object so === equality works properly
   const courseCatalogAndIds = new Set<string>();
@@ -88,7 +88,7 @@ export async function generateCourseCacheFromUpdateChunks(
   chunksList: UserDataUpdateChunk[],
   programCache: Program[]
 ): Promise<CourseCache | undefined> {
-  const flowchartCourseCache: CourseCache = new ObjectMap((k) => `${k.catalog}|${k.id}`);
+  const flowchartCourseCache: CourseCache = new ObjectMap();
 
   // only keep the IDs in here vs. the entire course object so === equality works properly
   const courseCatalogAndIds = new Set<string>();

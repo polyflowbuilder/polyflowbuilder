@@ -10,6 +10,6 @@ export const availableFlowchartCatalogs = writeOnceStore<string[]>([]);
 
 // API data caches
 export const programCache = writable<Program[]>([]);
-export const courseCache = writable<CourseCache>(new ObjectMap((k) => `${k.catalog}|${k.id}`));
+export const courseCache = writable<CourseCache>(new ObjectMap());
 export const majorNameCache = writable<MajorNameCache[]>([]);
 export const catalogMajorNameCache = writable<Set<string>>(new Set<string>());

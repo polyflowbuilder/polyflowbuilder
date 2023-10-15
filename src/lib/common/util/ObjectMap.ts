@@ -1,16 +1,51 @@
 // like a regular Map except the keys can be objects
 // that can be compared non-referentially via the need
 // for a key function to transform K into a string
+
+function isRecord(obj: unknown): obj is Record<string, unknown> {
+  if (typeof obj !== 'object') {
+    return false;
+  }
+  if (Array.isArray(obj)) {
+    return false;
+  }
+  if (Object.getOwnPropertySymbols(obj).length) {
+    return false;
+  }
+  return true;
+}
+
+interface ObjectMapConstructorOptions<K, V> {
+  keyFunction: (input: K) => string;
+  initItems: [K, V][];
+}
+
 export class ObjectMap<K, V> {
   _map: Map<string, V>;
   _keyFunction: (input: K) => string;
+  _cachedIndexKeys: string[] = [];
 
-  constructor(keyFunction: (input: K) => string, items: [K, V][] = []) {
+  constructor(options: Partial<ObjectMapConstructorOptions<K, V>> = {}) {
     this._map = new Map();
-    this._keyFunction = keyFunction;
 
-    for (const [k, v] of items) {
-      this.set(k, v);
+    if (options.keyFunction) {
+      this._keyFunction = options.keyFunction;
+    } else {
+      this._keyFunction = (input: K) => {
+        if (isRecord(input)) {
+          if (!this._cachedIndexKeys.length) {
+            this._cachedIndexKeys = Object.keys(input).sort();
+          }
+          return this._cachedIndexKeys.map((k) => input[k]).join('|');
+        }
+        return String(input);
+      };
+    }
+
+    if (options.initItems) {
+      for (const [k, v] of options.initItems) {
+        this.set(k, v);
+      }
     }
   }
 

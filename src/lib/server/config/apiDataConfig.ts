@@ -11,7 +11,7 @@ export const apiData: APIData = {
   startYears: [],
   programData: [],
 
-  courseData: new ObjectMap((k) => `${k.catalog}|${k.id}`),
+  courseData: new ObjectMap(),
   geCourseData: [],
   reqCourseData: []
 };

@@ -44,14 +44,13 @@ export async function verifyCourseCacheStrictEquality(
 }
 
 export function createCourseCacheFromEntries(entries: APICourseFull[]): CourseCache {
-  return new ObjectMap(
-    (k) => `${k.catalog}|${k.id}`,
-    entries.map((entry) => [
+  return new ObjectMap({
+    initItems: entries.map((entry) => [
       {
         catalog: entry.catalog,
         id: entry.id
       },
       entry
     ])
-  );
+  });
 }

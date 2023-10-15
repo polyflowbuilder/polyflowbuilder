@@ -328,9 +328,8 @@ test.describe('getUserFlowcharts API tests', () => {
     // verify course caches are the same
     await verifyCourseCacheStrictEquality(
       expCourseCache,
-      new ObjectMap(
-        (k) => `${k.catalog}|${k.id}`,
-        actCourseCache.map(([k, v]) => {
+      new ObjectMap({
+        initItems: actCourseCache.map(([k, v]) => {
           const [catalog, id] = k.split('|');
           return [
             {
@@ -340,7 +339,7 @@ test.describe('getUserFlowcharts API tests', () => {
             v
           ];
         })
-      ),
+      }),
       'playwright'
     );
 
@@ -858,9 +857,8 @@ test.describe('getUserFlowcharts API tests', () => {
     // verify course caches are the same
     await verifyCourseCacheStrictEquality(
       expCourseCache,
-      new ObjectMap(
-        (k) => `${k.catalog}|${k.id}`,
-        actCourseCache.map(([k, v]) => {
+      new ObjectMap({
+        initItems: actCourseCache.map(([k, v]) => {
           const [catalog, id] = k.split('|');
           return [
             {
@@ -870,7 +868,7 @@ test.describe('getUserFlowcharts API tests', () => {
             v
           ];
         })
-      ),
+      }),
       'playwright'
     );
 
