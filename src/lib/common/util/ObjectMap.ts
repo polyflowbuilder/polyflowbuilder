@@ -2,13 +2,28 @@
 // that can be compared non-referentially via the need
 // for a key function to transform K into a string
 
+function isRecord(obj: unknown): obj is Record<string, unknown> {
+  if (typeof obj !== 'object') {
+    return false;
+  }
+  if (Array.isArray(obj)) {
+    return false;
+  }
+  if (Object.getOwnPropertySymbols(obj).length) {
+    return false;
+  }
+  return true;
+}
+
 interface ObjectMapConstructorOptions<K, V> {
   keyFunction: (input: K) => string;
   initItems: [K, V][];
 }
+
 export class ObjectMap<K, V> {
   _map: Map<string, V>;
   _keyFunction: (input: K) => string;
+  _cachedIndexKeys: string[] = [];
 
   constructor(options: Partial<ObjectMapConstructorOptions<K, V>> = {}) {
     this._map = new Map();
@@ -17,8 +32,11 @@ export class ObjectMap<K, V> {
       this._keyFunction = options.keyFunction;
     } else {
       this._keyFunction = (input: K) => {
-        if (input && typeof input === 'object') {
-          return Object.values(input).join('|');
+        if (isRecord(input)) {
+          if (!this._cachedIndexKeys.length) {
+            this._cachedIndexKeys = Object.keys(input).sort();
+          }
+          return this._cachedIndexKeys.map((k) => input[k]).join('|');
         }
         return String(input);
       };
