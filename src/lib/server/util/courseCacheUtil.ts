@@ -1,12 +1,12 @@
-import { ObjectSet } from '$lib/common/util/ObjectSet';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import type { Program } from '@prisma/client';
+import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
-import type { APICourseFull, CourseCache } from '$lib/types';
 
 const logger = initLogger('Util/CourseCacheUtil');
 
@@ -21,7 +21,7 @@ export async function generateCourseCacheFlowcharts(
   // for merge use cases e.g. generateFlowchart
   enforceUniqueCoursesAcrossCaches = false
 ): Promise<CourseCache> {
-  const flowchartCourseCache = new Map<string, ObjectSet<APICourseFull>>();
+  const flowchartCourseCache: CourseCache = new ObjectMap((k) => `${k.catalog}|${k.id}`);
 
   // only keep the IDs in here vs. the entire course object so === equality works properly
   const courseCatalogAndIds = new Set<string>();
@@ -68,17 +68,13 @@ export async function generateCourseCacheFlowcharts(
 
   // map courses to course cache
   courses.forEach((crs) => {
-    if (!flowchartCourseCache.has(crs.catalog)) {
-      flowchartCourseCache.set(crs.catalog, new ObjectSet((c) => c.id));
-    }
-
-    const catalogCache = flowchartCourseCache.get(crs.catalog);
-    if (!catalogCache) {
-      throw new Error(`courseCacheUtil: undefined catalog ${crs.catalog} in courseCache set`);
-    }
-    catalogCache.add(crs);
-
-    flowchartCourseCache.set(crs.catalog, catalogCache);
+    flowchartCourseCache.set(
+      {
+        catalog: crs.catalog,
+        id: crs.id
+      },
+      crs
+    );
   });
 
   return flowchartCourseCache;
@@ -92,7 +88,7 @@ export async function generateCourseCacheFromUpdateChunks(
   chunksList: UserDataUpdateChunk[],
   programCache: Program[]
 ): Promise<CourseCache | undefined> {
-  const flowchartCourseCache = new Map<string, ObjectSet<APICourseFull>>();
+  const flowchartCourseCache: CourseCache = new ObjectMap((k) => `${k.catalog}|${k.id}`);
 
   // only keep the IDs in here vs. the entire course object so === equality works properly
   const courseCatalogAndIds = new Set<string>();
@@ -169,17 +165,13 @@ export async function generateCourseCacheFromUpdateChunks(
 
   // map courses to course cache
   courses.forEach((crs) => {
-    if (!flowchartCourseCache.has(crs.catalog)) {
-      flowchartCourseCache.set(crs.catalog, new ObjectSet((c) => c.id));
-    }
-
-    const catalogCache = flowchartCourseCache.get(crs.catalog);
-    if (!catalogCache) {
-      throw new Error(`courseCacheUtil: undefined catalog ${crs.catalog} in courseCache set`);
-    }
-    catalogCache.add(crs);
-
-    flowchartCourseCache.set(crs.catalog, catalogCache);
+    flowchartCourseCache.set(
+      {
+        catalog: crs.catalog,
+        id: crs.id
+      },
+      crs
+    );
   });
 
   return flowchartCourseCache;

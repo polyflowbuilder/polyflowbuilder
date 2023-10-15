@@ -10,13 +10,18 @@ export function getCourseFromCourseCache(
   courseCache: CourseCache,
   programCache: Program[]
 ) {
-  const courseCatalog = getCatalogFromProgramIDIndex(
+  const catalog = getCatalogFromProgramIDIndex(
     course.programIdIndex ?? 0,
     flowProgramId,
     programCache
   );
   const courseMetadata =
-    !course.id || !courseCatalog ? null : courseCache.get(courseCatalog)?.get(course.id) ?? null;
+    !course.id || !catalog
+      ? null
+      : courseCache.get({
+          catalog,
+          id: course.id
+        }) ?? null;
 
   return courseMetadata;
 }

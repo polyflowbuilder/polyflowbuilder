@@ -1,7 +1,7 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
-import type { CourseCache } from '$lib/types';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 // init API data
@@ -261,7 +261,7 @@ describe('generateFlowHash tests', () => {
 
 describe('mergeFlowchartsCourseData tests', () => {
   test('merging with empty data', () => {
-    expect(mergeFlowchartsCourseData([], [], new Map(), [])).toEqual([]);
+    expect(mergeFlowchartsCourseData([], [], new ObjectMap(() => ''), [])).toEqual([]);
   });
 
   test('merge single flowchart data', () => {

@@ -11,7 +11,7 @@ export const load: PageServerLoad = (event) => {
 
   async function fetchUserData(): Promise<{
     flowcharts: Flowchart[];
-    courseCache: [string, APICourseFull[]][];
+    courseCache: [string, APICourseFull][];
     programMetadata: Program[];
   }> {
     const data = await event.fetch(
@@ -20,7 +20,7 @@ export const load: PageServerLoad = (event) => {
 
     const dataJson = (await data.json()) as {
       flowcharts: Flowchart[];
-      courseCache: [string, APICourseFull[]][];
+      courseCache: [string, APICourseFull][];
       programMetadata: Program[];
       message: string;
     };

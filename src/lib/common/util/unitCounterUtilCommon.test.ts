@@ -1,4 +1,6 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
+import { createCourseCacheFromEntries } from '../../../../tests/util/courseCacheUtil';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '../../../../tests/util/testFlowcharts';
 import {
   computeTermUnits,
@@ -6,8 +8,6 @@ import {
   incrementRangedUnits
 } from '$lib/common/util/unitCounterUtilCommon';
 import type { Course } from '$lib/common/schema/flowchartSchema';
-import type { ObjectSet } from '$lib/common/util/ObjectSet';
-import type { APICourseFull } from '$lib/types';
 
 // init API data
 await apiDataConfig.init();
@@ -284,9 +284,11 @@ describe('computeTermUnits tests', () => {
   });
 
   test('computeTermUnits unable to find course metadata', () => {
-    const courseCache1517Only = new Map([
-      ['2015-2017', apiDataConfig.apiData.courseData.get('2015-2017') as ObjectSet<APICourseFull>]
-    ]);
+    const courseCache1517Only = createCourseCacheFromEntries(
+      Array.from(apiDataConfig.apiData.courseData.values()).filter(
+        (crs) => crs.catalog === '2015-2017'
+      )
+    );
 
     const termData: Course[] = [
       {
@@ -318,7 +320,7 @@ describe('computeTotalUnits tests', () => {
   const flowTermData = TEST_FLOWCHART_SINGLE_PROGRAM_1.termData;
 
   test('compute total units for empty flowchart', () => {
-    expect(computeTotalUnits([], new Map(), [])).toBe('0');
+    expect(computeTotalUnits([], new ObjectMap(() => ''), [])).toBe('0');
   });
 
   test('compute total units for standard flowchart, no fullCompute', () => {

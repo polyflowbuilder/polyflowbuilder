@@ -4,6 +4,7 @@
 
 import { apiData } from '$lib/server/config/apiDataConfig';
 import { writable } from 'svelte/store';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { MajorNameCache, CourseCache } from '$lib/types';
@@ -12,7 +13,7 @@ import type { MajorNameCache, CourseCache } from '$lib/types';
 const mockAvailableFlowchartStartYearsWritable = writable<string[]>([]);
 const mockAvailableFlowchartCatalogsWritable = writable<string[]>([]);
 const mockProgramCacheWritable = writable<Program[]>([]);
-const mockCourseCacheWritable = writable<CourseCache>(new Map());
+const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap((k) => `${k.catalog}|${k.id}`));
 const mockMajorNameCacheWritable = writable<MajorNameCache[]>([]);
 const mockCatalogMajorNameCacheWritable = writable<Set<string>>(new Set<string>());
 const mockModalOpenWritable = writable<boolean>(false);

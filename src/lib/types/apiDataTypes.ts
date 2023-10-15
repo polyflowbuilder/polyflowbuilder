@@ -1,4 +1,4 @@
-import type { ObjectSet } from '$lib/common/util/ObjectSet';
+import type { ObjectMap } from '$lib/common/util/ObjectMap';
 import type {
   Program,
   GECourse,
@@ -11,7 +11,12 @@ export type APICourseFull = APICourse & {
   dynamicTerms: Omit<Omit<TermTypicallyOffered, 'id'>, 'catalog'> | null;
 };
 
-export type CourseCache = Map<string, ObjectSet<APICourseFull>>;
+export interface CourseCacheKey {
+  catalog: string;
+  id: string;
+}
+
+export type CourseCache = ObjectMap<CourseCacheKey, APICourseFull>;
 
 export interface MajorNameCache {
   catalog: string;
