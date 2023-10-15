@@ -454,9 +454,8 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new ObjectMap(
-            (k) => `${k.catalog}|${k.id}`,
-            resData.courseCache.map(([k, v]) => {
+        ? new ObjectMap({
+            initItems: resData.courseCache.map(([k, v]) => {
               const [catalog, id] = k.split('|');
               return [
                 {
@@ -466,7 +465,7 @@ test.describe('generate flowchart api output tests', () => {
                 v
               ];
             })
-          )
+          })
         : undefined
     };
 
@@ -545,9 +544,8 @@ test.describe('generate flowchart api output tests', () => {
     resData.generatedFlowchart.lastUpdatedUTC = new Date(resData.generatedFlowchart.lastUpdatedUTC);
 
     // remove GE courses from expected payload
-    const expCourseCacheNoGE = new ObjectMap(
-      (k) => `${k.catalog}|${k.id}`,
-      resData.courseCache?.map(([k, v]) => {
+    const expCourseCacheNoGE = new ObjectMap({
+      initItems: resData.courseCache?.map(([k, v]) => {
         const [catalog, id] = k.split('|');
         return [
           {
@@ -557,7 +555,7 @@ test.describe('generate flowchart api output tests', () => {
           v
         ];
       })
-    );
+    });
     expCourseCacheNoGE.delete({
       catalog: '2015-2017',
       id: 'ENGL134'
@@ -590,9 +588,8 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new ObjectMap(
-            (k) => `${k.catalog}|${k.id}`,
-            resData.courseCache.map(([k, v]) => {
+        ? new ObjectMap({
+            initItems: resData.courseCache.map(([k, v]) => {
               const [catalog, id] = k.split('|');
               return [
                 {
@@ -602,7 +599,7 @@ test.describe('generate flowchart api output tests', () => {
                 v
               ];
             })
-          )
+          })
         : undefined
     };
 
@@ -660,9 +657,8 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new ObjectMap(
-            (k) => `${k.catalog}|${k.id}`,
-            resData.courseCache.map(([k, v]) => {
+        ? new ObjectMap({
+            initItems: resData.courseCache.map(([k, v]) => {
               const [catalog, id] = k.split('|');
               return [
                 {
@@ -672,7 +668,7 @@ test.describe('generate flowchart api output tests', () => {
                 v
               ];
             })
-          )
+          })
         : undefined
     };
 
@@ -732,9 +728,8 @@ test.describe('generate flowchart api output tests', () => {
       ]),
       // deserialize course cache
       courseCache: resData.courseCache
-        ? new ObjectMap(
-            (k) => `${k.catalog}|${k.id}`,
-            resData.courseCache.map(([k, v]) => {
+        ? new ObjectMap({
+            initItems: resData.courseCache.map(([k, v]) => {
               const [catalog, id] = k.split('|');
               return [
                 {
@@ -744,7 +739,7 @@ test.describe('generate flowchart api output tests', () => {
                 v
               ];
             })
-          )
+          })
         : undefined
     };
 
