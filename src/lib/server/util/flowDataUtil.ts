@@ -165,11 +165,10 @@ export async function generateFlowchart(
     // recompute course cache if applicable
     allRemovedCoursesKeysSet.forEach((entry) => {
       const [catalog, id] = entry.split('|');
-      const courseCacheCatalogEntry = courseCache.get(catalog);
-      if (!courseCacheCatalogEntry) {
-        throw new Error(`flowDataUtil: Unable to find catalog ${catalog} in courseCache`);
-      }
-      courseCacheCatalogEntry.deleteByKey(id);
+      courseCache.delete({
+        catalog,
+        id
+      });
     });
   }
 
