@@ -2,7 +2,7 @@
   // TODO: put these styles in a better place?
   import 'tippy.js/dist/tippy.css';
   import 'tippy.js/themes/light-border.css';
-  import { ObjectSet } from '$lib/common/util/ObjectSet';
+  import { ObjectMap } from '$lib/common/util/ObjectMap';
   import { FlowViewer } from '$lib/components/Flows';
   import { ModalWrapper } from '$lib/components/Flows/modals';
   import { FlowInfoPanel } from '$lib/components/Flows/FlowInfoPanel';
@@ -34,9 +34,17 @@
   // API data caches
   courseCache.set(
     // deserialize course cache
-    new Map(
-      data.userData.courseCache.map(([catalog, courses]) => {
-        return [catalog, new ObjectSet((crs) => crs.id, courses)];
+    new ObjectMap(
+      (k) => `${k.catalog}|${k.id}`,
+      data.userData.courseCache.map(([k, v]) => {
+        const [catalog, id] = k.split('|');
+        return [
+          {
+            catalog,
+            id
+          },
+          v
+        ];
       })
     )
   );
