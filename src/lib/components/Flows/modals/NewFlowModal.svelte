@@ -51,7 +51,7 @@
       case 200: {
         const respJson = (await resp.json()) as {
           generatedFlowchart: Flowchart;
-          courseCache: [string, APICourseFull][];
+          courseCache: APICourseFull[];
         };
         persistNewFlowchart(respJson);
         break;
@@ -73,19 +73,18 @@
 
   function persistNewFlowchart(res: {
     generatedFlowchart: Flowchart;
-    courseCache: [string, APICourseFull][];
+    courseCache: APICourseFull[];
   }) {
     // TODO: empty flowchart case
 
     // merge returned cache with existing
-    const newCourseCacheEntries = res.courseCache.map(([k, v]) => {
-      const [catalog, id] = k.split('|');
+    const newCourseCacheEntries = res.courseCache.map((entry) => {
       return [
         {
-          catalog,
-          id
+          catalog: entry.catalog,
+          id: entry.id
         },
-        v
+        entry
       ] as [CourseCacheKey, APICourseFull];
     });
     newCourseCacheEntries.forEach(([k, v]) => {
