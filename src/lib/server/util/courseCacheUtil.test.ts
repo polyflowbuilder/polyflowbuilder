@@ -1,5 +1,5 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
-import { ObjectSet } from '$lib/common/util/ObjectSet';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import { verifyCourseCacheStrictEquality } from '../../../../tests/util/courseCacheUtil';
@@ -25,6 +25,19 @@ function generateProgramCache(programIds: string[]): Program[] {
   return programCache;
 }
 
+function createCourseCacheFromEntries(entries: APICourseFull[]): CourseCache {
+  return new ObjectMap(
+    (k) => `${k.catalog}|${k.id}`,
+    entries.map((entry) => [
+      {
+        catalog: entry.catalog,
+        id: entry.id
+      },
+      entry
+    ])
+  );
+}
+
 describe('generateCourseCacheFlowcharts single flowchart tests', () => {
   test('generate course cache for flowchart with empty data', async () => {
     const flow1: Flowchart = {
@@ -43,7 +56,7 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
       publishedId: null
     };
 
-    const expectedCourseCache: CourseCache = new Map();
+    const expectedCourseCache = createCourseCacheFromEntries([]);
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
@@ -91,48 +104,40 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
     // compute program cache for this flowchart
     const programCache = generateProgramCache(flow1.programId);
 
-    const expectedCourseCache: CourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -203,67 +208,51 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
     // generate program cache for this flowchart
     const programCache = generateProgramCache(flow1.programId);
 
-    const expectedCourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ],
-      [
-        '2022-2026',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'KINE134',
-              catalog: '2022-2026',
-              displayName: 'Pickleball',
-              units: '1',
-              desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
-              addl: 'Term Typically Offered: F, SP\nCR/NC\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'KINE134',
+        catalog: '2022-2026',
+        displayName: 'Pickleball',
+        units: '1',
+        desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
+        addl: 'Term Typically Offered: F, SP\nCR/NC\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -312,48 +301,40 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
     // compute program cache for this flowchart
     const programCache = generateProgramCache(flow1.programId);
 
-    const expectedCourseCache: CourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -366,7 +347,7 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
 
 describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
   test('generate flowcharts course cache for no flowcharts', async () => {
-    const expectedCourseCache: CourseCache = new Map();
+    const expectedCourseCache = createCourseCacheFromEntries([]);
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
@@ -392,7 +373,7 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
       publishedId: null
     };
 
-    const expectedCourseCache: CourseCache = new Map();
+    const expectedCourseCache = createCourseCacheFromEntries([]);
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
@@ -439,48 +420,40 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
 
     const programCache = generateProgramCache(flow1.programId);
 
-    const expectedCourseCache: CourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -550,67 +523,51 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
 
     const programCache = generateProgramCache(flow1.programId);
 
-    const expectedCourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ],
-      [
-        '2022-2026',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'KINE134',
-              catalog: '2022-2026',
-              displayName: 'Pickleball',
-              units: '1',
-              desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
-              addl: 'Term Typically Offered: F, SP\nCR/NC\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'KINE134',
+        catalog: '2022-2026',
+        displayName: 'Pickleball',
+        units: '1',
+        desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
+        addl: 'Term Typically Offered: F, SP\nCR/NC\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -718,67 +675,51 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
       ...new Set([...flow1.programId, ...flow2.programId])
     ]);
 
-    const expectedCourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ],
-      [
-        '2022-2026',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'KINE134',
-              catalog: '2022-2026',
-              displayName: 'Pickleball',
-              units: '1',
-              desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
-              addl: 'Term Typically Offered: F, SP\nCR/NC\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'KINE134',
+        catalog: '2022-2026',
+        displayName: 'Pickleball',
+        units: '1',
+        desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
+        addl: 'Term Typically Offered: F, SP\nCR/NC\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -824,48 +765,40 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
       publishedId: null
     };
 
-    const expectedCourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
@@ -970,67 +903,51 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
       ...new Set([...flow1.programId, ...flow2.programId])
     ]);
 
-    const expectedCourseCache = new Map([
-      [
-        '2015-2017',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'AGB301',
-              catalog: '2015-2017',
-              displayName: 'Food and Fiber Marketing',
-              units: '4',
-              desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'AGC301',
-              catalog: '2015-2017',
-              displayName: 'New Media Communication Strategies in Agriculture',
-              units: '4',
-              desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
-              addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            },
-            {
-              id: 'JOUR312',
-              catalog: '2015-2017',
-              displayName: 'Public Relations',
-              units: '4',
-              desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
-              addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ],
-      [
-        '2022-2026',
-        new ObjectSet<APICourseFull>(
-          (crs) => crs.id,
-          [
-            {
-              id: 'KINE134',
-              catalog: '2022-2026',
-              displayName: 'Pickleball',
-              units: '1',
-              desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
-              addl: 'Term Typically Offered: F, SP\nCR/NC\n',
-              gwrCourse: false,
-              uscpCourse: false,
-              dynamicTerms: null
-            }
-          ]
-        )
-      ]
+    const expectedCourseCache = createCourseCacheFromEntries([
+      {
+        id: 'AGB301',
+        catalog: '2015-2017',
+        displayName: 'Food and Fiber Marketing',
+        units: '4',
+        desc: 'Food and fiber marketing, examining commodity, industrial, and consumer product marketing from a managerial viewpoint.  A global perspective in understanding consumer needs and developing the knowledge of economic, political, social and environmental factors that affect food and fiber marketing systems.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W, SP\nPrerequisite: AGB 212 or ECON 221.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'AGC301',
+        catalog: '2015-2017',
+        displayName: 'New Media Communication Strategies in Agriculture',
+        units: '4',
+        desc: 'Exploration and implementation of emerging new media communication strategies and technologies to convey information on important issues in agriculture to a global audience.  Focus on food and farming dialogues currently populating conversations about production agriculture.  Adaptation of different writing styles based on requirements of the various new media channels.  Analysis of metrics to measure level of engagement with desired audience.  3 lectures, 1 laboratory.\n',
+        addl: 'Term Typically Offered: W\nPrerequisite: JOUR 205. Recommended: JOUR 203.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'JOUR312',
+        catalog: '2015-2017',
+        displayName: 'Public Relations',
+        units: '4',
+        desc: 'Overview of the history, growth and ongoing development of public relations as an information management function in a multicultural environment.  Public relations practices used in commercial and non-profit sectors, and firsthand application of public relations skills.  4 lectures.\n',
+        addl: 'Term Typically Offered: F, W\nPrerequisite: Sophomore standing.\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      },
+      {
+        id: 'KINE134',
+        catalog: '2022-2026',
+        displayName: 'Pickleball',
+        units: '1',
+        desc: 'Basic instruction in skill development, knowledge, and desirable attitudes toward physical activity. Fundamental pickleball skills, knowledge, and strategy such that beginning to intermediate levels of play are attained. Enrollment is open to all students. Total limited to 12 units of credit earned in basic instructional KINE courses (KINE 100-176) for non-majors. The following restrictions apply to KINE 100-176: 1) no more than two different activity courses or more than one section of an individual activity course may be taken for credit in any one quarter, 2) a student may not enroll simultaneously in the same quarter for a beginning, intermediate and/or advanced activity course, and 3) any level of an activity course can be repeated only once for credit. Total credit limited to 2 units. Credit/No Credit grading only. 1 activity.\n',
+        addl: 'Term Typically Offered: F, SP\nCR/NC\n',
+        gwrCourse: false,
+        uscpCourse: false,
+        dynamicTerms: null
+      }
     ]);
 
     await verifyCourseCacheStrictEquality(
