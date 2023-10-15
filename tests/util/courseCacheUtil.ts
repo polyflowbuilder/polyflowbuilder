@@ -1,6 +1,7 @@
+import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { expect as pwExpect } from '@playwright/test';
 import { cloneAndDeleteNestedProperty } from './testUtil';
-import type { CourseCache } from '$lib/types';
+import type { APICourseFull, CourseCache } from '$lib/types';
 
 async function assertToStrictEqual(
   exp: unknown,
@@ -40,4 +41,17 @@ export async function verifyCourseCacheStrictEquality(
 
     await assertToStrictEqual(expCourseObj, actCourseObj, testRunner);
   }
+}
+
+export function createCourseCacheFromEntries(entries: APICourseFull[]): CourseCache {
+  return new ObjectMap(
+    (k) => `${k.catalog}|${k.id}`,
+    entries.map((entry) => [
+      {
+        catalog: entry.catalog,
+        id: entry.id
+      },
+      entry
+    ])
+  );
 }

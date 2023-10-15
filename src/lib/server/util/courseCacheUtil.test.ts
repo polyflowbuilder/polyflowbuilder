@@ -1,11 +1,12 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
-import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
 import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
-import { verifyCourseCacheStrictEquality } from '../../../../tests/util/courseCacheUtil';
+import {
+  createCourseCacheFromEntries,
+  verifyCourseCacheStrictEquality
+} from 'tests/util/courseCacheUtil';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { APICourseFull, CourseCache } from '$lib/types';
 
 // init API data
 await apiDataConfig.init();
@@ -23,19 +24,6 @@ function generateProgramCache(programIds: string[]): Program[] {
   }
 
   return programCache;
-}
-
-function createCourseCacheFromEntries(entries: APICourseFull[]): CourseCache {
-  return new ObjectMap(
-    (k) => `${k.catalog}|${k.id}`,
-    entries.map((entry) => [
-      {
-        catalog: entry.catalog,
-        id: entry.id
-      },
-      entry
-    ])
-  );
 }
 
 describe('generateCourseCacheFlowcharts single flowchart tests', () => {
