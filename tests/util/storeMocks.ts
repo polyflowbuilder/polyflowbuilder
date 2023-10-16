@@ -13,7 +13,7 @@ const mockAvailableFlowchartStartYearsWritable = writable<string[]>([]);
 const mockAvailableFlowchartCatalogsWritable = writable<string[]>([]);
 const mockProgramCacheWritable = writable<ProgramCache>(new Map());
 const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap());
-const mockMajorNameCacheWritable = writable<MajorNameCache[]>([]);
+const mockMajorNameCacheWritable = writable<MajorNameCache>(new Map());
 const mockCatalogMajorNameCacheWritable = writable<Set<string>>(new Set<string>());
 const mockModalOpenWritable = writable<boolean>(false);
 const mockSelectedFlowIndexWritable = writable<number>(-1);
@@ -49,20 +49,19 @@ export function initMockedAPIDataStores() {
   const mockCatalogMajorNameCacheValue = new Set(
     apiDataProgramDataArr.map((entry) => `${entry.catalog}|${entry.majorName}`)
   );
-  const mockMajorNameCacheValue = apiData.catalogs.map((catalog) => {
-    const majorNames = [
-      ...new Set(
-        apiDataProgramDataArr
-          .filter((entry) => entry.catalog === catalog)
-          .map((entry) => entry.majorName)
-          .sort()
-      )
-    ];
-    return {
-      catalog,
-      majorNames
-    };
-  });
+  const mockMajorNameCacheValue = new Map(
+    apiData.catalogs.map((catalog) => {
+      const majorNames = [
+        ...new Set(
+          apiDataProgramDataArr
+            .filter((entry) => entry.catalog === catalog)
+            .map((entry) => entry.majorName)
+            .sort()
+        )
+      ];
+      return [catalog, majorNames];
+    })
+  );
 
   mockAvailableFlowchartStartYearsStore.set(apiData.startYears);
   mockAvailableFlowchartCatalogsStore.set(apiData.catalogs);
