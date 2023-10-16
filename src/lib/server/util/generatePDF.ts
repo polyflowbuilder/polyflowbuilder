@@ -12,20 +12,19 @@ import {
   getCourseFromCourseCache,
   computeCourseDisplayValues
 } from '$lib/common/util/courseDataUtilCommon';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types';
+import type { CourseCache, ProgramCache } from '$lib/types';
 import type { FlowchartPDFData, FlowchartPDFTermData } from '$lib/types/generatePDFTypes';
 
 export function extractPDFDataFromFlowchart(
   flowchart: Flowchart,
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ): FlowchartPDFData {
   // get program friendly names
   const programFriendlyNames = flowchart.programId
     .map((id) => {
-      const programMetadata = programCache.find((program) => program.id === id);
+      const programMetadata = programCache.get(id);
 
       // TODO: find a way to return non-500 when this happens
       // (look at TERM_MOD logic?)
