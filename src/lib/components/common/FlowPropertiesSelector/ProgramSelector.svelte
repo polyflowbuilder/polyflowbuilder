@@ -33,7 +33,7 @@
     id: string;
   }[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
-    const majorName = $programCache.find((prog) => prog.id === id)?.majorName;
+    const majorName = $programCache.get(id)?.majorName;
     if (!majorName) {
       throw new Error('invalid program id in alreadySelectedProgramIds: ' + id);
     }
@@ -61,7 +61,7 @@
     updating = true;
     if (input !== '') {
       // find the program if it's valid
-      const program = $programCache.find((prog) => prog.id === input);
+      const program = $programCache.get(input);
       if (!program) {
         throw new Error('invalid program received as input: ' + input);
       }
@@ -117,12 +117,8 @@
         results: Program[];
       };
 
-      // TODO: optimize this
-      const existingProgramIds = new Set($programCache.map((entry) => entry.id));
       for (const entry of resJson.results) {
-        if (!existingProgramIds.has(entry.id)) {
-          $programCache.push(entry);
-        }
+        $programCache.set(entry.id, entry);
       }
       $catalogMajorNameCache.add(`${progCatalogYear}|${majorName}`);
 
@@ -132,18 +128,22 @@
     }
 
     // grab and set all relevant concentrations
-    concOptions = $programCache
-      .filter((entry) => entry.catalog === progCatalogYear && entry.majorName === majorName)
-      .map((entry) => {
+    const concOptions: {
+      name: string;
+      id: string;
+    }[] = [];
+    $programCache.forEach((entry) => {
+      if (entry.catalog === progCatalogYear && entry.majorName === majorName) {
         if (!entry.concName) {
           throw new Error(`program ${entry.id} has no concName`);
         }
-        return {
+        concOptions.push({
           name: entry.concName,
           id: entry.id
-        };
-      })
-      .sort((a, b) => a.name.localeCompare(b.name));
+        });
+      }
+    });
+    concOptions.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // reset the major & concentration when their respective parents change
