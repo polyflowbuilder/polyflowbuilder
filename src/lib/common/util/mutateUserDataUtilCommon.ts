@@ -4,16 +4,15 @@ import { computeTermUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { performAddTerms, performDeleteTerms } from '$lib/common/util/flowTermUtilCommon';
 import { UserDataUpdateChunkTERM_MODCourseDataFrom, UserDataUpdateChunkType } from '$lib/types';
 import type { Term } from '$lib/common/schema/flowchartSchema';
-import type { Program } from '@prisma/client';
-import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
+import type { CourseCache, ProgramCache } from '$lib/types';
 import type { MutateFlowchartData, MutateUserDataUtilCommonResult } from '$lib/types';
 
 export function mutateUserFlowcharts(
   curUserFlowchartsData: MutateFlowchartData[],
   updateChunks: UserDataUpdateChunk[],
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ): MutateUserDataUtilCommonResult {
   const errors: string[] = [];
 
