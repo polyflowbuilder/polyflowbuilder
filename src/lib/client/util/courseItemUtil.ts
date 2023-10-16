@@ -36,6 +36,12 @@ export function buildTermCourseItemsData(
       courseCache,
       programCache
     );
+    if (course.id && !courseMetadata) {
+      throw new Error(
+        `buildTermCourseItemsData: unable to find course metadata for course ${course.id}`
+      );
+    }
+
     const computedCourseDisplayValues = computeCourseDisplayValues(course, courseMetadata);
 
     const itemData: CourseItemData = {

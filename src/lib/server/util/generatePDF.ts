@@ -58,6 +58,11 @@ export function extractPDFDataFromFlowchart(
         courseCache,
         programCache
       );
+      if (course.id && !courseMetadata) {
+        throw new Error(
+          `extractPDFDataFromFlowchart: unable to find course metadata for course ${course.id}`
+        );
+      }
       termData.tData.push(computeCourseDisplayValues(course, courseMetadata, false));
     });
 
