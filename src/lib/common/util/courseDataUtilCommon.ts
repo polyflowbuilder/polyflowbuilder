@@ -1,14 +1,18 @@
 // handles common functionality with course data
 
 import type { Course } from '$lib/common/schema/flowchartSchema';
-import type { Program } from '@prisma/client';
-import type { APICourseFull, ComputedCourseItemDisplayData, CourseCache } from '$lib/types';
+import type {
+  CourseCache,
+  ProgramCache,
+  APICourseFull,
+  ComputedCourseItemDisplayData
+} from '$lib/types';
 
 export function getCourseFromCourseCache(
   course: Course,
   flowProgramId: string[],
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ) {
   const catalog = getCatalogFromProgramIDIndex(
     course.programIdIndex ?? 0,
@@ -29,10 +33,9 @@ export function getCourseFromCourseCache(
 export function getCatalogFromProgramIDIndex(
   programIDIndex: number,
   programId: string[],
-  programCache: Program[]
+  programCache: ProgramCache
 ): string | undefined {
-  const program = programCache.find((prog) => prog.id === programId[programIDIndex]);
-  return program?.catalog;
+  return programCache.get(programId[programIDIndex])?.catalog;
 }
 
 export function computeCourseDisplayValues(
