@@ -1,11 +1,70 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
-import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
+import {
+  generateFlowHash,
+  getCatalogFromProgramID,
+  mergeFlowchartsCourseData
+} from '$lib/common/util/flowDataUtilCommon';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
 
 // init API data
 await apiDataConfig.init();
+
+describe('getCatalogFromProgramID tests', () => {
+  test('valid catalog with one program', () => {
+    const catalog = getCatalogFromProgramID(
+      ['d38fef1b-990b-4cce-a82c-79d55879f4be'],
+      0,
+      apiDataConfig.apiData.programData
+    );
+    expect(catalog).toBe('2022-2026');
+  });
+
+  test('valid catalog with two programs', () => {
+    const programs = [
+      '1c3a7751-0eb8-4652-b316-0307f1db312f',
+      '0e7e23c6-aeee-418d-93f7-5ba3475ab00b'
+    ];
+    expect(getCatalogFromProgramID(programs, 0, apiDataConfig.apiData.programData)).toBe(
+      '2019-2020'
+    );
+    expect(getCatalogFromProgramID(programs, 1, apiDataConfig.apiData.programData)).toBe(
+      '2020-2021'
+    );
+  });
+
+  test('valid catalog with max number of programs', () => {
+    const programs = [
+      '1c3a7751-0eb8-4652-b316-0307f1db312f',
+      '0e7e23c6-aeee-418d-93f7-5ba3475ab00b',
+      '3f289773-7b54-4d99-8e03-48c829b63636',
+      '10ee525b-780d-4aa8-8a91-be6498c89937',
+      'bf13b9db-acc0-4967-bd9e-f123693652e5'
+    ];
+    expect(getCatalogFromProgramID(programs, 4, apiDataConfig.apiData.programData)).toBe(
+      '2019-2020'
+    );
+    expect(getCatalogFromProgramID(programs, 2, apiDataConfig.apiData.programData)).toBe(
+      '2015-2017'
+    );
+  });
+
+  test('undefined catalog', () => {
+    const programs = [
+      '1c3a7751-0eb8-4652-b316-0307f1db312f',
+      '0e7e23c6-aeee-418d-93f7-5ba3475ab00b',
+      '3f289773-7b54-4d99-8e03-48c829b63636',
+      '10ee525b-780d-4aa8-8a91-be6498c89937',
+      'bf13b9db-acc0-4967-bd9e-f123693652e5'
+    ];
+    expect(
+      getCatalogFromProgramID(programs, -1, apiDataConfig.apiData.programData)
+    ).toBeUndefined();
+    expect(getCatalogFromProgramID(programs, 5, apiDataConfig.apiData.programData)).toBeUndefined();
+    expect(getCatalogFromProgramID(programs, 3, new Map())).toBeUndefined();
+  });
+});
 
 describe('generateFlowHash tests', () => {
   test('hash works', () => {

@@ -1,10 +1,7 @@
 import { COLORS } from '$lib/common/config/colorConfig';
 import { SANITIZE_REGEX } from '$lib/common/config/catalogSearchConfig';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
-import {
-  getCourseFromCourseCache,
-  getCatalogFromProgramIDIndex
-} from '$lib/common/util/courseDataUtilCommon';
+import { getCourseFromCourseCache } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, FlowEditorFooterUnitCounts, ProgramCache } from '$lib/types';
 
@@ -37,23 +34,18 @@ export function computeGroupUnits(
   // iterate over all courses
   flowchart.termData.forEach((term) => {
     term.courses.forEach((course) => {
-      // perform lookup if necessary
-      const courseCatalog = getCatalogFromProgramIDIndex(
-        course.programIdIndex ?? 0,
-        flowchart.programId,
-        programCache
-      );
-
-      if (!courseCatalog) {
-        throw new Error('could not find catalog for course in flowchart');
-      }
-
+      // perform lookup to get unit counts
       const courseMetadata = getCourseFromCourseCache(
         course,
         flowchart.programId,
         courseCache,
         programCache
       );
+      if (course.id && !courseMetadata) {
+        throw new Error(
+          `unitCounterUtilClient: unable to locate course metadata for course ${course.id}`
+        );
+      }
 
       // customUnits takes precedence even if we have a standard course
       // (for standard+customUnit cases)

@@ -1,7 +1,7 @@
 import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { getCourseData } from '$lib/server/db/course';
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramID } from '$lib/common/util/flowDataUtilCommon';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
@@ -32,9 +32,9 @@ export async function generateCourseCacheFlowcharts(
         // skip all custom courses
         if (c.id) {
           // select the correct catalog
-          const courseCatalog = getCatalogFromProgramIDIndex(
-            c.programIdIndex ?? 0,
+          const courseCatalog = getCatalogFromProgramID(
             flowchart.programId,
+            c.programIdIndex,
             programCache
           );
 
@@ -129,9 +129,9 @@ export async function generateCourseCacheFromUpdateChunks(
 
         // add course to cache only if noncustom
         if (course.id) {
-          const courseCatalog = getCatalogFromProgramIDIndex(
-            course.programIdIndex ?? 0,
+          const courseCatalog = getCatalogFromProgramID(
             flowchart.programId,
+            course.programIdIndex,
             programCache
           );
 

@@ -1,9 +1,6 @@
 // util functions related to unit counting
 
-import {
-  getCourseFromCourseCache,
-  getCatalogFromProgramIDIndex
-} from '$lib/common/util/courseDataUtilCommon';
+import { getCourseFromCourseCache } from '$lib/common/util/courseDataUtilCommon';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, ProgramCache } from '$lib/types';
 
@@ -33,15 +30,6 @@ export function computeTermUnits(
     if (c.customUnits) {
       computedTermUnits = incrementRangedUnits(computedTermUnits, c.customUnits);
     } else if (c.id) {
-      // select the correct catalog
-      const courseCatalog = getCatalogFromProgramIDIndex(
-        c.programIdIndex ?? 0,
-        programId,
-        programCache
-      );
-      if (!courseCatalog) {
-        throw new Error('unitCounterUtil: undefined courseCatalog');
-      }
       const courseMetadata = getCourseFromCourseCache(c, programId, courseCache, programCache);
       if (!courseMetadata) {
         throw new Error(`unitCounterUtil: unable to find course metadata for course ${c.id}`);

@@ -10,7 +10,7 @@ export const TEST_FLOWCHART_SINGLE_PROGRAM_1: Flowchart = {
   name: '',
   notes: '',
   ownerId: '',
-  programId: ['68be11b7-389b-4ebc-9b95-8997e7314497'],
+  programId: ['fd2f33be-3103-4b3d-a17b-94ced0d7998f'],
   startYear: '',
   unitTotal: '500', // just a test value
   version: CURRENT_FLOW_DATA_VERSION,

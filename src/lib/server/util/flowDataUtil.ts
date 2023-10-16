@@ -1,10 +1,13 @@
 import { COLORS } from '$lib/common/config/colorConfig';
 import { v4 as uuid } from 'uuid';
 import { getTemplateFlowcharts } from '$lib/server/db/templateFlowchart';
-import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import { computeTermUnits, computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
-import { generateFlowHash, mergeFlowchartsCourseData } from '$lib/common/util/flowDataUtilCommon';
+import {
+  generateFlowHash,
+  getCatalogFromProgramID,
+  mergeFlowchartsCourseData
+} from '$lib/common/util/flowDataUtilCommon';
 import {
   FLOW_NOTES_MAX_LENGTH,
   FLOW_DEFAULT_TERM_DATA,
@@ -138,9 +141,9 @@ export async function generateFlowchart(
           // they dont need to be removed from courseCache
           if (c.id) {
             allRemovedCoursesKeysSet.add(
-              `${getCatalogFromProgramIDIndex(
-                c.programIdIndex ?? 0,
+              `${getCatalogFromProgramID(
                 generatedFlowchart.programId,
+                c.programIdIndex,
                 programCache
               )}|${c.id}`
             );

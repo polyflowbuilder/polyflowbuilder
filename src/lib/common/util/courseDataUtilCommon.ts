@@ -1,5 +1,6 @@
 // handles common functionality with course data
 
+import { getCatalogFromProgramID } from '$lib/common/util/flowDataUtilCommon';
 import type { Course } from '$lib/common/schema/flowchartSchema';
 import type {
   CourseCache,
@@ -14,11 +15,7 @@ export function getCourseFromCourseCache(
   courseCache: CourseCache,
   programCache: ProgramCache
 ) {
-  const catalog = getCatalogFromProgramIDIndex(
-    course.programIdIndex ?? 0,
-    flowProgramId,
-    programCache
-  );
+  const catalog = getCatalogFromProgramID(flowProgramId, course.programIdIndex, programCache);
   const courseMetadata =
     !course.id || !catalog
       ? null
@@ -28,14 +25,6 @@ export function getCourseFromCourseCache(
         }) ?? null;
 
   return courseMetadata;
-}
-
-export function getCatalogFromProgramIDIndex(
-  programIDIndex: number,
-  programId: string[],
-  programCache: ProgramCache
-): string | undefined {
-  return programCache.get(programId[programIDIndex])?.catalog;
 }
 
 export function computeCourseDisplayValues(
