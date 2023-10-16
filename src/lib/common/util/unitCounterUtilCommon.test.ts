@@ -257,7 +257,7 @@ describe('computeTermUnits tests', () => {
     ).toBe('21-26');
   });
 
-  test('computeTermUnits unable to find course catalog', () => {
+  test('computeTermUnits unable to find course metadata', () => {
     const termData: Course[] = [
       {
         color: '#FEFD9A',
@@ -280,7 +280,7 @@ describe('computeTermUnits tests', () => {
         apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
-    ).toThrowError('unitCounterUtil: undefined courseCatalog');
+    ).toThrowError('unitCounterUtil: unable to find course metadata for course AGC301');
   });
 
   test('computeTermUnits unable to find course metadata', () => {

@@ -26,7 +26,7 @@ describe('computeGroupUnits tests', () => {
 
   test('standard flowchart, 1 program', () => {
     const expectedCounts = {
-      major: '118-119',
+      major: '132-133',
       support: '0',
       conc1: '0',
       conc2: '0',
@@ -45,9 +45,9 @@ describe('computeGroupUnits tests', () => {
     ).toStrictEqual(expectedCounts);
   });
 
-  test('error thrown when unable to find catalog for course', () => {
+  test('error thrown when unable to find course metadata entry', () => {
     expect(() => {
       computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, new ObjectMap(), new Map());
-    }).toThrowError('could not find catalog for course in flowchart');
+    }).toThrowError('unitCounterUtilClient: unable to locate course metadata for course AGC102');
   });
 });
