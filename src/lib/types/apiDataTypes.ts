@@ -15,15 +15,11 @@ export interface CourseCacheKey {
   catalog: string;
   id: string;
 }
-
 export type CourseCache = ObjectMap<CourseCacheKey, APICourseFull>;
 
 export type ProgramCache = Map<string, Program>;
 
-export interface MajorNameCache {
-  catalog: string;
-  majorNames: string[];
-}
+export type MajorNameCache = Map<string, string[]>;
 
 export interface APIData {
   // available flowchart data
