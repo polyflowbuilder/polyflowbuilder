@@ -320,7 +320,7 @@ describe('computeTotalUnits tests', () => {
   const flowTermData = TEST_FLOWCHART_SINGLE_PROGRAM_1.termData;
 
   test('compute total units for empty flowchart', () => {
-    expect(computeTotalUnits([], new ObjectMap(), [])).toBe('0');
+    expect(computeTotalUnits([], new ObjectMap(), new Map())).toBe('0');
   });
 
   test('compute total units for standard flowchart, no fullCompute', () => {

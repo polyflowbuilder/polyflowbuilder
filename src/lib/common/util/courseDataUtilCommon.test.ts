@@ -62,7 +62,7 @@ describe('courseDataUtilCommon tests', () => {
     expect(
       getCatalogFromProgramIDIndex(5, programs, apiDataConfig.apiData.programData)
     ).toBeUndefined();
-    expect(getCatalogFromProgramIDIndex(3, programs, [])).toBeUndefined();
+    expect(getCatalogFromProgramIDIndex(3, programs, new Map())).toBeUndefined();
   });
 });
 

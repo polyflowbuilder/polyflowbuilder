@@ -261,7 +261,7 @@ describe('generateFlowHash tests', () => {
 
 describe('mergeFlowchartsCourseData tests', () => {
   test('merging with empty data', () => {
-    expect(mergeFlowchartsCourseData([], [], new ObjectMap(), [])).toEqual([]);
+    expect(mergeFlowchartsCourseData([], [], new ObjectMap(), new Map())).toEqual([]);
   });
 
   test('merge single flowchart data', () => {

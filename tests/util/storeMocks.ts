@@ -5,14 +5,13 @@
 import { apiData } from '$lib/server/config/apiDataConfig';
 import { writable } from 'svelte/store';
 import { ObjectMap } from '$lib/common/util/ObjectMap';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { MajorNameCache, CourseCache } from '$lib/types';
+import type { MajorNameCache, CourseCache, ProgramCache } from '$lib/types';
 
 // set stores
 const mockAvailableFlowchartStartYearsWritable = writable<string[]>([]);
 const mockAvailableFlowchartCatalogsWritable = writable<string[]>([]);
-const mockProgramCacheWritable = writable<Program[]>([]);
+const mockProgramCacheWritable = writable<ProgramCache>(new Map());
 const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap());
 const mockMajorNameCacheWritable = writable<MajorNameCache[]>([]);
 const mockCatalogMajorNameCacheWritable = writable<Set<string>>(new Set<string>());
@@ -45,13 +44,15 @@ export function initMockedAPIDataStores() {
   // init all apiData in caches so we don't make any network requests
   // (this will be tested in integration/e2e tests)
 
+  const apiDataProgramDataArr = Array.from(apiData.programData.values());
+
   const mockCatalogMajorNameCacheValue = new Set(
-    apiData.programData.map((entry) => `${entry.catalog}|${entry.majorName}`)
+    apiDataProgramDataArr.map((entry) => `${entry.catalog}|${entry.majorName}`)
   );
   const mockMajorNameCacheValue = apiData.catalogs.map((catalog) => {
     const majorNames = [
       ...new Set(
-        apiData.programData
+        apiDataProgramDataArr
           .filter((entry) => entry.catalog === catalog)
           .map((entry) => entry.majorName)
           .sort()

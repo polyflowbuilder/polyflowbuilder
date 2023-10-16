@@ -151,10 +151,8 @@ describe('NewFlowModal component tests', () => {
     expect(screen.getByRole('button', { name: 'Create' })).toBeDisabled();
 
     // populate first program
-    const program1 =
-      apiDataConfig.apiData.programData[
-        Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
-      ];
+    const programDataArr = Array.from(apiDataConfig.apiData.programData.values());
+    const program1 = programDataArr[Math.floor(Math.random() * programDataArr.length)];
 
     await user.selectOptions(
       screen.getAllByRole('combobox', {

@@ -5,22 +5,22 @@ import {
   createCourseCacheFromEntries,
   verifyCourseCacheStrictEquality
 } from '../../../../tests/util/courseCacheUtil';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { ProgramCache } from '$lib/types';
 
 // init API data
 await apiDataConfig.init();
 
-function generateProgramCache(programIds: string[]): Program[] {
-  const programCache = [];
+function generateProgramCache(programIds: string[]): ProgramCache {
+  const programCache: ProgramCache = new Map();
 
   for (const id of programIds) {
     // fetch program metadata for this ID
-    const programMetadata = apiDataConfig.apiData.programData.find((prog) => prog.id === id);
+    const programMetadata = apiDataConfig.apiData.programData.get(id);
     if (!programMetadata) {
       throw new Error('programMetadata not found');
     }
-    programCache.push(programMetadata);
+    programCache.set(id, programMetadata);
   }
 
   return programCache;
@@ -48,7 +48,7 @@ describe('generateCourseCacheFlowcharts single flowchart tests', () => {
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
-      await generateCourseCacheFlowcharts([flow1], []),
+      await generateCourseCacheFlowcharts([flow1], new Map()),
       'vitest'
     );
   });
@@ -339,7 +339,7 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
-      await generateCourseCacheFlowcharts([], []),
+      await generateCourseCacheFlowcharts([], new Map()),
       'vitest'
     );
   });
@@ -365,7 +365,7 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
-      await generateCourseCacheFlowcharts([flow1], []),
+      await generateCourseCacheFlowcharts([flow1], new Map()),
       'vitest'
     );
   });
