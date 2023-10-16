@@ -112,3 +112,12 @@ export function mergeFlowchartsCourseData(
 
   return mergedFlowchartsTermData;
 }
+
+// wrapper function to extract catalog from program ID
+export function getCatalogFromProgramID(
+  programId: string[],
+  programIDIndex: number | undefined,
+  programCache: ProgramCache
+): string | undefined {
+  return programCache.get(programId[programIDIndex ?? 0])?.catalog;
+}

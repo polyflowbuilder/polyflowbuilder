@@ -26,14 +26,6 @@ export function getCourseFromCourseCache(
   return courseMetadata;
 }
 
-export function getCatalogFromProgramIDIndex(
-  programIDIndex: number | undefined,
-  programId: string[],
-  programCache: ProgramCache
-): string | undefined {
-  return programCache.get(programId[programIDIndex ?? 0])?.catalog;
-}
-
 export function computeCourseDisplayValues(
   course: Course,
   courseMetadata: APICourseFull | null,
