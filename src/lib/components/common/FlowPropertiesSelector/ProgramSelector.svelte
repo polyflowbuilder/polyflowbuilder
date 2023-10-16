@@ -128,22 +128,19 @@
     }
 
     // grab and set all relevant concentrations
-    const concOptions: {
-      name: string;
-      id: string;
-    }[] = [];
+    const newConcOptions: typeof concOptions = [];
     $programCache.forEach((entry) => {
       if (entry.catalog === progCatalogYear && entry.majorName === majorName) {
         if (!entry.concName) {
           throw new Error(`program ${entry.id} has no concName`);
         }
-        concOptions.push({
+        newConcOptions.push({
           name: entry.concName,
           id: entry.id
         });
       }
     });
-    concOptions.sort((a, b) => a.name.localeCompare(b.name));
+    concOptions = newConcOptions.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   // reset the major & concentration when their respective parents change
