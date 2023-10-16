@@ -4,6 +4,7 @@ import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { generatePDFSchema } from '$lib/server/schema/generatePDFSchema';
 import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
 import { extractPDFDataFromFlowchart, generatePDF } from '$lib/server/util/generatePDF';
+import type { ProgramCache } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/util/generateFlowchartPDF)');
@@ -45,23 +46,21 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         );
       }
       const { flowchart, programMetadata } = userFlowchartData[0];
+      const programCache: ProgramCache = new Map(programMetadata?.map((prog) => [prog.id, prog]));
 
       logger.info(`Generating flowchart PDF for flowchart ${flowchart.id}`);
 
       // fetch necessary course cache info
-      if (!programMetadata) {
-        throw new Error('programMetadata not found');
+      if (!programCache.size) {
+        throw new Error('programCache is empty');
       }
-      const courseCacheFlowchart = await generateCourseCacheFlowcharts(
-        [flowchart],
-        programMetadata
-      );
+      const courseCacheFlowchart = await generateCourseCacheFlowcharts([flowchart], programCache);
 
       // generate the PDF
       const flowchartPDFData = extractPDFDataFromFlowchart(
         flowchart,
         courseCacheFlowchart,
-        programMetadata
+        programCache
       );
       const pdfBuffer = await generatePDF(flowchartPDFData);
 
