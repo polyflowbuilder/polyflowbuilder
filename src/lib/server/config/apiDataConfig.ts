@@ -9,7 +9,7 @@ const logger = initLogger('Config/APIDataConfig');
 export const apiData: APIData = {
   catalogs: [],
   startYears: [],
-  programData: [],
+  programData: new Map(),
 
   courseData: new ObjectMap(),
   geCourseData: [],
@@ -74,7 +74,9 @@ export async function init(): Promise<void> {
   // initialize program metadata
   apiData.catalogs = dbCatalogs.map((v) => v.catalog);
   apiData.startYears = dbStartYears.map((v) => v.year);
-  apiData.programData = dbProgramData;
+  dbProgramData.forEach((prog) => {
+    apiData.programData.set(prog.id, prog);
+  });
 
   // initialize course data
   dbCourseData.forEach((course) => {

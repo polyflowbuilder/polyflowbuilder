@@ -29,7 +29,7 @@ export interface APIData {
   // available flowchart data
   catalogs: string[];
   startYears: string[];
-  programData: Program[];
+  programData: ProgramCache;
 
   // course-related data
   courseData: CourseCache;
