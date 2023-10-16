@@ -7,7 +7,7 @@ import { generateCourseCacheFromUpdateChunks } from '$lib/server/util/courseCach
 import { deleteFlowcharts, getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
 import type { Program } from '@prisma/client';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
-import type { MutateFlowchartData } from '$lib/types';
+import type { MutateFlowchartData, ProgramCache } from '$lib/types';
 
 const logger = initLogger('Util/MutateUserDataUtilServer');
 
@@ -64,7 +64,7 @@ export async function persistUserDataChangesServer(
   const flowchartModifyIds = getFlowchartModifyIdsFromChunkList(chunksList);
   const userFlowchartsData = await getUserFlowcharts(userId, flowchartModifyIds, true);
   const flowchartMutationData: MutateFlowchartData[] = [];
-  const programCache: Program[] = [];
+  const programCache: ProgramCache = new Map();
 
   userFlowchartsData.forEach((data) => {
     flowchartMutationData.push({
@@ -73,7 +73,9 @@ export async function persistUserDataChangesServer(
     });
     // to satisfy type checking
     if (data.programMetadata) {
-      programCache.push(...data.programMetadata);
+      for (const program of data.programMetadata) {
+        programCache.set(program.id, program);
+      }
     }
   });
 

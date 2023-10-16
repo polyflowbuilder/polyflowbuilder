@@ -4,6 +4,7 @@ import { generateFlowchart } from '$lib/server/util/flowDataUtil';
 import { validateStartYear } from '$lib/server/db/startYear';
 import { getProgramsFromIds } from '$lib/server/db/program';
 import { generateFlowchartSchema } from '$lib/server/schema/generateFlowchartSchema';
+import type { ProgramCache } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/util/generateFlowchart)');
@@ -37,7 +38,9 @@ export const GET: RequestHandler = async ({ locals, url }) => {
     if (parseResults.success) {
       // fetch start years and program data to do additional validation
       const startYearValid = await validateStartYear(parseResults.data.startYear);
-      const programMetadata = await getProgramsFromIds(parseResults.data.programIds);
+      const programCache: ProgramCache = new Map(
+        (await getProgramsFromIds(parseResults.data.programIds)).map((prog) => [prog.id, prog])
+      );
 
       // validate start year
       if (!startYearValid) {
@@ -55,9 +58,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       }
 
       // validate programIds
-      const programIdsSet = new Set(programMetadata.map((prog) => prog.id));
-      const invalidProgramIds = parseResults.data.programIds.filter((id) => !programIdsSet.has(id));
-
+      const invalidProgramIds = parseResults.data.programIds.filter((id) => !programCache.has(id));
       if (invalidProgramIds.length) {
         return json(
           {
@@ -74,7 +75,7 @@ export const GET: RequestHandler = async ({ locals, url }) => {
 
       const { flowchart: generatedFlowchart, courseCache } = await generateFlowchart(
         parseResults.data,
-        programMetadata
+        programCache
       );
 
       return json({

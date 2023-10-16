@@ -3,10 +3,9 @@ import { initLogger } from '$lib/common/config/loggerConfig';
 import { getCourseData } from '$lib/server/db/course';
 import { getCatalogFromProgramIDIndex } from '$lib/common/util/courseDataUtilCommon';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
-import type { Program } from '@prisma/client';
-import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache, ProgramCache } from '$lib/types';
 
 const logger = initLogger('Util/CourseCacheUtil');
 
@@ -17,7 +16,7 @@ export async function generateCourseCacheFlowcharts(
     programId: string[];
     termData: Term[];
   }[],
-  programCache: Program[],
+  programCache: ProgramCache,
   // for merge use cases e.g. generateFlowchart
   enforceUniqueCoursesAcrossCaches = false
 ): Promise<CourseCache> {
@@ -86,7 +85,7 @@ export async function generateCourseCacheFlowcharts(
 export async function generateCourseCacheFromUpdateChunks(
   flowcharts: Flowchart[],
   chunksList: UserDataUpdateChunk[],
-  programCache: Program[]
+  programCache: ProgramCache
 ): Promise<CourseCache | undefined> {
   const flowchartCourseCache: CourseCache = new ObjectMap();
 

@@ -14,6 +14,7 @@ import type { UserEvent } from '@testing-library/user-event/dist/types/setup/set
 
 // load necessary API data
 await apiDataConfig.init();
+const apiDataProgramDataArr = Array.from(apiDataConfig.apiData.programData.values());
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
@@ -59,14 +60,12 @@ async function setProgram(
 
   const alreadySelectedMajorNames = alreadySelectedProgramIds
     .filter((str) => str.length)
-    .map(
-      (progId) => apiDataConfig.apiData.programData.find((prog) => prog.id === progId)?.majorName
-    );
-  const programList = apiDataConfig.apiData.programData.filter(
+    .map((progId) => apiDataProgramDataArr.find((prog) => prog.id === progId)?.majorName);
+  const programList = apiDataProgramDataArr.filter(
     (prog) =>
       !alreadySelectedMajorNames.includes(prog.majorName) &&
       (!selectProgramWithMultipleConcs ||
-        apiDataConfig.apiData.programData.filter(
+        apiDataProgramDataArr.filter(
           (prog2) => prog2.catalog === prog.catalog && prog2.majorName === prog.majorName
         ).length > 1)
   );
@@ -637,7 +636,7 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
     expect(optionsValid).toBeTruthy();
 
     // then change just conc and expect still valid
-    const newProgramSelectOptions = apiDataConfig.apiData.programData
+    const newProgramSelectOptions = apiDataProgramDataArr
       .filter((prog) => prog.catalog === program1.catalog && prog.majorName === program1.majorName)
       .filter(
         (prog) =>
@@ -816,13 +815,13 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     // then change major and expect conc to reset while everything else stays the same
     // make sure we pick a major that isn't already selected in another program (second filter)
     const selectedMajors = expectedProgramIds.map((prog) => {
-      const progMetadata = apiDataConfig.apiData.programData.find((entry) => entry.id === prog);
+      const progMetadata = apiDataProgramDataArr.find((entry) => entry.id === prog);
       if (!progMetadata) {
         throw new Error(`progMetadata for program ${prog} not found`);
       }
       return progMetadata.majorName;
     });
-    const removeSelectedMajor = apiDataConfig.apiData.programData
+    const removeSelectedMajor = apiDataProgramDataArr
       .filter((prog) => prog.catalog === newProgram1.catalog)
       .filter((prog) => !selectedMajors.includes(prog.majorName))
       .map((prog) => prog.majorName);
@@ -910,7 +909,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // try to populate second program with the same major and ensure it fails
-    const programList = apiDataConfig.apiData.programData.filter(
+    const programList = apiDataProgramDataArr.filter(
       (prog) => prog.majorName === program1.majorName && prog.catalog === program1.catalog
     );
     const program2 = programList[Math.floor(Math.random() * programList.length)];
@@ -1005,7 +1004,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     expect(optionsValid).toBeFalsy();
 
     // try to populate second program with the same major and ensure it fails
-    const programList = apiDataConfig.apiData.programData.filter(
+    const programList = apiDataProgramDataArr.filter(
       (prog) => prog.majorName === program1.majorName && prog.catalog !== program1.catalog
     );
     const program2 = programList[Math.floor(Math.random() * programList.length)];

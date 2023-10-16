@@ -15,6 +15,7 @@ import type { Program } from '@prisma/client';
 
 // load necessary API data
 await apiDataConfig.init();
+const apiDataProgramDataArr = Array.from(apiDataConfig.apiData.programData.values());
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
@@ -265,7 +266,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all the major options are displayed
     const expectedPrograms = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter((prog) => prog.catalog === selectedCatalogOption.value)
         .map((prog) => prog.majorName)
     );
@@ -294,7 +295,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all conc options are displayed
     const expectedConcOptions = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter(
           (prog) =>
             prog.catalog === selectedCatalogOption.value &&
@@ -328,7 +329,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption
     );
 
-    const expectedProgram = apiDataConfig.apiData.programData.find(
+    const expectedProgram = apiDataProgramDataArr.find(
       (prog) => prog.id === selectedConcOption.value
     )?.id;
     expect(typeof expectedProgram).toBe('string');
@@ -340,10 +341,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   // https://testing-library.com/docs/dom-testing-library/api-async#findby-queries
   // need to use findBy* here bc state change is async
   test('set input on mount and expect correct response', async () => {
-    const program =
-      apiDataConfig.apiData.programData[
-        Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
-      ];
+    const program = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
     console.log(`selected program id [${program.id}]`);
 
     // mock program ID update
@@ -401,10 +399,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   test('set input after mount and expect correct response', async () => {
     const user = userEvent.setup();
 
-    const program =
-      apiDataConfig.apiData.programData[
-        Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
-      ];
+    const program = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
     console.log(`selected program id [${program.id}]`);
 
     // mock program ID update
@@ -450,7 +445,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all the major options are displayed
     const expectedPrograms = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter((prog) => prog.catalog === selectedCatalogOption.value)
         .map((prog) => prog.majorName)
     );
@@ -478,7 +473,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all conc options are displayed
     const expectedConcOptions = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter(
           (prog) =>
             prog.catalog === selectedCatalogOption.value &&
@@ -517,7 +512,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption
     );
 
-    const expectedProgram = apiDataConfig.apiData.programData.find(
+    const expectedProgram = apiDataProgramDataArr.find(
       (prog) => prog.id === selectedConcOption.value
     )?.id;
     expect(typeof expectedProgram).toBe('string');
@@ -575,9 +570,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const user = userEvent.setup();
 
     // guarantee we pick a program with more than one conc
-    const programList = apiDataConfig.apiData.programData.filter(
+    const programList = apiDataProgramDataArr.filter(
       (prog) =>
-        apiDataConfig.apiData.programData.filter(
+        apiDataProgramDataArr.filter(
           (prog2) => prog2.catalog === prog.catalog && prog2.majorName === prog.majorName
         ).length > 1
     );
@@ -623,7 +618,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all the major options are displayed
     const expectedPrograms = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter((prog) => prog.catalog === selectedCatalogOption.value)
         .map((prog) => prog.majorName)
     );
@@ -653,7 +648,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all conc options are displayed
     const expectedConcOptions = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter(
           (prog) =>
             prog.catalog === selectedCatalogOption.value &&
@@ -709,7 +704,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       newSelectedConcOption1
     );
 
-    const expectedProgram1 = apiDataConfig.apiData.programData.find(
+    const expectedProgram1 = apiDataProgramDataArr.find(
       (prog) => prog.id === newSelectedConcOption1.value
     )?.id;
     expect(typeof expectedProgram1).toBe('string');
@@ -720,10 +715,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     // then change major (but same catalog)
     let program1: Program;
     do {
-      program1 =
-        apiDataConfig.apiData.programData[
-          Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
-        ];
+      program1 = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
     } while (
       // same catalog but different major
       program1.catalog !== program.catalog ||
@@ -766,7 +758,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all conc options are displayed
     const expectedConcOptions1 = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter(
           (prog) => prog.catalog === program1.catalog && prog.majorName === program1.majorName
         )
@@ -794,7 +786,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption1
     );
 
-    const expectedProgram2 = apiDataConfig.apiData.programData.find(
+    const expectedProgram2 = apiDataProgramDataArr.find(
       (prog) => prog.id === selectedConcOption1.value
     )?.id;
     expect(typeof expectedProgram2).toBe('string');
@@ -806,10 +798,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     let program2: Program;
     do {
-      program2 =
-        apiDataConfig.apiData.programData[
-          Math.floor(Math.random() * apiDataConfig.apiData.programData.length)
-        ];
+      program2 = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
     } while (
       // different catalog
       program2.catalog === program.catalog
@@ -830,7 +819,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all the major options are displayed
     const expectedPrograms2 = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter((prog) => prog.catalog === selectedCatalogOption2.value)
         .map((prog) => prog.majorName)
     );
@@ -860,7 +849,7 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // make sure all conc options are displayed
     const expectedConcOptions2 = new Set(
-      apiDataConfig.apiData.programData
+      apiDataProgramDataArr
         .filter(
           (prog) =>
             prog.catalog === selectedCatalogOption2.value &&

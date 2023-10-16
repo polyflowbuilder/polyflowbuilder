@@ -152,7 +152,7 @@ export function updateFlowchartDataModel(
 // from v6 to v7
 function updateFlowchartDataVersionToV7(ownerId: string, flow: FlowchartV6Model): Flowchart {
   const programId = (typeof flow.flowId === 'string' ? [flow.flowId] : flow.flowId).map(
-    (code) => apiData.programData.find((prog) => prog.code === code)?.id
+    (code) => Array.from(apiData.programData.values()).find((prog) => prog.code === code)?.id
   );
 
   if (programId.includes(undefined)) {

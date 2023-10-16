@@ -8,17 +8,21 @@ import {
   computeCourseDisplayValues
 } from '$lib/common/util/courseDataUtilCommon';
 import type { Term } from '$lib/common/schema/flowchartSchema';
-import type { Program } from '@prisma/client';
-import type { CourseCache, CourseItemData, ComputedCourseItemDisplayData } from '$lib/types';
 import type {
   UserDataUpdateChunk,
   TermModChangeTermDataEntry
 } from '$lib/common/schema/mutateUserDataSchema';
+import type {
+  CourseCache,
+  ProgramCache,
+  CourseItemData,
+  ComputedCourseItemDisplayData
+} from '$lib/types';
 
 export function buildTermCourseItemsData(
   flowProgramId: string[],
   courseCache: CourseCache,
-  programCache: Program[],
+  programCache: ProgramCache,
   termData: Term,
   selectedCourses: Set<string>
 ): CourseItemData[] {
@@ -68,7 +72,7 @@ export function buildTermModUpdateChunkFromCourseItems(
   flowId: string,
   flowProgramId: string[],
   courseCache: CourseCache,
-  programCache: Program[],
+  programCache: ProgramCache,
   courseItems: CourseItemData[],
   tIndex: number
 ): UserDataUpdateChunk {

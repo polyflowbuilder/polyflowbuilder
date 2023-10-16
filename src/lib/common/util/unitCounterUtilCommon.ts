@@ -4,9 +4,8 @@ import {
   getCourseFromCourseCache,
   getCatalogFromProgramIDIndex
 } from '$lib/common/util/courseDataUtilCommon';
-import type { Program } from '@prisma/client';
-import type { CourseCache } from '$lib/types';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache, ProgramCache } from '$lib/types';
 
 export function incrementRangedUnits(unitCount1: string, unitCount2: string): string {
   const unitSplit1 = unitCount1.split('-').map((val) => Number(val));
@@ -26,7 +25,7 @@ export function computeTermUnits(
   programId: string[],
   // bc we can call from either client or server
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ): string {
   let computedTermUnits = '0';
 
@@ -57,7 +56,7 @@ export function computeTermUnits(
 export function computeTotalUnits(
   termsData: Term[],
   courseCache: CourseCache,
-  programCache: Program[],
+  programCache: ProgramCache,
   fullCompute = false,
   programId?: string[]
 ): string {

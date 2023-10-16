@@ -1,8 +1,7 @@
 import hash from 'object-hash';
 import { computeTermUnits } from '$lib/common/util/unitCounterUtilCommon';
-import type { Program } from '@prisma/client';
-import type { CourseCache } from '$lib/types';
 import type { Flowchart, Term } from '$lib/common/schema/flowchartSchema';
+import type { CourseCache, ProgramCache } from '$lib/types';
 
 // wrapper function to make sure hashes are being generated correctly in different contexts
 // will take the form of [flowMetadataHash].[flowContentHash]
@@ -42,7 +41,7 @@ export function mergeFlowchartsCourseData(
   flowchartsTermData: Term[][],
   programIdMerged: string[],
   courseCache: CourseCache,
-  programCache: Program[],
+  programCache: ProgramCache,
   performCourseMerge = true
 ): Term[] {
   // get list of all term indexes between all valid templates

@@ -18,6 +18,8 @@ export interface CourseCacheKey {
 
 export type CourseCache = ObjectMap<CourseCacheKey, APICourseFull>;
 
+export type ProgramCache = Map<string, Program>;
+
 export interface MajorNameCache {
   catalog: string;
   majorNames: string[];
@@ -27,7 +29,7 @@ export interface APIData {
   // available flowchart data
   catalogs: string[];
   startYears: string[];
-  programData: Program[];
+  programData: ProgramCache;
 
   // course-related data
   courseData: CourseCache;

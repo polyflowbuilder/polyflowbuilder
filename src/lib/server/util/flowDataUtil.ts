@@ -10,10 +10,10 @@ import {
   FLOW_DEFAULT_TERM_DATA,
   CURRENT_FLOW_DATA_VERSION
 } from '$lib/common/config/flowDataConfig';
-import type { DBFlowchart, Program } from '@prisma/client';
+import type { DBFlowchart } from '@prisma/client';
 import type { GenerateFlowchartData } from '$lib/server/schema/generateFlowchartSchema';
 import type { Course, Flowchart, Term } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache, MutateFlowchartData } from '$lib/types';
+import type { CourseCache, MutateFlowchartData, ProgramCache } from '$lib/types';
 
 export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlowchartData {
   const {
@@ -47,8 +47,8 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlo
   };
 }
 
-function generateFlowchartNotes(flowchartPrograms: Program[]) {
-  const programNotes = flowchartPrograms.map(
+function generateFlowchartNotes(flowchartPrograms: ProgramCache) {
+  const programNotes = Array.from(flowchartPrograms.values()).map(
     (program, i) => `- Program #${i + 1}: ${program.dataLink}`
   );
 
@@ -81,7 +81,7 @@ export function convertFlowchartToDBFlowchart(flowchartData: MutateFlowchartData
 
 export async function generateFlowchart(
   data: GenerateFlowchartData,
-  programCache: Program[]
+  programCache: ProgramCache
 ): Promise<{
   flowchart: Flowchart;
   courseCache: CourseCache;
