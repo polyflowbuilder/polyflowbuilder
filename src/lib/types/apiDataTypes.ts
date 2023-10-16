@@ -18,6 +18,8 @@ export interface CourseCacheKey {
 
 export type CourseCache = ObjectMap<CourseCacheKey, APICourseFull>;
 
+export type ProgramCache = Map<string, Program>;
+
 export interface MajorNameCache {
   catalog: string;
   majorNames: string[];
