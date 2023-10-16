@@ -3,8 +3,8 @@ import { initLogger } from '$lib/common/config/loggerConfig';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { getUserFlowchartsSchema } from '$lib/server/schema/getUserFlowchartsSchema';
 import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { ProgramCache } from '$lib/types';
 import type { RequestHandler } from '@sveltejs/kit';
 
 const logger = initLogger('APIRouteHandler (/api/user/data/getUserFlowcharts)');
@@ -36,18 +36,14 @@ export const GET: RequestHandler = async ({ locals, url }) => {
       // get user data
       const userFlowchartsData = await getUserFlowcharts(locals.session.id, [], true);
       const flowcharts: Flowchart[] = [];
-      const programMetadata: Program[] = [];
-      const programMetadataCache: Set<string> = new Set<string>();
+      const programCache: ProgramCache = new Map();
 
       userFlowchartsData.forEach((data) => {
         flowcharts.push(data.flowchart);
         // to satisfy type checking
         if (data.programMetadata) {
           for (const programData of data.programMetadata) {
-            if (!programMetadataCache.has(programData.id)) {
-              programMetadata.push(programData);
-              programMetadataCache.add(programData.id);
-            }
+            programCache.set(programData.id, programData);
           }
         }
       });
@@ -58,11 +54,11 @@ export const GET: RequestHandler = async ({ locals, url }) => {
         ...(parseResults.data.includeCourseCache && {
           // serialize course cache
           courseCache: Array.from(
-            (await generateCourseCacheFlowcharts(flowcharts, programMetadata)).values()
+            (await generateCourseCacheFlowcharts(flowcharts, programCache)).values()
           )
         }),
         ...(parseResults.data.includeProgramMetadata && {
-          programMetadata
+          programCache
         })
       });
     } else {
