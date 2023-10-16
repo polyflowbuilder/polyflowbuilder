@@ -1,6 +1,6 @@
 // handles common functionality with course data
 
-import { getCatalogFromProgramID } from './flowDataUtilCommon';
+import { getCatalogFromProgramID } from '$lib/common/util/flowDataUtilCommon';
 import type { Course } from '$lib/common/schema/flowchartSchema';
 import type {
   CourseCache,
