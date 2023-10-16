@@ -3,10 +3,9 @@
 import { userFlowcharts } from '$lib/client/stores/userDataStore';
 import { chunkListUpdateStore } from '$lib/client/stores/mutateUserDataStore';
 import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache } from '$lib/types';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
+import type { CourseCache, ProgramCache } from '$lib/types';
 
 // wrapper to add an UpdateChunk to the queue
 export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChunk): void {
@@ -20,7 +19,7 @@ export function submitUserDataUpdateChunk(userDataUpdateChunk: UserDataUpdateChu
 export function performUpdate(
   chunksList: UserDataUpdateChunk[],
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ): void {
   userFlowcharts.update((curUserFlowcharts) => {
     // update client first

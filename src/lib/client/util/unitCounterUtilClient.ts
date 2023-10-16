@@ -5,9 +5,8 @@ import {
   getCourseFromCourseCache,
   getCatalogFromProgramIDIndex
 } from '$lib/common/util/courseDataUtilCommon';
-import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { CourseCache, FlowEditorFooterUnitCounts } from '$lib/types';
+import type { CourseCache, FlowEditorFooterUnitCounts, ProgramCache } from '$lib/types';
 
 // TODO: combine with unitCounterUtilCommon?
 // since we're traversing the entire unit tree in both cases
@@ -15,7 +14,7 @@ import type { CourseCache, FlowEditorFooterUnitCounts } from '$lib/types';
 export function computeGroupUnits(
   flowchart: Flowchart | null,
   courseCache: CourseCache,
-  programCache: Program[]
+  programCache: ProgramCache
 ): FlowEditorFooterUnitCounts {
   const unitCounts: FlowEditorFooterUnitCounts = {
     major: '0',
