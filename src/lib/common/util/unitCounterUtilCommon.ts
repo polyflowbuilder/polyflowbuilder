@@ -1,9 +1,7 @@
 // util functions related to unit counting
 
-import {
-  getCourseFromCourseCache,
-  getCatalogFromProgramIDIndex
-} from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramID } from '$lib/common/util/flowDataUtilCommon';
+import { getCourseFromCourseCache } from '$lib/common/util/courseDataUtilCommon';
 import type { Course, Term } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, ProgramCache } from '$lib/types';
 
@@ -34,7 +32,7 @@ export function computeTermUnits(
       computedTermUnits = incrementRangedUnits(computedTermUnits, c.customUnits);
     } else if (c.id) {
       // select the correct catalog
-      const courseCatalog = getCatalogFromProgramIDIndex(c.programIdIndex, programId, programCache);
+      const courseCatalog = getCatalogFromProgramID(programId, c.programIdIndex, programCache);
       if (!courseCatalog) {
         throw new Error('unitCounterUtil: undefined courseCatalog');
       }

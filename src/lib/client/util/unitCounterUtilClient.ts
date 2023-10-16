@@ -1,10 +1,8 @@
 import { COLORS } from '$lib/common/config/colorConfig';
 import { SANITIZE_REGEX } from '$lib/common/config/catalogSearchConfig';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
-import {
-  getCourseFromCourseCache,
-  getCatalogFromProgramIDIndex
-} from '$lib/common/util/courseDataUtilCommon';
+import { getCatalogFromProgramID } from '$lib/common/util/flowDataUtilCommon';
+import { getCourseFromCourseCache } from '$lib/common/util/courseDataUtilCommon';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache, FlowEditorFooterUnitCounts, ProgramCache } from '$lib/types';
 
@@ -38,9 +36,9 @@ export function computeGroupUnits(
   flowchart.termData.forEach((term) => {
     term.courses.forEach((course) => {
       // perform lookup if necessary
-      const courseCatalog = getCatalogFromProgramIDIndex(
-        course.programIdIndex,
+      const courseCatalog = getCatalogFromProgramID(
         flowchart.programId,
+        course.programIdIndex,
         programCache
       );
 
