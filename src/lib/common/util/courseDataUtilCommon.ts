@@ -31,11 +31,11 @@ export function getCourseFromCourseCache(
 }
 
 export function getCatalogFromProgramIDIndex(
-  programIDIndex: number,
+  programIDIndex: number | undefined,
   programId: string[],
   programCache: ProgramCache
 ): string | undefined {
-  return programCache.get(programId[programIDIndex])?.catalog;
+  return programCache.get(programId[programIDIndex ?? 0])?.catalog;
 }
 
 export function computeCourseDisplayValues(
