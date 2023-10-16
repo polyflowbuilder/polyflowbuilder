@@ -39,7 +39,7 @@ export function computeGroupUnits(
     term.courses.forEach((course) => {
       // perform lookup if necessary
       const courseCatalog = getCatalogFromProgramIDIndex(
-        course.programIdIndex ?? 0,
+        course.programIdIndex,
         flowchart.programId,
         programCache
       );

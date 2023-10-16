@@ -14,11 +14,7 @@ export function getCourseFromCourseCache(
   courseCache: CourseCache,
   programCache: ProgramCache
 ) {
-  const catalog = getCatalogFromProgramIDIndex(
-    course.programIdIndex ?? 0,
-    flowProgramId,
-    programCache
-  );
+  const catalog = getCatalogFromProgramIDIndex(course.programIdIndex, flowProgramId, programCache);
   const courseMetadata =
     !course.id || !catalog
       ? null

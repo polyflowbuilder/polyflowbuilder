@@ -139,7 +139,7 @@ export async function generateFlowchart(
           if (c.id) {
             allRemovedCoursesKeysSet.add(
               `${getCatalogFromProgramIDIndex(
-                c.programIdIndex ?? 0,
+                c.programIdIndex,
                 generatedFlowchart.programId,
                 programCache
               )}|${c.id}`

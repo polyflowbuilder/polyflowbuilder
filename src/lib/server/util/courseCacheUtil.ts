@@ -33,7 +33,7 @@ export async function generateCourseCacheFlowcharts(
         if (c.id) {
           // select the correct catalog
           const courseCatalog = getCatalogFromProgramIDIndex(
-            c.programIdIndex ?? 0,
+            c.programIdIndex,
             flowchart.programId,
             programCache
           );
@@ -130,7 +130,7 @@ export async function generateCourseCacheFromUpdateChunks(
         // add course to cache only if noncustom
         if (course.id) {
           const courseCatalog = getCatalogFromProgramIDIndex(
-            course.programIdIndex ?? 0,
+            course.programIdIndex,
             flowchart.programId,
             programCache
           );

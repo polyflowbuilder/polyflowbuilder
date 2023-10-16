@@ -34,11 +34,7 @@ export function computeTermUnits(
       computedTermUnits = incrementRangedUnits(computedTermUnits, c.customUnits);
     } else if (c.id) {
       // select the correct catalog
-      const courseCatalog = getCatalogFromProgramIDIndex(
-        c.programIdIndex ?? 0,
-        programId,
-        programCache
-      );
+      const courseCatalog = getCatalogFromProgramIDIndex(c.programIdIndex, programId, programCache);
       if (!courseCatalog) {
         throw new Error('unitCounterUtil: undefined courseCatalog');
       }
