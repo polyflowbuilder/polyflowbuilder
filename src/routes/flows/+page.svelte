@@ -46,7 +46,10 @@
       })
     })
   );
-  programCache.set(data.userData.programMetadata);
+  programCache.set(
+    // deserialize program cache
+    new Map(data.userData.programMetadata.map((prog) => [prog.id, prog]))
+  );
 
   // init local stores
   $: selectedFlowchart = $selectedFlowIndex !== -1 ? $userFlowcharts[$selectedFlowIndex] : null;
