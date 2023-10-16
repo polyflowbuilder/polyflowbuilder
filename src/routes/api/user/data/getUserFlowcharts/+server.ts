@@ -58,7 +58,8 @@ export const GET: RequestHandler = async ({ locals, url }) => {
           )
         }),
         ...(parseResults.data.includeProgramMetadata && {
-          programCache
+          // serialize program cache
+          programMetadata: Array.from(programCache.values())
         })
       });
     } else {
