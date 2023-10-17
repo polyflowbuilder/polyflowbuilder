@@ -8,7 +8,7 @@ import {
   mockProgramCacheStore,
   mockMajorNameCacheStore,
   initMockedAPIDataStores,
-  mockCatalogMajorNameCacheStore,
+  mockConcOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
 } from '../../../../../tests/util/storeMocks';
@@ -34,7 +34,7 @@ describe('NewFlowModal component tests', () => {
         courseCache: mockCourseCacheStore,
         programCache: mockProgramCacheStore,
         majorNameCache: mockMajorNameCacheStore,
-        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
+        concOptionsCache: mockConcOptionsCacheStore,
         availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
         availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
       };

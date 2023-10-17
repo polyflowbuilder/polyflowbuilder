@@ -6,7 +6,7 @@ import {
   mockProgramCacheStore,
   initMockedAPIDataStores,
   mockMajorNameCacheStore,
-  mockCatalogMajorNameCacheStore,
+  mockConcOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore
 } from '../../../../../tests/util/storeMocks';
 import type { Program } from '@prisma/client';
@@ -28,10 +28,10 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   beforeAll(() => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
         programCache: mockProgramCacheStore,
-        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
-        majorNameCache: mockMajorNameCacheStore
+        majorNameCache: mockMajorNameCacheStore,
+        concOptionsCache: mockConcOptionsCacheStore,
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore
       };
     });
     mockAvailableFlowchartCatalogsStore.set(apiDataConfig.apiData.catalogs);

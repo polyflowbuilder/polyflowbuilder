@@ -6,7 +6,7 @@ import {
   mockProgramCacheStore,
   mockMajorNameCacheStore,
   initMockedAPIDataStores,
-  mockCatalogMajorNameCacheStore,
+  mockConcOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
 } from '../../../../../tests/util/storeMocks';
@@ -102,11 +102,11 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
   beforeAll(() => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
-        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore,
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
         programCache: mockProgramCacheStore,
-        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
-        majorNameCache: mockMajorNameCacheStore
+        majorNameCache: mockMajorNameCacheStore,
+        concOptionsCache: mockConcOptionsCacheStore,
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
       };
     });
   });
