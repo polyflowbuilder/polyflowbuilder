@@ -2,8 +2,8 @@
   import { createEventDispatcher, tick } from 'svelte';
   import {
     programCache,
-    majorNameCache,
     concOptionsCache,
+    majorOptionsCache,
     availableFlowchartCatalogs
   } from '$lib/client/stores/apiDataStore';
   import type { Program } from '@prisma/client';
@@ -79,32 +79,35 @@
 
   // load major and concentration options for UI
   async function loadMajorOptions(progCatalogYear: string) {
-    let majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
-
-    // does not exist, fetch entries
-    if (!majorNameCacheEntry) {
+    // fetch entries for this catalog if we don't have them
+    if (!$majorOptionsCache.has(progCatalogYear)) {
       dispatch('fetchingDataUpdate', true);
       const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
       const resJson = (await res.json()) as {
         message: string;
         results: string[];
       };
-      majorNameCache.update((cache) => {
+
+      // update relevant caches
+      majorOptionsCache.update((cache) => {
         cache.set(progCatalogYear, resJson.results.sort());
         return cache;
       });
-      majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
-      if (!majorNameCacheEntry) {
-        throw new Error('loadMajorOptions: majorNameCacheEntry not found after fetch');
-      }
+
       dispatch('fetchingDataUpdate', false);
     }
 
     // select
-    majorOptions = majorNameCacheEntry;
+    const majorOptionsCacheEntry = $majorOptionsCache.get(progCatalogYear);
+    if (!majorOptionsCacheEntry) {
+      throw new Error(
+        `loadMajorOptions: majorOptionsCacheEntry empty for entry ${progCatalogYear}`
+      );
+    }
+    majorOptions = majorOptionsCacheEntry;
   }
   async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
-    // fetch programs for this program if we don't have them
+    // fetch programs for this catalog and major if we don't have them
     if (
       !$concOptionsCache.has({
         catalog: progCatalogYear,
