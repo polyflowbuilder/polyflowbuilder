@@ -161,10 +161,10 @@
     });
     if (!concOptionsCacheEntry) {
       throw new Error(
-        `loadConcentrationOptions: concOptionsCacheEntry empty for entry ${{
+        `loadConcentrationOptions: concOptionsCacheEntry empty for entry ${JSON.stringify({
           catalog: progCatalogYear,
           majorName
-        }}`
+        })}`
       );
     }
     concOptions = concOptionsCacheEntry;
