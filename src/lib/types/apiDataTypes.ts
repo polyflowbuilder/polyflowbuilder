@@ -19,7 +19,7 @@ export type CourseCache = ObjectMap<CourseCacheKey, APICourseFull>;
 
 export type ProgramCache = Map<string, Program>;
 
-export type MajorNameCache = Map<string, string[]>;
+export type MajorOptionsCache = Map<string, string[]>;
 
 export interface ConcOptionsCacheKey {
   catalog: string;
