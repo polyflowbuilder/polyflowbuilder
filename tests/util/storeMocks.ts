@@ -6,14 +6,14 @@ import { apiData } from '$lib/server/config/apiDataConfig';
 import { writable } from 'svelte/store';
 import { ObjectMap } from '$lib/common/util/ObjectMap';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
-import type { MajorNameCache, CourseCache, ProgramCache, ConcOptionsCache } from '$lib/types';
+import type { MajorOptionsCache, CourseCache, ProgramCache, ConcOptionsCache } from '$lib/types';
 
 // set stores
 const mockAvailableFlowchartStartYearsWritable = writable<string[]>([]);
 const mockAvailableFlowchartCatalogsWritable = writable<string[]>([]);
 const mockProgramCacheWritable = writable<ProgramCache>(new Map());
 const mockCourseCacheWritable = writable<CourseCache>(new ObjectMap());
-const mockMajorNameCacheWritable = writable<MajorNameCache>(new Map());
+const mockMajorOptionsCacheWritable = writable<MajorOptionsCache>(new Map());
 const mockConcOptionsCacheWritable = writable<ConcOptionsCache>(new ObjectMap());
 const mockModalOpenWritable = writable<boolean>(false);
 const mockSelectedFlowIndexWritable = writable<number>(-1);
@@ -28,7 +28,7 @@ export const mockAvailableFlowchartCatalogsStore = mockAvailableFlowchartCatalog
 // caches
 export const mockProgramCacheStore = mockProgramCacheWritable;
 export const mockCourseCacheStore = mockCourseCacheWritable;
-export const mockMajorNameCacheStore = mockMajorNameCacheWritable;
+export const mockMajorOptionsCacheStore = mockMajorOptionsCacheWritable;
 export const mockConcOptionsCacheStore = mockConcOptionsCacheWritable;
 
 // general-purpose mock modal store since we will only be
@@ -74,7 +74,7 @@ export function initMockedAPIDataStores() {
     }
   });
 
-  const mockMajorNameCacheValue = new Map(
+  const mockMajorOptionsCacheValue = new Map(
     apiData.catalogs.map((catalog) => {
       const majorNames = [
         ...new Set(
@@ -91,6 +91,6 @@ export function initMockedAPIDataStores() {
   mockAvailableFlowchartStartYearsStore.set(apiData.startYears);
   mockAvailableFlowchartCatalogsStore.set(apiData.catalogs);
   mockProgramCacheStore.set(apiData.programData);
-  mockMajorNameCacheStore.set(mockMajorNameCacheValue);
+  mockMajorOptionsCacheStore.set(mockMajorOptionsCacheValue);
   mockConcOptionsCacheStore.set(mockConcOptionsCacheValue);
 }

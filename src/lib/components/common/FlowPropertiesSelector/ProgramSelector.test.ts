@@ -5,8 +5,8 @@ import { act, render, screen, getAllByRole, findByRole } from '@testing-library/
 import {
   mockProgramCacheStore,
   initMockedAPIDataStores,
-  mockMajorNameCacheStore,
   mockConcOptionsCacheStore,
+  mockMajorOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore
 } from '../../../../../tests/util/storeMocks';
 import type { Program } from '@prisma/client';
@@ -29,8 +29,8 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
         programCache: mockProgramCacheStore,
-        majorNameCache: mockMajorNameCacheStore,
         concOptionsCache: mockConcOptionsCacheStore,
+        majorOptionsCache: mockMajorOptionsCacheStore,
         availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore
       };
     });
