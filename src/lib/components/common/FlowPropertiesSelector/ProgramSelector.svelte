@@ -2,11 +2,12 @@
   import { createEventDispatcher, tick } from 'svelte';
   import {
     programCache,
-    majorNameCache,
-    catalogMajorNameCache,
+    concOptionsCache,
+    majorOptionsCache,
     availableFlowchartCatalogs
   } from '$lib/client/stores/apiDataStore';
   import type { Program } from '@prisma/client';
+  import type { ConcOptionsCacheValue } from '$lib/types';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
@@ -28,10 +29,7 @@
   let programId = '';
   let updating = false;
   let majorOptions: string[] = [];
-  let concOptions: {
-    name: string;
-    id: string;
-  }[] = [];
+  let concOptions: ConcOptionsCacheValue[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
     const majorName = $programCache.get(id)?.majorName;
     if (!majorName) {
@@ -81,33 +79,41 @@
 
   // load major and concentration options for UI
   async function loadMajorOptions(progCatalogYear: string) {
-    let majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
-
-    // does not exist, fetch entries
-    if (!majorNameCacheEntry) {
+    // fetch entries for this catalog if we don't have them
+    if (!$majorOptionsCache.has(progCatalogYear)) {
       dispatch('fetchingDataUpdate', true);
       const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
       const resJson = (await res.json()) as {
         message: string;
         results: string[];
       };
-      majorNameCache.update((cache) => {
+
+      // update relevant caches
+      majorOptionsCache.update((cache) => {
         cache.set(progCatalogYear, resJson.results.sort());
         return cache;
       });
-      majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
-      if (!majorNameCacheEntry) {
-        throw new Error('loadMajorOptions: majorNameCacheEntry not found after fetch');
-      }
+
       dispatch('fetchingDataUpdate', false);
     }
 
     // select
-    majorOptions = majorNameCacheEntry;
+    const majorOptionsCacheEntry = $majorOptionsCache.get(progCatalogYear);
+    if (!majorOptionsCacheEntry) {
+      throw new Error(
+        `loadMajorOptions: majorOptionsCacheEntry empty for entry ${progCatalogYear}`
+      );
+    }
+    majorOptions = majorOptionsCacheEntry;
   }
   async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
-    // fetch programs for this program if we don't have them
-    if (!$catalogMajorNameCache.has(`${progCatalogYear}|${majorName}`)) {
+    // fetch programs for this catalog and major if we don't have them
+    if (
+      !$concOptionsCache.has({
+        catalog: progCatalogYear,
+        majorName
+      })
+    ) {
       dispatch('fetchingDataUpdate', true);
       const res = await fetch(
         `/api/data/queryAvailablePrograms?catalog=${progCatalogYear}&majorName=${majorName}`
@@ -117,30 +123,51 @@
         results: Program[];
       };
 
-      for (const entry of resJson.results) {
-        $programCache.set(entry.id, entry);
-      }
-      $catalogMajorNameCache.add(`${progCatalogYear}|${majorName}`);
+      // update relevant caches
+      programCache.update((cache) => {
+        for (const entry of resJson.results) {
+          cache.set(entry.id, entry);
+        }
+        return cache;
+      });
+      concOptionsCache.update((cache) => {
+        cache.set(
+          {
+            catalog: progCatalogYear,
+            majorName
+          },
+          resJson.results
+            .map((entry) => {
+              if (!entry.concName) {
+                throw new Error(`loadConcentrationOptions: program ${entry.id} has no concName`);
+              }
+              return {
+                name: entry.concName,
+                id: entry.id
+              };
+            })
+            .sort((a, b) => a.name.localeCompare(b.name))
+        );
+        return cache;
+      });
 
-      $programCache = $programCache;
-      $catalogMajorNameCache = $catalogMajorNameCache;
       dispatch('fetchingDataUpdate', false);
     }
 
-    // grab and set all relevant concentrations
-    const newConcOptions: typeof concOptions = [];
-    $programCache.forEach((entry) => {
-      if (entry.catalog === progCatalogYear && entry.majorName === majorName) {
-        if (!entry.concName) {
-          throw new Error(`program ${entry.id} has no concName`);
-        }
-        newConcOptions.push({
-          name: entry.concName,
-          id: entry.id
-        });
-      }
+    // select
+    const concOptionsCacheEntry = $concOptionsCache.get({
+      catalog: progCatalogYear,
+      majorName
     });
-    concOptions = newConcOptions.sort((a, b) => a.name.localeCompare(b.name));
+    if (!concOptionsCacheEntry) {
+      throw new Error(
+        `loadConcentrationOptions: concOptionsCacheEntry empty for entry ${JSON.stringify({
+          catalog: progCatalogYear,
+          majorName
+        })}`
+      );
+    }
+    concOptions = concOptionsCacheEntry;
   }
 
   // reset the major & concentration when their respective parents change

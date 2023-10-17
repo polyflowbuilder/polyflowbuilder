@@ -4,9 +4,9 @@ import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import {
   mockProgramCacheStore,
-  mockMajorNameCacheStore,
   initMockedAPIDataStores,
-  mockCatalogMajorNameCacheStore,
+  mockConcOptionsCacheStore,
+  mockMajorOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
 } from '../../../../../tests/util/storeMocks';
@@ -102,11 +102,11 @@ describe('FlowPropertiesSelector/Component initial mount tests', () => {
   beforeAll(() => {
     vi.mock('$lib/client/stores/apiDataStore', () => {
       return {
-        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore,
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
         programCache: mockProgramCacheStore,
-        catalogMajorNameCache: mockCatalogMajorNameCacheStore,
-        majorNameCache: mockMajorNameCacheStore
+        concOptionsCache: mockConcOptionsCacheStore,
+        majorOptionsCache: mockMajorOptionsCacheStore,
+        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
       };
     });
   });
