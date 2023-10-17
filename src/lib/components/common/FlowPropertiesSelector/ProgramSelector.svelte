@@ -3,10 +3,11 @@
   import {
     programCache,
     majorNameCache,
-    catalogMajorNameCache,
+    concOptionsCache,
     availableFlowchartCatalogs
   } from '$lib/client/stores/apiDataStore';
   import type { Program } from '@prisma/client';
+  import type { ConcOptionsCacheValue } from '$lib/types';
 
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
@@ -28,10 +29,7 @@
   let programId = '';
   let updating = false;
   let majorOptions: string[] = [];
-  let concOptions: {
-    name: string;
-    id: string;
-  }[] = [];
+  let concOptions: ConcOptionsCacheValue[] = [];
   $: alreadySelectedMajorNames = alreadySelectedProgramIds.map((id) => {
     const majorName = $programCache.get(id)?.majorName;
     if (!majorName) {
@@ -107,7 +105,12 @@
   }
   async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
     // fetch programs for this program if we don't have them
-    if (!$catalogMajorNameCache.has(`${progCatalogYear}|${majorName}`)) {
+    if (
+      !$concOptionsCache.has({
+        catalog: progCatalogYear,
+        majorName
+      })
+    ) {
       dispatch('fetchingDataUpdate', true);
       const res = await fetch(
         `/api/data/queryAvailablePrograms?catalog=${progCatalogYear}&majorName=${majorName}`
@@ -117,30 +120,51 @@
         results: Program[];
       };
 
-      for (const entry of resJson.results) {
-        $programCache.set(entry.id, entry);
-      }
-      $catalogMajorNameCache.add(`${progCatalogYear}|${majorName}`);
+      // update relevant caches
+      programCache.update((cache) => {
+        for (const entry of resJson.results) {
+          cache.set(entry.id, entry);
+        }
+        return cache;
+      });
+      concOptionsCache.update((cache) => {
+        cache.set(
+          {
+            catalog: progCatalogYear,
+            majorName
+          },
+          resJson.results
+            .map((entry) => {
+              if (!entry.concName) {
+                throw new Error(`loadConcentrationOptions: program ${entry.id} has no concName`);
+              }
+              return {
+                name: entry.concName,
+                id: entry.id
+              };
+            })
+            .sort((a, b) => a.name.localeCompare(b.name))
+        );
+        return cache;
+      });
 
-      $programCache = $programCache;
-      $catalogMajorNameCache = $catalogMajorNameCache;
       dispatch('fetchingDataUpdate', false);
     }
 
-    // grab and set all relevant concentrations
-    const newConcOptions: typeof concOptions = [];
-    $programCache.forEach((entry) => {
-      if (entry.catalog === progCatalogYear && entry.majorName === majorName) {
-        if (!entry.concName) {
-          throw new Error(`program ${entry.id} has no concName`);
-        }
-        newConcOptions.push({
-          name: entry.concName,
-          id: entry.id
-        });
-      }
+    // select
+    const concOptionsCacheEntry = $concOptionsCache.get({
+      catalog: progCatalogYear,
+      majorName
     });
-    concOptions = newConcOptions.sort((a, b) => a.name.localeCompare(b.name));
+    if (!concOptionsCacheEntry) {
+      throw new Error(
+        `loadConcentrationOptions: concOptionsCacheEntry empty for entry ${{
+          catalog: progCatalogYear,
+          majorName
+        }}`
+      );
+    }
+    concOptions = concOptionsCacheEntry;
   }
 
   // reset the major & concentration when their respective parents change
