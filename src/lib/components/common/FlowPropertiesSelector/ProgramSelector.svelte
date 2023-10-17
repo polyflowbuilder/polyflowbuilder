@@ -81,29 +81,29 @@
 
   // load major and concentration options for UI
   async function loadMajorOptions(progCatalogYear: string) {
-    let idx = $majorNameCache.findIndex((cacheEntry) => cacheEntry.catalog === progCatalogYear);
+    let majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
 
     // does not exist, fetch entries
-    if (idx === -1) {
+    if (!majorNameCacheEntry) {
       dispatch('fetchingDataUpdate', true);
       const res = await fetch(`/api/data/queryAvailableMajors?catalog=${progCatalogYear}`);
       const resJson = (await res.json()) as {
         message: string;
         results: string[];
       };
-      $majorNameCache = [
-        ...$majorNameCache,
-        {
-          catalog: progCatalogYear,
-          majorNames: resJson.results.sort()
-        }
-      ];
-      idx = $majorNameCache.length - 1;
+      majorNameCache.update((cache) => {
+        cache.set(progCatalogYear, resJson.results.sort());
+        return cache;
+      });
+      majorNameCacheEntry = $majorNameCache.get(progCatalogYear);
+      if (!majorNameCacheEntry) {
+        throw new Error('loadMajorOptions: majorNameCacheEntry not found after fetch');
+      }
       dispatch('fetchingDataUpdate', false);
     }
 
     // select
-    majorOptions = $majorNameCache[idx].majorNames;
+    majorOptions = majorNameCacheEntry;
   }
   async function loadConcentrationOptions(progCatalogYear: string, majorName: string) {
     // fetch programs for this program if we don't have them
