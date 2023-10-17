@@ -21,6 +21,16 @@ export type ProgramCache = Map<string, Program>;
 
 export type MajorNameCache = Map<string, string[]>;
 
+export interface ConcOptionsCacheKey {
+  catalog: string;
+  majorName: string;
+}
+export interface ConcOptionsCacheValue {
+  name: string;
+  id: string;
+}
+export type ConcOptionsCache = ObjectMap<ConcOptionsCacheKey, ConcOptionsCacheValue[]>;
+
 export interface APIData {
   // available flowchart data
   catalogs: string[];
