@@ -87,8 +87,7 @@
                   text-align: center;
                 "
               >
-                <%= c.units === "1" ? "1 unit" : (c.units === undefined ? "" : c.units + " units")
-                %>
+                <%= c.units !== '0' ? `${c.units} unit${c.units !== '1' ? 's' : ''}` : '' %>
               </h6>
             </div>
             <% }); %>
