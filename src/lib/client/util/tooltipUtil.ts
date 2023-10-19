@@ -5,6 +5,9 @@ import type { Props } from 'tippy.js';
 function mergeDefaultTooltipParams(params: Partial<Props>): Partial<Props> {
   return {
     maxWidth: MAX_TOOLTIP_WIDTH_PX,
+    theme: 'light-border',
+    arrow: false,
+    hideOnClick: false,
     ...params
   };
 }
