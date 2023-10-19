@@ -22,7 +22,6 @@ export function buildFlowListContainerItemsData(
         theme: 'light-border',
         allowHTML: true,
         content: generateFlowListItemTooltipHTML(flowListUIData[idx]),
-        maxWidth: MAX_TOOLTIP_WIDTH_PX,
         hideOnClick: false
       };
     }
