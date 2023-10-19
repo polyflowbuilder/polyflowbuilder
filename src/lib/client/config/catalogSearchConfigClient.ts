@@ -13,8 +13,10 @@ export const programSelectorTooltipConfig: Partial<Props> = {
   theme: 'light-border',
   allowHTML: true,
   content:
-    'Which program to associate the searched courses with. ' +
-    "<u>The search is restricted to the selected program's catalog.</u>",
+    '<div style="white-space: pre-wrap;">' +
+    'Which program to associate the searched courses with.' +
+    "\n<u>The search is restricted to the selected program's catalog.</u>" +
+    '</div>',
   hideOnClick: false
 };
 
@@ -26,8 +28,8 @@ export const fieldSelectorTooltipConfig: Partial<Props> = {
   content:
     '<div style="white-space: pre-wrap;">' +
     'Which part of the course to search on.' +
-    '\n\n<strong>Course ID: </strong>The ID of the course (e.g. "CPE101"). ' +
-    'Note that <u>there is no space</u> in the course ID.' +
+    '\n\n<strong>Course ID: </strong>The ID of the course (e.g. "CPE101").' +
+    '\nNote that <u>there is no space</u> in the course ID.' +
     '\n\n<strong>Course Name: </strong>The name of the course' +
     '\n(e.g. "Fundamentals of Computer Science").' +
     '</div>',
