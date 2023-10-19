@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import type { FlowListItemData, FlowListUIData } from '$lib/types';
 
 export function buildFlowListContainerItemsData(
@@ -17,13 +16,9 @@ export function buildFlowListContainerItemsData(
     // can only generate HTML content for tooltip in browser
     if (browser) {
       itemData.tooltipParams = {
-        arrow: false,
         placement: 'right-start',
-        theme: 'light-border',
         allowHTML: true,
-        content: generateFlowListItemTooltipHTML(flowListUIData[idx]),
-        maxWidth: MAX_TOOLTIP_WIDTH_PX,
-        hideOnClick: false
+        content: generateFlowListItemTooltipHTML(flowListUIData[idx])
       };
     }
     items.push(itemData);

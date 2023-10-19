@@ -1,7 +1,6 @@
 // client utility functions for course cards
 
 import { browser } from '$app/environment';
-import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import {
   getCourseFromCourseCache,
@@ -59,13 +58,9 @@ export function buildTermCourseItemsData(
     };
     if (browser) {
       itemData.tooltipParams = {
-        arrow: false,
         placement: 'right-start',
-        theme: 'light-border',
         allowHTML: true,
-        content: generateCourseItemTooltipHTML(computedCourseDisplayValues),
-        maxWidth: MAX_TOOLTIP_WIDTH_PX,
-        hideOnClick: false
+        content: generateCourseItemTooltipHTML(computedCourseDisplayValues)
       };
     }
     items.push(itemData);
