@@ -710,4 +710,90 @@ test.describe('flowchart viewer tests', () => {
       })
     ).not.toBeVisible();
   });
+
+  test('selected flowchart loads correctly into editor (some quarters, flow info panel visibility toggle)', async ({
+    page
+  }) => {
+    await performLoginFrontend(page, userEmail, 'test');
+    await expect(page).toHaveURL(/.*flows/);
+    expect((await page.textContent('h2'))?.trim()).toBe('Flows');
+    expect((await page.context().cookies())[0].name).toBe('sId');
+
+    // make sure test flows exist
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+
+    // verify other parts of flow info panel are visible
+    await expect(page.getByRole('button', { name: 'New Flow' })).toBeVisible();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).toBeInViewport();
+
+    // verify correct state when no flowchart selected
+    await expect(
+      page.getByText('No flow selected. Please select or create a flow.')
+    ).toBeInViewport();
+
+    // pick one
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2).click();
+
+    // verify that the editor loaded the selected flowchart properly
+
+    // header
+    await expect(
+      page.getByRole('heading', {
+        name: 'test flow 2'
+      })
+    ).toBeInViewport();
+
+    // verify toggle button is in the correct state
+    await expect(page.getByLabel('show/hide flow info panel')).toBeInViewport();
+    await expect(page.getByLabel('show/hide flow info panel')).toBeEnabled();
+
+    // now hide flow info panel and expect it to be gone
+    await page.getByLabel('show/hide flow info panel').click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'New Flow' })).not.toBeVisible();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).not.toBeInViewport();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).not.toBeInViewport();
+
+    // now show and expect it to be back
+    await page.getByLabel('show/hide flow info panel').click();
+    await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
+      'test flow 0',
+      'test flow 1',
+      'test flow 2',
+      'test flow 3'
+    ]);
+    await expect(page.getByRole('button', { name: 'New Flow' })).toBeVisible();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).toBeInViewport();
+    await expect(
+      page.getByRole('link', {
+        name: 'Manage Flows'
+      })
+    ).toBeInViewport();
+  });
 });

@@ -7,7 +7,7 @@ export const PANEL_SIZE_CLOSED = 0;
 export const MODAL_CLOSE_TIME_MS = 100;
 
 // roughly the pixel width of the buttons + some padding on the right
-export const FLOW_EDITOR_HEADER_PADDING_PX = 192;
+export const FLOW_EDITOR_HEADER_PADDING_PX = 256;
 
 export const TERM_CONTAINER_WIDTH_PX = 130;
 export const COURSE_ITEM_SIZE_PX = 112;

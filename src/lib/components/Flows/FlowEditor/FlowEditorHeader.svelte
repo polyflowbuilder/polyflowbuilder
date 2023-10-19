@@ -1,10 +1,11 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
+  import { viewingFlowInfoPanel } from '$lib/client/stores/UIDataStore';
   import { createEventDispatcher } from 'svelte';
-  import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+  import { faArrowLeft, faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
   import {
-    FLOW_EDITOR_HEADER_PADDING_PX,
-    TERM_CONTAINER_WIDTH_PX
+    TERM_CONTAINER_WIDTH_PX,
+    FLOW_EDITOR_HEADER_PADDING_PX
   } from '$lib/client/config/uiConfig';
 
   export let name: string;
@@ -32,6 +33,13 @@
     <div class="absolute left-2 bottom-[0.125rem] font-bold">
       <button
         class="btn btn-sm btn-square btn-ghost"
+        aria-label="show/hide flow info panel"
+        on:click={() => ($viewingFlowInfoPanel = !$viewingFlowInfoPanel)}
+      >
+        <Fa icon={$viewingFlowInfoPanel ? faEye : faEyeSlash} />
+      </button>
+      <button
+        class="btn btn-sm btn-square btn-ghost"
         aria-label="flow editor left scroll"
         disabled={!enableLeftScrollArrow}
         on:click={() => dispatch('leftScrollArrowClick')}
@@ -57,7 +65,6 @@
       </h2>
     </div>
   </div>
-  <div class="divider my-0" />
 </div>
 
 <style lang="postcss">
