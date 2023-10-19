@@ -16,12 +16,9 @@ export function buildFlowListContainerItemsData(
     // can only generate HTML content for tooltip in browser
     if (browser) {
       itemData.tooltipParams = {
-        arrow: false,
         placement: 'right-start',
-        theme: 'light-border',
         allowHTML: true,
-        content: generateFlowListItemTooltipHTML(flowListUIData[idx]),
-        hideOnClick: false
+        content: generateFlowListItemTooltipHTML(flowListUIData[idx])
       };
     }
     items.push(itemData);

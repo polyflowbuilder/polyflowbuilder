@@ -58,12 +58,9 @@ export function buildTermCourseItemsData(
     };
     if (browser) {
       itemData.tooltipParams = {
-        arrow: false,
         placement: 'right-start',
-        theme: 'light-border',
         allowHTML: true,
-        content: generateCourseItemTooltipHTML(computedCourseDisplayValues),
-        hideOnClick: false
+        content: generateCourseItemTooltipHTML(computedCourseDisplayValues)
       };
     }
     items.push(itemData);
