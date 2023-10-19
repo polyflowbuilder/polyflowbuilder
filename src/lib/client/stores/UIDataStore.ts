@@ -41,8 +41,10 @@ export const flowListUIData = derived([userFlowcharts, programCache], ([userFlow
 
 export const selectedFlowIndex = writable<number>(-1);
 
-export const viewingCreditBin = writable(false);
-
 export const selectedCourses = writable<Set<string>>(new Set());
 
 export const selectedColor = writable<string>(COLOR_PICKER_UI_DEFAULT_COLOR);
+
+export const viewingCreditBin = writable(false);
+
+export const viewingFlowInfoPanel = writable(true);

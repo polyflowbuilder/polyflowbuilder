@@ -2,16 +2,16 @@
 <script lang="ts">
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
+  import { viewingFlowInfoPanel } from '$lib/client/stores/UIDataStore';
   import { AddCoursesTab, ManageFlowsTab } from '$lib/components/Flows/FlowInfoPanel';
   import { PANEL_SIZE_CLOSED, PANEL_SIZE_OPEN } from '$lib/client/config/uiConfig';
 
   // collapsible side panel logic
-  let visible = true;
   let size = tweened(PANEL_SIZE_OPEN, {
     duration: 400,
     easing: cubicOut
   });
-  $: if (visible) {
+  $: if ($viewingFlowInfoPanel) {
     void size.set(PANEL_SIZE_OPEN);
   } else {
     void size.set(PANEL_SIZE_CLOSED);
@@ -20,12 +20,10 @@
   let activeTab: 'manageFlows' | 'addCourses' = 'manageFlows';
 </script>
 
-<!-- TODO: figure out UI/UX for collapsible side panel -->
 <!-- TODO: auto-collapse when screen size too small -->
 <!-- TODO: allow overlay or permanent set -->
-<!-- <input type="checkbox" class="absolute right-0 top-0 z-20" bind:checked={visible} /> -->
 <div class="flowInfoPanel card {!$size ? 'opacity-0' : ''}" style="--boxSize: {$size}px;">
-  {#if visible && $size > PANEL_SIZE_OPEN * 0.9}
+  {#if $viewingFlowInfoPanel && $size > PANEL_SIZE_OPEN * 0.95}
     <div class="tabs justify-center mt-2">
       <a
         href={'#'}
