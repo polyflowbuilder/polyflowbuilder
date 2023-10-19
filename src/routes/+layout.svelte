@@ -31,7 +31,7 @@
   ></script>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col scrollbar-thin">
   <Header />
   <div class="flex-1">
     <slot />

@@ -83,7 +83,7 @@
   <!-- bind here bc if we bind width in child element below centering of term containers breaks -->
   <div class="flowEditorTermsContainer" bind:clientWidth={termsContainerClientWidth}>
     <div
-      class="h-full flex border-2 overflow-x-scroll border-slate-400"
+      class="h-full flex border-2 overflow-x-auto border-slate-400"
       bind:this={termsContainer}
       on:scroll={scrollEventHandler}
     >

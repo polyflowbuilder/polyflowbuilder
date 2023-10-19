@@ -29,7 +29,7 @@
 -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
-  class="courseItem select-none card shadow inline-block rounded-none p-1 w-full h-full"
+  class="courseItem select-none card shadow inline-block rounded-none p-[2px] w-full h-full"
   class:selected={item.metadata.selected}
   style="background-color: {color}"
   on:click={onCourseItemClick}

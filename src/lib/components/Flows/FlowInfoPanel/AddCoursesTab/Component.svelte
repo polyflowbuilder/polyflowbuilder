@@ -123,7 +123,6 @@
             >
           </div>
         {:else}
-          <!-- TODO: the text in the slot should always stay at the bottom of the results section -->
           <MutableForEachContainer
             {items}
             component={CourseItem}
@@ -133,7 +132,7 @@
             itemStyle="width: {COURSE_ITEM_SIZE_PX}px; height: {COURSE_ITEM_SIZE_PX}px; margin: 0.5rem auto;"
             containerStyle="display: grid; grid-template-columns: repeat(2, 1fr); text-align: center;"
           >
-            <div class="text-center">
+            <div class="text-center px-1">
               {#if results.searchLimitExceeded}
                 <small class="text-gray-500"
                   >Search results were capped at {MAX_SEARCH_RESULTS_RETURN_COUNT} courses.</small
