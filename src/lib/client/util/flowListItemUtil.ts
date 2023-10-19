@@ -1,5 +1,4 @@
 import { browser } from '$app/environment';
-import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import type { FlowListItemData, FlowListUIData } from '$lib/types';
 
 export function buildFlowListContainerItemsData(

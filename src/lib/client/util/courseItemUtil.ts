@@ -1,7 +1,6 @@
 // client utility functions for course cards
 
 import { browser } from '$app/environment';
-import { MAX_TOOLTIP_WIDTH_PX } from '$lib/client/config/uiConfig';
 import { UserDataUpdateChunkType, UserDataUpdateChunkTERM_MODCourseDataFrom } from '$lib/types';
 import {
   getCourseFromCourseCache,
