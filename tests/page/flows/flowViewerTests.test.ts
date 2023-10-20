@@ -393,6 +393,8 @@ test.describe('flowchart viewer tests', () => {
     ).not.toBeInViewport();
 
     // do the right scroll
+    await page.getByLabel('flow editor right scroll').hover();
+    await expect(page.getByText('Scroll Flow Editor right')).toBeInViewport();
     await page.getByLabel('flow editor right scroll').click();
     await expect(page.getByLabel('flow editor left scroll')).toBeEnabled();
     await expect(page.getByLabel('flow editor right scroll')).toBeDisabled();
@@ -452,6 +454,8 @@ test.describe('flowchart viewer tests', () => {
     ).not.toBeInViewport();
 
     // do the left scroll
+    await page.getByLabel('flow editor left scroll').hover();
+    await expect(page.getByText('Scroll Flow Editor left')).toBeInViewport();
     await page.getByLabel('flow editor left scroll').click();
     await expect(page.getByLabel('flow editor right scroll')).toBeEnabled();
     await expect(page.getByLabel('flow editor left scroll')).toBeDisabled();
@@ -762,6 +766,8 @@ test.describe('flowchart viewer tests', () => {
     await expect(page.getByLabel('show/hide flow info panel')).toBeEnabled();
 
     // now hide flow info panel and expect it to be gone
+    await page.getByLabel('show/hide flow info panel').hover();
+    await expect(page.getByText('Show/Hide Flow Info Panel')).toBeInViewport();
     await page.getByLabel('show/hide flow info panel').click();
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveCount(0);
     await expect(page.getByRole('button', { name: 'New Flow' })).not.toBeVisible();
