@@ -2,6 +2,8 @@
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
   import { selectedFlowIndex } from '$lib/client/stores/UIDataStore';
 
+  export let disabled: boolean;
+
   let generatingPDF = false;
 
   async function generatePDF() {
@@ -46,8 +48,14 @@
   }
 </script>
 
-<li class:disabled={generatingPDF} class:pointer-events-none={generatingPDF}>
-  <a href={'#'} class="flex justify-between" on:click|preventDefault={generatePDF}>
+<li>
+  <a
+    href={'#'}
+    class="flex justify-between"
+    class:disabled={disabled || generatingPDF}
+    aria-disabled={disabled || generatingPDF}
+    on:click|preventDefault={generatePDF}
+  >
     <span>Export Flow as PDF</span>
     {#if generatingPDF}
       <span class="loading loading-spinner loading-sm text-polyGreen" />
