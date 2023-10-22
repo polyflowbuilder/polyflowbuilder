@@ -55,10 +55,10 @@
     tabindex="0"
     class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]"
   >
-    <li class:disabled={disableAddTerms} class:pointer-events-none={disableAddTerms}>
+    <li class:li-disabled={disableAddTerms}>
       <a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a>
     </li>
-    <li class:disabled={disableDeleteTerms} class:pointer-events-none={disableDeleteTerms}>
+    <li class:li-disabled={disableDeleteTerms}>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
     </li>
     <li>
@@ -85,7 +85,7 @@
         {$selectedCourses.size === 1 ? 'course' : 'courses'} selected
       </div>
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li class:li-disabled={!$selectedCourses.size}>
       <a
         href={'#'}
         on:click|preventDefault={() => {
@@ -94,10 +94,10 @@
         }}>Clear Course Selections</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li class:li-disabled={!$selectedCourses.size}>
       <FlowInfoPanelActionsColorSelector />
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li class:li-disabled={!$selectedCourses.size}>
       <a
         href={'#'}
         on:click|preventDefault={() => {
@@ -109,7 +109,7 @@
         }}>Delete Selected Courses</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li class:li-disabled={!$selectedCourses.size}>
       <a
         href={'#'}
         on:click|preventDefault={() => {
@@ -122,7 +122,7 @@
         }}>Colorize Selected Courses</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li class:li-disabled={!$selectedCourses.size}>
       <a href={'#'} on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}
         >Edit Selected Courses</a
       >
@@ -139,3 +139,11 @@
     <FlowInfoPanelActionsGeneratePDF />
   </ul>
 </div>
+
+<style lang="postcss">
+  .li-disabled {
+    pointer-events: none;
+    user-select: none;
+    color: hsl(var(--bc) / 0.3);
+  }
+</style>
