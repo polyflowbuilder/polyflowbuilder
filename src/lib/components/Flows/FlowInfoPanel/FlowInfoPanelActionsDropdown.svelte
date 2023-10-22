@@ -3,6 +3,7 @@
   import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { FLOW_TERM_COUNT_MAX } from '$lib/common/config/flowDataConfig';
   import {
     FlowInfoPanelActionsGeneratePDF,
     FlowInfoPanelActionsColorSelector
@@ -26,6 +27,10 @@
   } from '$lib/client/stores/modalStateStore';
 
   export let actionsButtonDisabled: boolean;
+
+  // add one for credit bin term in flowcharts
+  $: disableAddTerms =
+    $userFlowcharts[$selectedFlowIndex]?.termData.length === FLOW_TERM_COUNT_MAX + 1;
 </script>
 
 <div class="dropdown">
@@ -49,7 +54,9 @@
     tabindex="0"
     class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]"
   >
-    <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
+    <li class:disabled={disableAddTerms} class:pointer-events-none={disableAddTerms}>
+      <a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a>
+    </li>
     <li>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
     </li>
