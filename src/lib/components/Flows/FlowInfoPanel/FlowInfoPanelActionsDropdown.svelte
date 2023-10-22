@@ -31,6 +31,7 @@
   // add one for credit bin term in flowcharts
   $: disableAddTerms =
     $userFlowcharts[$selectedFlowIndex]?.termData.length === FLOW_TERM_COUNT_MAX + 1;
+  $: disableDeleteTerms = $userFlowcharts[$selectedFlowIndex]?.termData.length === 1;
 </script>
 
 <div class="dropdown">
@@ -57,7 +58,7 @@
     <li class:disabled={disableAddTerms} class:pointer-events-none={disableAddTerms}>
       <a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a>
     </li>
-    <li>
+    <li class:disabled={disableDeleteTerms} class:pointer-events-none={disableDeleteTerms}>
       <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
     </li>
     <li>
