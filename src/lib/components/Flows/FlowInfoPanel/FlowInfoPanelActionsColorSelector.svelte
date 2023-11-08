@@ -5,6 +5,8 @@
   import { selectedColor } from '$lib/client/stores/UIDataStore';
   import type Pickr from '@simonwep/pickr';
 
+  export let disabled: boolean;
+
   // color selector state
   let openColorSelectorButton: HTMLElement | undefined;
   let colorPicker: Pickr;
@@ -67,6 +69,8 @@
 <a
   href={'#'}
   class="flex justify-between"
+  class:a-disabled={disabled}
+  aria-disabled={disabled}
   on:click|preventDefault
   bind:this={openColorSelectorButton}
 >

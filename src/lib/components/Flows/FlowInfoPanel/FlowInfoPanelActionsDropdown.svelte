@@ -3,6 +3,7 @@
   import { Toggle } from '$lib/components/common';
   import { faSortDown } from '@fortawesome/free-solid-svg-icons';
   import { userFlowcharts } from '$lib/client/stores/userDataStore';
+  import { FLOW_TERM_COUNT_MAX } from '$lib/common/config/flowDataConfig';
   import {
     FlowInfoPanelActionsGeneratePDF,
     FlowInfoPanelActionsColorSelector
@@ -26,6 +27,11 @@
   } from '$lib/client/stores/modalStateStore';
 
   export let actionsButtonDisabled: boolean;
+
+  // add one for credit bin term in flowcharts
+  $: disableAddTerms =
+    $userFlowcharts[$selectedFlowIndex]?.termData.length === FLOW_TERM_COUNT_MAX + 1;
+  $: disableDeleteTerms = $userFlowcharts[$selectedFlowIndex]?.termData.length === 1;
 </script>
 
 <div class="dropdown">
@@ -49,18 +55,36 @@
     tabindex="0"
     class="mt-1 p-2 shadow menu menu-compact dropdown-content bg-base-100 w-60 z-[1]"
   >
-    <li><a href={'#'} on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a></li>
     <li>
-      <a href={'#'} on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a>
+      <a
+        href={'#'}
+        class:a-disabled={actionsButtonDisabled || disableAddTerms}
+        aria-disabled={actionsButtonDisabled || disableAddTerms}
+        on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a
+      >
     </li>
     <li>
-      <a href={'#'} on:click|preventDefault={() => ($editFlowPropertiesModalOpen = true)}
+      <a
+        href={'#'}
+        class:a-disabled={actionsButtonDisabled || disableDeleteTerms}
+        aria-disabled={actionsButtonDisabled || disableDeleteTerms}
+        on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a
+      >
+    </li>
+    <li>
+      <a
+        href={'#'}
+        class:a-disabled={actionsButtonDisabled}
+        aria-disabled={actionsButtonDisabled}
+        on:click|preventDefault={() => ($editFlowPropertiesModalOpen = true)}
         >Edit Flow Properties</a
       >
     </li>
     <li>
       <a
         href={'#'}
+        class:a-disabled={actionsButtonDisabled}
+        aria-disabled={actionsButtonDisabled}
         on:click|preventDefault={() => ($viewingCreditBin = !$viewingCreditBin)}
         class="relative"
       >
@@ -77,21 +101,27 @@
         {$selectedCourses.size === 1 ? 'course' : 'courses'} selected
       </div>
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li>
       <a
         href={'#'}
+        class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
+        aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
           $selectedCourses.clear();
           $selectedCourses = $selectedCourses;
         }}>Clear Course Selections</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
-      <FlowInfoPanelActionsColorSelector />
+    <li>
+      <FlowInfoPanelActionsColorSelector
+        disabled={actionsButtonDisabled || !$selectedCourses.size}
+      />
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li>
       <a
         href={'#'}
+        class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
+        aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
           deleteSelectedCourses(
             $userFlowcharts[$selectedFlowIndex]?.id,
@@ -101,9 +131,11 @@
         }}>Delete Selected Courses</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
+    <li>
       <a
         href={'#'}
+        class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
+        aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
           colorSelectedCourses(
             $userFlowcharts[$selectedFlowIndex]?.id,
@@ -114,20 +146,25 @@
         }}>Colorize Selected Courses</a
       >
     </li>
-    <li class:disabled={!$selectedCourses.size} class:pointer-events-none={!$selectedCourses.size}>
-      <a href={'#'} on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}
-        >Edit Selected Courses</a
+    <li>
+      <a
+        href={'#'}
+        class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
+        aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
+        on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}>Edit Selected Courses</a
       >
     </li>
     <div class="divider my-0 py-0 px-2" />
     <li>
       <a
         href={'#'}
+        class:a-disabled={actionsButtonDisabled}
+        aria-disabled={actionsButtonDisabled}
         on:click|preventDefault={() => {
           duplicateFlowchart($userFlowcharts[$selectedFlowIndex], $userFlowcharts.length);
         }}>Duplicate Flow</a
       >
     </li>
-    <FlowInfoPanelActionsGeneratePDF />
+    <FlowInfoPanelActionsGeneratePDF disabled={actionsButtonDisabled} />
   </ul>
 </div>
