@@ -81,7 +81,7 @@
 <style lang="postcss">
   .colorSelectorSquare {
     @apply rounded-sm;
-    border: 1px solid hsla(var(--n) / 0.625);
+    border: 1px solid oklch(var(--n) / 0.625);
     width: 1.125rem;
     height: 1.125rem;
     margin: 1px 0.25rem 0 0.5rem;

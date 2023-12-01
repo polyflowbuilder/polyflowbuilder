@@ -78,10 +78,10 @@
 
 <style lang="postcss">
   .btn:not(:hover) {
-    background-color: hsla(var(--n) / 0.2);
+    background-color: oklch(var(--n) / 0.2);
   }
   .btn:hover {
-    background-color: hsla(var(--n) / 0.4);
+    background-color: oklch(var(--n) / 0.4);
   }
 
   .pseudoHidden {

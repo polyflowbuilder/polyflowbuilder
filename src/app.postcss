@@ -10,15 +10,14 @@
 
 /* add back small outline when buttons are focused (e.g. tabbed on) */
 button.btn-accent:focus-visible {
-  outline: 2px solid hsl(var(--a));
+  outline: 2px solid oklch(var(--a));
 }
 
 /* make borders on input elements easier to see */
 .input-bordered,
 .select-bordered,
 .textarea-bordered {
-  --tw-border-opacity: 0.2;
-  border-color: hsl(var(--bc) / var(--tw-border-opacity));
+  border-color: oklch(var(--bc) / 0.2);
 }
 
 /* keep alert styles consistent */
@@ -85,7 +84,7 @@ button.btn-accent:focus-visible {
 .menu li > *:not(ul):not(details):active,
 .menu li > *:not(ul):not(details).active,
 .menu li > details > summary:active {
-  background-color: hsl(var(--bc) / 0.25);
+  background-color: oklch(var(--bc) / 0.25);
   color: white;
 }
 
@@ -94,10 +93,9 @@ button.btn-accent:focus-visible {
   @apply w-full items-stretch;
 }
 .group-input > span {
-  --tw-bg-opacity: 1;
   display: flex;
   align-items: center;
-  background-color: hsl(var(--b3) / var(--tw-bg-opacity));
+  background-color: oklch(var(--b3));
   padding-left: 1rem; /* 16 px */
   padding-right: 1rem; /* 16 px */
   user-select: none;
@@ -127,5 +125,5 @@ button.btn-accent:focus-visible {
 .a-disabled {
   pointer-events: none;
   user-select: none;
-  color: hsl(var(--bc) / 0.3);
+  color: oklch(var(--bc) / 0.3);
 }

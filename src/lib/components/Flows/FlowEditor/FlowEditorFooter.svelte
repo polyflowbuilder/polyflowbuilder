@@ -155,7 +155,7 @@
 
 <style lang="postcss">
   .unitCounterSquare {
-    border: 1px solid hsla(var(--n) / 0.625);
+    border: 1px solid oklch(var(--n) / 0.625);
     width: 1.25rem;
     height: 1.25rem;
     margin-top: 1px;
