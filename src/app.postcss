@@ -127,3 +127,8 @@ button.btn-accent:focus-visible {
   user-select: none;
   color: oklch(var(--bc) / 0.3);
 }
+
+/* non-active tab text should not be the same color as the active tab */
+.tab:not(.tab-active):not(:hover) {
+  color: oklch(var(--bc) / 0.5);
+}

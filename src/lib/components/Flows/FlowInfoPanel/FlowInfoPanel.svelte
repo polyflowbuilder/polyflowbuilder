@@ -24,16 +24,16 @@
 <!-- TODO: allow overlay or permanent set -->
 <div class="flowInfoPanel card {!$size ? 'opacity-0' : ''}" style="--boxSize: {$size}px;">
   {#if $viewingFlowInfoPanel && $size > PANEL_SIZE_OPEN * 0.95}
-    <div class="tabs justify-center mt-2">
+    <div class="tabs tabs-bordered justify-center mt-2">
       <a
         href={'#'}
-        class="tab tab-bordered"
+        class="tab"
         class:tab-active={activeTab === 'manageFlows'}
         on:click|preventDefault={() => (activeTab = 'manageFlows')}>Manage Flows</a
       >
       <a
         href={'#'}
-        class="tab tab-bordered"
+        class="tab"
         class:tab-active={activeTab === 'addCourses'}
         on:click|preventDefault={() => (activeTab = 'addCourses')}>Add Courses</a
       >
