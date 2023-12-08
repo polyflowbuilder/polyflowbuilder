@@ -26,7 +26,7 @@
   // drag and drop props
   export let dndType = '';
   export let dropFromOthersDisabled = false;
-  export let flipDurationMs = 300;
+  export let flipDurationMs = 200;
 
   // create 'internal items' so that we can freely mutate the IDs in the itemsData objects
   let internalItemsData: MutableForEachContainerItemInternal[] = [];
@@ -53,6 +53,8 @@
     internalItemsData = e.detail.items;
   }
   function handleFinalize(e: CustomEvent<DndEvent<MutableForEachContainerItemInternal>>) {
+    internalItemsData = e.detail.items;
+
     // only emit the data items, not the internal ones
     const emitItemsData = e.detail.items.map((internalItem) => internalItem.item);
     dispatch('itemsReorder', emitItemsData);
@@ -66,7 +68,8 @@
         items: internalItemsData,
         dropTargetStyle: {},
         type: dndType,
-        dropFromOthersDisabled
+        dropFromOthersDisabled,
+        flipDurationMs
       }}
       on:consider={handleConsider}
       on:finalize={handleFinalize}
