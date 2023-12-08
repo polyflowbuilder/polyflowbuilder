@@ -46,7 +46,10 @@ const config: PlaywrightTestConfig = {
         deviceScaleFactor: 1
       }
     }
-  ]
+  ],
+  use: {
+    video: 'retain-on-failure'
+  }
 };
 
 export default config;
