@@ -48,15 +48,15 @@ export async function dragAndDrop(
   // if tests are not performing as expected, bump up drag resolution via step count
   const steps = (testInfo.project.name === 'webkit' ? 2000 : 50) * 2 ** testInfo.retry;
   await page.mouse.move(destX, destY, { steps });
+
+  // wait for at least flipDurationMs in MutableForEachContainer
+  // adjust as appropriate (same with second timeout)
+  await page.waitForTimeout(300);
+
   await page.mouse.up();
 
-  // need this to 'reset the drag' for some reason (maybe svelte-dnd-action quirk, see traces w/o this)
-  if (doEndClick) {
-    await locatorToDrag.click();
-  }
-
   // if tests are not performing as expected, bump up timeout to let elements "settle" in headless mode
-  await page.waitForTimeout(100);
+  await page.waitForTimeout(300);
 }
 
 export async function skipWelcomeMessage(page: Page) {
