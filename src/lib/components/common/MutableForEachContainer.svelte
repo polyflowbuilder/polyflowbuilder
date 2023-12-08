@@ -53,6 +53,8 @@
     internalItemsData = e.detail.items;
   }
   function handleFinalize(e: CustomEvent<DndEvent<MutableForEachContainerItemInternal>>) {
+    internalItemsData = e.detail.items;
+
     // only emit the data items, not the internal ones
     const emitItemsData = e.detail.items.map((internalItem) => internalItem.item);
     dispatch('itemsReorder', emitItemsData);
