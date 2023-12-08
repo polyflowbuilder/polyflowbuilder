@@ -48,7 +48,7 @@ const config: PlaywrightTestConfig = {
     }
   ],
   use: {
-    video: 'on-first-retry'
+    video: 'retain-on-failure'
   }
 };
 
