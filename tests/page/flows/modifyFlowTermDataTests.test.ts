@@ -89,12 +89,12 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH96');
 
     // then move course in the first term
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [0, 1])
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [0, 1])
+    });
 
     // check correct
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('MATH142');
@@ -105,13 +105,18 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH96');
 
     // move more courses around
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 2]),
-      getTermContainerCourseLocator(page, [0, 3])
-    );
-    await dragAndDrop(page, testInfo, getTermContainerCourseLocator(page, [0, 0]), [0, 350]);
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 2]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [0, 3])
+    });
+    await dragAndDrop({
+      page,
+      testInfo,
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: [0, 350]
+    });
 
     // check
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText(
@@ -157,32 +162,32 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     ).toBeInViewport();
 
     // move things around
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [4, 0]),
-      getTermContainerCourseLocator(page, [1, 0])
-    );
-    await dragAndDrop(
+      locatorToDrag: getTermContainerCourseLocator(page, [4, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [1, 0])
+    });
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [5, 1]),
-      getTermContainerCourseLocator(page, [2, 2])
-    );
-    await dragAndDrop(
+      locatorToDrag: getTermContainerCourseLocator(page, [5, 1]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [2, 2])
+    });
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [4, 1]),
-      getTermContainerCourseLocator(page, [0, 0])
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [4, 1]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [0, 0])
+    });
 
     await getTermContainerCourseLocator(page, [5, 4]).scrollIntoViewIfNeeded();
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [5, 4]),
-      getTermContainerCourseLocator(page, [3, 0])
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [5, 4]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [3, 0])
+    });
 
     // now verify the entire flowchart
     // term container 0
@@ -434,30 +439,30 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     await expect(getTermContainerCourseLocator(page, [0, 3]).locator('h6')).toHaveText('MATH96');
 
     // move courses out of the first term
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [1, 0])
-    );
-    await dragAndDrop(
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [1, 0])
+    });
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [1, 0])
-    );
-    await dragAndDrop(
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [1, 0])
+    });
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [1, 0])
-    );
-    await dragAndDrop(
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [1, 0])
+    });
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [1, 0])
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [0, 0]),
+      locatorDragTarget: getTermContainerCourseLocator(page, [1, 0])
+    });
 
     // verify first term is empty
     await expect(
@@ -465,12 +470,12 @@ test.describe('FLOW_TERM_MOD update tests', () => {
     ).toHaveCount(0);
 
     // move course into empty term
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [1, 0]),
-      page.locator(TERM_CONTAINER_SELECTOR).nth(0)
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [1, 0]),
+      locatorDragTarget: page.locator(TERM_CONTAINER_SELECTOR).nth(0)
+    });
 
     // verify course is in first term
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('MATH96');

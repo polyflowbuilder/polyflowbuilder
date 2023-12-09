@@ -409,12 +409,12 @@ test.describe('add flowchart terms tests', () => {
     );
 
     // make sure we can move courses into the new term
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      getTermContainerCourseLocator(page, [5, 0]),
-      page.locator(TERM_CONTAINER_SELECTOR).nth(6)
-    );
+      locatorToDrag: getTermContainerCourseLocator(page, [5, 0]),
+      locatorDragTarget: page.locator(TERM_CONTAINER_SELECTOR).nth(6)
+    });
 
     await expect(
       page.locator(TERM_CONTAINER_SELECTOR).nth(6).locator(TERM_CONTAINER_COURSES_SELECTOR)
