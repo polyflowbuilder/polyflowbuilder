@@ -456,8 +456,7 @@ test.describe('FLOW_TERM_MOD update tests', () => {
       page,
       testInfo,
       getTermContainerCourseLocator(page, [0, 0]),
-      getTermContainerCourseLocator(page, [1, 0]),
-      false
+      getTermContainerCourseLocator(page, [1, 0])
     );
 
     // verify first term is empty

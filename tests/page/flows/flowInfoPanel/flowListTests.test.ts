@@ -302,8 +302,7 @@ test.describe('flow list tests', () => {
       page,
       testInfo,
       page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2),
-      false
+      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
     );
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);

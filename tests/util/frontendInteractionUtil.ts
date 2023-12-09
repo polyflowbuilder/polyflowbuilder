@@ -7,8 +7,7 @@ export async function dragAndDrop(
   page: Page,
   testInfo: TestInfo,
   locatorToDrag: Locator,
-  locatorDragTarget: Locator | [number, number],
-  doEndClick = true
+  locatorDragTarget: Locator | [number, number]
 ) {
   const locatorToDragBBox = await locatorToDrag.boundingBox();
   if (!locatorToDragBBox) {
