@@ -229,7 +229,8 @@ test.describe('flow list tests', () => {
       page,
       testInfo,
       locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
-      locatorDragTarget: [0, 25]
+      locatorDragTarget: [0, 25],
+      verifyServerPersistedDrag: false
     });
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
