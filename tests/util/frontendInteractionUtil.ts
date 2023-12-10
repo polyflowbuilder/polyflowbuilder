@@ -1,3 +1,4 @@
+import { expect } from '@playwright/test';
 import type { Locator, Page, TestInfo } from '@playwright/test';
 
 // manual drag-and-drop for svelte-dnd-action elements
@@ -8,6 +9,7 @@ export async function dragAndDrop(options: {
   testInfo: TestInfo;
   locatorToDrag: Locator;
   locatorDragTarget: Locator | [number, number];
+  verifyServerPersistedDrag?: boolean;
 }) {
   const locatorToDragBBox = await options.locatorToDrag.boundingBox();
   if (!locatorToDragBBox) {
@@ -53,7 +55,15 @@ export async function dragAndDrop(options: {
   // adjust as appropriate (same with second timeout)
   await options.page.waitForTimeout(300);
 
-  await options.page.mouse.up();
+  // verify that changes are committed after drag operation completed
+  if (options.verifyServerPersistedDrag !== false) {
+    const responsePromise = options.page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
+    await options.page.mouse.up();
+    const response = await responsePromise;
+    expect(response.ok()).toBe(true);
+  } else {
+    await options.page.mouse.up();
+  }
 
   // if tests are not performing as expected, bump up timeout to let elements "settle" in headless mode
   await options.page.waitForTimeout(300);
