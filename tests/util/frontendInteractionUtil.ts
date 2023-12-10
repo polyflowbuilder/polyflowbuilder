@@ -64,9 +64,6 @@ export async function dragAndDrop(options: {
   } else {
     await options.page.mouse.up();
   }
-
-  // if tests are not performing as expected, bump up timeout to let elements "settle" in headless mode
-  await options.page.waitForTimeout(300);
 }
 
 export async function skipWelcomeMessage(page: Page) {

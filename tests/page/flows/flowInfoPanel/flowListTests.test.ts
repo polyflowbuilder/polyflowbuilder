@@ -233,6 +233,9 @@ test.describe('flow list tests', () => {
       verifyServerPersistedDrag: false
     });
 
+    // wait for list item to return to its original position
+    await page.waitForTimeout(300);
+
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
       'test flow 1',
