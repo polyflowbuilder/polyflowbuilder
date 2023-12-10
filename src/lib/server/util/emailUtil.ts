@@ -19,7 +19,6 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     template
   };
   const stringPayload = JSON.stringify(payload);
-  console.log('email stringpayload', stringPayload);
 
   // build signed request
   const encoder = new TextEncoder();
@@ -51,6 +50,10 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     process.env.NODE_ENV === 'test' ? '?dryrun=true' : ''
   }`;
 
+  console.log('email', {
+    stringPayload,
+    sendTime: Date.now()
+  });
   const res = await fetch(emailEndpoint, {
     method: 'POST',
     body: JSON.stringify({
