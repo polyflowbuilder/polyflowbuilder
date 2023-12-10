@@ -4,6 +4,9 @@ import { PrismaClient } from '@prisma/client';
 const FEEDBACK_CONTENT = 'test_feedback_pfb_+wledkcvmwlekm32rj498r3fmkldmclkmlkc';
 
 test.describe('feedback page tests', () => {
+  test.describe.configure({
+    mode: 'serial'
+  });
   const prisma = new PrismaClient();
 
   test.beforeEach(async ({ page }) => {
