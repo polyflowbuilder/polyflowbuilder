@@ -19,6 +19,7 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     template
   };
   const stringPayload = JSON.stringify(payload);
+  console.log('email stringpayload', stringPayload);
 
   // build signed request
   const encoder = new TextEncoder();
