@@ -6,7 +6,8 @@ const config: PlaywrightTestConfig = {
     command: 'npm run build && export NODE_ENV=test && npm run preview',
     reuseExistingServer: !process.env.CI,
     port: 4173,
-    timeout: 120000
+    timeout: 120000,
+    stdout: 'pipe'
   },
   testDir: 'tests',
   retries: 3,
