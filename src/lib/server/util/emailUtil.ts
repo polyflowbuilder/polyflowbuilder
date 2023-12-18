@@ -4,7 +4,6 @@ import type { EmailTemplateData } from '$lib/types/emailTemplateTypes';
 const logger = initLogger('Util/EmailUtil');
 
 export async function sendEmail(template: EmailTemplateData, to: string, subject: string) {
-  console.log('begin sendEmail', Date.now());
   // build email payload
   const payload = {
     // request is valid for 2 minutes
@@ -20,7 +19,6 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     template
   };
   const stringPayload = JSON.stringify(payload);
-  console.log('sendEmail JSON stringify', Date.now());
 
   // build signed request
   const encoder = new TextEncoder();
@@ -36,12 +34,10 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
     false,
     ['sign']
   );
-  console.log('sendEmail key import', Date.now());
 
   // sign data
   const signatureBuffer = await crypto.subtle.sign('HMAC', key, encoder.encode(stringPayload));
   const signature = Buffer.from(signatureBuffer).toString('base64');
-  console.log('sendEmail signature gen', Date.now());
 
   // send the request
   if (!process.env.CF_EMAIL_API_ENDPOINT) {
@@ -53,11 +49,6 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
   const emailEndpoint = `${process.env.CF_EMAIL_API_ENDPOINT}${
     process.env.NODE_ENV === 'test' ? '?dryrun=true' : ''
   }`;
-
-  console.log('email', {
-    stringPayload,
-    sendTime: Date.now()
-  });
   const res = await fetch(emailEndpoint, {
     method: 'POST',
     body: JSON.stringify({
