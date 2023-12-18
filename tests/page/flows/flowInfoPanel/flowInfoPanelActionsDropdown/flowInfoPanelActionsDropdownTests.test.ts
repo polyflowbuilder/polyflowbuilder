@@ -463,9 +463,26 @@ test.describe('FlowInfoPanelActionsDropdown tests', () => {
         name: 'Actions'
       })
       .click();
+
+    // verify that changes are committed after clicking
+    const responsePromise = page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
     await page.getByText('Colorize Selected Courses').click();
+    const response = await responsePromise;
+    expect(response.ok()).toBe(true);
 
     // verify new colors
+    await expect(getTermContainerCourseLocator(page, [0, 0])).toHaveCSS(
+      'background-color',
+      'rgb(27, 115, 60)'
+    );
+    await expect(getTermContainerCourseLocator(page, [0, 1])).toHaveCSS(
+      'background-color',
+      'rgb(27, 115, 60)'
+    );
+
+    // verify change persisted
+    await page.reload();
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).first().click();
     await expect(getTermContainerCourseLocator(page, [0, 0])).toHaveCSS(
       'background-color',
       'rgb(27, 115, 60)'
@@ -504,9 +521,21 @@ test.describe('FlowInfoPanelActionsDropdown tests', () => {
         name: 'Actions'
       })
       .click();
+
+    // verify that changes are committed after clicking
+    const responsePromise = page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
     await page.getByText('Delete Selected Courses').click();
+    const response = await responsePromise;
+    expect(response.ok()).toBe(true);
 
     // verify courses deleted
+    await expect(
+      page.locator(TERM_CONTAINER_SELECTOR).nth(0).locator(TERM_CONTAINER_COURSES_SELECTOR)
+    ).toHaveCount(2);
+
+    // verify change persisted
+    await page.reload();
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).first().click();
     await expect(
       page.locator(TERM_CONTAINER_SELECTOR).nth(0).locator(TERM_CONTAINER_COURSES_SELECTOR)
     ).toHaveCount(2);
@@ -539,7 +568,12 @@ test.describe('FlowInfoPanelActionsDropdown tests', () => {
         name: 'Actions'
       })
       .click();
+
+    // verify that changes are committed after clicking
+    const responsePromise = page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
     await page.getByText('Duplicate Flow').click();
+    const response = await responsePromise;
+    expect(response.ok()).toBe(true);
 
     // expect new flowchart item to appear
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
