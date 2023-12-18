@@ -359,12 +359,12 @@ test.describe('course search tests', () => {
     await assertCorrectUIAfterCatalogSearch(page, ['PLSC175 Beekeeping 3 units'], false, true);
 
     // now drag this course into a term container
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
-      getTermContainerCourseLocator(page, [0, 1])
-    );
+      locatorToDrag: page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
+      locatorDragTarget: getTermContainerCourseLocator(page, [0, 1])
+    });
 
     // verify the course was put there correctly
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText(
@@ -475,12 +475,12 @@ test.describe('course search tests', () => {
     await assertCorrectUIAfterCatalogSearch(page, ['PLSC175 Beekeeping 3 units'], false, true);
 
     // now drag this course into a term container
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
-      page.locator(TERM_CONTAINER_SELECTOR).nth(0)
-    );
+      locatorToDrag: page.locator(CATALOG_SEARCH_COURSES_SELECTOR).first(),
+      locatorDragTarget: page.locator(TERM_CONTAINER_SELECTOR).nth(0)
+    });
 
     // verify the course was put there correctly
     await expect(getTermContainerCourseLocator(page, [0, 0]).locator('h6')).toHaveText('PLSC175');

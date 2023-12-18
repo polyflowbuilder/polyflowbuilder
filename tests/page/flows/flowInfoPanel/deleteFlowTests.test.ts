@@ -36,7 +36,7 @@ async function assertCorrectFailureHandling(page: Page, dialogMessage: string) {
   // confirm delete
   await page.getByText('Delete Flow').click();
 
-  // make sure popup came up telling us that this was unauthenticated
+  // make sure popup came up telling us that delete was unsuccessful
   await new Promise((r) => setTimeout(r, 500));
   expect(lastDialogMessage).toBe(dialogMessage);
 
@@ -60,8 +60,11 @@ async function assertCorrectFlowDelete(
   await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(deleteIdx).click();
   await expect(page.getByText('Delete Flow')).toBeEnabled();
 
-  // confirm delete
+  // confirm delete and wait for server persistence
+  const responsePromise = page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
   await page.getByText('Delete Flow').click();
+  const response = await responsePromise;
+  expect(response.ok()).toBe(true);
 
   // check state
   await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText(expectList);
@@ -70,7 +73,7 @@ async function assertCorrectFlowDelete(
   await expect(page.getByText('Delete Flow')).toBeDisabled();
   await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
 
-  // refresh to test persistence
+  // refresh to verify persistence
   await page.reload();
 
   // check state

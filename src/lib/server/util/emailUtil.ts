@@ -6,8 +6,8 @@ const logger = initLogger('Util/EmailUtil');
 export async function sendEmail(template: EmailTemplateData, to: string, subject: string) {
   // build email payload
   const payload = {
-    // request is valid for 1 minute
-    expiry: Date.now() + 60000,
+    // request is valid for 2 minutes
+    expiry: Date.now() + 2 * 60 * 1000,
     to: {
       email: to
     },
@@ -49,7 +49,6 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
   const emailEndpoint = `${process.env.CF_EMAIL_API_ENDPOINT}${
     process.env.NODE_ENV === 'test' ? '?dryrun=true' : ''
   }`;
-
   const res = await fetch(emailEndpoint, {
     method: 'POST',
     body: JSON.stringify({

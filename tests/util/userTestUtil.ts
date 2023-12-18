@@ -13,7 +13,7 @@ export function getUserEmailString(email: string, testInfo: TestInfo) {
 
 export async function performLoginFrontend(page: Page, email: string, password: string) {
   await page.goto('/login', {
-    waitUntil: 'networkidle'
+    waitUntil: 'load'
   });
   await expect(page).toHaveURL(/.*login/);
   expect((await page.textContent('h2'))?.trim()).toBe('Sign In');

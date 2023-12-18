@@ -4,6 +4,9 @@ import { createUser, deleteUser } from '$lib/server/db/user';
 import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil.js';
 
 test.describe('reset password routine tests', () => {
+  test.describe.configure({
+    mode: 'serial'
+  });
   const prisma = new PrismaClient();
   let userEmail: string;
 

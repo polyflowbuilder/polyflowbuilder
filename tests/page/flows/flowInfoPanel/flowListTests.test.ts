@@ -155,12 +155,12 @@ test.describe('flow list tests', () => {
     ]);
 
     // now drag and drop to reorder
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)
-    );
+      locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      locatorDragTarget: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1)
+    });
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 1',
@@ -179,12 +179,12 @@ test.describe('flow list tests', () => {
     ]);
 
     // then reorder further and test persistence again
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
-    );
+      locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(1),
+      locatorDragTarget: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)
+    });
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 1',
@@ -225,7 +225,16 @@ test.describe('flow list tests', () => {
     if (!locator) {
       throw new Error('locator null');
     }
-    await dragAndDrop(page, testInfo, page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0), [0, 25]);
+    await dragAndDrop({
+      page,
+      testInfo,
+      locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      locatorDragTarget: [0, 25],
+      verifyServerPersistedDrag: false
+    });
+
+    // wait for list item to return to its original position
+    await page.waitForTimeout(300);
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 0',
@@ -235,12 +244,12 @@ test.describe('flow list tests', () => {
     ]);
 
     // now drag and drop and reorder
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
-    );
+      locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      locatorDragTarget: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
+    });
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR)).toHaveText([
       'test flow 1',
@@ -298,13 +307,12 @@ test.describe('flow list tests', () => {
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(3)).not.toHaveClass(/selected/);
 
     // now drag something around and expect selection to reset
-    await dragAndDrop(
+    await dragAndDrop({
       page,
       testInfo,
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
-      page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2),
-      false
-    );
+      locatorToDrag: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0),
+      locatorDragTarget: page.locator(FLOW_LIST_ITEM_SELECTOR).nth(2)
+    });
 
     await expect(page.locator(FLOW_LIST_ITEM_SELECTED_SELECTOR)).toHaveCount(0);
     await expect(page.locator(FLOW_LIST_ITEM_SELECTOR).nth(0)).not.toHaveClass(/selected/);
