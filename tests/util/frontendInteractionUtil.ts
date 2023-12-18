@@ -47,12 +47,11 @@ export async function dragAndDrop(options: {
   await options.page.mouse.down();
 
   // if tests are not performing as expected, bump up drag resolution via step count
-  const steps =
-    (options.testInfo.project.name === 'webkit' ? 2000 : 50) * 2 ** options.testInfo.retry;
+  const steps = 50 * 2 ** options.testInfo.retry;
   await options.page.mouse.move(destX, destY, { steps });
 
   // wait for at least flipDurationMs in MutableForEachContainer
-  // adjust as appropriate (same with second timeout)
+  // adjust as appropriate
   await options.page.waitForTimeout(300);
 
   // verify that changes are committed after drag operation completed
