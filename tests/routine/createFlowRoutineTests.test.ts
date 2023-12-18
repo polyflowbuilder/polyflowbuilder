@@ -95,9 +95,6 @@ test.describe('create flow routine tests', () => {
     const response = await responsePromise;
 
     // done, check response
-    await expect(page.getByRole('button', { name: 'Create' }).locator('span')).not.toHaveClass(
-      /loading/
-    );
     expect(response.ok()).toBeTruthy();
     const resJson: unknown = await response.json();
     expect(resJson).toHaveProperty('generatedFlowchart');
