@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-throw-literal */
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { fail, redirect } from '@sveltejs/kit';
 import { redirectIfAuthenticated } from '$lib/server/util/authUtil';
@@ -61,7 +60,7 @@ export const actions: Actions = {
     }
 
     // will only make it here if login was successful
-    throw redirect(303, '/flows');
+    redirect(303, '/flows');
   }
 };
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-throw-literal */
 import { initLogger } from '$lib/common/config/loggerConfig';
 import { validateToken } from '$lib/server/db/token';
 import { fail, redirect } from '@sveltejs/kit';
@@ -67,7 +66,7 @@ export const actions: Actions = {
 
     // will only make it here if password reset was successful
     cookies.set('redirectFromResetPassword', '1');
-    throw redirect(303, '/login');
+    redirect(303, '/login');
   }
 };
 
@@ -85,6 +84,6 @@ export const load: PageServerLoad = async (event) => {
   } else {
     // invalid reset password request, redirect
     event.cookies.set('redirectFromResetPassword', '1');
-    throw redirect(303, '/forgotpassword');
+    redirect(303, '/forgotpassword');
   }
 };
