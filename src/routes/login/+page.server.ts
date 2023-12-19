@@ -69,17 +69,23 @@ export const load: PageServerLoad = (event) => {
 
   // for ephemeral login page notifs
   if (event.cookies.get('redirectFromRegister')) {
-    event.cookies.delete('redirectFromRegister');
+    event.cookies.delete('redirectFromRegister', {
+      path: '/'
+    });
     return {
       cameFromRegister: true
     };
   } else if (event.cookies.get('redirectFromResetPassword')) {
-    event.cookies.delete('redirectFromResetPassword');
+    event.cookies.delete('redirectFromResetPassword', {
+      path: '/'
+    });
     return {
       cameFromResetPassword: true
     };
   } else if (event.cookies.get('redirectFromUnauthorized')) {
-    event.cookies.delete('redirectFromUnauthorized');
+    event.cookies.delete('redirectFromUnauthorized', {
+      path: '/'
+    });
     return {
       cameFromUnauthorized: true
     };

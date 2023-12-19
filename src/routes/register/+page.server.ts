@@ -72,7 +72,9 @@ export const actions: Actions = {
     }
 
     // will only make it here if registration was successful
-    cookies.set('redirectFromRegister', '1');
+    cookies.set('redirectFromRegister', '1', {
+      path: '/'
+    });
     redirect(303, '/login');
   }
 };

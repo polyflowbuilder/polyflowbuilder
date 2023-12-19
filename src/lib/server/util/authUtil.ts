@@ -6,7 +6,9 @@ import type { RequestEvent } from '@sveltejs/kit';
 export function redirectIfAnonymous(event: RequestEvent) {
   if (!event.locals.session) {
     // create cookie so we can show unauthorized message
-    event.cookies.set('redirectFromUnauthorized', '1');
+    event.cookies.set('redirectFromUnauthorized', '1', {
+      path: '/'
+    });
     redirect(307, '/login');
   }
 }

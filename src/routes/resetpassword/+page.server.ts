@@ -65,7 +65,9 @@ export const actions: Actions = {
     }
 
     // will only make it here if password reset was successful
-    cookies.set('redirectFromResetPassword', '1');
+    cookies.set('redirectFromResetPassword', '1', {
+      path: '/'
+    });
     redirect(303, '/login');
   }
 };
@@ -83,7 +85,9 @@ export const load: PageServerLoad = async (event) => {
     };
   } else {
     // invalid reset password request, redirect
-    event.cookies.set('redirectFromResetPassword', '1');
+    event.cookies.set('redirectFromResetPassword', '1', {
+      path: '/'
+    });
     redirect(303, '/forgotpassword');
   }
 };

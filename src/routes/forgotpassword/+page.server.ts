@@ -62,7 +62,9 @@ export const load: PageServerLoad = (event) => {
 
   // for ephemeral forgot password notifs
   if (event.cookies.get('redirectFromResetPassword')) {
-    event.cookies.delete('redirectFromResetPassword');
+    event.cookies.delete('redirectFromResetPassword', {
+      path: '/'
+    });
     return {
       cameFromResetPassword: true
     };
