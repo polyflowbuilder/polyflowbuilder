@@ -3,10 +3,10 @@ import { getStartYears } from '$lib/server/db/startYear';
 import { redirectIfAnonymous } from '$lib/server/util/authUtil';
 import type { Program } from '@prisma/client';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
+import type { RequestEvent } from './$types';
 import type { APICourseFull } from '$lib/types';
-import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = (event) => {
+export async function load(event: RequestEvent) {
   redirectIfAnonymous(event);
 
   async function fetchUserData(): Promise<{
@@ -32,9 +32,15 @@ export const load: PageServerLoad = (event) => {
     };
   }
 
+  const [userData, flowchartStartYears, flowchartCatalogs] = await Promise.all([
+    fetchUserData(),
+    getStartYears(),
+    getCatalogs()
+  ]);
+
   return {
-    userData: fetchUserData(),
-    flowchartStartYears: getStartYears(),
-    flowchartCatalogs: getCatalogs()
+    userData,
+    flowchartStartYears,
+    flowchartCatalogs
   };
-};
+}
