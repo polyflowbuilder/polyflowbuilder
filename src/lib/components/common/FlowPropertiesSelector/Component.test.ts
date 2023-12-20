@@ -10,7 +10,7 @@ import {
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
 } from '../../../../../tests/util/storeMocks';
-import type { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
+import type { UserEvent } from '@testing-library/user-event';
 
 // load necessary API data
 await apiDataConfig.init();
