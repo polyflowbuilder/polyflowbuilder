@@ -94,7 +94,7 @@ export async function generatePDF(flowData: FlowchartPDFData): Promise<Buffer> {
       '--disable-features=IsolateOrigins',
       '--disable-site-isolation-trials'
     ],
-    headless: 'new'
+    headless: true
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });

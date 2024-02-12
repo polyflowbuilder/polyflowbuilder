@@ -24,8 +24,8 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm ci
-      - run: npm run lint
       - run: npm run check
+      - run: npm run lint
 
   # TODO: unit tests should not need a database!
   UnitTest:

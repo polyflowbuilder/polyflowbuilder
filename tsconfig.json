@@ -15,7 +15,7 @@
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"]
     },
-    "types": ["vitest/globals", "@testing-library/jest-dom/types/vitest"]
+    "types": ["vitest/globals", "./node_modules/@testing-library/jest-dom/types/vitest"]
   }
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
   //
