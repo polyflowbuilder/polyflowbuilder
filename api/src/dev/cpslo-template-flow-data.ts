@@ -46,8 +46,9 @@ async function scrapeTemplateFlowMetadata() {
 
   const fetchWait = 500;
 
-  const cYearSelectorOpts = document.querySelector<HTMLSelectElement>('#dots_roadmapCatalogYear')
-    ?.options;
+  const cYearSelectorOpts = document.querySelector<HTMLSelectElement>(
+    '#dots_roadmapCatalogYear'
+  )?.options;
 
   if (!cYearSelectorOpts) {
     console.log('CYEARSELECTOR RETURNED NULL, BAIL!');
