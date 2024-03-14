@@ -8,17 +8,7 @@
     const { Carousel, initTWE } = await import('tw-elements');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     initTWE({ Carousel });
-
-    // need to emulate mouseover and mouseout bc
-    // carousel will not start autoplaying without this
-    // TODO: recheck this hack when updates come out
-    setTimeout(() => {
-      carouselElem.dispatchEvent(new Event('mouseover'));
-      carouselElem.dispatchEvent(new Event('mouseout'));
-    });
   });
-
-  let carouselElem: HTMLDivElement;
 
   export let imageData: {
     src: string;
@@ -27,13 +17,7 @@
   }[];
 </script>
 
-<div
-  id="homeCarousel"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel"
-  bind:this={carouselElem}
->
+<div id="homeCarousel" class="relative" data-twe-carousel-init data-twe-ride="carousel">
   <!--Carousel indicators-->
   <div
     class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] flex list-none justify-center p-0"
