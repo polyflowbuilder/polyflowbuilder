@@ -5,9 +5,9 @@
   onMount(async () => {
     // ignores here bc no typing information yet available
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const { Carousel, initTE } = await import('tw-elements');
+    const { Carousel, initTWE } = await import('tw-elements');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-    initTE({ Carousel });
+    initTWE({ Carousel });
 
     // need to emulate mouseover and mouseout bc
     // carousel will not start autoplaying without this
@@ -30,22 +30,22 @@
 <div
   id="homeCarousel"
   class="relative"
-  data-te-carousel-init
-  data-te-carousel-slide
+  data-twe-carousel-init
+  data-twe-ride="carousel"
   bind:this={carouselElem}
 >
   <!--Carousel indicators-->
   <div
     class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] flex list-none justify-center p-0"
-    data-te-carousel-indicators
+    data-twe-carousel-indicators
   >
     {#each imageData as _, i}
       <button
         type="button"
         class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        data-te-target="#homeCarousel"
-        data-te-slide-to={i}
-        data-te-carousel-active={i === 0 ? '' : null}
+        data-twe-target="#homeCarousel"
+        data-twe-slide-to={i}
+        data-twe-carousel-active={i === 0 ? '' : null}
         aria-current={i === 0}
         aria-label="Slide {i + 1}"
       />
@@ -58,8 +58,8 @@
       <div
         class="carouselItem relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         class:hidden={i !== 0}
-        data-te-carousel-active={i === 0 ? '' : null}
-        data-te-carousel-item
+        data-twe-carousel-active={i === 0 ? '' : null}
+        data-twe-carousel-item
         style="backface-visibility: hidden"
       >
         <!-- constant height here fixes CLS issues and makes sure things stay put -->
@@ -80,8 +80,8 @@
   <button
     class="absolute bottom-0 left-0 top-0 z-[1] flex w-[5%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
     type="button"
-    data-te-target="#homeCarousel"
-    data-te-slide="prev"
+    data-twe-target="#homeCarousel"
+    data-twe-slide="prev"
   >
     <span class="inline-block h-8 w-8">
       <svg
@@ -105,8 +105,8 @@
   <button
     class="absolute bottom-0 right-0 top-0 z-[1] flex w-[5%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
     type="button"
-    data-te-target="#homeCarousel"
-    data-te-slide="next"
+    data-twe-target="#homeCarousel"
+    data-twe-slide="next"
   >
     <span class="inline-block h-8 w-8">
       <svg
