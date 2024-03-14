@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const config = {
-  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/tw-elements/dist/js/**/*.js'],
+  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/tw-elements/js/**/*.js'],
 
   theme: {
     extend: {
@@ -22,7 +22,7 @@ const config = {
     }
   },
 
-  plugins: [require('daisyui'), require('tw-elements/dist/plugin.cjs')],
+  plugins: [require('daisyui'), require('tw-elements/plugin.cjs')],
 
   daisyui: {
     themes: [
