@@ -1,4 +1,6 @@
-import { FLOW_TERM_COUNT_MAX } from '../config/flowDataConfig';
+import { ObjectMap } from '$lib/common/util/ObjectMap';
+import { computeTotalUnits } from '$lib/common/util/unitCounterUtilCommon';
+import { FLOW_TERM_COUNT_MAX } from '$lib/common/config/flowDataConfig';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 
 export function performAddTerms(termAddIdxs: number[], flowchart: Flowchart): Flowchart {
@@ -30,6 +32,7 @@ export function performDeleteTerms(termDeleteIdxs: number[], flowchart: Flowchar
   newFlowchart.termData = newFlowchart.termData.filter(
     (termData) => !termDeleteIdxs.includes(termData.tIndex)
   );
+  newFlowchart.unitTotal = computeTotalUnits(newFlowchart.termData, new ObjectMap(), new Map());
   return newFlowchart;
 }
 
