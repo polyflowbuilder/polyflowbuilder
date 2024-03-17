@@ -57,4 +57,16 @@ test.describe('remove flowchart terms tests', () => {
   test.afterAll(async () => {
     await deleteUser(userEmail);
   });
+
+  test('remove flowchart terms default state correct', async ({ page }) => {
+    // make sure we can open modal when a flowcahrt is selected and that it's currently closed
+
+    // cannot access when no flowchart is selected
+    await expect(page.getByText('Remove Flowchart Terms')).not.toBeVisible();
+    await expect(
+      page.getByText('Actions', {
+        exact: true
+      })
+    ).not.toBeEnabled();
+  });
 });
