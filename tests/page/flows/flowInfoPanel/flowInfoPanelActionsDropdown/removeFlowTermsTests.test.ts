@@ -269,4 +269,16 @@ test.describe('remove flowchart terms tests', () => {
       'ERROR: You were not authorized to perform the most recent flow data change. Please refresh the page and re-authenticate.'
     );
   });
+
+  test('500 case handled properly', async ({ page }) => {
+    await verifyRemoveTermFailure(
+      page,
+      0,
+      ['Summer 2020', 'Fall 2020', 'Winter 2021', 'Spring 2021', 'Summer 2021', 'Fall 2021'],
+      ['Summer 2020'],
+      500,
+      'An error occurred while updating user flowcharts, please try again a bit later.',
+      'ERROR: The server reported an error on data modification. This means that your most recent changes were not saved. Please reload the page to ensure that no data has been lost.'
+    );
+  });
 });
