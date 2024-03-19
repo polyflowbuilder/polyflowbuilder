@@ -2,8 +2,184 @@ import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { FLOW_LIST_ITEM_SELECTOR, TERM_CONTAINER_SELECTOR } from 'tests/util/selectorTestUtil';
+import type { Page } from '@playwright/test';
+
+async function verifyUIChangesAfterRemoveTerms(
+  page: Page,
+  originalFlowchartTerms: string[],
+  termsToRemove: string[]
+) {
+  // verify that modal state is correct
+  await expect(page.locator('select[name=deleteTerms] > option')).toHaveText(
+    originalFlowchartTerms.filter((term) => !termsToRemove.includes(term))
+  );
+  await expect(
+    page.getByRole('listbox', {
+      name: 'select flowchart terms to delete',
+      includeHidden: true
+    })
+  ).toHaveValues([]);
+
+  // verify termContainers were updated properly
+  await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(
+    originalFlowchartTerms.length - termsToRemove.length
+  );
+  await expect(page.locator('.termContainerHeader h3')).toHaveText(
+    originalFlowchartTerms.filter((term) => !termsToRemove.includes(term))
+  );
+
+  // verify total flowchart units from termContainers matches total flowchart units from footer
+  const totalUnitCountFromTerms = (await page.locator('.termContainerFooter h3').allInnerTexts())
+    .map((unitFooterText) => unitFooterText.split(' ')[0])
+    .reduce((acc, curVal) => incrementRangedUnits(acc, curVal), '0');
+  const totalUnitCountFromFooter = (await page.locator('#flowEditorFooterTotal').innerText())
+    .split(' ')
+    .at(-1);
+  expect(totalUnitCountFromFooter).toBe(totalUnitCountFromTerms);
+}
+
+async function performRemoveTermsTest(
+  page: Page,
+  flowchartIdx: number,
+  originalFlowchartTerms: string[],
+  termsToRemove: string[],
+  verifySuccess = true
+) {
+  // load a flowchart
+  await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(flowchartIdx).click();
+
+  // open modal
+  await expect(
+    page.getByText('Actions', {
+      exact: true
+    })
+  ).toBeEnabled();
+  await page
+    .getByText('Actions', {
+      exact: true
+    })
+    .click();
+  await page
+    .getByText('Remove Terms', {
+      exact: true
+    })
+    .click();
+
+  // verify default state when open
+  await expect(page.getByText('Remove Flowchart Terms')).toBeVisible();
+  await expect(
+    page.getByRole('button', {
+      name: 'Remove Terms from Flowchart'
+    })
+  ).toBeDisabled();
+  await expect(
+    page.getByRole('listbox', {
+      name: 'select flowchart terms to delete'
+    })
+  ).toHaveValues([]);
+  await expect(page.locator('select[name=deleteTerms] > option')).toHaveText(
+    originalFlowchartTerms
+  );
+
+  // remove flowchart terms
+  await page
+    .getByRole('listbox', {
+      name: 'select flowchart terms to delete'
+    })
+    .selectOption(termsToRemove);
+  await expect(
+    page.getByRole('button', {
+      name: 'Remove Terms from Flowchart'
+    })
+  ).toBeEnabled();
+
+  // perform remove - wait for response from network
+  // need to start waiting for response before request expected to happen so that it doesn't timeout
+  // (need to setup listener before the event fires)
+  const responsePromise = page.waitForResponse(/\/api\/user\/data\/updateUserFlowcharts/);
+  await page
+    .getByRole('button', {
+      name: 'Remove Terms from Flowchart'
+    })
+    .click();
+  const response = await responsePromise;
+
+  // done, make sure modal was closed
+  await expect(page.getByText('Remove Flowchart Terms')).not.toBeVisible();
+  await expect(
+    page.getByRole('button', {
+      name: 'Remove Terms from Flowchart',
+      includeHidden: true
+    })
+  ).toBeDisabled();
+
+  if (verifySuccess) {
+    // verify data update was successful
+    const resJson = (await response.json()) as Record<string, unknown>;
+    expect(response.status()).toStrictEqual(200);
+    expect(resJson.message).toStrictEqual('User flowchart data changes successfully persisted.');
+
+    await verifyUIChangesAfterRemoveTerms(page, originalFlowchartTerms, termsToRemove);
+
+    // reload page and expect changes to persist
+    await page.reload();
+    await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(flowchartIdx).click();
+
+    await verifyUIChangesAfterRemoveTerms(page, originalFlowchartTerms, termsToRemove);
+  }
+}
+
+async function verifyRemoveTermFailure(
+  page: Page,
+  flowchartIdx: number,
+  originalFlowchartTerms: string[],
+  termsToRemove: string[],
+  responseCode: number,
+  responseMessage: string,
+  dialogMessage: string
+) {
+  // mock a response
+  await page.route(/\/api\/user\/data\/updateUserFlowcharts/, async (route) => {
+    await route.fulfill({
+      status: responseCode,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        message: responseMessage
+      })
+    });
+  });
+
+  let alertPopup = false;
+  page.on('dialog', (dialog) => {
+    alertPopup = true;
+    expect(dialog.message()).toBe(dialogMessage);
+    dialog.accept().catch(() => {
+      throw new Error('accepting dialog failed');
+    });
+  });
+
+  // remove term(s)
+  await performRemoveTermsTest(page, flowchartIdx, originalFlowchartTerms, termsToRemove, false);
+
+  // make sure popup comes up
+  expect(alertPopup).toBeTruthy();
+
+  // make sure original state is preserved
+  await expect(
+    page.getByRole('listbox', {
+      name: 'select flowchart terms to add',
+      includeHidden: true
+    })
+  ).toHaveValues([]);
+  await expect(page.locator('select[name=deleteTerms] > option')).toHaveText(
+    originalFlowchartTerms
+  );
+  await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(originalFlowchartTerms.length);
+}
 
 test.describe('remove flowchart terms tests', () => {
   test.describe.configure({ mode: 'serial' });
@@ -68,5 +244,17 @@ test.describe('remove flowchart terms tests', () => {
         exact: true
       })
     ).not.toBeEnabled();
+  });
+
+  test('400 case handled properly', async ({ page }) => {
+    await verifyRemoveTermFailure(
+      page,
+      0,
+      ['Summer 2020', 'Fall 2020', 'Winter 2021', 'Spring 2021', 'Summer 2021', 'Fall 2021'],
+      ['Summer 2020'],
+      400,
+      'Invalid input received.',
+      'ERROR: The server reported an error on data modification. This means that your most recent changes were not saved. Please reload the page to ensure that no data has been lost.'
+    );
   });
 });

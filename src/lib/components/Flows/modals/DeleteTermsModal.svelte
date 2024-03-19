@@ -50,6 +50,7 @@
       class="w-full select select-bordered"
       multiple
       name="deleteTerms"
+      aria-label="select flowchart terms to delete"
       size="15"
       bind:value={selectedTermValues}
     >
