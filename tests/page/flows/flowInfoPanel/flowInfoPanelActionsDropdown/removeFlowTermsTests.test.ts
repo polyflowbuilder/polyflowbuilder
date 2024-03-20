@@ -182,7 +182,6 @@ async function verifyRemoveTermFailure(
 }
 
 test.describe('remove flowchart terms tests', () => {
-  test.describe.configure({ mode: 'serial' });
   const prisma = new PrismaClient();
   let userId: string;
   let userEmail: string;
@@ -207,7 +206,7 @@ test.describe('remove flowchart terms tests', () => {
     userId = id;
 
     // populate some flowcharts
-    await populateFlowcharts(prisma, userId, 2, [
+    await populateFlowcharts(prisma, userId, 3, [
       {
         idx: 0,
         info: {
@@ -217,6 +216,13 @@ test.describe('remove flowchart terms tests', () => {
       },
       {
         idx: 1,
+        info: {
+          longTermCount: 0,
+          termCount: 10
+        }
+      },
+      {
+        idx: 2,
         info: {
           longTermCount: 0,
           termCount: 10
@@ -314,8 +320,11 @@ test.describe('remove flowchart terms tests', () => {
   test('user able to delete multiple non-consecutive flowchart terms', async ({ page }) => {
     await performRemoveTermsTest(
       page,
-      1,
+      2,
       [
+        'Summer 2020',
+        'Fall 2020',
+        'Winter 2021',
         'Spring 2021',
         'Summer 2021',
         'Fall 2021',
