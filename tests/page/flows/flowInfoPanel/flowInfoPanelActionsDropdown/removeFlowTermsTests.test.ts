@@ -291,6 +291,25 @@ test.describe('remove flowchart terms tests', () => {
     );
   });
 
-  // TODO: Test for deleting multiple terms consecutively
+  test('user able to delete multiple consecutive flowchart terms', async ({ page }) => {
+    await performRemoveTermsTest(
+      page,
+      1,
+      [
+        'Summer 2020',
+        'Fall 2020',
+        'Winter 2021',
+        'Spring 2021',
+        'Summer 2021',
+        'Fall 2021',
+        'Winter 2022',
+        'Spring 2022',
+        'Summer 2022',
+        'Fall 2022'
+      ],
+      ['Summer 2020', 'Fall 2020', 'Winter 2021']
+    );
+  });
+
   // TODO: test for deleting multiple terms non-consecutively
 });
