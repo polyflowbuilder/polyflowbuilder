@@ -281,4 +281,16 @@ test.describe('remove flowchart terms tests', () => {
       'ERROR: The server reported an error on data modification. This means that your most recent changes were not saved. Please reload the page to ensure that no data has been lost.'
     );
   });
+
+  test('user able to delete one flowchart term', async ({ page }) => {
+    await performRemoveTermsTest(
+      page,
+      0,
+      ['Summer 2020', 'Fall 2020', 'Winter 2021', 'Spring 2021', 'Summer 2021', 'Fall 2021'],
+      ['Summer 2020']
+    );
+  });
+
+  // TODO: Test for deleting multiple terms consecutively
+  // TODO: test for deleting multiple terms non-consecutively
 });
