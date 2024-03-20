@@ -34,7 +34,7 @@ async function verifyUIChangesAfterRemoveTerms(
 
   // verify total flowchart units from termContainers matches total flowchart units from footer
   const totalUnitCountFromTerms = (await page.locator('.termContainerFooter h3').allInnerTexts())
-    .map((unitFooterText) => unitFooterText.split(' ')[0])
+    .map((termFooterText) => termFooterText.split(' ')[0])
     .reduce((acc, curVal) => incrementRangedUnits(acc, curVal), '0');
   const totalUnitCountFromFooter = (await page.locator('#flowEditorFooterTotal').innerText())
     .split(' ')
