@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
 import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
@@ -11,6 +12,53 @@ import {
   TERM_CONTAINER_COURSES_SELECTOR
 } from 'tests/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
+
+async function verifyUIChangesAfterAddTerms(
+  page: Page,
+  originalFlowchartTerms: string[],
+  originalTermsToAdd: string[],
+  newTermsToAdd: string[]
+) {
+  // verify modal updated appropriately
+  await expect(page.locator('select[name=addTerms] > option')).toHaveText(
+    originalTermsToAdd.filter((term) => !newTermsToAdd.includes(term))
+  );
+  await expect(
+    page.getByRole('listbox', {
+      name: 'select flowchart terms to add',
+      includeHidden: true
+    })
+  ).toHaveValues([]);
+
+  // verify UI was updated successfully
+  await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(
+    originalFlowchartTerms.length + newTermsToAdd.length
+  );
+  await expect(page.locator('.termContainerHeader h3')).toHaveText([
+    ...originalFlowchartTerms,
+    ...newTermsToAdd
+  ]);
+
+  // verify the new terms have a zeroed out unit count
+  const termContainerTermNames = await page.locator('.termContainerHeader h3').allInnerTexts();
+  const termContainerUnitCounts = await page.locator('.termContainerFooter h3').allInnerTexts();
+  termContainerTermNames.forEach((termContainerTermName, i) => {
+    if (newTermsToAdd.includes(termContainerTermName)) {
+      expect(termContainerUnitCounts[i]).toBe('0');
+    } else {
+      expect(termContainerUnitCounts[i]).not.toBe('0');
+    }
+  });
+
+  // verify total flowchart units from termContainer matches total flowchart units from footer
+  const totalUnitCountFromTerms = termContainerUnitCounts
+    .map((termFooterText) => termFooterText.split(' ')[0])
+    .reduce((acc, curVal) => incrementRangedUnits(acc, curVal), '0');
+  const totalUnitCountFromFooter = (await page.locator('#flowEditorFooterTotal').innerText())
+    .split(' ')
+    .at(-1);
+  expect(totalUnitCountFromFooter).toBe(totalUnitCountFromTerms);
+}
 
 async function performAddTermsTest(
   page: Page,
@@ -87,64 +135,28 @@ async function performAddTermsTest(
   ).toBeDisabled();
 
   if (verifySuccess) {
-    // verify model updated appropriately
-    await expect(page.locator('select[name=addTerms] > option')).toHaveText(
-      originalTermsToAdd.filter((term) => !newTermsToAdd.includes(term))
-    );
-    await expect(
-      page.getByRole('listbox', {
-        name: 'select flowchart terms to add',
-        includeHidden: true
-      })
-    ).toHaveValues([]);
-
     // verify data update was successful
     const resJson = (await response.json()) as Record<string, unknown>;
     expect(response.status()).toStrictEqual(200);
     expect(resJson.message).toStrictEqual('User flowchart data changes successfully persisted.');
 
-    // verify UI was updated successfully
-    await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(
-      originalFlowchartTerms.length + newTermsToAdd.length
+    await verifyUIChangesAfterAddTerms(
+      page,
+      originalFlowchartTerms,
+      originalTermsToAdd,
+      newTermsToAdd
     );
-    await expect(page.locator('.termContainerHeader h3')).toHaveText([
-      ...originalFlowchartTerms,
-      ...newTermsToAdd
-    ]);
-
-    for (
-      let i = originalFlowchartTerms.length;
-      i < originalFlowchartTerms.length + newTermsToAdd.length;
-      i += 1
-    ) {
-      await expect(
-        page.locator(TERM_CONTAINER_SELECTOR).nth(i).locator(TERM_CONTAINER_COURSES_SELECTOR)
-      ).toHaveCount(0);
-      await expect(page.locator('.termContainerFooter h3').nth(i)).toHaveText('0');
-    }
 
     // reload page and expect changes to persist
     await page.reload();
     await page.locator(FLOW_LIST_ITEM_SELECTOR).nth(flowchartIdx).click();
 
-    await expect(page.locator(TERM_CONTAINER_SELECTOR)).toHaveCount(
-      originalFlowchartTerms.length + newTermsToAdd.length
+    await verifyUIChangesAfterAddTerms(
+      page,
+      originalFlowchartTerms,
+      originalTermsToAdd,
+      newTermsToAdd
     );
-    await expect(page.locator('.termContainerHeader h3')).toHaveText([
-      ...originalFlowchartTerms,
-      ...newTermsToAdd
-    ]);
-
-    for (
-      let i = originalFlowchartTerms.length;
-      i < originalFlowchartTerms.length + newTermsToAdd.length;
-      i += 1
-    ) {
-      await expect(
-        page.locator(TERM_CONTAINER_SELECTOR).nth(i).locator(TERM_CONTAINER_COURSES_SELECTOR)
-      ).toHaveCount(0);
-      await expect(page.locator('.termContainerFooter h3').nth(i)).toHaveText('0');
-    }
   }
 }
 
@@ -203,7 +215,6 @@ async function verifyAddTermFailure(
 }
 
 test.describe('add flowchart terms tests', () => {
-  test.describe.configure({ mode: 'serial' });
   const prisma = new PrismaClient();
   let userId: string;
   let userEmail: string;
