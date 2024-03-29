@@ -19,6 +19,18 @@ test.describe('homepage tests', () => {
     await checkCarouselSlide(page, 1);
   });
 
+  test('carousel cycles images over time automatically on soft load', async ({ page }) => {
+    await page
+      .getByRole('link', {
+        name: 'Submit Feedback'
+      })
+      .click();
+    await page.getByAltText('PolyFlowBuilder logo').click();
+
+    await page.waitForTimeout(7500);
+    await checkCarouselSlide(page, 1);
+  });
+
   test('clicking slide button goes to correct slide', async ({ page }) => {
     const buttons = await page.locator('div[data-twe-carousel-indicators] > button').all();
 

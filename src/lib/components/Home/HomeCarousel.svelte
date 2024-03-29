@@ -7,7 +7,7 @@
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { Carousel, initTWE } = await import('tw-elements');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-    initTWE({ Carousel }, { allowReinits: true })
+    initTWE({ Carousel }, { allowReinits: true });
   });
 
   export let imageData: {
