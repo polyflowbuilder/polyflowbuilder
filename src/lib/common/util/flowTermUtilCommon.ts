@@ -67,11 +67,11 @@ export function generateTermString(termIdx: number, flowStartYear: string): stri
     // first two terms are an anomaly
     switch (termIdx) {
       case 0: {
-        termString += ' ' + startingYear;
+        termString += ' ' + startingYear.toString();
         break;
       }
       case 1: {
-        termString += ' ' + startingYear;
+        termString += ' ' + startingYear.toString();
         break;
       }
       default: {
