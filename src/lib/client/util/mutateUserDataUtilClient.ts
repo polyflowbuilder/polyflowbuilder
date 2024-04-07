@@ -81,7 +81,7 @@ async function sendUserDataChangePersistRequest(
         userFlowcharts.set(curUserFlowcharts); // restore to old value before the update
       }
     })
-    .catch((error) => {
+    .catch((error: unknown) => {
       alert(
         'ERROR: The client (your browser) reported an unexpected error on data modification. This means that your most recent changes were not saved. Please reload the page to ensure that no data has been lost.'
       );

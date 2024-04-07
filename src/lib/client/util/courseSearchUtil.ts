@@ -99,7 +99,7 @@ async function performSearch(
       }
       return resp.json();
     })
-    .catch((err) => {
+    .catch((err: unknown) => {
       alert(
         'Catalog search request failed. Please try again or file a bug report if this persists.'
       );
