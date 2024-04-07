@@ -10,7 +10,7 @@ export const SESSION_MAX_AGE = 60 * 60 * 24;
 export function loadEnv() {
   // env stuff specific to server
   logger.info(
-    `Hello world! Initializing PolyFlowBuilder (commit ${version}, environment ${process.env.NODE_ENV}) ...`
+    `Hello world! Initializing PolyFlowBuilder (commit ${version}, environment ${String(process.env.NODE_ENV)}) ...`
   );
 
   logger.info('Environment working directory is', process.cwd());

@@ -140,13 +140,16 @@ export async function generateFlowchart(
           // some GE courses may be custom so
           // they dont need to be removed from courseCache
           if (c.id) {
-            allRemovedCoursesKeysSet.add(
-              `${getCatalogFromProgramID(
-                generatedFlowchart.programId,
-                c.programIdIndex,
-                programCache
-              )}|${c.id}`
+            const courseCatalog = getCatalogFromProgramID(
+              generatedFlowchart.programId,
+              c.programIdIndex,
+              programCache
             );
+            if (!courseCatalog) {
+              throw new Error('courseCatalog is undefined in generateFlowchart.removeGECourses');
+            }
+
+            allRemovedCoursesKeysSet.add(`${courseCatalog}|${c.id}`);
           }
         } else {
           notRemovedCourses.push(c);

@@ -138,9 +138,9 @@ export async function generateCourseCacheFromUpdateChunks(
           // can happen if bad data is passed in
           if (!courseCatalog) {
             logger.warn(
-              `generateCourseCacheFromUpdateChunks: program with index ${
+              `generateCourseCacheFromUpdateChunks: program with index ${String(
                 course.programIdIndex
-              } does not exist in programIds list ${flowchart.programId.join(',')}`
+              )} does not exist in programIds list ${flowchart.programId.join(',')}`
             );
             return undefined;
           }

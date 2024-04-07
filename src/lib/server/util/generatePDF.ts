@@ -34,7 +34,11 @@ export function extractPDFDataFromFlowchart(
 
       return programMetadata;
     })
-    .map((program) => `${program.catalog} ${program.majorName} (${program.concName})`)
+    .map((program) =>
+      program.concName
+        ? `${program.catalog} ${program.majorName} (${program.concName})`
+        : `${program.catalog} ${program.majorName}`
+    )
     .join(', ');
 
   // create PDF term data

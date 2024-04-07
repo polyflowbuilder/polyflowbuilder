@@ -40,7 +40,7 @@ async function getAllProgramLinks(root: string): Promise<string[]> {
     // grab href to get full link
     const namedItem = tElement.attributes.getNamedItem('href');
     if (namedItem) {
-      programLinks.push(`http://catalog.calpoly.edu${namedItem.textContent}`);
+      programLinks.push(`http://catalog.calpoly.edu${String(namedItem.textContent)}`);
     } else {
       console.log('MISSING HREF IN TELEMENT, BAIL!', tElement);
       return [];
@@ -105,7 +105,7 @@ async function getAllCoursesCatalog(
 
       // description - need to be be able to handle any amount of paragraphs
       descriptionSelector.forEach((desc) => {
-        courseData.desc += `${desc.textContent}\n`;
+        courseData.desc += `${String(desc.textContent)}\n`;
       });
 
       // additional info - need to be able to handle any amount of paragraphs
@@ -113,7 +113,7 @@ async function getAllCoursesCatalog(
         courseData.addl = 'n/a';
       } else {
         addlSelector.forEach((addl) => {
-          courseData.addl += `${addl.textContent}\n`;
+          courseData.addl += `${String(addl.textContent)}\n`;
         });
       }
 

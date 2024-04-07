@@ -217,7 +217,9 @@ export function mutateUserFlowcharts(
       }
       default: {
         // typecast since if we handle all known types above, chunk will resolve to type never
-        errors.push(`Unrecognized update chunk type ${(chunk as UserDataUpdateChunk).type}`);
+        errors.push(
+          `Unrecognized update chunk type ${(chunk as UserDataUpdateChunk).type.toString()}`
+        );
         break;
       }
     }

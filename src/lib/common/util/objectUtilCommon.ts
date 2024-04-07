@@ -22,7 +22,7 @@ function findNestedObjectPath(
       const parentKey = path.length ? path.pop() : '';
 
       for (let i = 0; i < obj.length; i++) {
-        path.push(`${parentKey}[${i.toString()}]`);
+        path.push(`${String(parentKey)}[${i.toString()}]`);
         const result = keyExists(obj[i], key);
         if (result) {
           return result;
