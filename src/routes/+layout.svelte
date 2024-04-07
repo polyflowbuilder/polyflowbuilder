@@ -6,7 +6,9 @@
   import { PUBLIC_PFB_ANALYTICS_ID } from '$env/static/public';
 
   onMount(() => {
-    console.log(`PolyFlowBuilder (c) ${new Date().getFullYear()} duncanapple.io (${version})`);
+    console.log(
+      `PolyFlowBuilder (c) ${new Date().getFullYear().toString()} duncanapple.io (${version})`
+    );
   });
 </script>
 

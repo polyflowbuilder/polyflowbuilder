@@ -52,7 +52,7 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlo
 
 function generateFlowchartNotes(flowchartPrograms: ProgramCache) {
   const programNotes = Array.from(flowchartPrograms.values()).map(
-    (program, i) => `- Program #${i + 1}: ${program.dataLink}`
+    (program, i) => `- Program #${(i + 1).toString()}: ${program.dataLink}`
   );
 
   return (

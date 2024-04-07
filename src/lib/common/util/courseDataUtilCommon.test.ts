@@ -54,7 +54,6 @@ describe('computeCourseDisplayValues tests', () => {
         }
       }
     };
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { tooltip, ...main } = expected;
 
     expect(
@@ -102,7 +101,6 @@ describe('computeCourseDisplayValues tests', () => {
       }
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { tooltip, ...main } = expected;
 
     expect(computeCourseDisplayValues(customCourse, null)).toStrictEqual(expected);
