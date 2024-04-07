@@ -62,7 +62,9 @@ export async function sendEmail(template: EmailTemplateData, to: string, subject
   if (!res.ok) {
     // get error
     const resData = JSON.stringify(await res.json());
-    throw new Error(`sendEmail: failed to send email, status [${res.status}], detail [${resData}]`);
+    throw new Error(
+      `sendEmail: failed to send email, status [${res.status.toString()}], detail [${resData}]`
+    );
   }
   logger.info(`Email send to '${to}' successful`);
 }

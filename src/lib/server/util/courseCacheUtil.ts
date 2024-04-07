@@ -122,7 +122,7 @@ export async function generateCourseCacheFromUpdateChunks(
         // can happen if bad data is passed in
         if (!course) {
           logger.warn(
-            `generateCourseCacheFromUpdateChunks: unable to find course in update chunk ${chunkIdx} courseDiff ${courseDiffIdx}`
+            `generateCourseCacheFromUpdateChunks: unable to find course in update chunk ${chunkIdx.toString()} courseDiff ${courseDiffIdx.toString()}`
           );
           return undefined;
         }

@@ -119,7 +119,7 @@ export function mutateUserFlowcharts(
 
         if (termDataArrIdx === -1) {
           errors.push(
-            `Unable to find destination term [${chunk.data.tIndex}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
+            `Unable to find destination term [${chunk.data.tIndex.toString()}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
           );
           break;
         }
@@ -135,7 +135,7 @@ export function mutateUserFlowcharts(
 
             if (!course) {
               errors.push(
-                `Unable to find existing course at position [${courseDiff.data.tIndex}, ${courseDiff.data.cIndex}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
+                `Unable to find existing course at position [${courseDiff.data.tIndex.toString()}, ${courseDiff.data.cIndex.toString()}] for flowchart ${chunk.data.id} referenced in FLOW_TERM_MOD update chunk.`
               );
               encounteredError = true;
               continue;

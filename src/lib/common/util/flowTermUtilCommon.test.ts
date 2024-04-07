@@ -23,12 +23,12 @@ describe('generateTermString tests', () => {
 
     // term indexes 2, 3, 10, 15, 13, 24
     const expectedTermStrings = [
-      `Winter ${parseInt(flowStartYear) + 1}`,
-      `Spring ${parseInt(flowStartYear) + 1}`,
-      `Winter ${parseInt(flowStartYear) + 3}`,
-      `Spring ${parseInt(flowStartYear) + 4}`,
-      `Fall ${parseInt(flowStartYear) + 3}`,
-      `Summer ${parseInt(flowStartYear) + 6}`
+      `Winter ${(parseInt(flowStartYear) + 1).toString()}`,
+      `Spring ${(parseInt(flowStartYear) + 1).toString()}`,
+      `Winter ${(parseInt(flowStartYear) + 3).toString()}`,
+      `Spring ${(parseInt(flowStartYear) + 4).toString()}`,
+      `Fall ${(parseInt(flowStartYear) + 3).toString()}`,
+      `Summer ${(parseInt(flowStartYear) + 6).toString()}`
     ];
 
     expect(generateTermString(2, flowStartYear)).toBe(expectedTermStrings[0]);

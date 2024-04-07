@@ -34,7 +34,7 @@
 >
   <div
     class="font-medium text-3xl text-polyGreen relative"
-    style={`min-width: ${titleMinWidth}px;`}
+    style={`min-width: ${titleMinWidth.toString()}px;`}
   >
     <div class="absolute left-2 bottom-[0.125rem] font-bold">
       <button

@@ -62,7 +62,7 @@ async function getUserDataBatch() {
     return [];
   }
 
-  console.log(`fetched ${res[0].length} users (cursor now ${userIdCursor})`);
+  console.log(`fetched ${res[0].length.toString()} users (cursor now ${userIdCursor.toString()})`);
 
   return res[0];
 }

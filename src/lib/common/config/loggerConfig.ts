@@ -30,7 +30,9 @@ function createLoggerConfig(source: string): LoggerOptions {
               level: true
             })
           ]),
-      format.printf((info) => `[${info.level}] [${source}] [${info.timestamp}]: ${info.message}`)
+      format.printf(
+        (info) => `[${info.level}] [${source}] [${String(info.timestamp)}]: ${String(info.message)}`
+      )
     ),
     handleExceptions: true,
     exitOnError: false
