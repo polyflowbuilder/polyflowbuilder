@@ -4,7 +4,7 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import type { Pool } from 'mysql2/promise';
-import type { FieldPacket, RowDataPacket } from 'mysql2/promise';
+import type { RowDataPacket } from 'mysql2/promise';
 
 let conPool: Pool | null = null;
 
@@ -50,21 +50,19 @@ async function getUserDataBatch() {
     throw new Error('DB connection not valid');
   }
 
-  const res = (await conPool.query(sqlQuery, [userIdCursor, USER_DATA_BATCH_LIMIT])) as [
-    RowDataPacket[],
-    FieldPacket[]
-  ];
+  const res = await conPool.query(sqlQuery, [userIdCursor, USER_DATA_BATCH_LIMIT]);
+  const data = res[0] as RowDataPacket[];
 
-  userIdCursor = res[0].at(-1)?.id as number;
+  userIdCursor = data.at(-1)?.id as number;
 
   if (!userIdCursor) {
     console.log('finish fetching users');
     return [];
   }
 
-  console.log(`fetched ${res[0].length.toString()} users (cursor now ${userIdCursor.toString()})`);
+  console.log(`fetched ${data.length.toString()} users (cursor now ${userIdCursor.toString()})`);
 
-  return res[0];
+  return data;
 }
 
 async function dumpUserData() {
