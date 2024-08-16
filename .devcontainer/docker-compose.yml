@@ -1,0 +1,32 @@
+services:
+  devcontainer:
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    #   args:
+    #     VARIANT: "1-22-bookworm" 
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm
+    volumes:
+      - ../..:/workspaces:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    network_mode: service:db
+
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    volumes:
+      - pfb-db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: pfb-db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+volumes:
+    pfb-db:
