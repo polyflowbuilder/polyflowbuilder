@@ -1,10 +1,11 @@
+# Network mode set to host network, since sveltekit projects hang even when
+# ports are forwarded by vscode.
+
+# Not ideal, but fine for a strictly local dev environment so long as ports
+# don't conflict with other services on host machine.
+
 services:
   devcontainer:
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    #   args:
-    #     VARIANT: "1-22-bookworm" 
     image: mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm
     volumes:
       - ../..:/workspaces:cached
@@ -13,10 +14,12 @@ services:
     command: sleep infinity
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:db
+    # network_mode: service:db
+    network_mode: host
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+    # (Adding the "ports" property to this file will not forward from a
+    # Codespace.)
 
   db:
     image: mysql:8.0
@@ -28,5 +31,6 @@ services:
       MYSQL_DATABASE: pfb-db
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    network_mode: host
 volumes:
     pfb-db:
