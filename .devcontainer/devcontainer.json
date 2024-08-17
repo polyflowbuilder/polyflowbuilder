@@ -1,22 +1,17 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
-
+	"name": "PolyFlowBuilder - Node.js & TypeScript + MySQL",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// TODO: Add local database setup here (for now, just run npx prisma db push)
 	"postCreateCommand": "npm install",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
