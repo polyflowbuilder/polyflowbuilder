@@ -25,7 +25,7 @@ services:
     image: mysql:8.4.2
     restart: unless-stopped
     volumes:
-      - pfb-db:/var/lib/mysql
+      - db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: pfb-db
@@ -33,4 +33,4 @@ services:
       MYSQL_PASSWORD: password
     network_mode: host
 volumes:
-    pfb-db:
+    db:
