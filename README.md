@@ -140,9 +140,9 @@ Restructure database with PolyFlowBuilder's current prisma schema (as opposed to
 using `npx prisma migrate dev`, which generates new migration files for
 migrating the production database).
 
-#### `npx tsx ./api/src/dev/api-data-sync`
-Assuming you are executing from the project root folder, load API data saved
-from filesystem (located in ./api/data) into db.
+#### `npx tsx api-data-sync` *in /api/src/dev/*
+
+Load saved API data (located in /api/data) into db.
 
 #### `npm run start:dev`
 Run the development web server (with hot module reloading and svelte inspector).
