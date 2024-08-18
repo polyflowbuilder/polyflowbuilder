@@ -25,6 +25,11 @@ const config = {
     version: {
       name: execSync('git rev-parse --short HEAD').toString().trim()
     }
+  },
+
+  vitePlugin: {
+    // Ctrl + Shift click to open component source in VSCode
+    inspector: true
   }
 };
 

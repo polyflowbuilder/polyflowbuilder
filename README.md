@@ -99,3 +99,50 @@ For support with PolyFlowBuilder features, issues, concerns, or anything else re
 ## Maintainers
 
 - @AGuyWhoIsBored ([Bitbucket](https://bitbucket.org/AGuyWhoIsBored), [GitHub](https://github.com/AGuyWhoIsBored), [LinkedIn](https://linkedin.com/in/dapplegarth))
+
+## Building App from Source
+
+PolyFlowBuilder relies on a couple services:
+- Node.js & npm 20.x
+- MySQL 8.4.x (can substitute for MariaDB, untested)
+
+### Option 1: Dev Container
+[![Open in Dev
+Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/polyflowbuilder/polyflowbuilder)
+
+If you already have VS Code and Docker installed, click the badge above and a
+development environment will be set up for you inside a docker container on your
+machine. That's it!
+
+### Option 2: Set up Node and MySQL servers manually
+
+1. Install Node.js 20.x from
+   [https://nodejs.org/en/download/package-manager](). It is recommended to use
+   a version manager to isolate the Node configuration files from the rest of
+   the system/other projects (see
+   [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)).
+
+2. Install MySQL 8.4.x from https://dev.mysql.com/downloads/. Then, create a
+   new database (see [Getting Started with MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/)).
+
+3. Copy .env.example in the project folder as .env and change the DATABASE_URL to
+   your database's connection.
+
+4. Run `npm ci` in the project folder to install packages.
+
+5. Run `npm i -g tsx` to install the Typescript command-line executable CLI tool
+   globally.
+
+### *Useful utilities*
+
+#### `npx prisma db push`
+Restructure database with PolyFlowBuilder's current prisma schema (as opposed to
+using `npx prisma migrate dev`, which generates new migration files for
+migrating the production database).
+
+#### `npx tsx api-data-sync` *in /api/src/dev/*
+
+Load saved API data (located in /api/data) into db.
+
+#### `npm run start:dev`
+Run the development web server (with hot module reloading and svelte inspector).
