@@ -11,7 +11,7 @@
 	// "forwardPorts": [5173],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// TODO: Add local database setup here (for now, just run npx prisma db push)
-	"postCreateCommand": "npm install",
+	"postCreateCommand": "npm install && cp -nv ./.devcontainer/dev.env .env",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
