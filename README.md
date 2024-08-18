@@ -128,14 +128,21 @@ machine. That's it!
 3. Copy .env.example in the project folder as .env and change the DATABASE_URL to
    your database's connection.
 
-4. Run `npm i` in the project folder to install packages.
+4. Run `npm ci` in the project folder to install packages.
 
-### *Common utilities*
+5. Run `npm i -g tsx` to install the Typescript command-line executable CLI tool
+   globally.
+
+### *Useful utilities*
 
 #### `npx prisma db push`
-Restructure database with PolyFlowBuilder's current prisma schema (as opposed to using `npx
-prisma migrate dev`, which generates
-new migration files for migrating the production database).
+Restructure database with PolyFlowBuilder's current prisma schema (as opposed to
+using `npx prisma migrate dev`, which generates new migration files for
+migrating the production database).
+
+#### `npx tsx ./api/src/dev/api-data-sync`
+Assuming you are executing from the project root folder, load API data saved
+from filesystem (located in ./api/data) into db.
 
 #### `npm run start:dev`
 Run the development web server (with hot module reloading and svelte inspector).
