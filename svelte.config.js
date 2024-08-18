@@ -25,6 +25,10 @@ const config = {
     version: {
       name: execSync('git rev-parse --short HEAD').toString().trim()
     }
+  },
+
+  vitePlugin: {
+    inspector: true
   }
 };
 
