@@ -28,6 +28,7 @@ const config = {
   },
 
   vitePlugin: {
+    // Ctrl + Shift click to open component source in VSCode
     inspector: true
   }
 };
