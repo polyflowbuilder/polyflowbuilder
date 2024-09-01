@@ -168,7 +168,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     ).toHaveTextContent('test');
   });
 
-  test('changing disableSelectingDefaultOption customization prop works', () => {
+  test('changing disableSelectingDefaultOption customization prop works', async () => {
     // test default
     const view = render(ProgramSelector, {
       props: {
@@ -186,7 +186,7 @@ describe('FlowPropertiesSelector/ProgramSelector customization props work', () =
     }
 
     // enabled
-    view.rerender({
+    await view.rerender({
       alreadySelectedProgramIds: [],
       programIdInput: '',
       disableSelectingDefaultOption: false,
