@@ -34,7 +34,7 @@ export function convertDBFlowchartToFlowchart(flowchart: DBFlowchart): MutateFlo
     ...dbFlowchart,
     programId: [programId1, programId2, programId3, programId4, programId5].filter(
       (prog) => prog !== null
-    ) as string[],
+    ),
     termData: flowchart.termData as Term[],
     // Prisma schema marked as Date|null, but only bc it can be left out
     // when passing flowchart update data - the actual date will always
