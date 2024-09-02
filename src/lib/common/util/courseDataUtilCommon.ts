@@ -19,10 +19,10 @@ export function getCourseFromCourseCache(
   const courseMetadata =
     !course.id || !catalog
       ? null
-      : courseCache.get({
+      : (courseCache.get({
           catalog,
           id: course.id
-        }) ?? null;
+        }) ?? null);
 
   return courseMetadata;
 }
@@ -48,7 +48,7 @@ export function computeCourseDisplayValues(
       tooltip: {
         custom: !!course.customId,
         desc: course.customDesc ?? courseMetadata?.desc ?? '',
-        addlDesc: course.customDesc ? '' : courseMetadata?.addl ?? '',
+        addlDesc: course.customDesc ? '' : (courseMetadata?.addl ?? ''),
         termsOffered: courseMetadata?.dynamicTerms ?? null
       }
     })
