@@ -111,5 +111,5 @@ export async function generatePDF(flowData: FlowchartPDFData): Promise<Buffer> {
   });
   await browser.close();
 
-  return bufferedPDF;
+  return Buffer.from(bufferedPDF);
 }
