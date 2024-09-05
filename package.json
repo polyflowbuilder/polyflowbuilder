@@ -23,6 +23,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@playwright/test": "^1.28.1",
