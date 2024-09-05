@@ -52,7 +52,7 @@ export function buildTermCourseItemsData(
         flowProgramIndex: course.programIdIndex ?? 0,
         tIndex: termData.tIndex,
         cIndex,
-        selected: selectedCourses.has(`${termData.tIndex},${cIndex}`)
+        selected: selectedCourses.has(`${termData.tIndex.toString()},${cIndex.toString()}`)
       },
       tooltipParams: {}
     };

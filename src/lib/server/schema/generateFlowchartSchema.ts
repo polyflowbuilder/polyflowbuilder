@@ -13,7 +13,7 @@ export const generateFlowchartSchema = z.object({
       message: 'Flowchart name must not be blank.'
     })
     .max(FLOW_NAME_MAX_LENGTH, {
-      message: `Flowchart name too long, max length is ${FLOW_NAME_MAX_LENGTH} characters.`
+      message: `Flowchart name too long, max length is ${FLOW_NAME_MAX_LENGTH.toString()} characters.`
     }),
   startYear: startYearSchema,
   // encoded as comma-separated values in single string due to search param string requirements

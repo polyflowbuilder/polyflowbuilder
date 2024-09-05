@@ -70,7 +70,6 @@ async function getTermTypicallyOfferedData() {
   //   JSON.stringify(allCourseData, null, 2)
   // );
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   records.forEach((record) => {
     const courseName = record.Course.replace('-', '');
     const catalogs = allCourseData.filter((c) => c.id === courseName).map((c) => c.catalog);
@@ -100,7 +99,7 @@ async function getTermTypicallyOfferedData() {
 
   // write out JSON for use in API
   console.log(
-    `writing JSON to API source, ${invalidCount}/${records.length} records skipped due to not being in course records ...`
+    `writing JSON to API source, ${invalidCount.toString()}/${records.length.toString()} records skipped due to not being in course records ...`
   );
   fs.writeFileSync(
     `${apiRoot}/data/cpslo-term-typically-offered.json`,

@@ -14,7 +14,9 @@ export function incrementRangedUnits(unitCount1: string, unitCount2: string): st
   const sumUnitsLow = unitSplit1[0] + unitSplit2[0];
   const sumUnitsHigh = unit1Max + unit2Max;
 
-  return sumUnitsLow === sumUnitsHigh ? sumUnitsLow.toString() : sumUnitsLow + '-' + sumUnitsHigh;
+  return sumUnitsLow === sumUnitsHigh
+    ? sumUnitsLow.toString()
+    : sumUnitsLow.toString() + '-' + sumUnitsHigh.toString();
 }
 
 export function computeTermUnits(

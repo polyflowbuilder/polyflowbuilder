@@ -24,7 +24,6 @@ function parseOptionsResponse(optionsResponse: string) {
     .map((val) => val.replace("<option value='", '').split("'>"));
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function scrapeTemplateFlowMetadata() {
   console.log('starting scrapeTemplateFlowchartMetadata ...');
 
@@ -161,7 +160,6 @@ async function scrapeTemplateFlowMetadata() {
   process.exit(0);
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function downloadPDFsFromLinks() {
   const downloadIdleTime = 100;
 
@@ -247,7 +245,6 @@ async function downloadPDFsFromLinks() {
 }
 
 // creating JSON files based off of flowchart PDF names
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function createJSONFiles() {
   // read in link data to make folders
   const allLinkData: TemplateFlowchartMetadata = JSON.parse(
@@ -278,7 +275,6 @@ function createJSONFiles() {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function updateTemplateFlowchartsToLatestDataVersion() {
   await apiDataConfig.init();
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {

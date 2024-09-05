@@ -38,7 +38,7 @@
             );
         }
       })
-      .catch((err) => {
+      .catch((err: unknown) => {
         alert(
           'An error occurred while trying to export this flowchart as a PDF. Please refresh the page, and submit a bug report if this error persists.'
         );

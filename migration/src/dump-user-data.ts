@@ -4,7 +4,7 @@ import fs from 'fs';
 import dotenv from 'dotenv';
 import mysql from 'mysql2/promise';
 import type { Pool } from 'mysql2/promise';
-import type { FieldPacket, RowDataPacket } from 'mysql2/promise';
+import type { RowDataPacket } from 'mysql2/promise';
 
 let conPool: Pool | null = null;
 
@@ -44,27 +44,25 @@ async function initDB() {
 
 // fetch users in batches so that we don't crash on a single request w many users
 async function getUserDataBatch() {
-  const sqlQuery = `SELECT * FROM ${process.env.MIGRATION_DB_TABLE_USERS} WHERE id > ? LIMIT ?`;
+  const sqlQuery = `SELECT * FROM ${String(process.env.MIGRATION_DB_TABLE_USERS)} WHERE id > ? LIMIT ?`;
 
   if (!conPool) {
     throw new Error('DB connection not valid');
   }
 
-  const res = (await conPool.query(sqlQuery, [userIdCursor, USER_DATA_BATCH_LIMIT])) as [
-    RowDataPacket[],
-    FieldPacket[]
-  ];
+  const res = await conPool.query(sqlQuery, [userIdCursor, USER_DATA_BATCH_LIMIT]);
+  const data = res[0] as RowDataPacket[];
 
-  userIdCursor = res[0].at(-1)?.id as number;
+  userIdCursor = data.at(-1)?.id as number;
 
   if (!userIdCursor) {
     console.log('finish fetching users');
     return [];
   }
 
-  console.log(`fetched ${res[0].length} users (cursor now ${userIdCursor})`);
+  console.log(`fetched ${data.length.toString()} users (cursor now ${userIdCursor.toString()})`);
 
-  return res[0];
+  return data;
 }
 
 async function dumpUserData() {
@@ -81,7 +79,7 @@ async function dumpUserData() {
       console.log('  writing data for user', user.username);
       // make sure we have PK in file or else we may lose users w/ duplicate usernames
       fs.writeFileSync(
-        `../data/dump/${String(user.id).padStart(4, '0')}_${user.username}.json`,
+        `../data/dump/${String(user.id).padStart(4, '0')}_${String(user.username)}.json`,
         JSON.stringify(user, null, 2)
       );
     }

@@ -249,8 +249,8 @@ function updateFlowchartDataVersionToV6(flow: FlowchartV5Model): FlowchartV6Mode
 
     const tIndex: number = parseInt(String(qtrData.qIndex));
     const tUnits: string = qtrData.qUnitsMax
-      ? `${qtrData.qUnits}-${qtrData.qUnitsMax}`
-      : `${qtrData.qUnits}`;
+      ? `${qtrData.qUnits.toString()}-${qtrData.qUnitsMax.toString()}`
+      : qtrData.qUnits.toString();
     const classes = [] as FlowchartV6ModelQuarter['classes'];
 
     qtrData.classes.forEach((cData) => {

@@ -19,7 +19,7 @@ export const feedbackValidationSchema = z.object({
       message: 'Cannot submit empty feedback.'
     })
     .max(FEEDBACK_MESSAGE_MAX_LENGTH, {
-      message: `Feedback message too long, ${FEEDBACK_MESSAGE_MAX_LENGTH} character max.`
+      message: `Feedback message too long, ${FEEDBACK_MESSAGE_MAX_LENGTH.toString()} character max.`
     })
 });
 

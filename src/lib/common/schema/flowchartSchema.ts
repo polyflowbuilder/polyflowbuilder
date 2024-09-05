@@ -76,7 +76,7 @@ export const courseSchema = z
           (customId) => customId.length <= CUSTOM_COURSE_NAME_MAX_LENGTH,
           (customId) => {
             return {
-              message: `Course custom ID too long, length ${customId.length}/${CUSTOM_COURSE_NAME_MAX_LENGTH} characters.`
+              message: `Course custom ID too long, length ${customId.length.toString()}/${CUSTOM_COURSE_NAME_MAX_LENGTH.toString()} characters.`
             };
           }
         )
@@ -87,7 +87,7 @@ export const courseSchema = z
           (customDisplayName) => customDisplayName.length <= CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH,
           (customDisplayName) => {
             return {
-              message: `Course custom display name too long, length ${customDisplayName.length}/${CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH} characters.`
+              message: `Course custom display name too long, length ${customDisplayName.length.toString()}/${CUSTOM_COURSE_DISPLAY_NAME_MAX_LENGTH.toString()} characters.`
             };
           }
         )
@@ -99,7 +99,7 @@ export const courseSchema = z
           (customNote) => customNote.length <= CUSTOM_COURSE_DESC_MAX_LENGTH,
           (customNote) => {
             return {
-              message: `Course custom description name too long, length ${customNote.length}/${CUSTOM_COURSE_DESC_MAX_LENGTH} characters.`
+              message: `Course custom description name too long, length ${customNote.length.toString()}/${CUSTOM_COURSE_DESC_MAX_LENGTH.toString()} characters.`
             };
           }
         )
@@ -184,7 +184,7 @@ export const flowchartValidationSchemaBase = z.object(
         (name) => name.length <= FLOW_NAME_MAX_LENGTH,
         (name) => {
           return {
-            message: `Flowchart name too long, length ${name.length}/${FLOW_NAME_MAX_LENGTH} characters.`
+            message: `Flowchart name too long, length ${name.length.toString()}/${FLOW_NAME_MAX_LENGTH.toString()} characters.`
           };
         }
       ),
@@ -209,7 +209,7 @@ export const flowchartValidationSchemaBase = z.object(
         (programId) => programId.length <= FLOW_PROGRAMS_MAX_COUNT,
         (programId) => {
           return {
-            message: `Too many program IDs in this flowchart, have ${programId.length}/${FLOW_PROGRAMS_MAX_COUNT} program IDs.`
+            message: `Too many program IDs in this flowchart, have ${programId.length.toString()}/${FLOW_PROGRAMS_MAX_COUNT.toString()} program IDs.`
           };
         }
       ),
@@ -230,7 +230,7 @@ export const flowchartValidationSchemaBase = z.object(
         (notes) => notes.length <= FLOW_NOTES_MAX_LENGTH,
         (notes) => {
           return {
-            message: `Flowchart notes too long, length ${notes.length}/${FLOW_NOTES_MAX_LENGTH} characters.`
+            message: `Flowchart notes too long, length ${notes.length.toString()}/${FLOW_NOTES_MAX_LENGTH.toString()} characters.`
           };
         }
       ),

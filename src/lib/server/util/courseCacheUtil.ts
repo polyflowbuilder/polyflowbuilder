@@ -122,7 +122,7 @@ export async function generateCourseCacheFromUpdateChunks(
         // can happen if bad data is passed in
         if (!course) {
           logger.warn(
-            `generateCourseCacheFromUpdateChunks: unable to find course in update chunk ${chunkIdx} courseDiff ${courseDiffIdx}`
+            `generateCourseCacheFromUpdateChunks: unable to find course in update chunk ${chunkIdx.toString()} courseDiff ${courseDiffIdx.toString()}`
           );
           return undefined;
         }
@@ -138,9 +138,9 @@ export async function generateCourseCacheFromUpdateChunks(
           // can happen if bad data is passed in
           if (!courseCatalog) {
             logger.warn(
-              `generateCourseCacheFromUpdateChunks: program with index ${
+              `generateCourseCacheFromUpdateChunks: program with index ${String(
                 course.programIdIndex
-              } does not exist in programIds list ${flowchart.programId.join(',')}`
+              )} does not exist in programIds list ${flowchart.programId.join(',')}`
             );
             return undefined;
           }

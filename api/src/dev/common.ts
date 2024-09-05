@@ -37,7 +37,7 @@ export async function fetchRetry(input: RequestInfo, init: RequestInit | undefin
       return await fetch(input, init);
     } catch (error) {
       console.log(
-        `fetch request failed, trying again ... (${RETRY_COUNT - count + 1}/${RETRY_COUNT})`
+        `fetch request failed, trying again ... (${(RETRY_COUNT - count + 1).toString()}/${RETRY_COUNT.toString()})`
       );
     }
     count -= 1;

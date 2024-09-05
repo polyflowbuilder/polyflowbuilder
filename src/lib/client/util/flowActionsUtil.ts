@@ -34,7 +34,7 @@ export function deleteSelectedCourses(
     }
 
     const cIndexesRemaining = curTermData.cIndexes.filter(
-      (cIndex) => !selectedCourseEntries.has(`${tIndex},${cIndex}`)
+      (cIndex) => !selectedCourseEntries.has(`${tIndex.toString()},${cIndex.toString()}`)
     );
 
     submitUserDataUpdateChunk({
@@ -92,7 +92,7 @@ export function colorSelectedCourses(
         id: flowchartId,
         tIndex,
         termData: curTermData.courses.map((course, cIndex) => {
-          if (selectedCourseEntries.has(`${tIndex},${cIndex}`)) {
+          if (selectedCourseEntries.has(`${tIndex.toString()},${cIndex.toString()}`)) {
             return {
               from: UserDataUpdateChunkTERM_MODCourseDataFrom.NEW,
               data: {
@@ -150,7 +150,7 @@ export function updateCourseData(
         id: flowchartId,
         tIndex,
         termData: curTermData.courses.map((course, cIndex) => {
-          if (selectedCourseEntries.has(`${tIndex},${cIndex}`)) {
+          if (selectedCourseEntries.has(`${tIndex.toString()},${cIndex.toString()}`)) {
             const newCourseData: Course = courseChanges.onlyUnitsChange
               ? {
                   ...course,

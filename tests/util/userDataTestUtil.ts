@@ -21,7 +21,7 @@ export async function populateFlowcharts(
     const flowCustomizationInfo = populatedFlowcharts.find((entry) => entry.idx === i);
 
     const flowData = {
-      name: `test flow ${i}`,
+      name: `test flow ${i.toString()}`,
       notes: '',
       unitTotal: '0',
       termData: [

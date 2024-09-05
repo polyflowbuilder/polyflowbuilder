@@ -124,7 +124,7 @@
       </p>
       <div class="divider mt-0 mb-2" />
 
-      {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i}`)}
+      {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i.toString()}`)}
         <UIWrapper
           programIdInput={flowProgramIdInput}
           alreadySelectedProgramIds={programIdInputs.filter((id, j) => id && j !== i)}

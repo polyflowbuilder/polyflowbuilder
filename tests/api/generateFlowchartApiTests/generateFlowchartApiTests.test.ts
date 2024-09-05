@@ -135,7 +135,9 @@ test.describe('generate flowchart api input tests', () => {
     const expectedResponseBody = {
       message: 'Invalid input received.',
       validationErrors: {
-        name: [`Flowchart name too long, max length is ${FLOW_NAME_MAX_LENGTH} characters.`]
+        name: [
+          `Flowchart name too long, max length is ${FLOW_NAME_MAX_LENGTH.toString()} characters.`
+        ]
       }
     };
 
