@@ -35,7 +35,21 @@ export default [
     // (https://github.com/typescript-eslint/typescript-eslint/pull/8952)
     // TODO: revisit in the future if Svelte/SvelteKit addresses this
     rules: {
-      '@typescript-eslint/unbound-method': 'off'
+      '@typescript-eslint/unbound-method': 'off',
+      // follow TypeScript convention such that all variables
+      // that have a leading underscore are marked as not used
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true
+        }
+      ]
     }
   },
   {

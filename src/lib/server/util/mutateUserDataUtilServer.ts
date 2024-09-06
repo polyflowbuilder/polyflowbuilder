@@ -5,7 +5,6 @@ import { mutateUserFlowcharts } from '$lib/common/util/mutateUserDataUtilCommon'
 import { UserDataUpdateChunkType } from '$lib/types';
 import { generateCourseCacheFromUpdateChunks } from '$lib/server/util/courseCacheUtil';
 import { deleteFlowcharts, getUserFlowcharts, upsertFlowcharts } from '$lib/server/db/flowchart';
-import type { Program } from '@prisma/client';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 import type { MutateFlowchartData, ProgramCache } from '$lib/types';
 
