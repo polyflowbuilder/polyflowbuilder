@@ -30,6 +30,12 @@ export default [
         ...globals.browser,
         ...globals.node
       }
+    },
+    // lint failing starting with @typescript-eslint/eslint-plugin v7.18.0
+    // (https://github.com/typescript-eslint/typescript-eslint/pull/8952)
+    // TODO: revisit in the future if Svelte/SvelteKit addresses this
+    rules: {
+      '@typescript-eslint/unbound-method': 'off'
     }
   },
   {
