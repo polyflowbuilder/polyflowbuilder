@@ -35,6 +35,8 @@
 
   // reset searches when we switch flows
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     $selectedFlowIndex;
     searchProgramIndex = $selectedFlowIndex !== -1 ? 0 : -1;
     field = 'id';

@@ -172,10 +172,14 @@
 
   // reset the major & concentration when their respective parents change
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     programCatalogYear;
     programName = '';
   }
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     programName;
     programId = '';
   }
