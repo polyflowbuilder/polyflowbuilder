@@ -940,7 +940,7 @@ describe('generateCourseCacheFlowcharts multi-flowchart tests', () => {
 
     await verifyCourseCacheStrictEquality(
       expectedCourseCache,
-      await generateCourseCacheFlowcharts([flow1, flow2], apiDataConfig.apiData.programData, true),
+      await generateCourseCacheFlowcharts([flow1, flow2], programCache, true),
       'vitest'
     );
   });

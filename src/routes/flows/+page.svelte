@@ -56,6 +56,8 @@
 
   // TODO: move this logic into the FlowEditor?
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     $selectedFlowIndex;
     clearSelectedCourses();
   }

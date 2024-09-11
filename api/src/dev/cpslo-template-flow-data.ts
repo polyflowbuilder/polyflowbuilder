@@ -24,7 +24,7 @@ function parseOptionsResponse(optionsResponse: string) {
     .map((val) => val.replace("<option value='", '').split("'>"));
 }
 
-async function scrapeTemplateFlowMetadata() {
+async function _scrapeTemplateFlowMetadata() {
   console.log('starting scrapeTemplateFlowchartMetadata ...');
 
   // only scrape links for catalogs that are eligible
@@ -160,7 +160,7 @@ async function scrapeTemplateFlowMetadata() {
   process.exit(0);
 }
 
-async function downloadPDFsFromLinks() {
+async function _downloadPDFsFromLinks() {
   const downloadIdleTime = 100;
 
   console.log('starting download of PDFs from links ...');
@@ -245,7 +245,7 @@ async function downloadPDFsFromLinks() {
 }
 
 // creating JSON files based off of flowchart PDF names
-function createJSONFiles() {
+function _createJSONFiles() {
   // read in link data to make folders
   const allLinkData: TemplateFlowchartMetadata = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
@@ -275,7 +275,7 @@ function createJSONFiles() {
   }
 }
 
-async function updateTemplateFlowchartsToLatestDataVersion() {
+async function _updateTemplateFlowchartsToLatestDataVersion() {
   await apiDataConfig.init();
   for await (const f of getFiles(`${apiRoot}/data/flows/json/dflows`)) {
     if (path.extname(f) === '.json') {
@@ -299,7 +299,7 @@ async function updateTemplateFlowchartsToLatestDataVersion() {
   }
 }
 
-// void scrapeTemplateFlowMetadata();
-// void downloadPDFsFromLinks();
-// void createJSONFiles();
-void updateTemplateFlowchartsToLatestDataVersion();
+// void _scrapeTemplateFlowMetadata();
+// void _downloadPDFsFromLinks();
+// void _createJSONFiles();
+void _updateTemplateFlowchartsToLatestDataVersion();

@@ -938,7 +938,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         })[1],
         program2.id
       );
-    } catch (error) {
+    } catch (_error) {
       failed = true;
     }
     if (!failed) {
@@ -1033,7 +1033,7 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         })[1],
         program2.id
       );
-    } catch (error) {
+    } catch (_error) {
       failed = true;
     }
     if (!failed) {

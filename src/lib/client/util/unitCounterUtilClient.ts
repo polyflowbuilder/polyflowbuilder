@@ -87,5 +87,5 @@ export function validateUnitString(unitsInput: string) {
     ascendingOrderUnits = lowerUnits < upperUnits;
   }
 
-  return Boolean(unitsInputSanitized.match(validationRegExp)) && ascendingOrderUnits;
+  return Boolean(validationRegExp.exec(unitsInputSanitized)) && ascendingOrderUnits;
 }

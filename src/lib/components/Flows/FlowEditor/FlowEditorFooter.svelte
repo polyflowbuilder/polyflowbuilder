@@ -22,8 +22,12 @@
   let totalUnitHideThreshold: number | undefined;
 
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     footerEntryWidth;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     footerGroupEntryWidth;
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     footerTotalEntryWidth;
     updateUnitCounterResponsiveState();
   }

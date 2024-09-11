@@ -30,6 +30,8 @@
 
   $: selectedCoursesData = getSelectedCourses($selectedCourses);
   $: {
+    // TODO: fix in Svelte 5 migration
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     $customizeCoursesModalOpen;
     updateModalInputs(selectedCoursesData);
   }
