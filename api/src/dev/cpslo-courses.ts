@@ -157,5 +157,5 @@ async function buildCourseDataAllCatalogYears() {
   }
 }
 
-// how to run: (in dev dir) "ts-node-esm cpslo-courses.ts"
+// how to run: (in dev dir) "npx tsx cpslo-courses.ts"
 void buildCourseDataAllCatalogYears();

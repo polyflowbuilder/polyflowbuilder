@@ -240,13 +240,22 @@ async function syncAllAPIData() {
   await syncTemplateFlowcharts();
 }
 
+// how to run: (in dev dir) "npx tsx api-data-sync.ts"
+
 if (process.env.API_DATA_SYNC_SETTINGS) {
   const options = process.env.API_DATA_SYNC_SETTINGS.split(',');
   console.log('found sync settings', options);
 
   if (options.includes('templateFlowcharts')) {
+    console.log('syncing templateFlowcharts');
     await prisma.templateFlowchart.deleteMany();
     await syncTemplateFlowcharts();
+  }
+
+  if (options.includes('catalogStartYears')) {
+    console.log('syncing catalogStartYears');
+    await prisma.startYear.deleteMany();
+    await syncCatalogStartYears();
   }
 } else {
   console.log('no sync settings found, executing full replace');
