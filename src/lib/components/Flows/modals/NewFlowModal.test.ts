@@ -11,7 +11,7 @@ import {
   mockMajorOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
-} from '../../../../../tests/util/storeMocks';
+} from '$test/util/storeMocks';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called

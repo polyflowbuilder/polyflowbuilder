@@ -1,12 +1,12 @@
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
-import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../../tests/util/testFlowcharts';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
 import { act, getAllByRole, queryAllByRole, render, screen } from '@testing-library/svelte';
 import {
   mockModalOpenStore,
   mockSelectedFlowIndexStore,
   mockUserFlowchartsStore
-} from '../../../../../tests/util/storeMocks';
+} from '$test/util/storeMocks';
 
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the addTermsModalOpenStore FAILS!! because vi.mock() MUST be called
