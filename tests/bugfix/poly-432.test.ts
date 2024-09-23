@@ -1,6 +1,6 @@
 import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
-import { getUserEmailString } from '../util/userTestUtil';
+import { getUserEmailString } from '$test/util/userTestUtil';
 
 // bug description: going from /register to /login pages by
 // clicking links (e.g. the "Sign In" link on the /register page)

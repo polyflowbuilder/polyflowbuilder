@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
-import { getUserEmailString, performLoginBackend } from '../../util/userTestUtil';
+import { getUserEmailString, performLoginBackend } from '$test/util/userTestUtil';
 import type { UserDataUpdateChunk } from '$lib/common/schema/mutateUserDataSchema';
 
 test.describe('update user flowchart api tests', () => {

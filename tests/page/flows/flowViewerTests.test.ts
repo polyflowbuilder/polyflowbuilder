@@ -1,10 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from '../../util/frontendInteractionUtil';
-import { populateFlowcharts } from '../../util/userDataTestUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../../util/selectorTestUtil';
-import { getUserEmailString, performLoginFrontend } from '../../util/userTestUtil';
+import { FLOW_LIST_ITEM_SELECTOR } from '$test/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 test.describe('flowchart viewer tests', () => {
   const prisma = new PrismaClient();

@@ -1,10 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from '../../../util/frontendInteractionUtil';
-import { populateFlowcharts } from '../../../util/userDataTestUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../../../util/selectorTestUtil';
-import { getUserEmailString, performLoginFrontend } from '../../../util/userTestUtil';
+import { FLOW_LIST_ITEM_SELECTOR } from '$test/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 // put these tests here instead of w/ component bc this component uses
 // a lot of stores and setting up state is easier when doing it in an e2e env

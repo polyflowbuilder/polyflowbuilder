@@ -1,15 +1,15 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../../util/userDataTestUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from '../../../util/frontendInteractionUtil';
-import { getUserEmailString, performLoginFrontend } from '../../../util/userTestUtil';
+import { dragAndDrop, skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 import {
   TERM_CONTAINER_SELECTOR,
   FLOW_LIST_ITEM_SELECTOR,
   getTermContainerCourseLocator,
   CATALOG_SEARCH_COURSES_SELECTOR
-} from '../../../util/selectorTestUtil';
+} from '$test/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
 import type { CatalogSearchValidFields } from '$lib/server/schema/searchCatalogSchema';
 

@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../util/userDataTestUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
-import { getUserEmailString, performLoginBackend } from '../../util/userTestUtil';
+import { getUserEmailString, performLoginBackend } from '$test/util/userTestUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types/apiDataTypes';
 

@@ -1,7 +1,7 @@
-import { createToken } from '../util/tokenTestUtil';
+import { createToken } from '$test/util/tokenTestUtil';
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { getUserEmailString } from '../util/userTestUtil';
+import { getUserEmailString } from '$test/util/userTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
 
 test.describe('reset password api tests', () => {

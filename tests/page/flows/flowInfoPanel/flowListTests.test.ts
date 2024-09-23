@@ -1,13 +1,13 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from '../../../util/userDataTestUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from '../../../util/frontendInteractionUtil';
-import { getUserEmailString, performLoginFrontend } from '../../../util/userTestUtil';
+import { dragAndDrop, skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   FLOW_LIST_ITEM_SELECTED_SELECTOR
-} from '../../../util/selectorTestUtil';
+} from '$test/util/selectorTestUtil';
 
 test.describe('flow list tests', () => {
   let userId: string;

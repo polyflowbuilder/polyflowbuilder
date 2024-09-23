@@ -1,10 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { skipWelcomeMessage } from '../util/frontendInteractionUtil';
-import { populateFlowcharts } from '../util/userDataTestUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { FLOW_LIST_ITEM_SELECTOR } from '../util/selectorTestUtil';
-import { getUserEmailString, performLoginFrontend } from '../util/userTestUtil';
+import { FLOW_LIST_ITEM_SELECTOR } from '$test/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 // TODO: is this a "routine", or an "Action"? figure out what routine is and
 // reorganize the tests
