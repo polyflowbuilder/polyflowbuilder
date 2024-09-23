@@ -4,7 +4,7 @@ import { generateCourseCacheFlowcharts } from '$lib/server/util/courseCacheUtil'
 import {
   createCourseCacheFromEntries,
   verifyCourseCacheStrictEquality
-} from '../../../../tests/util/courseCacheUtil';
+} from '$test/util/courseCacheUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { ProgramCache } from '$lib/types';
 

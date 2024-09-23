@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 test.describe('reset password routine tests', () => {
   test.describe.configure({

@@ -9,7 +9,7 @@ import {
   mockMajorOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore,
   mockAvailableFlowchartStartYearsStore
-} from '../../../../../tests/util/storeMocks';
+} from '$test/util/storeMocks';
 import type { UserEvent } from '@testing-library/user-event';
 
 // load necessary API data

@@ -1,11 +1,11 @@
 import { v4 as uuid } from 'uuid';
 import { PrismaClient } from '@prisma/client';
 import { expect, test } from '@playwright/test';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { UserDataUpdateChunkType } from '$lib/types/mutateUserDataTypes';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginBackend } from '$test/util/userTestUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { CourseCache } from '$lib/types/apiDataTypes';
 

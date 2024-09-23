@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 // bug description: modals fail to open when navigating to the
 // flow editor for the second time (e.g. first time works, then navigate away,

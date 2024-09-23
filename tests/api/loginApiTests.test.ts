@@ -1,6 +1,6 @@
 import { createUser } from '$lib/server/db/user';
 import { PrismaClient } from '@prisma/client';
-import { getUserEmailString } from 'tests/util/userTestUtil';
+import { getUserEmailString } from '$test/util/userTestUtil';
 import { expect, request, test } from '@playwright/test';
 import type { APIRequestContext } from '@playwright/test';
 

@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
 import { incrementRangedUnits } from '$lib/common/util/unitCounterUtilCommon';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
-import { FLOW_LIST_ITEM_SELECTOR, TERM_CONTAINER_SELECTOR } from 'tests/util/selectorTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
+import { FLOW_LIST_ITEM_SELECTOR, TERM_CONTAINER_SELECTOR } from '$test/util/selectorTestUtil';
 import type { Page } from '@playwright/test';
 
 async function verifyUIChangesAfterRemoveTerms(

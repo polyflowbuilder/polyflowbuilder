@@ -1,17 +1,17 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { populateFlowcharts } from '$test/util/userDataTestUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
 import { FLOW_TERM_COUNT_MAX } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
   getTermContainerCourseLocator,
   TERM_CONTAINER_COURSES_SELECTOR
-} from 'tests/util/selectorTestUtil';
+} from '$test/util/selectorTestUtil';
 
 // dropdown entries that open modals will be tested separately
 test.describe('FlowInfoPanelActionsDropdown tests', () => {

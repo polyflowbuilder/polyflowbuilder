@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
+import { skipWelcomeMessage } from '$test/util/frontendInteractionUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginFrontend } from '$test/util/userTestUtil';
 
 test.describe('flows page header tests', () => {
   test.describe.configure({ mode: 'serial' });

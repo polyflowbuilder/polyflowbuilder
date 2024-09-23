@@ -3,15 +3,15 @@ import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { expect, test } from '@playwright/test';
 import { FLOW_NAME_MAX_LENGTH } from '$lib/common/config/flowDataConfig';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { deleteObjectProperties } from 'tests/util/testUtil';
+import { deleteObjectProperties } from '$test/util/testUtil';
 import { flowchartValidationSchema } from '$lib/common/schema/flowchartSchema';
-import { verifyCourseCacheStrictEquality } from 'tests/util/courseCacheUtil';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import { verifyCourseCacheStrictEquality } from '$test/util/courseCacheUtil';
+import { getUserEmailString, performLoginBackend } from '$test/util/userTestUtil';
 import {
   responsePayload1,
   responsePayload2,
   responsePayload3
-} from 'tests/api/generateFlowchartApiTests/expectedResponsePayloads';
+} from '$test/api/generateFlowchartApiTests/expectedResponsePayloads';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { APICourseFull } from '$lib/types/apiDataTypes';
 

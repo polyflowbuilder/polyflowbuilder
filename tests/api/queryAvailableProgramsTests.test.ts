@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginBackend } from '$test/util/userTestUtil';
 
 test.describe('queryAvailableProgramsTests tests', () => {
   let userEmail: string;

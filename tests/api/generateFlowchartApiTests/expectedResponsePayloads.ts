@@ -1,5 +1,5 @@
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
-import { createCourseCacheFromEntries } from 'tests/util/courseCacheUtil';
+import { createCourseCacheFromEntries } from '$test/util/courseCacheUtil';
 
 export const responsePayload1 = {
   generatedFlowchart: {

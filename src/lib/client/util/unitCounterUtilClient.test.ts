@@ -1,7 +1,7 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { ObjectMap } from '$lib/common/util/ObjectMap';
 import { computeGroupUnits } from '$lib/client/util/unitCounterUtilClient';
-import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '../../../../tests/util/testFlowcharts';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '$test/util/testFlowcharts';
 
 // init api data
 await apiDataConfig.init();

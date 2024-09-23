@@ -1,7 +1,7 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { ObjectMap } from '$lib/common/util/ObjectMap';
-import { createCourseCacheFromEntries } from '../../../../tests/util/courseCacheUtil';
-import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '../../../../tests/util/testFlowcharts';
+import { createCourseCacheFromEntries } from '$test/util/courseCacheUtil';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_1 } from '$test/util/testFlowcharts';
 import {
   computeTermUnits,
   computeTotalUnits,

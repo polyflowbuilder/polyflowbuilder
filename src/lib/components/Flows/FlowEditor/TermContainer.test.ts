@@ -1,7 +1,7 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import { render, screen } from '@testing-library/svelte';
-import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '../../../../../tests/util/testFlowcharts';
-import { mockCourseCacheStore, mockProgramCacheStore } from '../../../../../tests/util/storeMocks';
+import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
+import { mockCourseCacheStore, mockProgramCacheStore } from '$test/util/storeMocks';
 
 // load necessary API data
 await apiDataConfig.init();

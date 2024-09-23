@@ -8,7 +8,7 @@ import {
   mockConcOptionsCacheStore,
   mockMajorOptionsCacheStore,
   mockAvailableFlowchartCatalogsStore
-} from '../../../../../tests/util/storeMocks';
+} from '$test/util/storeMocks';
 import type { Program } from '@prisma/client';
 
 // see https://github.com/davipon/svelte-component-test-recipes
