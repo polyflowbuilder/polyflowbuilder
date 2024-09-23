@@ -10,11 +10,11 @@
     "sourceMap": true,
     "strict": true,
     // fixes this issue for Playwright: https://github.com/sveltejs/kit/issues/8742
-    "baseUrl": ".",
-    "paths": {
-      "$lib": ["src/lib"],
-      "$lib/*": ["src/lib/*"]
-    },
+    // "baseUrl": ".",
+    // "paths": {
+    //   "$lib": ["src/lib"],
+    //   "$lib/*": ["src/lib/*"]
+    // },
     "types": ["vitest/globals", "./node_modules/@testing-library/jest-dom/types/vitest"]
   }
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
