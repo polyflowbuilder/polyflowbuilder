@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { checkCarouselSlide } from 'tests/util/homeCarouselTestUtil';
+import { checkCarouselSlide } from '../util/homeCarouselTestUtil';
 
 test.describe('homepage tests', () => {
   test.beforeEach(async ({ page }) => {

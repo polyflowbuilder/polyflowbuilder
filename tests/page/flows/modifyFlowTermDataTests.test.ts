@@ -1,15 +1,15 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { populateFlowcharts } from '../../util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { dragAndDrop, skipWelcomeMessage } from 'tests/util/frontendInteractionUtil';
-import { getUserEmailString, performLoginFrontend } from 'tests/util/userTestUtil';
+import { dragAndDrop, skipWelcomeMessage } from '../../util/frontendInteractionUtil';
+import { getUserEmailString, performLoginFrontend } from '../../util/userTestUtil';
 import {
   FLOW_LIST_ITEM_SELECTOR,
   TERM_CONTAINER_SELECTOR,
   getTermContainerCourseLocator,
   TERM_CONTAINER_COURSES_SELECTOR
-} from 'tests/util/selectorTestUtil';
+} from '../../util/selectorTestUtil';
 
 // TODO: include tests that customize courses
 // TODO: include tests that add new courses to terms

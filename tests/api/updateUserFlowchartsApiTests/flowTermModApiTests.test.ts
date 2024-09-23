@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 import { PrismaClient } from '@prisma/client';
-import { populateFlowcharts } from 'tests/util/userDataTestUtil';
+import { populateFlowcharts } from '../../util/userDataTestUtil';
 import { createUser, deleteUser } from '$lib/server/db/user';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+import { getUserEmailString, performLoginBackend } from '../../util/userTestUtil';
 import {
   UserDataUpdateChunkType,
   UserDataUpdateChunkTERM_MODCourseDataFrom

@@ -4,12 +4,12 @@ import { PrismaClient } from '@prisma/client';
 import { getUserFlowcharts } from '$lib/server/db/flowchart';
 import { createUser, deleteUser } from '$lib/server/db/user';
 import { CURRENT_FLOW_DATA_VERSION } from '$lib/common/config/flowDataConfig';
-import { cloneAndDeleteNestedProperty } from 'tests/util/testUtil';
+import { cloneAndDeleteNestedProperty } from '../util/testUtil';
 import {
   createCourseCacheFromEntries,
   verifyCourseCacheStrictEquality
-} from 'tests/util/courseCacheUtil';
-import { getUserEmailString, performLoginBackend } from 'tests/util/userTestUtil';
+} from '../util/courseCacheUtil';
+import { getUserEmailString, performLoginBackend } from '../util/userTestUtil';
 import type { Flowchart } from '$lib/common/schema/flowchartSchema';
 import type { APICourseFull } from '$lib/types';
 

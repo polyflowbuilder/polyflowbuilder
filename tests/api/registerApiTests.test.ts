@@ -1,6 +1,6 @@
 import { deleteUser } from '$lib/server/db/user';
 import { expect, test } from '@playwright/test';
-import { getUserEmailString } from 'tests/util/userTestUtil';
+import { getUserEmailString } from '../util/userTestUtil';
 
 test.describe('register api tests', () => {
   test.describe.configure({ mode: 'serial' });
