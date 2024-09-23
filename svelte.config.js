@@ -26,7 +26,7 @@ const config = {
       name: execSync('git rev-parse --short HEAD').toString().trim()
     },
     alias: {
-      $tests: './tests'
+      $test: './tests'
     }
   }
 };
