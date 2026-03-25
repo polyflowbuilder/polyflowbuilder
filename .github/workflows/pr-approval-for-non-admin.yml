@@ -16,7 +16,7 @@ jobs:
   checkapproval:
     name: Check PR approval
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     # Event has to be a pull request, or the base branch has to be main
     if: >-
