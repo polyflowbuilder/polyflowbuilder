@@ -52,11 +52,11 @@
   <a
     href={'#'}
     class="flex justify-between"
-    class:disabled={disabled || generatingPDF}
+    class:a-disabled={disabled || generatingPDF}
     aria-disabled={disabled || generatingPDF}
     on:click|preventDefault={generatePDF}
   >
-    <span>Export Flow as PDF</span>
+    Export Flow as PDF
     {#if generatingPDF}
       <span class="loading loading-spinner loading-sm text-polyGreen" />
     {/if}
