@@ -1,9 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { configDefaults } from 'vitest/config';
+import { svelteTesting } from '@testing-library/svelte/vite';
 import type { UserConfig } from 'vite';
 
 const config: UserConfig = {
-  plugins: [sveltekit()],
+  plugins: [sveltekit(), svelteTesting()],
   test: {
     // need to enable globals for auto-cleanup of rendered DOM resources
     globals: true,
