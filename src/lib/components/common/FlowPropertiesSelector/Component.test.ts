@@ -706,49 +706,59 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   });
 });
 
+// TODO: FIX THE BELOW TESTS
+
 describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   test('update once-valid payload w/ 1 program to invalid, expect invalid', async () => {
     const user = userEvent.setup();
 
-    const { component } = render(Component, {
+    let programIds = [''];
+    let optionsValid = false;
+    const flowProgramIdsUpdateEventHandler = vi.fn(
+      (event: CustomEvent<string[]>) => (programIds = event.detail)
+    );
+    const optionsValidUpdateEventHandler = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
+      },
+      events: {
+        flowProgramIdsUpdate: flowProgramIdsUpdateEventHandler,
+        optionsValidUpdate: optionsValidUpdateEventHandler
       }
     });
 
-    let programIds = [''];
-    let optionsValid = false;
-    const programIdEventHandlerMock = vi.fn(
-      (event: CustomEvent<string[]>) => (programIds = event.detail)
-    );
-    const optionsValidEventHandlerMock = vi.fn(
-      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
-    );
-    component.$on('optionsValidUpdate', optionsValidEventHandlerMock);
-    component.$on('flowProgramIdsUpdate', programIdEventHandlerMock);
+    // initialize expected states
+    // events fired when component is initialized
+    let expectedEventFiredCount = 1;
+    const expectedProgramIds = [''];
 
-    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
-    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
-    expect(programIds).toStrictEqual(['']);
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
 
     await setFlowNameStartingYear(user);
-    expect(programIdEventHandlerMock).not.toHaveBeenCalled();
-    expect(optionsValidEventHandlerMock).not.toHaveBeenCalled();
-    expect(programIds).toStrictEqual(['']);
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
 
     // populate three programs
-    const expectedProgramIds: string[] = [];
 
     // populate first program
     const program1 = await setProgram(user, 0, expectedProgramIds);
+    expectedEventFiredCount += 1;
     expectedProgramIds.pop();
     expectedProgramIds.push(program1.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(1);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(1);
+
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeTruthy();
 
@@ -758,18 +768,22 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         name: 'Add Program'
       })
     );
+    expectedEventFiredCount += 1;
     expectedProgramIds.push('');
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(2);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(2);
+
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
 
     // populate
     const program2 = await setProgram(user, 1, expectedProgramIds);
+    expectedEventFiredCount += 1;
     expectedProgramIds.pop();
     expectedProgramIds.push(program2.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(3);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(3);
+
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeTruthy();
 
@@ -779,18 +793,22 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         name: 'Add Program'
       })
     );
+    expectedEventFiredCount += 1;
     expectedProgramIds.push('');
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(4);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(4);
+
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
 
     // populate
     const program3 = await setProgram(user, 2, expectedProgramIds);
+    expectedEventFiredCount += 1;
     expectedProgramIds.pop();
     expectedProgramIds.push(program3.id);
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(5);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(5);
+
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeTruthy();
 
@@ -806,10 +824,25 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
     );
     const newCatalogValue =
       removeSelectedCatalog[Math.floor(Math.random() * removeSelectedCatalog.length)];
+
+    screen.debug(screen.getAllByRole('combobox', { name: 'Catalog' }));
+
     await user.selectOptions(
       screen.getAllByRole('combobox', { name: 'Catalog' })[1],
       newCatalogValue
     );
+    expectedEventFiredCount += 1;
+    expectedProgramIds[1] = '';
+
+    console.log({
+      program1,
+      program2,
+      program3,
+      removeSelectedCatalog,
+      newCatalogValue
+    });
+
+    screen.debug(screen.getAllByRole('combobox', { name: 'Catalog' }));
 
     // check that UI updated correctly and that options are no longer valid
     expect(
@@ -827,17 +860,17 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         name: 'Concentration'
       })[1]
     ).toHaveValue('');
-    expectedProgramIds[1] = '';
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(6);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(6);
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
 
     // set new program and expect valid
     const newProgram1 = await setProgram(user, 1, expectedProgramIds);
+    expectedEventFiredCount += 1;
     expectedProgramIds[1] = newProgram1.id;
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(7);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(7);
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeTruthy();
 
@@ -856,7 +889,10 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
       .map((prog) => prog.majorName);
     const newMajorValue =
       removeSelectedMajor[Math.floor(Math.random() * removeSelectedMajor.length)];
+
     await user.selectOptions(screen.getAllByRole('combobox', { name: 'Major' })[1], newMajorValue);
+    expectedEventFiredCount += 1;
+    expectedProgramIds[1] = '';
 
     expect(
       screen.getAllByRole('combobox', {
@@ -873,9 +909,8 @@ describe('FlowPropertiesSelector/Component invalid updates tests', () => {
         name: 'Concentration'
       })[1]
     ).toHaveValue('');
-    expectedProgramIds[1] = '';
-    expect(programIdEventHandlerMock).toHaveBeenCalledTimes(8);
-    expect(optionsValidEventHandlerMock).toHaveBeenCalledTimes(8);
+    expect(flowProgramIdsUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(optionsValidUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
     expect(programIds).toStrictEqual(expectedProgramIds);
     expect(optionsValid).toBeFalsy();
   });
