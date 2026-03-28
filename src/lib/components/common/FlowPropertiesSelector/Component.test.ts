@@ -174,174 +174,201 @@ describe('FlowPropertiesSelector/Component invalid options tests', () => {
   beforeAll(initMockedAPIDataStores);
 
   test('empty everything is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('just name is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('just start year is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: '',
         flowStartYear: '2021-2022',
         programIdInputs: ['']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('just a valid program is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: '',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('everything but name is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: '',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('everything but start year is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: 'test',
         flowStartYear: '',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
   test('everything but valid program is invalid', () => {
-    const { component } = render(Component, {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
-  test('everything valid except name too long', () => {
-    const { component } = render(Component, {
+  test('everything valid except name too long is invalid', () => {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName:
           'sdlkvmsdklvmksdlvmlksdmvkldsmvklsdmvklsdmvlksdmvksldmvsdlkvmsdlkmvslkdvmslkkmlvslksd',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 
-  test('everything valid except additional empty programs', () => {
-    const { component } = render(Component, {
+  test('everything valid except additional empty programs is invalid', () => {
+    let optionsValid = false;
+    const optionsValidUpdate = vi.fn(
+      (event: CustomEvent<boolean>) => (optionsValid = event.detail)
+    );
+
+    render(Component, {
       props: {
         flowName: 'test',
         flowStartYear: '2020-2021',
         programIdInputs: ['fc22cb1a-abad-466a-81f7-6010b09a15c9', '', '']
+      },
+      events: {
+        optionsValidUpdate
       }
     });
 
-    // do it this way bc dispatch events don't get fired before component mounted
-    // (eg when reactive stuff is setup)
-    // see https://github.com/sveltejs/svelte/issues/4470
-    let optionsValid = false;
-    const mock = vi.fn((event: CustomEvent<boolean>) => (optionsValid = event.detail));
-    component.$on('optionsValidUpdate', mock);
-    expect(mock).toHaveBeenCalledTimes(0);
+    // event fired when function is initialized
+    expect(optionsValidUpdate).toHaveBeenCalledTimes(1);
     expect(optionsValid).toBeFalsy();
   });
 });
