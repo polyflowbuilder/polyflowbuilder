@@ -120,24 +120,26 @@ describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
   });
 
   test('default output of programId correct', () => {
-    // component doesn't emit an output programId
-    // unless the inputs are vaid
+    let programId = 'uninitialized';
+    const programIdUpdateEventHandler = vi.fn(
+      (event: CustomEvent<string>) => (programId = event.detail)
+    );
 
-    const { component } = render(ProgramSelector, {
+    render(ProgramSelector, {
       props: {
         alreadySelectedProgramIds: [],
         programIdInput: '',
         fetchingData: false
+      },
+      events: {
+        programIdUpdate: programIdUpdateEventHandler
       }
     });
 
-    let programId = 'uninitialized';
-    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
-    component.$on('programIdUpdate', mock);
-
-    // want to make sure this was not updated
-    expect(mock).not.toHaveBeenCalled();
-    expect(programId).toBe('uninitialized');
+    // event fired when component is initialized
+    // want to make sure this was set to default value
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(1);
+    expect(programId).toBe('');
   });
 });
 
@@ -234,17 +236,29 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   test('select a random program and expect programIdUpdate', async () => {
     const user = userEvent.setup();
 
-    // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
+    const programIdUpdateEventHandler = vi.fn(
+      (event: CustomEvent<string>) => (programId = event.detail)
+    );
 
-    const { component } = render(ProgramSelector, {
-      alreadySelectedProgramIds: [],
-      programIdInput: '',
-      fetchingData: false
+    render(ProgramSelector, {
+      props: {
+        alreadySelectedProgramIds: [],
+        programIdInput: '',
+        fetchingData: false
+      },
+      events: {
+        programIdUpdate: programIdUpdateEventHandler
+      }
     });
 
-    component.$on('programIdUpdate', mock);
+    // initialize expected states
+    let expectedEventFiredCount = 1;
+    let expectedProgramId: string | undefined = '';
+
+    // event fired when component is initialized
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // select random catalog
 
@@ -261,8 +275,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedCatalogOption
     );
     expect(selectedCatalogOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
-    expect(programId).toBe('uninitialized');
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all the major options are displayed
     const expectedPrograms = new Set(
@@ -290,8 +304,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedMajorOption
     );
     expect(selectedMajorOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
-    expect(programId).toBe('uninitialized');
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all conc options are displayed
     const expectedConcOptions = new Set(
@@ -329,13 +343,15 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption
     );
 
-    const expectedProgram = apiDataProgramDataArr.find(
+    expectedEventFiredCount += 1;
+    expectedProgramId = apiDataProgramDataArr.find(
       (prog) => prog.id === selectedConcOption.value
     )?.id;
-    expect(typeof expectedProgram).toBe('string');
+
+    expect(typeof expectedProgramId).toBe('string');
     expect(selectedConcOption.selected).toBe(true);
-    expect(mock).toBeCalledTimes(1);
-    expect(programId).toBe(expectedProgram);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
   });
 
   // https://testing-library.com/docs/dom-testing-library/api-async#findby-queries
@@ -344,17 +360,21 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     const program = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
     console.log(`selected program id [${program.id}]`);
 
-    // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
+    const programIdUpdateEventHandler = vi.fn(
+      (event: CustomEvent<string>) => (programId = event.detail)
+    );
 
-    const { component } = render(ProgramSelector, {
-      programIdInput: program.id,
-      alreadySelectedProgramIds: [],
-      fetchingData: false
+    render(ProgramSelector, {
+      props: {
+        programIdInput: program.id,
+        alreadySelectedProgramIds: [],
+        fetchingData: false
+      },
+      events: {
+        programIdUpdate: programIdUpdateEventHandler
+      }
     });
-
-    component.$on('programIdUpdate', mock);
 
     // check correct catalog
     expect(
@@ -392,177 +412,11 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       ).selected
     ).toBe(true);
 
-    expect(mock).toHaveBeenCalledTimes(1);
-    expect(programId).toBe(program.id);
-  });
-
-  test('set input after mount and expect correct response', async () => {
-    const user = userEvent.setup();
-
-    const program = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
-    console.log(`selected program id [${program.id}]`);
-
-    // mock program ID update
-    let programId = 'uninitialized';
-    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
-
-    const { component } = render(ProgramSelector, {
-      alreadySelectedProgramIds: [],
-      programIdInput: '',
-      fetchingData: false
-    });
-
-    component.$on('programIdUpdate', mock);
-
-    // expect nothing at first
-    const initSelectedOptions = screen
-      .getAllByRole('option', {
-        name: (_, element) => (element as HTMLOptionElement).selected
-      })
-      .map((elem) => elem.textContent);
-    expect(initSelectedOptions.length).toBe(3);
-    expect(initSelectedOptions).toEqual(['Choose ...', 'Choose ...', 'Choose ...']);
-    expect(mock).not.toHaveBeenCalled();
-    expect(programId).toBe('uninitialized');
-
-    // select a random program (same code as test above)
-
-    // select random catalog
-    const selectedCatalogOption = screen.getByRole<HTMLOptionElement>('option', {
-      name: apiDataConfig.apiData.catalogs[
-        Math.floor(Math.random() * apiDataConfig.apiData.catalogs.length)
-      ]
-    });
-    console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
-    await user.selectOptions(
-      screen.getByRole('combobox', {
-        name: 'Catalog'
-      }),
-      selectedCatalogOption
-    );
-    expect(selectedCatalogOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
-
-    // make sure all the major options are displayed
-    const expectedPrograms = new Set(
-      apiDataProgramDataArr
-        .filter((prog) => prog.catalog === selectedCatalogOption.value)
-        .map((prog) => prog.majorName)
-    );
-    const majorOptions = screen.getAllByRole<HTMLOptionElement>('option', {
-      name: (accessibleName) => expectedPrograms.has(accessibleName)
-    });
-    for (const option of majorOptions) {
-      expect(option).toBeVisible();
-    }
-    expect(majorOptions.map((elem) => elem.text).sort()).toStrictEqual(
-      [...expectedPrograms].sort()
-    );
-
-    // select random major option
-    const selectedMajorOption = majorOptions[Math.floor(Math.random() * majorOptions.length)];
-    console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
-    await user.selectOptions(
-      screen.getByRole('combobox', {
-        name: 'Major'
-      }),
-      selectedMajorOption
-    );
-    expect(selectedMajorOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
-
-    // make sure all conc options are displayed
-    const expectedConcOptions = new Set(
-      apiDataProgramDataArr
-        .filter(
-          (prog) =>
-            prog.catalog === selectedCatalogOption.value &&
-            prog.majorName === selectedMajorOption.value
-        )
-        .map((prog) => prog.concName)
-    );
-    // need to find elements from Concentration selector bc there are
-    // majors that have the same name as some concentrations,
-    // which ends up being counted twice (and failing the test)
-    const concSelectorElem = screen.getByRole('combobox', {
-      name: 'Concentration'
-    });
-    const concOptions = getAllByRole<HTMLOptionElement>(concSelectorElem, 'option', {
-      name: (accessibleName) => expectedConcOptions.has(accessibleName)
-    });
-    for (const option of concOptions) {
-      expect(option).toBeVisible();
-    }
-    console.log('expected', expectedConcOptions);
-    console.log(
-      'actual',
-      concOptions.map((o) => o.value)
-    );
-    expect(concOptions.map((elem) => elem.text).sort()).toStrictEqual(
-      [...expectedConcOptions].sort()
-    );
-
-    // select a random concentration
-    const selectedConcOption = concOptions[Math.floor(Math.random() * concOptions.length)];
-    console.log(`selectedConcOption value [${selectedConcOption.value}]`);
-    await user.selectOptions(
-      screen.getByRole('combobox', {
-        name: 'Concentration'
-      }),
-      selectedConcOption
-    );
-
-    const expectedProgram = apiDataProgramDataArr.find(
-      (prog) => prog.id === selectedConcOption.value
-    )?.id;
-    expect(typeof expectedProgram).toBe('string');
-    expect(selectedConcOption.selected).toBe(true);
-    expect(mock).toBeCalledTimes(1);
-    expect(programId).toBe(expectedProgram);
-
-    // then do an update
-    component.$set({
-      programIdInput: program.id
-    });
-    // flush all svelte state changes
-    await act();
-
-    // then verify that the UI was updated
-    // check correct catalog
-    expect(
-      (
-        await screen.findByRole<HTMLOptionElement>('option', {
-          name: program.catalog
-        })
-      ).selected
-    ).toBe(true);
-
-    // check correct major
-    expect(
-      (
-        await screen.findByRole<HTMLOptionElement>('option', {
-          name: program.majorName
-        })
-      ).selected
-    ).toBe(true);
-
-    // check correct conc
-    if (!program.concName) {
-      throw new Error('Selected program in ProgramSelector has a concName of null');
-    }
-    // need to find elements from Concentration selector bc there are
-    // majors that have the same name as some concentrations,
-    // which ends up being counted twice (and failing the test)
-    expect(
-      (
-        await findByRole<HTMLOptionElement>(concSelectorElem, 'option', {
-          name: program.concName
-        })
-      ).selected
-    ).toBe(true);
-
-    // once for first program, another time for second program
-    expect(mock).toHaveBeenCalledTimes(2);
+    // Event fired when component is initialized
+    // MUST assert this here instead of after render()
+    // because the update is done asynchronously - the await
+    // checks above will ensure the update has completed by the time we get here
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(1);
     expect(programId).toBe(program.id);
   });
 
@@ -578,17 +432,29 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
     );
     const program = programList[Math.floor(Math.random() * programList.length)];
 
-    // mock program ID update
     let programId = 'uninitialized';
-    const mock = vi.fn((event: CustomEvent<string>) => (programId = event.detail));
+    const programIdUpdateEventHandler = vi.fn(
+      (event: CustomEvent<string>) => (programId = event.detail)
+    );
 
-    const { component } = render(ProgramSelector, {
-      programIdInput: '',
-      alreadySelectedProgramIds: [],
-      fetchingData: false
+    render(ProgramSelector, {
+      props: {
+        programIdInput: '',
+        alreadySelectedProgramIds: [],
+        fetchingData: false
+      },
+      events: {
+        programIdUpdate: programIdUpdateEventHandler
+      }
     });
 
-    component.$on('programIdUpdate', mock);
+    // initialize expected states
+    let expectedEventFiredCount = 1;
+    let expectedProgramId: string | undefined = '';
+
+    // event fired when component is initialized
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // expect nothing at first
     const initSelectedOptions = screen
@@ -598,8 +464,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       .map((elem) => elem.textContent);
     expect(initSelectedOptions.length).toBe(3);
     expect(initSelectedOptions).toEqual(['Choose ...', 'Choose ...', 'Choose ...']);
-    expect(mock).not.toHaveBeenCalled();
-    expect(programId).toBe('uninitialized');
 
     // select the given program
 
@@ -614,7 +478,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedCatalogOption
     );
     expect(selectedCatalogOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all the major options are displayed
     const expectedPrograms = new Set(
@@ -644,7 +509,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedMajorOption
     );
     expect(selectedMajorOption.selected).toBe(true);
-    expect(mock).not.toBeCalled();
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all conc options are displayed
     const expectedConcOptions = new Set(
@@ -686,9 +552,12 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption
     );
 
+    expectedEventFiredCount += 1;
+    expectedProgramId = program.id;
+
     expect(selectedConcOption.selected).toBe(true);
-    expect(mock).toBeCalledTimes(1);
-    expect(programId).toBe(program.id);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // then try variety of manual updates
 
@@ -704,13 +573,15 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       newSelectedConcOption1
     );
 
-    const expectedProgram1 = apiDataProgramDataArr.find(
+    expectedEventFiredCount += 1;
+    expectedProgramId = apiDataProgramDataArr.find(
       (prog) => prog.id === newSelectedConcOption1.value
     )?.id;
-    expect(typeof expectedProgram1).toBe('string');
+
+    expect(typeof expectedProgramId).toBe('string');
     expect(newSelectedConcOption1.selected).toBe(true);
-    expect(mock).toBeCalledTimes(2);
-    expect(programId).toBe(expectedProgram1);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // then change major (but same catalog)
     let program1: Program;
@@ -734,6 +605,9 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedMajorOption1
     );
 
+    expectedEventFiredCount += 1;
+    expectedProgramId = '';
+
     // expect major to be selected AND conc option to be reset
     expect(selectedMajorOption1.selected).toBe(true);
     expect(
@@ -751,8 +625,8 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         name: 'Concentration'
       })
     ).toHaveTextContent('Choose ...');
-    expect(mock).toBeCalledTimes(3);
-    expect(programId).toBe('');
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // then select concentration and expect full update
 
@@ -786,13 +660,15 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption1
     );
 
-    const expectedProgram2 = apiDataProgramDataArr.find(
+    expectedEventFiredCount += 1;
+    expectedProgramId = apiDataProgramDataArr.find(
       (prog) => prog.id === selectedConcOption1.value
     )?.id;
-    expect(typeof expectedProgram2).toBe('string');
+
+    expect(typeof expectedProgramId).toBe('string');
     expect(selectedConcOption1.selected).toBe(true);
-    expect(mock).toBeCalledTimes(4);
-    expect(programId).toBe(expectedProgram2);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // then switch catalog, major, conc
 
@@ -814,8 +690,13 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       }),
       selectedCatalogOption2
     );
+
+    expectedEventFiredCount += 1;
+    expectedProgramId = '';
+
     expect(selectedCatalogOption2.selected).toBe(true);
-    expect(mock).toBeCalledTimes(5);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all the major options are displayed
     const expectedPrograms2 = new Set(
@@ -844,8 +725,10 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       }),
       selectedMajorOption2
     );
+
     expect(selectedMajorOption2.selected).toBe(true);
-    expect(mock).toBeCalledTimes(5);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
 
     // make sure all conc options are displayed
     const expectedConcOptions2 = new Set(
@@ -879,8 +762,11 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
       selectedConcOption2
     );
 
+    expectedEventFiredCount += 1;
+    expectedProgramId = program2.id;
+
     expect(selectedConcOption2.selected).toBe(true);
-    expect(mock).toBeCalledTimes(6);
-    expect(programId).toBe(program2.id);
+    expect(programIdUpdateEventHandler).toHaveBeenCalledTimes(expectedEventFiredCount);
+    expect(programId).toBe(expectedProgramId);
   });
 });

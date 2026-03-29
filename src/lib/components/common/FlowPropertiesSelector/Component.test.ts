@@ -706,8 +706,6 @@ describe('FlowPropertiesSelector/Component valid options/updates tests', () => {
   });
 });
 
-// TODO: FIX THE BELOW TESTS
-
 describe('FlowPropertiesSelector/Component invalid updates tests', () => {
   test('update once-valid payload w/ 1 program to invalid, expect invalid', async () => {
     const user = userEvent.setup();
