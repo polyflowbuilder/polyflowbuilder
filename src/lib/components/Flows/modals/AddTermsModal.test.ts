@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
-import { act, getAllByRole, queryAllByRole, render, screen } from '@testing-library/svelte';
+import { act, getAllByRole, queryAllByRole, render, screen, within } from '@testing-library/svelte';
 import {
   mockModalOpenStore,
   mockSelectedFlowIndexStore,
@@ -33,6 +33,19 @@ describe('AddTermsModal component tests', () => {
     });
   });
 
+  const getAddTermsSelector = () => {
+    return screen.getByRole('listbox', {
+      name: 'select flowchart terms to add'
+    });
+  };
+
+  const getAddTermsOptionsElements = (getSelectedOptions = false) => {
+    // use queryAllByRole because getAllByRole throws an error if there are no elements found
+    return within(getAddTermsSelector()).queryAllByRole<HTMLOptionElement>('option', {
+      selected: getSelectedOptions
+    });
+  };
+
   test('default state for AddTermsModal correct', async () => {
     const user = userEvent.setup();
 
@@ -48,13 +61,7 @@ describe('AddTermsModal component tests', () => {
     expect(screen.getByText('Add Flowchart Terms')).toBeVisible();
 
     // with empty flowchart (default), expect no terms to be present to select
-    expect(
-      screen
-        .getByRole('listbox', {
-          name: 'select flowchart terms to add'
-        })
-        .hasChildNodes()
-    ).toBeFalsy();
+    expect(getAddTermsOptionsElements()).toHaveLength(0);
 
     // button state valid
     expect(screen.getByRole('button', { name: 'Add Terms to Flowchart' })).toBeDisabled();
@@ -71,12 +78,8 @@ describe('AddTermsModal component tests', () => {
   test('terms to add are correct', async () => {
     render(AddTermsModal);
 
-    const multiselect = screen.getByRole('listbox', {
-      name: 'select flowchart terms to add'
-    });
-
     // see that terms are not present
-    expect(multiselect.hasChildNodes()).toBeFalsy();
+    expect(getAddTermsOptionsElements()).toHaveLength(0);
 
     // load a flowchart
     mockUserFlowchartsStore.set([TEST_FLOWCHART_SINGLE_PROGRAM_2]);
@@ -86,9 +89,7 @@ describe('AddTermsModal component tests', () => {
     await act();
 
     // ensure the correct terms are present
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option').map((elem) => elem.value)
-    ).toStrictEqual([
+    expect(getAddTermsOptionsElements().map((elem) => elem.value)).toStrictEqual([
       '0',
       '1',
       '2',
@@ -116,9 +117,7 @@ describe('AddTermsModal component tests', () => {
       '24'
     ]);
 
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option').map((elem) => elem.text)
-    ).toStrictEqual([
+    expect(getAddTermsOptionsElements().map((elem) => elem.text)).toStrictEqual([
       'Summer 2017',
       'Fall 2017',
       'Winter 2018',
@@ -152,17 +151,11 @@ describe('AddTermsModal component tests', () => {
 
     render(AddTermsModal);
 
-    const multiselect = screen.getByRole('listbox', {
-      name: 'select flowchart terms to add'
-    });
-
     // select single option and expect able to create
-    await user.selectOptions(multiselect, 'Summer 2018');
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option', {
-        selected: true
-      }).map((elem) => elem.text)
-    ).toStrictEqual(['Summer 2018']);
+    await user.selectOptions(getAddTermsSelector(), 'Summer 2018');
+    expect(getAddTermsOptionsElements(true).map((elem) => elem.text)).toStrictEqual([
+      'Summer 2018'
+    ]);
     expect(
       screen.getByRole('button', {
         name: 'Add Terms to Flowchart'
@@ -170,7 +163,7 @@ describe('AddTermsModal component tests', () => {
     ).toBeEnabled();
 
     // deselect and expect unable to create
-    await user.deselectOptions(multiselect, 'Summer 2018');
+    await user.deselectOptions(getAddTermsSelector(), 'Summer 2018');
     expect(
       screen.getByRole('button', {
         name: 'Add Terms to Flowchart'
@@ -178,12 +171,8 @@ describe('AddTermsModal component tests', () => {
     ).toBeDisabled();
 
     // select another option and expect able to create
-    await user.selectOptions(multiselect, 'Fall 2022');
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option', {
-        selected: true
-      }).map((elem) => elem.text)
-    ).toStrictEqual(['Fall 2022']);
+    await user.selectOptions(getAddTermsSelector(), 'Fall 2022');
+    expect(getAddTermsOptionsElements(true).map((elem) => elem.text)).toStrictEqual(['Fall 2022']);
     expect(
       screen.getByRole('button', {
         name: 'Add Terms to Flowchart'
@@ -196,17 +185,11 @@ describe('AddTermsModal component tests', () => {
 
     render(AddTermsModal);
 
-    const multiselect = screen.getByRole('listbox', {
-      name: 'select flowchart terms to add'
-    });
-
     // select single option and expect able to create
-    await user.selectOptions(multiselect, 'Summer 2018');
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option', {
-        selected: true
-      }).map((elem) => elem.text)
-    ).toStrictEqual(['Summer 2018']);
+    await user.selectOptions(getAddTermsSelector(), 'Summer 2018');
+    expect(getAddTermsOptionsElements(true).map((elem) => elem.text)).toStrictEqual([
+      'Summer 2018'
+    ]);
     expect(
       screen.getByRole('button', {
         name: 'Add Terms to Flowchart'
@@ -214,12 +197,11 @@ describe('AddTermsModal component tests', () => {
     ).toBeEnabled();
 
     // select another option and expect able to create with more than one
-    await user.selectOptions(multiselect, 'Fall 2022');
-    expect(
-      getAllByRole<HTMLOptionElement>(multiselect, 'option', {
-        selected: true
-      }).map((elem) => elem.text)
-    ).toStrictEqual(['Summer 2018', 'Fall 2022']);
+    await user.selectOptions(getAddTermsSelector(), 'Fall 2022');
+    expect(getAddTermsOptionsElements(true).map((elem) => elem.text)).toStrictEqual([
+      'Summer 2018',
+      'Fall 2022'
+    ]);
     expect(
       screen.getByRole('button', {
         name: 'Add Terms to Flowchart'
@@ -232,10 +214,6 @@ describe('AddTermsModal component tests', () => {
     mockModalOpenStore.set(true);
     expect(screen.getByText('Add Flowchart Terms')).toBeVisible();
 
-    expect(
-      queryAllByRole<HTMLOptionElement>(multiselect, 'option', {
-        selected: true
-      })
-    ).toStrictEqual([]);
+    expect(getAddTermsOptionsElements(true)).toHaveLength(0);
   });
 });
