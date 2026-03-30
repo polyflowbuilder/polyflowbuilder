@@ -4,7 +4,7 @@
 
 <main class="container mx-auto">
   <h1 class="text-polyGreen mt-8 mb-4 text-4xl font-medium text-center">About PolyFlowBuilder</h1>
-  <div class="divider" />
+  <div class="divider"></div>
   <div class="text-justify">
     <p>
       PolyFlowBuilder was made by me (Duncan Applegarth) during the Summer of 2020, and I am

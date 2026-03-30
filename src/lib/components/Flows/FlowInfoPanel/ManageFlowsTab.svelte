@@ -55,7 +55,7 @@
   <div class="max-h-full flex flex-col">
     <h2 class="text-4xl font-medium text-polyGreen text-center mb-2">Flows</h2>
     <FlowInfoPanelActionButtons />
-    <div class="divider my-2" />
+    <div class="divider my-2"></div>
 
     {#if items.length === 0}
       <div class="text-center">

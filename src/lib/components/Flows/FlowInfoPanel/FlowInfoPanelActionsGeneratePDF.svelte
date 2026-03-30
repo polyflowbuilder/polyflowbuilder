@@ -58,7 +58,7 @@
   >
     Export Flow as PDF
     {#if generatingPDF}
-      <span class="loading loading-spinner loading-sm text-polyGreen" />
+      <span class="loading loading-spinner loading-sm text-polyGreen"></span>
     {/if}
   </a>
 </li>

@@ -96,7 +96,7 @@
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Edit Flowchart Properties</h2>
 
-    <div class="divider" />
+    <div class="divider"></div>
 
     <!-- TODO: implement updating flowchart programs -->
     <FlowPropertiesSelector
@@ -125,7 +125,7 @@
         name="editFlowNotes"
         placeholder="My Flowchart Notes"
         bind:value={flowNotes}
-      />
+      ></textarea>
     </label>
 
     <div class="flex mt-4">
@@ -134,7 +134,7 @@
         disabled={!changesValid}
         on:click={updateFlowchartProperties}>Save Changes</button
       >
-      <div class="divider divider-horizontal" />
+      <div class="divider divider-horizontal"></div>
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>

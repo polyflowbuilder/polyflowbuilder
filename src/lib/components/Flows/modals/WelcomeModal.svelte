@@ -21,7 +21,7 @@
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Welcome to PolyFlowBuilder!</h2>
 
-    <div class="divider" />
+    <div class="divider"></div>
 
     <div>
       <p class="mb-4">

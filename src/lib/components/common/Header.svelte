@@ -123,7 +123,7 @@
               </p>
             </div>
           </li>
-          <div class="divider m-0 p-0" />
+          <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
             <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
               Log Out
@@ -136,7 +136,7 @@
               <Fa icon={faUserTimes} class="right-3 absolute text-red-500" />
             </a>
           </li>
-          <div class="divider m-0 p-0" />
+          <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
             <a
               href={'#'}

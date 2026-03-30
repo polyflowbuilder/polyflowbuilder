@@ -11,9 +11,9 @@
     Poly SLO!
   </p>
 
-  <div class="divider" />
+  <div class="divider"></div>
   <HomeCarousel imageData={homeCarouselImageData} />
-  <div class="divider" />
+  <div class="divider"></div>
 
   <p>
     Please note that this project is still in active development. If you would like to report

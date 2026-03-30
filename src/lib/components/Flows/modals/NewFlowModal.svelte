@@ -144,7 +144,7 @@
   <div class="modal-box">
     <h2 class="text-3xl font-medium text-polyGreen text-center">Create New Flowchart</h2>
 
-    <div class="divider" />
+    <div class="divider"></div>
 
     <div class="form-control">
       <FlowPropertiesSelector
@@ -169,10 +169,10 @@
         disabled={!createFlowOptionsValid || loading}
         on:click={createFlowchart}
       >
-        <span class={loading ? 'loading loading-spinner' : ''} />
+        <span class={loading ? 'loading loading-spinner' : ''}></span>
         Create
       </button>
-      <div class="divider divider-horizontal" />
+      <div class="divider divider-horizontal"></div>
       <button class="btn btn-almostmd flex-1" disabled={loading} on:click={closeModal}>
         Cancel
       </button>
