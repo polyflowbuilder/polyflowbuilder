@@ -4,28 +4,25 @@ import { render, screen } from '@testing-library/svelte';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
 import { mockCourseCacheStore, mockProgramCacheStore } from '$test/util/storeMocks';
 
-// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
-// the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
-// before the FlowEditor component is imported or else things break
-import FlowEditor from './FlowEditor.svelte';
-
-// init api data
+// load necessary API data
 await apiDataConfig.init();
 
-describe('FlowEditor component tests', () => {
-  // need to mock out relevant stores since FlowEditor depends on this
-  // (computeGroupUnits)
-  beforeAll(() => {
-    vi.mock('$lib/client/stores/apiDataStore', () => {
-      return {
-        programCache: mockProgramCacheStore,
-        courseCache: mockCourseCacheStore
-      };
-    });
-    mockProgramCacheStore.set(apiDataConfig.apiData.programData);
-    mockCourseCacheStore.set(apiDataConfig.apiData.courseData);
-  });
+// wire local API data to required stores for components under test
+vi.mock('$lib/client/stores/apiDataStore', () => {
+  return {
+    programCache: mockProgramCacheStore,
+    courseCache: mockCourseCacheStore
+  };
+});
+mockProgramCacheStore.set(apiDataConfig.apiData.programData);
+mockCourseCacheStore.set(apiDataConfig.apiData.courseData);
 
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
+// before the component under test is imported or else things break
+import FlowEditor from './FlowEditor.svelte';
+
+describe('FlowEditor component tests', () => {
   test('not displaying credit bin', () => {
     render(FlowEditor, {
       props: {
@@ -171,8 +168,6 @@ describe('FlowEditor component tests', () => {
     const testFlowchartWithNoTerms = structuredClone(TEST_FLOWCHART_SINGLE_PROGRAM_2);
     testFlowchartWithNoTerms.termData = testFlowchartWithNoTerms.termData.slice(0, 1);
     testFlowchartWithNoTerms.unitTotal = '0';
-
-    console.log('terms', testFlowchartWithNoTerms.termData);
 
     render(FlowEditor, {
       props: {

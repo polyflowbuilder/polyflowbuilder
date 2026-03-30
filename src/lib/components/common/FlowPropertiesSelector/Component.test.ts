@@ -16,9 +16,20 @@ import type { UserEvent } from '@testing-library/user-event';
 await apiDataConfig.init();
 const apiDataProgramDataArr = Array.from(apiDataConfig.apiData.programData.values());
 
+// wire local API data to required stores for components under test
+vi.mock('$lib/client/stores/apiDataStore', () => {
+  return {
+    programCache: mockProgramCacheStore,
+    concOptionsCache: mockConcOptionsCacheStore,
+    majorOptionsCache: mockMajorOptionsCacheStore,
+    availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+    availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
+  };
+});
+
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
-// before the FlowEditor component is imported or else things break
+// before the component under test is imported or else things break
 import Component from './Component.svelte';
 
 async function setFlowNameStartingYear(user: UserEvent) {
@@ -97,20 +108,6 @@ async function setProgram(
 }
 
 describe('FlowPropertiesSelector/Component initial mount tests', () => {
-  // need to mock out relevant stores since FlowPropertiesSelector depends on these
-  // mock call is hoisted to top of file
-  beforeAll(() => {
-    vi.mock('$lib/client/stores/apiDataStore', () => {
-      return {
-        programCache: mockProgramCacheStore,
-        concOptionsCache: mockConcOptionsCacheStore,
-        majorOptionsCache: mockMajorOptionsCacheStore,
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
-        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
-      };
-    });
-  });
-
   test('default state for Component correct', () => {
     render(Component, {
       props: {

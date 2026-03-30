@@ -3,31 +3,28 @@ import { render, screen } from '@testing-library/svelte';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
 import { mockCourseCacheStore, mockProgramCacheStore } from '$test/util/storeMocks';
 
-// load necessary API data
-await apiDataConfig.init();
-
 const TEST_TERM_EMPTY = TEST_FLOWCHART_SINGLE_PROGRAM_2.termData[0];
 const TEST_TERM_COURSES = TEST_FLOWCHART_SINGLE_PROGRAM_2.termData[1];
 
+// load necessary API data
+await apiDataConfig.init();
+
+// wire local API data to required stores for components under test
+vi.mock('$lib/client/stores/apiDataStore', () => {
+  return {
+    courseCache: mockCourseCacheStore,
+    programCache: mockProgramCacheStore
+  };
+});
+mockProgramCacheStore.set(apiDataConfig.apiData.programData);
+mockCourseCacheStore.set(apiDataConfig.apiData.courseData);
+
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
-// before the TermContainer component is imported or else things break
+// before the component under test is imported or else things break
 import TermContainer from './TermContainer.svelte';
 
 describe('TermContainer component tests', () => {
-  // need to mock out relevant stores since TermContainer depends on these
-  // mock call is hoisted to top of file
-  beforeAll(() => {
-    vi.mock('$lib/client/stores/apiDataStore', () => {
-      return {
-        courseCache: mockCourseCacheStore,
-        programCache: mockProgramCacheStore
-      };
-    });
-    mockProgramCacheStore.set(apiDataConfig.apiData.programData);
-    mockCourseCacheStore.set(apiDataConfig.apiData.courseData);
-  });
-
   test('empty term', () => {
     render(TermContainer, {
       props: {

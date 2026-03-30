@@ -1,38 +1,36 @@
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 import { TEST_FLOWCHART_SINGLE_PROGRAM_2 } from '$test/util/testFlowcharts';
-import { act, getAllByRole, queryAllByRole, render, screen, within } from '@testing-library/svelte';
+import { act, render, screen, within } from '@testing-library/svelte';
 import {
   mockModalOpenStore,
   mockSelectedFlowIndexStore,
   mockUserFlowchartsStore
 } from '$test/util/storeMocks';
 
+// wire required stores for components under test
+vi.mock('$lib/client/stores/modalStateStore', () => {
+  return {
+    addTermsModalOpen: mockModalOpenStore
+  };
+});
+vi.mock('$lib/client/stores/userDataStore', () => {
+  return {
+    userFlowcharts: mockUserFlowchartsStore
+  };
+});
+vi.mock('$lib/client/stores/UIDataStore', () => {
+  return {
+    selectedFlowIndex: mockSelectedFlowIndexStore
+  };
+});
+
 // this import NEEDS to be down here or else the vi.mock() call that we're using to mock
 // the addTermsModalOpenStore FAILS!! because vi.mock() MUST be called
-// before the NewFlowModal component is imported or else things break
+// before the component under test is imported or else things break
 import AddTermsModal from './AddTermsModal.svelte';
 
 describe('AddTermsModal component tests', () => {
-  beforeAll(() => {
-    // mock out required stores
-    vi.mock('$lib/client/stores/modalStateStore', () => {
-      return {
-        addTermsModalOpen: mockModalOpenStore
-      };
-    });
-    vi.mock('$lib/client/stores/userDataStore', () => {
-      return {
-        userFlowcharts: mockUserFlowchartsStore
-      };
-    });
-    vi.mock('$lib/client/stores/UIDataStore', () => {
-      return {
-        selectedFlowIndex: mockSelectedFlowIndexStore
-      };
-    });
-  });
-
   const getAddTermsSelector = () => {
     return screen.getByRole('listbox', {
       name: 'select flowchart terms to add'

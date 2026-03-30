@@ -1,7 +1,7 @@
 import * as apiDataConfig from '$lib/server/config/apiDataConfig';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
-import { act, render, screen, getAllByRole, findByRole } from '@testing-library/svelte';
+import { render, screen, getAllByRole, findByRole } from '@testing-library/svelte';
 import {
   mockProgramCacheStore,
   initMockedAPIDataStores,
@@ -17,26 +17,23 @@ import type { Program } from '@prisma/client';
 await apiDataConfig.init();
 const apiDataProgramDataArr = Array.from(apiDataConfig.apiData.programData.values());
 
-// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// wire local API data to required stores for components under test
+vi.mock('$lib/client/stores/apiDataStore', () => {
+  return {
+    programCache: mockProgramCacheStore,
+    concOptionsCache: mockConcOptionsCacheStore,
+    majorOptionsCache: mockMajorOptionsCacheStore,
+    availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore
+  };
+});
+mockAvailableFlowchartCatalogsStore.set(apiDataConfig.apiData.catalogs);
+
+// this import NEEDS to be down here or else the vi.mock() call that we're using to wire
 // the programCache and courseCache stores FAILS!! because vi.mock() MUST be called
-// before the FlowEditor component is imported or else things break
+// before the component under test is imported or else things break
 import ProgramSelector from './ProgramSelector.svelte';
 
 describe('FlowPropertiesSelector/ProgramSelector initial mount tests', () => {
-  // need to mock out relevant stores since ProgramSelector depends on these
-  // mock call is hoisted to top of file
-  beforeAll(() => {
-    vi.mock('$lib/client/stores/apiDataStore', () => {
-      return {
-        programCache: mockProgramCacheStore,
-        concOptionsCache: mockConcOptionsCacheStore,
-        majorOptionsCache: mockMajorOptionsCacheStore,
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore
-      };
-    });
-    mockAvailableFlowchartCatalogsStore.set(apiDataConfig.apiData.catalogs);
-  });
-
   test('default state for catalog selector correct', () => {
     render(ProgramSelector, {
       props: {
@@ -267,7 +264,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
         Math.floor(Math.random() * apiDataConfig.apiData.catalogs.length)
       ]
     });
-    console.log(`selectedCatalogOption value [${selectedCatalogOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Catalog'
@@ -296,7 +292,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // select random major option
     const selectedMajorOption = majorOptions[Math.floor(Math.random() * majorOptions.length)];
-    console.log(`selectedMajorOption value [${selectedMajorOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Major'
@@ -335,7 +330,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
 
     // select a random concentration
     const selectedConcOption = concOptions[Math.floor(Math.random() * concOptions.length)];
-    console.log(`selectedConcOption value [${selectedConcOption.value}]`);
     await user.selectOptions(
       screen.getByRole('combobox', {
         name: 'Concentration'
@@ -358,7 +352,6 @@ describe('FlowPropertiesSelector/ProgramSelector program update functionality wo
   // need to use findBy* here bc state change is async
   test('set input on mount and expect correct response', async () => {
     const program = apiDataProgramDataArr[Math.floor(Math.random() * apiDataProgramDataArr.length)];
-    console.log(`selected program id [${program.id}]`);
 
     let programId = 'uninitialized';
     const programIdUpdateEventHandler = vi.fn(
