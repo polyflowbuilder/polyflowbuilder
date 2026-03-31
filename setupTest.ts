@@ -103,3 +103,13 @@ HTMLDialogElement.prototype.showModal = vi.fn(function mock(this: HTMLDialogElem
 HTMLDialogElement.prototype.close = vi.fn(function mock(this: HTMLDialogElement) {
   this.open = false;
 });
+
+// mock out ResizeObserver as some components (eg. FlowEditorFooter) rely on this
+const ResizeObserverMock = vi.fn(
+  class {
+    disconnect = vi.fn();
+    observe = vi.fn();
+    unobserve = vi.fn();
+  }
+);
+vi.stubGlobal('ResizeObserver', ResizeObserverMock);

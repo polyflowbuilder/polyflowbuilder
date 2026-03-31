@@ -119,31 +119,49 @@
     bind:this={groupUnitElem}
   >
     <div class="inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.major[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.major[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Major:' : ''} {unitCounts.major}</span>
     </div>
     <div class="ml-2 inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.support[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.support[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Support:' : ''} {unitCounts.support}</span>
     </div>
     <div class="ml-2 inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.conc1[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.conc1[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Concentration #1:' : ''} {unitCounts.conc1}</span>
     </div>
     <div class="ml-2 inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.conc2[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.conc2[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Concentration #2:' : ''} {unitCounts.conc2}</span>
     </div>
     <div class="ml-2 inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.ge[0]};" />
+      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.ge[0]};"></div>
       <span class="">{showUnitGroupLabels ? 'GE:' : ''} {unitCounts.ge}</span>
     </div>
     <div class="ml-2 inline-block">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.elective[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.elective[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Free Elective:' : ''} {unitCounts.elective}</span>
     </div>
     <div class="ml-2 inline-block mr-6">
-      <div class="inline-block unitCounterSquare" style="background-color: {COLORS.other[0]};" />
+      <div
+        class="inline-block unitCounterSquare"
+        style="background-color: {COLORS.other[0]};"
+      ></div>
       <span class="">{showUnitGroupLabels ? 'Other:' : ''} {unitCounts.other}</span>
     </div>
   </div>

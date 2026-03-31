@@ -1,5 +1,5 @@
 <footer>
-  <div class="divider" />
+  <div class="divider"></div>
   <div class="text-center pb-2 px-4">
     <h6>
       &copy; {new Date().getFullYear()}

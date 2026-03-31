@@ -32,7 +32,7 @@
         data-twe-carousel-active={i === 0 ? '' : null}
         aria-current={i === 0}
         aria-label="Slide {i + 1}"
-      />
+      ></button>
     {/each}
   </div>
 

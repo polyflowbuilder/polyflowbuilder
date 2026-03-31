@@ -13,34 +13,33 @@ import {
   mockAvailableFlowchartStartYearsStore
 } from '$test/util/storeMocks';
 
-// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
-// the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called
-// before the NewFlowModal component is imported or else things break
-import NewFlowModal from './NewFlowModal.svelte';
-
 // load necessary API data
 await apiDataConfig.init();
 
+// wire local API data to required stores for components under test
+vi.mock('$lib/client/stores/modalStateStore', () => {
+  return {
+    newFlowModalOpen: mockModalOpenStore
+  };
+});
+vi.mock('$lib/client/stores/apiDataStore', () => {
+  return {
+    courseCache: mockCourseCacheStore,
+    programCache: mockProgramCacheStore,
+    concOptionsCache: mockConcOptionsCacheStore,
+    majorOptionsCache: mockMajorOptionsCacheStore,
+    availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
+    availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
+  };
+});
+
+// this import NEEDS to be down here or else the vi.mock() call that we're using to mock
+// the newFlowModalOpenStore FAILS!! because vi.mock() MUST be called
+// before the component under test is imported or else things break
+import NewFlowModal from './NewFlowModal.svelte';
+
 describe('NewFlowModal component tests', () => {
-  beforeAll(() => {
-    // need to mock out relevant store
-    vi.mock('$lib/client/stores/modalStateStore', () => {
-      return {
-        newFlowModalOpen: mockModalOpenStore
-      };
-    });
-    vi.mock('$lib/client/stores/apiDataStore', () => {
-      return {
-        courseCache: mockCourseCacheStore,
-        programCache: mockProgramCacheStore,
-        concOptionsCache: mockConcOptionsCacheStore,
-        majorOptionsCache: mockMajorOptionsCacheStore,
-        availableFlowchartCatalogs: mockAvailableFlowchartCatalogsStore,
-        availableFlowchartStartYears: mockAvailableFlowchartStartYearsStore
-      };
-    });
-    initMockedAPIDataStores();
-  });
+  beforeAll(initMockedAPIDataStores);
 
   test('default state for NewFlowModal correct', async () => {
     const user = userEvent.setup();

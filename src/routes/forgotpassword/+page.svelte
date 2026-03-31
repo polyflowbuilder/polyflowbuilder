@@ -19,7 +19,7 @@
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">
         Request Password Reset
       </h2>
-      <div class="divider" />
+      <div class="divider"></div>
 
       {#if form?.success}
         <AlertSuccess
@@ -84,17 +84,17 @@
           {/if}
 
           <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
-            <span class={loading ? 'loading loading-spinner' : ''} />
+            <span class={loading ? 'loading loading-spinner' : ''}></span>
             {resetText}
           </button>
         </div>
       </form>
 
-      <div class="divider" />
+      <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
         <a href="/login" class="hyperlink">Sign In</a>
-        <div class="divider divider-horizontal" />
+        <div class="divider divider-horizontal"></div>
         <a href="/register" class="hyperlink">Create an account</a>
       </div>
     </div>

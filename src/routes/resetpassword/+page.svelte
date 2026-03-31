@@ -19,7 +19,7 @@
   <div class="card shadow mt-8 sm:col-start-1 lg:col-start-2 xl:col-start-3 col-span-3">
     <div class="card-body">
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">Reset Password</h2>
-      <div class="divider" />
+      <div class="divider"></div>
 
       {#if form?.data.tokenExpired}
         <AlertError
@@ -102,7 +102,7 @@
           {/if}
 
           <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
-            <span class={loading ? 'loading loading-spinner' : ''} />
+            <span class={loading ? 'loading loading-spinner' : ''}></span>
             {resetText}
           </button>
         </div>
@@ -111,11 +111,11 @@
         <input type="hidden" id="resetToken" name="resetToken" value={data.resetToken} />
       </form>
 
-      <div class="divider" />
+      <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
         <a href="/login" class="hyperlink">Sign In</a>
-        <div class="divider divider-horizontal" />
+        <div class="divider divider-horizontal"></div>
         <a href="/register" class="hyperlink">Create an account</a>
       </div>
     </div>

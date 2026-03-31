@@ -96,7 +96,7 @@
 >
   <div class="termContainerHeader">
     <h3 class="mt-1">{termName}</h3>
-    <div class="divider m-0 px-2 h-1" />
+    <div class="divider m-0 px-2 h-1"></div>
   </div>
   <div class="termContainerBody">
     <MutableForEachContainer
@@ -109,7 +109,7 @@
     />
   </div>
   <div class="termContainerFooter">
-    <div class="divider m-0 px-2 h-1" />
+    <div class="divider m-0 px-2 h-1"></div>
     <h3>
       {term.tUnits}
       {term.courses.length ? `(${term.courses.length.toString()})` : ''}
