@@ -24,6 +24,7 @@
   $: titleMinWidth = titleWidth + FLOW_EDITOR_HEADER_PADDING_PX;
   $: hideTitle = headerWidth <= TERM_CONTAINER_WIDTH_PX;
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher();
 </script>
 

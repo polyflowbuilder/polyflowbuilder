@@ -31,6 +31,7 @@
   $: unitCounts = computeGroupUnits(flowchart, $courseCache, $programCache);
 
   // scroll width for terms container is only accurate after DOM is in sync with state
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   afterUpdate(() => {
     if (termsContainer) {
       termsContainerScrollWidth = termsContainer.scrollWidth;

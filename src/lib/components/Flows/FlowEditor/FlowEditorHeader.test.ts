@@ -1,26 +1,25 @@
-import FlowEditorHeader from './FlowEditorHeader.svelte';
 import userEvent from '@testing-library/user-event';
+import FlowEditorHeader from './FlowEditorHeader.svelte';
 import { vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 
 async function testArrowScrollState(stateLeft: boolean, stateRight: boolean) {
   const user = userEvent.setup();
 
-  const { component } = render(FlowEditorHeader, {
+  const leftScrollArrowClickEventHandler = vi.fn();
+  const rightScrollArrowClickEventHandler = vi.fn();
+
+  render(FlowEditorHeader, {
     props: {
       name: 'test',
       enableLeftScrollArrow: stateLeft,
       enableRightScrollArrow: stateRight
+    },
+    events: {
+      leftScrollArrowClick: leftScrollArrowClickEventHandler,
+      rightScrollArrowClick: rightScrollArrowClickEventHandler
     }
   });
-
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  const leftArrowCallback = vi.fn(() => {});
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  const rightArrowCallback = vi.fn(() => {});
-
-  component.$on('leftScrollArrowClick', leftArrowCallback);
-  component.$on('rightScrollArrowClick', rightArrowCallback);
 
   // ensure correct things are visible and configured properly
   expect(
@@ -68,22 +67,22 @@ async function testArrowScrollState(stateLeft: boolean, stateRight: boolean) {
   }
 
   // now test event dispatch
-  expect(leftArrowCallback).toHaveBeenCalledTimes(0);
-  expect(rightArrowCallback).toHaveBeenCalledTimes(0);
+  expect(leftScrollArrowClickEventHandler).toHaveBeenCalledTimes(0);
+  expect(rightScrollArrowClickEventHandler).toHaveBeenCalledTimes(0);
 
   await user.click(
     screen.getByRole('button', {
       name: 'flow editor left scroll'
     })
   );
-  expect(leftArrowCallback).toHaveBeenCalledTimes(stateLeft ? 1 : 0);
+  expect(leftScrollArrowClickEventHandler).toHaveBeenCalledTimes(stateLeft ? 1 : 0);
 
   await user.click(
     screen.getByRole('button', {
       name: 'flow editor right scroll'
     })
   );
-  expect(rightArrowCallback).toHaveBeenCalledTimes(stateRight ? 1 : 0);
+  expect(rightScrollArrowClickEventHandler).toHaveBeenCalledTimes(stateRight ? 1 : 0);
 }
 
 describe('FlowEditorHeader component tests', () => {

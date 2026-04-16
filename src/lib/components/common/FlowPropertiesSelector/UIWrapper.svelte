@@ -2,6 +2,7 @@
   import ProgramSelector from './ProgramSelector.svelte';
   import { createEventDispatcher } from 'svelte';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher<{
     deleteProgram: number;
     programIdUpdate: string;

@@ -45,7 +45,6 @@
   <div class="flex-none px-2 mx-2">
     <div class="dropdown">
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label
         tabindex="0"
         class="btn btn-md bg-base-200 hover:bg-gray-300 border-none text-gray-600 mr-2 lg:hidden"
@@ -123,7 +122,7 @@
               </p>
             </div>
           </li>
-          <div class="divider m-0 p-0" />
+          <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
             <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
               Log Out
@@ -136,7 +135,7 @@
               <Fa icon={faUserTimes} class="right-3 absolute text-red-500" />
             </a>
           </li>
-          <div class="divider m-0 p-0" />
+          <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
             <a
               href={'#'}

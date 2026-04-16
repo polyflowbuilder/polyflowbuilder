@@ -75,7 +75,7 @@
   bind:this={openColorSelectorButton}
 >
   <span>Color Selector</span>
-  <div class="colorSelectorSquare" style="background-color: {$selectedColor};" />
+  <div class="colorSelectorSquare" style="background-color: {$selectedColor};"></div>
 </a>
 
 <style lang="postcss">

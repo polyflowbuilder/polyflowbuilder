@@ -4,6 +4,7 @@
   import { availableFlowchartStartYears } from '$lib/client/stores/apiDataStore';
   import { FLOW_NAME_MAX_LENGTH, FLOW_PROGRAMS_MAX_COUNT } from '$lib/common/config/flowDataConfig';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher<{
     optionsValidUpdate: boolean;
     flowProgramIdsUpdate: string[];
@@ -119,10 +120,10 @@
       <p class="label pb-0">
         Programs:
         {#if fetchingData}
-          <span class="ml-2 loading loading-spinner w-5" />
+          <span class="ml-2 loading loading-spinner w-5"></span>
         {/if}
       </p>
-      <div class="divider mt-0 mb-2" />
+      <div class="divider mt-0 mb-2"></div>
 
       {#each programIdInputs as flowProgramIdInput, i (`${flowProgramIdInput}_${i.toString()}`)}
         <UIWrapper
@@ -155,7 +156,7 @@
         >
       {/if}
 
-      <div class="divider my-2" />
+      <div class="divider my-2"></div>
     </div>
   {/if}
 </div>

@@ -159,7 +159,7 @@
       Customize {selectedCoursesData.length === 1 ? 'Course' : 'Courses'}
     </h2>
 
-    <div class="divider" />
+    <div class="divider"></div>
 
     <div class="form-control">
       <!-- courses type -->
@@ -238,7 +238,7 @@
           name="courseDescription"
           placeholder="My Course Description"
           bind:value={newCourseDescription}
-        />
+        ></textarea>
       </label>
     </div>
 
@@ -269,7 +269,7 @@
         disabled={!courseChangesValid}
         on:click={submitUpdateCourseData}>Save Changes</button
       >
-      <div class="divider divider-horizontal" />
+      <div class="divider divider-horizontal"></div>
       <button class="btn btn-almostmd flex-1" on:click={closeModal}>Cancel</button>
     </div>
   </div>

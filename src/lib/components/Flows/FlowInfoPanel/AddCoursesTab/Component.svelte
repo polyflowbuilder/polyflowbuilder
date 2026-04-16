@@ -94,12 +94,12 @@
     <div>
       <h2 class="text-4xl font-medium text-polyGreen text-center mb-2">Add Courses</h2>
       <CourseSearchOptionsSelector bind:searchProgramIndex bind:field bind:query />
-      <div class="divider my-2" />
+      <div class="divider my-2"></div>
     </div>
 
     {#await $activeSearchResults}
       <div class="text-center">
-        <div class="loading loading-spinner w-16 text-polyGreen" />
+        <div class="loading loading-spinner w-16 text-polyGreen"></div>
       </div>
     {:then results}
       {#if results && searchProgramIndex !== -1 && $searchCache.has( { catalog: String(selectedCatalog), field, query: transformedQuery } )}

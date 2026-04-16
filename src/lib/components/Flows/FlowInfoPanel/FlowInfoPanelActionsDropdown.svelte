@@ -36,7 +36,6 @@
 
 <div class="dropdown">
   <!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
-  <!-- svelte-ignore a11y-label-has-associated-control -->
   <label
     tabindex="0"
     role="button"
@@ -94,7 +93,7 @@
         </span>
       </a>
     </li>
-    <div class="divider my-0 py-0 px-2" />
+    <div class="divider my-0 py-0 px-2"></div>
     <li class="text-gray-400 pointer-events-none">
       <div>
         {$selectedCourses.size}
@@ -154,7 +153,7 @@
         on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}>Edit Selected Courses</a
       >
     </li>
-    <div class="divider my-0 py-0 px-2" />
+    <div class="divider my-0 py-0 px-2"></div>
     <li>
       <a
         href={'#'}

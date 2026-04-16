@@ -18,7 +18,7 @@
   <div class="card shadow mt-8 sm:col-start-1 lg:col-start-2 xl:col-start-3 col-span-3">
     <div class="card-body">
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">Create Account</h2>
-      <div class="divider" />
+      <div class="divider"></div>
 
       {#if $page.status === 400 && form?.data.userExists}
         <AlertError
@@ -140,13 +140,13 @@
           {/if}
 
           <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
-            <span class={loading ? 'loading loading-spinner' : ''} />
+            <span class={loading ? 'loading loading-spinner' : ''}></span>
             {registerText}
           </button>
         </div>
       </form>
 
-      <div class="divider" />
+      <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
         <a href="/login" class="hyperlink">Sign In</a>

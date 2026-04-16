@@ -11,6 +11,7 @@
   import type { SvelteComponent } from 'svelte';
   import type { MutableForEachContainerItemInternal } from '$lib/types';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher();
 
   // data props

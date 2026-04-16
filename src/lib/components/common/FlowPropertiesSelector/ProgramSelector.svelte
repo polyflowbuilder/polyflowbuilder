@@ -9,6 +9,7 @@
   import type { Program } from '@prisma/client';
   import type { ConcOptionsCacheValue } from '$lib/types';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher<{
     programIdUpdate: string;
     fetchingDataUpdate: boolean;

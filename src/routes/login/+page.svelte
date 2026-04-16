@@ -18,7 +18,7 @@
   <div class="card shadow mt-8 sm:col-start-1 lg:col-start-2 xl:col-start-3 col-span-3">
     <div class="card-body">
       <h2 class="card-title justify-center font-medium text-4xl text-polyGreen">Sign In</h2>
-      <div class="divider" />
+      <div class="divider"></div>
 
       {#if data.cameFromRegister}
         <AlertSuccess text="Account successfully created! Please login." addlClass="mb-6" />
@@ -111,17 +111,17 @@
           {/if}
 
           <button class="btn btn-accent btn-block mt-6" disabled={loading} type="submit">
-            <span class={loading ? 'loading loading-spinner' : ''} />
+            <span class={loading ? 'loading loading-spinner' : ''}></span>
             {loginText}
           </button>
         </div>
       </form>
 
-      <div class="divider" />
+      <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
         <a href="/forgotpassword" class="hyperlink">Forgot your password?</a>
-        <div class="divider divider-horizontal" />
+        <div class="divider divider-horizontal"></div>
         <a href="/register" class="hyperlink">Create an account</a>
       </div>
     </div>

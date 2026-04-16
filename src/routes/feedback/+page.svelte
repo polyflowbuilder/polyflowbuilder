@@ -14,7 +14,7 @@
   <div class="card shadow mt-8 col-start-2 col-span-4">
     <div class="card-body">
       <h2 class="card-title font-medium justify-center text-4xl text-polyGreen">Submit Feedback</h2>
-      <div class="divider mb-0" />
+      <div class="divider mb-0"></div>
 
       {#if form?.success}
         <AlertSuccess text="Feedback successfully submitted!" addlClass="my-2" />
@@ -89,7 +89,7 @@
             maxlength={FEEDBACK_MESSAGE_MAX_LENGTH}
             required
             bind:value={feedbackText}
-          />
+          ></textarea>
           {#if form?.feedbackValidationErrors?.feedback}
             <small id="feedbackError" class="text-red-600 label label-text-alt"
               >{form.feedbackValidationErrors.feedback[0]}</small
@@ -101,7 +101,7 @@
             disabled={loading || !feedbackText.length}
             type="submit"
           >
-            <span class={loading ? 'loading loading-spinner' : ''} />
+            <span class={loading ? 'loading loading-spinner' : ''}></span>
             Submit Feedback
           </button>
         </div>
