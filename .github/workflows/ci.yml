@@ -82,6 +82,7 @@ jobs:
           node-version: 24
           cache: 'npm'
       - run: npm ci && npm i -g tsx
+      - run: npx svelte-kit sync
       - run: npx playwright install --with-deps ${{ matrix.project }}
       - run: npx prisma migrate deploy
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
