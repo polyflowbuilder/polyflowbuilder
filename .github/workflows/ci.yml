@@ -18,8 +18,8 @@ jobs:
       PUBLIC_PFB_GITHUB_LINK: https://github.com/polyflowbuilder/polyflowbuilder
       PUBLIC_PFB_ANALYTICS_ID:
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: 'npm'
@@ -37,8 +37,8 @@ jobs:
       - run: sudo systemctl start mysql.service
       - run: |
           mysql -e 'CREATE DATABASE main;' --user=root --password=root
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: 'npm'
@@ -76,8 +76,8 @@ jobs:
 
       - run: |
           mysql -e 'CREATE DATABASE main;' --user=root --password=root
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: 'npm'
@@ -86,7 +86,7 @@ jobs:
       - run: npx prisma migrate deploy
       - run: cd api/src/dev && npx tsx api-data-sync && cd ../../..
       - run: npx playwright test --project=${{ matrix.project }} --reporter=html --trace="retain-on-failure"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: playwright-report-${{ matrix.os }}-${{ matrix.project }}
