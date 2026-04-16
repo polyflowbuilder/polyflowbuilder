@@ -192,21 +192,7 @@ async function _downloadPDFsFromLinks() {
   fs.mkdirSync(`${pdfRootDir}/dflows`);
   fs.mkdirSync(`${pdfRootDir}/csheet`);
 
-  let globalLinkWorkingOn = '';
   let workingDir = '';
-
-  // will occur when TCP connection is closed - wait for a bit, redownload
-  process.on('uncaughtException', (async () => {
-    console.log(`CAUGHT TCP CLOSE, redownloading ${globalLinkWorkingOn}`);
-
-    const file = fs.createWriteStream(`${workingDir}/${path.basename(globalLinkWorkingOn)}`);
-    http.get(globalLinkWorkingOn, (response) => {
-      response.pipe(file);
-    });
-
-    await asyncWait(downloadIdleTime);
-    console.log('redownloaded successfully, continue ...');
-  }) as NodeJS.UncaughtExceptionListener);
 
   console.log('download default flows ...');
   for (const flowData of flows) {
@@ -214,7 +200,6 @@ async function _downloadPDFsFromLinks() {
     fs.mkdirSync(workingDir, { recursive: true });
 
     console.log(`downloading PDF ${path.basename(flowData.dataLink)}`);
-    globalLinkWorkingOn = flowData.dataLink;
 
     const file = fs.createWriteStream(`${workingDir}/${path.basename(flowData.dataLink)}`);
     http.get(flowData.dataLink, (response) => {
@@ -230,7 +215,6 @@ async function _downloadPDFsFromLinks() {
     fs.mkdirSync(workingDir, { recursive: true });
 
     console.log(`downloading cSheet ${path.basename(cSheetData.dataLink)}`);
-    globalLinkWorkingOn = cSheetData.dataLink;
 
     const file = fs.createWriteStream(`${workingDir}/${path.basename(cSheetData.dataLink)}`);
     http.get(cSheetData.dataLink, (response) => {

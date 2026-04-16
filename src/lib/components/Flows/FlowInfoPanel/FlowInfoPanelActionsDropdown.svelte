@@ -36,7 +36,6 @@
 
 <div class="dropdown">
   <!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
-  <!-- svelte-ignore a11y-label-has-associated-control -->
   <label
     tabindex="0"
     role="button"

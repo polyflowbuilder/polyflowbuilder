@@ -45,7 +45,6 @@
   <div class="flex-none px-2 mx-2">
     <div class="dropdown">
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label
         tabindex="0"
         class="btn btn-md bg-base-200 hover:bg-gray-300 border-none text-gray-600 mr-2 lg:hidden"

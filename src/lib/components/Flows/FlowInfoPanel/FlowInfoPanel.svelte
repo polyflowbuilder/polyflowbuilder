@@ -7,6 +7,7 @@
   import { PANEL_SIZE_CLOSED, PANEL_SIZE_OPEN } from '$lib/client/config/uiConfig';
 
   // collapsible side panel logic
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   let size = tweened(PANEL_SIZE_OPEN, {
     duration: 400,
     easing: cubicOut

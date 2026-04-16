@@ -5,6 +5,7 @@
   import { createEventDispatcher } from 'svelte';
   import type { CourseItemData } from '$lib/types';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher();
 
   export let item: CourseItemData;

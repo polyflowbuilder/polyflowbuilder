@@ -4,6 +4,7 @@
   import { availableFlowchartStartYears } from '$lib/client/stores/apiDataStore';
   import { FLOW_NAME_MAX_LENGTH, FLOW_PROGRAMS_MAX_COUNT } from '$lib/common/config/flowDataConfig';
 
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   const dispatch = createEventDispatcher<{
     optionsValidUpdate: boolean;
     flowProgramIdsUpdate: string[];
