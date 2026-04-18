@@ -30,7 +30,7 @@ export function asyncWait(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function fetchRetry(input: RequestInfo, init: RequestInit | undefined = undefined) {
+export async function fetchRetry(input: RequestInfo, init?: RequestInit) {
   let count = RETRY_COUNT;
   while (count > 0) {
     try {

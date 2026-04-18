@@ -107,7 +107,7 @@ async function syncCourseData() {
         )
       ) as APICourse[];
 
-      for await (const course of courseOverrideData) {
+      for (const course of courseOverrideData) {
         console.log('update course', course.id);
         await prisma.aPICourse.update({
           data: {

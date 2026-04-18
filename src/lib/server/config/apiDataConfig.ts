@@ -49,10 +49,14 @@ export async function init(): Promise<void> {
   ).map((dbCourseDataRaw) => {
     const { termSummer, termFall, termWinter, termSpring, ...crs } = dbCourseDataRaw;
 
-    // if no tto data is present, all four entries will be null, so just pick one to check
+    // If no tto data is present, all four entries will be null, so just pick one to check.
+    // The uscpCourse and gwrCourse fields are typed as boolean but actually have values '1' or '0',
+    // so they must be coalesced to booleans
     return {
       ...crs,
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
       uscpCourse: !!crs.uscpCourse,
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
       gwrCourse: !!crs.gwrCourse,
       dynamicTerms:
         termSummer === null

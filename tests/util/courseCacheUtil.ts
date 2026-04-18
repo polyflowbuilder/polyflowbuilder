@@ -29,7 +29,7 @@ export async function verifyCourseCacheStrictEquality(
   await assertToStrictEqual(expCatalogs, actCatalogs, testRunner);
 
   // now ensure that each course cache entry is correct
-  for await (const entry of Array.from(expCourseCache.values())) {
+  for (const entry of Array.from(expCourseCache.values())) {
     const expCourseObj = cloneAndDeleteNestedProperty(entry, 'dynamicTerms');
     const actCourseObj = cloneAndDeleteNestedProperty(
       actCourseCache.get({

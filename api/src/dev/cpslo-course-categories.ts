@@ -185,29 +185,25 @@ function findGWRUSCPGECoursesAllCatalogs() {
     fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')
   ) as string[];
 
-  (async () => {
-    for await (const f of catalogYears) {
-      console.log(`sniffing GWR courses for catalog ${f}`);
-      sniffGWRCourses(
-        `${apiRoot}/data/courses/${f}/${f}.json`,
-        `${apiRoot}/data/courses/${f}/${f}-GWR.json`
-      );
+  for (const f of catalogYears) {
+    console.log(`sniffing GWR courses for catalog ${f}`);
+    sniffGWRCourses(
+      `${apiRoot}/data/courses/${f}/${f}.json`,
+      `${apiRoot}/data/courses/${f}/${f}-GWR.json`
+    );
 
-      console.log(`sniffing USCP courses for ${f}`);
-      sniffUSCPCourses(
-        `${apiRoot}/data/courses/${f}/${f}.json`,
-        `${apiRoot}/data/courses/${f}/${f}-USCP.json`
-      );
+    console.log(`sniffing USCP courses for ${f}`);
+    sniffUSCPCourses(
+      `${apiRoot}/data/courses/${f}/${f}.json`,
+      `${apiRoot}/data/courses/${f}/${f}-USCP.json`
+    );
 
-      console.log(`sniffing GE courses for ${f}`);
-      sniffGECourses(
-        `${apiRoot}/data/courses/${f}/${f}.json`,
-        `${apiRoot}/data/courses/${f}/${f}-GE.json`
-      );
-    }
-  })().catch(() => {
-    throw new Error('error occurred when sniffing courses');
-  });
+    console.log(`sniffing GE courses for ${f}`);
+    sniffGECourses(
+      `${apiRoot}/data/courses/${f}/${f}.json`,
+      `${apiRoot}/data/courses/${f}/${f}-GE.json`
+    );
+  }
 }
 
 // run after we generate courses using cpslo-courses as it requires that folder structure to exist

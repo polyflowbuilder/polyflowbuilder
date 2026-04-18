@@ -48,6 +48,6 @@ describe('computeGroupUnits tests', () => {
   test('error thrown when unable to find course metadata entry', () => {
     expect(() => {
       computeGroupUnits(TEST_FLOWCHART_SINGLE_PROGRAM_1, new ObjectMap(), new Map());
-    }).toThrowError('unitCounterUtilClient: unable to locate course metadata for course AGC102');
+    }).toThrow('unitCounterUtilClient: unable to locate course metadata for course AGC102');
   });
 });

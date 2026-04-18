@@ -162,6 +162,7 @@ function updateFlowchartDataVersionToV7(ownerId: string, flow: FlowchartV6Model)
   const updatedFlowchart: Flowchart = {
     id: uuid(),
     ownerId,
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
     name: String(flow.flowName).slice(0, FLOW_NAME_MAX_LENGTH),
     programId: programId as string[],
     startYear: flow.flowStartYear,
@@ -289,14 +290,18 @@ function updateFlowchartDataVersionToV6(flow: FlowchartV5Model): FlowchartV6Mode
   });
 
   const flowchartV6 = {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
     flowName: String(flow.flowName),
     flowId: [
       `${flowIDCatalogYear}.${flow.flowMajor}${
         flow.flowConcentration ? '.' + flow.flowConcentration : ''
       }`
     ],
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
     flowStartYear: String(flow.flowStartYear),
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
     flowUnitTotal: String(flow.flowUnitTotal),
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
     flowNotes: String(flow.flowNotes || ''),
     data: newFlowData,
     publishedID: null,

@@ -280,7 +280,7 @@ describe('computeTermUnits tests', () => {
         apiDataConfig.apiData.courseData,
         apiDataConfig.apiData.programData
       )
-    ).toThrowError('unitCounterUtil: unable to find course metadata for course AGC301');
+    ).toThrow('unitCounterUtil: unable to find course metadata for course AGC301');
   });
 
   test('computeTermUnits unable to find course metadata', () => {
@@ -312,7 +312,7 @@ describe('computeTermUnits tests', () => {
         courseCache1517Only,
         apiDataConfig.apiData.programData
       )
-    ).toThrowError('unitCounterUtil: unable to find course metadata for course AGC301');
+    ).toThrow('unitCounterUtil: unable to find course metadata for course AGC301');
   });
 });
 
@@ -341,7 +341,7 @@ describe('computeTotalUnits tests', () => {
         apiDataConfig.apiData.programData,
         true
       )
-    ).toThrowError('computeTotalUnits: requested fullCompute with no programId');
+    ).toThrow('computeTotalUnits: requested fullCompute with no programId');
   });
 
   test('compute total units for standard flowchart, fullCompute with programId', () => {
