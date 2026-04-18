@@ -33,7 +33,7 @@ describe('computeCourseDisplayValues tests', () => {
         },
         null
       )
-    ).toThrowError('course id not valid for course');
+    ).toThrow('course id not valid for course');
   });
 
   test('standard course with course metadata generates correct data', () => {

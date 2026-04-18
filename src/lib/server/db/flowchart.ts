@@ -84,7 +84,7 @@ export async function upsertFlowcharts(flowcharts: MutateFlowchartData[]): Promi
 
   // perform interactive transaction to update relevant flowcharts
   await prisma.$transaction(async (tx) => {
-    for await (const { id, dbFlow } of flowTransactionQueryPieces) {
+    for (const { id, dbFlow } of flowTransactionQueryPieces) {
       // termData should never be falsy, always array-type and at minimum []
       if (!dbFlow.termData) {
         throw new Error('Flowchart termData should never be null');

@@ -25,6 +25,7 @@ export function cloneAndDeleteNestedProperty(item: unknown, property: string): u
     } else if (typeof item == 'object') {
       // testing that this is DOM
       if ('nodeType' in item && 'cloneNode' in item && typeof item.cloneNode == 'function') {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         result = item.cloneNode(true);
       } else if (!('prototype' in item)) {
         // check that this is a literal

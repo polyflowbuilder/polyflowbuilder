@@ -26,7 +26,6 @@ declare global {
 
   // need var so the client is defined globally
   // TODO: find a way to remove this
-  // eslint-disable-next-line no-var
   var prisma_DO_NOT_IMPORT: PrismaClient | undefined;
 }
 
