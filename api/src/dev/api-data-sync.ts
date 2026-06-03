@@ -76,6 +76,8 @@ async function syncCourseData() {
   ) as string[];
 
   for (const curCatalogYear of catalogYears) {
+    console.log('syncing course data for catalog', curCatalogYear);
+
     const courseData = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}.json`, 'utf8')
     ) as APICourse[];
@@ -89,7 +91,6 @@ async function syncCourseData() {
       )
     ) as CourseRequisite[];
 
-    console.log('syncing course data for catalog', curCatalogYear);
     await prisma.aPICourse.createMany({
       data: courseData,
       skipDuplicates: true
