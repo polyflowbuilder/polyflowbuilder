@@ -183,6 +183,11 @@ async function getAllCoursesCatalog(
           courseData.addl = 'n/a';
         } else {
           addlSelector.forEach((addl) => {
+            // some spans have <br> that break the text up into multiple lines,
+            // so replace them with newlines for correct formatting
+            addl.querySelectorAll('br').forEach((br) => {
+              br.replaceWith('\n');
+            });
             courseData.addl += `${String(addl.textContent)}\n`;
           });
         }
