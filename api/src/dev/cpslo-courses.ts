@@ -18,7 +18,8 @@ const catalogRoots = [
   'http://catalog.calpoly.edu/previouscatalogs/2019-2020/coursesaz/',
   'https://catalog.calpoly.edu/previouscatalogs/2020-2021/coursesaz/',
   'https://catalog.calpoly.edu/previouscatalogs/2021-2022/coursesaz/',
-  'http://catalog.calpoly.edu/coursesaz/' // latest, 2022-2026 "fluid"
+  'https://catalog.calpoly.edu/previouscatalogs/2022-2026/coursesaz/',
+  'http://catalog.calpoly.edu/coursesaz/' // latest, 2026-2028 "fluid"
 ];
 const catalogNames = JSON.parse(
   fs.readFileSync(`${apiRoot}/data/cpslo-catalog-years.json`, 'utf8')

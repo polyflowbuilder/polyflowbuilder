@@ -21,8 +21,8 @@ function sniffGWRCourses(inFile: string, outFile: string) {
     }
   }
 
-  fs.writeFileSync(outFile, JSON.stringify(gwrCourses, null, 2));
-  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2));
+  fs.writeFileSync(outFile, JSON.stringify(gwrCourses, null, 2) + '\n');
+  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2) + '\n');
   console.log(
     `successfully wrote sniffed GWR courses to ${outFile} and updated original course data`
   );
@@ -43,8 +43,8 @@ function sniffUSCPCourses(inFile: string, outFile: string) {
     }
   }
 
-  fs.writeFileSync(outFile, JSON.stringify(uscpCourses, null, 2));
-  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2));
+  fs.writeFileSync(outFile, JSON.stringify(uscpCourses, null, 2) + '\n');
+  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2) + '\n');
   console.log(
     `successfully wrote sniffed USCP courses to ${outFile} and updated original course data`
   );
@@ -170,8 +170,8 @@ function sniffGECourses(inFile: string, outFile: string) {
     }
   }
 
-  fs.writeFileSync(outFile, JSON.stringify(geCourses, null, 2));
-  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2));
+  fs.writeFileSync(outFile, JSON.stringify(geCourses, null, 2) + '\n');
+  fs.writeFileSync(inFile, JSON.stringify(courseData, null, 2) + '\n');
   console.log(
     `successfully wrote sniffed GE courses to ${outFile} and updated original course data`
   );
