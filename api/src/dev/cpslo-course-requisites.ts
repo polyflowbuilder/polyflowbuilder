@@ -146,4 +146,5 @@ function generateCourseRequisiteDataAllCatalogs() {
   });
 }
 
+// to ensure the formatting is consistent, make sure to run npm run format after
 generateCourseRequisiteDataAllCatalogs();
