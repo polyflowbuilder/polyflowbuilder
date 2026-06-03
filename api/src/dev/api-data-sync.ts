@@ -142,6 +142,8 @@ async function syncCourseData() {
         };
       })
     });
+
+    console.log('complete syncing course data for catalog', curCatalogYear);
   }
 
   console.log('db sync of course data finished successfully');
