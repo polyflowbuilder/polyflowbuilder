@@ -82,7 +82,7 @@
   {
     "id": "AERO307",
     "catalog": "2022-2026",
-    "prerequisite": ["AERO 302", " AERO 306", " ENGL 149"],
+    "prerequisite": ["AERO 302 and AERO 306"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -3436,7 +3436,7 @@
   {
     "id": "ARCH451",
     "catalog": "2022-2026",
-    "prerequisite": ["ARCE 316", " ARCH 353", " ARCH 342"],
+    "prerequisite": ["ARCH 353 and ARCH 342"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -3875,7 +3875,7 @@
   {
     "id": "ART315",
     "catalog": "2022-2026",
-    "prerequisite": ["ART 112 or ART 211 or ART 212 or ART 213; and Junior standing"],
+    "prerequisite": ["ART 112 or ART 211 or ART 212 or ART 213"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -5392,7 +5392,7 @@
     "id": "BMED410",
     "catalog": "2022-2026",
     "prerequisite": ["CE 204 or CE 208; and ME 212"],
-    "corequisite": ["BMED 310"],
+    "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
   },
@@ -5400,7 +5400,7 @@
     "id": "BMED420",
     "catalog": "2022-2026",
     "prerequisite": ["CE 204 or CE 208; and MATE 210"],
-    "corequisite": ["BMED 310"],
+    "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
   },
@@ -5511,7 +5511,7 @@
   {
     "id": "BMED460",
     "catalog": "2022-2026",
-    "prerequisite": ["BMED 310 and either BIO 231 or BIO 232; or graduate standing"],
+    "prerequisite": ["BIO 231 or BIO 232; or graduate standing"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -6601,7 +6601,7 @@
     "id": "BUS313",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Completion of GE Area A with grades of C- or better; Entrepreneurship minors only"
+      "BUS 310 or completion of GE Area A with grades of C- or better; Entrepreneurship minor or Entrepreneurship concentration only"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -7290,7 +7290,7 @@
     "id": "BUS488",
     "catalog": "2022-2026",
     "prerequisite": [
-      "BUS 310; BUS 418; Business majors must have declared their concentration to enroll"
+      "BUS 310; BUS 313 or BUS 418; Business majors must have declared their concentration to enroll"
     ],
     "corequisite": [""],
     "recommended": ["BUS 330"],
@@ -9962,17 +9962,23 @@
   {
     "id": "COMS205",
     "catalog": "2022-2026",
-    "prerequisite": ["Completion of GE Area A with grades of C- or better"],
+    "prerequisite": [
+      "Completion of GE Area A1 with a grade of C- or better (GE Area A2 for students on the 2019-20 or earlier catalogs)"
+    ],
     "corequisite": [""],
-    "recommended": ["COMS 100"],
+    "recommended": [
+      "Completion of GE Area A2 with a grade of C- or better (GE Area A1 for students on the 2019-20 or earlier catalogs); and COMS 100"
+    ],
     "concurrent": [""]
   },
   {
     "id": "COMS206",
     "catalog": "2022-2026",
-    "prerequisite": ["Completion of GE Area A with grades of C- or better"],
+    "prerequisite": [
+      "Completion of GE Area A1 with grades of C- or better (GE Area A2 for students on the 2019-20 or earlier catalogs)"
+    ],
     "corequisite": [""],
-    "recommended": [""],
+    "recommended": ["Completion of GE Area A2; and COMS 100"],
     "concurrent": [""]
   },
   {
@@ -9992,7 +9998,9 @@
       "Completion of GE Area A1 with a grade of C- or better (GE Area A2 for students on the 2019-20 or earlier catalogs)"
     ],
     "corequisite": [""],
-    "recommended": [""],
+    "recommended": [
+      "Completion of GE Area A2 with a grade of C- or better (GE Area A1 for students on the 2019-20 or earlier catalogs)"
+    ],
     "concurrent": [""]
   },
   {
@@ -10008,9 +10016,13 @@
   {
     "id": "COMS215",
     "catalog": "2022-2026",
-    "prerequisite": ["Completion of GE Area A with grades of C- or better"],
+    "prerequisite": [
+      "Completion of GE Area A1 with a grade of C- or better (GE Area A2 for students on the 2019-20 or earlier catalogs)"
+    ],
     "corequisite": [""],
-    "recommended": ["COMS 100"],
+    "recommended": [
+      "Completion of GE Area A2 with a grade of C- or better (GE Area A1 for students on the 2019-20 or earlier catalogs)"
+    ],
     "concurrent": [""]
   },
   {
@@ -10020,7 +10032,9 @@
       "Completion of GE Area A1 with a grade of C- or better (GE Area A2 for students on the 2019-20 or earlier catalogs)"
     ],
     "corequisite": [""],
-    "recommended": [""],
+    "recommended": [
+      "Completion of GE Area A2 with a grade of C- or better (GE Area A1 for students on the 2019-20 or earlier catalogs)"
+    ],
     "concurrent": [""]
   },
   {
@@ -10136,7 +10150,7 @@
     "catalog": "2022-2026",
     "prerequisite": ["Completion of GE Area A with grades of a C- or better"],
     "corequisite": [""],
-    "recommended": [""],
+    "recommended": ["COMS 205"],
     "concurrent": [""]
   },
   {
@@ -12908,6 +12922,14 @@
     "corequisite": [""],
     "recommended": [""],
     "concurrent": ["ESM 90"]
+  },
+  {
+    "id": "ESM120",
+    "catalog": "2022-2026",
+    "prerequisite": ["Appropriate Math Placement Level"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
   },
   {
     "id": "ERSC144",
@@ -17510,6 +17532,14 @@
     "concurrent": [""]
   },
   {
+    "id": "FPE570",
+    "catalog": "2022-2026",
+    "prerequisite": ["Graduate standing or consent of instructor"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "FPE593",
     "catalog": "2022-2026",
     "prerequisite": ["Consent of Graduate Coordinator"],
@@ -17941,8 +17971,8 @@
     "id": "FSN416",
     "catalog": "2022-2026",
     "prerequisite": ["FSN 310; FSN 315; FSN 328 or FSN 331; and senior standing"],
-    "corequisite": ["FSN 415"],
-    "recommended": [""],
+    "corequisite": [""],
+    "recommended": ["FSN 415"],
     "concurrent": [""]
   },
   {
@@ -18235,6 +18265,54 @@
     "concurrent": [""]
   },
   {
+    "id": "FSN550",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN551",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN552",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN553",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN554",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN556",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "FSN564",
     "catalog": "2022-2026",
     "prerequisite": ["FSN 364 or graduate standing"],
@@ -18286,6 +18364,14 @@
     "id": "FSN582",
     "catalog": "2022-2026",
     "prerequisite": ["Graduate standing or consent of instructor"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "FSN598",
+    "catalog": "2022-2026",
+    "prerequisite": ["Admission into Cal Poly's dietetic internship programs; and STAT 511"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -20350,9 +20436,9 @@
   {
     "id": "HLTH318",
     "catalog": "2022-2026",
-    "prerequisite": ["HLTH/KINE 298; and PSY 201 or PSY 202"],
+    "prerequisite": ["HLTH/KINE 298"],
     "corequisite": [""],
-    "recommended": ["STAT 313"],
+    "recommended": ["PSY 201 or PSY 202", " and STAT 313"],
     "concurrent": [""]
   },
   {
@@ -21444,18 +21530,26 @@
     "concurrent": [""]
   },
   {
+    "id": "HNRS120",
+    "catalog": "2022-2026",
+    "prerequisite": [""],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "HNRS132",
     "catalog": "2022-2026",
-    "prerequisite": ["PHYS 141; and MATH 142 or MATH 182"],
-    "corequisite": [""],
+    "prerequisite": ["PHYS 141 and MATH 141"],
+    "corequisite": ["MATH 142 or MATH 182"],
     "recommended": [""],
     "concurrent": [""]
   },
   {
     "id": "HNRS134",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 141 with grade C- or better"],
-    "corequisite": ["MATH 142 or MATH 182"],
+    "prerequisite": [""],
+    "corequisite": ["MATH 141", " MATH 142", " or MATH 182"],
     "recommended": ["High School Physics"],
     "concurrent": [""]
   },
@@ -21668,7 +21762,7 @@
   {
     "id": "HNRS244",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 143"],
+    "prerequisite": ["MATH 122 or MATH 143"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -21677,14 +21771,6 @@
     "id": "HNRS251",
     "catalog": "2022-2026",
     "prerequisite": ["Completion of GE Area A with grades of C- or better"],
-    "corequisite": [""],
-    "recommended": [""],
-    "concurrent": [""]
-  },
-  {
-    "id": "HNRS252",
-    "catalog": "2022-2026",
-    "prerequisite": [""],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -21842,7 +21928,7 @@
     "id": "HNRS325",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -24341,7 +24427,7 @@
     "id": "KINE323",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); completion of GE Area D1; and one course in GE Area D2 (or in GE Area D3 for students on the 2019-20 or earlier catalogs) or in GE Area E (GE Area D4 for students on the 2017-19 or earlier catalogs)"
+      "Junior standing; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and one lower-division course in GE Area D"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -26239,7 +26325,7 @@
   {
     "id": "MATH161",
     "catalog": "2022-2026",
-    "prerequisite": ["Appropriate Math Placement Level; or MATH 117; or MATH 118"],
+    "prerequisite": ["Appropriate Math Placement Level; or MATH 117; or MATH 118; or MATH 119"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26295,7 +26381,7 @@
   {
     "id": "MATH206",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 143"],
+    "prerequisite": ["MATH 122 or MATH 143"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26303,7 +26389,7 @@
   {
     "id": "MATH221",
     "catalog": "2022-2026",
-    "prerequisite": ["Appropriate Math Placement Level; or MATH 117; or MATH 118"],
+    "prerequisite": ["Appropriate Math Placement Level; or MATH 117; or MATH 118; or MATH 119"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26335,7 +26421,7 @@
   {
     "id": "MATH242",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 206 and MATH 241"],
+    "prerequisite": ["MATH 206; and MATH 123 or MATH 241"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26343,7 +26429,7 @@
   {
     "id": "MATH244",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 143"],
+    "prerequisite": ["MATH 122 or MATH 143"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26351,7 +26437,7 @@
   {
     "id": "MATH248",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 143"],
+    "prerequisite": ["MATH 123 or MATH 143"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26363,6 +26449,14 @@
     "corequisite": [""],
     "recommended": [""],
     "concurrent": ["Enrollment in the associated section of MATH 241"]
+  },
+  {
+    "id": "MATH253",
+    "catalog": "2022-2026",
+    "prerequisite": ["MATH 123 or MATH 241; and MATH 206"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
   },
   {
     "id": "MATH254",
@@ -26410,8 +26504,7 @@
     "id": "MATH306",
     "catalog": "2022-2026",
     "prerequisite": [
-      "MATH 206 or MATH 244; MATH 241; and a C- or better in MATH 248",
-      " or consent of instructor"
+      "MATH 206 or MATH 244; and MATH 123 or MATH 143; and MATH 248 with a grade of C- or better or consent of instructor"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -26483,8 +26576,7 @@
     "prerequisite": [
       "Junior standing or one of the following majors: BMED",
       " MATH",
-      " or ME; completion of GE Area A with grades of C- or better; and one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); MATH 206 and MATH 242",
-      " or MATH 241 and MATH 244"
+      " or ME; completion of GE Area A with grades of C- or better; and one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and MATH 242 or MATH 244; and MATH 123 or MATH 241"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -26594,7 +26686,7 @@
   {
     "id": "MATH416",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 206 and MATH 242", " or MATH 241 and MATH 244"],
+    "prerequisite": ["MATH 242 or MATH 244; and MATH 123 or MATH 241"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
@@ -26719,9 +26811,7 @@
     "id": "MATH451",
     "catalog": "2022-2026",
     "prerequisite": [
-      "MATH 206 and MATH 242",
-      " or MATH 241 and MATH 244",
-      " and an introductory college-level programming course"
+      "MATH 242 or MATH 244; and MATH 123 or MATH 241; and an introductory college-level programming course"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29200,6 +29290,14 @@
     "concurrent": [""]
   },
   {
+    "id": "NR341",
+    "catalog": "2022-2026",
+    "prerequisite": ["Junior standing"],
+    "corequisite": [""],
+    "recommended": ["NR 204"],
+    "concurrent": [""]
+  },
+  {
     "id": "NR349",
     "catalog": "2022-2026",
     "prerequisite": [
@@ -29449,6 +29547,14 @@
     "concurrent": [""]
   },
   {
+    "id": "NR464",
+    "catalog": "2022-2026",
+    "prerequisite": ["One of the following: NR 304", " NR 305", " NR 306", " SS 321", " or SS 422"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "NR465",
     "catalog": "2022-2026",
     "prerequisite": ["NR 326 and NR 416"],
@@ -29656,7 +29762,7 @@
     "id": "PHIL301",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29666,7 +29772,7 @@
     "id": "PHIL309",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29676,7 +29782,7 @@
     "id": "PHIL310",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29686,7 +29792,7 @@
     "id": "PHIL312",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29696,7 +29802,7 @@
     "id": "PHIL313",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29706,7 +29812,7 @@
     "id": "PHIL314",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29716,7 +29822,7 @@
     "id": "PHIL315",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29726,7 +29832,7 @@
     "id": "PHIL317",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29736,7 +29842,7 @@
     "id": "PHIL318",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29746,7 +29852,7 @@
     "id": "PHIL319",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29756,7 +29862,7 @@
     "id": "PHIL321",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29776,7 +29882,7 @@
     "id": "PHIL323",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29786,7 +29892,7 @@
     "id": "PHIL327",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29796,7 +29902,7 @@
     "id": "PHIL328",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29806,7 +29912,7 @@
     "id": "PHIL331",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29876,7 +29982,7 @@
     "id": "PHIL339",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -29886,7 +29992,7 @@
     "id": "PHIL340",
     "catalog": "2022-2026",
     "prerequisite": [
-      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and lower-division PHIL course in GE Area C"
+      "Junior standing or Philosophy major; completion of GE Area A with grades of C- or better; one course in GE Area B4 with a grade of C- or better (GE Area B1 for students on the 2019-20 or earlier catalogs); and completion of GE Area C2"
     ],
     "corequisite": [""],
     "recommended": [""],
@@ -30437,25 +30543,25 @@
   {
     "id": "PHYS141",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 141 with grade C- or better"],
-    "corequisite": ["MATH 142 or MATH 182"],
+    "prerequisite": [""],
+    "corequisite": ["MATH 141", " MATH 142", " or MATH 182"],
     "recommended": ["High School Physics"],
     "concurrent": [""]
   },
   {
     "id": "PHYS142",
     "catalog": "2022-2026",
-    "prerequisite": ["PHYS 141; and MATH 142 or MATH 182"],
-    "corequisite": [""],
+    "prerequisite": ["PHYS 141 and MATH 141"],
+    "corequisite": ["MATH 142 or MATH 182"],
     "recommended": [""],
     "concurrent": [""]
   },
   {
     "id": "PHYS143",
     "catalog": "2022-2026",
-    "prerequisite": ["MATH 142 and PHYS 141"],
-    "corequisite": [""],
-    "recommended": ["MATH 241"],
+    "prerequisite": ["PHYS 141 and MATH 141"],
+    "corequisite": ["MATH 142 or MATH 182"],
+    "recommended": [""],
     "concurrent": [""]
   },
   {
@@ -33632,6 +33738,19 @@
     "concurrent": [""]
   },
   {
+    "id": "SCM240",
+    "catalog": "2022-2026",
+    "prerequisite": [
+      "Completion of GE Area A with grades of C- or better; and one of the following: STAT 217",
+      " STAT 218",
+      " STAT 251",
+      " STAT 301 or STAT 312"
+    ],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "SCM270",
     "catalog": "2022-2026",
     "prerequisite": ["Open to undergraduate students and consent of instructor"],
@@ -33687,6 +33806,14 @@
     ],
     "corequisite": [""],
     "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "SCM340",
+    "catalog": "2022-2026",
+    "prerequisite": ["Junior standing; completion of GE Area A with grades C- or better"],
+    "corequisite": [""],
+    "recommended": ["SCM 240"],
     "concurrent": [""]
   },
   {
@@ -36396,6 +36523,30 @@
     "concurrent": [""]
   },
   {
+    "id": "WLC101",
+    "catalog": "2022-2026",
+    "prerequisite": [""],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "WLC102",
+    "catalog": "2022-2026",
+    "prerequisite": ["WLC 101 or consent of instructor"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
+    "id": "WLC103",
+    "catalog": "2022-2026",
+    "prerequisite": ["WLC 102 or consent of instructor"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "WLC200",
     "catalog": "2022-2026",
     "prerequisite": ["Consent of instructor"],
@@ -36404,9 +36555,17 @@
     "concurrent": [""]
   },
   {
+    "id": "WLC201",
+    "catalog": "2022-2026",
+    "prerequisite": ["WLC 103 or consent of instructor"],
+    "corequisite": [""],
+    "recommended": [""],
+    "concurrent": [""]
+  },
+  {
     "id": "WLC202",
     "catalog": "2022-2026",
-    "prerequisite": ["WLC 201"],
+    "prerequisite": ["WLC 201"],
     "corequisite": [""],
     "recommended": [""],
     "concurrent": [""]
