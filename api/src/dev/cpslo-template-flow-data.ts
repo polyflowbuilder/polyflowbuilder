@@ -292,13 +292,15 @@ async function _scrapeTemplateFlowMetadataFrom20262028Catalog() {
   // no cSheetLinks for 26-28 catalog
   //const flowchartLinks: Program[] = [];
 
-  const root = 'https://catalog.calpoly.edu/programs/';
-  const response = await fetchRetry(root);
-  const text = await response.text();
+  const catalogRoot = 'https://catalog.calpoly.edu';
+
+  const catalogProgramsResponse = await fetchRetry(`${catalogRoot}/programs/`);
+  const text = await catalogProgramsResponse.text();
   const dom = new JSDOM(text);
   const document = dom.window.document;
 
   // get the majors from links on the page
+  const programLinks: string[] = [];
   const programLinkSelector = document.querySelectorAll('.az_sitemap ul li a');
   for (const elem of programLinkSelector) {
     const text = elem.textContent;
@@ -326,16 +328,16 @@ async function _scrapeTemplateFlowMetadataFrom20262028Catalog() {
       }
     }
 
-    console.log(`program [${programType}] [${text ?? ''}] ${href ?? ''}`);
+    const programLink = `${catalogRoot}${href ?? ''}${programType === 'undergraduate' ? '#planofstudytext' : ''}`;
+    console.log(`detected program [${programType}] [${text ?? ''}] [${programLink}]`);
+    programLinks.push(programLink);
   }
 
   // TODO:
   // 1. need to process these programs - there are three types: undergraduate, graduate, minors
+  //  - if programType === 'undergraduate', then navigate into programLink and get concentrations
+  //  - otherwise, add program AS-IS to flowchartLinks (no concentrations for graduate and minor)
   // 2. maybe add new field in program data for programType? then add programType to NewFlowModal/ProgramSelector?
-  // 3. need to programmatically determine which course is undergraduate, graduate, or minor
-  //  - undergraduate: text inside () contains 'B'
-  //  - graduate: text inside () contains 'M' or is 'MBA' (only example where program has 'M' and 'B')
-  //  - minor: name contains 'Minor'
 }
 
 // void _scrapeTemplateFlowMetadataFromFlowchartsPage();
