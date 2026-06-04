@@ -24,8 +24,8 @@ function parseOptionsResponse(optionsResponse: string) {
     .map((val) => val.replace("<option value='", '').split("'>"));
 }
 
-async function _scrapeTemplateFlowMetadata() {
-  console.log('starting scrapeTemplateFlowchartMetadata ...');
+async function _scrapeTemplateFlowMetadataFromFlowchartsPage() {
+  console.log('starting scrapeTemplateFlowMetadataFromFlowchartsPage ...');
 
   // only scrape links for catalogs that are eligible
   const eligibleCatalogYears: string[] = JSON.parse(
@@ -283,7 +283,63 @@ async function _updateTemplateFlowchartsToLatestDataVersion() {
   }
 }
 
-// void _scrapeTemplateFlowMetadata();
+// need another scrape technique for 2026-2028 catalog
+// (and maybe newer catalogs) because they don't have PDF flowcharts anymore.
+// instead, there are textual flowcharts (which hopefully we can scrape programmatically)
+async function _scrapeTemplateFlowMetadataFrom20262028Catalog() {
+  console.log('start scrapeTemplateFlowMetadataFrom20262028Catalog ...');
+
+  // no cSheetLinks for 26-28 catalog
+  //const flowchartLinks: Program[] = [];
+
+  const root = 'https://catalog.calpoly.edu/programs/';
+  const response = await fetchRetry(root);
+  const text = await response.text();
+  const dom = new JSDOM(text);
+  const document = dom.window.document;
+
+  // get the majors from links on the page
+  const programLinkSelector = document.querySelectorAll('.az_sitemap ul li a');
+  for (const elem of programLinkSelector) {
+    const text = elem.textContent;
+    const href = elem.attributes.getNamedItem('href')?.textContent;
+
+    if (href?.includes('#')) {
+      continue;
+    }
+
+    let programType = 'unknown';
+    if (text.includes('Minor')) {
+      programType = 'minor';
+    } else if (text.includes('(')) {
+      // have to do this dance because some program names
+      // have more than one parens block - we just want the first
+      const openParensLocation = text.indexOf('(');
+      const closeParensLocation = text.indexOf(')');
+      const parensText = text.substring(openParensLocation, closeParensLocation);
+
+      // a couple edge cases for the graduate programs, so include them here
+      if (parensText.includes('MBA') || parensText.includes('M') || parensText.includes('CRP/CE')) {
+        programType = 'graduate';
+      } else if (parensText.includes('B')) {
+        programType = 'undergraduate';
+      }
+    }
+
+    console.log(`program [${programType}] [${text ?? ''}] ${href ?? ''}`);
+  }
+
+  // TODO:
+  // 1. need to process these programs - there are three types: undergraduate, graduate, minors
+  // 2. maybe add new field in program data for programType? then add programType to NewFlowModal/ProgramSelector?
+  // 3. need to programmatically determine which course is undergraduate, graduate, or minor
+  //  - undergraduate: text inside () contains 'B'
+  //  - graduate: text inside () contains 'M' or is 'MBA' (only example where program has 'M' and 'B')
+  //  - minor: name contains 'Minor'
+}
+
+// void _scrapeTemplateFlowMetadataFromFlowchartsPage();
 // void _downloadPDFsFromLinks();
 // void _createJSONFiles();
-void _updateTemplateFlowchartsToLatestDataVersion();
+// void _updateTemplateFlowchartsToLatestDataVersion();
+void _scrapeTemplateFlowMetadataFrom20262028Catalog();
