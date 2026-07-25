@@ -76,6 +76,8 @@ async function syncCourseData() {
   ) as string[];
 
   for (const curCatalogYear of catalogYears) {
+    console.log('syncing course data for catalog', curCatalogYear);
+
     const courseData = JSON.parse(
       fs.readFileSync(`${apiRoot}/data/courses/${curCatalogYear}/${curCatalogYear}.json`, 'utf8')
     ) as APICourse[];
@@ -89,7 +91,6 @@ async function syncCourseData() {
       )
     ) as CourseRequisite[];
 
-    console.log('syncing course data for catalog', curCatalogYear);
     await prisma.aPICourse.createMany({
       data: courseData,
       skipDuplicates: true
@@ -141,19 +142,28 @@ async function syncCourseData() {
         };
       })
     });
+
+    console.log('complete syncing course data for catalog', curCatalogYear);
   }
 
   console.log('db sync of course data finished successfully');
 }
 
 async function syncProgramData() {
-  const programData = JSON.parse(
+  // TODO: improve name here, but these are programs for all catalogs before 26-28
+  const programDataExistingCatalogs = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
   ) as TemplateFlowchartMetadata;
 
+  const programData20262028Catalog = JSON.parse(
+    fs.readFileSync(`${apiRoot}/data/2026-2028-cpslo-template-flow-data.json`, 'utf8')
+  ) as TemplateFlowchartMetadata;
+
+  const programData = programDataExistingCatalogs.flows.concat(programData20262028Catalog.flows);
+
   console.log('syncing program data with db ...');
   await prisma.program.createMany({
-    data: programData.flows
+    data: programData
   });
   console.log('program sync complete');
 }

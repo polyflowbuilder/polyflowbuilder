@@ -364,7 +364,7 @@ export const responsePayload1 = {
     unitTotal: '189',
     notes:
       'This is an auto-generated flowchart. Change it to fit your needs! ' +
-      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+      'The official Cal Poly flowchart resources for the programs in this flowchart are listed below:' +
       '\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n\n' +
       'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
       'and it does not reflect official degree progress or information. ' +
@@ -663,7 +663,7 @@ export const responsePayload1 = {
     unitTotal: '149',
     notes:
       'This is an auto-generated flowchart. Change it to fit your needs! ' +
-      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+      'The official Cal Poly flowchart resources for the programs in this flowchart are listed below:' +
       '\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n\n' +
       'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
       'and it does not reflect official degree progress or information. ' +
@@ -1862,7 +1862,7 @@ export const responsePayload2 = {
     unitTotal: '343-347',
     notes:
       'This is an auto-generated flowchart. Change it to fit your needs! ' +
-      'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:\n\n' +
+      'The official Cal Poly flowchart resources for the programs in this flowchart are listed below:\n\n' +
       '- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.52AEROBSU.ARNAEROU.pdf\n' +
       '- Program #2: http://flowcharts.calpoly.edu/downloads/mymap/22-26.76BCHMBSU.PYCBCHMU.pdf\n' +
       '\nDisclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
@@ -2385,7 +2385,7 @@ export const responsePayload2 = {
       displayName: 'General Physics I',
       units: '4',
       desc: 'Fundamental principles of mechanics.  Vectors, particle kinematics.  Equilibrium of a rigid body.  Work and energy, linear momentum, rotational kinematics and dynamics.  Primarily for engineering and science students.  Course may be offered in classroom-based or online format.  4 lectures.  Crosslisted as HNRS 134/PHYS 141.  Fulfills GE Area B1 (GE Area B3 for students on the 2019-20 or earlier catalogs).\n',
-      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2019-20 or earlier catalog: GE Area B3\nPrerequisite: MATH 141 with grade C- or better. Corequisite: MATH 142 or MATH 182. Recommended: High School Physics.\n',
+      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2019-20 or earlier catalog: GE Area B3\nCorequisite: MATH 141, MATH 142, or MATH 182. Recommended: High School Physics.\n',
       gwrCourse: false,
       uscpCourse: false,
       dynamicTerms: null
@@ -2395,8 +2395,8 @@ export const responsePayload2 = {
       catalog: '2022-2026',
       displayName: 'Argument and Advocacy',
       units: '4',
-      desc: 'The nature of critical thinking as applied in oral and written argument.  Study of inductive and deductive reasoning.  Analysis of reasoning, argument, forms of support and fallacies of argument and language.  Instruction in and practical experience in crafting sound persuasive arguments and engaging in oral argumentation.  Course may be offered in classroom-based or hybrid format.  4 lectures.   Fulfills GE Area A3 with a grade of C- or better.\n',
-      addl: 'Term Typically Offered: F\n2020-21 or later catalog: GE Area A3\n2019-20 or earlier catalog: GE Area A3\nPrerequisite: Completion of GE Area A2 with a grade of C- or better (GE Area A1 for student on the 2019-20 or an earlier catalog). Recommended: Completion of GE Area A1 with a grade of C- or better (GE Area A2 for student on the 2019-20 or an earlier catalog).\n',
+      desc: 'The nature of critical thinking as applied in oral and written argument.  Study of inductive and deductive reasoning.  Analysis of reasoning, argument, forms of support and fallacies of argument and language.  Instruction in and practical experience in crafting sound persuasive arguments and engaging in oral argumentation.  Course may be offered in classroom-based, online, or hybrid format.  4 lectures.   Fulfills GE Area A3 with a grade of C- or better.\n',
+      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area A3\n2019-20 or earlier catalog: GE Area A3\nPrerequisite: Completion of GE Area A2 with a grade of C- or better (GE Area A1 for student on the 2019-20 or an earlier catalog). Recommended: Completion of GE Area A1 with a grade of C- or better (GE Area A2 for student on the 2019-20 or an earlier catalog).\n',
       gwrCourse: false,
       uscpCourse: false,
       dynamicTerms: null
@@ -2429,7 +2429,7 @@ export const responsePayload2 = {
       displayName: 'General Physics II',
       units: '4',
       desc: 'Oscillations, waves in elastic media, sound waves.  Temperature, heat and the first law of thermodynamics.  Kinetic theory of matter, second law of thermodynamics.  Geometrical and physical optics.  3 lectures, 1 laboratory.  Crosslisted as HNRS 132/PHYS 142.  Fulfills GE Areas B1 and B3 (GE Areas B3 and B4 for students on the 2019-20 or earlier catalogs).  Formerly PHYS 132.\n',
-      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2020-21 or later catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B4\nPrerequisite: PHYS 141; and MATH 142 or MATH 182.\n',
+      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2020-21 or later catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B4\nPrerequisite: PHYS 141 and MATH 141. Corequisite: MATH 142 or MATH 182.\n',
       gwrCourse: false,
       uscpCourse: false,
       dynamicTerms: null
@@ -2473,7 +2473,7 @@ export const responsePayload2 = {
       displayName: 'General Physics III',
       units: '4',
       desc: 'Charge and matter, electric field, electric potential, dielectrics, capacitance, current and resistance, electromotive force and circuits, magnetic fields, magnetic field of a moving charge, induced emf.  3 lectures, 1 laboratory.  Fulfills GE Areas B1 and B3 (GE Areas B3 and B4 for students on the 2019-20 or earlier catalogs).  Formerly PHYS 133.\n',
-      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2020-21 or later catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B4\nPrerequisite: MATH 142 and PHYS 141. Recommended: MATH 241.\n',
+      addl: 'Term Typically Offered: F,W,SP,SU\n2020-21 or later catalog: GE Area B1\n2020-21 or later catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B3\n2019-20 or earlier catalog: GE Area B4\nPrerequisite: PHYS 141 and MATH 141. Corequisite: MATH 142 or MATH 182.\n',
       gwrCourse: false,
       uscpCourse: false,
       dynamicTerms: null
@@ -3356,7 +3356,7 @@ export const responsePayload3 = {
     ],
     unitTotal: '352',
     notes:
-      'This is an auto-generated flowchart. Change it to fit your needs! The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.10AGBBSU.pdf\n- Program #2: http://flowcharts.calpoly.edu/downloads/mymap/17-19.48ARTBFAU.PHOVARTU.pdf\n\nDisclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, and it does not reflect official degree progress or information. Plan with care and consult an academic advisor if necessary.',
+      'This is an auto-generated flowchart. Change it to fit your needs! The official Cal Poly flowchart resources for the programs in this flowchart are listed below:\n\n- Program #1: http://flowcharts.calpoly.edu/downloads/mymap/15-17.10AGBBSU.pdf\n- Program #2: http://flowcharts.calpoly.edu/downloads/mymap/17-19.48ARTBFAU.PHOVARTU.pdf\n\nDisclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, and it does not reflect official degree progress or information. Plan with care and consult an academic advisor if necessary.',
     version: 7,
     publishedId: null,
     importedId: null

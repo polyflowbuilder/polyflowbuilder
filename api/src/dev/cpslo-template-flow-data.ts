@@ -24,8 +24,8 @@ function parseOptionsResponse(optionsResponse: string) {
     .map((val) => val.replace("<option value='", '').split("'>"));
 }
 
-async function _scrapeTemplateFlowMetadata() {
-  console.log('starting scrapeTemplateFlowchartMetadata ...');
+async function _scrapeTemplateFlowMetadataFromFlowchartsPage() {
+  console.log('starting scrapeTemplateFlowMetadataFromFlowchartsPage ...');
 
   // only scrape links for catalogs that are eligible
   const eligibleCatalogYears: string[] = JSON.parse(
@@ -283,7 +283,132 @@ async function _updateTemplateFlowchartsToLatestDataVersion() {
   }
 }
 
-// void _scrapeTemplateFlowMetadata();
+// need another scrape technique for 2026-2028 catalog
+// (and maybe newer catalogs) because they don't have PDF flowcharts anymore.
+// instead, there are textual flowcharts (which hopefully we can scrape programmatically)
+async function _scrapeTemplateFlowMetadataFrom20262028Catalog() {
+  console.log('start scrapeTemplateFlowMetadataFrom20262028Catalog ...');
+
+  // no cSheetLinks for 26-28 catalog
+  const programs: Program[] = [];
+
+  const catalogRoot = 'https://catalog.calpoly.edu';
+
+  const catalogProgramsResponse = await fetchRetry(`${catalogRoot}/programs/`);
+  const text = await catalogProgramsResponse.text();
+  const dom = new JSDOM(text);
+  const document = dom.window.document;
+
+  // get the programs from links on the page
+  const programLinkSelector = document.querySelectorAll('.az_sitemap ul li a');
+  for (const elem of programLinkSelector) {
+    const programName = elem.textContent;
+    const href = elem.attributes.getNamedItem('href')?.textContent;
+
+    if (href?.includes('#') || !programName) {
+      continue;
+    }
+
+    let programType = 'unknown';
+    if (programName.includes('Minor')) {
+      programType = 'minor';
+    } else if (programName.includes('(')) {
+      // have to do this dance because some program names
+      // have more than one parens block - we just want the first
+      const openParensLocation = programName.indexOf('(');
+      const closeParensLocation = programName.indexOf(')');
+      const parensText = programName.substring(openParensLocation, closeParensLocation);
+
+      // a couple edge cases for the graduate programs, so include them here
+      if (parensText.includes('MBA') || parensText.includes('M') || parensText.includes('CRP/CE')) {
+        programType = 'graduate';
+      } else if (parensText.includes('B')) {
+        programType = 'undergraduate';
+      }
+    }
+
+    const programLink = `${catalogRoot}${href ?? ''}`;
+    console.log(`detected program [${programType}] [${programName}] [${programLink}]`);
+
+    // TODO: Process, save, and add support for graduate and minor programs as well.
+    // TODO: Today it's just undergraduate programs.
+    if (programType != 'undergraduate') {
+      continue;
+    }
+
+    // get all concentrations for each program if applicable
+    const programConcentrations =
+      await getProgramConcentrationsFor20262028CatalogProgram(programLink);
+
+    for (const concentration of programConcentrations) {
+      // generate code
+      const programCodeProgramName = programLink.split('/').at(-2) ?? programLink;
+      const programCodeConcentrationName = concentration
+        .replaceAll(/[^a-zA-Z0-9\s]/g, '')
+        .replaceAll(' ', '-');
+      const programCode =
+        `26-28.${programCodeProgramName}.${programCodeConcentrationName}`.toUpperCase();
+
+      const program: Program = {
+        id: uuid(),
+        catalog: '2026-2028',
+        majorName: programName,
+        concName: concentration,
+        code: programCode,
+        dataLink: programLink
+      };
+
+      console.log('adding program', program);
+      programs.push(program);
+    }
+  }
+
+  // save program data to file
+  // follow the existing format for compatibility
+  // (even though we don't have cSheets for this catalog)
+  console.log('writing out scraped programs ...');
+  fs.writeFileSync(
+    `${apiRoot}/data/2026-2028-cpslo-template-flow-data.json`,
+    JSON.stringify(
+      {
+        flows: programs,
+        cSheets: []
+      },
+      null,
+      2
+    )
+  );
+
+  console.log('done!');
+  process.exit(0);
+}
+
+async function getProgramConcentrationsFor20262028CatalogProgram(
+  programLink: string
+): Promise<string[]> {
+  const programConcentrations = [];
+
+  console.log(`getting program concentrations for link ${programLink}`);
+
+  const programLinkResponse = await fetchRetry(programLink);
+  const text = await programLinkResponse.text();
+  const dom = new JSDOM(text);
+  const document = dom.window.document;
+
+  const flowchartButtonSelector = document.querySelectorAll('#planofstudytextcontainer h3');
+  for (const elem of flowchartButtonSelector) {
+    const concentrationName = elem.textContent.trim();
+    if (concentrationName) {
+      console.log(`detected concentration [${concentrationName}]`);
+      programConcentrations.push(concentrationName);
+    }
+  }
+
+  return programConcentrations;
+}
+
+// void _scrapeTemplateFlowMetadataFromFlowchartsPage();
 // void _downloadPDFsFromLinks();
 // void _createJSONFiles();
-void _updateTemplateFlowchartsToLatestDataVersion();
+// void _updateTemplateFlowchartsToLatestDataVersion();
+void _scrapeTemplateFlowMetadataFrom20262028Catalog();
