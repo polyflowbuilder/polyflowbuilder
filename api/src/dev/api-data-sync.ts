@@ -150,13 +150,20 @@ async function syncCourseData() {
 }
 
 async function syncProgramData() {
-  const programData = JSON.parse(
+  // TODO: improve name here, but these are programs for all catalogs before 26-28
+  const programDataExistingCatalogs = JSON.parse(
     fs.readFileSync(`${apiRoot}/data/cpslo-template-flow-data.json`, 'utf8')
   ) as TemplateFlowchartMetadata;
 
+  const programData20262028Catalog = JSON.parse(
+    fs.readFileSync(`${apiRoot}/data/2026-2028-cpslo-template-flow-data.json`, 'utf8')
+  ) as TemplateFlowchartMetadata;
+
+  const programData = programDataExistingCatalogs.flows.concat(programData20262028Catalog.flows);
+
   console.log('syncing program data with db ...');
   await prisma.program.createMany({
-    data: programData.flows
+    data: programData
   });
   console.log('program sync complete');
 }
