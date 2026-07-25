@@ -57,7 +57,7 @@ function generateFlowchartNotes(flowchartPrograms: ProgramCache) {
 
   return (
     'This is an auto-generated flowchart. Change it to fit your needs! ' +
-    'The official Cal Poly flowchart PDFs for the programs in this flowchart are listed below:' +
+    'The official Cal Poly flowchart resources for the programs in this flowchart are listed below:' +
     `\n\n${programNotes.join('\n')}\n\n` +
     'Disclaimer: This auto-generated flowchart is not an official Cal Poly flowchart, ' +
     'and it does not reflect official degree progress or information. ' +
