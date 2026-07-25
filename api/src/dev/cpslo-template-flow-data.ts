@@ -381,12 +381,6 @@ async function _scrapeTemplateFlowMetadataFrom20262028Catalog() {
 
   console.log('done!');
   process.exit(0);
-
-  // TODO:
-  // 1. need to process these programs - there are three types: undergraduate, graduate, minors
-  //  - if programType === 'undergraduate', then navigate into programLink and get concentrations
-  //  - otherwise, add program AS-IS to flowchartLinks (no concentrations for graduate and minor)
-  // 2. maybe add new field in program data for programType? then add programType to NewFlowModal/ProgramSelector?
 }
 
 async function getProgramConcentrationsFor20262028CatalogProgram(
