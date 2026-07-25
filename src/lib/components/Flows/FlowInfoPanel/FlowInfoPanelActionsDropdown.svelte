@@ -56,7 +56,7 @@
   >
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || disableAddTerms}
         aria-disabled={actionsButtonDisabled || disableAddTerms}
         on:click|preventDefault={() => ($addTermsModalOpen = true)}>Add Terms</a
@@ -64,7 +64,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || disableDeleteTerms}
         aria-disabled={actionsButtonDisabled || disableDeleteTerms}
         on:click|preventDefault={() => ($deleteTermsModalOpen = true)}>Remove Terms</a
@@ -72,7 +72,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled}
         aria-disabled={actionsButtonDisabled}
         on:click|preventDefault={() => ($editFlowPropertiesModalOpen = true)}
@@ -81,7 +81,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled}
         aria-disabled={actionsButtonDisabled}
         on:click|preventDefault={() => ($viewingCreditBin = !$viewingCreditBin)}
@@ -89,7 +89,7 @@
       >
         <span>View Credit Bin</span>
         <span class="absolute right-0 top-[6px]">
-          <Toggle name={'View Credit Bin'} bind:checked={$viewingCreditBin} />
+          <Toggle name="View Credit Bin" bind:checked={$viewingCreditBin} />
         </span>
       </a>
     </li>
@@ -102,7 +102,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
         aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
@@ -118,7 +118,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
         aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
@@ -132,7 +132,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
         aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => {
@@ -147,7 +147,7 @@
     </li>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled || !$selectedCourses.size}
         aria-disabled={actionsButtonDisabled || !$selectedCourses.size}
         on:click|preventDefault={() => ($customizeCoursesModalOpen = true)}>Edit Selected Courses</a
@@ -156,7 +156,7 @@
     <div class="divider my-0 py-0 px-2"></div>
     <li>
       <a
-        href={'#'}
+        href="#"
         class:a-disabled={actionsButtonDisabled}
         aria-disabled={actionsButtonDisabled}
         on:click|preventDefault={() => {

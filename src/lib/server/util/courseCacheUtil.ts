@@ -111,7 +111,7 @@ export async function generateCourseCacheFromUpdateChunks(
         const courseDiff = chunk.data.termData[courseDiffIdx];
 
         // get course information
-        let course: Course | undefined = undefined;
+        let course: Course | undefined;
         if (courseDiff.from === UserDataUpdateChunkTERM_MODCourseDataFrom.EXISTING) {
           const term = flowchart.termData.find((term) => term.tIndex === courseDiff.data.tIndex);
           course = term?.courses[courseDiff.data.cIndex];

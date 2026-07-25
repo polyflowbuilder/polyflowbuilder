@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import { faUser } from '@fortawesome/free-solid-svg-icons';
   import { enhance } from '$app/forms';
+  import { resolve } from '$app/paths';
   import { AlertError, AlertSuccess } from '$lib/components/common';
   import type { ActionData, PageData } from './$types';
 
@@ -93,9 +94,9 @@
       <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
-        <a href="/login" class="hyperlink">Sign In</a>
+        <a href={resolve('/login')} class="hyperlink">Sign In</a>
         <div class="divider divider-horizontal"></div>
-        <a href="/register" class="hyperlink">Create an account</a>
+        <a href={resolve('/register')} class="hyperlink">Create an account</a>
       </div>
     </div>
   </div>

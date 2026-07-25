@@ -107,7 +107,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each $availableFlowchartStartYears as startYear}
+        {#each $availableFlowchartStartYears as startYear, i (i)}
           <option value={startYear}>{startYear}</option>
         {/each}
       </select>

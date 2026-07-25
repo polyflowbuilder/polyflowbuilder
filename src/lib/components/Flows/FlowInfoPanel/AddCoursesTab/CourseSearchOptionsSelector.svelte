@@ -36,7 +36,7 @@
           <option disabled value={-1}>Select a Flowchart</option>
         {/if}
 
-        {#each $userFlowcharts[$selectedFlowIndex]?.programId ?? [] as _, i}
+        {#each $userFlowcharts[$selectedFlowIndex]?.programId ?? [] as _, i (i)}
           <option value={i}>{createSearchFlowProgramSelectorFriendlyName(i)}</option>
         {/each}
       </select>

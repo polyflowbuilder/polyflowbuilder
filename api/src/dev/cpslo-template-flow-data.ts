@@ -192,7 +192,7 @@ async function _downloadPDFsFromLinks() {
   fs.mkdirSync(`${pdfRootDir}/dflows`);
   fs.mkdirSync(`${pdfRootDir}/csheet`);
 
-  let workingDir = '';
+  let workingDir: string;
 
   console.log('download default flows ...');
   for (const flowData of flows) {

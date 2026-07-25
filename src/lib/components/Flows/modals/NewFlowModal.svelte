@@ -159,7 +159,7 @@
 
       <div class="label">
         <span class="label-text">Remove GE Courses in Template</span>
-        <Toggle name={'Remove GE Courses'} bind:checked={removeGECourses} />
+        <Toggle name="Remove GE Courses" bind:checked={removeGECourses} />
       </div>
     </div>
 

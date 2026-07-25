@@ -47,7 +47,7 @@
       size="15"
       bind:value={selectedTermValues}
     >
-      {#each termStringsData as termStringData}
+      {#each termStringsData as termStringData, i (i)}
         <option value={termStringData.termIdx}>{termStringData.termString}</option>
       {/each}
     </select>

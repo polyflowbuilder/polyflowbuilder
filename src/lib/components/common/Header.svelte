@@ -1,6 +1,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
+  import { resolve } from '$app/paths';
   import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
   import { faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
   import { goto, invalidateAll } from '$app/navigation';
@@ -24,7 +25,7 @@
         // both of these will do a redirect
         case 200:
         case 400: {
-          await goto('/');
+          await goto(resolve('/'));
           await invalidateAll();
           break;
         }
@@ -54,27 +55,30 @@
       <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
       <ul tabindex="0" class="menu dropdown-content mt-2 p-2 shadow bg-base-100 w-52">
         <li class="text-gray-600">
-          <a href="/about" class="relative">About</a>
+          <a href={resolve('/about')} class="relative">About</a>
         </li>
         <li class="text-gray-600">
-          <a href="/feedback" class="relative">Submit Feedback</a>
+          <a href={resolve('/feedback')} class="relative">Submit Feedback</a>
         </li>
         <li class="text-gray-600">
-          <a href={PUBLIC_PFB_DISCORD_LINK} class="relative">Discord Server</a>
+          <a href={PUBLIC_PFB_DISCORD_LINK} rel="external" class="relative">Discord Server</a>
         </li>
         <li class="text-gray-600">
-          <a href={PUBLIC_PFB_GITHUB_LINK} class="relative">GitHub Repository</a>
+          <a href={PUBLIC_PFB_GITHUB_LINK} rel="external" class="relative">GitHub Repository</a>
         </li>
       </ul>
     </div>
 
-    <a href="/"><img src="/assets/logo.png" alt="PolyFlowBuilder logo" width="235" height="65" /></a
+    <a href={resolve('/')}
+      ><img src="/assets/logo.png" alt="PolyFlowBuilder logo" width="235" height="65" /></a
     >
   </div>
   <div class="flex-1">
     <div class="items-stretch hidden lg:flex px-2 mx-2">
-      <a href="/about" class="text-gray-600 btn btn-ghost btn-md rounded-btn mr-2"> About </a>
-      <a href="/feedback" class="text-gray-600 btn btn-ghost btn-md rounded-btn mr-2">
+      <a href={resolve('/about')} class="text-gray-600 btn btn-ghost btn-md rounded-btn mr-2">
+        About
+      </a>
+      <a href={resolve('/feedback')} class="text-gray-600 btn btn-ghost btn-md rounded-btn mr-2">
         Submit Feedback
       </a>
     </div>
@@ -83,6 +87,7 @@
     <div class="hidden lg:inline">
       <a
         href={PUBLIC_PFB_DISCORD_LINK}
+        rel="external"
         target="_blank"
         class="btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
       >
@@ -90,6 +95,7 @@
       </a>
       <a
         href={PUBLIC_PFB_GITHUB_LINK}
+        rel="external"
         target="_blank"
         class="mr-2 btn btn-md btn-ghost rounded-full hover:bg-gray-300 text-gray-600 transition"
       >
@@ -124,24 +130,20 @@
           </li>
           <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
-            <a href={'#'} class="relative" on:click|preventDefault={() => logout()}>
+            <a href="#" class="relative" on:click|preventDefault={() => logout()}>
               Log Out
               <Fa icon={faSignOutAlt} class="right-4 absolute text-green-500" />
             </a>
           </li>
           <li class="text-gray-800">
-            <a href={'#'} class="relative" on:click|preventDefault={() => logout(true)}>
+            <a href="#" class="relative" on:click|preventDefault={() => logout(true)}>
               Delete Account
               <Fa icon={faUserTimes} class="right-3 absolute text-red-500" />
             </a>
           </li>
           <div class="divider m-0 p-0"></div>
           <li class="text-gray-800">
-            <a
-              href={'#'}
-              class="relative"
-              on:click|preventDefault={() => ($welcomeModalOpen = true)}
-            >
+            <a href="#" class="relative" on:click|preventDefault={() => ($welcomeModalOpen = true)}>
               View Welcome Message
               <Fa icon={faDoorOpen} class="right-4 absolute" />
             </a>
@@ -149,8 +151,8 @@
         </ul>
       </div>
     {:else}
-      <a href="/login" class="btn btn-outline btn-md rounded-btn mr-3"> Sign In </a>
-      <a href="/register" class="btn btn-outline btn-accent btn-md rounded-btn mr-4">
+      <a href={resolve('/login')} class="btn btn-outline btn-md rounded-btn mr-3"> Sign In </a>
+      <a href={resolve('/register')} class="btn btn-outline btn-accent btn-md rounded-btn mr-4">
         Create Account
       </a>
     {/if}

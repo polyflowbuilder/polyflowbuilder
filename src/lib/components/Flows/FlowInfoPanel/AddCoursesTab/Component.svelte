@@ -22,7 +22,7 @@
   // search options
   let searchProgramIndex = -1;
   let query = '';
-  let field: CatalogSearchValidFields = 'id';
+  let field: CatalogSearchValidFields;
 
   // search results
   let items: CourseItemData[] = [];

@@ -2,6 +2,7 @@
   import Fa from 'svelte-fa';
   import { faExclamationTriangle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
   import { page } from '$app/stores';
+  import { resolve } from '$app/paths';
 </script>
 
 <main class="container mx-auto text-center p-40 h-full">
@@ -22,8 +23,9 @@
         An internal server error has occurred. Please reload the page.
       </h1>
       <p>
-        If this persists, please submit a bug report on the <a href="/feedback" class="hyperlink"
-          >Feedback</a
+        If this persists, please submit a bug report on the <a
+          href={resolve('/feedback')}
+          class="hyperlink">Feedback</a
         > page.
       </p>
     {/if}

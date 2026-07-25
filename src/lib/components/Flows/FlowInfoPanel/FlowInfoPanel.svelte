@@ -27,13 +27,13 @@
   {#if $viewingFlowInfoPanel && $size > PANEL_SIZE_OPEN * 0.95}
     <div class="tabs tabs-bordered justify-center mt-2">
       <a
-        href={'#'}
+        href="#"
         class="tab"
         class:tab-active={activeTab === 'manageFlows'}
         on:click|preventDefault={() => (activeTab = 'manageFlows')}>Manage Flows</a
       >
       <a
-        href={'#'}
+        href="#"
         class="tab"
         class:tab-active={activeTab === 'addCourses'}
         on:click|preventDefault={() => (activeTab = 'addCourses')}>Add Courses</a

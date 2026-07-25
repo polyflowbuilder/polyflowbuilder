@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import { PUBLIC_PFB_DISCORD_LINK } from '$env/static/public';
 </script>
 
@@ -18,7 +19,7 @@
       alternative to the popular student-made flowchart maker <a
         href="http://polyflows.com"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="external noopener noreferrer"
         class="hyperlink">PolyFlows</a
       > (which I used myself until I developed PolyFlowBuilder). My goal is to improve on the original
       ideas PolyFlows has and add my own twist to it, while providing a (hopefully) useful tool for other
@@ -28,11 +29,13 @@
     <p>
       This is my first full-stack web project, so if there are any bugs/issues/concerns you have
       about it (or you would like to help contribute!), please let me know on the <a
-        href="/feedback"
+        href={resolve('/feedback')}
         class="hyperlink">Feedback</a
       >
       page or the
-      <a href={PUBLIC_PFB_DISCORD_LINK} class="hyperlink">PolyFlowBuilder Discord server</a>!
+      <a href={PUBLIC_PFB_DISCORD_LINK} rel="external" class="hyperlink"
+        >PolyFlowBuilder Discord server</a
+      >!
     </p>
   </div>
   <div class="text-center">
