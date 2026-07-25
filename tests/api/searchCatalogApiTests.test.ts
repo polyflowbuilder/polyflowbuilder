@@ -225,7 +225,7 @@ test.describe('searchCatalog API tests', () => {
             displayName: 'Data Management and Visualization in Biology',
             units: '3',
             desc: 'Data management and visualization tools for research.  Introduction to data management in menu driven applications.  Extensive work with data management in code-driven applications.  Advanced visualization techniques for data presentation and publication.  3 seminars.\n',
-            addl: 'Term Typically Offered: F\nPrerequisite: STAT 218 and graduate standing in Biological Sciences; or consent of instructor. Recommended: Experience with Excel and R.\n',
+            addl: 'Term Typically Offered: TBD\nPrerequisite: STAT 218 and graduate standing in Biological Sciences; or consent of instructor. Recommended: Experience with Excel and R.\n',
             gwrCourse: false,
             uscpCourse: false,
             dynamicTerms: {
@@ -241,7 +241,7 @@ test.describe('searchCatalog API tests', () => {
             displayName: 'Biomedical Signal Transduction and Data Acquisition',
             units: '4',
             desc: 'Bridging the physical gap between biological and digital systems.  Physics of chemical, mechanical, electrical, thermal, and optical sensors relevant to biomedical engineering.  Evaluation of transducer performance and system design.  Includes realization of a transducer system relevant to graduate projects.  3 lectures, 1 laboratory.\n',
-            addl: 'Term Typically Offered: SP\nPrerequisite: BMED 440.\n',
+            addl: 'Term Typically Offered: W\nPrerequisite: BMED 440.\n',
             gwrCourse: false,
             uscpCourse: false,
             dynamicTerms: {
@@ -500,7 +500,7 @@ test.describe('searchCatalog API tests', () => {
             displayName: 'Data Management, Estimating and Visualization in Graphic Communication',
             units: '4',
             desc: 'Cost estimating of graphic communication products and data services.  Study of data sources and entity relationship design.  Exploration, uses, analysis and visualization of data used in digital advertising, marketing, graphic communications operations and finance.  Course may be offered in classroom-based or online format.  3 lectures, 1 laboratory.  Formerly GRC 403.\n',
-            addl: 'Term Typically Offered: F, W\nPrerequisite: Junior standing and GRC 328; Graphic Communication majors only.\n',
+            addl: 'Term Typically Offered: F, W, SP\nPrerequisite: Junior standing and GRC 328; Graphic Communication majors only.\n',
             gwrCourse: false,
             uscpCourse: false,
             dynamicTerms: { termSummer: false, termFall: true, termWinter: true, termSpring: false }
