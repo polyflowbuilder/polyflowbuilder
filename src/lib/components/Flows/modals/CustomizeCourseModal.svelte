@@ -237,8 +237,7 @@
           class="textarea textarea-bordered textarea-sm w-full h-40 resize-none"
           name="courseDescription"
           placeholder="My Course Description"
-          bind:value={newCourseDescription}
-        ></textarea>
+          bind:value={newCourseDescription}></textarea>
       </label>
     </div>
 

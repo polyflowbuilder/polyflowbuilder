@@ -124,8 +124,7 @@
         class="textarea textarea-bordered textarea-sm w-full h-40 resize-none"
         name="editFlowNotes"
         placeholder="My Flowchart Notes"
-        bind:value={flowNotes}
-      ></textarea>
+        bind:value={flowNotes}></textarea>
     </label>
 
     <div class="flex mt-4">
