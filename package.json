@@ -41,7 +41,7 @@
     "@types/uuid": "^10.0.0",
     "@vitest/coverage-v8": "^5.1.0",
     "autoprefixer": "^10.4.7",
-    "csv-parse": "^5.3.5",
+    "csv-parse": "^7.0.3",
     "daisyui": "^4.4.17",
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
@@ -90,7 +90,7 @@
     "@prisma/engines@5.19.1": true,
     "argon2@0.45.2": true,
     "prisma@5.19.1": true,
-    "puppeteer@23.3.0": true,
-    "svelte-preprocess@6.0.5": true
+    "svelte-preprocess@6.0.5": true,
+    "puppeteer@25.16.0": true
   }
 }
