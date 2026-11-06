@@ -43,7 +43,7 @@
     <div class="card-body p-4 h-[95%]">
       {#if activeTab === 'manageFlows'}
         <ManageFlowsTab />
-      {:else if activeTab === 'addCourses'}
+      {:else}
         <AddCoursesTab />
       {/if}
     </div>
