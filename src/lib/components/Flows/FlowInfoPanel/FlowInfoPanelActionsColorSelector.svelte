@@ -67,7 +67,7 @@
 </script>
 
 <a
-  href={'#'}
+  href="#"
   class="flex justify-between"
   class:a-disabled={disabled}
   aria-disabled={disabled}

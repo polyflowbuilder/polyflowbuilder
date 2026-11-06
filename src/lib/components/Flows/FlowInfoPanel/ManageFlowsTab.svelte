@@ -46,6 +46,8 @@
       });
     }
 
+    // TODO: address as part of Svelte 5 rewrite
+    // eslint-disable-next-line svelte/no-reactive-reassign
     items = event.detail;
   }
 </script>

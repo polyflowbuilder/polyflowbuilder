@@ -200,7 +200,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each $availableFlowchartCatalogs as catalogYear}
+        {#each $availableFlowchartCatalogs as catalogYear, i (i)}
           <option value={catalogYear}>{catalogYear}</option>
         {/each}
       </select>
@@ -221,7 +221,7 @@
           >{defaultOptionText}</option
         >
         {#if programCatalogYear}
-          {#each majorOptions as major}
+          {#each majorOptions as major, i (i)}
             <option disabled={alreadySelectedMajorNames.includes(major)} value={major}
               >{major}</option
             >
@@ -245,7 +245,7 @@
           >{defaultOptionText}</option
         >
         {#if programName}
-          {#each concOptions as concentration}
+          {#each concOptions as concentration, i (i)}
             <option value={concentration.id}>{concentration.name}</option>
           {/each}
         {/if}

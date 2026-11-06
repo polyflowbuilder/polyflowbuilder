@@ -91,7 +91,7 @@
       on:scroll={scrollEventHandler}
     >
       {#if flowchart.termData.slice(1).length}
-        {#each displayedTermData as term}
+        {#each displayedTermData as term, i (i)}
           <TermContainer
             flowId={flowchart.id}
             flowProgramId={flowchart.programId}

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { modal } from '$lib/client/util/modalUtil';
+  import { resolve } from '$app/paths';
   import { onMount } from 'svelte';
   import { welcomeModalOpen } from '$lib/client/stores/modalStateStore';
   import { PUBLIC_PFB_DISCORD_LINK, PUBLIC_PFB_GITHUB_LINK } from '$env/static/public';
@@ -32,6 +33,7 @@
         PolyFlowBuilder has been rewritten from the ground up to allow the project to grow, scale,
         and be more organized for years to come. The <a
           href="https://old.polyflowbuilder.io"
+          rel="external"
           class="hyperlink"
           target="_blank">original version of PolyFlowBuilder</a
         > was something thrown together as a summer project and it's frankly a miracle it has been stable
@@ -41,6 +43,7 @@
         Also, note that PolyFlowBuilder has been made open source to ensure the project's longevity!
         Feel free to visit the project's <a
           href={PUBLIC_PFB_GITHUB_LINK}
+          rel="external"
           class="hyperlink"
           target="_blank">GitHub repository</a
         > to view the source code for the project.
@@ -52,20 +55,24 @@
       </p>
       <ul class="list-decimal list-inside mb-4">
         <li>
-          Project Contributions: <a href={PUBLIC_PFB_GITHUB_LINK} class="hyperlink" target="_blank"
-            >GitHub</a
+          Project Contributions: <a
+            href={PUBLIC_PFB_GITHUB_LINK}
+            rel="external"
+            class="hyperlink"
+            target="_blank">GitHub</a
           >
         </li>
         <li>
           PolyFlowBuilder Discord Server: <a
             href={PUBLIC_PFB_DISCORD_LINK}
+            rel="external"
             class="hyperlink"
             target="_blank">Discord Server</a
           >
         </li>
         <li>
           PolyFlowBuilder Official Feedback Form: <a
-            href="/feedback"
+            href={resolve('/feedback')}
             class="hyperlink"
             target="_blank">Feedback Form</a
           >

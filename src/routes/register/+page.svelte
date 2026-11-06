@@ -2,6 +2,7 @@
   import Fa from 'svelte-fa';
   import { page } from '$app/stores';
   import { enhance } from '$app/forms';
+  import { resolve } from '$app/paths';
   import { AlertError } from '$lib/components/common';
   import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import type { ActionData } from './$types';
@@ -149,7 +150,7 @@
       <div class="divider"></div>
 
       <div class="flex flex-row w-full justify-center">
-        <a href="/login" class="hyperlink">Sign In</a>
+        <a href={resolve('/login')} class="hyperlink">Sign In</a>
       </div>
     </div>
   </div>

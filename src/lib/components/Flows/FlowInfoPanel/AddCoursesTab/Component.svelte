@@ -22,7 +22,7 @@
   // search options
   let searchProgramIndex = -1;
   let query = '';
-  let field: CatalogSearchValidFields = 'id';
+  let field: CatalogSearchValidFields;
 
   // search results
   let items: CourseItemData[] = [];
@@ -58,6 +58,8 @@
 
   // getting results from search
   $: void $activeSearchResults?.then((results) => {
+    // TODO: address as part of Svelte 5 rewrite
+    // eslint-disable-next-line svelte/infinite-reactive-loop
     items = buildTermCourseItemsData(
       selectedFlow?.programId ?? [''],
       $courseCache,

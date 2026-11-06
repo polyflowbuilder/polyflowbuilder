@@ -35,6 +35,8 @@
 
   // validation
   $: flowNameValid = flowName.length > 0 && flowName.length <= FLOW_NAME_MAX_LENGTH;
+  // TODO: address as part of Svelte 5 rewrite
+  // eslint-disable-next-line no-useless-assignment
   $: flowPropertiesOptionsValid =
     flowNameValid && flowStartYear.length > 0 && !flowProgramIds.includes('');
 
@@ -48,6 +50,8 @@
   // wrap this to prevent duplicate updates
   function updateProgram(i: number, updatedProgramId: string) {
     if (flowProgramIds[i] !== updatedProgramId) {
+      // TODO: address as part of Svelte 5 rewrite
+      // eslint-disable-next-line svelte/no-reactive-reassign
       flowProgramIds[i] = updatedProgramId;
     }
   }
@@ -107,7 +111,7 @@
         <option selected disabled={disableSelectingDefaultOption} value=""
           >{defaultOptionText}</option
         >
-        {#each $availableFlowchartStartYears as startYear}
+        {#each $availableFlowchartStartYears as startYear, i (i)}
           <option value={startYear}>{startYear}</option>
         {/each}
       </select>
