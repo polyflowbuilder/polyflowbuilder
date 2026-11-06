@@ -40,13 +40,13 @@ async function getTermTypicallyOfferedData() {
   // get JSON records out of CSV
   console.log('getting JSON records from CSV ...');
   const fileContent = fs.readFileSync(`${apiRoot}/data/cpslo-term-typically-offered.csv`);
-  const records = csvParse(fileContent, { columns: true }) as {
+  const records = csvParse<{
     Course: string;
     Summer: string;
     Winter: string;
     Fall: string;
     Spring: string;
-  }[];
+  }>(fileContent, { columns: true });
 
   // trim records to only what we need (can't use imported types here)
   const termData: TermTypicallyOffered[] = [];
