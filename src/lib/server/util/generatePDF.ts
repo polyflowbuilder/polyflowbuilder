@@ -102,7 +102,7 @@ export async function generatePDF(flowData: FlowchartPDFData): Promise<Buffer> {
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 });
-  await page.setContent(content, { waitUntil: 'networkidle0' });
+  await page.setContent(content, { waitUntil: 'load' });
   await page.emulateMediaType('screen');
   const bufferedPDF = await page.pdf({
     format: 'a4',
