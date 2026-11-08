@@ -88,8 +88,7 @@
             placeholder="Enter your feedback here!"
             maxlength={FEEDBACK_MESSAGE_MAX_LENGTH}
             required
-            bind:value={feedbackText}
-          ></textarea>
+            bind:value={feedbackText}></textarea>
           {#if form?.feedbackValidationErrors?.feedback}
             <small id="feedbackError" class="text-red-600 label label-text-alt"
               >{form.feedbackValidationErrors.feedback[0]}</small

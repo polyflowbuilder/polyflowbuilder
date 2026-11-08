@@ -8,8 +8,7 @@ const combineMessageAndSplatFormat = format((info) => {
   info.message = util.formatWithOptions(
     { colors: true },
     info.message,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    ...(info[Symbol.for('splat')] ?? [])
+    ...((info[Symbol.for('splat') as unknown as keyof typeof info] as unknown[] | undefined) ?? [])
   );
   return info;
 });

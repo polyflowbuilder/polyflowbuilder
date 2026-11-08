@@ -30,5 +30,4 @@ interface MutateUserDataUtilCommonResultFailure {
   errors: string[];
 }
 export type MutateUserDataUtilCommonResult =
-  | MutateUserDataUtilCommonResultSuccess
-  | MutateUserDataUtilCommonResultFailure;
+  MutateUserDataUtilCommonResultSuccess | MutateUserDataUtilCommonResultFailure;
